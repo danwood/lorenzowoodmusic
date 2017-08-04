@@ -1,0 +1,489 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    box-sizing:border-box;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #bdbdbd;
+}
+
+.header-container {
+    background: #000000;
+}
+.icon-container,
+.footer-container,
+.main aside {
+    background: #212121;
+}
+
+.title {
+    color: white;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #e44d26;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+}
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 1140px) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ==========================================================================
+   Other styles
+   ========================================================================== */
+
+.hero {
+    max-width:100%;
+    position:fixed;
+    top:0; left:0;
+    z-index:-1;
+    filter:grayscale(100%);
+}
+
+.hero-holder {
+    width:100%;
+    height:0;
+    padding-bottom:33%;
+    padding-top:10%;
+}
+
+.header-container {
+    height:10vw;
+}
+.main-container {
+    background-color:white;
+}
+
+svg.social {
+  margin:20px;
+}
+
+.icon-column {
+    width:12.4%;   /* rounding up error causes width overflow, so go a bit less than 1/8 */
+    display:inline-block;
+}
+
+@media only screen and (max-width: 599px) {
+
+    .icon-column {
+        width:25%;
+        display:inline-block;
+    }
+}
+
+
+/*
+
+#f5f5f5 (245,245,245)
+#bdbdbd (189,189,189)
+#616161 (97,97,97)
+#424242 (66,66,66)
+#212121 (33,33,33)
+
+ */
+
+.bio, .contact {
+    margin:3em auto;
+    max-width:60em;
+}
+.instagram {
+    margin:0 auto;
+    max-width:800px;
+}
+
+.instagram-section {
+    background-color:#bdbdbd;
+}
+
+.instagram-section a {
+    color:white;
+}
+
+
+.instagram h2 {
+    padding-top:1em;
+    margin:0;
+}
+
+.instagram h3 {
+    margin:0;
+    padding-bottom:1em;
+    text-align:right;
+}
+
+.lightwidget-widget {
+    background-color:white;
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+.soundcloud-section {
+    background-color:#f5f5f5;
+    text-align:right;
+    padding:1em 1em;
+}
+
+.soundcloud-section a { color:#424242; }
+
+@media only screen and (min-width: 800px) {
+
+    .soundcloud-column {
+        width:33%;
+        float:left;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    .youtube-column {
+        width:50%;
+        float:left;
+    }
+
+}
+
+.youtube-section {
+    background-color:#616161;
+    text-align:right;
+    color:white;
+    padding:1em 1em;
+}
+
+.youtube-section a { color:#f5f5f5; }
+
+
+
+.embed-container {
+    position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
+
+.track-section {
+    background-color:#212121;
+    color:#bdbdbd;
+    padding:2em 0;
+
+}
+
+    .track-photo img {
+        max-width:100%;
+    }
+
+@media only screen and (max-width: 599px) {
+
+    .track-photo {
+        margin-left:25%;
+        width:50%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .track-photo {
+        float: left;
+        width:33%;
+    }
+
+    .track-form {
+        float:left;
+        width:66%;
+    }
+
+}
+
+
+.track-form a {
+    color:white;
+}
+
+ #mc_embed_signup{
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+}
+
+
+.patreon-section {
+    background-color:#212121;
+    color:#bdbdbd;
+    padding:2em 1em;
+    text-align:center;
+    line-height:1.5;
+}
+
+@media only screen and (min-width: 700px) {
+
+    .patreon-button {
+        border:1px solid white;
+        padding:0.5em;
+        background-color:#424242;
+    }
+
+}
+
+.patreon-section a {
+    color:white;
+    text-decoration:none;
+}
+
+.dimmer {
+    color:#616161;
+}
