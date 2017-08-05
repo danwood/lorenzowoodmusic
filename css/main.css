@@ -84,38 +84,6 @@ body {
 }
 
 /* ==============
-    MOBILE: Menu
-   ============== */
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
-
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-
-    color: white;
-    background: #e44d26;
-}
-
-nav a:hover,
-nav a:visited {
-    color: white;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ==============
     MOBILE: Main
    ============== */
 
@@ -194,72 +162,22 @@ nav a:hover {
 }
 
 /* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
-
-/* ==========================================================================
    Other styles
    ========================================================================== */
+
+/*
+Gray shades we are using:
+
+#f5f5f5 (245,245,245)
+#bdbdbd (189,189,189)
+#616161 (97,97,97)
+#424242 (66,66,66)
+#212121 (33,33,33)
+*/
+
+.dimmer {
+    color:#616161;
+}
 
 .hero {
     max-width:100%;
@@ -292,16 +210,6 @@ svg.social {
     display:inline-block;
 }
 
-/*
-
-#f5f5f5 (245,245,245)
-#bdbdbd (189,189,189)
-#616161 (97,97,97)
-#424242 (66,66,66)
-#212121 (33,33,33)
-
- */
-
 section {
     padding-left:1em;
     padding-right:1em;
@@ -311,6 +219,7 @@ section {
     margin:3em auto;
     max-width:60em;
 }
+
 .instagram {
     margin:0 auto;
     max-width:800px;
@@ -363,6 +272,7 @@ section {
 .embed-container {
     position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;
 }
+
 .embed-container iframe, .embed-container object, .embed-container embed {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
 }
@@ -395,19 +305,28 @@ section {
     line-height:1.5;
 }
 
+.patreon-section a {
+    color:white;
+    text-decoration:none;
+}
+
 /*  BREAKPOINTS … general (under 600 for mobile, 600+ for desktop) and specialized */
 
 @media only screen and (max-width: 599px) {
 
+    /* Bigger social media icons on mobile */
     .icon-column {
         width:25%;
         display:inline-block;
     }
 
+    /* On mobile, center photo */
     .track-photo {
         margin-left:25%;
         width:50%;
     }
+
+    /* On mobile, avoid left/right margin on some sections (except for headers/footers which are textual) */
 
     .maximize-mobile {
         padding-left:0;
@@ -421,16 +340,19 @@ section {
 
 @media only screen and (min-width: 600px) {
 
+    /* Two YouTube videos side by side */
+
     .youtube-column {
         width:50%;
         float:left;
     }
 
+    /* On wide screens, put photo to left of the 'track' form */
+
     .track-photo {
         float: left;
         width:33%;
     }
-
     .track-form {
         float:left;
         width:66%;
@@ -438,6 +360,8 @@ section {
 }
 
 @media only screen and (min-width: 700px) {
+
+    /* Wider screens, show patreon as a distinct button */
 
     .patreon-button {
         border:1px solid white;
@@ -448,19 +372,10 @@ section {
 
 @media only screen and (min-width: 800px) {
 
+    /* Wider screens, there is room for 3 SoundClouds side by side. */
+
     .soundcloud-column {
         width:33%;
         float:left;
     }
-
 }
-
-.patreon-section a {
-    color:white;
-    text-decoration:none;
-}
-
-.dimmer {
-    color:#616161;
-}
-
