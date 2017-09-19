@@ -204,7 +204,10 @@ svg.social {
     display:inline-block;
 }
 
-/* Padding for iPhone X.  Usually on a section; it overrides usual section margins.  */
+/* Padding for iPhone X.  Usually on a section; it overrides usual section margins.
+Really tricky — we need it to be at LEAST 1 em, but maybe more.  The trick is, on some systems
+the safe-area-inset-* constants are defined to be zero! Really we want a MIN function in CSS.
+As a work-around, we'll use a script I guess. */
 section, .safe-area {
     padding-left:1em;           /* Fallback if below not understood */
     padding-right:1em;

@@ -216,6 +216,11 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+// ASAP, Fix styling where safe-area padding is zero. Not sure of any other workaround.
+if($('section, .safe-area').css('padding-left') == '0px') {
+    $('section, .safe-area').css('padding-left', '1em');
+    $('section, .safe-area').css('padding-right', '1em');
+}
 <!-- LightWidget WIDGET -->
 <script src="http://lightwidget.com/widgets/lightwidget.js"></script>
 <script>
@@ -230,6 +235,5 @@ var $w = $(window).scroll(function(){
         $('.hero').css({"filter":"grayscale(0%)"});
     }
 });
-
 </script>
 </html>
