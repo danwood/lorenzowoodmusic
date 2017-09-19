@@ -105,7 +105,7 @@
                             <header>
                                 <h2>Instagram</h2>
                             </header>
-                            <!-- LightWidget WIDGET --><script src="http://lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/aaf8a5a5390c5770bdbe19cbeaf5fba9.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                            <div id="lightweight_widget"></div>
                              <footer>
                                 <h3><a href="https://instagram.com/LorenzoWoodMusic">More from Instagram</a></h3>
                             </footer>
@@ -215,6 +215,11 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<!-- LightWidget WIDGET -->
+<script src="http://lightwidget.com/widgets/lightwidget.js"></script>
+<script>
+$('#lightweight_widget').html('<iframe src="http://lightwidget.com/widgets/aaf8a5a5390c5770bdbe19cbeaf5fba9.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden"></iframe>');
+</script>
 <script src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <script>
 var targetOffset = $("#hero-covered").offset().top;
