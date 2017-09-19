@@ -204,9 +204,12 @@ svg.social {
     display:inline-block;
 }
 
-section {
-    padding-left:1em;
+/* Padding for iPhone X.  Usually on a section; it overrides usual section margins.  */
+section, .safe-area {
+    padding-left:1em;           /* Fallback if below not understood */
     padding-right:1em;
+    padding-left: constant(safe-area-inset-left);
+    padding-right:constant(safe-area-inset-right);
 }
 
 .bio, .contact {
@@ -294,7 +297,8 @@ section {
 .patreon-section {
     background-color:#212121;
     color:#bdbdbd;
-    padding:2em 1em;
+    padding-top:2em;
+    padding-bottom:2em;
     text-align:center;
     line-height:1.5;
 }
