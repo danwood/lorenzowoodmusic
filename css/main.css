@@ -195,14 +195,19 @@ Gray shades we are using:
     background-color:white;
 }
 
-svg.social {
-  margin:20px;
-}
-
 .icon-column {
-    width:12.4%;   /* rounding up error causes width overflow, so go a bit less than 1/8 */
+    width:10%;
     display:inline-block;
 }
+
+.social {
+  width:100%;
+}
+
+.social-padding {
+    padding:20px;
+}
+
 
 /* Padding for iPhone X.  Usually on a section; it overrides usual section margins.
 Really tricky — we need it to be at LEAST 1 em, but maybe more.  The trick is, on some systems
