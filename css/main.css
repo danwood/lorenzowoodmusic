@@ -159,6 +159,8 @@ body {
    Other styles
    ========================================================================== */
 
+a { color:#00AEA8; }
+
 /*
 Gray shades we are using:
 
@@ -364,6 +366,21 @@ section, .safe-area {
         float:left;
         width:66%;
     }
+}
+
+.bandsintown-button {
+    color: #FFF;
+    background:#00AEA8;
+    padding:6px;
+    margin-right: 0.3em;
+}
+.bandsintown-button a {
+    color: #FFF;
+    text-decoration:none;
+}
+.bandsintown-button svg {
+    width:1.5em;
+    padding-bottom:0.3em;
 }
 
 @media only screen and (min-width: 700px) {
