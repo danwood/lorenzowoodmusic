@@ -70,7 +70,7 @@ body {
 }
 
 .header-container {
-    background: #000000;
+    background: #000;
 }
 .icon-container,
 .footer-container {
@@ -420,4 +420,32 @@ section, .safe-area {
         width:33%;
         float:left;
     }
+}
+
+.icon-column {
+    position:relative;
+}
+.icon-column a:after{
+    padding: 0px 5px;
+    font-size:80%;
+    background: #fff;
+    color:#000;
+    border-radius:5px;
+    box-shadow: 0px 0px 8px 8px #FFF;
+
+    content: attr(data-title);
+    position: absolute;
+    left:6px;
+    bottom:8px;
+    text-align:center;
+    display:block;
+    z-index:99;
+
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+
+}
+
+.icon-column a:hover:after{
+    opacity: 0.75;
 }
