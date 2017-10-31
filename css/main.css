@@ -450,3 +450,6 @@ section, .safe-area {
 .icon-column a:hover:after{
     opacity: 0.75;
 }
+
+/* Hide Bands In Town when no upcoming dates */
+.bit-no-dates-container { display:none; }
