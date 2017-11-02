@@ -213,13 +213,20 @@ Gray shades we are using:
 
 /* Padding for iPhone X.  Usually on a section; it overrides usual section margins.
 Really tricky — we need it to be at LEAST 1 em, but maybe more.  The trick is, on some systems
-the safe-area-inset-* constants are defined to be zero! Really we want a MIN function in CSS.
-As a work-around, we'll use a script I guess. */
+the safe-area-inset-* env's are defined to be zero! Use a script as a fallback. */
 section, .safe-area {
     padding-left:1em;           /* Fallback if below not understood */
     padding-right:1em;
-    padding-left: constant(safe-area-inset-left);
-    padding-right:constant(safe-area-inset-right);
+    padding-left: env(safe-area-inset-left);
+    padding-right:env(safe-area-inset-right);
+}
+
+/* Use @supports per https://webkit.org/blog/7929/designing-websites-for-iphone-x/ */
+@supports(padding: max(0px)) {
+    .post {
+        padding-left: max(1em, env(safe-area-inset-left));
+        padding-right: max(1em, env(safe-area-inset-right));
+    }
 }
 
 .bio, .contact {
