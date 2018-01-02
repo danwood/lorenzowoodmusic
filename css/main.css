@@ -841,8 +841,8 @@ select {
 @media only screen and (max-width: 599px) {
 
     /* Bigger social media icons on mobile */
-    .icon-column {
-        width:20%;
+    header .icon-column {
+        width:16%;
     }
 
     header .icon-column:first-child {
