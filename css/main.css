@@ -683,7 +683,7 @@ section, .safe-area {
 }
 
 .bio, .contact {
-    margin:3em auto;
+    margin:1em auto;
     max-width:60em;
 }
 
@@ -841,6 +841,10 @@ select {
 @media only screen and (max-width: 599px) {
 
     /* Bigger social media icons on mobile */
+    .icon-column {
+        width:20%;
+    }
+
     header .icon-column {
         width:16.66%;
     }
@@ -925,6 +929,7 @@ select {
 .icon-column {
     position:relative;
 }
+/*
 .icon-column a:after{
     padding: 0px 5px;
     font-size:80%;
@@ -950,6 +955,7 @@ select {
 .icon-column a:hover:after{
     opacity: 0.75;
 }
+*/
 
 /* Hide Bands In Town when no upcoming dates */
 .bit-no-dates-container { display:none; }
