@@ -81,6 +81,10 @@ body {
     color: white;
 }
 
+iframe {
+    border:none;
+}
+
 /* ==============
     MOBILE: Main
    ============== */
@@ -202,6 +206,10 @@ Gray shades we are using:
     display:inline-block;
 }
 
+header .icon-column:first-child {
+    margin-left:20%;
+}
+
 .social {
   width:100%;
 }
@@ -275,6 +283,8 @@ section, .safe-area {
 }
 
 .soundcloud-section a { color:#424242; }
+
+.soundcloud { width:100%; }
 
 .youtube-section {
     background-color:#616161;
@@ -356,6 +366,10 @@ section, .safe-area {
     /* Bigger social media icons on mobile */
     .icon-column {
         width:20%;
+    }
+
+    header .icon-column:first-child {
+        margin-left:0;
     }
 
     /* On mobile, center photo */
