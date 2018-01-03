@@ -508,16 +508,14 @@ body {
     margin: 0 5%;
 }
 
-.footer-container {
-    border-top: 20px solid #bdbdbd;
-}
-
 .header-container {
     background: #000;
 }
-.icon-container,
+.icon-container {
+  background: #212121;
+}
 .footer-container {
-    background: #212121;
+    background: #bdbdbd;
 }
 
 .title {
@@ -619,6 +617,7 @@ Gray shades we are using:
 */
 
 .dimmer {
+    padding-left:1em;
     color:#616161;
 }
 
