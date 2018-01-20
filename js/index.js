@@ -35,3 +35,6 @@ window.lightwidget||(window.lightwidget=function(){"use strict";var e=[],t=0,i=!
 
 $('#lightweight_widget').html('<iframe src="http://lightwidget.com/widgets/9b560c45f4e75b9f93dd8bcca23a28a3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>');
 
+//Modernizer-like
+// Remove "no-js" class from element, if it exists
+document.documentElement.className = document.documentElement.className.replace("no-js","js");
