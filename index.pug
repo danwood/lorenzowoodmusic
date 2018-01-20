@@ -8,7 +8,8 @@ head
 	meta(charset="utf-8")
 	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 	title Lorenzo Wood Music — Official Site
-	meta(name="description" content="Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.")
+	meta(name="description"
+		content="Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.")
 	meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 	link(rel="apple-touch-icon" href="apple-touch-icon.png")
 	link(rel="stylesheet" href="css/main.min.css")
@@ -145,7 +146,10 @@ body
 					.track-form-inner
 						h2 Subscribe to Lorenzo's mailing list
 						p We also suggest tracking Lorenzo on #[a(href="https://bandsintown.com/lorenzowoodmusic") BandsInTown].
-						form.validate(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&id=1c68d63e9a" method="post" name="mc-embedded-subscribe-form" target="_blank")
+						form.validate(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&id=1c68d63e9a"
+							method="post"
+							name="mc-embedded-subscribe-form"
+							target="_blank")
 							div
 								label(for="mce-EMAIL") Email Address
 								input#mce-EMAIL(type="email" name="EMAIL" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required="")
@@ -213,7 +217,17 @@ body
 			p
 				b Copyright © 2017-2018 Lorenzo Wood
 				span.dimmer Photo credits: David Weintraub
-	a.bit-widget-initializer(data-artist-name="Lorenzo Wood Music" data-display-local-dates="false" data-display-past-dates="false" data-auto-style="false" data-text-color="#000000" data-link-color="#00AEA8" data-popup-background-color="#FFFFFF" data-background-color="#FFFFFF" data-display-limit="5" data-link-text-color="#FFFFFF" data-div-id="bandsintown-widget")
+	a.bit-widget-initializer(data-artist-name="Lorenzo Wood Music"
+		data-display-local-dates="false"
+		data-display-past-dates="false"
+		data-auto-style="false"
+		data-text-color="#000000"
+		data-link-color="#00AEA8"
+		data-popup-background-color="#FFFFFF"
+		data-background-color="#FFFFFF"
+		data-display-limit="5"
+		data-link-text-color="#FFFFFF"
+		data-div-id="bandsintown-widget")
 	script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
 	script.
 		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\\/script>')
