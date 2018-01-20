@@ -643,9 +643,15 @@ Gray shades we are using:
     background-color:white;
 }
 
+.icon-container {
+  display:inline-block;
+  font-size:0;        /* TOTAL HACK, BUT THIS ALLOWS US TO HAVE SPACE BETWEEN EACH COLUMN */
+}
+
 .icon-column {
     width:10%;
     display:inline-block;
+    font-size:1em;  /* RESTORE FONT SIZE FROM HACK */
 }
 
 header .icon-column:first-child {
