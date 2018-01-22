@@ -844,7 +844,7 @@ section, .safe-area {
 
 /* Main part of page */
 
-.main {
+main {
     padding: 30px 0;
 }
 
@@ -855,14 +855,10 @@ section.textual {
 
 /* ====== Specific Sections ===== */
 
-/* Header, needs a specific percentage height of viewport */
-
-
-.header-container svg {
-  padding-top:3%;
-  max-width:75%;
+body > header svg {
+  padding:3% 0% 1.5% 5%;
+  max-width:67%;
   max-height:140px;
-  padding-bottom:3%;
 }
 
 /* Hero */
@@ -1011,11 +1007,11 @@ a { color:#00AEA8; }
     color:#616161;
 }
 
-.main {
+main {
     background:white;
 }
 
-.header-container {
+body > header {
     background: #000;
 }
 .icon-container {
@@ -1148,10 +1144,10 @@ a { color:#00AEA8; }
     }
 
     /* ... and 6-up without margins where we have the 6 icons */
-    header .icon-column {
+    body > header .icon-column {
         width:16.66%;
     }
-    header .icon-column:first-child {
+    body > header .icon-column:first-child {
         margin-left:0;
     }
 
