@@ -105,13 +105,14 @@ html(class="no-js", lang="en-us")
 						span.patreon-button
 							a(href="https://www.patreon.com/lorenzowoodmusic")
 								| Support Lorenzo Wood Music on
-								<svg style="max-width:1em" aria-label="Patreon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on Patreon</desc><path fill="#F96854" d="M0 0h24v24H0z"/><ellipse cx="13.25" cy="10.75" rx="4.75" ry="4.75" fill="#FFF"/><path fill="#052D49" d="M5 6h2.5v12H5z"/></svg>
+								include svg/patreon.svg
 								| #[span.patreon-link Patreon]!
 				section.instagram-section.maximize-mobile
 					.instagram
 						header
 							h2 Instagram
-						#lightweight_widget(style="background-color:white")
+						#lightweight_widget
+						//- (style="background-color:white") was there before
 						footer
 							h3
 								a(href="https://instagram.com/LorenzoWoodMusic") More from Instagram
@@ -168,10 +169,10 @@ html(class="no-js", lang="en-us")
 				section.contact.textual
 					header.ir(aria-hidden="true")
 						h2 Contact
-					div(style="margin:0 20px; max-width:400px")
-						img(alt="lorenzo at this domain name" style="width:100%" src="img/lorenzo-animated.gif")
-					div(style="margin:0 20px; max-width:400px")
-						img(alt="booking at this domain name" style="width:100%" src="img/booking-animated.gif")
+					div.email-padding
+						img(alt="lorenzo at this domain name" src="img/lorenzo-animated.gif")
+					div.email-padding
+						img(alt="booking at this domain name" src="img/booking-animated.gif")
 		.icon-container
 			.clearfix
 				.icon-column
