@@ -1096,8 +1096,14 @@ body > footer {
     opacity: 0.75;
 }
 
+.no-js .requires-js {
+  display:none;
+}
 
-
+.browserupgrade { /* Improve the formatting a bit without messing with original */
+  font-size:150%;
+  padding:1em;
+}
 
 
 
