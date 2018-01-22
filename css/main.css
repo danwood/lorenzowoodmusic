@@ -843,15 +843,16 @@ body > footer p {
 }
 
 
-section.textual {
+article.textual {
     margin:0 auto;
+    padding:2em 0;  /* if we use margin above then it messes with background image */
     max-width:60em;
 }
 
 /* ====== Specific Sections ===== */
 
 .logo svg {
-  padding:2.5% 0% 1.5% 5%;
+  padding:2.5% 0 1.5% 5%;
   max-width:67%;
   max-height:140px;
 }

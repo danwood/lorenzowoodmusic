@@ -54,63 +54,65 @@ html(class="no-js", lang="en-us")
 
 
 			section.bio
-				header.ir(aria-hidden="true")
-					h2 Bio
-				//- Try to match meta description
-				p
-					| Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums,
-					| piano/keyboards, bass, and a bit of ukulele. He also beat-boxes, and uses a Loop Station for
-					| live performances. He writes or co-writes many of his own original songs. He produces and
-					| records his music (using Apple Logic) and creates live performance videos.
-				p
-					| Lorenzo started learning to play the drums at the age of four. At the age of seven, he
-					| performed in children's musical theatre productions, and restarted performances at age
-					| eleven, including key roles in #[em Annie], #[em High School Musical], and
-					| #[em Into the Woods]. He has been taking music/piano lessons and, more recently, voice
-					| lessons. He is entirely self-taught on guitar.
-				p
-					| Lorenzo lists
-					| #[a(href="http://www.edsheeran.com/") Ed Sheeran],
-					| #[a(href="http://www.maroon5.com") Maroon 5],
-					| #[a(href="http://www.charlieputh.com") Charlie Puth],
-					| #[a(href="http://www.shawnmendesofficial.com") Shawn Mendes],
-					| #[a(href="http://www.jamestaylor.com") James Taylor],
-					| #[a(href="http://www.johnmayer.com") John Mayer],
-					| #[a(href="http://www.thebeatles.com") The Beatles],
-					| #[a(href="http://www.niallhoran.com") Niall Horan], and
-					| #[a(href="http://www.savemesanfrancisco.com") Train]
-					| as his musical influences.
-				p
-					| Lorenzo enjoys working with other musicians, and has recorded a number of duets for video.
-					| He is often found busking at local street festivals or busy streets, by himself or with
-					| support on bass or percussion. He's expecting to have his first EP, self-produced, ready
-					| later this year.
+				article.textual
+					header.ir(aria-hidden="true")
+						h2 Bio
+					//- Try to match meta description
+					p
+						| Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums,
+						| piano/keyboards, bass, and a bit of ukulele. He also beat-boxes, and uses a Loop Station for
+						| live performances. He writes or co-writes many of his own original songs. He produces and
+						| records his music (using Apple Logic) and creates live performance videos.
+					p
+						| Lorenzo started learning to play the drums at the age of four. At the age of seven, he
+						| performed in children's musical theatre productions, and restarted performances at age
+						| eleven, including key roles in #[em Annie], #[em High School Musical], and
+						| #[em Into the Woods]. He has been taking music/piano lessons and, more recently, voice
+						| lessons. He is entirely self-taught on guitar.
+					p
+						| Lorenzo lists
+						| #[a(href="http://www.edsheeran.com/") Ed Sheeran],
+						| #[a(href="http://www.maroon5.com") Maroon 5],
+						| #[a(href="http://www.charlieputh.com") Charlie Puth],
+						| #[a(href="http://www.shawnmendesofficial.com") Shawn Mendes],
+						| #[a(href="http://www.jamestaylor.com") James Taylor],
+						| #[a(href="http://www.johnmayer.com") John Mayer],
+						| #[a(href="http://www.thebeatles.com") The Beatles],
+						| #[a(href="http://www.niallhoran.com") Niall Horan], and
+						| #[a(href="http://www.savemesanfrancisco.com") Train]
+						| as his musical influences.
+					p
+						| Lorenzo enjoys working with other musicians, and has recorded a number of duets for video.
+						| He is often found busking at local street festivals or busy streets, by himself or with
+						| support on bass or percussion. He's expecting to have his first EP, self-produced, ready
+						| later this year.
 
-				//- Bands in Town content gets loaded here asynchronously.
-				#bandsintown-widget
+					//- Bands in Town content gets loaded here asynchronously.
+					#bandsintown-widget
 
-				p
-					span.bandsintown-button
-						a(href="https://www.bandsintown.com/track/lorenzowoodmusic")
-							include svg/bandsintown.svg
-							| Track Lorenzo Wood on BandsInTown
-					| to be notified of upcoming gigs!
+					p
+						span.bandsintown-button
+							a(href="https://www.bandsintown.com/track/lorenzowoodmusic")
+								include svg/bandsintown.svg
+								| Track Lorenzo Wood on BandsInTown
+						| to be notified of upcoming gigs!
 
 
 
-			section.patreon-section.textual
-				h2
-					span.patreon-button
-						a(href="https://www.patreon.com/lorenzowoodmusic")
-							| Support Lorenzo Wood Music on
-							|
-							include svg/patreon.svg
-							| #[span.patreon-link Patreon]!
+			section.patreon-section
+				article.textual
+					h2
+						span.patreon-button
+							a(href="https://www.patreon.com/lorenzowoodmusic")
+								| Support Lorenzo Wood Music on
+								|
+								include svg/patreon.svg
+								| #[span.patreon-link Patreon]!
 
 
 
 			section.instagram-section.maximize-mobile
-				.instagram
+				article.instagram
 					header
 						h2 Instagram
 					#lightweight_widget
@@ -122,10 +124,9 @@ html(class="no-js", lang="en-us")
 
 
 			section.soundcloud-section.maximize-mobile
-
+				article.soundcloud.clearfix
 				//- Attention, City of Stars, Wounded
 
-				.soundcloud.clearfix
 					each code in ['334122523', '300366415', '295083156']
 						.soundcloud-column
 							iframe.soundcloud(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + code + "&color=ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_artwork=false&show_reposts=false")
@@ -139,52 +140,54 @@ html(class="no-js", lang="en-us")
 
 				//- Female, Ruin
 
-				.youtube.clearfix
+				article.youtube.clearfix
 					each code in ['ipoL1h1d7zA', 'RynQ3nswXyk']
 						.youtube-column
 							.embed-container
 								iframe(src="https://www.youtube.com/embed/"+code allowfullscreen=true)
-				footer
-					h3
-						a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
+					footer
+						h3
+							a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
 
 
 
 			section.track-section.clearfix
-				.track-photo
-					img(src="img/side.jpg" alt="Lorenzo singing, viewed from the side")
-				.track-form
-					.track-form-inner
-						h2 Subscribe to Lorenzo's mailing list
-						p We also suggest tracking Lorenzo on #[a(href="https://bandsintown.com/lorenzowoodmusic") BandsInTown].
-						form.validate(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&id=1c68d63e9a"
-							method="post"
-							name="mc-embedded-subscribe-form"
-							target="_blank")
-							div
-								label(for="mce-EMAIL") Email Address
-								//- Use raw HTML here since the escaping happens too early when processed by pug
-								<input type="email" id="mce-EMAIL" name="EMAIL" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-							div
-								label(for="mce-FNAME") First Name
-								input#mce-FNAME(type="text" name="FNAME")
-							div
-								label(for="mce-LNAME") Last Name
-								input#mce-LNAME(type="text" name="LNAME")
-							.ir(aria-hidden="true")
-								input(style="border:none" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
-							div
-								input.button(type="submit" value="Subscribe" name="subscribe")
+				article.textual
+					.track-photo
+						img(src="img/side.jpg" alt="Lorenzo singing, viewed from the side")
+					.track-form
+						.track-form-inner
+							h2 Subscribe to Lorenzo's mailing list
+							p We also suggest tracking Lorenzo on #[a(href="https://bandsintown.com/lorenzowoodmusic") BandsInTown].
+							form.validate(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&id=1c68d63e9a"
+								method="post"
+								name="mc-embedded-subscribe-form"
+								target="_blank")
+								div
+									label(for="mce-EMAIL") Email Address
+									//- Use raw HTML here since the escaping happens too early when processed by pug
+									<input type="email" id="mce-EMAIL" name="EMAIL" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+								div
+									label(for="mce-FNAME") First Name
+									input#mce-FNAME(type="text" name="FNAME")
+								div
+									label(for="mce-LNAME") Last Name
+									input#mce-LNAME(type="text" name="LNAME")
+								.ir(aria-hidden="true")
+									input(style="border:none" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
+								div
+									input.button(type="submit" value="Subscribe" name="subscribe")
 
 
 
-			section.contact.textual
-				header.ir(aria-hidden="true")
-					h2 Contact
-				div.email-padding
-					img(alt="lorenzo at this domain name" src="img/lorenzo-animated.gif")
-				div.email-padding
-					img(alt="booking at this domain name" src="img/booking-animated.gif")
+			section.contact
+				article.textual
+					header.ir(aria-hidden="true")
+						h2 Contact
+					div.email-padding
+						img(alt="lorenzo at this domain name" src="img/lorenzo-animated.gif")
+					div.email-padding
+						img(alt="booking at this domain name" src="img/booking-animated.gif")
 
 
 		footer
