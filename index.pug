@@ -28,6 +28,7 @@ html(class="no-js", lang="en-us")
 
 
 		header
+
 			h1.ir Lorenzo Wood Music
 			.logo
 				include svg/lorenzowoodmusic.svg
@@ -51,14 +52,12 @@ html(class="no-js", lang="en-us")
 
 		main
 
-
-
 			section.bio
 				article.textual
 					header.ir(aria-hidden="true")
 						h2 Bio
 
-					//- Try to match meta description below
+					//- Try to match meta description above with text below
 					p
 						| Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums,
 						| piano/keyboards, bass, and a bit of ukulele. He also beat-boxes, and uses a Loop Station for
@@ -117,14 +116,13 @@ html(class="no-js", lang="en-us")
 					header
 						h2 Instagram
 					#lightweight_widget
-					//- (style="background-color:white") was there before
 				footer
 					h3
 						a(href="https://instagram.com/LorenzoWoodMusic") More from Instagram
 
 
 
-			section.soundcloud-section.requires-js.maximize-mobile
+			section.soundcloud-section.balance-footer.requires-js.maximize-mobile
 				//- Attention, City of Stars, Wounded
 
 				article.clearfix
@@ -137,7 +135,7 @@ html(class="no-js", lang="en-us")
 
 
 
-			section.youtube-section.requires-js.maximize-mobile
+			section.youtube-section.balance-footer.requires-js.maximize-mobile
 
 				//- Female, Ruin
 
@@ -175,7 +173,7 @@ html(class="no-js", lang="en-us")
 									label(for="mce-LNAME") Last Name
 									input#mce-LNAME(type="text" name="LNAME")
 								.ir(aria-hidden="true")
-									input(style="border:none" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
+									input(class="ir" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
 								div
 									input.button(type="submit" value="Subscribe" name="subscribe")
 
@@ -192,6 +190,7 @@ html(class="no-js", lang="en-us")
 
 
 		footer
+
 			.icons
 				a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 					include svg/instagram.svg

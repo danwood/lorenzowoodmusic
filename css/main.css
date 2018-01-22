@@ -742,6 +742,9 @@ h3 {
 section {
   padding:1rem 0;
 }
+section.balance-footer {
+  padding-bottom:0;
+}
 
 /* Debugging
 section:nth-child(even) {background: cyan !important;}
@@ -767,9 +770,9 @@ select {
     font-size:1rem;
     margin-bottom:1rem;
     padding:0.25rem 0.5rem;
-    width:95%;
-    color:black;
+    width:95%;    /* Due to padding, make sure it won't overflow */
     max-width:30rem;
+    color:black;
 }
 
 .button {
@@ -784,7 +787,7 @@ select {
 
 /* ===== Utility ===== */
 
-.ir { border:0;font:0/0 a;text-shadow:none;color:transparent;width:0; height:0 }
+.ir { border:0; font:0/0 a; text-shadow:none; color:transparent; width:0; height:0; padding:0; }
 
 /* ===== Geometry ===== */
 
@@ -895,7 +898,6 @@ article.textual {
 
 .lightwidget-widget {
     background:white;
-    margin-bottom:1rem;
     width:100%;
     border:0;
     overflow:hidden;
