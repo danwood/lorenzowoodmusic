@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Dan Wood -- Webmaster -- @danwood
+
+# THANKS
+
+
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    HTML5 Boilerplate
+    Apache Server Configs, jQuery, Normalize.css
+    https://www.vectorizer.io
+    https://jakearchibald.github.io/svgomg/
+    https://pugjs.org/
