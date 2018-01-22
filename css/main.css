@@ -1094,6 +1094,10 @@ iframe.soundcloud {
 .icons a:hover:after{
     opacity:0.75;
 }
+.icons:last-child a:after {
+  right:0;
+  left:auto;
+}
 
 .no-js .requires-js {
   display:none;
