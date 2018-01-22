@@ -11,10 +11,16 @@ html(class="no-js", lang="en-us")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		link(rel="apple-touch-icon" href="icon.png")
 		link(rel="stylesheet" href="css/main.min.css")
+		link(rel="prefetch" href="//code.jquery.com")
+		link(rel="prefetch" href="//w.soundcloud.com")
+		link(rel="prefetch" href="//www.youtube.com")
+		link(rel="prefetch" href="//widget.bandsintown.com")
 	body
+		|
 		<!--[if lt IE 9]>
 			p.browserupgrade
 				| You are using an #[strong outdated] browser. Please
+				|
 				a(href="http://browsehappy.com/") upgrade your browser
 				|  to improve your experience.
 		<![endif]-->
@@ -70,7 +76,7 @@ html(class="no-js", lang="en-us")
 					p
 						| Lorenzo lists
 						| #[a(href="http://www.edsheeran.com/") Ed Sheeran],
-						| #[a(href="https://www.maroon5.com") Maroon 5],
+						| #[a(href="http://www.maroon5.com") Maroon 5],
 						| #[a(href="http://www.charlieputh.com") Charlie Puth],
 						| #[a(href="http://www.shawnmendesofficial.com") Shawn Mendes],
 						| #[a(href="http://www.jamestaylor.com") James Taylor],
@@ -213,6 +219,8 @@ html(class="no-js", lang="en-us")
 				p
 					b Copyright © 2017-2018 Lorenzo Wood
 					span.dimmer Photo credits: David Weintraub
+		|
+		|
 		a.bit-widget-initializer(data-artist-name="Lorenzo Wood Music"
 			data-display-local-dates="false"
 			data-display-past-dates="false"
@@ -232,6 +240,4 @@ html(class="no-js", lang="en-us")
 			window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\\/script>')
 		script
 			include js/index-min.js
-
-		//- TODO: can we incorporate locally into our JS?
 		script(src="https://widget.bandsintown.com/main.min.js")
