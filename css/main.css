@@ -1082,7 +1082,7 @@ iframe.soundcloud {
 
     content:attr(data-title);
     position:absolute;
-    left:6px;
+    left:10%;
     bottom:8px;
     text-align:center;
     display:block;
@@ -1094,8 +1094,8 @@ iframe.soundcloud {
 .icons a:hover:after{
     opacity:0.75;
 }
-.icons:last-child a:after {
-  right:0;
+.icons a:last-child:after {
+  right:10%;
   left:auto;
 }
 
