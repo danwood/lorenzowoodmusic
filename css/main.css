@@ -1094,7 +1094,7 @@ iframe.soundcloud {
 .icons a:hover:after{
     opacity:0.75;
 }
-.icons a:last-child:after {
+.icons a:last-child:after { /* Also need to do below for 5th icon when we have two rows! SEE BELOW */
   right:15%;  /* plenty of room for shadow effect to not overflow the container on phone */
   left:auto;
 }
@@ -1128,8 +1128,12 @@ iframe.soundcloud {
 @media only screen and (max-width:599px) {
 
     /* Bigger social media icons on mobile ... 5-up when we have the 10 icons */
-    .icons a {
+    .exhaustive.icons a {
         width:20%;
+    }
+    .exhaustive.icons a:nth-child(5):after { /* Need to not overflow text on right */
+      right:15%;
+      left:auto;
     }
 
     /* ... and 6-up without margins where we have the 6 icons */
