@@ -1093,7 +1093,7 @@ iframe.soundcloud {
     .popular.icons a {
         width:16.66%;
     }
-    .popular .icons a:first-child {
+    .popular.icons a:first-child {
         margin-left:0;
     }
 
@@ -1115,7 +1115,7 @@ iframe.soundcloud {
     }
 }
 
-@media only screen and (min-width:400px) {
+@media only screen and (min-width:600px) {
 
     /* If wide enough, show button inline with text rather than 100% wide */
 
@@ -1123,10 +1123,6 @@ iframe.soundcloud {
         display:inline;
         margin-right:0.3rem;
     }
-
-}
-
-@media only screen and (min-width:600px) {
 
     /* Two YouTube videos side by side */
 
