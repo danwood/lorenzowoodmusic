@@ -115,21 +115,21 @@ html(class="no-js", lang="en-us")
 
 
 			section.instagram-section.requires-js.maximize-mobile
-				article.instagram
+				article
 					header
 						h2 Instagram
 					#lightweight_widget
 					//- (style="background-color:white") was there before
-					footer
-						h3
-							a(href="https://instagram.com/LorenzoWoodMusic") More from Instagram
+				footer
+					h3
+						a(href="https://instagram.com/LorenzoWoodMusic") More from Instagram
 
 
 
 			section.soundcloud-section.requires-js.maximize-mobile
-				article.soundcloud.clearfix
 				//- Attention, City of Stars, Wounded
 
+				article.clearfix
 					each code in ['334122523', '300366415', '295083156']
 						.soundcloud-column
 							iframe.soundcloud(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + code + "&color=ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_artwork=false&show_reposts=false")
@@ -143,14 +143,14 @@ html(class="no-js", lang="en-us")
 
 				//- Female, Ruin
 
-				article.youtube.clearfix
+				article.clearfix
 					each code in ['ipoL1h1d7zA', 'RynQ3nswXyk']
 						.youtube-column
 							.embed-container
 								iframe(src="https://www.youtube.com/embed/"+code allowfullscreen=true)
-					footer
-						h3
-							a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
+				footer
+					h3
+						a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
 
 
 

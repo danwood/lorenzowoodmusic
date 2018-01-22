@@ -770,6 +770,12 @@ body {
     font:16px/26px Helvetica, Helvetica Neue, Arial;
 }
 
+h3 {
+    margin:0;
+    padding:1em 1em;
+    text-align:right;
+}
+
 iframe {
     border:none;
 }
@@ -888,7 +894,7 @@ article.textual {
 
 /* Patreon section */
 
-.patreon-section {
+.patreon-section article {
     text-align:center;
     line-height:1.5;
 }
@@ -901,21 +907,15 @@ article.textual {
 
 /* Instagram section */
 
-.instagram {
+.instagram-section article {
     margin:0 auto;
     max-width:1200px;
 }
 
-.instagram h2 {
+.instagram-section h2 {
     padding-top:1em;
     padding-bottom:1em;
     margin:0;
-}
-
-.instagram h3 {
-    margin:0;
-    padding-bottom:1em;
-    text-align:right;
 }
 
 .lightwidget-widget {
@@ -927,30 +927,7 @@ article.textual {
     margin-top:0;
 }
 
-/* SoundCloud */
-
-.soundcloud-section {
-    text-align:right;
-    padding-top:1em;
-    padding-bottom:1em;
-}
-
-.soundcloud { width:100%; }
-
-/* YouTube */
-
-.youtube-section {
-    text-align:right;
-    padding-top:1em;
-    padding-bottom:1em;
-}
-
 /* Track via Email List */
-
-.track-section {
-    padding-top:2em;
-    padding-bottom:2em;
-}
 
 .track-form-inner {
     padding:0 2em;
