@@ -24,27 +24,36 @@ html(class="no-js", lang="en-us")
 				a(href="http://browsehappy.com/") upgrade your browser
 				|  to improve your experience.
 		<![endif]-->
+
+
+
 		header
 			h1.ir Lorenzo Wood Music
 			.logo
 				include svg/lorenzowoodmusic.svg
 			.hero
 				img(src="img/hero.jpg" alt="Lorenzo Wood")
-			.icon-container.popular
-				a.icon-column(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
+			.icons.popular
+				a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 					include svg/instagram.svg
-				a.icon-column(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
+				a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
 					include svg/facebook.svg
-				a.icon-column(data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood")
+				a(data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood")
 					include svg/snapchat.svg
-				a.icon-column(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
+				a(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
 					include svg/twitter.svg
-				a.icon-column(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
+				a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
 					include svg/youtube.svg
-				a.icon-column(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
+				a(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
 					include svg/soundcloud.svg
+
+
+
 		main
-			section.bio.textual
+
+
+
+			section.bio
 				header.ir(aria-hidden="true")
 					h2 Bio
 				//- Try to match meta description
@@ -86,7 +95,10 @@ html(class="no-js", lang="en-us")
 							include svg/bandsintown.svg
 							| Track Lorenzo Wood on BandsInTown
 					| to be notified of upcoming gigs!
-			section.patreon-section
+
+
+
+			section.patreon-section.textual
 				h2
 					span.patreon-button
 						a(href="https://www.patreon.com/lorenzowoodmusic")
@@ -94,6 +106,9 @@ html(class="no-js", lang="en-us")
 							|
 							include svg/patreon.svg
 							| #[span.patreon-link Patreon]!
+
+
+
 			section.instagram-section.maximize-mobile
 				.instagram
 					header
@@ -103,6 +118,8 @@ html(class="no-js", lang="en-us")
 					footer
 						h3
 							a(href="https://instagram.com/LorenzoWoodMusic") More from Instagram
+
+
 
 			section.soundcloud-section.maximize-mobile
 
@@ -116,6 +133,8 @@ html(class="no-js", lang="en-us")
 					h3
 						a(href="https://soundcloud.com/LorenzoWoodMusic") More from SoundCloud
 
+
+
 			section.youtube-section.maximize-mobile
 
 				//- Female, Ruin
@@ -128,6 +147,9 @@ html(class="no-js", lang="en-us")
 				footer
 					h3
 						a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
+
+
+
 			section.track-section.clearfix
 				.track-photo
 					img(src="img/side.jpg" alt="Lorenzo singing, viewed from the side")
@@ -153,6 +175,9 @@ html(class="no-js", lang="en-us")
 								input(style="border:none" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
 							div
 								input.button(type="submit" value="Subscribe" name="subscribe")
+
+
+
 			section.contact.textual
 				header.ir(aria-hidden="true")
 					h2 Contact
@@ -160,33 +185,37 @@ html(class="no-js", lang="en-us")
 					img(alt="lorenzo at this domain name" src="img/lorenzo-animated.gif")
 				div.email-padding
 					img(alt="booking at this domain name" src="img/booking-animated.gif")
+
+
 		footer
-			.icon-container
-				a.icon-column(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
+			.icons
+				a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 					include svg/instagram.svg
-				a.icon-column(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
+				a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
 					include svg/facebook.svg
-				a.icon-column(data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood")
+				a(data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood")
 					include svg/snapchat.svg
-				a.icon-column(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
+				a(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
 					include svg/twitter.svg
-				a.icon-column(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
+				a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
 					include svg/youtube.svg
-				a.icon-column(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
+				a(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
 					include svg/soundcloud.svg
-				a.icon-column(data-title="Reverb Nation" href="https://www.reverbnation.com/lorenzowoodmusic")
+				a(data-title="Reverb Nation" href="https://www.reverbnation.com/lorenzowoodmusic")
 					include svg/reverbnation.svg
-				a.icon-column(data-title="Bands in Town" href="https://bandsintown.com/lorenzowoodmusic")
+				a(data-title="Bands in Town" href="https://bandsintown.com/lorenzowoodmusic")
 					include svg/bandsintown.svg
-				a.icon-column(data-title="Holonis" href="https://holonis.com/lorenzowoodmusic")
+				a(data-title="Holonis" href="https://holonis.com/lorenzowoodmusic")
 					include svg/holonis.svg
-				a.icon-column(data-title="Patreon" href="https://www.patreon.com/lorenzowoodmusic")
+				a(data-title="Patreon" href="https://www.patreon.com/lorenzowoodmusic")
 					include svg/patreon.svg
 			p
 				b Copyright © 2017-2018 Lorenzo Wood
 				span.dimmer &nbsp; Photo credits: David Weintraub
 		|
 		|
+
+
 		a.bit-widget-initializer(data-artist-name="Lorenzo Wood Music"
 			data-display-local-dates="false"
 			data-display-past-dates="false"
