@@ -1095,7 +1095,7 @@ iframe.soundcloud {
     opacity:0.75;
 }
 .icons a:last-child:after {
-  right:10%;
+  right:15%;  /* plenty of room for shadow effect to not overflow the container on phone */
   left:auto;
 }
 
