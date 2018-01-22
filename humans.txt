@@ -19,4 +19,6 @@
     https://www.vectorizer.io for automated SVG creation
     https://jakearchibald.github.io/svgomg/ to compress the SVGs
     https://pugjs.org/
+    Chrome CSS coverage tool https://developers.google.com/web/updates/2017/04/devtools-release-notes
+    CSSMinifier.com (until SASS knows about new env settings in CSS)
     CodeKit
