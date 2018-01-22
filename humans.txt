@@ -12,8 +12,11 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    HTML5 Boilerplate
+    HTML5 Boilerplate 6.0.1
     Apache Server Configs, jQuery, Normalize.css
-    https://www.vectorizer.io
-    https://jakearchibald.github.io/svgomg/
+    ImageOptim (with Guetzli)
+    Sketch and Opacity for hand-made SVG creation
+    https://www.vectorizer.io for automated SVG creation
+    https://jakearchibald.github.io/svgomg/ to compress the SVGs
     https://pugjs.org/
+    CodeKit
