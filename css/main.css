@@ -837,9 +837,9 @@ section, .safe-area {
 
 /* for header and footer, full window width but indented a bit */
 
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
+body > footer p {
+    padding: 20px 5%;
+    margin:0;
 }
 
 
@@ -872,21 +872,16 @@ section.textual {
 
 /* Icons (at top and bottom) */
 
-.icon-container {
-  font-size:0;        /* TOTAL HACK, BUT THIS ALLOWS US TO HAVE SPACE BETWEEN EACH COLUMN */
-}
-
-.icon-column {
+a.icon-column {
     width:10%;
     display:inline-block;
-    font-size:1em;  /* RESTORE FONT SIZE FROM HACK */
 }
 
-.icon-column svg {
+a.icon-column svg {
     margin:10%;
 }
 
-.popular .icon-column:first-child { /* Left margin for shorter icon list */
+.popular a.icon-column:first-child { /* Left margin for shorter icon list */
     margin-left:20%;
 }
 
@@ -964,12 +959,6 @@ section.textual {
     max-width:100%;
 }
 
-/* Footer */
-
-.footer-container footer {
-    padding: 20px 0;
-}
-
 
 
 /* ===== Colors ===== */
@@ -1039,10 +1028,8 @@ main {
     color:white;
 }
 
-.footer-container {
+body > footer {
     background: #bdbdbd;
-}
-.footer-container footer {
     color: white;
 }
 
@@ -1081,10 +1068,10 @@ main {
 
 
 /* Special hover tooltip-like display over social icons */
-.icon-column {
+a.icon-column {
     position:relative;
 }
-.icon-column a:after{
+a.icon-column:after{
     padding: 0 5px;
     font-size:80%;
     background: #fff;
@@ -1101,10 +1088,10 @@ main {
     display:block;
     z-index:99;
 
-    opacity: 0;
+    opacity: 0; /* Invisible until hovered */
     transition: opacity .3s ease-in-out;
 }
-.icon-column a:hover:after{
+a.icon-column:hover:after{
     opacity: 0.75;
 }
 
@@ -1122,15 +1109,15 @@ main {
 @media only screen and (max-width: 599px) {
 
     /* Bigger social media icons on mobile ... 5-up when we have the 10 icons */
-    .icon-column {
+    a.icon-column {
         width:20%;
     }
 
     /* ... and 6-up without margins where we have the 6 icons */
-    .icon-column.popular {
+    a.icon-column.popular {
         width:16.66%;
     }
-    .popular .icon-column:first-child {
+    .popular a.icon-column:first-child {
         margin-left:0;
     }
 
