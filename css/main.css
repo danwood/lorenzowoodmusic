@@ -767,7 +767,7 @@ html {
 }
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font:16px/26px Helvetica, Helvetica Neue, Arial;
 }
 
 iframe {
@@ -775,18 +775,18 @@ iframe {
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5em;
+    display:block;
+    font-weight:bold;
+    margin-bottom:0.5em;
 }
 
 input,
 select {
-    display: inline-block;
-    font-size: 1em;
-    margin-bottom: 1em;
-    padding: 0.25em 0.5em;
-    width: 95%;
+    display:inline-block;
+    font-size:1em;
+    margin-bottom:1em;
+    padding:0.25em 0.5em;
+    width:95%;
     color:black;
     max-width:30em;
 }
@@ -794,7 +794,7 @@ select {
 .button {
     display:block;
     text-align:center;
-    color: #FFF;
+    color:#FFF;
     background:#00AEA8;
     padding:6px 2em;
     border:none;
@@ -813,32 +813,32 @@ the safe-area-inset-* env's are defined to be zero! Use a script as a fallback. 
 section, .safe-area {
     padding-left:1em;           /* Fallback if below not understood */
     padding-right:1em;
-    padding-left: constant(safe-area-inset-left);
+    padding-left:constant(safe-area-inset-left);
     padding-right:constant(safe-area-inset-right);  /* iOS 11.0, 11.1 … phase out soon */
-    padding-left: env(safe-area-inset-left);
+    padding-left:env(safe-area-inset-left);
     padding-right:env(safe-area-inset-right);       /* iOS 11.2 beta and up */
 }
 
 /* Use @supports per https://webkit.org/blog/7929/designing-websites-for-iphone-x/ */
-@supports(padding: max(0px)) {
+@supports(padding:max(0px)) {
     .post {
-        padding-left: max(1em, env(safe-area-inset-left));
-        padding-right: max(1em, env(safe-area-inset-right));
+        padding-left:max(1em, env(safe-area-inset-left));
+        padding-right:max(1em, env(safe-area-inset-right));
     }
 }
 
 .embed-container {
-    position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;
+    position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%;
 }
 
 .embed-container iframe, .embed-container object, .embed-container embed {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    position:absolute; top:0; left:0; width:100%; height:100%;
 }
 
 /* for header and footer, full window width but indented a bit */
 
 body > footer p {
-    padding: 20px 5%;
+    padding:20px 5%;
     margin:0;
 }
 
@@ -921,9 +921,9 @@ article.textual {
 .lightwidget-widget {
     background:white;
     margin-bottom:1em;
-    width: 100%;
-    border: 0;
-    overflow: hidden;
+    width:100%;
+    border:0;
+    overflow:hidden;
     margin-top:0;
 }
 
@@ -985,10 +985,10 @@ main {
 }
 
 .logo {
-    background: #000;
+    background:#000;
 }
 .icons {
-  background: #212121;
+  background:#212121;
 }
 
 .patreon-section {
@@ -1030,8 +1030,8 @@ main {
 }
 
 body > footer {
-    background: #bdbdbd;
-    color: white;
+    background:#bdbdbd;
+    color:white;
 }
 
 
@@ -1043,12 +1043,12 @@ body > footer {
 .bandsintown-button {
     display:block;
     text-align:center;
-    color: #FFF;
+    color:#FFF;
     background:#00AEA8;
     padding:6px;
 }
 .bandsintown-button a {
-    color: #FFF;
+    color:#FFF;
     text-decoration:none;
 }
 .bandsintown-button svg {
@@ -1073,27 +1073,27 @@ body > footer {
     position:relative;
 }
 .icons a:after{
-    padding: 0 5px;
+    padding:0 5px;
     font-size:80%;
-    background: #fff;
+    background:#fff;
     color:#000;
     border-radius:5px;
-    box-shadow: 0 0 8px 8px #FFF;
+    box-shadow:0 0 8px 8px #FFF;
     line-height:1;
 
-    content: attr(data-title);
-    position: absolute;
+    content:attr(data-title);
+    position:absolute;
     left:6px;
     bottom:8px;
     text-align:center;
     display:block;
     z-index:99;
 
-    opacity: 0; /* Invisible until hovered */
-    transition: opacity .3s ease-in-out;
+    opacity:0; /* Invisible until hovered */
+    transition:opacity .3s ease-in-out;
 }
 .icons a:hover:after{
-    opacity: 0.75;
+    opacity:0.75;
 }
 
 .no-js .requires-js {
@@ -1103,7 +1103,7 @@ body > footer {
   display:none;
 }
 .no-js .js-required {
-  padding: 0.5em 1em;
+  padding:0.5em 1em;
   margin:0;
   background:#f5f5f5;
 }
@@ -1121,7 +1121,7 @@ body > footer {
 
 /* ===== BREAKPOINTS … general (under 600 for mobile, 600+ for desktop) and specialized ===== */
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width:599px) {
 
     /* Bigger social media icons on mobile ... 5-up when we have the 10 icons */
     .icons a {
@@ -1154,18 +1154,18 @@ body > footer {
     }
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width:400px) {
 
     /* If wide enough, show button inline with text rather than 100% wide */
 
     .bandsintown-button {
         display:inline;
-        margin-right: 0.3em;
+        margin-right:0.3em;
     }
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width:600px) {
 
     /* Two YouTube videos side by side */
 
@@ -1177,7 +1177,7 @@ body > footer {
     /* On wide screens, put photo to left of the 'track' form */
 
     .track-photo {
-        float: left;
+        float:left;
         width:33%;
     }
     .track-form {
@@ -1186,7 +1186,7 @@ body > footer {
     }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width:800px) {
 
     /* Wider screens, show patreon as a distinct button */
 
