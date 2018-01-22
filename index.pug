@@ -10,7 +10,7 @@ html(class="no-js", lang="en-us")
 			content="Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		link(rel="apple-touch-icon" href="icon.png")
-		link(rel="stylesheet" href="css/main.min.css")
+		link(rel="stylesheet" href="css/main.css")
 		link(rel="prefetch" href="//code.jquery.com")
 		link(rel="prefetch" href="//w.soundcloud.com")
 		link(rel="prefetch" href="//www.youtube.com")
@@ -58,7 +58,7 @@ html(class="no-js", lang="en-us")
 							include svg/soundcloud.svg
 		.main-container
 			.main.clearfix
-				section.bio
+				section.bio.textual
 					header.ir(aria-hidden="true")
 						h2 Bio
 					//- Try to match meta description
@@ -165,7 +165,7 @@ html(class="no-js", lang="en-us")
 									input(style="border:none" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
 								div
 									input.button(type="submit" value="Subscribe" name="subscribe")
-				section.contact
+				section.contact.textual
 					header.ir(aria-hidden="true")
 						h2 Contact
 					div(style="margin:0 20px; max-width:400px")
@@ -218,7 +218,7 @@ html(class="no-js", lang="en-us")
 			footer.wrapper
 				p
 					b Copyright © 2017-2018 Lorenzo Wood
-					span.dimmer Photo credits: David Weintraub
+					span.dimmer &nbsp; Photo credits: David Weintraub
 		|
 		|
 		a.bit-widget-initializer(data-artist-name="Lorenzo Wood Music"
