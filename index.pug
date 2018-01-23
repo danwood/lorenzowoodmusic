@@ -50,9 +50,9 @@ html(class="no-js", lang="en-us")
 		main
 
 			section.bio
+				header.ir(aria-hidden="true")
+					h2 Bio
 				article.textual
-					header.ir(aria-hidden="true")
-						h2 Bio
 
 					//- Try to match meta description above with text below
 					p
@@ -103,15 +103,16 @@ html(class="no-js", lang="en-us")
 							a(href="https://www.patreon.com/lorenzowoodmusic")
 								| Support Lorenzo Wood Music on
 								|
-								include svg/patreon.svg
+								span(aria-hidden="true")
+									include svg/patreon.svg
 								| #[span.patreon-link Patreon]!
 
 
 
 			section.instagram-section.requires-js.maximize-mobile
+				header
+					h2 Instagram
 				article
-					header
-						h2 Instagram
 					#lightweight_widget
 				footer
 					h3
@@ -120,6 +121,9 @@ html(class="no-js", lang="en-us")
 
 
 			section.soundcloud-section.balance-footer.requires-js.maximize-mobile
+				header.ir(aria-hidden="true")
+					h2 SoundCloud
+
 				//- Trip Switch, Attention, Wounded
 
 				article.clearfix
@@ -133,6 +137,8 @@ html(class="no-js", lang="en-us")
 
 
 			section.youtube-section.balance-footer.requires-js.maximize-mobile
+				header.ir(aria-hidden="true")
+					h2 YouTube
 
 				//- Female, Ruin
 
@@ -177,9 +183,9 @@ html(class="no-js", lang="en-us")
 
 
 			section.contact
+				header.ir(aria-hidden="true")
+					h2 Contact
 				article.textual
-					header.ir(aria-hidden="true")
-						h2 Contact
 					div.email-padding
 						img(alt="lorenzo at this domain name" src="img/lorenzo-animated.gif")
 					div.email-padding
