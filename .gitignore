@@ -5,3 +5,4 @@
 *.codekit3
 *.codekit
 /js/index-min.js
+.ssh
