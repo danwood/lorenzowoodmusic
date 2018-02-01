@@ -6,3 +6,10 @@
 *.codekit
 /js/index-min.js
 .ssh
+*.html
+/downcode_tracks
+*.codekit3
+/redeem.css
+/redeem.php
+
+
