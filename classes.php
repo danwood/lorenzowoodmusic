@@ -4,12 +4,16 @@ error_reporting(E_ALL);
 date_default_timezone_set('America/Los_Angeles');
 
 // Temporarily don't use $_SERVER['DOCUMENT_ROOT'] - based database.
-define('DROPBOX_DIR',      dirname(__FILE__)  . '/../../Dropbox');
-define('DROPBOX_RESOLVED', is_link(DROPBOX_DIR) ? readlink(DROPBOX_DIR) : DROPBOX_DIR);
-include_once(DROPBOX_RESOLVED . '/downcode_db/secrets.php');    // $password
+define('PRIVATE_DIR',      dirname(__FILE__)  . '/../private');
+define('PRIVATE_RESOLVED', is_link(PRIVATE_DIR) ? readlink(PRIVATE_DIR) : PRIVATE_DIR);
+include_once(PRIVATE_RESOLVED . '/downcode_db/secrets.php');    // $password
 
-define('DOWNCODE_DBDIR',    DROPBOX_RESOLVED . '/downcode_db');
-define('DOWNCODE_FILESDIR', DROPBOX_RESOLVED . '/downcode_files');
+echo "SOMETHING = ";
+echo $something;
+die;
+
+define('DOWNCODE_DBDIR',    PRIVATE_RESOLVED . '/downcode_db');
+define('DOWNCODE_FILESDIR', PRIVATE_RESOLVED . '/downcode_files');
 
 // Adapted from https://github.com/dflydev/dflydev-base32-crockford (MIT license)
 
