@@ -1,3 +1,14 @@
+# For Nearly Free Speech
+# https://members.nearlyfreespeech.net/forums/viewtopic.php?t=7621&highlight=xhttpdphp
+AddHandler nfgi-handler .html 
+
+
+# For Mac
+<FilesMatch \.html$>
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+
 # Apache Server Configs v2.14.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
 
