@@ -1,12 +1,14 @@
-# For Nearly Free Speech
-# https://members.nearlyfreespeech.net/forums/viewtopic.php?t=7621&highlight=xhttpdphp
-AddHandler nfgi-handler .html 
-
 
 # For Mac
 <FilesMatch \.html$>
     SetHandler application/x-httpd-php
 </FilesMatch>
+
+# For Nearly Free Speech
+# https://members.nearlyfreespeech.net/forums/viewtopic.php?t=7621&highlight=xhttpdphp
+AddHandler nfgi-handler .html
+
+# Defining Mac then NFS seems to work OK with Mac
 
 
 # Apache Server Configs v2.14.0 | MIT License
