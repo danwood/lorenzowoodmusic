@@ -11,9 +11,11 @@
 
 //password to gain access
 // Temporarily don't use $_SERVER['DOCUMENT_ROOT'] - based database.
-define(DROPBOX_DIR,      dirname(__FILE__)  . '/../../Dropbox');
-define(DROPBOX_RESOLVED, is_link(DROPBOX_DIR) ? readlink(DROPBOX_DIR) : DROPBOX_DIR);
-include_once(DROPBOX_RESOLVED . '/downcode_db/secrets.php');    // $password
+define('PRIVATE_DIR',      dirname(__FILE__)  . '/../protected');
+define('PRIVATE_RESOLVED', is_link(PRIVATE_DIR) ? readlink(PRIVATE_DIR) : PRIVATE_DIR);
+include_once(PRIVATE_RESOLVED . '/downcode_db/secrets.php');    // $password
+
+
 
 //directory relative to this file to search for databases (if false, manually list databases in the $databases variable)
 $directory = false;
@@ -25,7 +27,7 @@ $subdirectories = false;
 //if any of the databases do not exist as they are referenced by their path, they will be created automatically
 $databases = array(
 	array(
-		'path'=> DROPBOX_RESOLVED . '/downcode_db/downcode.sqlite3',
+		'path'=> PRIVATE_RESOLVED . '/downcode_db/downcode.sqlite3',
 		'name'=> 'Downcode'
 	),
 );
