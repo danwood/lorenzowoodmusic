@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+
+<?php
+// We could show an initial warning that downloads from iOS don't go into the library directly?
+$iOSDevice = false;	   // or set to a non-false text value
+if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $_SERVER['HTTP_USER_AGENT'], $matches)) {
+	$iOSDevice = substr($matches[1], 1);
+}
+$code = isset($_GET['code']) ? htmlspecialchars($_GET['code']) : '';
+$email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
+?><!DOCTYPE html>
 <html class="no-js" lang="en-us">
   <head>
     <meta charset="utf-8"><!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
@@ -24,6 +33,20 @@
       <div class="icons popular"><a data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic"><svg aria-label="Instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on Instagram</desc><path fill="#e95950" d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.7 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07a83 83 0 0 1-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92A82.98 82.98 0 0 1 2.16 12a84 84 0 0 1 .07-4.85c.15-3.23 1.67-4.77 4.92-4.92A84.4 84.4 0 0 1 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05A84.29 84.29 0 0 0 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.7.07 4.95.07 3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.7.07-4.95 0-3.26-.01-3.67-.07-4.95C23.73 2.7 21.3.27 16.95.07A84.33 84.33 0 0 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.89 1.44 1.44 0 0 0 0-2.89z"/></svg></a><a data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic"><svg aria-label="Facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on Facebook</desc><path fill="#3b5998" d="M22.68 0H1.32C.6 0 0 .6 0 1.32v21.36C0 23.4.6 24 1.32 24h11.5v-9.3H9.69v-3.62h3.13V8.41c0-3.1 1.9-4.79 4.66-4.79 1.32 0 2.46.1 2.8.15V7h-1.92c-1.5 0-1.8.71-1.8 1.76v2.32h3.59l-.47 3.62h-3.12V24h6.12c.73 0 1.32-.6 1.32-1.32V1.32C24 .6 23.4 0 22.68 0z"/></svg></a><a data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood"><svg aria-label="Snapchat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on Snapchat</desc><path d="M5.83 4.53c-.6 1.35-.36 3.75-.27 5.44-.65.36-1.48-.27-1.95-.27-.49 0-1.07.32-1.17.8-.06.35.1.85 1.2 1.29.43.17 1.46.37 1.7.93.33.78-1.72 4.4-4.92 4.93a.5.5 0 0 0-.42.52c.06.97 2.24 1.35 3.21 1.5.1.14.18.7.3 1.13.06.2.21.43.59.43.5 0 1.31-.38 2.74-.15 1.4.24 2.71 2.22 5.23 2.22 2.35 0 3.75-2 5.1-2.21a5.89 5.89 0 0 1 2.19.05c.51.1.98.16 1.12-.35.13-.43.21-.99.3-1.12.97-.15 3.16-.53 3.22-1.5a.5.5 0 0 0-.42-.52c-3.15-.52-5.26-4.13-4.92-4.93.24-.56 1.26-.76 1.7-.93.8-.32 1.22-.72 1.2-1.17 0-.59-.7-.94-1.22-.94-.53 0-1.29.63-1.9.29.1-1.7.33-4.1-.27-5.44A6.64 6.64 0 0 0 12 .7a6.6 6.6 0 0 0-6.16 3.83z" fill="#fffc00"/></svg></a><a data-title="Twitter" href="https://twitter.com/lorenzowmusic"><svg aria-label="Twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on Twitter</desc><path fill="#55acee" d="M24 4.56c-.88.39-1.83.65-2.83.77a4.93 4.93 0 0 0 2.17-2.72c-.95.56-2 .97-3.13 1.2a4.92 4.92 0 0 0-8.4 4.48A13.9 13.9 0 0 1 1.68 3.15 4.93 4.93 0 0 0 3.2 9.72a4.9 4.9 0 0 1-2.23-.61A4.93 4.93 0 0 0 4.91 14a5 5 0 0 1-2.22.08 4.93 4.93 0 0 0 4.6 3.42A9.9 9.9 0 0 1 0 19.54a13.94 13.94 0 0 0 7.55 2.21c9.14 0 14.3-7.72 14-14.64.95-.7 1.79-1.57 2.45-2.55z"/></svg></a><a data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic"><svg aria-label="YouTube" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on YouTube</desc><path fill="#b00" d="M4.65 0H6.1l.99 3.7L8 0h1.45L7.79 5.5v3.76H6.35V5.51L4.65 0zm6.6 2.37c-1.12 0-1.86.74-1.86 1.84v3.35c0 1.2.62 1.83 1.86 1.83 1.02 0 1.82-.69 1.82-1.83V4.2c0-1.07-.8-1.84-1.82-1.84zm.53 5.13c0 .37-.2.65-.53.65-.36 0-.56-.3-.56-.65V4.32c0-.37.17-.65.53-.65.39 0 .56.27.56.65V7.5zm4.73-5.07v5.19c-.16.19-.5.5-.75.5-.27 0-.34-.18-.34-.45V2.43h-1.27v5.71c0 .68.2 1.22.89 1.22.38 0 .92-.2 1.47-.85v.75h1.27V2.43H16.5zm2.2 13.86c-.45 0-.54.31-.54.76v.66h1.07v-.66c0-.44-.1-.76-.53-.76zm-4.7.04a.93.93 0 0 0-.25.2v4.05c.1.1.19.18.28.23.2.1.49.1.62-.07.07-.09.1-.24.1-.45v-3.36a.82.82 0 0 0-.12-.5c-.15-.19-.42-.2-.63-.1zm4.82-5.2a183 183 0 0 0-13.66 0c-2.82.2-3.15 1.9-3.17 6.37.02 4.47.35 6.17 3.17 6.37a183 183 0 0 0 13.66 0c2.82-.2 3.15-1.9 3.17-6.37-.02-4.47-.35-6.17-3.17-6.37zM6.51 21.82H5.15v-7.54H3.74V13h4.18v1.28H6.5v7.54zm4.84 0h-1.2v-.72c-.23.27-.46.47-.7.6-.65.38-1.55.37-1.55-.95v-5.44h1.21v5c0 .25.06.43.32.43.24 0 .57-.3.71-.49v-4.94h1.21v6.5zm4.66-1.35c0 .8-.3 1.43-1.1 1.43-.45 0-.82-.16-1.15-.58v.5h-1.22V13h1.22v2.84c.27-.33.64-.6 1.07-.6.89 0 1.18.74 1.18 1.62v3.61zm4.47-1.75h-2.31v1.23c0 .49.04.9.53.9.5 0 .54-.34.54-.9v-.45h1.24v.48c0 1.26-.53 2.02-1.81 2.02-1.16 0-1.75-.85-1.75-2.02v-2.92c0-1.13.75-1.91 1.84-1.91 1.16 0 1.72.74 1.72 1.91v1.66z"/></svg></a><a data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic"><svg aria-label="SoundCloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on SoundCloud</desc><path fill="#f50" d="M7 17.94H6V9.87c.3-.23.64-.43 1-.56v8.63zm3 0h1V8.7c-.23.27-.44.55-.62.86L10 9.4v8.55zm-2 0h1V9.09c-.5-.08-.62-.05-1 0v8.85zm-4 0h1v-7.02a4.7 4.7 0 0 0-.7 1.53l-.3-.18v5.67zm-3-5.25a3.07 3.07 0 0 0 0 4.53V12.7zm18.88-.67c-.2-2.84-2.4-5.08-5.12-5.08-1.02 0-1.96.33-2.76.88v10.12h9.09c1.6 0 2.91-1.4 2.91-3.1 0-2.24-2.17-3.78-4.12-2.82zM3 11.99c-.3-.02-.53-.03-1 .12v5.7c.45.14.64.13 1 .13v-5.95z"/></svg></a></div>
     </header>
     <nav><a class="download" href="EPK.zip">Download Electronic Press Kit</a></nav>
+    <div>
+      <aside class="redeem">
+        <form id="redeem-form">
+          <input id="redeem-input" type="text" name="code" placeholder="Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value="<?php echo htmlspecialchars($code); ?>">
+          <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>">
+          <input id="redeem-submit" type="submit" name="go" value="Submit Download Code" disabled="disabled">
+        </form><?php
+        if ($iOSDevice) {
+        ?>
+        <div class="warning">Music tracks can be played but not downloaded on the <?php echo htmlspecialchars($iOSDevice); ?>.</div><?php
+        }
+        ?>
+      </aside>
+    </div>
     <main>
       <section class="bio">
         <header class="ir" aria-hidden="true">
@@ -174,9 +197,63 @@
         
       </p>
     </footer><a class="bit-widget-initializer" data-artist-name="Lorenzo Wood Music" data-display-local-dates="false" data-display-past-dates="false" data-auto-style="false" data-text-color="#000000" data-link-color="#00AEA8" data-popup-background-color="#FFFFFF" data-background-color="#FFFFFF" data-display-limit="5" data-link-text-color="#FFFFFF" data-div-id="bandsintown-widget"></a>
+    <div id="cover" style="display:none;"></div>
+    <div id="redeemer" style="display:none;"></div>
+    <div id="close-redeem" style="display:none;">&#215;</div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\\/script>')</script>
     <script>"0px"===$("section, .safe-area").css("padding-left")&&($("section, .safe-area").css("padding-left","1em"),$("section, .safe-area").css("padding-right","1em"));var targetOffset=$(".popular").offset().top,$w=$(window).scroll(function(){$w.scrollTop()>targetOffset&&$(".hero img").css({filter:"grayscale(0%)"})});window.lightwidget||(window.lightwidget=function(){"use strict";var e=[],t=0,i=!1,n=["lightwidget.com","instansive.com","dev.lightwidget.com"],o=function(e){return i=e},s=function(e,t){e.contentWindow&&e.contentWindow.postMessage("sizing:"+t,window.location.protocol+"//lightwidget.com")},d=function(t){var i=t.origin.replace(/^https?\:\/\//i,"");if(-1!==n.indexOf(i)){var o=t.data.split(":");try{"sizing"==o[0]&&void 0!=e[parseInt(o[2])]&&(e[parseInt(o[2])].style.height=o[1]+"px")}catch(e){}}},c=function(e){i&&console.log(e);var t=e.origin.replace(/^https?\:\/\//i,"");if(-1!==n.indexOf(t)){var o=e.data.split(":");i&&console.log(o);try{if("sizing_iid"==o[0]){var s=o[2],d=s.replace("instansive_","").replace("lightwidget_");void 0!==document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+d+'"]')[0]?(i&&console.log("iframesrc"),document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+d+'"]')[0].style.height=o[1]+"px"):void 0!=document.getElementById(s)?document.getElementById(s).style.height=o[1]+"px":(s=s.replace("instansive","lightwidget"),void 0!=document.getElementById(s)&&(document.getElementById(s).style.height=o[1]+"px"))}}catch(e){i&&console.log(e)}}},a=function(e){i&&console.log("json",e);var t=e.origin.replace(/^https?\:\/\//i,"");if(-1!==n.indexOf(t))try{var o=JSON.parse(e.data);"lightwidget_widget_size"===o.type&&o.size>0&&(void 0!==document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+o.widgetId+'"]')[0]?document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+o.widgetId+'"]')[0].style.height=o.size+"px":void 0!==document.querySelectorAll('iframe[src*="instansive.com/widgets/'+o.widgetId+'"]')[0]&&(document.querySelectorAll('iframe[src*="instansive.com/widgets/'+o.widgetId+'"]')[0].style.height=o.size+"px"))}catch(t){i&&console.log(t,e.data)}},r=function(){window.addEventListener?(window.addEventListener("message",d,!1),window.addEventListener("message",c,!1),window.addEventListener("message",a,!1)):(window.attachEvent("onmessage",d),window.attachEvent("onmessage",c),window.attachEvent("onmessage",a))};return r(),{refresh:function(){if(!1)for(var t=0;t<0;t++)s(e[t],t)},reload:function(){r()},debug:function(e){return o(e)}}}()),window.lightwidget.refresh(),$("#lightweight_widget").html('<iframe src="http://lightwidget.com/widgets/9b560c45f4e75b9f93dd8bcca23a28a3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>'),document.documentElement.className=document.documentElement.className.replace("no-js","js");</script>
     <script src="https://widget.bandsintown.com/main.min.js"></script>
+    <script>
+      $('#redeem-form').submit(function( event ) {
+      	$('#redeem-submit').prop( "disabled", true );
+      	$.ajax({
+      	  type: 'POST',
+      	  url: '/redeem.php',
+      	  data: $("#redeem-form").serialize(),
+      
+      	  success: function(data, textStatus, jqXHR ) {
+      			if (data != '') {
+      				$('#cover').show();
+      				$('#redeemer').show();
+      				$('#close-redeem').show();
+      				$('#redeemer').html(data);  // We’re done; let the content here do the rest.
+      			} else {
+      				alert('Sorry, but the code you entered has already been redeemed or was entered incorrectly.');
+      				$('#redeem-input').focus();
+      			}
+      	  },
+      	  error: function(jqXHR, textStatus, errorThrown ) {
+      			alert(errorThrown + ' ' + textStatus);
+      	  },
+      	  complete: function(jqXHR, textStatus ) {
+      			$('#redeem-submit').prop( "disabled", false );
+      	  }
+      	});
+      	event.preventDefault();
+      });
+      $('#close-redeem').click(function() {
+      	$('#cover').fadeOut('slow');
+      	$('#close-redeem').fadeOut('slow');
+      	$('#redeemer').fadeOut('fast');
+      });
+      
+      $('#redeem-input').on('change keyup paste', function () {
+      	var disabled = $(this).val() == '';
+         $('#redeem-submit').prop( "disabled", disabled);
+      });
+      
+      
+      // Automatically submit when code provided in the URL
+      <?php
+      if ($code) {
+      ?>
+      $('#redeem-form').submit();
+      <?php
+      }
+      ?>
+      
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/amplitudejs@3.2.3/dist/amplitude.min.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+
 <?php
 
 error_log("TEMPORARILY ALLOWING THIS PAGE TO BE ACCESSED BY GET");
@@ -138,7 +139,7 @@ $tracks = $db->tracksOfAlbumID($album['ID']);
       			"name": "<?php echo htmlspecialchars($track['title']); ?>",
       			"album": "<?php echo htmlspecialchars($album['title']); ?>",
       			"artist": "<?php echo htmlspecialchars($album['artist']); ?>",
-      			"url": "downcode_tracks/<?php echo htmlspecialchars($track['fileBase']); ?>.mp3",
+      			"url": "amplitude_tracks/<?php echo htmlspecialchars($track['fileBase']); ?>.mp3",
       			"cover_art_url": "album_art/<?php echo htmlspecialchars($album['imageName']); ?>",
       		},
       	<?php } ?>
