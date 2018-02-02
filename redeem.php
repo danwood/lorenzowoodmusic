@@ -130,7 +130,7 @@ $('.song').on('click', function(){
 	$(this).find('.play-button-container').css('display', 'none');
 });
 
-if (window.DeviceMotionEvent==undefined) {
+if (window.DeviceMotionEvent!=undefined) {
 	$('.song-download').hide();
 }
 </script></body></html>
