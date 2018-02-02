@@ -99,7 +99,8 @@ input[type=range].amplitude-song-slider {
   -webkit-appearance: none;
   width: 70%;
   float: left;
-  margin: 10px 0 12px 0; }
+  margin: 10px 0 12px 0;
+  padding: 0; }
 
 /*******************************************************************
  #central-controls
