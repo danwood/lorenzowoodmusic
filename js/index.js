@@ -37,7 +37,6 @@ $('#lightweight_widget').html('<iframe src="http://lightwidget.com/widgets/9b560
 
 // Form Submission
 $('#redeem-form').submit(function( event ) {
-    $('#redeem-submit').prop( "disabled", true );
     $.ajax({
       type: 'POST',
       url: '/redeem.php',
@@ -58,7 +57,7 @@ $('#redeem-form').submit(function( event ) {
             alert(errorThrown + ' ' + textStatus);
       },
       complete: function(jqXHR, textStatus ) {
-            $('#redeem-submit').prop( "disabled", false );
+
       }
     });
     event.preventDefault();
@@ -68,13 +67,6 @@ $('#close-redeem').click(function() {
     $('#close-redeem').fadeOut('slow');
     $('#redeemer').fadeOut('fast');
 });
-
-$('#redeem-input').on('change keyup paste', function () {
-    var disabled = $(this).val() == '';
-   $('#redeem-submit').prop( "disabled", disabled);
-});
-
-
 
 
 

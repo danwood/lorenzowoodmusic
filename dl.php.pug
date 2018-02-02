@@ -54,9 +54,8 @@ html(class="no-js", lang="en-us")
                 form#redeem-form
                     input#redeem-input(type="text" name="code" placeholder="Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
                     input(type="hidden" name="email" value!="<?php echo htmlspecialchars($email); ?>")
-                    input#redeem-submit(type="submit" name="go" value="Submit Download Code" disabled="disabled")
 
-            a.download(href="EPK.zip") Download Electronic Press Kit
+            a.download(href="EPK.zip") Electronic Press Kit
 
         div
 
