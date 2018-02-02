@@ -167,6 +167,8 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
       <?php
       }
       ?>
+      
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/amplitudejs@3.2.3/dist/amplitude.js"></script><?php error_log("Should include minimized amplitudejs"); ?>
   </body>
 </html>
