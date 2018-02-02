@@ -61,7 +61,8 @@ if (file_exists($path))
 else
 {
 	error_log("404 error: Not finding $path");
-	sendStatusCode(404);	// file doesn't exist
-	echo "File not found";
+	http_response_code(404);
+	include('404.html');
+	die();
 }
 ?>
