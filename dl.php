@@ -21,7 +21,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     color:black;
     font-size:120%;
     background: #FFF;
-    font:normal 16px 'HelveticaNeue-CondensedBold', Impact, sans-serif;
+    font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
     letter-spacing:1px;
     text-transform:uppercase;
 }
