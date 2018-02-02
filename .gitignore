@@ -10,5 +10,5 @@
 /js/index-min.js
 
 # Should be put on server manually, not via repository
-/downcode_tracks
+/amplitude_tracks
 
