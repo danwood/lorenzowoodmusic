@@ -31,7 +31,7 @@ window.lightwidget||(window.lightwidget=function(){"use strict";var e=[],t=0,i=!
 //
 // Insert this widget HTML into the DOM after everything has loaded so that the page won't block waiting for this to load in.
 
-$('#lightweight_widget').html('<iframe src="http://lightwidget.com/widgets/9b560c45f4e75b9f93dd8bcca23a28a3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>');
+$('#lightweight_widget').html('<iframe src="https://lightwidget.com/widgets/9b560c45f4e75b9f93dd8bcca23a28a3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>');
 
 
 
