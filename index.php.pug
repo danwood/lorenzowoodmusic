@@ -66,8 +66,8 @@ html(class="no-js", lang="en-us")
 					//- Try to match meta description above with text below
 					p.
 						Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums,
-						piano/keyboards, bass, and a bit of ukulele. He also beat-boxes, and uses a Loop Station for
-						live performances. He writes or co-writes many of his own original songs. He produces and
+						piano/keyboards, bass, and, in an emergency, ukulele. He also beat-boxes, and uses a looper
+						for live performances. He writes or co-writes many of his own original songs. He produces and
 						records his music (using Apple Logic) and creates live performance videos.
 					p.
 						Lorenzo started learning to play the drums at the age of four. At the age of seven, he
@@ -139,7 +139,7 @@ html(class="no-js", lang="en-us")
 				article.clearfix
 					each code in ['386311568', '334122523', '295083156']
 						.soundcloud-column
-							iframe.soundcloud(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + code + "&color=ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_artwork=false&show_reposts=false")
+							iframe.soundcloud(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + code + "&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false")
 				footer
 					h3
 						a(href="https://soundcloud.com/LorenzoWoodMusic") More from SoundCloud
@@ -171,7 +171,7 @@ html(class="no-js", lang="en-us")
 						.track-form-padded
 							h2 Subscribe to Lorenzo's mailing list
 							p We also suggest tracking Lorenzo on #[a(href="https://bandsintown.com/lorenzowoodmusic") BandsInTown].
-							form.validate(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&id=1c68d63e9a"
+							form.validate(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&amp;id=1c68d63e9a"
 								method="post"
 								name="mc-embedded-subscribe-form"
 								target="_blank")
