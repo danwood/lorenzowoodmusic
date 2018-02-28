@@ -51,6 +51,8 @@ html(class="no-js", lang="en-us")
 					include svg/youtube.svg
 				a(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
 					include svg/soundcloud.svg
+				//- NOTE: I tried using SVG 'defs' and 'use' to reduce duplication, but somehow
+				//- the svg elements got a width of 300px that messed everything up.
 
 		nav
 			//- later make this a full menu with hamburger etc.
@@ -167,7 +169,7 @@ html(class="no-js", lang="en-us")
 				article.textual.clearfix
 					.track-photo
 						img(src="img/side.jpg" alt="Lorenzo singing, viewed from the side")
-					.track-form
+					.track-form.input-form
 						.track-form-padded
 							h2 Subscribe to Lorenzo's mailing list
 							p We also suggest tracking Lorenzo on #[a(href="https://bandsintown.com/lorenzowoodmusic") BandsInTown].
@@ -187,19 +189,27 @@ html(class="no-js", lang="en-us")
 									input#mce-LNAME(type="text" name="LNAME")
 								.ir(aria-hidden="true")
 									input(class="ir" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
-								div
-									input.button(type="submit" value="Subscribe" name="subscribe")
+								div: input.button(type="submit" value="Subscribe" name="subscribe")
 
 
 
 			section.contact
-				header.ir(aria-hidden="true")
-					h2 Contact
+				header
+					h2 Contact Lorenzo Wood Music
 				article.textual
-					div.email-padding
-						img(alt="lorenzo at this domain name" src="img/lorenzo-animated.gif")
-					div.email-padding
-						img(alt="booking at this domain name" src="img/booking-animated.gif")
+					.input-form
+						form(action="https://jumprock.co/mail/lozobooking" method="post")
+							div: input(type="text" name="email" placeholder="Email Address")
+							div: textarea(type="text" name="message" rows="10" cols="40")
+							div
+								input(type="text" name="trapit" class="trapit")
+								input(type="hidden" name="replyto" value="%email")
+								input.button(type="submit" value="Contact us")
+
+							//- results in:  {"status":"success","reply":"Your email has been sent."}
+
+
+
 
 
 		footer
