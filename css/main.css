@@ -767,7 +767,15 @@ html {
 }
 
 /* Useful for image replacement */
-.ir { border:0; font:0/0 a; text-shadow:none; color:transparent; width:0; height:0; padding:0; }
+.ir {
+  border:0 !important;
+  font:0/0 a !important;
+  text-shadow:none !important;
+  color:transparent !important;
+  width:0 !important;
+  height:0 !important;
+  padding:0 !important;
+}
 
 /* Padding for iPhone X.  Usually on a section; it overrides usual section margins.
 Really tricky — we need it to be at LEAST 1 rem, but maybe more.  The trick is, on some systems
