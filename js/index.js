@@ -36,6 +36,31 @@ $('#lightweight_widget').html('<iframe src="https://lightwidget.com/widgets/9b56
 
 
 // Form Submission
+
+$('#contact-form').submit(function( event ) {
+    $.ajax({
+      type: 'POST',
+      url: 'https://jumprock.co/mail/lozobooking',
+      data: $("#contact-form").serialize(),
+
+      success: function(data, textStatus, jqXHR ) {
+            if (data !== '') {
+                $alert('data:' + data);
+            } else {
+                alert('Sorry, but the contact form submission did not work as expected.');
+            }
+      },
+      error: function(jqXHR, textStatus, errorThrown ) {
+            alert('errr:' + errorThrown + ' ' + textStatus + ' ' + jqXHR);
+      },
+      complete: function(jqXHR, textStatus ) {
+
+      }
+    });
+    event.preventDefault();
+});
+
+
 $('#redeem-form').submit(function( event ) {
     $.ajax({
       type: 'POST',
@@ -43,7 +68,7 @@ $('#redeem-form').submit(function( event ) {
       data: $("#redeem-form").serialize(),
 
       success: function(data, textStatus, jqXHR ) {
-            if (data != '') {
+            if (data !== '') {
                 $('#cover').show();
                 $('#redeemer').show();
                 $('#close-redeem').show();
