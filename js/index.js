@@ -45,13 +45,15 @@ $('#contact-form').submit(function( event ) {
 
       success: function(data, textStatus, jqXHR ) {
             if (data !== '') {
-                $alert('data:' + data);
+                $('#email').val('');
+                $('#message').val('');
+                setTimeout(function(){ window.alert("Success sending message"); },0);
             } else {
-                alert('Sorry, but the contact form submission did not work as expected.');
+                window.alert('Sorry, but the contact form submission did not work as expected.');
             }
       },
       error: function(jqXHR, textStatus, errorThrown ) {
-            alert('errr:' + errorThrown + ' ' + textStatus + ' ' + jqXHR);
+            window.alert(errorThrown + ' ' + textStatus + ' ' + jqXHR);
       },
       complete: function(jqXHR, textStatus ) {
 
@@ -74,12 +76,12 @@ $('#redeem-form').submit(function( event ) {
                 $('#close-redeem').show();
                 $('#redeemer').html(data);  // We’re done; let the content here do the rest.
             } else {
-                alert('Sorry, but the code you entered has already been redeemed or was entered incorrectly.');
+                window.alert('Sorry, but the code you entered has already been redeemed or was entered incorrectly.');
                 $('#redeem-input').focus();
             }
       },
       error: function(jqXHR, textStatus, errorThrown ) {
-            alert(errorThrown + ' ' + textStatus);
+            window.alert(errorThrown + ' ' + textStatus);
       },
       complete: function(jqXHR, textStatus ) {
 
