@@ -1,6 +1,6 @@
 <?php
 // We could show an initial warning that downloads from iOS don't go into the library directly?
-$iOSDevice = false;	   // or set to a non-false text value
+$iOSDevice = false; // or set to a non-false text value
 if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $_SERVER['HTTP_USER_AGENT'], $matches)) {
 	$iOSDevice = substr($matches[1], 1);
 }
