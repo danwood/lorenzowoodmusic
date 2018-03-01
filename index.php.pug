@@ -56,7 +56,15 @@ html(class="no-js", lang="en-us")
 
 		nav
 			//- later make this a full menu with hamburger etc.
-			a.download(href="EPK.zip") Download Electronic Press Kit
+
+			aside.redeem
+				form#redeem-form
+					input#redeem-input(type="text" name="code" placeholder="Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
+					input(type="hidden" name="email" value!="<?php echo htmlspecialchars($email); ?>")
+
+			a.download(href="EPK.zip") Electronic Press Kit
+
+		div
 
 		main
 
@@ -249,6 +257,9 @@ html(class="no-js", lang="en-us")
 			data-display-limit="5"
 			data-link-text-color="#FFFFFF"
 			data-div-id="bandsintown-widget")
+		#cover(style="display:none")
+		#redeemer(style="display:none")
+		#close-redeem(style="display:none") &#215;
 
 		script(
 			src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -259,3 +270,8 @@ html(class="no-js", lang="en-us")
 		script
 			include js/index-min.js
 		script(src="https://widget.bandsintown.com/main.min.js")
+
+		script.
+			<?php if ($code) { ?>$('#redeem-form').submit();<?php } ?>
+		//- Load script here so it's available once iframe loads
+		script(src="https://cdn.jsdelivr.net/npm/amplitudejs@3.2.3/dist/amplitude.min.js")
