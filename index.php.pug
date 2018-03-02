@@ -60,10 +60,10 @@ html(class="no-js", lang="en-us")
 				//- NOTE: I tried using SVG 'defs' and 'use' to reduce duplication, but somehow
 				//- the svg elements got a width of 300px that messed everything up.
 
-		nav
+		nav.clearfix
 
 			aside.purchase
-				a.button(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+				a.buy-button(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
 					| Buy "Title TK"
 				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
 					include svg/apple.svg
@@ -78,14 +78,13 @@ html(class="no-js", lang="en-us")
 				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
 					include svg/spotify-text.svg
 
+			aside.epk.download
+				a(href="EPK.zip") Electronic Press Kit
+
 			aside.redeem
 				form#redeem-form
 					input#redeem-input(type="text" name="code" placeholder="Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
 					input(type="hidden" name="email" value!="<?php echo htmlspecialchars($email); ?>")
-
-			a.download(href="EPK.zip") Electronic Press Kit
-
-		div
 
 		main
 
