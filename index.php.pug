@@ -24,11 +24,6 @@ html(class="no-js", lang="en-us")
 		link(rel="prefetch" href="//www.youtube.com")
 		link(rel="prefetch" href="//widget.bandsintown.com")
 
-		style.
-			.purchase svg {
-				height:20px;
-			}
-
 	body
 		<!--[if lt IE 9]>
 			p.browserupgrade.
@@ -66,6 +61,8 @@ html(class="no-js", lang="en-us")
 				a.buy-button(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
 					| Buy "Title TK"
 				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+					//- Apple marketing guidelines for lockup images:
+					//- minimum 25px tall, 25% of height margin
 					include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
 				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
 					include svg/amazon-music.svg
