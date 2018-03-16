@@ -997,7 +997,7 @@ nav {
 nav a {
   text-decoration:none;
   color:black;
-  padding:0 0;
+  padding:0 7px;
 }
 
 .purchase svg {
