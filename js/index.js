@@ -148,7 +148,7 @@ for (var i = 0; i < youtube.length; i++) {
 
 $('.soundcloud-proxy').each(function() {
   var code = $(this).data('code');
-  var iframeCode = '<iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+ code + '&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false" />';
+  var iframeCode = '<iframe class="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+ code + '&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false" />';
    $(this).replaceWith(iframeCode);
 });
 
