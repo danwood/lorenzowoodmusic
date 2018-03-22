@@ -112,13 +112,13 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
         </header>
         <article class="clearfix">
           <div class="soundcloud-column">
-            <iframe class="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/386311568&amp;amp;color=ff9900&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=false&amp;amp;show_artwork=false&amp;amp;show_reposts=false"></iframe>
+            <div class="soundcloud-proxy" data-code="386311568"></div>
           </div>
           <div class="soundcloud-column">
-            <iframe class="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/334122523&amp;amp;color=ff9900&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=false&amp;amp;show_artwork=false&amp;amp;show_reposts=false"></iframe>
+            <div class="soundcloud-proxy" data-code="334122523"></div>
           </div>
           <div class="soundcloud-column">
-            <iframe class="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/295083156&amp;amp;color=ff9900&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=false&amp;amp;show_artwork=false&amp;amp;show_reposts=false"></iframe>
+            <div class="soundcloud-proxy" data-code="295083156"></div>
           </div>
         </article>
         <footer>
@@ -206,7 +206,167 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     </footer><a class="bit-widget-initializer" data-artist-name="Lorenzo Wood Music" data-display-local-dates="false" data-display-past-dates="false" data-auto-style="false" data-text-color="#000000" data-link-color="#00AEA8" data-popup-background-color="#FFFFFF" data-background-color="#FFFFFF" data-display-limit="5" data-link-text-color="#FFFFFF" data-div-id="bandsintown-widget"></a>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\\/script>')</script>
-    <script>"0px"===$("section, .safe-area").css("padding-left")&&($("section, .safe-area").css("padding-left","1em"),$("section, .safe-area").css("padding-right","1em"));var targetOffset=$(".popular").offset().top,$w=$(window).scroll(function(){$w.scrollTop()>targetOffset&&$(".hero img").css({filter:"grayscale(0%)"})});window.lightwidget||(window.lightwidget=function(){"use strict";var e=[],t=0,i=!1,o=["lightwidget.com","instansive.com","dev.lightwidget.com"],n=function(e){return i=e},r=function(e,t){e.contentWindow&&e.contentWindow.postMessage("sizing:"+t,window.location.protocol+"//lightwidget.com")},a=function(t){var i=t.origin.replace(/^https?\:\/\//i,"");if(-1!==o.indexOf(i)){var n=t.data.split(":");try{"sizing"==n[0]&&void 0!=e[parseInt(n[2])]&&(e[parseInt(n[2])].style.height=n[1]+"px")}catch(e){}}},s=function(e){i&&console.log(e);var t=e.origin.replace(/^https?\:\/\//i,"");if(-1!==o.indexOf(t)){var n=e.data.split(":");i&&console.log(n);try{if("sizing_iid"==n[0]){var r=n[2],a=r.replace("instansive_","").replace("lightwidget_");void 0!==document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+a+'"]')[0]?(i&&console.log("iframesrc"),document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+a+'"]')[0].style.height=n[1]+"px"):void 0!=document.getElementById(r)?document.getElementById(r).style.height=n[1]+"px":(r=r.replace("instansive","lightwidget"),void 0!=document.getElementById(r)&&(document.getElementById(r).style.height=n[1]+"px"))}}catch(e){i&&console.log(e)}}},d=function(e){i&&console.log("json",e);var t=e.origin.replace(/^https?\:\/\//i,"");if(-1!==o.indexOf(t))try{var n=JSON.parse(e.data);"lightwidget_widget_size"===n.type&&n.size>0&&(void 0!==document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+n.widgetId+'"]')[0]?document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+n.widgetId+'"]')[0].style.height=n.size+"px":void 0!==document.querySelectorAll('iframe[src*="instansive.com/widgets/'+n.widgetId+'"]')[0]&&(document.querySelectorAll('iframe[src*="instansive.com/widgets/'+n.widgetId+'"]')[0].style.height=n.size+"px"))}catch(t){i&&console.log(t,e.data)}},c=function(){window.addEventListener?(window.addEventListener("message",a,!1),window.addEventListener("message",s,!1),window.addEventListener("message",d,!1)):(window.attachEvent("onmessage",a),window.attachEvent("onmessage",s),window.attachEvent("onmessage",d))};return c(),{refresh:function(){if(!1)for(var t=0;t<0;t++)r(e[t],t)},reload:function(){c()},debug:function(e){return n(e)}}}()),window.lightwidget.refresh(),$("#lightweight_widget").html('<iframe src="https://lightwidget.com/widgets/9b560c45f4e75b9f93dd8bcca23a28a3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>'),$("#contact-form").submit(function(e){$.ajax({type:"POST",url:"https://jumprock.co/mail/lozobooking",data:$("#contact-form").serialize(),success:function(e,t,i){""!==e?($("#email").val(""),$("#message").val(""),setTimeout(function(){window.alert("Success sending message")},0)):window.alert("Sorry, but the contact form submission did not work as expected.")},error:function(e,t,i){window.alert(i+" "+t+" "+e)},complete:function(e,t){}}),e.preventDefault()}),$("#redeem-form").submit(function(e){$.ajax({type:"POST",url:"/redeem.php",data:$("#redeem-form").serialize(),success:function(e,t,i){""!==e?($("#cover").show(),$("#redeemer").show(),$("#close-redeem").show(),$("#redeemer").html(e)):(window.alert("Sorry, but the code you entered has already been redeemed or was entered incorrectly."),$("#redeem-input").focus())},error:function(e,t,i){window.alert(i+" "+t)},complete:function(e,t){}}),e.preventDefault()}),$("#close-redeem").click(function(){$("#cover").fadeOut("slow"),$("#close-redeem").fadeOut("slow"),$("#redeemer").fadeOut("fast")});for(var youtube=document.querySelectorAll(".youtube"),i=0;i<youtube.length;i++){var embed=youtube[i].dataset.embed.split(":"),code=embed[0],title=embed[1],iOS=/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream;if(iOS){var iframe=document.createElement("iframe");iframe.setAttribute("allowfullscreen",""),iframe.setAttribute("src","https://www.youtube.com/embed/"+code),youtube[i].appendChild(iframe)}else{var source="https://img.youtube.com/vi/"+code+"/sddefault.jpg",image=new Image;image.src=source,image.addEventListener("load",function(){youtube[i].appendChild(image)}(i)),youtube[i].addEventListener("click",function(){var e=document.createElement("iframe");e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen",""),e.setAttribute("src","https://www.youtube.com/embed/"+code+"?rel=0&showinfo=0&autoplay=1"),this.innerHTML="",this.appendChild(e)});var play=document.createElement("div");play.setAttribute("class","play-button"),youtube[i].appendChild(play);var t=document.createElement("div");t.setAttribute("class","title"),t.innerText=title,youtube[i].appendChild(t)}}document.documentElement.className=document.documentElement.className.replace("no-js","js");</script>
+    <script>
+// REQUIREMENT: JQUERY
+
+// ASAP, Fix styling where safe-area padding is zero. Not sure of any other workaround.
+
+if($('section, .safe-area').css('padding-left') === '0px') {
+    $('section, .safe-area').css('padding-left', '1em');
+    $('section, .safe-area').css('padding-right', '1em');
+}
+
+
+
+
+
+// Do something clever: when we scroll past the hero image, turn off the grayscale filter to make it color
+
+var targetOffset = $(".popular").offset().top;
+
+var $w = $(window).scroll(function(){
+    if ( $w.scrollTop() > targetOffset ) {
+        $('.hero img').css({"filter":"grayscale(0%)"});
+    }
+});
+
+
+
+// MANUALLY BRING IN: http://lightwidget.com/widgets/lightwidget.js
+window.lightwidget||(window.lightwidget=function(){"use strict";var e=[],t=0,i=!1,n=!1,o=["lightwidget.com","instansive.com","dev.lightwidget.com"],d=function(e){return n=e},s=function(e,t){e.contentWindow&&e.contentWindow.postMessage("sizing:"+t,window.location.protocol+"//lightwidget.com")},c=function(t){var i=t.origin.replace(/^https?\:\/\//i,"");if(-1!==o.indexOf(i)){var n=t.data.split(":");try{"sizing"==n[0]&&void 0!=e[parseInt(n[2])]&&(e[parseInt(n[2])].style.height=n[1]+"px")}catch(e){}}},r=function(e){n&&console.log(e);var t=e.origin.replace(/^https?\:\/\//i,"");if(-1!==o.indexOf(t)){var i=e.data.split(":");n&&console.log(i);try{if("sizing_iid"==i[0]){var d=i[2],s=d.replace("instansive_","").replace("lightwidget_");void 0!==document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+s+'"]')[0]?(n&&console.log("iframesrc"),document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+s+'"]')[0].style.height=i[1]+"px"):void 0!=document.getElementById(d)?document.getElementById(d).style.height=i[1]+"px":(d=d.replace("instansive","lightwidget"),void 0!=document.getElementById(d)&&(document.getElementById(d).style.height=i[1]+"px"))}}catch(e){n&&console.log(e)}}},g=function(e){n&&console.log("json",e);var t=e.origin.replace(/^https?\:\/\//i,"");if(-1!==o.indexOf(t))try{var i=JSON.parse(e.data);"lightwidget_widget_size"===i.type&&i.size>0&&(void 0!==document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+i.widgetId+'"]')[0]?document.querySelectorAll('iframe[src*="lightwidget.com/widgets/'+i.widgetId+'"]')[0].style.height=i.size+"px":void 0!==document.querySelectorAll('iframe[src*="instansive.com/widgets/'+i.widgetId+'"]')[0]&&(document.querySelectorAll('iframe[src*="instansive.com/widgets/'+i.widgetId+'"]')[0].style.height=i.size+"px"))}catch(t){n&&console.log(t,e.data)}},l=function(){window.addEventListener?(window.addEventListener("message",c,!1),window.addEventListener("message",r,!1),window.addEventListener("message",g,!1)):(window.attachEvent("onmessage",c),window.attachEvent("onmessage",r),window.attachEvent("onmessage",g))};return l(),{refresh:function(){if(i)for(var n=0;n<t;n++)s(e[n],n)},reload:function(){l()},debug:function(e){return d(e)}}}()),window.lightwidget.refresh();
+
+// LightWidget for Instagram: 6x2, @900=4x2, @600=2x4. Zoom in, padding 5, preloader
+//
+// Insert this widget HTML into the DOM after everything has loaded so that the page won't block waiting for this to load in.
+
+$('#lightweight_widget').html('<iframe src="https://lightwidget.com/widgets/9b560c45f4e75b9f93dd8bcca23a28a3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>');
+
+
+
+// Form Submission
+
+$('#contact-form').submit(function( event ) {
+    $.ajax({
+      type: 'POST',
+      url: 'https://jumprock.co/mail/lozobooking',
+      data: $("#contact-form").serialize(),
+
+      success: function(data, textStatus, jqXHR ) {
+            if (data !== '') {
+                $('#email').val('');
+                $('#message').val('');
+                setTimeout(function(){ window.alert("Success sending message"); },0);
+            } else {
+                window.alert('Sorry, but the contact form submission did not work as expected.');
+            }
+      },
+      error: function(jqXHR, textStatus, errorThrown ) {
+            window.alert(errorThrown + ' ' + textStatus + ' ' + jqXHR);
+      },
+      complete: function(jqXHR, textStatus ) {
+
+      }
+    });
+    event.preventDefault();
+});
+
+
+$('#redeem-form').submit(function( event ) {
+    $.ajax({
+      type: 'POST',
+      url: '/redeem.php',
+      data: $("#redeem-form").serialize(),
+
+      success: function(data, textStatus, jqXHR ) {
+            if (data !== '') {
+                $('#cover').show();
+                $('#redeemer').show();
+                $('#close-redeem').show();
+                $('#redeemer').html(data);  // We’re done; let the content here do the rest.
+            } else {
+                window.alert('Sorry, but the code you entered has already been redeemed or was entered incorrectly.');
+                $('#redeem-input').focus();
+            }
+      },
+      error: function(jqXHR, textStatus, errorThrown ) {
+            window.alert(errorThrown + ' ' + textStatus);
+      },
+      complete: function(jqXHR, textStatus ) {
+
+      }
+    });
+    event.preventDefault();
+});
+$('#close-redeem').click(function() {
+    $('#cover').fadeOut('slow');
+    $('#close-redeem').fadeOut('slow');
+    $('#redeemer').fadeOut('fast');
+});
+
+// From https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743
+// No jquery needed
+//
+// //               iframe(src="https://www.youtube.com/embed/"+code allowfullscreen=true)
+
+
+var youtube = document.querySelectorAll( ".youtube" );
+for (var i = 0; i < youtube.length; i++) {
+    var embed = youtube[i].dataset.embed.split(':');
+    var code = embed[0];
+    var title = embed[1];
+
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (iOS) {
+      // regular YouTube iframe embed so that it needs just one tap as expected
+      var iframe = document.createElement( "iframe" );
+      iframe.setAttribute( "allowfullscreen", "" );
+      iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code );
+      youtube[i].appendChild( iframe );
+    }
+    else {
+      var source = "https://img.youtube.com/vi/"+ code +"/sddefault.jpg";
+      var image = new Image();
+      image.src = source;
+      image.addEventListener( "load", function() {
+          youtube[ i ].appendChild( image );
+      }( i ) );
+
+      youtube[i].addEventListener( "click", function() {
+
+          var iframe = document.createElement( "iframe" );
+          iframe.setAttribute( "frameborder", "0" );
+          iframe.setAttribute( "allowfullscreen", "" );
+          iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code +"?rel=0&showinfo=0&autoplay=1" );
+          this.innerHTML = "";
+          this.appendChild( iframe );
+      } );
+      var play = document.createElement("div");
+      play.setAttribute("class", "play-button");
+      youtube[i].appendChild(play);
+      var t = document.createElement("div");
+      t.setAttribute("class", "title");
+      t.innerText = title;
+      youtube[i].appendChild(t);
+    }
+  };
+
+// Replace all soundcloud proxies with a real embed.
+
+$('.soundcloud-proxy').each(function() {
+  var code = $(this).data('code');
+  var iframeCode = '<iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+ code + '&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false" />';
+   $(this).replaceWith(iframeCode);
+});
+
+
+
+//Modernizer-like
+// Remove "no-js" class from element, if it exists
+document.documentElement.className = document.documentElement.className.replace("no-js","js");
+
+
+
+    </script>
     <script src="https://widget.bandsintown.com/main.min.js"></script>
   </body>
 </html>

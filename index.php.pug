@@ -146,7 +146,7 @@ html(class="no-js", lang="en-us")
 				article.clearfix
 					each code in ['386311568', '334122523', '295083156']
 						.soundcloud-column
-							iframe.soundcloud(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + code + "&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false")
+							.soundcloud-proxy(data-code=code)
 				footer
 					h3
 						a(href="https://soundcloud.com/LorenzoWoodMusic") More from SoundCloud
