@@ -983,34 +983,3 @@ FileETag None
 #     RewriteCond %{REQUEST_FILENAME} !-f
 #     RewriteRule ^(.+)\.(\d+)\.(bmp|css|cur|gif|ico|jpe?g|js|png|svgz?|webp|webmanifest)$ $1.$3 [L]
 # </IfModule>
-
-
-# ----------------------------------------------------------------------
-# | Webp serving                                       |
-# ----------------------------------------------------------------------
-# https://www.askapache.com/htaccess/serving-webp-images-for-png-jpg/
-# https://github.com/vincentorback/WebP-images-with-htaccess
-
-<IfModule mod_rewrite.c>
-
-RewriteEngine On
-
-# Does browser explicitly support webp?
-RewriteCond %{HTTP_USER_AGENT} Chrome [OR]
-
-# OR Is request from Page Speed
-RewriteCond %{HTTP_USER_AGENT} "Google Page Speed Insights" [OR]
-
-# OR does this browser explicitly support webp
-RewriteCond %{HTTP_ACCEPT} image/webp [OR]
-
-# AND does a webp image exists?
-RewriteCond %{DOCUMENT_ROOT}/$1\.webp -f
-
-# THEN send the webp image and set the env var webp
-RewriteRule (.+)\.(?:jpe?g|png)$ $1.webp [NC,T=image/webp,E=webp,L]
-
-# If REDIRECT_webp env var exists, append Accept to the Vary header
-Header append Vary Accept env=REDIRECT_webp
-
-</IfModule>
