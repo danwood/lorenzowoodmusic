@@ -18,7 +18,7 @@ html(class="no-js", lang="en-us")
 			content="Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		link(rel="apple-touch-icon" href="icon.png")
-		link(rel="stylesheet" href="css/main.min.css")
+		link(rel="stylesheet" href="css/main.css")
 		link(rel="prefetch" href="//code.jquery.com")
 		link(rel="prefetch" href="//w.soundcloud.com")
 		link(rel="prefetch" href="//www.youtube.com")
@@ -160,10 +160,10 @@ html(class="no-js", lang="en-us")
 				//- Female, Ruin
 
 				article.clearfix
-					each code in ['ipoL1h1d7zA', 'RynQ3nswXyk']
+					each info in ['ipoL1h1d7zA:Keith Urban — Female (Loop cover)', 'RynQ3nswXyk:Shawn Mendes - Ruin (Lorenzo Wood Cover)']
 						.youtube-column
-							.embed-container
-								iframe(src="https://www.youtube.com/embed/"+code allowfullscreen=true)
+							.youtube(data-embed=info)
+
 				footer
 					h3
 						a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
