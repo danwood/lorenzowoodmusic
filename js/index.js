@@ -97,8 +97,6 @@ $('#close-redeem').click(function() {
 
 // From https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743
 // No jquery needed
-//
-// //               iframe(src="https://www.youtube.com/embed/"+code allowfullscreen=true)
 
 
 var youtube = document.querySelectorAll( ".youtube" );
@@ -124,6 +122,10 @@ for (var i = 0; i < youtube.length; i++) {
       }( i ) );
 
       youtube[i].addEventListener( "click", function() {
+
+          // Need to recalculate the code we are using
+          var embed = this.dataset.embed.split(':');
+          var code = embed[0];
 
           var iframe = document.createElement( "iframe" );
           iframe.setAttribute( "frameborder", "0" );
