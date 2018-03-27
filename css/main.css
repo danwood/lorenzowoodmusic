@@ -888,9 +888,27 @@ article.textual {
 
 /* ====== Specific Sections ===== */
 
+body > header {
+  position: relative;
+  height:55vw;            /* Height of header fraction of window width when in short-viewport mode */
+}
+
 .logo {
+    position:absolute;
     z-index:999;
-    position:relative;
+    top:0; left:0; right:0;
+}
+
+.icons.popular {
+  position: absolute;
+  z-index:999;
+  bottom:2em; left:0; right:0;
+}
+
+.main-nav {
+  position: absolute;
+  z-index:999;
+  bottom:0; left:0; right:0;
 }
 
 .logo svg {
@@ -901,18 +919,17 @@ article.textual {
 
 .hero {
     width: 100%;
-    height: 0;
-    padding-bottom: 33.3%; /* overall height of what is visible */
+    height: 100%;
     overflow:hidden;
 }
 
 .hero img {
+    position:relative;
     min-width:100%; /* specify here since it's useful for media queries */
     max-width: 100%;
-    position: fixed;
     filter: grayscale(100%);
-    top: -7.5vw;  /* Show less sky when we have less vertical room */
     z-index:-999;
+    top: -7.5vw;  /* Show less sky when we have less vertical room */
     overflow:hidden;
 }
 
@@ -944,34 +961,17 @@ nav {
 @media screen and (min-aspect-ratio: 121/100) and (max-aspect-ratio: 179/100) {
 
   body > header {
-      height:100vh;
-  }
-
-  .hero {
-    height:auto;
-    padding-bottom:0;
-    position:absolute;
+      height:100vh; /* in this range of viewport heights, fill the height of the viewport with the header */
   }
 
   .hero img {
-      top: 0;
-      max-width: none;  /* let it enlarge */
-      max-height:100vh;
-      object-fit: cover;
-      left: 50%; transform:translatex(-50%); /* center horizontally */
-  }
-
-  .icons.popular {
-    position:absolute;
-    bottom:31px;
-    width:100%;
-  }
-
-  nav {
-    position:absolute;
-    bottom:0;
-    width:100%;
-  }
+    position:relative;
+    top: 0;
+    max-width: none;  /* let it enlarge */
+    max-height:100vh;
+    object-fit: cover;
+    left: 50%; transform:translatex(-50%); /* center horizontally */
+ }
 
   /* Scroll arrow only when we have a full page hero */
 
@@ -1012,28 +1012,18 @@ nav {
 /* Viewport is kind of tall; show image at maximum height and then contents below */
 @media screen and (max-aspect-ratio: 121/100) {
 
-  .hero {
-    padding-bottom: 60.5%; /* overall height of what is visible */
+  body > header {
+      height:82.5vw; /* Once viewport is tall enough, make header be a fixed ratio if the width */
   }
 
   .hero img {
-      top: 0;
-      max-width: 118vw; /* match enlargement of section above */
-      object-fit: cover;
-      left: 50%; transform:translatex(-50%); /* center horizontally */
+    top: 0;
+    max-width: 118vw; /* match enlargement of section above */
+    object-fit: cover;
+    left: 50%; transform:translatex(-50%); /* center horizontally */
   }
 
 }
-
-/* Different height because the icons are taller when the screen is narrow */
-@media screen and (max-aspect-ratio: 121/100) and (max-width:599px) {
-
-  .hero {
-    padding-bottom: 56%;
-  }
-}
-
-
 
 /* Patreon section */
 
@@ -1101,8 +1091,11 @@ main {
 }
 
 nav {
-  background:#f5f5f5;
-  padding:7px 0;  /* 6.25px minimum padding around apple logo per their guidelines */
+  /* padding:7px 0;  /* 6.25px minimum padding around apple logo per their guidelines */
+  background:rgba(255,255,255,0.85);
+  text-align:right;
+  height:1.5em;
+  padding-top:0.5em;
 }
 
 nav a {

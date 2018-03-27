@@ -14,7 +14,7 @@ if($('section, .safe-area').css('padding-left') === '0px') {
 
 // Do something clever: when we scroll past the hero image, turn off the grayscale filter to make it color
 
-var targetOffset = $(".popular").offset().top;
+var targetOffset = $("main").offset().top;
 
 var $w = $(window).scroll(function(){
     $('#scroll-arrow').remove();
