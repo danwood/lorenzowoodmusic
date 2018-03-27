@@ -978,7 +978,7 @@ nav {
   .down-arrow {
     display:inline;
     z-index:999;
-    color:#00AEA8;
+    color:#000;
     background:white;
     border-radius:8px;
     padding:0;
@@ -1103,7 +1103,7 @@ nav {
 nav a {
   color:#bdbdbd;
   margin-top:5px;
-  padding:0 10px 0 25px;
+  padding:0 0.5em 0 2em;
   font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
   letter-spacing:1px;
   text-transform:uppercase;
@@ -1282,6 +1282,10 @@ iframe.soundcloud {
     .maximize-mobile footer, .maximize-mobile header {
         padding-left:1rem;
         padding-right:1rem;
+    }
+
+    .download {
+      font-size:12px;
     }
 }
 
