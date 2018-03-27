@@ -17,10 +17,29 @@ if($('section, .safe-area').css('padding-left') === '0px') {
 var targetOffset = $(".popular").offset().top;
 
 var $w = $(window).scroll(function(){
+    $('#scroll-arrow').remove();
     if ( $w.scrollTop() > targetOffset ) {
         $('.hero img').css({"filter":"grayscale(0%)"});
     }
 });
+
+$('.down-arrow').click(function(event) {
+  event.preventDefault();
+  $('html, body').animate({
+        scrollTop: $('.down-arrow').offset().top
+}, 1000);
+  return false;
+});
+
+// Hide the arrow after a bit
+setTimeout(function(){
+  $( "#scroll-arrow" ).fadeOut( "slow", function() {
+    $('#scroll-arrow').remove();
+  });
+}, 4000);
+
+
+
 
 
 
@@ -93,6 +112,63 @@ $('#close-redeem').click(function() {
     $('#cover').fadeOut('slow');
     $('#close-redeem').fadeOut('slow');
     $('#redeemer').fadeOut('fast');
+});
+
+// From https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743
+// No jquery needed
+
+
+var youtube = document.querySelectorAll( ".youtube" );
+for (var i = 0; i < youtube.length; i++) {
+    var embed = youtube[i].dataset.embed.split(':');
+    var code = embed[0];
+    var title = embed[1];
+
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (iOS) {
+      // regular YouTube iframe embed so that it needs just one tap as expected
+      var iframe = document.createElement( "iframe" );
+      iframe.setAttribute( "allowfullscreen", "" );
+      iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code );
+      youtube[i].appendChild( iframe );
+    }
+    else {
+      var source = "https://img.youtube.com/vi/"+ code +"/sddefault.jpg";
+      var image = new Image();
+      image.src = source;
+      image.addEventListener( "load", function() {
+          youtube[ i ].appendChild( image );
+      }( i ) );
+
+      youtube[i].addEventListener( "click", function() {
+
+          // Need to recalculate the code we are using
+          var embed = this.dataset.embed.split(':');
+          var code = embed[0];
+
+          var iframe = document.createElement( "iframe" );
+          iframe.setAttribute( "frameborder", "0" );
+          iframe.setAttribute( "allowfullscreen", "" );
+          iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code +"?rel=0&showinfo=0&autoplay=1" );
+          this.innerHTML = "";
+          this.appendChild( iframe );
+      } );
+      var play = document.createElement("div");
+      play.setAttribute("class", "play-button");
+      youtube[i].appendChild(play);
+      var t = document.createElement("div");
+      t.setAttribute("class", "title");
+      t.innerText = title;
+      youtube[i].appendChild(t);
+    }
+  };
+
+// Replace all soundcloud proxies with a real embed.
+
+$('.soundcloud-proxy').each(function() {
+  var code = $(this).data('code');
+  var iframeCode = '<iframe class="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+ code + '&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false" />';
+   $(this).replaceWith(iframeCode);
 });
 
 
