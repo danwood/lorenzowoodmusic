@@ -17,10 +17,29 @@ if($('section, .safe-area').css('padding-left') === '0px') {
 var targetOffset = $(".popular").offset().top;
 
 var $w = $(window).scroll(function(){
+    $('#scroll-arrow').remove();
     if ( $w.scrollTop() > targetOffset ) {
         $('.hero img').css({"filter":"grayscale(0%)"});
     }
 });
+
+$('.down-arrow').click(function(event) {
+  event.preventDefault();
+  $('html, body').animate({
+        scrollTop: $('.down-arrow').offset().top
+}, 1000);
+  return false;
+});
+
+// Hide the arrow after a bit
+setTimeout(function(){
+  $( "#scroll-arrow" ).fadeOut( "slow", function() {
+    $('#scroll-arrow').remove();
+  });
+}, 4000);
+
+
+
 
 
 
