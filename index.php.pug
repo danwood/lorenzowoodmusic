@@ -18,7 +18,7 @@ html(class="no-js", lang="en-us")
 			content="Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		link(rel="apple-touch-icon" href="icon.png")
-		link(rel="stylesheet" href="css/main.min.032218.css")
+		link(rel="stylesheet" href="css/main.css")
 		link(rel="prefetch" href="//code.jquery.com")
 		link(rel="prefetch" href="//w.soundcloud.com")
 		link(rel="prefetch" href="//img.youtube.com")
@@ -31,6 +31,7 @@ html(class="no-js", lang="en-us")
 				to improve your experience.
 		<![endif]-->
 
+		.info(style="position:absolute; top:0; left:0; width:100%; height:20px; color:red;z-index:9999")
 		header
 
 			h1.ir Lorenzo Wood Music
@@ -57,7 +58,7 @@ html(class="no-js", lang="en-us")
 				//- NOTE: I tried using SVG 'defs' and 'use' to reduce duplication, but somehow
 				//- the svg elements got a width of 300px that messed everything up.
 
-			nav
+			nav.main-nav
 				//- later make this a full menu with hamburger etc.
 				a.download(href="EPK.zip") Download Electronic Press Kit
 				#scroll-arrow.scrolldown.bounce
@@ -268,3 +269,13 @@ html(class="no-js", lang="en-us")
 			include js/index-min.js
 		script(src="CACHE/bandsintown.js")
 			//- Cached on server from https://widget.bandsintown.com/main.min.js
+		script.
+			$( window ).resize(function() {
+				var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+				var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+				$( ".info" ).text( w + ' x ' + h + ' … ' + w/h  );
+			});
+			var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+			var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+			$( ".info" ).text( w + ' x ' + h + ' … ' + w/h  );
+
