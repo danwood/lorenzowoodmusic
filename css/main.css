@@ -1025,8 +1025,13 @@ nav {
 
 }
 
+/* Different height because the icons are taller when the screen is narrow */
+@media screen and (max-aspect-ratio: 121/100) and (max-width:599px) {
 
-
+  .hero {
+    padding-bottom: 56%;
+  }
+}
 
 
 
