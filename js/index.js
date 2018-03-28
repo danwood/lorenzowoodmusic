@@ -181,6 +181,7 @@ function fullscreen(event){
     else if (width/height > 1.618) height = Math.round(width/1.618);
     else fullSizeHero = true;
 
+    // Show scroll arrow if first time here and we are showing full-screen hero
     if (fullSizeHero && !event) {
       $('#scroll-arrow').css('display', 'block');
     } else {
