@@ -902,13 +902,17 @@ body > header {
 .icons.popular {
   position: absolute;
   z-index:999;
-  bottom:2.5em; left:0; right:0;
+  bottom:41px; left:0; right:0; /* should match with height of nav */
 }
 
 .main-nav {
   position: absolute;
   z-index:999;
   bottom:0; left:0; right:0;
+}
+
+.main-nav a {
+  float:left;
 }
 
 .logo svg {
@@ -950,6 +954,14 @@ body > header {
 
 nav {
   position:relative; /* so it can contain an absolute */
+  background:rgba(255,255,255,0.85);
+  text-align:right;
+  height:41px;    /* should match with .icons.popular */
+}
+
+.main-nav svg { /* total height 41px */
+  height:25px;  /* 25px minimum for apple logo guidelines */
+  padding:8px 0;  /* 6.25px minimum padding around apple logo per their guidelines */
 }
 
 /* Scroll arrow only when we have a full page hero */
@@ -1049,11 +1061,8 @@ main {
 }
 
 nav {
-  /* padding:7px 0;  /* 6.25px minimum padding around apple logo per their guidelines */
   background:rgba(255,255,255,0.85);
   text-align:right;
-  height:1.5em;
-  padding:0.5em 0;
 }
 
 nav a {
@@ -1062,20 +1071,18 @@ nav a {
   padding:0 7px;
 }
 
-.purchase svg {
-  height:25px;  /* 25px minimum for apple logo guidelines */
-}
-
-aside.purchase {
+.redeem {
   float: left;
   margin-left:1em;
+  margin-top:1em;
 }
-aside.redeem, aside.epk {
+.epk {
   float: right;
   margin-right:1em;
+  margin-top:1.2em;
 }
 
-aside.epk a, aside.purchase span {
+.epk a {
   color:#bdbdbd;
   margin-top:5px;
   padding:0 0.5em 0 2em;
@@ -1086,7 +1093,7 @@ aside.epk a, aside.purchase span {
   white-space: nowrap;
 }
 /* image from svg/download.svg */
-nav a.download {
+.download a {
    background:url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="#bdbdbd" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat left center;
 }
 
@@ -1099,6 +1106,7 @@ a.buy-button {
   color:white;
   padding:2px 6px;
   border-radius:4px;
+  margin:6px 7px 6px 10px; /* right to match `nav a` padding */
 }
 
 .logo {
@@ -1271,7 +1279,7 @@ iframe.soundcloud {
     }
 
     .download {
-      font-size:12px;
+      font-size:12px; /* smaller text */
     }
 }
 
@@ -1303,6 +1311,41 @@ iframe.soundcloud {
     }
 }
 
+@media only screen and (max-width:799px) {
+  nav {
+    height:82px;
+  }
+  .icons.popular {
+    bottom:82px;
+  }
+
+  .main-nav a:nth-child(4) {
+    clear:left;
+    margin-left:5em;
+  }
+}
+
+/* Not so likely but we need to be prepared for 3 rows */
+@media only screen and (max-width:459px) {
+  nav {
+    height:123px;
+  }
+  .icons.popular {
+    bottom:123px;
+  }
+
+  .main-nav a:nth-child(4) {
+    clear:none;
+    margin-left:0;
+  }
+
+  .main-nav a:nth-child(3), .main-nav a:nth-child(5) {
+    clear:left;
+    margin-left:5em;
+  }
+
+}
+
 @media only screen and (min-width:800px) {
 
     /* Wider screens, show patreon as a distinct button */
@@ -1324,16 +1367,7 @@ iframe.soundcloud {
     }
 }
 
-/* Redeem input forms */
-
-@media only screen and (min-width: 480px) {
-
-    .redeem, .purchase {
-        display:inline-block;
-    }
-}
-
-.redeem input {
+#redeem-form input {
     width:10em;
     background: #FFF;
     font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
@@ -1341,11 +1375,11 @@ iframe.soundcloud {
     text-transform:uppercase;
 }
 
-.redeem ::-webkit-input-placeholder {text-align: center; }
-.redeem :-moz-placeholder           {text-align: center; }
-.redeem ::-moz-placeholder          {text-align: center; }
-.redeem :-ms-input-placeholder      {text-align: center; }
-.redeem ::placeholder               {text-align: center; }
+#redeem-form ::-webkit-input-placeholder {text-align: center; }
+#redeem-form :-moz-placeholder           {text-align: center; }
+#redeem-form ::-moz-placeholder          {text-align: center; }
+#redeem-form :-ms-input-placeholder      {text-align: center; }
+#redeem-form ::placeholder               {text-align: center; }
 
 #cover {
     position:absolute;

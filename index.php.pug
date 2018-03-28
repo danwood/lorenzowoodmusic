@@ -22,7 +22,7 @@ html(class="no-js", lang="en-us")
 		link(rel="prefetch" href="//code.jquery.com")
 		link(rel="prefetch" href="//w.soundcloud.com")
 		link(rel="prefetch" href="//img.youtube.com")
-		link(rel="prefetch" href="//widget.bandsintown.com")
+		link(rel="prefetch" href="//cdn.jsdelivr.net")
 
 	body
 		<!--[if lt IE 9]>
@@ -62,35 +62,31 @@ html(class="no-js", lang="en-us")
 			nav.main-nav.clearfix
 				//- later make this a full menu with hamburger etc.
 
-				aside.purchase
-					a.buy-button(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
-						| Buy "Title TK"
-					a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
-						//- Apple marketing guidelines for lockup images:
-						//- minimum 25px tall, 25% of height margin
-						include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
-					a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
-						include svg/amazon-music.svg
-					a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
-						include svg/google-play.svg
-					a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
-						include svg/Apple_Music_lockup_RGB_blk.svg
-					a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
-						include svg/spotify-text.svg
+				a.buy-button(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+					| Buy “Don’t Look Back” EP
+				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+					//- Apple marketing guidelines for lockup images:
+					//- minimum 25px tall, 25% of height margin
+					include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
+				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+					include svg/amazon-music.svg
+				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+					include svg/google-play.svg
+				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+					include svg/Apple_Music_lockup_RGB_blk.svg
+				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+					include svg/spotify-text.svg
 
-				aside.epk.download
-					a(href="EPK.zip") Electronic Press Kit
-
-				aside.redeem
-					form#redeem-form
-						input#redeem-input(type="text" name="code" placeholder="Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
-						input(type="hidden" name="email" value!="<?php echo htmlspecialchars($email); ?>")
-
-				#scroll-arrow.scrolldown.bounce(style="display:none")
-					a.down-arrow(href="#")
-						include svg/downarrow.svg
 
 		main
+
+			aside.redeem
+				form#redeem-form
+					input#redeem-input(type="text" name="code" placeholder="Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
+					input(type="hidden" name="email" value!="<?php echo htmlspecialchars($email); ?>")
+
+			aside.epk.download
+				a(href="EPK.zip") Electronic Press Kit
 
 			section.bio
 				header.ir(aria-hidden="true")
@@ -287,6 +283,10 @@ html(class="no-js", lang="en-us")
 		#cover(style="display:none")
 		#redeemer(style="display:none")
 		#close-redeem(style="display:none") &#215;
+
+		#scroll-arrow.scrolldown.bounce(style="display:none")
+			a.down-arrow(href="#")
+				include svg/downarrow.svg
 
 		script(
 			src="https://code.jquery.com/jquery-3.3.1.min.js"
