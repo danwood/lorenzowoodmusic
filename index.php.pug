@@ -32,7 +32,7 @@ html(class="no-js", lang="en-us")
 		<![endif]-->
 
 		.info(style="position:absolute; top:0; left:0; width:100%; height:20px; color:red;z-index:9999")
-		header
+		header#main-header
 
 			h1.ir Lorenzo Wood Music
 			.logo
@@ -61,7 +61,7 @@ html(class="no-js", lang="en-us")
 			nav.main-nav
 				//- later make this a full menu with hamburger etc.
 				a.download(href="EPK.zip") Download Electronic Press Kit
-				#scroll-arrow.scrolldown.bounce
+				#scroll-arrow.scrolldown.bounce(style="display:none")
 					a.down-arrow(href="#") ⟱
 
 		main
@@ -269,13 +269,4 @@ html(class="no-js", lang="en-us")
 			include js/index-min.js
 		script(src="CACHE/bandsintown.js")
 			//- Cached on server from https://widget.bandsintown.com/main.min.js
-		script.
-			$( window ).resize(function() {
-				var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-				var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-				$( ".info" ).text( w + ' x ' + h + ' … ' + w/h  );
-			});
-			var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-			var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-			$( ".info" ).text( w + ' x ' + h + ' … ' + w/h  );
 

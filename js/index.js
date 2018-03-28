@@ -173,11 +173,19 @@ $('.soundcloud-proxy').each(function() {
 
 
 // Responsively resize the hero image. In sweet spot of screen aspect ratio, hero is full screen.
-function fullscreen(){
+function fullscreen(event){
     var width = $(window).width();
     var height= $(window).height();
+    var fullSizeHero = false;
     if (width/height < 1.21) height = Math.round(width/1.21);
     else if (width/height > 1.79) height = Math.round(width/1.79);
+    else fullSizeHero = true;
+
+    if (fullSizeHero && !event) {
+      $('#scroll-arrow').css('display', 'block');
+    } else {
+      $('#scroll-arrow').remove();
+    }
 
     jQuery('#main-header').css({
         width: width,
@@ -186,11 +194,11 @@ function fullscreen(){
     $( ".info" ).text( width + ' x ' + height + ' … ' + width/height  );
 }
 
-fullscreen();
+fullscreen(null);
 
 // Run the function in case of window resize
-$(window).resize(function() {
-     fullscreen();
+$(window).resize(function(event) {
+     fullscreen(event);
   });
 
 

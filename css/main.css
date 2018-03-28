@@ -902,7 +902,7 @@ body > header {
 .icons.popular {
   position: absolute;
   z-index:999;
-  bottom:2em; left:0; right:0;
+  bottom:2.5em; left:0; right:0;
 }
 
 .main-nav {
@@ -929,7 +929,7 @@ body > header {
     max-width: 100%;
     filter: grayscale(100%);
     z-index:-999;
-    top: -7.5vw;  /* Show less sky when we have less vertical room */
+    top: -7.5%;  /* Show less sky when we have less vertical room */
     overflow:hidden;
 }
 
@@ -952,59 +952,50 @@ nav {
   position:relative; /* so it can contain an absolute */
 }
 
-  .down-arrow {
-    display:none;
-  }
+/* Scroll arrow only when we have a full page hero */
 
-/* HEADER: Sweet spot where we force image to be just so, and icons below that on viewport */
+.down-arrow {
+  z-index:999;
+  color:#000;
+  background:white;
+  border-radius:8px;
+  padding:0;
+}
+
+.scrolldown {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  text-align: center;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
 
 @media screen and (min-aspect-ratio: 121/100) and (max-aspect-ratio: 179/100) {
 
   .hero img {
-    position:relative;
     top: 0;
     max-width: none;  /* let it enlarge */
-
     object-fit: cover;
     left: 50%; transform:translatex(-50%); /* center horizontally */
-        filter: sepia(100%);
+    filter: sepia(100%);
 
  }
-
-  /* Scroll arrow only when we have a full page hero */
-
-  .down-arrow {
-    display:inline;
-    z-index:999;
-    color:#000;
-    background:white;
-    border-radius:8px;
-    padding:0;
-  }
-
-  .scrolldown {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    text-align: center;
-  }
-  .bounce {
-    animation: bounce 2s infinite;
-  }
-
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
-  }
-
-
 }
 
 /* Viewport is kind of tall; show image at maximum height and then contents below */
@@ -1013,10 +1004,10 @@ nav {
 
   .hero img {
     top: 0;
-    max-width: 118vw; /* match enlargement of section above */
+    max-width: 118%; /* match enlargement of section above */
     object-fit: cover;
     left: 50%; transform:translatex(-50%); /* center horizontally */
-        filter: grayscale(50%);
+    filter: grayscale(50%);
 
   }
 
@@ -1091,7 +1082,7 @@ nav {
   background:rgba(255,255,255,0.85);
   text-align:right;
   height:1.5em;
-  padding-top:0.5em;
+  padding:0.5em 0;
 }
 nav a {
   color:#bdbdbd;
