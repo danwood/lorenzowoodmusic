@@ -966,16 +966,12 @@ nav {
 
 /* Scroll arrow only when we have a full page hero */
 
-.down-arrow {
-  z-index:999;
-  padding:0;
-}
-
 .scrolldown {
   position:absolute;
   bottom:0;
   width:100%;
   text-align: center;
+  z-index:999;
 }
 
 .bounce {
