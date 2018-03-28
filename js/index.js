@@ -36,7 +36,7 @@ setTimeout(function(){
   $( "#scroll-arrow" ).fadeOut( "slow", function() {
     $('#scroll-arrow').remove();
   });
-}, 4000);
+}, 2000);
 
 
 
