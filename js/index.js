@@ -177,8 +177,8 @@ function fullscreen(event){
     var width = $(window).width();
     var height= $(window).height();
     var fullSizeHero = false;
-    if (width/height < 1.21) height = Math.round(width/1.21);
-    else if (width/height > 1.79) height = Math.round(width/1.79);
+    if (width/height < 0.85) height = Math.round(width/0.85);
+    else if (width/height > 1.618) height = Math.round(width/1.618);
     else fullSizeHero = true;
 
     if (fullSizeHero && !event) {
@@ -187,11 +187,11 @@ function fullscreen(event){
       $('#scroll-arrow').remove();
     }
 
-    jQuery('#main-header').css({
+    jQuery('#main-header,.hero img').css({
         width: width,
         height: height
     });
-    $( ".info" ).text( width + ' x ' + height + ' … ' + width/height  );
+    //$( ".info" ).text( width + ' x ' + height + ' … ' + width/height  );
 }
 
 fullscreen(null);

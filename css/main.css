@@ -925,12 +925,12 @@ body > header {
 
 .hero img {
     position:relative;
-    min-width:100%; /* specify here since it's useful for media queries */
-    max-width: 100%;
-    filter: grayscale(100%);
+    width:100%;
+    object-fit: cover;
     z-index:-999;
-    top: -7.5%;  /* Show less sky when we have less vertical room */
-    overflow:hidden;
+    top: 0;
+    left: 50%; transform:translatex(-50%); /* center horizontally */
+    filter: grayscale(100%);
 }
 
 /* Icons (at top and bottom) */
@@ -985,33 +985,6 @@ nav {
   }
 }
 
-
-@media screen and (min-aspect-ratio: 121/100) and (max-aspect-ratio: 179/100) {
-
-  .hero img {
-    top: 0;
-    max-width: none;  /* let it enlarge */
-    object-fit: cover;
-    left: 50%; transform:translatex(-50%); /* center horizontally */
-    filter: sepia(100%);
-
- }
-}
-
-/* Viewport is kind of tall; show image at maximum height and then contents below */
-@media screen and (max-aspect-ratio: 121/100) {
-
-
-  .hero img {
-    top: 0;
-    max-width: 118%; /* match enlargement of section above */
-    object-fit: cover;
-    left: 50%; transform:translatex(-50%); /* center horizontally */
-    filter: grayscale(50%);
-
-  }
-
-}
 
 /* Patreon section */
 
