@@ -937,6 +937,22 @@ body > header {
     filter: grayscale(100%);
 }
 
+.featured img {
+  position:absolute;
+  bottom:calc(16% + 41px + 40px);  /* above buying nav and social icons */
+  left:40px;
+  width:10%;
+  height:auto;
+  box-shadow:0 0 8px 8px rgba(0,0,0,0.5);
+  z-index:999;
+}
+.featured div {
+  color:white;
+  position:absolute;
+  bottom:calc(16% + 41px + 5px);  /* above img */
+  left:40px;
+}
+
 /* Icons (at top and bottom) */
 
 .icons a {
@@ -1240,71 +1256,78 @@ iframe.soundcloud {
 
 @media only screen and (max-width:599px) {
 
-    /* Bigger social media icons on mobile ... 5-up when we have the 10 icons */
-    .exhaustive.icons a {
-        width:20%;
-    }
-    .exhaustive.icons a:nth-child(5):after { /* Need to not overflow text on right */
-      right:15%;
-      left:auto;
-    }
+  /* Bigger social media icons on mobile ... 5-up when we have the 10 icons */
+  .exhaustive.icons a {
+      width:20%;
+  }
+  .exhaustive.icons a:nth-child(5):after { /* Need to not overflow text on right */
+    right:15%;
+    left:auto;
+  }
 
-    /* ... and 6-up without margins where we have the 6 icons */
-    .popular.icons a {
-        width:16.66%;
-    }
-    .popular.icons a:first-child {
-        margin-left:0;
-    }
+  /* ... and 6-up without margins where we have the 6 icons */
+  .popular.icons a {
+      width:16.66%;
+  }
+  .popular.icons a:first-child {
+      margin-left:0;
+  }
 
-    /* On mobile, center photo rather than side-by-side with mailing list form */
-    .track-photo {
-        margin-left:25%;
-        width:50%;
-    }
+  .featured img {
+    bottom:calc(18% + 82px + 40px);  /* above buying nav and social icons */
+  }
+  .featured div {
+    bottom:calc(18% + 82px + 5px);  /* above img */
+  }
 
-    /* On mobile, avoid left/right margin on some sections (except for their headers/footers which are textual) */
+  /* On mobile, center photo rather than side-by-side with mailing list form */
+  .track-photo {
+      margin-left:25%;
+      width:50%;
+  }
 
-    .maximize-mobile {
-        padding-left:0;
-        padding-right:0;
-    }
-    .maximize-mobile footer, .maximize-mobile header {
-        padding-left:1rem;
-        padding-right:1rem;
-    }
+  /* On mobile, avoid left/right margin on some sections (except for their headers/footers which are textual) */
 
-    .download {
-      font-size:12px; /* smaller text */
-    }
+  .maximize-mobile {
+      padding-left:0;
+      padding-right:0;
+  }
+  .maximize-mobile footer, .maximize-mobile header {
+      padding-left:1rem;
+      padding-right:1rem;
+  }
+
+  .download {
+    font-size:12px; /* smaller text */
+  }
 }
 
 @media only screen and (min-width:600px) {
 
-    /* If wide enough, show button inline with text rather than 100% wide */
+  /* If wide enough, show button inline with text rather than 100% wide */
 
-    .bandsintown-button {
-        display:inline;
-        margin-right:0.3rem;
-    }
+  .bandsintown-button {
+      display:inline;
+      margin-right:0.3rem;
+  }
 
-    /* Two YouTube videos side by side */
+  /* Two YouTube videos side by side */
 
-    .youtube-column {
-        width:50%;
-        float:left;
-    }
+  .youtube-column {
+      width:50%;
+      float:left;
+  }
 
-    /* On wide screens, put photo to left of the 'track' form */
+  /* On wide screens, put photo to left of the 'track' form */
 
-    .track-photo {
-        float:left;
-        width:33%;
-    }
-    .track-form {
-        float:left;
-        width:66%;
-    }
+  .track-photo {
+      float:left;
+      width:33%;
+  }
+  .track-form {
+      float:left;
+      width:66%;
+  }
 }
 
 @media only screen and (max-width:799px) {
@@ -1348,6 +1371,13 @@ iframe.soundcloud {
     width:100%;
     text-align:center;
     margin:0.5em;
+  }
+
+  .featured img {
+    bottom:calc(17% + 123px + 40px);  /* above buying nav and social icons */
+  }
+  .featured div {
+    bottom:calc(17% + 123px + 5px);  /* above img */
   }
 
 }
