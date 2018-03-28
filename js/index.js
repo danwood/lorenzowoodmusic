@@ -172,6 +172,28 @@ $('.soundcloud-proxy').each(function() {
 });
 
 
+// Responsively resize the hero image. In sweet spot of screen aspect ratio, hero is full screen.
+function fullscreen(){
+    var width = $(window).width();
+    var height= $(window).height();
+    if (width/height < 1.21) height = Math.round(width/1.21);
+    else if (width/height > 1.79) height = Math.round(width/1.79);
+
+    jQuery('#main-header').css({
+        width: width,
+        height: height
+    });
+    $( ".info" ).text( width + ' x ' + height + ' … ' + width/height  );
+}
+
+fullscreen();
+
+// Run the function in case of window resize
+$(window).resize(function() {
+     fullscreen();
+  });
+
+
 
 //Modernizer-like
 // Remove "no-js" class from element, if it exists

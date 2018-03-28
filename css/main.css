@@ -890,7 +890,7 @@ article.textual {
 
 body > header {
   position: relative;
-  height:55vw;            /* Height of header fraction of window width when in short-viewport mode */
+  height:100%; /* fallback */
 }
 
 .logo {
@@ -919,7 +919,7 @@ body > header {
 
 .hero {
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow:hidden;
 }
 
@@ -960,17 +960,15 @@ nav {
 
 @media screen and (min-aspect-ratio: 121/100) and (max-aspect-ratio: 179/100) {
 
-  body > header {
-      height:100vh; /* in this range of viewport heights, fill the height of the viewport with the header */
-  }
-
   .hero img {
     position:relative;
     top: 0;
     max-width: none;  /* let it enlarge */
-    max-height:100vh;
+
     object-fit: cover;
     left: 50%; transform:translatex(-50%); /* center horizontally */
+        filter: sepia(100%);
+
  }
 
   /* Scroll arrow only when we have a full page hero */
@@ -1012,15 +1010,14 @@ nav {
 /* Viewport is kind of tall; show image at maximum height and then contents below */
 @media screen and (max-aspect-ratio: 121/100) {
 
-  body > header {
-      height:82.5vw; /* Once viewport is tall enough, make header be a fixed ratio if the width */
-  }
 
   .hero img {
     top: 0;
     max-width: 118vw; /* match enlargement of section above */
     object-fit: cover;
     left: 50%; transform:translatex(-50%); /* center horizontally */
+        filter: grayscale(50%);
+
   }
 
 }
