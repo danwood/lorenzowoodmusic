@@ -3,14 +3,16 @@
 
 // ASAP, Fix styling where safe-area padding is zero. Not sure of any other workaround.
 
+$(window).on('load', function(){
+
 var sections = document.querySelectorAll( 'section, .safe-area' );
 for (var i = 0; i < sections.length; i++) {
 	var section = sections[i];
 	if (Number(section.style.paddingLeft) === 0) {
 		section.style.paddingLeft  = '1em';
 		section.style.paddingRight = '1em';
-	}
-}
+  }
+});
 
 // Do something clever: when we scroll past the hero image, turn off the grayscale filter to make it color
 
@@ -20,7 +22,7 @@ window.addEventListener('scroll', function() {
 	var scrollArrow = document.querySelector('#scroll-arrow');
 	if (scrollArrow) {
 		scrollArrow.parentNode.removeChild(scrollArrow);
-	}
+    }
 	if (window.scrollY > targetOffset) {
 		document.querySelector('.hero img').style.filter = 'grayscale(0%)';
 	}
@@ -29,9 +31,9 @@ window.addEventListener('scroll', function() {
 var downArrow = document.querySelector('.down-arrow');
 
 downArrow.addEventListener('click', function(event) {
-	event.preventDefault();
+  event.preventDefault();
 	window.scrollY = downArrow.getBoundingClientRect().top
-	return false;
+  return false;
 });
 
 
@@ -63,61 +65,61 @@ lightWidget.innerHTML = '<iframe src="https://lightwidget.com/widgets/9b560c45f4
 // Form Submission
 
 $('#contact-form').submit(function( event ) {
-		$.ajax({
-			type: 'POST',
-			url: 'https://jumprock.co/mail/lozobooking',
-			data: $("#contact-form").serialize(),
+    $.ajax({
+      type: 'POST',
+      url: 'https://jumprock.co/mail/lozobooking',
+      data: $("#contact-form").serialize(),
 
-			success: function(data, textStatus, jqXHR ) {
-						if (data !== '') {
-								$('#email').val('');
-								$('#message').val('');
-								setTimeout(function(){ window.alert("Success sending message"); },0);
-						} else {
-								window.alert('Sorry, but the contact form submission did not work as expected.');
-						}
-			},
-			error: function(jqXHR, textStatus, errorThrown ) {
-						window.alert(errorThrown + ' ' + textStatus + ' ' + jqXHR);
-			},
-			complete: function(jqXHR, textStatus ) {
+      success: function(data, textStatus, jqXHR ) {
+            if (data !== '') {
+                $('#email').val('');
+                $('#message').val('');
+                setTimeout(function(){ window.alert("Success sending message"); },0);
+            } else {
+                window.alert('Sorry, but the contact form submission did not work as expected.');
+            }
+      },
+      error: function(jqXHR, textStatus, errorThrown ) {
+            window.alert(errorThrown + ' ' + textStatus + ' ' + jqXHR);
+      },
+      complete: function(jqXHR, textStatus ) {
 
-			}
-		});
-		event.preventDefault();
+      }
+    });
+    event.preventDefault();
 });
 
 
 $('#redeem-form').submit(function( event ) {
-		$.ajax({
-			type: 'POST',
-			url: '/redeem.php',
-			data: $("#redeem-form").serialize(),
+    $.ajax({
+      type: 'POST',
+      url: '/redeem.php',
+      data: $("#redeem-form").serialize(),
 
-			success: function(data, textStatus, jqXHR ) {
-						if (data !== '') {
-								$('#cover').show();
-								$('#redeemer').show();
-								$('#close-redeem').show();
-								$('#redeemer').html(data);  // We’re done; let the content here do the rest.
-						} else {
-								window.alert('Sorry, but the code you entered has already been redeemed or was entered incorrectly.');
-								$('#redeem-input').focus();
-						}
-			},
-			error: function(jqXHR, textStatus, errorThrown ) {
-						window.alert(errorThrown + ' ' + textStatus);
-			},
-			complete: function(jqXHR, textStatus ) {
+      success: function(data, textStatus, jqXHR ) {
+            if (data !== '') {
+                $('#cover').show();
+                $('#redeemer').show();
+                $('#close-redeem').show();
+                $('#redeemer').html(data);  // We’re done; let the content here do the rest.
+            } else {
+                window.alert('Sorry, but the code you entered has already been redeemed or was entered incorrectly.');
+                $('#redeem-input').focus();
+            }
+      },
+      error: function(jqXHR, textStatus, errorThrown ) {
+            window.alert(errorThrown + ' ' + textStatus);
+      },
+      complete: function(jqXHR, textStatus ) {
 
-			}
-		});
-		event.preventDefault();
+      }
+    });
+    event.preventDefault();
 });
 $('#close-redeem').click(function() {
-		$('#cover').fadeOut('slow');
-		$('#close-redeem').fadeOut('slow');
-		$('#redeemer').fadeOut('fast');
+    $('#cover').fadeOut('slow');
+    $('#close-redeem').fadeOut('slow');
+    $('#redeemer').fadeOut('fast');
 });
 
 // From https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743
@@ -126,87 +128,87 @@ $('#close-redeem').click(function() {
 
 var youtube = document.querySelectorAll( ".youtube" );
 for (var i = 0; i < youtube.length; i++) {
-		var embed = youtube[i].dataset.embed.split(':');
-		var code = embed[0];
-		var title = embed[1];
+    var embed = youtube[i].dataset.embed.split(':');
+    var code = embed[0];
+    var title = embed[1];
 
-		var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-		if (iOS) {
-			// regular YouTube iframe embed so that it needs just one tap as expected
-			var iframe = document.createElement( "iframe" );
-			iframe.setAttribute( "allowfullscreen", "" );
-			iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code );
-			youtube[i].appendChild( iframe );
-		}
-		else {
-			var source = "https://img.youtube.com/vi/"+ code +"/sddefault.jpg";
-			var image = new Image();
-			image.src = source;
-			image.addEventListener( "load", function() {
-					youtube[ i ].appendChild( image );
-			}( i ) );
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (iOS) {
+      // regular YouTube iframe embed so that it needs just one tap as expected
+      var iframe = document.createElement( "iframe" );
+      iframe.setAttribute( "allowfullscreen", "" );
+      iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code );
+      youtube[i].appendChild( iframe );
+    }
+    else {
+      var source = "https://img.youtube.com/vi/"+ code +"/sddefault.jpg";
+      var image = new Image();
+      image.src = source;
+      image.addEventListener( "load", function() {
+          youtube[ i ].appendChild( image );
+      }( i ) );
 
-			youtube[i].addEventListener( "click", function() {
+      youtube[i].addEventListener( "click", function() {
 
-					// Need to recalculate the code we are using
-					var embed = this.dataset.embed.split(':');
-					var code = embed[0];
+          // Need to recalculate the code we are using
+          var embed = this.dataset.embed.split(':');
+          var code = embed[0];
 
-					var iframe = document.createElement( "iframe" );
-					iframe.setAttribute( "frameborder", "0" );
-					iframe.setAttribute( "allowfullscreen", "" );
-					iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code +"?rel=0&showinfo=0&autoplay=1" );
-					this.innerHTML = "";
-					this.appendChild( iframe );
-			} );
-			var play = document.createElement("div");
-			play.setAttribute("class", "play-button");
-			youtube[i].appendChild(play);
-			var t = document.createElement("div");
-			t.setAttribute("class", "title");
-			t.innerText = title;
-			youtube[i].appendChild(t);
-		}
-	};
+          var iframe = document.createElement( "iframe" );
+          iframe.setAttribute( "frameborder", "0" );
+          iframe.setAttribute( "allowfullscreen", "" );
+          iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code +"?rel=0&showinfo=0&autoplay=1" );
+          this.innerHTML = "";
+          this.appendChild( iframe );
+      } );
+      var play = document.createElement("div");
+      play.setAttribute("class", "play-button");
+      youtube[i].appendChild(play);
+      var t = document.createElement("div");
+      t.setAttribute("class", "title");
+      t.innerText = title;
+      youtube[i].appendChild(t);
+    }
+  }
 
 // Replace all soundcloud proxies with a real embed.
 
 $('.soundcloud-proxy').each(function() {
-	var code = $(this).data('code');
-	var iframeCode = '<iframe class="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+ code + '&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false" />';
-	 $(this).replaceWith(iframeCode);
+  var code = $(this).data('code');
+  var iframeCode = '<iframe class="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+ code + '&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false" />';
+   $(this).replaceWith(iframeCode);
 });
 
 
 // Responsively resize the hero image. In sweet spot of screen aspect ratio, hero is full screen.
 function fullscreen(event){
-		var width = $(window).width();
-		var height= $(window).height();
-		var fullSizeHero = false;
-		if (width/height < 0.85) height = Math.round(width/0.85);
-		else if (width/height > 1.618) height = Math.round(width/1.618);
-		else fullSizeHero = true;
+    var width = $(window).width();
+    var height= $(window).height();
+    var fullSizeHero = false;
+    if (width/height < 0.85) height = Math.round(width/0.85);
+    else if (width/height > 1.618) height = Math.round(width/1.618);
+    else fullSizeHero = true;
 
-		// Show scroll arrow if first time here and we are showing full-screen hero
-		if (fullSizeHero && !event) {
-			$('#scroll-arrow').css('display', 'block');
-		} else {
-			$('#scroll-arrow').remove();
-		}
+    // Show scroll arrow if first time here and we are showing full-screen hero
+    if (fullSizeHero && !event) {
+      $('#scroll-arrow').css('display', 'block');
+    } else {
+      $('#scroll-arrow').remove();
+    }
 
-		jQuery('#main-header,.hero img').css({
-				width: width,
-				height: height
-		});
-		//$( ".info" ).text( width + ' x ' + height + ' … ' + width/height  );
+    jQuery('#main-header,.hero img').css({
+        width: width,
+        height: height
+    });
+    //$( ".info" ).text( width + ' x ' + height + ' … ' + width/height  );
 }
 
 fullscreen(null);
 
 // Run the function in case of window resize
 $(window).resize(function(event) {
-		 fullscreen(event);
-	});
+     fullscreen(event);
+  });
 
 
 
