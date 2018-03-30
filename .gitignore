@@ -2,13 +2,9 @@
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 # Useful .gitignore templates: https://github.com/github/gitignore
 .sass-cache
-*.codekit3
-*.codekit
-*.codekit3
 
 # Minified on local machine but then included directly, so does not need to be put on server
 /js/index-min.js
 
 # Should be put on server manually, not via repository
 /amplitude_tracks
-
