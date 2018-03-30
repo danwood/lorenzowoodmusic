@@ -196,38 +196,38 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/hero.jpg": {
+	"\/img\/beach.jpg": {
 		"ft": 16384,
 		"iS": 2886286,
 		"oA": 0,
-		"oAP": "\/img\/hero.jpg",
+		"oAP": "\/img\/beach.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/hero.webp": {
+	"\/img\/beach.webp": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/img\/hero.webp",
+		"oAP": "\/img\/beach.webp",
 		"oF": 0
 		},
-	"\/img\/hero33.jpg": {
+	"\/img\/beach33.jpg": {
 		"ft": 16384,
 		"iS": 49669,
 		"oA": 0,
-		"oAP": "\/img\/hero33.jpg",
+		"oAP": "\/img\/beach33.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/hero50.jpg": {
+	"\/img\/beach50.jpg": {
 		"ft": 16384,
 		"iS": 107384,
 		"oA": 0,
-		"oAP": "\/img\/hero50.jpg",
+		"oAP": "\/img\/beach50.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
