@@ -506,12 +506,12 @@ textarea {
 
 /*! Generic, Useful for many sites */
 /* Flexbox sticky footer
-  https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+	https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
 
-  Using my top-level tags rather than their classes.
-  Also, including MS syntax to try and support IE 9.  But not old webkit classes.
+	Using my top-level tags rather than their classes.
+	Also, including MS syntax to try and support IE 9.  But not old webkit classes.
 
-  Not really needed on a long-content page, but still useful to have in place.
+	Not really needed on a long-content page, but still useful to have in place.
 */
 /**
  * 1. Avoid the IE 10-11 `min-height` bug.
@@ -841,8 +841,8 @@ body > footer {
   color: #ffffff; }
 
 /* ==========================================================================
-   Other styles
-   ========================================================================== */
+	 Other styles
+	 ========================================================================== */
 .bandsintown-button {
   display: block;
   text-align: center;
