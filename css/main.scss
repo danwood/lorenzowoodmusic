@@ -149,15 +149,16 @@ label {
     padding-bottom: 56.25%;
     height: 0; overflow: hidden;
     max-width: 100%;
+
+    iframe, object, embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
 }
 
-.embed-container iframe, .embed-container object, .embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 /* for header and footer, full window width but indented a bit */
 
@@ -206,9 +207,8 @@ body > header {
     width: 100%;
     height: auto;
     overflow:hidden;
-}
 
-.hero img {
+  img {
     position:relative;
     width:100%;
     object-fit: cover;
@@ -216,18 +216,21 @@ body > header {
     top: 0;
     left: 50%; transform:translatex(-50%); /* center horizontally */
     filter: grayscale(100%);
+  }
 }
+
 
 /* Icons (at top and bottom) */
 
 .icons a {
     width: 10%;
     display: inline-block;
+
+  svg {
+    margin: 10%;
+  }
 }
 
-.icons a svg {
-    margin: 10%;
-}
 
 .popular.icons a:first-child { /* Left margin for shorter icon list */
     margin-left: 20%;
@@ -282,15 +285,17 @@ nav {
 
 /* Instagram section */
 
-.instagram-section article {
+.instagram-section {
+  article {
     margin: 0 auto;
     max-width: 1200px;
-}
+  }
 
-.instagram-section h2 {
+  h2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: 0;
+  }
 }
 
 .lightwidget-widget {
@@ -338,19 +343,22 @@ nav {
   text-align:right;
   height:1.5em;
   padding:0.5em 0;
-}
-nav a {
-  color:#bdbdbd;
-  margin-top:5px;
-  padding:0 0.5em 0 2em;
-  font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  text-decoration:none;
-  white-space: nowrap;
-}
-nav a.download {
-   background:url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="#bdbdbd" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat left center;
+
+  a {
+    color:#bdbdbd;
+    margin-top:5px;
+    padding:0 0.5em 0 2em;
+    font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-decoration:none;
+    white-space: nowrap;
+  }
+
+  a.download {
+     background:url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="#bdbdbd" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat left center;
+  }
+
 }
 
 .logo, .icons {
@@ -365,32 +373,34 @@ nav a.download {
 .patreon-section {
     background:#212121;
     color:#bdbdbd;
-}
-.patreon-section a {
+
+    a {
     color:white;
     text-decoration:none;
+  }
 }
+
 .patreon-link {
     border-bottom:3px solid #00AEA8;
 }
 
 .instagram-section {
     background:#bdbdbd;
-}
-.instagram-section a {
+  a {
     color:white;
+  }
 }
 
 .soundcloud-section {
     background:#f5f5f5;
+    a { color:#424242; }
 }
-.soundcloud-section a { color:#424242; }
 
 .youtube-section {
     background:#616161;
     color:white;
+    a { color:#f5f5f5; }
 }
-.youtube-section a { color:#f5f5f5; }
 
 .track-section {
     background:#212121;
@@ -411,19 +421,20 @@ body > footer {
    ========================================================================== */
 
 .bandsintown-button {
-    display:block;
-    text-align:center;
-    color:#FFF;
-    background:#00AEA8;
-    padding:6px;
-}
-.bandsintown-button a {
+  display:block;
+  text-align:center;
+  color:#FFF;
+  background:#00AEA8;
+  padding:6px;
+
+  a {
     color:#FFF;
     text-decoration:none;
-}
-.bandsintown-button svg {
+  }
+  svg {
     width:1.5rem;
     padding-bottom:0.3rem;
+  }
 }
 
 /* Show soundcloud iframe (loaded from script) at maximum width */
@@ -436,10 +447,11 @@ iframe.soundcloud {
 .bit-no-dates-container { display:none; }
 
 /* Special hover tooltip-like display over social icons */
-.icons a {
-    position:relative;
-}
-.icons a:after{
+.icons {
+  a {
+      position:relative;
+  }
+  a:after{
     padding:0 5px;
     font-size:80%;
     background:#fff;
@@ -458,13 +470,14 @@ iframe.soundcloud {
 
     opacity:0; /* Invisible until hovered */
     transition:opacity .3s ease-in-out;
-}
-.icons a:hover:after{
+  }
+  a:hover:after{
     opacity:0.75;
-}
-.icons a:last-child:after { /* Also need to do below for 5th icon when we have two rows! SEE BELOW */
-  right:15%;  /* plenty of room for shadow effect to not overflow the container on phone */
-  left:auto;
+  }
+  a:last-child:after { /* Also need to do below for 5th icon when we have two rows! SEE BELOW */
+    right:15%;  /* plenty of room for shadow effect to not overflow the container on phone */
+    left:auto;
+  }
 }
 
 .no-js .requires-js {
@@ -515,12 +528,12 @@ iframe.soundcloud {
     /* On mobile, avoid left/right margin on some sections (except for their headers/footers which are textual) */
 
     .maximize-mobile {
-        padding-left:0;
-        padding-right:0;
-    }
-    .maximize-mobile footer, .maximize-mobile header {
+      padding-left:0;
+      padding-right:0;
+      footer, header {
         padding-left:1rem;
         padding-right:1rem;
+      }
     }
 
     .download {
@@ -649,22 +662,19 @@ svg defs {
 /* YouTube player */
 
 .youtube {
-    background-color: #000;
-    position: relative;
-    padding-top: 56.25%;
-    overflow: hidden;
-    cursor: pointer;
-
-}
-.youtube img {
+  background-color: #000;
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  cursor: pointer;
+  img {
     width: 100%;
     top: -16.84%;
     left: 0;
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
     mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
-}
-
-.youtube .play-button {
+  }
+  .play-button {
     width: 68px;
     height: 48px;
     background-color: #333;
@@ -672,6 +682,7 @@ svg defs {
     z-index: 1;
     opacity: 0.9;
     border-radius: 6px/18px;
+  }
 }
 
 .youtube:hover .play-button {
