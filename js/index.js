@@ -3,14 +3,14 @@
 
 // ASAP, Fix styling where safe-area padding is zero. Not sure of any other workaround.
 
-if($('section, .safe-area').css('padding-left') === '0px') {
-    $('section, .safe-area').css('padding-left', '1em');
-    $('section, .safe-area').css('padding-right', '1em');
-}
+$(window).on('load', function(){
 
-
-
-
+ // executes when complete page is fully loaded, including all frames, objects and images
+  if($('section, .safe-area').css('padding-left') === '0px') {
+      $('section, .safe-area').css('padding-left', '1em');
+      $('section, .safe-area').css('padding-right', '1em');
+  }
+});
 
 // Do something clever: when we scroll past the hero image, turn off the grayscale filter to make it color
 
@@ -161,7 +161,7 @@ for (var i = 0; i < youtube.length; i++) {
       t.innerText = title;
       youtube[i].appendChild(t);
     }
-  };
+  }
 
 // Replace all soundcloud proxies with a real embed.
 

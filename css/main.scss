@@ -73,8 +73,10 @@ section, .safe-area {
 @supports(padding:max(0px)) {
 	section, .safe-area {
 		// use m#{a}x instead of max to allow this to be compiled with Sass
+		padding-left: m#{a}x(1rem, constant(safe-area-inset-left));
+		padding-right: m#{a}x(1rem, constant(safe-area-inset-right));  /* iOS 11.0, 11.1 … phase out soon */
 		padding-left: m#{a}x(1rem, env(safe-area-inset-left));
-		padding-right: m#{a}x(1rem, env(safe-area-inset-right));
+		padding-right: m#{a}x(1rem, env(safe-area-inset-right));       /* iOS 11.2 beta and up */
 	}
 }
 
@@ -106,7 +108,8 @@ h3 {
 }
 
 section {
-	padding: 1rem 0;
+	padding-top: 1rem;			// don't specify sides since those are handled separately
+	padding-bottom: 1rem;
 }
 section.balance-footer {
 	padding-bottom: 0;
