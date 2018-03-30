@@ -699,7 +699,7 @@ svg defs {
 	img, iframe, .play-button, .play-button:before {
 		position: absolute;
 	}
-	.play-button:before {
+	.play-button, .play-button:before {
 		top: 50%;
 		left: 50%;
 		transform: translate3d( -50%, -50%, 0 );
