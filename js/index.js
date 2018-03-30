@@ -1,28 +1,6 @@
 
 // REQUIREMENT: JQUERY
 
-// ASAP, Fix styling where safe-area padding is zero. Not sure of any other workaround.
-
-$(window).on('load', function(){
-
- // executes when complete page is fully loaded, including all frames, objects and images
-  if($('section, .safe-area').css('padding-left') === '0px') {
-      $('section, .safe-area').css('padding-left', '1em');
-      $('section, .safe-area').css('padding-right', '1em');
-  }
-});
-
-// Do something clever: when we scroll past the hero image, turn off the grayscale filter to make it color
-
-var targetOffset = $("main").offset().top;
-
-var $w = $(window).scroll(function(){
-    $('#scroll-arrow').remove();
-    if ( $w.scrollTop() > targetOffset ) {
-        $('.hero img').css({"filter":"grayscale(0%)"});
-    }
-});
-
 $('.down-arrow').click(function(event) {
   event.preventDefault();
   $('html, body').animate({
@@ -196,6 +174,18 @@ function fullscreen(event){
 }
 
 fullscreen(null);
+
+// Do something clever: when we scroll past the hero image, turn off the grayscale filter to make it color
+
+var targetOffset = $("main").offset().top;
+
+var $w = $(window).scroll(function(){
+    $('#scroll-arrow').remove();
+    if ( $w.scrollTop() > targetOffset ) {
+        $('.hero img').css({"filter":"grayscale(0%)"});
+    }
+});
+
 
 // Run the function in case of window resize
 $(window).resize(function(event) {

@@ -134,13 +134,6 @@
 		"oAP": "\/CNAME",
 		"oF": 0
 		},
-	"\/css\/.sass-cache\/656850f86ce4269fddc8c1fa3320e29a3c4c74fd\/main.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/css\/.sass-cache\/656850f86ce4269fddc8c1fa3320e29a3c4c74fd\/main.scssc",
-		"oF": 0
-		},
 	"\/css\/html5boilerplate.css": {
 		"aP": 1,
 		"bl": 0,
@@ -237,48 +230,48 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/beach.jpg": {
+		"ft": 16384,
+		"iS": 2886286,
+		"oA": 0,
+		"oAP": "\/img\/beach.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/beach.webp": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/img\/beach.webp",
+		"oF": 0
+		},
+	"\/img\/beach33.jpg": {
+		"ft": 16384,
+		"iS": 49669,
+		"oA": 0,
+		"oAP": "\/img\/beach33.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/beach50.jpg": {
+		"ft": 16384,
+		"iS": 107384,
+		"oA": 0,
+		"oAP": "\/img\/beach50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/featured.jpg": {
 		"ft": 16384,
 		"iS": 98217,
 		"oA": 0,
 		"oAP": "\/img\/featured.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/hero.jpg": {
-		"ft": 16384,
-		"iS": 2886286,
-		"oA": 0,
-		"oAP": "\/img\/hero.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/hero.webp": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/img\/hero.webp",
-		"oF": 0
-		},
-	"\/img\/hero33.jpg": {
-		"ft": 16384,
-		"iS": 49669,
-		"oA": 0,
-		"oAP": "\/img\/hero33.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/hero50.jpg": {
-		"ft": 16384,
-		"iS": 107384,
-		"oA": 0,
-		"oAP": "\/img\/hero50.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -330,7 +323,7 @@
 	"\/js\/index.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/index-min.js",
 		"oF": 0,
@@ -1091,7 +1084,7 @@
 			},
 		"array-callback-return": {
 			"active": 0,
-			"optionString": ""
+			"optionString": "{'allowImplicit': false}"
 			},
 		"array-element-newline": {
 			"active": 0,
@@ -1255,7 +1248,7 @@
 			},
 		"indent": {
 			"active": 0,
-			"optionString": "4, {'SwitchCase': 0, 'VariableDeclarator': 1, 'outerIIFEBody': 1, }"
+			"optionString": "4, {'SwitchCase': 0, 'VariableDeclarator': 1, 'outerIIFEBody': 1 }"
 			},
 		"init-declarations": {
 			"active": 0,
@@ -2490,7 +2483,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
-		"syntaxCheckerStyle": 1,
+		"syntaxCheckerStyle": 3,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {
@@ -2657,7 +2650,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",
