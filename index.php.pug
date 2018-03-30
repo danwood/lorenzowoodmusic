@@ -18,7 +18,7 @@ html(class="no-js", lang="en-us")
 			content="Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		link(rel="apple-touch-icon" href="icon.png")
-		link(rel="stylesheet" href="css/main.032918.css")
+		link(rel="stylesheet" href="css/main.033018.css")
 		link(rel="prefetch" href="//code.jquery.com")
 		link(rel="prefetch" href="//w.soundcloud.com")
 		link(rel="prefetch" href="//img.youtube.com")
@@ -39,11 +39,11 @@ html(class="no-js", lang="en-us")
 				include svg/lorenzowoodmusic.svg
 			.hero
 				picture
-					source(srcset="img/hero.webp 1920w" type="image/webp")
-					source(srcset="img/hero.jpg 1920w, img/hero50.jpg 960w, img/hero33.jpg 640w")
-					img(src="img/hero.jpg" alt="Lorenzo Wood")
+					source(srcset="img/beach.webp 1920w" type="image/webp")
+					source(srcset="img/beach.jpg 1920w, img/beach50.jpg 960w, img/beach33.jpg 640w")
+					img(src="img/beach.jpg" alt="Lorenzo Wood")
 
-			.icons.popular
+			.icons.popular.safe-area-only
 				a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 					include svg/instagram.svg
 				a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
@@ -59,7 +59,7 @@ html(class="no-js", lang="en-us")
 				//- NOTE: I tried using SVG 'defs' and 'use' to reduce duplication, but somehow
 				//- the svg elements got a width of 300px that messed everything up.
 
-			nav.main-nav
+			nav.main-nav.safe-area-only
 				//- later make this a full menu with hamburger etc.
 				a.download(href="EPK.zip") Electronic Press Kit
 				#scroll-arrow.scrolldown.bounce(style="display:none")
@@ -222,7 +222,7 @@ html(class="no-js", lang="en-us")
 
 		footer
 
-			.icons.exhaustive
+			.icons.exhaustive.safe-area-only
 				a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 					include svg/instagram.svg
 				a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")

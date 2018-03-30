@@ -31,6 +31,7 @@ window.addEventListener('scroll', function() {
 var downArrow = document.querySelector('.down-arrow');
 
 downArrow.addEventListener('click', function(event) {
+$('.down-arrow').click(function(event) {
   event.preventDefault();
 	window.scrollY = downArrow.getBoundingClientRect().top
   return false;
@@ -204,6 +205,18 @@ function fullscreen(event){
 }
 
 fullscreen(null);
+
+// Do something clever: when we scroll past the hero image, turn off the grayscale filter to make it color
+
+var targetOffset = $("main").offset().top;
+
+var $w = $(window).scroll(function(){
+    $('#scroll-arrow').remove();
+    if ( $w.scrollTop() > targetOffset ) {
+        $('.hero img').css({"filter":"grayscale(0%)"});
+    }
+});
+
 
 // Run the function in case of window resize
 $(window).resize(function(event) {
