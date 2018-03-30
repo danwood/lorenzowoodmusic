@@ -20,7 +20,6 @@
     https://jakearchibald.github.io/svgomg/ to compress the SVGs
     https://pugjs.org/
     Chrome CSS coverage tool https://developers.google.com/web/updates/2017/04/devtools-release-notes
-    CSSMinifier.com (until SASS knows about new env settings in CSS)
     CodeKit
     GitHub deployment technique https://andytaylor.me/2012/11/03/nfs-git/
     YouTube player https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743
