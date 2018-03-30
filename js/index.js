@@ -1,17 +1,6 @@
 
 // REQUIREMENT: JQUERY
 
-// ASAP, Fix styling where safe-area padding is zero. Not sure of any other workaround.
-
-$(window).on('load', function(){
-
- // executes when complete page is fully loaded, including all frames, objects and images
-  if($('section, .safe-area').css('padding-left') === '0px') {
-      $('section, .safe-area').css('padding-left', '1em');
-      $('section, .safe-area').css('padding-right', '1em');
-  }
-});
-
 $('.down-arrow').click(function(event) {
   event.preventDefault();
   $('html, body').animate({

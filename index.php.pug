@@ -43,7 +43,7 @@ html(class="no-js", lang="en-us")
 					source(srcset="img/beach.jpg 1920w, img/beach50.jpg 960w, img/beach33.jpg 640w")
 					img(src="img/beach.jpg" alt="Lorenzo Wood")
 
-			.icons.popular
+			.icons.popular.safe-area-only
 				a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 					include svg/instagram.svg
 				a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
@@ -59,7 +59,7 @@ html(class="no-js", lang="en-us")
 				//- NOTE: I tried using SVG 'defs' and 'use' to reduce duplication, but somehow
 				//- the svg elements got a width of 300px that messed everything up.
 
-			nav.main-nav
+			nav.main-nav.safe-area-only
 				//- later make this a full menu with hamburger etc.
 				a.download(href="EPK.zip") Electronic Press Kit
 				#scroll-arrow.scrolldown.bounce(style="display:none")
@@ -222,7 +222,7 @@ html(class="no-js", lang="en-us")
 
 		footer
 
-			.icons.exhaustive
+			.icons.exhaustive.safe-area-only
 				a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 					include svg/instagram.svg
 				a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
