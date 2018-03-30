@@ -377,6 +377,9 @@ textarea {
   padding: 0.2em 0; }
 
 /* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
    Helper classes
    ========================================================================== */
 /*
@@ -452,6 +455,17 @@ textarea {
   clear: both; }
 
 /* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+
+/* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
@@ -504,7 +518,7 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 
-/* ==== Generic, Useful for many sites ===== */
+/*! ==== Generic, Useful for many sites ===== */
 /* Flexbox sticky footer
   https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
 
