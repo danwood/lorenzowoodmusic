@@ -277,22 +277,32 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/side.jpg": {
+	"\/img\/southshore.jpg": {
 		"ft": 16384,
-		"iS": 124000,
+		"iS": 86937,
 		"oA": 0,
-		"oAP": "\/img\/side.jpg",
+		"oAP": "\/img\/southshore.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/side.webp": {
+	"\/img\/southshore.webp": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/img\/side.webp",
+		"oAP": "\/img\/southshore.webp",
 		"oF": 0
+		},
+	"\/img\/southshore50.jpg": {
+		"ft": 16384,
+		"iS": 63514,
+		"oA": 0,
+		"oAP": "\/img\/southshore50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/index.php": {
 		"cB": 0,
