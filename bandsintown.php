@@ -40,6 +40,7 @@ if ($artist['upcoming_event_count']) {
 	$events = json_decode($json, true);
 
 ?>
+<!-- <?php echo htmlspecialchars(date('c')); ?> -->
 <div class='bit-header-row'>
 	<span class='bit-header'>Upcoming Dates</span>
 	<a href='<?php echo htmlspecialchars($artistURL); ?>'><span
