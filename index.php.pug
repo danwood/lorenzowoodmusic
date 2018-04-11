@@ -18,7 +18,7 @@ html(class="no-js", lang="en-us")
 			content="Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		link(rel="apple-touch-icon" href="icon.png")
-		link(rel="stylesheet" href="css/main.03302018.css")
+		link(rel="stylesheet" href="css/main.04112018.css")
 		link(rel="prefetch" href="//code.jquery.com")
 		link(rel="prefetch" href="//w.soundcloud.com")
 		link(rel="prefetch" href="//img.youtube.com")
@@ -126,19 +126,22 @@ html(class="no-js", lang="en-us")
 					p.
 						Lorenzo enjoys working with other musicians, and has recorded a number of duets for video.
 						He has been busking at local street festivals or busy streets, by himself or with support
-						on bass or percussion, since age 13. He’s expecting to have his first EP, self-produced, ready
+						on bass or percussion, since age 13.  He also has practical experience in audio engineering,
+						having worked at professional live sound events.
+					p.
+						He has recently recorded and produced his first EP, self-produced, ready for release
 						later this year.
 
-					//- Bands in Town content gets loaded here asynchronously.
-					#bandsintown-widget
+					//- Bands in Town content gets loaded here from cache.
+					|<?php include 'CACHE/bandsintown.html'; ?>
 
-					p
-						span.bandsintown-button
-							a(href="https://www.bandsintown.com/track/lorenzowoodmusic")
-								include svg/bandsintown.svg
-								| Track Lorenzo Wood on BandsInTown
-						|
-						|to be notified of upcoming gigs!
+					//-p
+					//-	span.bandsintown-button
+					//-		a(href="https://www.bandsintown.com/track/lorenzowoodmusic")
+					//-			include svg/bandsintown.svg
+					//-			| Track Lorenzo Wood on BandsInTown
+					//-	|
+					//-	|to be notified of upcoming gigs!
 
 
 
@@ -172,10 +175,10 @@ html(class="no-js", lang="en-us")
 				header.ir(aria-hidden="true")
 					h2 SoundCloud
 
-				//- Trip Switch, Attention, Wounded
+				//- Believer, Trip Switch, Attention
 
 				article.clearfix
-					each code in ['386311568', '334122523', '295083156']
+					each code in ['423059013','386311568', '334122523']
 						.soundcloud-column
 							.soundcloud-proxy(data-code=code)
 				footer
@@ -275,17 +278,6 @@ html(class="no-js", lang="en-us")
 			p.js-required.
 				JavaScript is disabled in your browser; please enable it to see missing content.
 
-		a.bit-widget-initializer(data-artist-name="Lorenzo Wood Music"
-			data-display-local-dates="false"
-			data-display-past-dates="false"
-			data-auto-style="false"
-			data-text-color="#000000"
-			data-link-color="#00AEA8"
-			data-popup-background-color="#FFFFFF"
-			data-background-color="#FFFFFF"
-			data-display-limit="5"
-			data-link-text-color="#FFFFFF"
-			data-div-id="bandsintown-widget")
 		#cover(style="display:none")
 		#redeemer(style="display:none")
 		#close-redeem(style="display:none") &#215;
@@ -302,8 +294,6 @@ html(class="no-js", lang="en-us")
 			window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\\/script>')
 		script
 			include js/index-min.js
-		script(src="CACHE/bandsintown.js")
-			//- Cached on server from https://widget.bandsintown.com/main.min.js
 
 		script.
 			<?php if ($code) { ?>$('#redeem-form').submit();<?php } ?>

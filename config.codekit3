@@ -7,7 +7,7 @@
 		"uuidString": "24DFFC34-B0CB-40BD-AA10-5ADCA258D482"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.generate.php": {
 		"cB": 0,
@@ -62,22 +62,27 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/_sources\/IMG_2880 crop 13,11,2702,4066, scale 990x1490.JPG": {
+		"ft": 16384,
+		"iS": 1831349,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/IMG_2880 crop 13,11,2702,4066, scale 990x1490.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/_sources\/IMG_4541 need to rotate 358.5°.JPG": {
 		"ft": 16384,
 		"iS": 2251971,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/_sources\/IMG_4541 need to rotate 358.5°.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
-		},
-	"\/_sources\/list-play.opacity": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/_sources\/list-play.opacity",
-		"oF": 0
 		},
 	"\/_sources\/Patreon.opacity": {
 		"cB": 0,
@@ -93,25 +98,67 @@
 		"oAP": "\/_sources\/ReverbNation.opacity",
 		"oF": 0
 		},
-	"\/album_art\/freetracks.jpg": {
+	"\/_sources\/scaled high quality\/beach.jpg": {
 		"ft": 16384,
-		"iS": 11883,
+		"iS": 2886286,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "\/album_art\/freetracks.jpg",
+		"oAP": "\/_sources\/scaled high quality\/beach.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/album_art\/sofar.jpg": {
+	"\/_sources\/scaled high quality\/beach33.jpg": {
 		"ft": 16384,
-		"iS": 12932,
+		"iS": 399322,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "\/album_art\/sofar.jpg",
+		"oAP": "\/_sources\/scaled high quality\/beach33.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"\/_sources\/scaled high quality\/beach50.jpg": {
+		"ft": 16384,
+		"iS": 850137,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/scaled high quality\/beach50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_sources\/scaled high quality\/southshore.jpg": {
+		"ft": 16384,
+		"iS": 1503252,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/scaled high quality\/southshore.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_sources\/scaled high quality\/southshore50.jpg": {
+		"ft": 16384,
+		"iS": 458004,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/scaled high quality\/southshore50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/bandsintown.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/bandsintown.php",
+		"oF": 0
 		},
 	"\/browserconfig.xml": {
 		"cB": 0,
@@ -120,18 +167,17 @@
 		"oAP": "\/browserconfig.xml",
 		"oF": 0
 		},
+	"\/CACHE": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/CACHE",
+		"oF": 0
+		},
 	"\/classes.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/classes.php",
-		"oF": 0
-		},
-	"\/CNAME": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/CNAME",
 		"oF": 0
 		},
 	"\/css\/html5boilerplate.css": {
@@ -184,13 +230,6 @@
 		"oF": 1,
 		"oS": 3
 		},
-	"\/download.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/download.php",
-		"oF": 0
-		},
 	"\/EPK.zip": {
 		"cB": 0,
 		"ft": 8192,
@@ -233,6 +272,7 @@
 	"\/img\/beach.jpg": {
 		"ft": 16384,
 		"iS": 2886286,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/beach.jpg",
 		"oF": 0,
@@ -250,6 +290,7 @@
 	"\/img\/beach33.jpg": {
 		"ft": 16384,
 		"iS": 49669,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/beach33.jpg",
 		"oF": 0,
@@ -260,18 +301,9 @@
 	"\/img\/beach50.jpg": {
 		"ft": 16384,
 		"iS": 107384,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/beach50.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/featured.jpg": {
-		"ft": 16384,
-		"iS": 98217,
-		"oA": 0,
-		"oAP": "\/img\/featured.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -280,6 +312,7 @@
 	"\/img\/southshore.jpg": {
 		"ft": 16384,
 		"iS": 86937,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/southshore.jpg",
 		"oF": 0,
@@ -297,6 +330,7 @@
 	"\/img\/southshore50.jpg": {
 		"ft": 16384,
 		"iS": 63514,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/southshore50.jpg",
 		"oF": 0,
@@ -350,77 +384,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/phpliteadmin-readme.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/phpliteadmin-readme.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/phpliteadmin.config.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/phpliteadmin.config.php",
-		"oF": 0
-		},
-	"\/phpliteadmin.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/phpliteadmin.php",
-		"oF": 0
-		},
-	"\/redeem.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/redeem-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/redeem.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/redeem.php",
-		"oF": 0
-		},
-	"\/redeem.php.pug": {
-		"cB": 0,
-		"cOD": 1,
-		"ft": 512,
-		"oA": 0,
-		"oAP": "\/redeem.php.html",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/redeem.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/redeem.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/robots.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -428,51 +391,31 @@
 		"oAP": "\/robots.txt",
 		"oF": 0
 		},
-	"\/svg\/amazon-music.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "\/svg\/amazon-music.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/svg\/apple.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/svg\/apple.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/svg\/Apple_Music_lockup_RGB_blk.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "\/svg\/Apple_Music_lockup_RGB_blk.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/svg\/Apple_Music_lockup_RGB_wht.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/svg\/Apple_Music_lockup_RGB_wht.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"\/svg\/bandsintown.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
 		"oAP": "\/svg\/bandsintown.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/bit-full.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/bit-full.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/bit-mobile.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/bit-mobile.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -508,16 +451,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/svg\/google-play.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "\/svg\/google-play.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"\/svg\/holonis.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -533,26 +466,6 @@
 		"miP": 0,
 		"oA": 1,
 		"oAP": "\/svg\/instagram.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/svg\/iTunes_Store_Buy_Lockup_RGB_blk.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "\/svg\/iTunes_Store_Buy_Lockup_RGB_blk.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/svg\/iTunes_Store_Buy_Lockup_RGB_wht.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/svg\/iTunes_Store_Buy_Lockup_RGB_wht.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -603,26 +516,6 @@
 		"miP": 0,
 		"oA": 1,
 		"oAP": "\/svg\/soundcloud.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/svg\/spotify-logo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/svg\/spotify-logo.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/svg\/spotify-text.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "\/svg\/spotify-text.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -679,7 +572,8 @@
 	"creationDate": 536607628,
 	"displayValue": "lorenzowoodmusic.github.io",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "\/apple-touch-icon.png"
+	"iconImageName": "meme-ive",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1094,7 +988,7 @@
 			},
 		"array-callback-return": {
 			"active": 0,
-			"optionString": "{'allowImplicit': false}"
+			"optionString": ""
 			},
 		"array-element-newline": {
 			"active": 0,
@@ -1258,7 +1152,7 @@
 			},
 		"indent": {
 			"active": 0,
-			"optionString": "4, {'SwitchCase': 0, 'VariableDeclarator': 1, 'outerIIFEBody': 1 }"
+			"optionString": "4, {'SwitchCase': 0, 'VariableDeclarator': 1, 'outerIIFEBody': 1, }"
 			},
 		"init-declarations": {
 			"active": 0,
@@ -2482,6 +2376,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
@@ -2493,7 +2388,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
-		"syntaxCheckerStyle": 3,
+		"syntaxCheckerStyle": 1,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {
@@ -2660,7 +2555,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",
