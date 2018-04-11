@@ -28,7 +28,8 @@ lessons. He is entirely self-taught on guitar.</p><p>Lorenzo lists
 <a href="http://www.savemesanfrancisco.com">Train</a>
 as his musical influences.</p><p>Lorenzo enjoys working with other musicians, and has recorded a number of duets for video.
 He has been busking at local street festivals or busy streets, by himself or with support
-on bass or percussion, since age 13. He’s expecting to have his first EP, self-produced, ready
+on bass or percussion, since age 13.  He also has practical experience in audio engineering,
+having worked at professional live sound events.</p><p>He has recently recorded and produced his first EP, self-produced, ready for release
 later this year.
 </p><?php include 'CACHE/bandsintown.html'; ?></article></section><section class="patreon-section"><article class="textual"><h2><span class="patreon-button"><a href="https://www.patreon.com/lorenzowoodmusic">Support Lorenzo Wood Music on
 <span aria-hidden="true"><svg aria-label="Patreon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on Patreon</desc><path fill="#F96854" d="M0 0h24v24H0z"/><ellipse cx="13.25" cy="10.75" rx="4.75" ry="4.75" fill="#FFF"/><path fill="#052D49" d="M5 6h2.5v12H5z"/></svg></span><span class="patreon-link">Patreon</span>!</a></span></h2><p>Patreon is an online system where you can become a “patron” or sponsor of up-and-coming content creators you like through ongoing support and funding. Click the button above and find out how you can support Lorenzo’s creativity.
