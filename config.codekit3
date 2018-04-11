@@ -7,7 +7,7 @@
 		"uuidString": "24DFFC34-B0CB-40BD-AA10-5ADCA258D482"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.generate.php": {
 		"cB": 0,
@@ -62,9 +62,21 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/_sources\/IMG_2880 crop 13,11,2702,4066, scale 990x1490.JPG": {
+		"ft": 16384,
+		"iS": 1831349,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/IMG_2880 crop 13,11,2702,4066, scale 990x1490.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/_sources\/IMG_4541 need to rotate 358.5°.JPG": {
 		"ft": 16384,
 		"iS": 2251971,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/_sources\/IMG_4541 need to rotate 358.5°.jpg",
 		"oF": 0,
@@ -86,11 +98,79 @@
 		"oAP": "\/_sources\/ReverbNation.opacity",
 		"oF": 0
 		},
+	"\/_sources\/scaled high quality\/beach.jpg": {
+		"ft": 16384,
+		"iS": 2886286,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/scaled high quality\/beach.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_sources\/scaled high quality\/beach33.jpg": {
+		"ft": 16384,
+		"iS": 399322,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/scaled high quality\/beach33.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_sources\/scaled high quality\/beach50.jpg": {
+		"ft": 16384,
+		"iS": 850137,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/scaled high quality\/beach50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_sources\/scaled high quality\/southshore.jpg": {
+		"ft": 16384,
+		"iS": 1503252,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/scaled high quality\/southshore.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_sources\/scaled high quality\/southshore50.jpg": {
+		"ft": 16384,
+		"iS": 458004,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/scaled high quality\/southshore50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/bandsintown.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/bandsintown.php",
+		"oF": 0
+		},
 	"\/browserconfig.xml": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/browserconfig.xml",
+		"oF": 0
+		},
+	"\/CACHE": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/CACHE",
 		"oF": 0
 		},
 	"\/classes.php": {
@@ -192,6 +272,7 @@
 	"\/img\/beach.jpg": {
 		"ft": 16384,
 		"iS": 2886286,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/beach.jpg",
 		"oF": 0,
@@ -209,6 +290,7 @@
 	"\/img\/beach33.jpg": {
 		"ft": 16384,
 		"iS": 49669,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/beach33.jpg",
 		"oF": 0,
@@ -219,6 +301,7 @@
 	"\/img\/beach50.jpg": {
 		"ft": 16384,
 		"iS": 107384,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/beach50.jpg",
 		"oF": 0,
@@ -229,6 +312,7 @@
 	"\/img\/southshore.jpg": {
 		"ft": 16384,
 		"iS": 86937,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/southshore.jpg",
 		"oF": 0,
@@ -246,6 +330,7 @@
 	"\/img\/southshore50.jpg": {
 		"ft": 16384,
 		"iS": 63514,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/southshore50.jpg",
 		"oF": 0,
@@ -311,6 +396,26 @@
 		"miP": 0,
 		"oA": 1,
 		"oAP": "\/svg\/bandsintown.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/bit-full.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/bit-full.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/bit-mobile.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/bit-mobile.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -467,7 +572,8 @@
 	"creationDate": 536607628,
 	"displayValue": "lorenzowoodmusic.github.io",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "\/apple-touch-icon.png"
+	"iconImageName": "meme-ive",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2270,6 +2376,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
