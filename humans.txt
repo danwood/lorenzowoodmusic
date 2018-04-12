@@ -14,7 +14,7 @@
     CSS3, HTML5
     HTML5 Boilerplate 6.0.1
     Apache Server Configs, jQuery, Normalize.css
-    ImageOptim (with Guetzli)
+    ImageOptim (with mozjpeg)
     Sketch and Opacity for hand-made SVG creation
     https://www.vectorizer.io for automated SVG creation
     https://jakearchibald.github.io/svgomg/ to compress the SVGs
