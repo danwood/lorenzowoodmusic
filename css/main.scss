@@ -738,7 +738,7 @@ svg defs {
 	cursor: pointer;
 	img {
 		width: 100%;
-		top: -16.84%;
+		top: -16.84%;	// needed because sddefault.jpg image is letterboxed (though other sizes aren't)
 		left: 0;
 		-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
 		mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
