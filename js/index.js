@@ -111,12 +111,41 @@ for (var i = 0; i < youtube.length; i++) {
       youtube[i].appendChild( iframe );
     }
     else {
-      var source = "https://img.youtube.com/vi/"+ code +"/sddefault.jpg";
+      var source = "https://img.youtube.com/vi/"+ code +"/sddefault.jpg"; // 640 x 480, letterboxed
       var image = new Image();
       image.src = source;
+      image.alt = "YouTube thumbnail";
       image.addEventListener( "load", function() {
           youtube[ i ].appendChild( image );
       }( i ) );
+      /*
+      // ABANDONED … THE PROBLEM IS THAT THUMBNAILS HAVE DIFFRENT ASPECT RATIOS SO THIS DOESN'T
+      // WORK AS EXPECTED.  ALSO, IT SEEMS LIKE BOTH THE SRCSET IMAGE *AND* THE IMG IMAGE ARE FETCHED!
+      var picture = document.createElement('picture');
+      var source = document.createElement('source');
+      var prefixes = [ 'mq', 'hq', 'sd', 'maxres'];
+      var widths   = [ 320, 480, 640, 1280 ];
+      var sourceSetArray = [];
+      var src;  // for img tag
+      for (var size = 0; size < 4; size++) {
+        var url = "https://img.youtube.com/vi/"+ code +"/" + prefixes[size] + "default.jpg";
+        if (size == 0) src = url;
+        sourceSetArray.push(url + " " + widths[size] + "w");
+      }
+      var srcset = sourceSetArray.join(", ");
+      source.setAttribute("srcset", srcset);
+
+      var image = new Image();
+      image.src = src;
+      image.alt = "YouTube thumbnail";
+
+      picture.appendChild(source);
+      picture.appendChild(image);
+
+      picture.addEventListener( "load", function() {
+          youtube[ i ].appendChild( picture );
+      }( i ) );
+      */
 
       youtube[i].addEventListener( "click", function() {
 
