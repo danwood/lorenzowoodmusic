@@ -67,6 +67,22 @@ html(class="no-js", lang="en-us")
 
 		main
 
+			section.mailing-section
+				div.centered
+					h3 Mailing List
+					form.validate(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&amp;id=1c68d63e9a"
+						method="post"
+						name="mc-embedded-subscribe-form"
+						target="_blank")
+						//- Use raw HTML here since the escaping happens too early when processed by pug
+						<input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Email address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+						input#mce-FNAME(type="text" name="FNAME" placeholder="First Name")
+						input#mce-LNAME(type="text" name="LNAME" placeholder="Last Name")
+						span.ir(aria-hidden="true")
+							input(class="ir" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
+						input.button(type="submit" value="Subscribe" name="subscribe")
+
+
 			section.bio
 				header.ir(aria-hidden="true")
 					h2 Bio
@@ -176,51 +192,29 @@ html(class="no-js", lang="en-us")
 
 
 
-			section.track-section
+			section.contact-section
 				article.textual.clearfix
-					.track-photo
+					.contact-photo
 						picture
 							source(srcset="img/southshore.webp 990w" type="image/webp")
 							source(srcset="img/southshore.jpg 990w, img/southshore50.jpg 495w")
 							img(src="img/southshore.jpg" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
-					.track-form.input-form
-						.track-form-padded
-							h2 Subscribe to Lorenzo's mailing list
-							p We also suggest tracking Lorenzo on #[a(href="https://bandsintown.com/lorenzowoodmusic") BandsInTown].
-							form.validate(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&amp;id=1c68d63e9a"
-								method="post"
-								name="mc-embedded-subscribe-form"
-								target="_blank")
-								div
-									label(for="mce-EMAIL") Email Address
-									//- Use raw HTML here since the escaping happens too early when processed by pug
-									<input type="email" id="mce-EMAIL" name="EMAIL" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-								div
-									label(for="mce-FNAME") First Name
-									input#mce-FNAME(type="text" name="FNAME")
-								div
-									label(for="mce-LNAME") Last Name
-									input#mce-LNAME(type="text" name="LNAME")
-								.ir(aria-hidden="true")
-									input(class="ir" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
-								div: input.button(type="submit" value="Subscribe" name="subscribe")
-
-
-
-			section.contact
-				header
-					h2 Contact Lorenzo Wood Music
-				article.textual
-					.input-form
-						form#contact-form(action="https://jumprock.co/mail/lozobooking" method="post")
-							div
-								//- Use raw HTML here since the escaping happens too early when processed by pug
-								<input type="email" name="email" id="email" placeholder="Email Address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-							div: textarea(type="text" id="message" name="message" rows="10" cols="40" required="required")
-							div
-								input(type="text" name="trapit" class="trapit")
-								input(type="hidden" name="replyto" value="%email")
-								input.button(type="submit" value="Contact us")
+					.contact-form
+						.contact-form-padded
+							header
+								h2 Contact Lorenzo Wood Music
+							p.
+								Book a gig, suggest a collaboration or song, or just say hi!
+							.input-form
+								form#contact-form(action="https://jumprock.co/mail/lozobooking" method="post")
+									div
+										//- Use raw HTML here since the escaping happens too early when processed by pug
+										<input type="email" name="email" id="email" placeholder="Email Address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+									div: textarea(type="text" id="message" name="message" rows="10" cols="40" required="required")
+									div
+										input(type="text" name="trapit" class="trapit")
+										input(type="hidden" name="replyto" value="%email")
+										input.button(type="submit" value="Contact us")
 
 
 		footer
@@ -260,4 +254,3 @@ html(class="no-js", lang="en-us")
 			window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\\/script>')
 		script
 			include js/index-min.js
-

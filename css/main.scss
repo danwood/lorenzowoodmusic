@@ -146,7 +146,7 @@ label {
 	color: $colorBlackish;
 }
 
-.input-form .button {
+input[type="submit"] {
 	display: block;
 	text-align: center;
 	color: $colorWhite;
@@ -327,6 +327,21 @@ nav {
 
 .bit-after { padding-top:1em; }
 
+/* Mailing section */
+
+.mailing-section {
+	padding-top:0;
+	padding-bottom:0;
+	.centered { text-align:center; }
+	h3, form, input {
+		display:inline-block;
+	}
+	h3{ padding:0; margin:0.5em 0.5em; }
+	input[type=text], input[type=email], input[type=submit] { padding:0.5em; margin:0.5em 0.5em; }
+}
+#mce-FNAME { width:6em;}
+#mce-LNAME { width:9em;}
+#mce-EMAIL { width:10em;}
 
 /* Patreon section */
 
@@ -365,11 +380,11 @@ nav {
 
 /* Track via Email List */
 
-.track-form-padded {
+.contact-form-padded {
 	padding: 0 2rem;  /* Make sure box is indented to be separated from photo */
 }
 
-.track-photo img {
+.contact-photo img {
 	max-width: 100%;
 }
 
@@ -439,6 +454,10 @@ nav {
 	}
 }
 
+.mailing-section {
+	background:$colorGrayLight;
+}
+
 .soundcloud-section {
 	background:$colorWhiteish;
 	a { color:$colorGrayDark; }
@@ -450,9 +469,9 @@ nav {
 	a { color:$colorWhiteish; }
 }
 
-.track-section {
-	background:$colorBlackish;
-	color:$colorGrayLight;
+.contact-section {
+	background:$colorGrayLight;
+	color:$colorBlackish;
 }
 .input-form a {
 	color:$colorWhite;
@@ -565,7 +584,7 @@ iframe.soundcloud {
 	}
 
 	/* On mobile, center photo rather than side-by-side with mailing list form */
-	.track-photo {
+	.contact-photo {
 		margin-left:25%;
 		width:50%;
 	}
@@ -596,6 +615,17 @@ iframe.soundcloud {
 		padding:0;
 	}
 
+	.mailing-section {
+		padding-top:0.5rem;
+		padding-bottom:0.5rem;
+		h3, form, input {
+			display:block;
+		}
+		h3 { padding:0; margin:0.5em 0.5em; }
+		input[type=text], input[type=email], input[type=submit] { padding:0.5em; margin:0.5em 0.5em; }
+	}
+	#mce-FNAME, #mce-LNAME, #mce-EMAIL { width:90%;}
+
 }
 
 @media only screen and (min-width:600px) {
@@ -614,13 +644,13 @@ iframe.soundcloud {
 		float:left;
 	}
 
-	/* On wide screens, put photo to left of the 'track' form */
+	/* On wide screens, put photo to left of the 'contact' form */
 
-	.track-photo {
+	.contact-photo {
 		float:left;
 		width:33%;
 	}
-	.track-form {
+	.contact-form {
 		float:left;
 		width:66%;
 	}
