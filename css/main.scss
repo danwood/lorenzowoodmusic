@@ -733,7 +733,7 @@ iframe.soundcloud {
 
 }
 
-@media only screen and (max-width:799px) {
+@media only screen and (max-width:829px) {
 	nav {
 		height:82px;
 	}
@@ -751,6 +751,11 @@ iframe.soundcloud {
 @media only screen and (max-width:459px) {
 	nav {
 		height:123px;
+
+		a, a.buy-button {
+			padding-left: 2px;
+			padding-right:2px;
+		}
 	}
 	.icons.popular {
 		bottom:123px;
