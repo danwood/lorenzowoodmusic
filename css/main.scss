@@ -273,6 +273,10 @@ nav {
 	background:rgba(255,255,255,0.85);
 	text-align:right;
 	height:41px;		/* should match with .icons.popular */
+
+	a {
+		padding:0 8px;
+	}
 }
 
 .main-nav svg { /* total height 41px */
@@ -356,11 +360,13 @@ nav {
 	padding-top:0;
 	padding-bottom:0;
 	.centered { text-align:center; }
-	h3, form, input {
+	form, input {
 		display:inline-block;
 	}
-	h3{ padding:0; margin:0.5em 0.5em; }
-	input[type=text], input[type=email], input[type=submit] { padding:0.5em; margin:0.5em 0.5em; }
+	input[type=text], input[type=email], input[type=submit] {
+		padding:0.5em; margin:0.5em 0.5em;
+		font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
+	}
 }
 #mce-FNAME { width:6em;}
 #mce-LNAME { width:9em;}
@@ -426,17 +432,6 @@ main {
 
 nav {
 	background:rgba(255,255,255,0.85);
-
-	a {
-		color:$colorGrayLight;
-		margin-top:5px;
-		padding:0 0.5em 0 2em;
-		font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
-		letter-spacing:1px;
-		text-transform:uppercase;
-		text-decoration:none;
-		white-space: nowrap;
-	}
 }
 
 .redeem {
@@ -447,10 +442,10 @@ nav {
 .epk {
 	float: right;
 	margin-right:1em;
-	margin-top:1.2em;
+	margin-top:1em;
 
 	a {
-		color:#bdbdbd;
+		color:$colorBlackish;
 		margin-top:5px;
 		padding:0 0.5em 0 2em;
 		font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
@@ -473,10 +468,16 @@ nav {
 
 a.buy-button {
 	background:#00AEA8;
-	color:white;
+	color:$colorWhiteish;
 	padding:2px 6px;
 	border-radius:4px;
-	margin:6px 7px 6px 10px; /* right to match `nav a` padding */
+	margin:10px 7px 6px 10px; /* right to match `nav a` padding */
+
+	font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
+	letter-spacing:1px;
+	text-transform:uppercase;
+	text-decoration:none;
+	white-space: nowrap;
 }
 
 .logo {
@@ -683,7 +684,10 @@ iframe.soundcloud {
 			display:block;
 		}
 		h3 { padding:0; margin:0.5em 0.5em; }
-		input[type=text], input[type=email], input[type=submit] { padding:0.5em; margin:0.5em 0.5em; }
+		input[type=text], input[type=email], input[type=submit] {
+			padding:0.5em;
+			margin:0.5em 0.5em;
+		}
 	}
 	#mce-FNAME, #mce-LNAME, #mce-EMAIL { width:90%;}
 
