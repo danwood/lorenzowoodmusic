@@ -96,13 +96,15 @@ $('#close-redeem').click(function() {
 // No jquery needed
 
 
+var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+if (iOS) $('#form-album').val(window.DeviceMotionEvent ? '2938' : '8603');
+
 var youtube = document.querySelectorAll( ".youtube" );
 for (var i = 0; i < youtube.length; i++) {
     var embed = youtube[i].dataset.embed.split(':');
     var code = embed[0];
     var title = embed[1];
 
-    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     if (iOS) {
       // regular YouTube iframe embed so that it needs just one tap as expected
       var iframe = document.createElement( "iframe" );

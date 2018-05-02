@@ -12,6 +12,7 @@ $userAgent = $_SERVER['HTTP_USER_AGENT'];
 if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $userAgent, $matches)) {
 	$iOSDevice = substr($matches[1], 1);
 }
+//$iOSDevice = $inputs['form-album'] == '2938';	// look for magic number
 $code = isset($inputs['code']) ? htmlspecialchars($inputs['code']) : '';
 $email = isset($inputs['email']) ? htmlspecialchars($inputs['email']) : '';
 
