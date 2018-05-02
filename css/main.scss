@@ -826,7 +826,7 @@ iframe.soundcloud {
 #redeem-form ::placeholder               {text-align: center; }
 
 #cover {
-	position:absolute;
+	position:fixed;
 	top:0;left:0;
 	background:rgba(0,0,0,0.5);
 	z-index:1000;
@@ -853,7 +853,7 @@ iframe.soundcloud {
 	box-shadow: 0 0 0 5px rgba(0,0,0,0.999);
 }
 #close-redeem {
-	position:absolute;
+	position:fixed;
 	top:0;
 	right:40px;
 	height:100%;
