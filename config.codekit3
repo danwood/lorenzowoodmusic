@@ -91,6 +91,24 @@
 		"oAP": "\/_sources\/list-play.opacity",
 		"oF": 0
 		},
+	"\/_sources\/Now In Control no-bleed.jpeg": {
+		"ft": 16384,
+		"iS": 4180591,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/_sources\/Now In Control no-bleed.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/_sources\/Now In Control.acorn": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_sources\/Now In Control.acorn",
+		"oF": 0
+		},
 	"\/_sources\/Patreon.opacity": {
 		"cB": 0,
 		"ft": 8192,
@@ -160,23 +178,12 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/album_art\/freetracks.jpg": {
+	"\/album_art\/now_in_control.jpg": {
 		"ft": 16384,
-		"iS": 11883,
+		"iS": 4180591,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/album_art\/freetracks.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/album_art\/sofar.jpg": {
-		"ft": 16384,
-		"iS": 12932,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "\/album_art\/sofar.jpg",
+		"oAP": "\/album_art\/now_in_control.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -348,17 +355,6 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/beach50.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/featured.jpg": {
-		"ft": 16384,
-		"iS": 98217,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "\/img\/featured.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
