@@ -201,17 +201,13 @@ body > header {
 .icons.popular {
 	position: absolute;
 	z-index:999;
-	bottom:41px; left:0; right:0; /* should match with height of nav */
+	bottom:2.5em; left:0; right:0;
 }
 
 .main-nav {
 	position: absolute;
 	z-index:999;
 	bottom:0; left:0; right:0;
-}
-
-.main-nav a {
-	float:left;
 }
 
 .logo svg {
@@ -270,28 +266,20 @@ body > header {
 
 nav {
 	position:relative; /* so it can contain an absolute */
-	background:rgba(255,255,255,0.85);
-	text-align:right;
-	height:41px;		/* should match with .icons.popular */
-
-	a {
-		padding:0 8px;
-	}
-}
-
-.main-nav svg { /* total height 41px */
-	height:25px;	/* 25px minimum for apple logo guidelines */
-	padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
 }
 
 /* Scroll arrow only when we have a full page hero */
+
+.down-arrow {
+	z-index:999;
+	padding:0;
+}
 
 .scrolldown {
 	position:absolute;
 	bottom:0;
 	width:100%;
 	text-align: center;
-	z-index:999;
 }
 
 .bounce {
@@ -360,13 +348,11 @@ nav {
 	padding-top:0;
 	padding-bottom:0;
 	.centered { text-align:center; }
-	form, input {
+	h3, form, input {
 		display:inline-block;
 	}
-	input[type=text], input[type=email], input[type=submit] {
-		padding:0.5em; margin:0.5em 0.5em;
-		font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
-	}
+	h3{ padding:0; margin:0.5em 0.5em; }
+	input[type=text], input[type=email], input[type=submit] { padding:0.5em; margin:0.5em 0.5em; }
 }
 #mce-FNAME { width:6em;}
 #mce-LNAME { width:9em;}
@@ -432,20 +418,12 @@ main {
 
 nav {
 	background:rgba(255,255,255,0.85);
-}
-
-.redeem {
-	float: left;
-	margin-left:1em;
-	margin-top:1em;
-}
-.epk {
-	float: right;
-	margin-right:1em;
-	margin-top:1em;
+	text-align:right;
+	height:1.5em;
+	padding:0.5em 0;
 
 	a {
-		color:$colorBlackish;
+		color:$colorGrayLight;
 		margin-top:5px;
 		padding:0 0.5em 0 2em;
 		font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
@@ -454,35 +432,17 @@ nav {
 		text-decoration:none;
 		white-space: nowrap;
 	}
-}
 
-/* image from svg/download.svg */
-.download a {
-	background:url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="$colorGrayLight" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat left center;
-}
+	a.download {
+		 background:url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="#bdbdbd" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat left center;
+	}
 
+}
 
 .logo, .icons {
 	background:rgba(0,0,0,0.5);
 }
 
-a.buy-button {
-	background:#00AEA8;
-	color:$colorWhiteish;
-	padding:2px 6px;
-	border-radius:4px;
-	margin:10px 7px 6px 10px; /* right to match `nav a` padding */
-
-	font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
-	letter-spacing:1px;
-	text-transform:uppercase;
-	text-decoration:none;
-	white-space: nowrap;
-}
-
-.logo {
-	background:#000;
-}
 .exhaustive.icons {
 	background:$colorBlackish;
 }
@@ -638,13 +598,6 @@ iframe.soundcloud {
 		margin-left:0;
 	}
 
-	.featured img {
-		bottom:calc(18% + 82px + 40px);	/* above buying nav and social icons */
-	}
-	.featured div {
-		bottom:calc(18% + 82px + 5px);	/* above img */
-	}
-
 	/* On mobile, center photo rather than side-by-side with mailing list form */
 	.contact-photo {
 		margin-left:25%;
@@ -663,7 +616,7 @@ iframe.soundcloud {
 	}
 
 	.download {
-	font-size:12px; /* smaller text */
+		font-size:12px;
 	}
 
 	/* Bands in town just show square logo */
@@ -684,10 +637,7 @@ iframe.soundcloud {
 			display:block;
 		}
 		h3 { padding:0; margin:0.5em 0.5em; }
-		input[type=text], input[type=email], input[type=submit] {
-			padding:0.5em;
-			margin:0.5em 0.5em;
-		}
+		input[type=text], input[type=email], input[type=submit] { padding:0.5em; margin:0.5em 0.5em; }
 	}
 	#mce-FNAME, #mce-LNAME, #mce-EMAIL { width:90%;}
 
@@ -733,63 +683,6 @@ iframe.soundcloud {
 
 }
 
-@media only screen and (max-width:829px) {
-	nav {
-		height:82px;
-	}
-	.icons.popular {
-		bottom:82px;
-	}
-
-	.main-nav a:nth-child(4) {
-		clear:left;
-		margin-left:5em;
-	}
-}
-
-/* Not so likely but we need to be prepared for 3 rows */
-@media only screen and (max-width:459px) {
-	nav {
-		height:123px;
-
-		a, a.buy-button {
-			padding-left: 2px;
-			padding-right:2px;
-		}
-	}
-	.icons.popular {
-		bottom:123px;
-	}
-
-	a.buy-button {
-		font-size:80%;
-		margin-top:10px;
-	}
-	.main-nav a:nth-child(4) {
-		clear:none;
-		margin-left:0;
-	}
-
-	.main-nav a:nth-child(3), .main-nav a:nth-child(5) {
-		clear:left;
-		margin-left:5em;
-	}
-
-	.redeem, .epk {
-		width:100%;
-		text-align:center;
-		margin:0.5em;
-	}
-
-	.featured img {
-		bottom:calc(17% + 123px + 40px);	/* above buying nav and social icons */
-	}
-	.featured div {
-		bottom:calc(17% + 123px + 5px);	/* above img */
-	}
-
-}
-
 @media only screen and (min-width:800px) {
 
 	/* Wider screens, show patreon as a distinct button */
@@ -811,22 +704,32 @@ iframe.soundcloud {
 	}
 }
 
-#redeem-form input {
+/* Redeem input forms */
+
+@media only screen and (min-width: 480px) {
+
+	.redeem {
+		display:inline-block;
+	}
+}
+
+.redeem input {
 	width:10em;
 	background: $colorWhite;
 	font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
 	letter-spacing:2px;
 	text-transform:uppercase;
+	margin:0 1em 5px;
 }
 
-#redeem-form ::-webkit-input-placeholder {text-align: center; }
-#redeem-form :-moz-placeholder           {text-align: center; }
-#redeem-form ::-moz-placeholder          {text-align: center; }
-#redeem-form :-ms-input-placeholder      {text-align: center; }
-#redeem-form ::placeholder               {text-align: center; }
+.redeem ::-webkit-input-placeholder {text-align: center; }
+.redeem :-moz-placeholder           {text-align: center; }
+.redeem ::-moz-placeholder          {text-align: center; }
+.redeem :-ms-input-placeholder      {text-align: center; }
+.redeem ::placeholder               {text-align: center; }
 
 #cover {
-	position:fixed;
+	position:absolute;
 	top:0;left:0;
 	background:rgba(0,0,0,0.5);
 	z-index:1000;
@@ -853,7 +756,7 @@ iframe.soundcloud {
 	box-shadow: 0 0 0 5px rgba(0,0,0,0.999);
 }
 #close-redeem {
-	position:fixed;
+	position:absolute;
 	top:0;
 	right:40px;
 	height:100%;
