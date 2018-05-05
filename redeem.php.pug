@@ -10,8 +10,8 @@
 |$userAgent = $_SERVER['HTTP_USER_AGENT'];
 |if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $userAgent, $matches)) {
 |	$iOSDevice = substr($matches[1], 1);
+|	if ($iOSDevice) $iOSDevice = $inputs['album'] == '2938';	// verify! Look for for magic number
 |}
-|//$iOSDevice = $inputs['form-album'] == '2938';	// look for magic number
 |$code = isset($inputs['code']) ? htmlspecialchars($inputs['code']) : '';
 |$email = isset($inputs['email']) ? htmlspecialchars($inputs['email']) : '';
 |
@@ -64,8 +64,9 @@ html(lang="en-us")
 						span(amplitude-song-info="artist", amplitude-main-song-info="true")
 						span(amplitude-song-info="album", amplitude-main-song-info="true")
 				|<?php
-				|if (!$iOSDevice) {
+				|if ($iOSDevice) {
 				|?>
+				div (Downloading not possible from an iOS device!)
 				|<?php
 				|}
 				|?>
@@ -94,7 +95,7 @@ html(lang="en-us")
 						|}
 						|?>
 					|<?php
-					|	if (!$iOSDevice) {
+					|	if (!$iOSDevice) {	// don't output download, but just in case, it will be hidden by JS as well.
 					|?>
 					span.song-download
 						button.download(type="button" name="t" value="0") Download all
@@ -195,7 +196,7 @@ html(lang="en-us")
 				$(this).find('.play-button-container').css('display', 'none');
 			});
 
-			if (window.DeviceMotionEvent==undefined) {
+			if (window.DeviceMotionEvent!==undefined) {
 				$('.song-download').hide();
 			}
 

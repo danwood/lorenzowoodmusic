@@ -1,9 +1,9 @@
 |<?php
-|// We could show an initial warning that downloads from iOS don't go into the library directly?
-|$iOSDevice = false; // or set to a non-false text value
-|if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $_SERVER['HTTP_USER_AGENT'], $matches)) {
-|	$iOSDevice = substr($matches[1], 1);
-|}
+//- We could show an initial warning that downloads from iOS don't go into the library directly?
+//-$iOSDevice = false; // or set to a non-false text value
+//-if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $_SERVER['HTTP_USER_AGENT'], $matches)) {
+//-	$iOSDevice = substr($matches[1], 1);
+//-}
 |$code = isset($_GET['code']) ? htmlspecialchars($_GET['code']) : '';
 |$email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
 |?>

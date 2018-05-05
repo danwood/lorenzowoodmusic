@@ -1,9 +1,4 @@
 <?php
-// We could show an initial warning that downloads from iOS don't go into the library directly?
-$iOSDevice = false; // or set to a non-false text value
-if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $_SERVER['HTTP_USER_AGENT'], $matches)) {
-	$iOSDevice = substr($matches[1], 1);
-}
 $code = isset($_GET['code']) ? htmlspecialchars($_GET['code']) : '';
 $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
 ?><!DOCTYPE html><html class="no-js" lang="en-us"><head><meta charset="utf-8"><!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]--><title>Lorenzo Wood Music — Official Site</title><meta name="description" content="Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs."><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><link rel="apple-touch-icon" href="icon.png"><link rel="stylesheet" href="css/main.0504.css"><link rel="prefetch" href="//code.jquery.com"><link rel="prefetch" href="//w.soundcloud.com"><link rel="prefetch" href="//img.youtube.com"><link rel="prefetch" href="//cdn.jsdelivr.net"></head><body><!--[if lt IE 9]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please

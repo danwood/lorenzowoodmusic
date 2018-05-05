@@ -11,8 +11,8 @@ $iOSDevice = false;	// or set to a non-false text value
 $userAgent = $_SERVER['HTTP_USER_AGENT'];
 if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $userAgent, $matches)) {
 	$iOSDevice = substr($matches[1], 1);
+	if ($iOSDevice) $iOSDevice = $inputs['album'] == '2938';	// verify! Look for for magic number
 }
-//$iOSDevice = $inputs['form-album'] == '2938';	// look for magic number
 $code = isset($inputs['code']) ? htmlspecialchars($inputs['code']) : '';
 $email = isset($inputs['email']) ? htmlspecialchars($inputs['email']) : '';
 
@@ -52,9 +52,9 @@ $tracks = $db->tracksOfAlbumID($album['ID']);
         <div id="meta-container"><span class="song-name" amplitude-song-info="name" amplitude-main-song-info="true"></span>
           <div class="song-artist-album"><span amplitude-song-info="artist" amplitude-main-song-info="true"></span><span amplitude-song-info="album" amplitude-main-song-info="true"></span></div>
         </div><?php
-        if (!$iOSDevice) {
+        if ($iOSDevice) {
         ?>
-        <?php
+        <div>(Downloading not possible from an iOS device!)</div><?php
         }
         ?>
         <div id="list-container"><span id="format-container">
@@ -80,7 +80,7 @@ $tracks = $db->tracksOfAlbumID($album['ID']);
             	echo '</select>' . PHP_EOL;
             }
             ?></span><?php
-          	if (!$iOSDevice) {
+          	if (!$iOSDevice) {	// don't output download, but just in case, it will be hidden by JS as well.
           ?><span class="song-download">
             <button class="download" type="button" name="t" value="0">Download all</button></span><?php
           }
@@ -178,7 +178,7 @@ $tracks = $db->tracksOfAlbumID($album['ID']);
       	$(this).find('.play-button-container').css('display', 'none');
       });
       
-      if (window.DeviceMotionEvent==undefined) {
+      if (window.DeviceMotionEvent!==undefined) {
       	$('.song-download').hide();
       }
       
