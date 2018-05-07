@@ -84,6 +84,31 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/_sources\/list-play.opacity": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_sources\/list-play.opacity",
+		"oF": 0
+		},
+	"\/_sources\/Now In Control with bleed.png": {
+		"ft": 32768,
+		"iS": 7580227,
+		"oA": 0,
+		"oAP": "\/_sources\/Now In Control with bleed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_sources\/Now In Control.acorn": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_sources\/Now In Control.acorn",
+		"oF": 0
+		},
 	"\/_sources\/Patreon.opacity": {
 		"cB": 0,
 		"ft": 8192,
@@ -191,6 +216,13 @@
 		"oAP": "\/classes.php",
 		"oF": 0
 		},
+	"\/CNAME": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/CNAME",
+		"oF": 0
+		},
 	"\/css\/html5boilerplate.css": {
 		"aP": 1,
 		"bl": 0,
@@ -240,6 +272,13 @@
 		"oAP": "\/css\/normalize-min.css",
 		"oF": 1,
 		"oS": 3
+		},
+	"\/download.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/download.php",
+		"oF": 0
 		},
 	"\/EPK.zip": {
 		"cB": 0,
@@ -395,12 +434,123 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/phpliteadmin-readme.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/phpliteadmin-readme.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/phpliteadmin.config.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/phpliteadmin.config.php",
+		"oF": 0
+		},
+	"\/phpliteadmin.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/phpliteadmin.php",
+		"oF": 0
+		},
+	"\/redeem.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/redeem-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/redeem.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/redeem.php",
+		"oF": 0
+		},
+	"\/redeem.php.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/redeem.php",
+		"oF": 2,
+		"oS": 0
+		},
+	"\/redeem.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/redeem.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/robots.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/robots.txt",
 		"oF": 0
+		},
+	"\/svg\/amazon-music.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/amazon-music.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/apple.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/apple.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/Apple_Music_lockup_RGB_blk.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/Apple_Music_lockup_RGB_blk.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/Apple_Music_lockup_RGB_wht.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/Apple_Music_lockup_RGB_wht.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/svg\/bandsintown.svg": {
 		"ft": 2097152,
@@ -462,6 +612,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/svg\/google-play.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/google-play.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/svg\/holonis.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -477,6 +637,26 @@
 		"miP": 0,
 		"oA": 1,
 		"oAP": "\/svg\/instagram.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/iTunes_Store_Buy_Lockup_RGB_blk.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/iTunes_Store_Buy_Lockup_RGB_blk.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/iTunes_Store_Buy_Lockup_RGB_wht.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/iTunes_Store_Buy_Lockup_RGB_wht.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -527,6 +707,26 @@
 		"miP": 0,
 		"oA": 1,
 		"oAP": "\/svg\/soundcloud.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/spotify-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/spotify-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/svg\/spotify-text.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/svg\/spotify-text.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
