@@ -66,19 +66,19 @@ html(class="no-js", lang="en-us")
 			nav.main-nav.clearfix.safe-area-only
 				//- later make this a full menu with hamburger etc.
 
-				a.buy-button(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+				a.buy-button(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
 					| Buy “Now In Control” EP
-				a(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
+				a.disabled(data-title="Buy on iTunes" href="")
 					//- Apple marketing guidelines for lockup images:
 					//- minimum 25px tall, 25% of height margin
 					include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
-				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+				a.disabled(data-title="Buy on Amazon Music" href="")
 					include svg/amazon-music.svg
-				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+				a.disabled(data-title="Stream on Google Play" href="")
 					include svg/google-play.svg
-				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+				a.disabled(data-title="Stream on Apple Music" href="")
 					include svg/Apple_Music_lockup_RGB_blk.svg
-				a(data-title="XXXXXXXXX" href="https://www.lorenzowoodmusic.com/XXXXXXX")
+				a.disabled(data-title="Stream on Spotify" href="")
 					include svg/spotify-text.svg
 
 

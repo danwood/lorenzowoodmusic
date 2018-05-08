@@ -100,6 +100,39 @@ body {
 	font: 16px/1.6 Helvetica, Helvetica Neue, Arial;
 }
 
+a.disabled {
+	opacity:0.4;
+	position:relative;
+}
+a.disabled:after{
+	padding:0 5px;
+	font-weight:bold;
+	font-size:75%;
+	background:$colorWhite;
+	color:$colorBlackish;
+	border-radius:5px;
+	box-shadow:0 0 8px 8px $colorWhite;
+	line-height:1;
+
+	content:'Coming Soon';
+	position:absolute;
+	left:10%;
+	bottom:8px;
+	text-align:center;
+	display:block;
+	z-index:99;
+
+	opacity:0; /* Invisible until hovered */
+	transition:opacity .3s ease-in-out;
+}
+a.disabled:hover {
+	opacity:1.0;
+}
+a.disabled:hover:after{
+	opacity:0.75;
+}
+
+
 /* ===== Geometry ===== */
 
 h3 {
