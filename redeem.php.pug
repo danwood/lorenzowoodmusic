@@ -24,10 +24,11 @@
 doctype
 html(lang="en-us")
 	head
-		<link rel="stylesheet" href="redeem.css" />
+		meta(charset="utf-8")
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
 	body
 		<?php if (!$album) { ?>
-			p.
+			p.warning.
 				Sorry, but the code you used is not valid, or has already been redeemed.
 				Please double-check the code and try again. If you are sure this is an
 				error, please contact webmaster@lorenzowoodmusic.com with the code that you used.
@@ -38,43 +39,23 @@ html(lang="en-us")
 			p <?php echo htmlspecialchars($album['description']); ?>
 			#cover-art-container
 				#cover-art
-					img(amplitude-song-info="cover_art_url", amplitude-main-song-info="true")
+					img(src!="/album_art/<?php echo htmlspecialchars($album['imageName']); ?>" alt!="<?php echo htmlspecialchars($album['title']); ?>")
 			form#downloader
 				input(type="hidden" id="a_input" name="a" value!="<?php echo $album['ID']; ?>")
 				input(type="hidden" id="c_input" name="c" value!="<?php echo $code; ?>")
 
-				#time-container
-					span.current-time
-						span.amplitude-current-minutes(amplitude-main-current-minutes="true")
-						| :
-						span.amplitude-current-seconds(amplitude-main-current-seconds="true")
-					input.amplitude-song-slider(type="range", amplitude-main-song-slider="true", step=".1")
-					span.duration
-						span.amplitude-duration-minutes(amplitude-main-duration-minutes="true")
-						| :
-						span.amplitude-duration-seconds(amplitude-main-duration-seconds="true")
-				#central-controls
-					#central-controls-grouped
-						#previous.amplitude-prev
-						#play-pause.amplitude-play-pause(amplitude-main-play-pause="true")
-						#next.amplitude-next
-				#meta-container
-					span.song-name(amplitude-song-info="name", amplitude-main-song-info="true")
-					.song-artist-album
-						span(amplitude-song-info="artist", amplitude-main-song-info="true")
-						span(amplitude-song-info="album", amplitude-main-song-info="true")
 				|<?php
 				|if ($iOSDevice) {
 				|?>
-				div (Downloading not possible from an iOS device!)
+				div.warning (Downloading not possible from an iOS device. Please download from a computer and sync to your <?php echo htmlspecialchars($iOSDevice); ?>.)
 				|<?php
 				|}
 				|?>
 				#list-container
-					span#format-container
+					.song
 						|<?php
 						|if (!$iOSDevice) {
-						|	echo 'Format: ';
+						|	echo 'File Format: ';
 						|	echo '<select id="f_input" name="f">' . PHP_EOL;
 						|	$formats = $db->formats();
 						|	foreach ($formats as $format) {
@@ -94,20 +75,22 @@ html(lang="en-us")
 						|	echo '</select>' . PHP_EOL;
 						|}
 						|?>
-					|<?php
-					|	if (!$iOSDevice) {	// don't output download, but just in case, it will be hidden by JS as well.
-					|?>
-					span.song-download
-						button.download(type="button" name="t" value="0") Download all
+					.song
+						.song-meta-data &nbsp;
+						span.song-duration &nbsp;
+						|<?php
+						|	if (!$iOSDevice) {	// don't output download, but just in case, it will be hidden by JS as well.
+						|?>
+						span.song-download
+							button.download-button(type="button" name="t" value="0") Download all
+					.song
+						|Individual Tracks:
 					|<?php
 					|}
 					|$trackIndex = 0;
 					|foreach ($tracks as $track) {
 					|?>
-					.song.amplitude-song-container.amplitude-play-pause(amplitude-song-index!="<?php echo $trackIndex++; ?>")
-						.song-now-playing-icon-container
-							.play-button-container
-							.now-playing
+					.song
 						.song-meta-data
 							span.track-number <?php echo htmlspecialchars($track['trackNumber']); ?>.
 							span.song-title <?php echo htmlspecialchars($track['title']); ?>
@@ -116,7 +99,7 @@ html(lang="en-us")
 						|	if (!$iOSDevice) {
 						|?>
 						.song-download
-							button.download(type="button" name="t" value!="<?php echo $track['ID']; ?>") Download
+							button.download-button(type="button" name="t" value!="<?php echo $track['ID']; ?>") Download
 						|<?php
 						|	}
 						|?>
@@ -125,7 +108,7 @@ html(lang="en-us")
 					|?>
 
 		script.
-			$('button.download').click(function (evt) {
+			$('button.download-button').click(function (evt) {
 				evt.preventDefault();
 
 				var button = $(evt.target);
@@ -149,51 +132,6 @@ html(lang="en-us")
 						button.prop("disabled",false); // and restore the button
 					}, 900);
 				});
-			});
-
-			Amplitude.init({
-				"songs": [
-				<?php foreach ($tracks as $track) { ?>
-					{
-						"name": "<?php echo htmlspecialchars($track['title']); ?>",
-						"album": "<?php echo htmlspecialchars($album['title']); ?>",
-						"artist": "<?php echo htmlspecialchars($album['artist']); ?>",
-						"url": "amplitude_tracks/<?php echo htmlspecialchars($track['fileBase']); ?>.mp3",
-						"cover_art_url": "album_art/<?php echo htmlspecialchars($album['imageName']); ?>",
-					},
-				<?php } ?>
-				],
-			});
-
-			/*
-				Ensure that on mouseover, CSS styles don't get messed up for active songs.
-			*/
-			$('.song').on('mouseover', function(){
-				$(this).css('background-color', '#00A0FF');
-				$(this).find('.song-meta-data *').css('color', '#FFFFFF');
-
-				if( !$(this).hasClass('amplitude-active-song-container') ){
-					$(this).find('.play-button-container').css('display', 'block');
-				}
-
-				$(this).find('.song-duration').css('color', '#FFFFFF');
-			});
-
-			/*
-				Ensure that on mouseout, CSS styles don't get messed up for active songs.
-			*/
-			$('.song').on('mouseout', function(){
-				$(this).css('background-color', '');
-				$(this).find('.song-meta-data *').css('color', '');
-				$(this).find('.play-button-container').css('display', 'none');
-				$(this).find('.song-duration').css('color', '');
-			});
-
-			/*
-				Show and hide the play button container on the song when the song is clicked.
-			*/
-			$('.song').on('click', function(){
-				$(this).find('.play-button-container').css('display', 'none');
 			});
 
 			if (window.DeviceMotionEvent!==undefined) {

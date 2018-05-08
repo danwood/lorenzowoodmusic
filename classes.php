@@ -289,6 +289,7 @@ class DowncodeDB extends SQLite3
 
     $code = strtoupper(trim($code));    // quick and dirty normalize
     $code = str_replace(' ', '', $code);// before we know the actual alphabet
+    $code = str_replace('-', '', $code);// allow spaces and hyphens just in case
     $result = Array();
     $statement = $this->prepare('SELECT * FROM album WHERE prefix = :prefix;');
     $statement->bindValue(':prefix', substr($code, 0, 1));
@@ -306,6 +307,8 @@ class DowncodeDB extends SQLite3
         // Code is valid - $album holds album array.
         // But now let's see if the code is not already redeemed.
         // We don't bother to 'redeem' code if we are on an iOS device though.
+        // That way if somebody tries to redeem from iOS they are not penalized,
+        // and they can try from a desktop later.
 
         $statement = $this->prepare('SELECT *, datetime(timestamp, \'localtime\') AS whenCreated, datetime(downloadTimestamp, \'localtime\') AS whenDownloaded FROM redemption WHERE code = :code;');
         $statement->bindValue(':code', $code);
@@ -334,7 +337,7 @@ class DowncodeDB extends SQLite3
 
           if ($_SERVER['REMOTE_ADDR'] = $redemption['IP'] && $howLongAgo < 24*60*60 )
           {
-            error_log("found redemption but IP matches it was created < 24 hours ago.");
+            error_log("found redemption but IP matches and it was created < 24 hours ago.");
             $valid = TRUE;
           }
 
@@ -403,8 +406,8 @@ class DowncodeDB extends SQLite3
     $ret = $statement->execute();
   }
 
-  function tracksOfAlbumID($albumID) {
-
+  function tracksOfAlbumID($albumID)
+  {
     $result = Array();
     $statement = $this->prepare('SELECT * FROM track WHERE albumID = :albumID;');
     $statement->bindValue(':albumID', $albumID);

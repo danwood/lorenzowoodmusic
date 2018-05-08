@@ -22,7 +22,6 @@ html(class="no-js", lang="en-us")
 		link(rel="prefetch" href="//code.jquery.com")
 		link(rel="prefetch" href="//w.soundcloud.com")
 		link(rel="prefetch" href="//img.youtube.com")
-		link(rel="prefetch" href="//cdn.jsdelivr.net")
 
 	body
 		<!--[if lt IE 9]>
@@ -292,6 +291,4 @@ html(class="no-js", lang="en-us")
 
 		script.
 			<?php if ($code) { ?>$('#redeem-form').submit();<?php } ?>
-		//- Load script here so it's available once iframe loads
-		script(src="https://cdn.jsdelivr.net/npm/amplitudejs@3.2.3/dist/amplitude.min.js")
 

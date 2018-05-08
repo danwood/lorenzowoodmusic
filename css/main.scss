@@ -617,6 +617,10 @@ iframe.soundcloud {
 	padding:1rem;
 }
 
+.warning {
+	color:$colorWarning;
+}
+
 /* ===== BREAKPOINTS … general (under 600 for mobile, 600+ for desktop) and specialized ===== */
 
 @media only screen and (max-width:599px) {
@@ -845,21 +849,19 @@ iframe.soundcloud {
 	max-height:100%;
 	margin:auto auto;
 	background:$colorWhite;
-	color:$colorWarning;
 	border:5px solid black;
 	border-radius:10px;
 	padding:10px;
 	z-index:1010;
-	box-shadow: 0 0 0 5px rgba(0,0,0,0.999);
 }
 #close-redeem {
 	position:fixed;
 	top:0;
 	right:40px;
-	height:100%;
 	font-size:600%;
 	color:$colorWhite;
 	z-index:1011;
+	text-shadow:0 0 4px $colorBlackish;
 }
 
 /* Allows defs to be defined first without showing up */
@@ -930,3 +932,96 @@ svg defs {
 		text-shadow:0 0 4px $colorBlackish;
 	}
 }
+
+/* ============= Redeem iFrame ================ */
+
+/* Responsive, big containers */
+#redeem_console {
+	padding: 20px;
+	@extend .clearfix;
+
+	h1 {
+		margin:0;
+	}
+}
+
+#cover-art-container {
+  width: 20%;
+  float: left; }
+
+#downloader {
+  width: 80%;
+  float: left; }
+
+#cover-art {
+  margin-right: 20px; }
+
+#cover-art img {
+  width: 100%;
+  height: auto; }
+
+/*******************************************************************
+ #list-container
+ *******************************************************************/
+.song {
+	@extend .clearfix;
+	margin-top:5px;
+}
+.song-meta-data {
+  float: left;
+  width: calc( 100% - 10em); }
+
+.song-download {
+  float: left;
+  text-align:right;
+  width: 7em; }
+
+.song-title {
+  color: #272726;
+  font-size: 16px;
+  display: block;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.song-duration, .track-number {
+  float: left;
+  width: 3em;
+  text-align: center;
+  color: #607D8B;
+  font-size: 16px;
+  font-weight: 500; }
+
+.track-number {
+  width: 2em;
+}
+
+@media only screen and (max-width:599px) {
+	#redeemer {
+		border:none;
+		padding:0;
+		min-width:auto;
+ 		width: calc( 100% - 2em);
+	}
+
+	#cover-art-container {
+		width: 70%;
+		float: none;
+		margin:0 auto;
+	}
+
+	#downloader {
+  		width: 100%;
+  		float: none;
+  	}
+
+	#cover-art {
+		margin-right: 20px;
+	}
+
+
+
+}
+
+

@@ -91,15 +91,15 @@
 		"oAP": "\/_sources\/list-play.opacity",
 		"oF": 0
 		},
-	"\/_sources\/Now In Control no-bleed.jpeg": {
-		"ft": 16384,
-		"iS": 4180591,
-		"jF": 0,
+	"\/_sources\/Now In Control with bleed.png": {
+		"ft": 32768,
+		"iS": 7580227,
 		"oA": 0,
-		"oAP": "\/_sources\/Now In Control no-bleed.jpg",
+		"oAP": "\/_sources\/Now In Control with bleed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/_sources\/Now In Control.acorn": {
@@ -466,16 +466,6 @@
 		"oA": 0,
 		"oAP": "\/phpliteadmin.php",
 		"oF": 0
-		},
-	"\/redeem.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/redeem-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"\/redeem.php": {
 		"cB": 0,
