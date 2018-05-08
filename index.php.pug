@@ -86,7 +86,7 @@ html(class="no-js", lang="en-us")
 
 			aside.redeem
 				form#redeem-form
-					input#redeem-input(type="text" name="code" placeholder="Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
+					input#redeem-input(type="text" name="code" placeholder="Enter Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
 					input(type="hidden" name="email" value!="<?php echo htmlspecialchars($email); ?>")
 					input#form-album(type="hidden" name="album" value="3948")
 
