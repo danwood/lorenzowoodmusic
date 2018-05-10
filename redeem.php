@@ -84,10 +84,6 @@ foreach ($tracks as $track) {
 		}, 900);
 	});
 });
-
-if (window.DeviceMotionEvent!==undefined) {
-	$('.song-download').hide();
-}
 </script></body></html>
 <?php
 $db->close();
