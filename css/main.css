@@ -784,12 +784,13 @@ nav {
   nav a {
     padding: 0 8px; }
 
-.main-nav svg {
-  /* total height 41px */
-  height: 25px;
-  /* 25px minimum for apple logo guidelines */
-  padding: 8px 0;
-  /* 6.25px minimum padding around apple logo per their guidelines */ }
+.main-nav {
+  /* total height 41px */ }
+  .main-nav svg, .main-nav img {
+    height: 25px;
+    /* 25px minimum for apple logo guidelines */
+    padding: 8px 0;
+    /* 6.25px minimum padding around apple logo per their guidelines */ }
 
 /* Scroll arrow only when we have a full page hero */
 .scrolldown {
@@ -1167,7 +1168,7 @@ iframe.soundcloud {
   .bit-citystate:before {
     content: ' — '; } }
 
-@media only screen and (max-width: 829px) {
+@media only screen and (max-width: 864px) {
   nav {
     height: 82px; }
   .icons.popular {
@@ -1177,7 +1178,7 @@ iframe.soundcloud {
     margin-left: 5em; } }
 
 /* Not so likely but we need to be prepared for 3 rows */
-@media only screen and (max-width: 459px) {
+@media only screen and (max-width: 478px) {
   nav {
     height: 123px; }
     nav a, nav a.buy-button {

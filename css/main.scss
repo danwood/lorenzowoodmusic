@@ -313,9 +313,11 @@ nav {
 	}
 }
 
-.main-nav svg { /* total height 41px */
-	height:25px;	/* 25px minimum for apple logo guidelines */
-	padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
+.main-nav  { /* total height 41px */
+	svg, img {
+		height:25px;	/* 25px minimum for apple logo guidelines */
+		padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
+	}
 }
 
 /* Scroll arrow only when we have a full page hero */
@@ -771,7 +773,7 @@ iframe.soundcloud {
 
 }
 
-@media only screen and (max-width:829px) {
+@media only screen and (max-width:864px) {
 	nav {
 		height:82px;
 	}
@@ -786,7 +788,7 @@ iframe.soundcloud {
 }
 
 /* Not so likely but we need to be prepared for 3 rows */
-@media only screen and (max-width:459px) {
+@media only screen and (max-width:478px) {
 	nav {
 		height:123px;
 
