@@ -723,8 +723,13 @@ body > header {
   left: 0;
   right: 0; }
 
-.main-nav a {
-  float: left; }
+.main-nav {
+  text-align: center; }
+  .main-nav a {
+    display: inline-block;
+    text-decoration: none; }
+    .main-nav a span {
+      padding-left: 0.5em; }
 
 .logo svg {
   padding: 2.5% 0 1.5% 5%;
@@ -1168,9 +1173,9 @@ iframe.soundcloud {
   .bit-citystate:before {
     content: ' — '; } }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 430px) {
   .needs-medium {
-    display: none; } }
+    display: none !important; } }
 
 /* Not so likely but we need to be prepared for 3 rows */
 @media only screen and (max-width: 500px) {
