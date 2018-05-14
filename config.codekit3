@@ -242,7 +242,7 @@
 		"oA": 0,
 		"oAP": "\/css\/main.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		},
 	"\/css\/normalize.css": {
@@ -498,7 +498,7 @@
 	"\/svg\/amazon-music.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/svg\/amazon-music.svg",
 		"oF": 0,
 		"opt": 0,
@@ -598,7 +598,7 @@
 	"\/svg\/google-play.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/svg\/google-play.svg",
 		"oF": 0,
 		"opt": 0,
