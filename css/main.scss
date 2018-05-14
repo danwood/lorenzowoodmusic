@@ -315,9 +315,9 @@ nav {
 
 .main-nav  { /* total height 41px */
 	svg, img {
-		height:25px;	/* 25px minimum for apple logo guidelines */
-		padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
-	}
+	height:25px;	/* 25px minimum for apple logo guidelines */
+	padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
+}
 }
 
 /* Scroll arrow only when we have a full page hero */
@@ -773,46 +773,26 @@ iframe.soundcloud {
 
 }
 
-@media only screen and (max-width:864px) {
-	nav {
-		height:82px;
-	}
-	.icons.popular {
-		bottom:82px;
+@media only screen and (max-width:360px) {
+	.needs-medium {
+		display:none;
 	}
 
-	.main-nav a:nth-child(4) {
-		clear:left;
-		margin-left:5em;
-	}
 }
 
 /* Not so likely but we need to be prepared for 3 rows */
-@media only screen and (max-width:478px) {
+@media only screen and (max-width:500px) {
 	nav {
-		height:123px;
 
 		a, a.buy-button {
 			padding-left: 2px;
 			padding-right:2px;
 		}
 	}
-	.icons.popular {
-		bottom:123px;
-	}
 
 	a.buy-button {
 		font-size:80%;
 		margin-top:10px;
-	}
-	.main-nav a:nth-child(4) {
-		clear:none;
-		margin-left:0;
-	}
-
-	.main-nav a:nth-child(3), .main-nav a:nth-child(5) {
-		clear:left;
-		margin-left:5em;
 	}
 
 	.redeem, .epk {

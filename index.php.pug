@@ -66,22 +66,22 @@ html(class="no-js", lang="en-us")
 			nav.main-nav.clearfix.safe-area-only
 				//- later make this a full menu with hamburger etc.
 
-				a.buy-button(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
-					| Buy “Now In Control” EP
+				//-a.buy-button(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-//-control")
+				//-	| Buy “Now In Control” EP
 				a(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
 					//- Apple marketing guidelines for lockup images:
 					//- minimum 25px tall, 25% of height margin
 					include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
-				a.disabled(data-title="Buy on Amazon Music" href="")
-					include svg/amazon-music.svg
-				a.disabled(data-title="Stream on Google Play" href="")
-					include svg/google-play.svg
+				//a.disabled(data-title="Buy on Amazon Music" href="")
+				//	include svg/amazon-music.svg
+				//-a.disabled(data-title="Stream on Google Play" href="")
+				//-	include svg/google-play.svg
 				a(data-title="Stream on Apple Music" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?mt=1&app=music&at=1000lKSp")
 					include svg/Apple_Music_lockup_RGB_blk.svg
-				a(data-title="Stream on Spotify" href="https://open.spotify.com/album/1SbBCWfrhKUrgp8AqDvESa?si=BmIlypbURYms7AmVbjOpMw")
+				a.needs-medium(data-title="Stream on Spotify" href="https://open.spotify.com/album/1SbBCWfrhKUrgp8AqDvESa?si=BmIlypbURYms7AmVbjOpMw")
 					include svg/spotify-text.svg
-				a(data=title="Buy CD" title="Buy CD" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
-					img(alt="CD" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAwFBMVEVHcEx3YXyPjo/k5OTOzs6+vr7Ozs56lm7d3d1/nnFoZ2mDl3rDxsHCuMW83a9sf2RxgWpeaVq7y7WkoaZwi2VvfWeXrYtla2NxfmyjtZupwp+Voo630aqfwo6pzZekxZSQsoHD6rqW3X2avIqU0H2v1J+Mqn6Tx36Ws4ee0omKvHaWvYTS9L6j5oqGo3izu6TRqsbD9bOt35iU6nfW9smFr3O2+Z6456je+Munrpq+rbPl+8zK8sWow4fBwrPs/M/q5omGAAAAHXRSTlMAG7N6d46H/HL+NtUyEfus1m5VofXx6U6Ehr9x2p4wsxgAAAQnSURBVHhejdaHTuNKFAZgYmI7JsFJNm2BneLe03uAff+3uv+ZcUyWy5YjISHQp3+az8zdV/XY+6aq93j3L/X47en5h+t6Zem57o/np7+y3tNz5G2Pl8tPquOx9PjzS+sPoPUkvNfX7faozeV43G5fvWj68tukl6kLAYIYHYJf8QdPdGdfRxhpRKJJuagUCFeI+PsX4qEbMBE1KSBI0YQzxlKj9X/BAsa4V6ccIZCiBoYQFgRFt/VZvL0FOqZJAdHTB2FF8cm0um8oxgR3r3NpUg5csIwlRSH7t6SfQsAIxOiBNcSLuMiyhMj8Zg2+O7JQRvDIvR2YCuGZIjKO7VkzkXEcx43xdAoEkdWaSJgUKch8cJ1Ofz6PpdRjUzEQKJp9eYh4RQJE7nJnWIfYCAUJmDZePRcQhESVH4ZBkKZFnue7OqYviwIiDbSJ3BIhuhCy9v0wYEGRJAmIPaxDdIGIOsYT0+k05eVqvUYIYywL/ZDIvE9kuLshXJCJu8bINEdGVyohMh9RiuzGDyD9PC+uiHHU28QwLevesizTsP0MYNMQh0bWGuSoJLmaSExGptXp3Hc6HdMyxrzaoECSBMKx+7QpECGVYgG3DdPsgChjGjsSVcYYlnXu2DbWbGZDwPhU2AA5gEAG/bTbpjnYrKPFYnE6pfGcyOThbmjvdkBkaAAbxzDb7U6n9/jYA2mbRrpcns+nhoxnILZDu18USZb5VWWPQNo91TsskNH8fbEQQSBxYGryXZNYpmqR+QDEauv+1CZic8EYtl/WKcMrkRLLBbL4ighNYk2agaXp6XQ+L5cTkHbnZmAOLVeQgjRzGStCgOp9/sv0aZV9VJYUNZnM7mYNQYlszQamBXKvF9kyJ5KOZIjCVmIvscgPE6ceWMDw+fHINkAAgNqWZcxZoStB6ePfGjgwWOQkzBThk5FVHxgIm/Og+Kg8p6Pch8gTtfsQnItkbFj3qiCiiHN2g3ZDkKGdh/5GCTr8LNxUzsAw6fAP5HIJIrRJiajD3xpvUDAJY/gnBD6SgD6xrNovl+8gZOrSvawfkgjpE2NF4lf4EvflBW2p3O8PMPVWUois+8WDs9mECbWLAGIDUe231C5A9u/L5YIIdRhZyGtX6idhLkEgQr+KQFaqYRxXiHlfnq9nLI4RctP6kFsLVKm7JcjePZ8XzRlDSNNgsZVacBAa1wUCI1sh5rxYgEjdYJvqx4UOyYisV9eevEId8E0KSqE2fntZkEjUVoKUv5BoIU4qpf/rlQQDITilHBpSKsP1XD5fY7NukWkSrQ8flwWE50WKfBaUkzEGghjv2JBy9bryDlxdr19e4kKlYFzNjVziQvY8F5f4754KKsXdgkCo2+IV5UXd2e8fJFOkeM31+vcHiX72CBASypRehGfPvz2uyn9+XGn15yfcfxnTErCq/x4VAAAAAElFTkSuQmCC")
+				a.needs-medium(data=title="Buy CD" title="Buy CD" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
+					img(alt="CD" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAvVBMVEVHcEyXmJWvr66hn5+ipaCrq6Z4eHiZmZn7r3qxsbHHso+cnJyzs7OoqKiQkJCenZues+q224KrtorGxcbT04XiwIm2trau3JOo0qSZttK5ubnu7+7n5+jh4eDAwMCzs7KTk5Ojo6Orq6vNzc3T09OJiYnZ2tr29fX8x5v/42uBgYGcnJz/x3P/1m3X/G+DzuvS5O7Gxsa0zfLwzLfy38um9Z//7m227NZvb2/u9G2y/X6H4djjz3iX7LzA/20ZcI3aAAAAGnRSTlMAx/6LZqH+Bf4r/kG0/fXs/fz+ufnM8Ne90GUkxEEAAAMXSURBVHhefdZnk6sgFAbgiBBjTN0kWyj2lt63lv//sy6gmwA615l8yfjMe9ADno52OeLnQrRYzOfz6dMzgq78S7vJBK696G22y9fXj93u8/rztX+xXQ2Zwhv0e73NZrtdLj92v5LsT5OZpxgduMjPz4JsVDI5FfnAFagp4GNyTJImORBSJFAYUyDf949Jem4URgilhA240YUzwAEWJDVTDgUnjJIZv0kXwbAieamliBAiDKOKEXgAorgmFy1FhBAqCNNrQ8P1jbBSSyFFnZIHMbqHwChUyEUlh0pQmgfrcAh5jBTuOFQJKxUiQwgXOIrW4ditS0NhppCcXu7krSiKSoA4Wo/WqArxwlWoEkbvyyeSkNzHASdhFnoyBmWZQc68LyV5q8XxRmSMO1oZhNDt9/d8Ov28kkIYltzIKnQ5sbOuTihL+g/9B3HlUqQKyWy+Fmulp7AUg6AvSRAcScFylaws/oSzrk5SAHBkQQ/aVuAHPtNJN3M7MHvXSApibFXPxYGRH2OTwI690lPwEPNsThyuvAjHiU5WdsfqaiSJwbrK6AhkYxDopGuZxB9iVAsZNeYxJhm9awQPY6huCwvHR428jzqhTni+p+4+G8e+TsL/E6eNNAsDUElpLcx6N5dvVaDeSkFz+c2HLCqrRetDbnuVY1e8E4cLGAfNV9naMGNYpdgxbmuYZlsGvBstG0I0xhjgZls2m59QH2DR+v0+AD6jzeY3txgtCpICLgRKCTFSMtvcyCklYvNep9Pp/Hu7vRAqiLmRHZSt/khCiSCH6+fv7uP1dVmaKSEyDqVaFG8VWS55jEHqbkLhSBCQUCrN4edGSrUwefTdD9goimvBQ+5kc6EKkQescownjElTHL4UclaIPMbvHwshWJVyUslGKSxG2kcsZ3mdQvcaOf+RIRjwGxUzozJFhOikrAnAldCNTKETnfTOFfFrodXGiCCnvUFKQY4+ksIcFZKC8BCT9M5pkj7C9vHCnbHiMJmYpGRHZSAxkTebGCnCDDwDmMPVy43wvtz0Fo3hqn2Ee37izT9fLFpHuH/owvx7H54uxAAAAABJRU5ErkJggg==")
 
 
 		main
