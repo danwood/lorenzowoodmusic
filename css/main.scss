@@ -244,10 +244,17 @@ body > header {
 	bottom:0; left:0; right:0;
 }
 
-.main-nav a {
-	float:left;
-}
+.main-nav {
+	text-align:center;
+	a {
+		display:inline-block;
+		text-decoration:none;
 
+		span {
+			padding-left:0.5em;
+		}
+	}
+}
 .logo svg {
 	padding: 2.5% 0 1.5% 5%;
 	max-width: 67%;
@@ -315,9 +322,9 @@ nav {
 
 .main-nav  { /* total height 41px */
 	svg, img {
-		height:25px;	/* 25px minimum for apple logo guidelines */
-		padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
-	}
+	height:25px;	/* 25px minimum for apple logo guidelines */
+	padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
+}
 }
 
 /* Scroll arrow only when we have a full page hero */
@@ -445,13 +452,53 @@ nav {
 
 /* Track via Email List */
 
-.contact-form-padded {
+.next-to-side-photo-padded {
 	padding: 0 2rem;  /* Make sure box is indented to be separated from photo */
 }
 
-.contact-photo img {
+.side-photo img {
 	max-width: 100%;
 }
+
+
+/* Download buttons */
+
+.download-section {
+
+	.shadowed {
+		box-shadow:0 4px 10px rgba(0,0,0,0.5);
+	}
+
+	div {
+		margin: 0 auto;
+		max-width:15em;
+		padding-bottom:1em;
+	}
+
+	a {
+		text-decoration:none;
+
+		span {
+			padding-left:0.5em;
+		}
+	}
+}
+
+a.buy-button {
+	background:#00AEA8;
+	color:$colorWhiteish;
+	padding:6px 12px;
+	border-radius:4px;
+
+	font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
+	letter-spacing:1px;
+	text-transform:uppercase;
+	text-decoration:none;
+	white-space: nowrap;
+}
+
+
+
 
 /* ===== Colors ===== */
 
@@ -500,20 +547,6 @@ nav {
 
 .logo, .icons {
 	background:rgba(0,0,0,0.5);
-}
-
-a.buy-button {
-	background:#00AEA8;
-	color:$colorWhiteish;
-	padding:2px 6px;
-	border-radius:4px;
-	margin:10px 7px 6px 10px; /* right to match `nav a` padding */
-
-	font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
-	letter-spacing:1px;
-	text-transform:uppercase;
-	text-decoration:none;
-	white-space: nowrap;
 }
 
 .logo {
@@ -686,7 +719,7 @@ iframe.soundcloud {
 	}
 
 	/* On mobile, center photo rather than side-by-side with mailing list form */
-	.contact-photo {
+	.side-photo {
 		margin-left:25%;
 		width:50%;
 	}
@@ -751,11 +784,11 @@ iframe.soundcloud {
 
 	/* On wide screens, put photo to left of the 'contact' form */
 
-	.contact-photo {
+	.side-photo {
 		float:left;
 		width:33%;
 	}
-	.contact-form {
+	.next-to-side-photo {
 		float:left;
 		width:66%;
 	}
@@ -773,47 +806,15 @@ iframe.soundcloud {
 
 }
 
-@media only screen and (max-width:864px) {
-	nav {
-		height:82px;
-	}
-	.icons.popular {
-		bottom:82px;
+@media only screen and (max-width:430px) {
+	.needs-medium {
+		display:none !important;
 	}
 
-	.main-nav a:nth-child(4) {
-		clear:left;
-		margin-left:5em;
-	}
 }
 
 /* Not so likely but we need to be prepared for 3 rows */
-@media only screen and (max-width:478px) {
-	nav {
-		height:123px;
-
-		a, a.buy-button {
-			padding-left: 2px;
-			padding-right:2px;
-		}
-	}
-	.icons.popular {
-		bottom:123px;
-	}
-
-	a.buy-button {
-		font-size:80%;
-		margin-top:10px;
-	}
-	.main-nav a:nth-child(4) {
-		clear:none;
-		margin-left:0;
-	}
-
-	.main-nav a:nth-child(3), .main-nav a:nth-child(5) {
-		clear:left;
-		margin-left:5em;
-	}
+@media only screen and (max-width:500px) {
 
 	.redeem, .epk {
 		width:100%;
