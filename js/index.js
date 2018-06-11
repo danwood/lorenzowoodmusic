@@ -16,9 +16,15 @@ setTimeout(function(){
   });
 }, 2000);
 
+// Bands in Town - display past events.  Not showing anything if no javascript.
+$('#recent-performances').html('<a id="recent-link" href="#">Show Recent</a>');
 
-
-
+// If we click to show recent performances too, this gets revealed.  A one-way street BTW.
+$('#recent-link').click(function() {
+    $('.bit-header').text('Recent & Upcoming Performances');
+    $('.bit-past').show();
+    return false;
+});
 
 
 // MANUALLY BRING IN: http://lightwidget.com/widgets/lightwidget.js

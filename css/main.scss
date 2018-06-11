@@ -359,7 +359,7 @@ nav {
 }
 
 
-.bit-row {
+.bit-row.bit-upcoming {
 	&:hover {
 		background:$colorWhiteish;
 	}
@@ -370,7 +370,7 @@ nav {
 
 }
 
-	.bit-date { padding-left:5px; text-transform:uppercase; font-weight: bold; display:inline-block; width:5em; }
+	.bit-date { padding-left:5px; text-transform:uppercase; font-weight: bold; display:inline-block; width:7em; }
 	.bit-date, .bit-venue, .bit-citystate {
 		padding-top:10px;
 	}
