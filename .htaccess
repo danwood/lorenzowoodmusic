@@ -497,6 +497,7 @@ AddDefaultCharset utf-8
         script-src 'unsafe-inline' code.jquery.com 'self'; \
         style-src 'unsafe-inline' 'self'; \
         img-src img.youtube.com 'self' data:; \
+        connect-src jumprock.co; \
         frame-src lightwidget.com w.soundcloud.com www.youtube.com; \
         frame-ancestors 'none'"
 
