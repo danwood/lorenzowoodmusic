@@ -19,6 +19,6 @@ if (FALSE === $bytes) {
 	echo "failed to write to $cachePath";
 }
 else {
-	header('Location: https://www.lorenzowoodmusic.com/');
+	//header('Location: https://www.lorenzowoodmusic.com/');
 }
 ?>
