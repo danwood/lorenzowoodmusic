@@ -24,6 +24,10 @@ $artistURL = $artist['url'];
 $artistName = $artist['name'];
 $artistNameWithoutMusic = preg_replace('/ Music$/', '', $artistName);
 
+$oneYearAgo = date('Y-m-d', strtotime('-1 year'));
+$oneYearAhead = date('Y-m-d', strtotime('+1 year'));
+$thisYear = date('Y');
+
 if ($artist['upcoming_event_count']) {
 // Get upcoming events
 
@@ -33,7 +37,8 @@ if ($artist['upcoming_event_count']) {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('accept: application/json'));
 
-	curl_setopt($ch, CURLOPT_URL,'https://rest.bandsintown.com/artists/Lorenzo%20Wood%20Music/events?app_id=' . API_KEY);
+	curl_setopt($ch, CURLOPT_URL,'https://rest.bandsintown.com/artists/Lorenzo%20Wood%20Music/events?app_id=' . API_KEY
+		. '&date=' . $oneYearAgo . ',' . $oneYearAhead);
 
 	$json=curl_exec($ch);
 	curl_close($ch);
@@ -42,7 +47,7 @@ if ($artist['upcoming_event_count']) {
 ?>
 <!-- <?php echo htmlspecialchars(date('c')); ?> -->
 <div class='bit-header-row'>
-	<span class='bit-header'>Upcoming Dates</span>
+	<span class='bit-header'>Upcoming Performances <span id="recent-performances"></span></span>
 	<a href='<?php echo htmlspecialchars($artistURL); ?>'><span
 		class='bit-header-full'><?php include 'svg/bit-full.svg'; ?></span><span
 		class='bit-header-mobile'><?php include 'svg/bit-mobile.svg'; ?></span></a>
@@ -51,16 +56,24 @@ if ($artist['upcoming_event_count']) {
 	foreach ($events as $event) {
 		$url = $event['url'];
 		$dateTime = strtotime($event['datetime']);
-		$month_day = date('M d', $dateTime);
+		$year = date('Y', $dateTime);
+		$month_day = ($year == $thisYear) ? date('M d', $dateTime) : date('M d, Y', $dateTime);
 		$venue = trim($event['venue']['name']);
 		$city_state = $event['venue']['city'] . ', ' . $event['venue']['region'];
+		$past = ($dateTime < time())
 ?>
-<div class='bit-row'>
-	<a href='<?php echo htmlspecialchars($url); ?>'>
+<div class='bit-row <?php echo ($past ? 'bit-past' : 'bit-upcoming'); ?>'
+	<?php if ($past) { echo ' style="display:none"'; } ?>>
+	<?php if (!$past) { echo '<a href="' . htmlspecialchars($url) . '">'; } ?>
 		<span class='bit-date'><?php echo htmlspecialchars($month_day); ?></span>
 		<span class='bit-venue'><?php echo htmlspecialchars($venue); ?></span>
 		<span class='bit-citystate'><?php echo htmlspecialchars($city_state); ?></span>
-		<span class='bit-button'>More Info</span>
+	<?php if (!$past) {
+		echo '<span class="bit-button">More Info</span>';
+		echo '</a>';
+	} ?>
+
+		<?php if (!$past) { ?><?php } ?>
 	</a>
 </div>
 <?php
