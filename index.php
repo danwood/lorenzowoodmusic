@@ -10,7 +10,7 @@ records his music (using Apple Logic) and creates live performance videos.</p><p
 performed in children’s musical theatre productions, and restarted
 <a href="http://www.tomorrowyouthrep.org/">performances</a> at age
 eleven, including key roles in <em>Annie</em>, <em>High School Musical</em>, and
-<em>Into the Woods</em>. He has taken music/piano lessons and 
+<em>Into the Woods</em>. He later took music/piano lessons and 
 <a href="https://jdsvoice.com">voice lessons</a>. He is entirely self-taught on guitar.</p><p>Lorenzo lists
 <a href="http://www.maroon5.com">Maroon 5</a>,
 <a href="http://www.shawnmendesofficial.com">Shawn Mendes</a>,
