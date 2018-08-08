@@ -68,7 +68,7 @@ if ($artist['upcoming_event_count']) {
 		<span class='bit-date'><?php echo htmlspecialchars($month_day); ?></span>
 		<span class='bit-venue'><?php echo htmlspecialchars($venue); ?></span>
 		<span class='bit-citystate'><?php echo htmlspecialchars($city_state); ?></span>
-	<?php if (!$past && false !== strpos(strtolower($venue), 'private')) {
+	<?php if (!$past && false === strpos(strtolower($venue), 'private')) {	// Don't link to private events
 		echo '<span class="bit-button">More Info</span>';
 		echo '</a>';
 	} ?>
