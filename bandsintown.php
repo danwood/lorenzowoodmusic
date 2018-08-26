@@ -1,5 +1,9 @@
 <?php
 
+date_default_timezone_set("US/Pacific");
+// Dates from BandsInTown are in our local time zone.  Might be tricky with multiple time zones?
+
+
 ob_start();	// We will buffer this output so we can compact it
 
 require_once('../protected/bandsintown_api.php');

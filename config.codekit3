@@ -162,7 +162,7 @@
 		},
 	"\/album_art\/now_in_control.jpg": {
 		"ft": 16384,
-		"iS": 19883,
+		"iS": 4180591,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "\/album_art\/now_in_control.jpg",
@@ -203,6 +203,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/CNAME",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/656850f86ce4269fddc8c1fa3320e29a3c4c74fd\/main.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/.sass-cache\/656850f86ce4269fddc8c1fa3320e29a3c4c74fd\/main.scssc",
 		"oF": 0
 		},
 	"\/css\/html5boilerplate.css": {
@@ -350,7 +357,7 @@
 		},
 	"\/img\/CD.png": {
 		"ft": 32768,
-		"iS": 1087,
+		"iS": 1365,
 		"oA": 0,
 		"oAP": "\/img\/CD.png",
 		"oF": 0,
