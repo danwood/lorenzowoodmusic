@@ -68,9 +68,9 @@ section, .safe-area {
 @supports(padding:max(0px)) {
 	section {
 		// use m#{a}x instead of max to allow this to be compiled with Sass
-		padding-left:m#{a}x(1rem, constant(safe-area-inset-left));
+		padding-left: m#{a}x(1rem, constant(safe-area-inset-left));
 		padding-right:m#{a}x(1rem, constant(safe-area-inset-right));  /* iOS 11.0, 11.1 … phase out soon */
-		padding-left:m#{a}x(1rem, env(safe-area-inset-left));
+		padding-left: m#{a}x(1rem, env(safe-area-inset-left));
 		padding-right:m#{a}x(1rem, env(safe-area-inset-right));	   /* iOS 11.2 beta and up */
 	}
 	.safe-area-only {
@@ -83,14 +83,14 @@ section, .safe-area {
 
 /*! Specific */
 
-$colorLink:	  #00AEA8;
-$colorWarning:   purple;
-$colorWhite:	 #ffffff;
-$colorWhiteish:  #f5f5f5;
-$colorGrayLight: #bdbdbd;
-$colorGray:	  #616161;
-$colorGrayDark:  #424242;
-$colorBlackish:  #212121;
+$colorLink:	  	#62B1DE;
+$colorWarning:  purple;
+$colorWhite:	#ffffff;
+$colorWhiteish: #f5f5f5;
+$colorGrayLight:#bdbdbd;
+$colorGray:	  	#616161;
+$colorGrayDark:	#424242;
+$colorBlackish:	#212121;
 
 
 
@@ -104,7 +104,7 @@ a.disabled {
 	opacity:0.4;
 	position:relative;
 }
-a.disabled:after{
+a.disabled:after {
 	padding:0 5px;
 	font-weight:bold;
 	font-size:75%;
@@ -128,7 +128,7 @@ a.disabled:after{
 a.disabled:hover {
 	opacity:1.0;
 }
-a.disabled:hover:after{
+a.disabled:hover:after {
 	opacity:0.75;
 }
 
@@ -151,24 +151,22 @@ a.disabled:hover:after{
 /* ===== Navigation ===== */
 // Based on https://codepen.io/marclloyd77/pen/gtypB
 
+$menuWidth: 12rem;		//
+$menuMargin: 0.5rem;	// Use same units so we don't need calc
+$speed: 200ms;
 
-section{
-    padding:30px 30px 30px 80px;
-    transition:all 200ms ease-in;
-
-}
-nav.hamburger{
+nav.page-menu {
     position:fixed;
     top:0;
     left:0;
-    width:250px;
+    width:$menuWidth;
     height:100%;
-    margin:0 0 0 -250px;
-    transition:all 200ms ease-in;
-    z-index:1500;
+    margin:0 0 0 0-$menuWidth;		// render offscreen to the left
+    transition:all $speed ease-in;
+    overflow:hidden;
 
-	ul{
-	    width:250px;
+	ul {
+	    width:$menuWidth;
 	    height:100%;
 	    padding:0;
 	    margin:0;
@@ -176,11 +174,11 @@ nav.hamburger{
 	    background:#222;
 	    overflow:hidden;
 	}
-	li{
+	li {
 	    margin:0;
 	    color:#fff
 	}
-	a{
+	a {
 	    color:#fff;
 	    font-size:1em;
 	    text-decoration:none;
@@ -189,41 +187,33 @@ nav.hamburger{
 	    font-weight:300;
 	    letter-spacing:2px;
 	}
-	a:hover{
+	a:hover {
 	    background:#111;
 	}
 }
 
-label.hamburger{
+label.hamburger {
     display:block;
-    background:#1ea1b8;
-    padding:10px;
+    background:$colorLink;
+    padding:$menuMargin;
     position:fixed;
-    top:10px;
-    left:10px;
-    transition:all 200ms ease-in;
+    top:$menuMargin;
+    left:$menuMargin;
+    transition:all $speed ease-in;
     z-index:1500;
 }
-input#navigation[type="checkbox"]{
+input#navigation[type="checkbox"] {
     display:none;
 
-	&:checked ~ nav{
-	    margin:0;
+	&:checked ~ label {
+	    left:$menuWidth+$menuMargin;		// when checked, move corresponding label (the psuedo button) over too
 	}
-	&:checked ~ label{
-	    left:260px;
+	&:checked ~ header {
+	    transform:translate3d($menuWidth, 0, 0);
 	}
-
-
-/*
-	&:checked ~ section{
-	    -webkit-transform:translate3d(260px, 0, 0);
-	    -moz-transform:translate3d(260px, 0, 0);
-	    -o-transform:translate3d(260px, 0, 0);
-	    transform:translate3d(260px, 0, 0);
-	}	
-*/  
-
+}
+header {
+	transition:all $speed ease-in;
 }
 
 
@@ -606,7 +596,7 @@ nav.main-nav  { /* total height 41px */
 }
 
 a.buy-button {
-	background:#00AEA8;
+	background:$colorLink;
 	color:$colorWhiteish;
 	padding:6px 12px;
 	border-radius:4px;
@@ -760,7 +750,7 @@ iframe.soundcloud {
 	a {
 		position:relative;
 	}
-	a:after{
+	a:after {
 		padding:0 5px;
 		font-size:80%;
 		background:$colorWhite;
@@ -780,7 +770,7 @@ iframe.soundcloud {
 		opacity:0; /* Invisible until hovered */
 		transition:opacity .3s ease-in-out;
 	}
-	a:hover:after{
+	a:hover:after {
 		opacity:0.75;
 	}
 	a:last-child:after { /* Also need to do below for 5th icon when we have two rows! SEE BELOW */
@@ -828,7 +818,7 @@ iframe.soundcloud {
 	.popular.icons a {
 		width:16.66%;
 	}
-	.popular.icons a:first-child, .exhaustive.icons a:first-child{
+	.popular.icons a:first-child, .exhaustive.icons a:first-child {
 		margin-left:0;
 	}
 
@@ -991,11 +981,11 @@ input#redeem-submit {
 	color:white;
 }
 
-#redeem-form ::-webkit-input-placeholder	{text-align:center; }
-#redeem-form :-moz-placeholder		   		{text-align:center; }
-#redeem-form ::-moz-placeholder		  		{text-align:center; }
-#redeem-form :-ms-input-placeholder	  		{text-align:center; }
-#redeem-form ::placeholder			   		{text-align:center; }
+#redeem-form ::-webkit-input-placeholder	 {text-align:center; }
+#redeem-form :-moz-placeholder		   		 {text-align:center; }
+#redeem-form ::-moz-placeholder		  		 {text-align:center; }
+#redeem-form :-ms-input-placeholder	  		 {text-align:center; }
+#redeem-form ::placeholder			   		 {text-align:center; }
 
 #cover {
 	position:fixed;

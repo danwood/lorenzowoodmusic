@@ -33,21 +33,22 @@ html(class="no-js", lang="en-us")
 
 
 		//-.info(style="position:absolute; top:0; left:0; width:100%; height:20px; color:red;z-index:9999")
+
+		// Hamburger menu lives outside of main document flow.
+		// For CSS, we want the input & the label to be siblings, and nav  under header
+		input#navigation(type="checkbox")
+		label.hamburger(for="navigation")
+			include svg/hamburger.svg
+
 		header#main-header
 
-			// For CSS, we want the input, the label, and the nav to be siblings
-			input#navigation(type="checkbox")
-			label.hamburger(for="navigation")
-				include svg/hamburger.svg
-
-			nav.hamburger
+			nav.page-menu
 				ul
 					li: a Home
 					li: a Latest
 					li: a Videos
 					li: a Discography
 					li: a Pizza
-
 
 			h1.ir Lorenzo Wood Music
 			.logo
