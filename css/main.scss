@@ -83,7 +83,8 @@ section, .safe-area {
 
 /*! Specific */
 
-$colorLink:	  	#62B1DE;
+$colorLink:	  	#62b1de;
+$inverseColor:  #de8c62;
 $colorWarning:  purple;
 $colorWhite:	#ffffff;
 $colorWhiteish: #f5f5f5;
@@ -153,16 +154,16 @@ a.disabled:hover:after {
 
 $menuWidth: 12rem;		//
 $menuMargin: 0.5rem;	// Use same units so we don't need calc
+$menuSize: 1rem;
 $speed: 200ms;
 
 nav.page-menu {
     position:fixed;
     top:0;
-    left:0;
+    right:0;
     width:$menuWidth;
     height:100%;
-    margin:0 0 0 0-$menuWidth;		// render offscreen to the left
-    transition:all $speed ease-in;
+    margin:0 0-$menuWidth 0 0;		// render offscreen to the right
     overflow:hidden;
 
 	ul {
@@ -194,28 +195,30 @@ nav.page-menu {
 
 label.hamburger {
     display:block;
-    background:$colorLink;
-    padding:$menuMargin;
     position:fixed;
     top:$menuMargin;
-    left:$menuMargin;
+    right:$menuMargin;
+    height:$menuSize;
+    width:$menuSize;
     transition:all $speed ease-in;
     z-index:1500;
+
+    svg {
+    	width:100%;
+    	height:100%;
+    	fill:$inverseColor;
+    }
 }
 input#navigation[type="checkbox"] {
     display:none;
 
 	&:checked ~ label {
-	    left:$menuWidth+$menuMargin;		// when checked, move corresponding label (the psuedo button) over too
+	    right:$menuWidth+$menuMargin;		// when checked, move corresponding label (the psuedo button) over too
 	}
 	&:checked ~ header {
-	    transform:translate3d($menuWidth, 0, 0);
+	    transform:translate3d(-$menuWidth, 0, 0);
 	}
 }
-header {
-	transition:all $speed ease-in;
-}
-
 
 
 
@@ -269,12 +272,6 @@ section footer { background:green;}
 
 iframe {
 	border:none;
-}
-
-label {
-	display:block;
-	font-weight:bold;
-	margin-bottom:0.5rem;
 }
 
 .input-form input,
@@ -372,6 +369,7 @@ body > header {
 	padding:2.5% 0 1.5% 5%;
 	max-width:67%;
 	max-height:140px;
+	min-height:40px;
 }
 
 .hero {
