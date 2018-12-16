@@ -352,11 +352,9 @@ nav.main-nav {
 	position:absolute;
 	z-index:999;
 	bottom:0; left:0; right:0;
-}
-
-nav.main-nav {
 	text-align:center;
 	a {
+		padding:0 8px;
 		display:inline-block;
 		text-decoration:none;
 
@@ -364,7 +362,12 @@ nav.main-nav {
 			padding-left:0.5em;
 		}
 	}
+	svg, img {
+		height:25px;	/* 25px minimum for apple logo guidelines */
+		padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
+	}
 }
+
 .logo svg {
 	padding:2.5% 0 1.5% 5%;
 	max-width:67%;
@@ -420,22 +423,6 @@ nav.main-nav {
 }
 .exhaustive.icons a:first-child { /* Smaller left margin for longer icon list */
 	margin-left:10%;
-}
-nav.main-nav {
-	position:relative; /* so it can contain an absolute */
-	text-align:right;
-	height:41px;		/* should match with .icons.popular */
-
-	a {
-		padding:0 8px;
-	}
-}
-
-nav.main-nav  { /* total height 41px */
-	svg, img {
-	height:25px;	/* 25px minimum for apple logo guidelines */
-	padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
-}
 }
 
 /* Scroll arrow only when we have a full page hero */
