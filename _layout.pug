@@ -1,0 +1,89 @@
+doctype html
+block vars
+html(class="no-js", lang="en-us")
+	head
+		meta(charset="utf-8")
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
+		title #{current} | Lorenzo Wood Music
+		meta(name="description"
+			content=description)
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
+		style svg{max-width:40px;} //- In case of no style sheet
+		block links
+			link(rel="apple-touch-icon" href="icon.png")
+			link(rel="stylesheet" href="/css/main.121618.css")
+
+	body(class=current)
+		<!--[if lt IE 9]>
+			p.browserupgrade
+				| You are using an #[strong outdated] browser. Please
+				|
+				a(href="http://browsehappy.com/") upgrade your browser
+				|  to improve your experience.
+		<![endif]-->
+
+		//- Hamburger menu lives outside of main document flow.
+		//- For CSS, we want these elements to be siblings, and nav under header
+		input#navigation(type="checkbox")
+		label.hamburger(for="navigation")
+			include svg/hamburger.svg
+
+
+		block header
+			header
+
+				h1.ir Lorenzo Wood Music
+				.logo
+					include svg/lorenzowoodmusic.svg
+
+				mixin navLink(link, name)
+					li: a(
+						href=link
+						class={active: name === current}
+					) #{name}
+
+				nav.page-menu
+					ul
+						+navLink('/', 'Home')
+						+navLink('projects/', 'Projects')
+						+navLink('photos.html', 'Photos')
+						+navLink('videos.html', 'Videos')
+						+navLink('studio.html', 'Studio')
+						+navLink('booking.html', 'Booking')
+
+
+
+		main
+			block main
+
+		footer
+
+			.icons.exhaustive.safe-area-only
+				a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
+					include svg/instagram.svg
+				a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
+					include svg/facebook.svg
+				a(data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood")
+					include svg/snapchat.svg
+				a(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
+					include svg/twitter.svg
+				a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
+					include svg/youtube.svg
+				a(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
+					include svg/soundcloud.svg
+				a(data-title="Reverb Nation" href="https://www.reverbnation.com/lorenzowoodmusic")
+					include svg/reverbnation.svg
+				a(data-title="Bands in Town" href="https://bandsintown.com/lorenzowoodmusic")
+					include svg/bandsintown.svg
+			p
+				b Copyright © 2017-2018 Lorenzo Wood
+				//- POSSIBLE TO ADD: span.dimmer
+			p.js-required.
+				JavaScript is disabled in your browser; please enable it to see missing content.
+
+		block scripts
+			script.
+				// Modernizer-like
+				// Remove "no-js" class from element, if it exists
+				document.documentElement.className = document.documentElement.className.replace("no-js","js");
+

@@ -25,7 +25,7 @@ html(class="no-js", lang="en-us")
 		link(rel="prefetch" href="//w.soundcloud.com")
 		link(rel="prefetch" href="//img.youtube.com")
 
-	body
+	body.Home
 		<!--[if lt IE 9]>
 			p.browserupgrade.
 				You are using an #[strong outdated] browser. Please
@@ -47,14 +47,21 @@ html(class="no-js", lang="en-us")
 			h1.ir Lorenzo Wood Music
 			.logo
 				include svg/lorenzowoodmusic.svg
+
+			mixin navLink(link, name)
+				li: a(
+					href=link
+					class={active: name === current}
+				) #{name}
+
 			nav.page-menu
 				ul
-					li: a(href=".") Home
-					li: a(href=".") Projects
-					li: a(href=".") Photos
-					li: a(href=".") Videos
-					li: a(href=".") Studio
-					li: a(href=".") Booking
+					+navLink('/', 'Home')
+					+navLink('projects/', 'Projects')
+					+navLink('photos.html', 'Photos')
+					+navLink('videos.html', 'Videos')
+					+navLink('studio.html', 'Studio')
+					+navLink('booking.html', 'Booking')
 
 			.hero
 				picture
@@ -293,7 +300,7 @@ html(class="no-js", lang="en-us")
 				a(data-title="Bands in Town" href="https://bandsintown.com/lorenzowoodmusic")
 					include svg/bandsintown.svg
 			p
-				b Copyright © 2017-2018 Lorenzo Wood
+				b Copyright © 2017-2019 Lorenzo Wood
 				span.dimmer &nbsp; Photo credits: Lucy Gigli, David Weintraub
 			p.js-required.
 				JavaScript is disabled in your browser; please enable it to see missing content.

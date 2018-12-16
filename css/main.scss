@@ -97,6 +97,8 @@ $colorBlackish:	#212121;
 
 /* ===== General ===== */
 
+svg { max-width:none; } // reset embedded style
+
 body {
 	font:16px/1.6 Helvetica, Helvetica Neue, Arial;
 }
@@ -188,8 +190,12 @@ $page-menu-font-size: 1.0rem;
 		    display:block;
 		    padding:$page-menu-padding-v $page-menu-padding-h;
 		}
+		a.active {
+			color:$inverseColor;
+		}
 		a:hover {
 		    background:$inverseColor;
+		    color:$colorGrayDark;
 		}
 	}
 }
@@ -378,7 +384,7 @@ body > header {
 	position:relative;
 }
 
-.logo {
+body.Home .logo {
 	position:absolute;
 	z-index:999;
 	top:0; left:0; right:0;

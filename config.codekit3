@@ -37,6 +37,15 @@
 		"oAP": "/404.html",
 		"oF": 0
 		},
+	"/_layout.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "/_layout.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/_sources/BandsInTown.opacity": {
 		"cB": 0,
 		"ft": 8192,
@@ -177,6 +186,22 @@
 		"oA": 0,
 		"oAP": "/bandsintown.php",
 		"oF": 0
+		},
+	"/booking.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/booking.html",
+		"oF": 0
+		},
+	"/booking.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "/booking.html",
+		"oF": 0,
+		"oS": 1
 		},
 	"/browserconfig.xml": {
 		"cB": 0,
@@ -434,6 +459,22 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/photos.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/photos.html",
+		"oF": 0
+		},
+	"/photos.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "/photos.html",
+		"oF": 0,
+		"oS": 1
+		},
 	"/phpliteadmin-readme.md": {
 		"cB": 0,
 		"cS": 0,
@@ -465,6 +506,22 @@
 		"oA": 0,
 		"oAP": "/phpliteadmin.php",
 		"oF": 0
+		},
+	"/projects/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/projects/index.html",
+		"oF": 0
+		},
+	"/projects/index.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "/projects/index.html",
+		"oF": 0,
+		"oS": 1
 		},
 	"/redeem.php": {
 		"cB": 0,
@@ -501,6 +558,22 @@
 		"oA": 0,
 		"oAP": "/robots.txt",
 		"oF": 0
+		},
+	"/studio.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/studio.html",
+		"oF": 0
+		},
+	"/studio.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "/studio.html",
+		"oF": 0,
+		"oS": 1
 		},
 	"/svg/amazon-music.svg": {
 		"ft": 2097152,
@@ -773,6 +846,22 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/videos.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/videos.html",
+		"oF": 0
+		},
+	"/videos.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "/videos.html",
+		"oF": 0,
+		"oS": 1
 		}
 	},
 "hooks": [
