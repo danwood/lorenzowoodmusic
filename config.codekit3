@@ -187,19 +187,12 @@
 		"oAP": "/bandsintown.php",
 		"oF": 0
 		},
-	"/booking.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/booking.html",
-		"oF": 0
-		},
-	"/booking.pug": {
+	"/booking/index.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
 		"oA": 0,
-		"oAP": "/booking.html",
+		"oAP": "/booking/index.html",
 		"oF": 0,
 		"oS": 1
 		},
@@ -413,6 +406,13 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/index.php",
+		"oF": 0
+		},
 	"/index.php.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -452,19 +452,12 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/photos.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/photos.html",
-		"oF": 0
-		},
-	"/photos.pug": {
+	"/photos/index.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
 		"oA": 0,
-		"oAP": "/photos.html",
+		"oAP": "/photos/index.html",
 		"oF": 0,
 		"oS": 1
 		},
@@ -552,19 +545,12 @@
 		"oAP": "/robots.txt",
 		"oF": 0
 		},
-	"/studio.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/studio.html",
-		"oF": 0
-		},
-	"/studio.pug": {
+	"/studio/index.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
 		"oA": 0,
-		"oAP": "/studio.html",
+		"oAP": "/studio/index.html",
 		"oF": 0,
 		"oS": 1
 		},
@@ -840,19 +826,12 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/videos.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/videos.html",
-		"oF": 0
-		},
-	"/videos.pug": {
+	"/videos/index.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
 		"oA": 0,
-		"oAP": "/videos.html",
+		"oAP": "/videos/index.html",
 		"oF": 0,
 		"oS": 1
 		}
