@@ -147,56 +147,54 @@ input#navigation[type="checkbox"], label.hamburger, nav.page-menu {
     display:none;
 }
 
+
+// ######## FULL SCREEN NAVIGATION #######
+
+// Constants so we know actual height of menu area to place logo below it
+$page-menu-padding-h: 0.75rem;
+$page-menu-padding-v: 1.0rem;
+$page-menu-font-size: 1.0rem;
+
 @media only screen and (min-width:600px) {
 
 	// similar to quick-stream ?
 
 	nav.page-menu  {
 		display:block;
-		z-index:2000;
 		position:absolute;
 		z-index:999;
 		top:0; left:0; right:0;
 		text-align:center;
-		a {
-			padding:0 8px;
-			display:inline-block;
-			text-decoration:none;
-
-			span {
-				padding-left:0.5em;
-			}
-		}
-		svg, img {
-			height:25px;	/* 25px minimum for apple logo guidelines */
-			padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
-		}
 
 		ul {
 		    padding:0;
 		    margin:0;
 		    list-style:none;
 		    overflow:hidden;
+		    text-align:right;
 		}
 		li {
 		    margin:0;
 		    color:#fff;
 		    display:inline-block;
-		}
-		a {
-		    color:#fff;
-		    font-size:1em;
-		    text-decoration:none;
-		    display:block;
-		    padding:12px 15px;
+		    line-height:1;
+		    font-size:$page-menu-font-size;
 		    font-weight:300;
 		    letter-spacing:2px;
 		}
+		a {
+		    color:#fff;
+		    text-decoration:none;
+		    display:block;
+		    padding:$page-menu-padding-v $page-menu-padding-h;
+		}
 		a:hover {
-		    background:#111;
+		    background:$inverseColor;
 		}
 	}
 }
+
+// ######## HAMBURGER MENU NAVIGATION #######
 
 
 @media only screen and (max-width:599px) {
@@ -235,7 +233,7 @@ input#navigation[type="checkbox"], label.hamburger, nav.page-menu {
 		}
 		a {
 		    color:#fff;
-		    font-size:1em;
+		    font-size:1rem;
 		    text-decoration:none;
 		    display:block;
 		    padding:12px 15px;
@@ -403,7 +401,7 @@ body > header {
 		text-decoration:none;
 
 		span {
-			padding-left:0.5em;
+			padding-left:0.5rem;
 		}
 	}
 	svg, img {
@@ -413,7 +411,7 @@ body > header {
 }
 
 .logo svg {
-	padding:2.5% 0 1.5% 5%;
+	padding:($page-menu-padding-v + $page-menu-padding-v + $page-menu-font-size) 0 1.5% 5%;
 	max-width:67%;
 	max-height:140px;
 	min-height:40px;
@@ -550,7 +548,7 @@ body > header {
 		display:inline-block;
 	}
 	input[type=text], input[type=email], input[type=submit] {
-		padding:0.5em; margin:0.5em 0.5em;
+		padding:0.5rem; margin:0.5rem 0.5rem;
 		font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
 	}
 }
@@ -615,14 +613,14 @@ body > header {
 	div {
 		margin:0 auto;
 		max-width:15em;
-		padding-bottom:1em;
+		padding-bottom:1rem;
 	}
 
 	a {
 		text-decoration:none;
 
 		span {
-			padding-left:0.5em;
+			padding-left:0.5rem;
 		}
 	}
 }
@@ -662,18 +660,18 @@ main {
 
 .redeem {
 	float:left;
-	margin-left:1em;
-	margin-top:1em;
+	margin-left:1rem;
+	margin-top:1rem;
 }
 .epk {
 	float:right;
-	margin-right:1em;
-	margin-top:1em;
+	margin-right:1rem;
+	margin-top:1rem;
 
 	a {
 		color:$colorBlackish;
 		margin-top:5px;
-		padding:0 0.5em 0 2em;
+		padding:0 0.5rem 0 2rem;
 		font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
 		letter-spacing:1px;
 		text-transform:uppercase;
@@ -899,10 +897,10 @@ iframe.soundcloud {
 		h3, form, input {
 			display:block;
 		}
-		h3 { padding:0; margin:0.5em 0.5em; }
+		h3 { padding:0; margin:0.5rem 0.5rem; }
 		input[type=text], input[type=email], input[type=submit] {
-			padding:0.5em;
-			margin:0.5em 0.5em;
+			padding:0.5rem;
+			margin:0.5rem 0.5rem;
 		}
 	}
 	#mce-FNAME, #mce-LNAME, #mce-EMAIL { width:90%;}
@@ -942,7 +940,7 @@ iframe.soundcloud {
 	}
 
 	/* Make track link be a button */
-	.bit-track { text-decoration:none; color:$colorWhite; background:$colorLink; padding:10px; margin-right:0.5em; }
+	.bit-track { text-decoration:none; color:$colorWhite; background:$colorLink; padding:10px; margin-right:0.5rem; }
 
 	/* Separator for city-state */
 	.bit-citystate:before { content:' — '; }
@@ -962,7 +960,7 @@ iframe.soundcloud {
 	.redeem, .epk {
 		width:100%;
 		text-align:center;
-		margin:0.5em 0;
+		margin:0.5rem 0;
 	}
 
 	.featured img {
