@@ -358,13 +358,13 @@ body > header {
 	bottom:41px; left:0; right:0; /* should match with height of nav */
 }
 
-.main-nav {
+nav.main-nav {
 	position:absolute;
 	z-index:999;
 	bottom:0; left:0; right:0;
 }
 
-.main-nav {
+nav.main-nav {
 	text-align:center;
 	a {
 		display:inline-block;
@@ -431,9 +431,8 @@ body > header {
 .exhaustive.icons a:first-child { /* Smaller left margin for longer icon list */
 	margin-left:10%;
 }
-nav {
+nav.main-nav {
 	position:relative; /* so it can contain an absolute */
-	background:rgba(255,255,255,0.85);
 	text-align:right;
 	height:41px;		/* should match with .icons.popular */
 
@@ -442,7 +441,7 @@ nav {
 	}
 }
 
-.main-nav  { /* total height 41px */
+nav.main-nav  { /* total height 41px */
 	svg, img {
 	height:25px;	/* 25px minimum for apple logo guidelines */
 	padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
@@ -635,7 +634,7 @@ main {
 	background:$colorWhite;
 }
 
-nav {
+nav.main-nav {
 	background:rgba(255,255,255,0.85);
 }
 
