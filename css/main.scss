@@ -348,7 +348,7 @@ body > header {
 	bottom:41px; left:0; right:0; /* should match with height of nav */
 }
 
-nav.main-nav {
+.quick-stream {
 	position:absolute;
 	z-index:999;
 	bottom:0; left:0; right:0;
@@ -611,7 +611,7 @@ main {
 	background:$colorWhite;
 }
 
-nav.main-nav {
+.quick-stream {
 	background:rgba(255,255,255,0.85);
 }
 
