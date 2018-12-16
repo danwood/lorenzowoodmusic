@@ -1,328 +1,271 @@
-|<?php
-//- We could show an initial warning that downloads from iOS don't go into the library directly?
-//-$iOSDevice = false; // or set to a non-false text value
-//-if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $_SERVER['HTTP_USER_AGENT'], $matches)) {
-//-	$iOSDevice = substr($matches[1], 1);
-//-}
-|$code = isset($_GET['code']) ? htmlspecialchars($_GET['code']) : '';
-|$email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
-|?>
+extends _layout.pug
+
+block prelude
+	|<?php
+	//- We could show an initial warning that downloads from iOS don't go into the library directly?
+	//-$iOSDevice = false; // or set to a non-false text value
+	//-if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $_SERVER['HTTP_USER_AGENT'], $matches)) {
+	//-	$iOSDevice = substr($matches[1], 1);
+	//-}
+	|$code = isset($_GET['code']) ? htmlspecialchars($_GET['code']) : '';
+	|$email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
+	|?>
+
+
+block vars
+	- var title = 'Lorenzo Wood Music — Official Site'
+	- var current = 'Home'
+	- var description = 'Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.'
+
+block append links
+	link(rel="prefetch" href="//code.jquery.com")
+	link(rel="prefetch" href="//w.soundcloud.com")
+	link(rel="prefetch" href="//img.youtube.com")
 
 //- REMINDER: DASH AFTER SLASH-SLASH HIDES COMMENTS FROM PUG COMPILER
 
-doctype html
-html(class="no-js", lang="en-us")
-	head
-		meta(charset="utf-8")
-		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
-		title Lorenzo Wood Music — Official Site
-		meta(name="description"
-			content="Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
-		link(rel="apple-touch-icon" href="icon.png")
-		link(rel="stylesheet" href="css/main.121618.css")
-		link(rel="prefetch" href="//code.jquery.com")
-		link(rel="prefetch" href="//w.soundcloud.com")
-		link(rel="prefetch" href="//img.youtube.com")
-
-	body.Home
-		<!--[if lt IE 9]>
-			p.browserupgrade.
-				You are using an #[strong outdated] browser. Please
-				#[a(href="http://browsehappy.com/") upgrade your browser]
-				to improve your experience.
-		<![endif]-->
+//-.info(style="position:absolute; top:0; left:0; width:100%; height:20px; color:red;z-index:9999")
 
 
-		//-.info(style="position:absolute; top:0; left:0; width:100%; height:20px; color:red;z-index:9999")
+block append header
+	.hero
+		picture
+			source(srcset="img/beach.webp 1920w" type="image/webp")
+			source(srcset="img/beach.jpg 1920w, img/beach50.jpg 960w, img/beach33.jpg 640w")
+			img(src="img/beach.jpg" alt="Lorenzo Wood")
+	.featured
+		a(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
+			img(src="album_art/now_in_control.jpg" alt="EP thumbnail")
+		div Buy the new EP here
 
-		//- Hamburger menu lives outside of main document flow.
-		//- For CSS, we want these elements to be siblings, and nav under header
-		input#navigation(type="checkbox")
-		label.hamburger(for="navigation")
-			include svg/hamburger.svg
+	.icons.popular.safe-area-only
+		a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
+			include svg/instagram.svg
+		a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
+			include svg/facebook.svg
+		a(data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood")
+			include svg/snapchat.svg
+		a(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
+			include svg/twitter.svg
+		a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
+			include svg/youtube.svg
+		a(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
+			include svg/soundcloud.svg
+		//- NOTE: I tried using SVG 'defs' and 'use' to reduce duplication, but somehow
+		//- the svg elements got a width of 300px that messed everything up.
 
-		header#main-header
+	.quick-stream.clearfix.safe-area-only
 
-			h1.ir Lorenzo Wood Music
-			.logo
-				include svg/lorenzowoodmusic.svg
+		a(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
+			//- Apple marketing guidelines for lockup images:
+			//- minimum 25px tall, 25% of height margin
+			include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
+		a(data-title="Stream on Apple Music" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?mt=1&app=music&at=1000lKSp")
+			include svg/Apple_Music_lockup_RGB_blk.svg
+		a.needs-medium(data-title="Stream on Spotify" href="https://open.spotify.com/album/1SbBCWfrhKUrgp8AqDvESa?si=BmIlypbURYms7AmVbjOpMw")
+			include svg/spotify-text.svg
+		a.needs-medium(data=title="Buy CD" title="Buy CD shipped to you" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
+			img(alt="CD" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAvVBMVEVHcEyXmJWvr66hn5+ipaCrq6Z4eHiZmZn7r3qxsbHHso+cnJyzs7OoqKiQkJCenZues+q224KrtorGxcbT04XiwIm2trau3JOo0qSZttK5ubnu7+7n5+jh4eDAwMCzs7KTk5Ojo6Orq6vNzc3T09OJiYnZ2tr29fX8x5v/42uBgYGcnJz/x3P/1m3X/G+DzuvS5O7Gxsa0zfLwzLfy38um9Z//7m227NZvb2/u9G2y/X6H4djjz3iX7LzA/20ZcI3aAAAAGnRSTlMAx/6LZqH+Bf4r/kG0/fXs/fz+ufnM8Ne90GUkxEEAAAMXSURBVHhefdZnk6sgFAbgiBBjTN0kWyj2lt63lv//sy6gmwA615l8yfjMe9ADno52OeLnQrRYzOfz6dMzgq78S7vJBK696G22y9fXj93u8/rztX+xXQ2Zwhv0e73NZrtdLj92v5LsT5OZpxgduMjPz4JsVDI5FfnAFagp4GNyTJImORBSJFAYUyDf949Jem4URgilhA240YUzwAEWJDVTDgUnjJIZv0kXwbAieamliBAiDKOKEXgAorgmFy1FhBAqCNNrQ8P1jbBSSyFFnZIHMbqHwChUyEUlh0pQmgfrcAh5jBTuOFQJKxUiQwgXOIrW4ditS0NhppCcXu7krSiKSoA4Wo/WqArxwlWoEkbvyyeSkNzHASdhFnoyBmWZQc68LyV5q8XxRmSMO1oZhNDt9/d8Ov28kkIYltzIKnQ5sbOuTihL+g/9B3HlUqQKyWy+Fmulp7AUg6AvSRAcScFylaws/oSzrk5SAHBkQQ/aVuAHPtNJN3M7MHvXSApibFXPxYGRH2OTwI690lPwEPNsThyuvAjHiU5WdsfqaiSJwbrK6AhkYxDopGuZxB9iVAsZNeYxJhm9awQPY6huCwvHR428jzqhTni+p+4+G8e+TsL/E6eNNAsDUElpLcx6N5dvVaDeSkFz+c2HLCqrRetDbnuVY1e8E4cLGAfNV9naMGNYpdgxbmuYZlsGvBstG0I0xhjgZls2m59QH2DR+v0+AD6jzeY3txgtCpICLgRKCTFSMtvcyCklYvNep9Pp/Hu7vRAqiLmRHZSt/khCiSCH6+fv7uP1dVmaKSEyDqVaFG8VWS55jEHqbkLhSBCQUCrN4edGSrUwefTdD9goimvBQ+5kc6EKkQescownjElTHL4UclaIPMbvHwshWJVyUslGKSxG2kcsZ3mdQvcaOf+RIRjwGxUzozJFhOikrAnAldCNTKETnfTOFfFrodXGiCCnvUFKQY4+ksIcFZKC8BCT9M5pkj7C9vHCnbHiMJmYpGRHZSAxkTebGCnCDDwDmMPVy43wvtz0Fo3hqn2Ee37izT9fLFpHuH/owvx7H54uxAAAAABJRU5ErkJggg==")
+			span Buy CD
 
-			mixin navLink(link, name)
-				li: a(
-					href=link
-					class={active: name === current}
-				) #{name}
+block main
 
-			nav.page-menu
-				ul
-					+navLink('/', 'Home')
-					+navLink('projects/', 'Projects')
-					+navLink('photos.html', 'Photos')
-					+navLink('videos.html', 'Videos')
-					+navLink('studio.html', 'Studio')
-					+navLink('booking.html', 'Booking')
+	aside.redeem
+		form#redeem-form
+			input#redeem-input(type="text" name="code" placeholder="Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
+			input(type="hidden" name="email" value!="<?php echo htmlspecialchars($email); ?>")
+			input#form-album(type="hidden" name="album" value="3948")
+			input#redeem-submit(type="submit" value="" name="submit")
 
-			.hero
-				picture
-					source(srcset="img/beach.webp 1920w" type="image/webp")
-					source(srcset="img/beach.jpg 1920w, img/beach50.jpg 960w, img/beach33.jpg 640w")
-					img(src="img/beach.jpg" alt="Lorenzo Wood")
-			.featured
-				a(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
-					img(src="album_art/now_in_control.jpg" alt="EP thumbnail")
-				div Buy the new EP here
+	aside.epk.download
+		a(href="EPK.zip") Electronic Press Kit
 
-			.icons.popular.safe-area-only
-				a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
-					include svg/instagram.svg
-				a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
-					include svg/facebook.svg
-				a(data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood")
-					include svg/snapchat.svg
-				a(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
-					include svg/twitter.svg
-				a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
-					include svg/youtube.svg
-				a(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
-					include svg/soundcloud.svg
-				//- NOTE: I tried using SVG 'defs' and 'use' to reduce duplication, but somehow
-				//- the svg elements got a width of 300px that messed everything up.
-
-			.quick-stream.clearfix.safe-area-only
-
-				a(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
-					//- Apple marketing guidelines for lockup images:
-					//- minimum 25px tall, 25% of height margin
-					include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
-				a(data-title="Stream on Apple Music" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?mt=1&app=music&at=1000lKSp")
-					include svg/Apple_Music_lockup_RGB_blk.svg
-				a.needs-medium(data-title="Stream on Spotify" href="https://open.spotify.com/album/1SbBCWfrhKUrgp8AqDvESa?si=BmIlypbURYms7AmVbjOpMw")
-					include svg/spotify-text.svg
-				a.needs-medium(data=title="Buy CD" title="Buy CD shipped to you" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
-					img(alt="CD" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAvVBMVEVHcEyXmJWvr66hn5+ipaCrq6Z4eHiZmZn7r3qxsbHHso+cnJyzs7OoqKiQkJCenZues+q224KrtorGxcbT04XiwIm2trau3JOo0qSZttK5ubnu7+7n5+jh4eDAwMCzs7KTk5Ojo6Orq6vNzc3T09OJiYnZ2tr29fX8x5v/42uBgYGcnJz/x3P/1m3X/G+DzuvS5O7Gxsa0zfLwzLfy38um9Z//7m227NZvb2/u9G2y/X6H4djjz3iX7LzA/20ZcI3aAAAAGnRSTlMAx/6LZqH+Bf4r/kG0/fXs/fz+ufnM8Ne90GUkxEEAAAMXSURBVHhefdZnk6sgFAbgiBBjTN0kWyj2lt63lv//sy6gmwA615l8yfjMe9ADno52OeLnQrRYzOfz6dMzgq78S7vJBK696G22y9fXj93u8/rztX+xXQ2Zwhv0e73NZrtdLj92v5LsT5OZpxgduMjPz4JsVDI5FfnAFagp4GNyTJImORBSJFAYUyDf949Jem4URgilhA240YUzwAEWJDVTDgUnjJIZv0kXwbAieamliBAiDKOKEXgAorgmFy1FhBAqCNNrQ8P1jbBSSyFFnZIHMbqHwChUyEUlh0pQmgfrcAh5jBTuOFQJKxUiQwgXOIrW4ditS0NhppCcXu7krSiKSoA4Wo/WqArxwlWoEkbvyyeSkNzHASdhFnoyBmWZQc68LyV5q8XxRmSMO1oZhNDt9/d8Ov28kkIYltzIKnQ5sbOuTihL+g/9B3HlUqQKyWy+Fmulp7AUg6AvSRAcScFylaws/oSzrk5SAHBkQQ/aVuAHPtNJN3M7MHvXSApibFXPxYGRH2OTwI690lPwEPNsThyuvAjHiU5WdsfqaiSJwbrK6AhkYxDopGuZxB9iVAsZNeYxJhm9awQPY6huCwvHR428jzqhTni+p+4+G8e+TsL/E6eNNAsDUElpLcx6N5dvVaDeSkFz+c2HLCqrRetDbnuVY1e8E4cLGAfNV9naMGNYpdgxbmuYZlsGvBstG0I0xhjgZls2m59QH2DR+v0+AD6jzeY3txgtCpICLgRKCTFSMtvcyCklYvNep9Pp/Hu7vRAqiLmRHZSt/khCiSCH6+fv7uP1dVmaKSEyDqVaFG8VWS55jEHqbkLhSBCQUCrN4edGSrUwefTdD9goimvBQ+5kc6EKkQescownjElTHL4UclaIPMbvHwshWJVyUslGKSxG2kcsZ3mdQvcaOf+RIRjwGxUzozJFhOikrAnAldCNTKETnfTOFfFrodXGiCCnvUFKQY4+ksIcFZKC8BCT9M5pkj7C9vHCnbHiMJmYpGRHZSAxkTebGCnCDDwDmMPVy43wvtz0Fo3hqn2Ee37izT9fLFpHuH/owvx7H54uxAAAAABJRU5ErkJggg==")
-					span Buy CD
+	section.mailing-section
+		div.centered
+			form.validate(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&amp;id=1c68d63e9a"
+				method="post"
+				name="mc-embedded-subscribe-form"
+				target="_blank")
+				//- Use raw HTML here since the escaping happens too early when processed by pug
+				<input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Email address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+				input#mce-FNAME(type="text" name="FNAME" placeholder="First Name")
+				input#mce-LNAME(type="text" name="LNAME" placeholder="Last Name")
+				span.ir(aria-hidden="true")
+					input(class="ir" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
+				input.button(type="submit" value="Subscribe to Announcement Email List" name="subscribe")
 
 
-		main
+	section.bio
+		header.ir(aria-hidden="true")
+			h2 Bio
+		article.textual
 
-			aside.redeem
-				form#redeem-form
-					input#redeem-input(type="text" name="code" placeholder="Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
-					input(type="hidden" name="email" value!="<?php echo htmlspecialchars($email); ?>")
-					input#form-album(type="hidden" name="album" value="3948")
-					input#redeem-submit(type="submit" value="" name="submit")
+			//- Try to match meta description above with text below
+			p.
+				Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums,
+				piano/keyboards, bass, and, in an emergency, ukulele. He also beat-boxes, and uses a looper
+				for live performances. He writes and co-writes his own songs. He produces and
+				records his music (using Apple Logic) and creates live performance videos.
+			p.
+				Lorenzo started learning to play the drums at the age of four. At the age of seven, he
+				performed in children’s musical theatre productions, and restarted
+				#[a(href="http://www.tomorrowyouthrep.org/") performances] at age
+				eleven, including key roles in #[em Annie], #[em High School Musical], and
+				#[em Into the Woods]. He later took music/piano lessons and voice lessons. He is entirely self-taught on guitar.
+			p.
+				Lorenzo lists
+				#[a(href="http://www.maroon5.com") Maroon 5],
+				#[a(href="http://www.shawnmendesofficial.com") Shawn Mendes],
+				#[a(href="http://www.jamestaylor.com") James Taylor],
+				#[a(href="http://www.johnmayer.com") John Mayer],
+				#[a(href="http://www.thebeatles.com") The Beatles],
+				#[a(href="http://samsmithworld.com") Sam Smith],
+				#[a(href="http://www.niallhoran.com") Niall Horan], and
+				#[a(href="http://www.savemesanfrancisco.com") Train]
+				as his musical influences.
+			p.
+				Lorenzo has been busking at local street festivals or busy streets since age 13.
+				He frequently performs on stage, solo or with his band (also teen musicians) and
+				sits in with other bands as drummer. He also has practical
+				experience in audio engineering, having worked at professional live sound events.
+				He has also started helping other local artists record their own songs in his home studio.
+			p.
+				He recently recorded and produced his first EP, <i>Now In Control</i>, released May 2018.
 
-			aside.epk.download
-				a(href="EPK.zip") Electronic Press Kit
+			//- Bands in Town content gets loaded here from cache.
+			|<?php include 'CACHE/bandsintown.html'; ?>
 
-			section.mailing-section
-				div.centered
-					form.validate(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&amp;id=1c68d63e9a"
-						method="post"
-						name="mc-embedded-subscribe-form"
-						target="_blank")
-						//- Use raw HTML here since the escaping happens too early when processed by pug
-						<input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Email address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-						input#mce-FNAME(type="text" name="FNAME" placeholder="First Name")
-						input#mce-LNAME(type="text" name="LNAME" placeholder="Last Name")
-						span.ir(aria-hidden="true")
-							input(class="ir" type="text" name="b_3fb2f947fceaaa94b99d40919_1c68d63e9a" tabindex="-1")
-						input.button(type="submit" value="Subscribe to Announcement Email List" name="subscribe")
-
-
-			section.bio
-				header.ir(aria-hidden="true")
-					h2 Bio
-				article.textual
-
-					//- Try to match meta description above with text below
-					p.
-						Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums,
-						piano/keyboards, bass, and, in an emergency, ukulele. He also beat-boxes, and uses a looper
-						for live performances. He writes and co-writes his own songs. He produces and
-						records his music (using Apple Logic) and creates live performance videos.
-					p.
-						Lorenzo started learning to play the drums at the age of four. At the age of seven, he
-						performed in children’s musical theatre productions, and restarted
-						#[a(href="http://www.tomorrowyouthrep.org/") performances] at age
-						eleven, including key roles in #[em Annie], #[em High School Musical], and
-						#[em Into the Woods]. He later took music/piano lessons and voice lessons. He is entirely self-taught on guitar.
-					p.
-						Lorenzo lists
-						#[a(href="http://www.maroon5.com") Maroon 5],
-						#[a(href="http://www.shawnmendesofficial.com") Shawn Mendes],
-						#[a(href="http://www.jamestaylor.com") James Taylor],
-						#[a(href="http://www.johnmayer.com") John Mayer],
-						#[a(href="http://www.thebeatles.com") The Beatles],
-						#[a(href="http://samsmithworld.com") Sam Smith],
-						#[a(href="http://www.niallhoran.com") Niall Horan], and
-						#[a(href="http://www.savemesanfrancisco.com") Train]
-						as his musical influences.
-					p.
-						Lorenzo has been busking at local street festivals or busy streets since age 13.
-						He frequently performs on stage, solo or with his band (also teen musicians) and
-						sits in with other bands as drummer. He also has practical
-						experience in audio engineering, having worked at professional live sound events.
-						He has also started helping other local artists record their own songs in his home studio.
-					p.
-						He recently recorded and produced his first EP, <i>Now In Control</i>, released May 2018.
-
-					//- Bands in Town content gets loaded here from cache.
-					|<?php include 'CACHE/bandsintown.html'; ?>
-
-					//-p
-					//-	span.bandsintown-button
-					//-		a(href="https://www.bandsintown.com/track/lorenzowoodmusic")
-					//-			include svg/bandsintown.svg
-					//-			| Track Lorenzo Wood on BandsInTown
-					//-	|
-					//-	|to be notified of upcoming gigs!
+			//-p
+			//-	span.bandsintown-button
+			//-		a(href="https://www.bandsintown.com/track/lorenzowoodmusic")
+			//-			include svg/bandsintown.svg
+			//-			| Track Lorenzo Wood on BandsInTown
+			//-	|
+			//-	|to be notified of upcoming gigs!
 
 
 
-			section.instagram-section.requires-js.maximize-mobile
-				header
-					h2 Instagram
-				article
-					#lightweight_widget
-				footer
-					h3
-						a(href="https://instagram.com/LorenzoWoodMusic") More from Instagram
+	section.instagram-section.requires-js.maximize-mobile
+		header
+			h2 Instagram
+		article
+			#lightweight_widget
+		footer
+			h3
+				a(href="https://instagram.com/LorenzoWoodMusic") More from Instagram
 
 
 
-			section.soundcloud-section.balance-footer.requires-js.maximize-mobile
-				header.ir(aria-hidden="true")
-					h2 SoundCloud
+	section.soundcloud-section.balance-footer.requires-js.maximize-mobile
+		header.ir(aria-hidden="true")
+			h2 SoundCloud
 
-				//- Wounded, Believer, Trip Switch
+		//- Wounded, Believer, Trip Switch
 
-				article.clearfix
-					each code in ['441734649', '423059013','386311568']
-						.soundcloud-column
-							.soundcloud-proxy(data-code=code)
-				footer
-					h3
-						a(href="https://soundcloud.com/LorenzoWoodMusic") More from SoundCloud
-
-
-
-			section.youtube-section.balance-footer.requires-js.maximize-mobile
-				header.ir(aria-hidden="true")
-					h2 YouTube
-
-				article.clearfix
-					each info in ['70I6bRqtJfI:Shawn Mendes - In My Blood (Live Acoustic Cover)', 'ZMnSrxiWkBs:In The Air Tonight by Phil Collins (cover by Lorenzo Wood)']
-						.youtube-column
-							.youtube(data-embed=info)
-
-				footer
-					h3
-						a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
-
-			section.download-section
-
-				article.textual.clearfix
-					.side-photo
-						img.shadowed(src="album_art/now_in_control.jpg" alt="EP thumbnail")
-					.next-to-side-photo
-						.next-to-side-photo-padded
-							div
-								a.buy-button(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
-									| Buy “Now In Control” EP
-							div
-								a(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
-									//- Apple marketing guidelines for lockup images:
-									//- minimum 25px tall, 25% of height margin
-									include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
-							//-div
-							//-	a.disabled(data-title="Buy on Amazon Music" href="")
-							//-		include svg/amazon-music.svg
-							div
-								a(data-title="Stream on Google Play" href="https://play.google.com/store/music/artist/Lorenzo_Wood?id=An7ymzwbymdsefsxsdls3ffz56u")
-									include svg/google-play.svg
-							div
-								a(data-title="Stream on Apple Music" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?mt=1&app=music&at=1000lKSp")
-									include svg/Apple_Music_lockup_RGB_blk.svg
-							div
-								a(data-title="Stream on Spotify" href="https://open.spotify.com/album/1SbBCWfrhKUrgp8AqDvESa?si=BmIlypbURYms7AmVbjOpMw")
-									include svg/spotify-text.svg
-							div
-								a(data=title="Buy CD" title="Buy CD shipped to you" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
-									img(alt="CD" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAvVBMVEVHcEyXmJWvr66hn5+ipaCrq6Z4eHiZmZn7r3qxsbHHso+cnJyzs7OoqKiQkJCenZues+q224KrtorGxcbT04XiwIm2trau3JOo0qSZttK5ubnu7+7n5+jh4eDAwMCzs7KTk5Ojo6Orq6vNzc3T09OJiYnZ2tr29fX8x5v/42uBgYGcnJz/x3P/1m3X/G+DzuvS5O7Gxsa0zfLwzLfy38um9Z//7m227NZvb2/u9G2y/X6H4djjz3iX7LzA/20ZcI3aAAAAGnRSTlMAx/6LZqH+Bf4r/kG0/fXs/fz+ufnM8Ne90GUkxEEAAAMXSURBVHhefdZnk6sgFAbgiBBjTN0kWyj2lt63lv//sy6gmwA615l8yfjMe9ADno52OeLnQrRYzOfz6dMzgq78S7vJBK696G22y9fXj93u8/rztX+xXQ2Zwhv0e73NZrtdLj92v5LsT5OZpxgduMjPz4JsVDI5FfnAFagp4GNyTJImORBSJFAYUyDf949Jem4URgilhA240YUzwAEWJDVTDgUnjJIZv0kXwbAieamliBAiDKOKEXgAorgmFy1FhBAqCNNrQ8P1jbBSSyFFnZIHMbqHwChUyEUlh0pQmgfrcAh5jBTuOFQJKxUiQwgXOIrW4ditS0NhppCcXu7krSiKSoA4Wo/WqArxwlWoEkbvyyeSkNzHASdhFnoyBmWZQc68LyV5q8XxRmSMO1oZhNDt9/d8Ov28kkIYltzIKnQ5sbOuTihL+g/9B3HlUqQKyWy+Fmulp7AUg6AvSRAcScFylaws/oSzrk5SAHBkQQ/aVuAHPtNJN3M7MHvXSApibFXPxYGRH2OTwI690lPwEPNsThyuvAjHiU5WdsfqaiSJwbrK6AhkYxDopGuZxB9iVAsZNeYxJhm9awQPY6huCwvHR428jzqhTni+p+4+G8e+TsL/E6eNNAsDUElpLcx6N5dvVaDeSkFz+c2HLCqrRetDbnuVY1e8E4cLGAfNV9naMGNYpdgxbmuYZlsGvBstG0I0xhjgZls2m59QH2DR+v0+AD6jzeY3txgtCpICLgRKCTFSMtvcyCklYvNep9Pp/Hu7vRAqiLmRHZSt/khCiSCH6+fv7uP1dVmaKSEyDqVaFG8VWS55jEHqbkLhSBCQUCrN4edGSrUwefTdD9goimvBQ+5kc6EKkQescownjElTHL4UclaIPMbvHwshWJVyUslGKSxG2kcsZ3mdQvcaOf+RIRjwGxUzozJFhOikrAnAldCNTKETnfTOFfFrodXGiCCnvUFKQY4+ksIcFZKC8BCT9M5pkj7C9vHCnbHiMJmYpGRHZSAxkTebGCnCDDwDmMPVy43wvtz0Fo3hqn2Ee37izT9fLFpHuH/owvx7H54uxAAAAABJRU5ErkJggg==")
-									span Buy CD
+		article.clearfix
+			each code in ['441734649', '423059013','386311568']
+				.soundcloud-column
+					.soundcloud-proxy(data-code=code)
+		footer
+			h3
+				a(href="https://soundcloud.com/LorenzoWoodMusic") More from SoundCloud
 
 
 
-			section.contact-section
-				article.textual.clearfix
-					.side-photo
-						picture
-							source(srcset="img/southshore.webp 990w" type="image/webp")
-							source(srcset="img/southshore.jpg 990w, img/southshore50.jpg 495w")
-							img(src="img/southshore.jpg" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
-					.next-to-side-photo
-						.next-to-side-photo-padded
-							header
-								h2 Contact Lorenzo Wood Music
-							p.
-								Book a gig, suggest a collaboration or song, or just say hi!
-							.input-form
-								form#contact-form(action="https://jumprock.co/mail/lozobooking" method="post")
-									div
-										//- Use raw HTML here since the escaping happens too early when processed by pug
-										<input type="email" name="email" id="email" placeholder="Email Address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-									div: textarea(type="text" id="message" name="message" rows="10" cols="40" required="required")
-									div
-										input(type="text" name="trapit" class="trapit")
-										input(type="hidden" name="replyto" value="%email")
-										input.button(type="submit" value="Contact us")
+	section.youtube-section.balance-footer.requires-js.maximize-mobile
+		header.ir(aria-hidden="true")
+			h2 YouTube
 
+		article.clearfix
+			each info in ['70I6bRqtJfI:Shawn Mendes - In My Blood (Live Acoustic Cover)', 'ZMnSrxiWkBs:In The Air Tonight by Phil Collins (cover by Lorenzo Wood)']
+				.youtube-column
+					.youtube(data-embed=info)
 
 		footer
+			h3
+				a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
 
-			.icons.exhaustive.safe-area-only
-				a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
-					include svg/instagram.svg
-				a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
-					include svg/facebook.svg
-				a(data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood")
-					include svg/snapchat.svg
-				a(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
-					include svg/twitter.svg
-				a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
-					include svg/youtube.svg
-				a(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
-					include svg/soundcloud.svg
-				a(data-title="Reverb Nation" href="https://www.reverbnation.com/lorenzowoodmusic")
-					include svg/reverbnation.svg
-				a(data-title="Bands in Town" href="https://bandsintown.com/lorenzowoodmusic")
-					include svg/bandsintown.svg
-			p
-				b Copyright © 2017-2019 Lorenzo Wood
-				span.dimmer &nbsp; Photo credits: Lucy Gigli, David Weintraub
-			p.js-required.
-				JavaScript is disabled in your browser; please enable it to see missing content.
+	section.download-section
 
-		#cover(style="display:none")
-		#redeemer(style="display:none")
-		#close-redeem(style="display:none") &#215;
+		article.textual.clearfix
+			.side-photo
+				img.shadowed(src="album_art/now_in_control.jpg" alt="EP thumbnail")
+			.next-to-side-photo
+				.next-to-side-photo-padded
+					div
+						a.buy-button(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
+							| Buy “Now In Control” EP
+					div
+						a(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
+							//- Apple marketing guidelines for lockup images:
+							//- minimum 25px tall, 25% of height margin
+							include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
+					//-div
+					//-	a.disabled(data-title="Buy on Amazon Music" href="")
+					//-		include svg/amazon-music.svg
+					div
+						a(data-title="Stream on Google Play" href="https://play.google.com/store/music/artist/Lorenzo_Wood?id=An7ymzwbymdsefsxsdls3ffz56u")
+							include svg/google-play.svg
+					div
+						a(data-title="Stream on Apple Music" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?mt=1&app=music&at=1000lKSp")
+							include svg/Apple_Music_lockup_RGB_blk.svg
+					div
+						a(data-title="Stream on Spotify" href="https://open.spotify.com/album/1SbBCWfrhKUrgp8AqDvESa?si=BmIlypbURYms7AmVbjOpMw")
+							include svg/spotify-text.svg
+					div
+						a(data=title="Buy CD" title="Buy CD shipped to you" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
+							img(alt="CD" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAvVBMVEVHcEyXmJWvr66hn5+ipaCrq6Z4eHiZmZn7r3qxsbHHso+cnJyzs7OoqKiQkJCenZues+q224KrtorGxcbT04XiwIm2trau3JOo0qSZttK5ubnu7+7n5+jh4eDAwMCzs7KTk5Ojo6Orq6vNzc3T09OJiYnZ2tr29fX8x5v/42uBgYGcnJz/x3P/1m3X/G+DzuvS5O7Gxsa0zfLwzLfy38um9Z//7m227NZvb2/u9G2y/X6H4djjz3iX7LzA/20ZcI3aAAAAGnRSTlMAx/6LZqH+Bf4r/kG0/fXs/fz+ufnM8Ne90GUkxEEAAAMXSURBVHhefdZnk6sgFAbgiBBjTN0kWyj2lt63lv//sy6gmwA615l8yfjMe9ADno52OeLnQrRYzOfz6dMzgq78S7vJBK696G22y9fXj93u8/rztX+xXQ2Zwhv0e73NZrtdLj92v5LsT5OZpxgduMjPz4JsVDI5FfnAFagp4GNyTJImORBSJFAYUyDf949Jem4URgilhA240YUzwAEWJDVTDgUnjJIZv0kXwbAieamliBAiDKOKEXgAorgmFy1FhBAqCNNrQ8P1jbBSSyFFnZIHMbqHwChUyEUlh0pQmgfrcAh5jBTuOFQJKxUiQwgXOIrW4ditS0NhppCcXu7krSiKSoA4Wo/WqArxwlWoEkbvyyeSkNzHASdhFnoyBmWZQc68LyV5q8XxRmSMO1oZhNDt9/d8Ov28kkIYltzIKnQ5sbOuTihL+g/9B3HlUqQKyWy+Fmulp7AUg6AvSRAcScFylaws/oSzrk5SAHBkQQ/aVuAHPtNJN3M7MHvXSApibFXPxYGRH2OTwI690lPwEPNsThyuvAjHiU5WdsfqaiSJwbrK6AhkYxDopGuZxB9iVAsZNeYxJhm9awQPY6huCwvHR428jzqhTni+p+4+G8e+TsL/E6eNNAsDUElpLcx6N5dvVaDeSkFz+c2HLCqrRetDbnuVY1e8E4cLGAfNV9naMGNYpdgxbmuYZlsGvBstG0I0xhjgZls2m59QH2DR+v0+AD6jzeY3txgtCpICLgRKCTFSMtvcyCklYvNep9Pp/Hu7vRAqiLmRHZSt/khCiSCH6+fv7uP1dVmaKSEyDqVaFG8VWS55jEHqbkLhSBCQUCrN4edGSrUwefTdD9goimvBQ+5kc6EKkQescownjElTHL4UclaIPMbvHwshWJVyUslGKSxG2kcsZ3mdQvcaOf+RIRjwGxUzozJFhOikrAnAldCNTKETnfTOFfFrodXGiCCnvUFKQY4+ksIcFZKC8BCT9M5pkj7C9vHCnbHiMJmYpGRHZSAxkTebGCnCDDwDmMPVy43wvtz0Fo3hqn2Ee37izT9fLFpHuH/owvx7H54uxAAAAABJRU5ErkJggg==")
+							span Buy CD
 
-		#scroll-arrow.scrolldown.bounce(style="display:none")
-			a.down-arrow(href="#")
-				include svg/downarrow.svg
 
-		script(
-			src="https://code.jquery.com/jquery-3.3.1.min.js"
-			integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
-			crossorigin="anonymous")
-		script.
-			window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\\/script>')
-		script
-			include js/index-min.js
 
-		script.
-			<?php if ($code) { ?>$('#redeem-form').submit();<?php } ?>
-		<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"Lorenzo Wood","url":"https://www.lorenzowoodmusic.com/","sameAs":["https://www.facebook.com/lorenzowoodmusic/","https://twitter.com/lorenzowmusic","https://www.instagram.com/LorenzoWoodMusic/","https://www.youtube.com/lorenzowoodmusic","https://soundcloud.com/LorenzoWoodMusic","https://itunes.apple.com/us/artist/lorenzo-wood/1262743720","https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA?si=kAr7Wf29R7WkScnbG9d2dg"]}</script>
+	section.contact-section
+		article.textual.clearfix
+			.side-photo
+				picture
+					source(srcset="img/southshore.webp 990w" type="image/webp")
+					source(srcset="img/southshore.jpg 990w, img/southshore50.jpg 495w")
+					img(src="img/southshore.jpg" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
+			.next-to-side-photo
+				.next-to-side-photo-padded
+					header
+						h2 Contact Lorenzo Wood Music
+					p.
+						Book a gig, suggest a collaboration or song, or just say hi!
+					.input-form
+						form#contact-form(action="https://jumprock.co/mail/lozobooking" method="post")
+							div
+								//- Use raw HTML here since the escaping happens too early when processed by pug
+								<input type="email" name="email" id="email" placeholder="Email Address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+							div: textarea(type="text" id="message" name="message" rows="10" cols="40" required="required")
+							div
+								input(type="text" name="trapit" class="trapit")
+								input(type="hidden" name="replyto" value="%email")
+								input.button(type="submit" value="Contact us")
+
+block more-credits
+	span.dimmer &nbsp; Photo credits: Lucy Gigli, David Weintraub
+
+block additional-html
+	#cover(style="display:none")
+	#redeemer(style="display:none")
+	#close-redeem(style="display:none") &#215;
+
+	#scroll-arrow.scrolldown.bounce(style="display:none")
+		a.down-arrow(href="#")
+			include svg/downarrow.svg
+
+block scripts
+	script(
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+		crossorigin="anonymous")
+	script.
+		window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\\/script>')
+	script
+		include js/index-min.js
+
+	script.
+		<?php if ($code) { ?>$('#redeem-form').submit();<?php } ?>
+	<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"Lorenzo Wood","url":"https://www.lorenzowoodmusic.com/","sameAs":["https://www.facebook.com/lorenzowoodmusic/","https://twitter.com/lorenzowmusic","https://www.instagram.com/LorenzoWoodMusic/","https://www.youtube.com/lorenzowoodmusic","https://soundcloud.com/LorenzoWoodMusic","https://itunes.apple.com/us/artist/lorenzo-wood/1262743720","https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA?si=kAr7Wf29R7WkScnbG9d2dg"]}</script>
 

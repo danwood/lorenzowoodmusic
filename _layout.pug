@@ -1,3 +1,4 @@
+block prelude
 doctype html
 block vars
 html(class="no-js", lang="en-us")
@@ -29,7 +30,7 @@ html(class="no-js", lang="en-us")
 
 
 		block header
-			header
+			header#main-header
 
 				h1.ir Lorenzo Wood Music
 				.logo
@@ -76,10 +77,12 @@ html(class="no-js", lang="en-us")
 					include svg/bandsintown.svg
 			p
 				b Copyright © 2017-2018 Lorenzo Wood
-				//- POSSIBLE TO ADD: span.dimmer
+				block more-credits
 			p.js-required.
 				JavaScript is disabled in your browser; please enable it to see missing content.
 
+		block additional-html
+		
 		block scripts
 			script.
 				// Modernizer-like
