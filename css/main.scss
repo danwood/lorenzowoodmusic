@@ -133,6 +133,126 @@ a.disabled:hover:after{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Navigation ===== */
+// Based on https://codepen.io/marclloyd77/pen/gtypB
+
+
+section{
+    padding:30px 30px 30px 80px;
+    transition:all 200ms ease-in;
+
+}
+nav.hamburger{
+    position:fixed;
+    top:0;
+    left:0;
+    width:250px;
+    height:100%;
+    margin:0 0 0 -250px;
+    transition:all 200ms ease-in;
+    z-index:1500;
+
+	ul{
+	    width:250px;
+	    height:100%;
+	    padding:0;
+	    margin:0;
+	    list-style:none;
+	    background:#222;
+	    overflow:hidden;
+	}
+	li{
+	    margin:0;
+	    color:#fff
+	}
+	a{
+	    color:#fff;
+	    font-size:1em;
+	    text-decoration:none;
+	    display:block;
+	    padding:12px 15px;
+	    font-weight:300;
+	    letter-spacing:2px;
+	}
+	a:hover{
+	    background:#111;
+	}
+}
+
+label.hamburger{
+    display:block;
+    background:#1ea1b8;
+    padding:10px;
+    position:fixed;
+    top:10px;
+    left:10px;
+    transition:all 200ms ease-in;
+    z-index:1500;
+}
+input#navigation[type="checkbox"]{
+    display:none;
+
+	&:checked ~ nav{
+	    margin:0;
+	}
+	&:checked ~ label{
+	    left:260px;
+	}
+
+
+/*
+	&:checked ~ section{
+	    -webkit-transform:translate3d(260px, 0, 0);
+	    -moz-transform:translate3d(260px, 0, 0);
+	    -o-transform:translate3d(260px, 0, 0);
+	    transform:translate3d(260px, 0, 0);
+	}	
+*/  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===== Geometry ===== */
 
 h3 {

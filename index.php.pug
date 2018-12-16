@@ -18,7 +18,7 @@ html(class="no-js", lang="en-us")
 			content="Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		link(rel="apple-touch-icon" href="icon.png")
-		link(rel="stylesheet" href="css/main.111118.css")
+		link(rel="stylesheet" href="css/main.121618.css")
 		link(rel="prefetch" href="//code.jquery.com")
 		link(rel="prefetch" href="//w.soundcloud.com")
 		link(rel="prefetch" href="//img.youtube.com")
@@ -31,8 +31,23 @@ html(class="no-js", lang="en-us")
 				to improve your experience.
 		<![endif]-->
 
+
 		//-.info(style="position:absolute; top:0; left:0; width:100%; height:20px; color:red;z-index:9999")
 		header#main-header
+
+			// For CSS, we want the input, the label, and the nav to be siblings
+			input#navigation(type="checkbox")
+			label.hamburger(for="navigation")
+				include svg/hamburger.svg
+
+			nav.hamburger
+				ul
+					li: a Home
+					li: a Latest
+					li: a Videos
+					li: a Discography
+					li: a Pizza
+
 
 			h1.ir Lorenzo Wood Music
 			.logo
