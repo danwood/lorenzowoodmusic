@@ -15,51 +15,51 @@
 /**
  * 1. Avoid the IE 10-11 `min-height` bug.
  * 2. Set `flex-shrink` to `0` to prevent some browsers from
- *    letting these items shrink to smaller than their content's default
- *    minimum size. See http://bit.ly/1Mn35US for details.
+ *	letting these items shrink to smaller than their content's default
+ *	minimum size. See http://bit.ly/1Mn35US for details.
  * 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
  */
 
 html, body {
-	height: 100%; /* 1, 3 */
+	height:100%; /* 1, 3 */
 }
 
 body {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-direction: column;
-	flex-direction: column;
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-direction:column;
+	flex-direction:column;
 }
 
 body > header,
 body > footer {
-	-ms-flex: none;
-	flex: none; /* 2 */
+	-ms-flex:none;
+	flex:none; /* 2 */
 }
 
 body > main {
-	-ms-flex: 1 0 auto;
-	flex: 1 0 auto; /* 2 */
+	-ms-flex:1 0 auto;
+	flex:1 0 auto; /* 2 */
 }
 
 html {
-	box-sizing: border-box;
+	box-sizing:border-box;
 }
 
 /* Useful for image replacement */
 .ir {
-	border: 0 !important;
-	font: 0/0 a !important;
-	text-shadow: none !important;
-	color: transparent !important;
-	width: 0 !important;
-	height: 0 !important;
-	padding: 0 !important;
+	border:0 !important;
+	font:0/0 a !important;
+	text-shadow:none !important;
+	color:transparent !important;
+	width:0 !important;
+	height:0 !important;
+	padding:0 !important;
 }
 
 section, .safe-area {
-	padding-left:  1rem;           /* Fallback if safe area not understood */
-	padding-right: 1rem;
+	padding-left:1rem;		   /* Fallback if safe area not understood */
+	padding-right:1rem;
 }
 
 /* For iPhone X. Use @supports per https://webkit.org/blog/7929/designing-websites-for-iphone-x/
@@ -68,27 +68,27 @@ section, .safe-area {
 @supports(padding:max(0px)) {
 	section {
 		// use m#{a}x instead of max to allow this to be compiled with Sass
-		padding-left: m#{a}x(1rem, constant(safe-area-inset-left));
-		padding-right: m#{a}x(1rem, constant(safe-area-inset-right));  /* iOS 11.0, 11.1 … phase out soon */
-		padding-left: m#{a}x(1rem, env(safe-area-inset-left));
-		padding-right: m#{a}x(1rem, env(safe-area-inset-right));       /* iOS 11.2 beta and up */
+		padding-left:m#{a}x(1rem, constant(safe-area-inset-left));
+		padding-right:m#{a}x(1rem, constant(safe-area-inset-right));  /* iOS 11.0, 11.1 … phase out soon */
+		padding-left:m#{a}x(1rem, env(safe-area-inset-left));
+		padding-right:m#{a}x(1rem, env(safe-area-inset-right));	   /* iOS 11.2 beta and up */
 	}
 	.safe-area-only {
-		padding-left:  constant(safe-area-inset-left);
-		padding-right: constant(safe-area-inset-right);  /* iOS 11.0, 11.1 … phase out soon */
-		padding-left:  env(safe-area-inset-left);
-		padding-right: env(safe-area-inset-right);       /* iOS 11.2 beta and up */
+		padding-left:constant(safe-area-inset-left);
+		padding-right:constant(safe-area-inset-right);  /* iOS 11.0, 11.1 … phase out soon */
+		padding-left:env(safe-area-inset-left);
+		padding-right:env(safe-area-inset-right);	   /* iOS 11.2 beta and up */
 	}
 }
 
 /*! Specific */
 
-$colorLink:      #00AEA8;
+$colorLink:	  #00AEA8;
 $colorWarning:   purple;
-$colorWhite:     #ffffff;
+$colorWhite:	 #ffffff;
 $colorWhiteish:  #f5f5f5;
 $colorGrayLight: #bdbdbd;
-$colorGray:      #616161;
+$colorGray:	  #616161;
 $colorGrayDark:  #424242;
 $colorBlackish:  #212121;
 
@@ -97,7 +97,7 @@ $colorBlackish:  #212121;
 /* ===== General ===== */
 
 body {
-	font: 16px/1.6 Helvetica, Helvetica Neue, Arial;
+	font:16px/1.6 Helvetica, Helvetica Neue, Arial;
 }
 
 a.disabled {
@@ -136,72 +136,72 @@ a.disabled:hover:after{
 /* ===== Geometry ===== */
 
 h3 {
-	margin: 0;
-	padding: 1rem 1rem;
-	text-align: right;
+	margin:0;
+	padding:1rem 1rem;
+	text-align:right;
 }
 
 section {
-	padding-top: 1rem;			// don't specify sides since those are handled separately
-	padding-bottom: 1rem;
+	padding-top:1rem;			// don't specify sides since those are handled separately
+	padding-bottom:1rem;
 }
 section.balance-footer {
-	padding-bottom: 0;
+	padding-bottom:0;
 }
 
 /* Debugging
-section:nth-child(even) {background: cyan !important;}
-section:nth-child(odd)  {background: pink !important;}
-section header { background: red;}
-section article { background: yellow;}
-section footer { background: green;}
+section:nth-child(even) {background:cyan !important;}
+section:nth-child(odd)  {background:pink !important;}
+section header { background:red;}
+section article { background:yellow;}
+section footer { background:green;}
 */
 
 iframe {
-	border: none;
+	border:none;
 }
 
 label {
-	display: block;
-	font-weight: bold;
-	margin-bottom: 0.5rem;
+	display:block;
+	font-weight:bold;
+	margin-bottom:0.5rem;
 }
 
 .input-form input,
 .input-form textarea,
 .input-form select {
-	display: inline-block;
-	font-size: 1rem;
-	margin-bottom: 1rem;
-	padding: 0.25rem 0.5rem;
-	width: 95%;    /* Due to padding, make sure it won't overflow */
-	max-width: 30rem;
-	color: $colorBlackish;
+	display:inline-block;
+	font-size:1rem;
+	margin-bottom:1rem;
+	padding:0.25rem 0.5rem;
+	width:95%;	/* Due to padding, make sure it won't overflow */
+	max-width:30rem;
+	color:$colorBlackish;
 }
 
 input[type="submit"] {
-	display: block;
-	text-align: center;
-	color: $colorWhite;
-	background: $colorLink;
-	padding: 6px 2rem;
-	border: none;
-	width: auto;
+	display:block;
+	text-align:center;
+	color:$colorWhite;
+	background:$colorLink;
+	padding:6px 2rem;
+	border:none;
+	width:auto;
 	border-radius:4px;
 }
 
 .embed-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	height: 0; overflow: hidden;
-	max-width: 100%;
+	position:relative;
+	padding-bottom:56.25%;
+	height:0; overflow:hidden;
+	max-width:100%;
 
 	iframe, object, embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
 	}
 }
 
@@ -209,21 +209,21 @@ input[type="submit"] {
 /* for header and footer, full window width but indented a bit */
 
 body > footer p {
-	padding: 20px 5%;
-	margin: 0;
+	padding:20px 5%;
+	margin:0;
 	font-size:80%;
 }
 
 article.textual {
-	margin: 0 auto;
-	padding: 2rem 0;  /* if we use margin above then it messes with background image */
-	max-width: 60rem;
+	margin:0 auto;
+	padding:2rem 0;  /* if we use margin above then it messes with background image */
+	max-width:60rem;
 }
 
 /* ====== Specific Sections ===== */
 
 body > header {
-	position: relative;
+	position:relative;
 }
 
 .logo {
@@ -233,13 +233,13 @@ body > header {
 }
 
 .icons.popular {
-	position: absolute;
+	position:absolute;
 	z-index:999;
 	bottom:41px; left:0; right:0; /* should match with height of nav */
 }
 
 .main-nav {
-	position: absolute;
+	position:absolute;
 	z-index:999;
 	bottom:0; left:0; right:0;
 }
@@ -256,24 +256,24 @@ body > header {
 	}
 }
 .logo svg {
-	padding: 2.5% 0 1.5% 5%;
-	max-width: 67%;
-	max-height: 140px;
+	padding:2.5% 0 1.5% 5%;
+	max-width:67%;
+	max-height:140px;
 }
 
 .hero {
-	width: 100%;
-	height: auto;
+	width:100%;
+	height:auto;
 	overflow:hidden;
 
 	img {
 		position:relative;
 		width:100%;
-		object-fit: cover;
+		object-fit:cover;
 		z-index:-999;
-		top: 0;
-		left: 50%; transform:translatex(-50%); /* center horizontally */
-		filter: grayscale(100%);
+		top:0;
+		left:50%; transform:translatex(-50%); /* center horizontally */
+		filter:grayscale(100%);
 	}
 }
 
@@ -296,20 +296,20 @@ body > header {
 /* Icons (at top and bottom) */
 
 .icons a {
-	width: 10%;
-	display: inline-block;
+	width:10%;
+	display:inline-block;
 
 	svg {
-		margin: 10%;
+		margin:10%;
 	}
 }
 
 
 .popular.icons a:first-child { /* Left margin for shorter icon list */
-	margin-left: 20%;
+	margin-left:20%;
 }
 .exhaustive.icons a:first-child { /* Smaller left margin for longer icon list */
-	margin-left: 10%;
+	margin-left:10%;
 }
 nav {
 	position:relative; /* so it can contain an absolute */
@@ -335,23 +335,23 @@ nav {
 	position:absolute;
 	bottom:0;
 	width:100%;
-	text-align: center;
+	text-align:center;
 	z-index:999;
 }
 
 .bounce {
-	animation: bounce 2s infinite;
+	animation:bounce 2s infinite;
 }
 
 @keyframes bounce {
 	0%, 20%, 50%, 80%, 100% {
-		transform: translateY(0);
+		transform:translateY(0);
 	}
 	40% {
-		transform: translateY(-30px);
+		transform:translateY(-30px);
 	}
 	60% {
-		transform: translateY(-15px);
+		transform:translateY(-15px);
 	}
 }
 
@@ -360,9 +360,9 @@ nav {
 .bit-header-row, .bit-row {
 		@extend .clearfix;
 		padding:6px 0;
-		border-bottom: 1px solid $colorGrayLight;
+		border-bottom:1px solid $colorGrayLight;
 	}
-	.bit-header { font-weight: bold; }
+	.bit-header { font-weight:bold; }
 .bit-header-row svg {
 	float:right;
 }
@@ -379,7 +379,7 @@ nav {
 
 }
 
-	.bit-date { padding-left:5px; text-transform:uppercase; font-weight: bold; display:inline-block; width:7em; }
+	.bit-date { padding-left:5px; text-transform:uppercase; font-weight:bold; display:inline-block; width:7em; }
 	.bit-date, .bit-venue, .bit-citystate {
 		padding-top:10px;
 	}
@@ -420,46 +420,46 @@ nav {
 /* Patreon section */
 
 .patreon-section article {
-	text-align: center;
-	line-height: 1.5;
+	text-align:center;
+	line-height:1.5;
 }
 
 .patreon-button svg {
-	max-width: 1rem;
-	padding: 0 0.3rem;
+	max-width:1rem;
+	padding:0 0.3rem;
 }
 
 /* Instagram section */
 
 .instagram-section {
 	article {
-		margin: 0 auto;
-		max-width: 1200px;
+		margin:0 auto;
+		max-width:1200px;
 	}
 
 	h2 {
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-		margin: 0;
+		padding-top:1rem;
+		padding-bottom:1rem;
+		margin:0;
 	}
 }
 
 .lightwidget-widget {
-	background: $colorWhite;
-	width: 100%;
-	border: 0;
-	overflow: hidden;
-	margin-top: 0;
+	background:$colorWhite;
+	width:100%;
+	border:0;
+	overflow:hidden;
+	margin-top:0;
 }
 
 /* Track via Email List */
 
 .next-to-side-photo-padded {
-	padding: 0 2rem;  /* Make sure box is indented to be separated from photo */
+	padding:0 2rem;  /* Make sure box is indented to be separated from photo */
 }
 
 .side-photo img {
-	max-width: 100%;
+	max-width:100%;
 }
 
 
@@ -472,7 +472,7 @@ nav {
 	}
 
 	div {
-		margin: 0 auto;
+		margin:0 auto;
 		max-width:15em;
 		padding-bottom:1em;
 	}
@@ -496,7 +496,7 @@ a.buy-button {
 	letter-spacing:1px;
 	text-transform:uppercase;
 	text-decoration:none;
-	white-space: nowrap;
+	white-space:nowrap;
 }
 
 
@@ -520,12 +520,12 @@ nav {
 }
 
 .redeem {
-	float: left;
+	float:left;
 	margin-left:1em;
 	margin-top:1em;
 }
 .epk {
-	float: right;
+	float:right;
 	margin-right:1em;
 	margin-top:1em;
 
@@ -537,7 +537,7 @@ nav {
 		letter-spacing:1px;
 		text-transform:uppercase;
 		text-decoration:none;
-		white-space: nowrap;
+		white-space:nowrap;
 	}
 }
 
@@ -856,7 +856,7 @@ iframe.soundcloud {
 
 #redeem-form input {
 	width:8em;
-	background: $colorWhite;
+	background:$colorWhite;
 	font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
 	letter-spacing:1px;
 	text-transform:uppercase;
@@ -872,11 +872,11 @@ input#redeem-submit {
 	color:white;
 }
 
-#redeem-form ::-webkit-input-placeholder {text-align: center; }
-#redeem-form :-moz-placeholder           {text-align: center; }
-#redeem-form ::-moz-placeholder          {text-align: center; }
-#redeem-form :-ms-input-placeholder      {text-align: center; }
-#redeem-form ::placeholder               {text-align: center; }
+#redeem-form ::-webkit-input-placeholder	{text-align:center; }
+#redeem-form :-moz-placeholder		   		{text-align:center; }
+#redeem-form ::-moz-placeholder		  		{text-align:center; }
+#redeem-form :-ms-input-placeholder	  		{text-align:center; }
+#redeem-form ::placeholder			   		{text-align:center; }
 
 #cover {
 	position:fixed;
@@ -887,10 +887,10 @@ input#redeem-submit {
 	height:100%;
 }
 #redeemer {
-	position: fixed;
-	top: 20%;
+	position:fixed;
+	top:20%;
 	left:50%;
-	transform: translate(-50%, -20%);
+	transform:translate(-50%, -20%);
 
 	min-width:600px;
 	max-width:100%;
@@ -917,62 +917,62 @@ input#redeem-submit {
 /* Allows defs to be defined first without showing up */
 
 svg defs {
-	height: 0;
-	position: absolute;
-	width: 0;
+	height:0;
+	position:absolute;
+	width:0;
 }
 
 /* YouTube player */
 
 .youtube {
-	background-color: $colorBlackish;
-	position: relative;
-	padding-top: 56.25%;
-	overflow: hidden;
-	cursor: pointer;
+	background-color:$colorBlackish;
+	position:relative;
+	padding-top:56.25%;
+	overflow:hidden;
+	cursor:pointer;
 	img {
-		width: 100%;
-		top: -16.84%;	// needed because sddefault.jpg image is letterboxed (though other sizes aren't)
-		left: 0;
-		-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
-		mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
+		width:100%;
+		top:-16.84%;	// needed because sddefault.jpg image is letterboxed (though other sizes aren't)
+		left:0;
+		-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 25%);
+		mask-image:linear-gradient(to bottom, transparent 0%, black 25%);
 	}
 	.play-button {
-		width: 68px;
-		height: 48px;
-		background-color: $colorGrayDark;
-		box-shadow: 0 0 20px rgba( 0,0,0,0.6 );
-		z-index: 1;
-		opacity: 0.9;
-		border-radius: 6px/18px;
+		width:68px;
+		height:48px;
+		background-color:$colorGrayDark;
+		box-shadow:0 0 20px rgba( 0,0,0,0.6 );
+		z-index:1;
+		opacity:0.9;
+		border-radius:6px/18px;
 	}
 
 	&:hover .play-button {
-		background-color: red;
+		background-color:red;
 		opacity:1.0;
 	}
 	.play-button:before {
-		content: "";
-		border-style: solid;
-		border-width: 10px 0 10px 16.0px;
-		border-color: transparent transparent transparent $colorWhite;
+		content:"";
+		border-style:solid;
+		border-width:10px 0 10px 16.0px;
+		border-color:transparent transparent transparent $colorWhite;
 	}
 	img, .play-button {
-		cursor: pointer;
+		cursor:pointer;
 	}
 	img, iframe, .play-button, .play-button:before {
-		position: absolute;
+		position:absolute;
 	}
 	.play-button, .play-button:before {
-		top: 50%;
-		left: 50%;
-		transform: translate3d( -50%, -50%, 0 );
+		top:50%;
+		left:50%;
+		transform:translate3d( -50%, -50%, 0 );
 	}
 	iframe {
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
+		height:100%;
+		width:100%;
+		top:0;
+		left:0;
 	}
 	.title {
 		position:absolute;
@@ -987,7 +987,7 @@ svg defs {
 
 /* Responsive, big containers */
 #redeem_console {
-	padding: 20px;
+	padding:20px;
 	@extend .clearfix;
 
 	h1 {
@@ -996,19 +996,19 @@ svg defs {
 }
 
 #cover-art-container {
-  width: 20%;
-  float: left; }
+  width:20%;
+  float:left; }
 
 #downloader {
-  width: 80%;
-  float: left; }
+  width:80%;
+  float:left; }
 
 #cover-art {
-  margin-right: 20px; }
+  margin-right:20px; }
 
 #cover-art img {
-  width: 100%;
-  height: auto; }
+  width:100%;
+  height:auto; }
 
 /*******************************************************************
  #list-container
@@ -1018,33 +1018,33 @@ svg defs {
 	margin-top:5px;
 }
 .song-meta-data {
-  float: left;
-  width: calc( 100% - 10em); }
+  float:left;
+  width:calc( 100% - 10em); }
 
 .song-download {
-  float: left;
+  float:left;
   text-align:right;
-  width: 7em; }
+  width:7em; }
 
 .song-title {
-  color: #272726;
-  font-size: 16px;
-  display: block;
-  font-weight: 300;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
+  color:#272726;
+  font-size:16px;
+  display:block;
+  font-weight:300;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis; }
 
 .song-duration, .track-number {
-  float: left;
-  width: 3em;
-  text-align: center;
-  color: #607D8B;
-  font-size: 16px;
-  font-weight: 500; }
+  float:left;
+  width:3em;
+  text-align:center;
+  color:#607D8B;
+  font-size:16px;
+  font-weight:500; }
 
 .track-number {
-  width: 2em;
+  width:2em;
 }
 
 @media only screen and (max-width:599px) {
@@ -1052,22 +1052,22 @@ svg defs {
 		border:none;
 		padding:0;
 		min-width:auto;
- 		width: calc( 100% - 2em);
+		width:calc( 100% - 2em);
 	}
 
 	#cover-art-container {
-		width: 70%;
-		float: none;
+		width:70%;
+		float:none;
 		margin:0 auto;
 	}
 
 	#downloader {
-  		width: 100%;
-  		float: none;
-  	}
+		width:100%;
+		float:none;
+	}
 
 	#cover-art {
-		margin-right: 20px;
+		margin-right:20px;
 	}
 
 
