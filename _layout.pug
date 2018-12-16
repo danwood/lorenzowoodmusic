@@ -5,7 +5,8 @@ html(class="no-js", lang="en-us")
 	head
 		meta(charset="utf-8")
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
-		title #{current} | Lorenzo Wood Music
+		block title
+			title #{current} | Lorenzo Wood Music
 		meta(name="description"
 			content=description)
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
@@ -29,8 +30,8 @@ html(class="no-js", lang="en-us")
 			include svg/hamburger.svg
 
 
-		block header
-			header#main-header
+		header#main-header
+			block header
 
 				h1.ir Lorenzo Wood Music
 				.logo
@@ -76,7 +77,7 @@ html(class="no-js", lang="en-us")
 				a(data-title="Bands in Town" href="https://bandsintown.com/lorenzowoodmusic")
 					include svg/bandsintown.svg
 			p
-				b Copyright © 2017-2018 Lorenzo Wood
+				b Copyright © 2017-2019 Lorenzo Wood
 				block more-credits
 			p.js-required.
 				JavaScript is disabled in your browser; please enable it to see missing content.
