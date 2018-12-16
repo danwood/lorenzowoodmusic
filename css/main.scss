@@ -156,13 +156,13 @@ $menuWidth: 12rem;		//
 $menuMargin: 0.5rem;	// Use same units so we don't need calc
 $menuSize: 1rem;
 $speed: 200ms;
+$nav-background: #445566;
 
 nav.page-menu {
-    position:fixed;
+    position:absolute;	// becuase of offscreen margin, fixed acts just like absolute.
     top:0;
     right:0;
     width:$menuWidth;
-    height:100%;
     margin:0 0-$menuWidth 0 0;		// render offscreen to the right
     overflow:hidden;
 
@@ -172,7 +172,7 @@ nav.page-menu {
 	    padding:0;
 	    margin:0;
 	    list-style:none;
-	    background:#222;
+	    background:$nav-background;
 	    overflow:hidden;
 	}
 	li {
@@ -195,7 +195,7 @@ nav.page-menu {
 
 label.hamburger {
     display:block;
-    position:fixed;
+    position:absolute;
     top:$menuMargin;
     right:$menuMargin;
     height:$menuSize;
@@ -215,16 +215,10 @@ input#navigation[type="checkbox"] {
 	&:checked ~ label {
 	    right:$menuWidth+$menuMargin;		// when checked, move corresponding label (the psuedo button) over too
 	}
-	&:checked ~ header {
+	&:checked ~ header, &:checked ~ main, &:checked ~ footer {
 	    transform:translate3d(-$menuWidth, 0, 0);
 	}
 }
-
-
-
-
-
-
 
 
 
