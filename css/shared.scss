@@ -8,6 +8,34 @@ Classes and sections replicated across multiple pages
 
 /*
 ----------------------------------------
+Header
+----------------------------------------
+*/
+
+body > header {
+	position:relative;
+}
+
+body.Home .logo {
+	position:absolute;
+	z-index:999;
+	top:0; left:0; right:0;
+}
+
+
+.logo {
+	background:#000;
+}
+
+.logo svg {
+	padding:3% 0 1.5% 5%;
+	max-width:67%;
+	max-height:140px;
+	min-height:40px;
+}
+
+/*
+----------------------------------------
 Page Navigation Menu
 ----------------------------------------
 */
@@ -156,32 +184,7 @@ $page-menu-font-size: 1.0rem;
 
 
 
-/*
-----------------------------------------
-Header
-----------------------------------------
-*/
 
-body > header {
-	position:relative;
-}
-
-body.Home .logo {
-	position:absolute;
-	z-index:999;
-	top:0; left:0; right:0;
-}
-
-.logo svg {
-	padding:3% 0 1.5% 5%;
-	max-width:67%;
-	max-height:140px;
-	min-height:40px;
-}
-
-.logo {
-	background:#000;
-}
 
 /*
 ----------------------------------------
