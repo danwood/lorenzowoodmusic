@@ -274,6 +274,52 @@
 		"oAP": "/CNAME",
 		"oF": 0
 		},
+	"/css/generic.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/generic-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/generic.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/generic.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/css/homepage.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/homepage-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/homepage.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/homepage.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/css/html5boilerplate.css": {
 		"aP": 1,
 		"bl": 0,
@@ -323,6 +369,42 @@
 		"oAP": "/css/normalize-min.css",
 		"oF": 1,
 		"oS": 3
+		},
+	"/css/shared.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/shared.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/css/sitewide.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/sitewide-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/sitewide.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/sitewide.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/download.php": {
 		"cB": 0,

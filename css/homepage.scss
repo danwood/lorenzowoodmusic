@@ -1,0 +1,898 @@
+/*
+================================================================================
+
+Home-Page specific classes
+
+================================================================================
+*/
+
+/*
+----------------------------------------
+Input Forms
+----------------------------------------
+*/
+
+.input-form input,
+.input-form textarea,
+.input-form select {
+	display:inline-block;
+	font-size:1rem;
+	margin-bottom:1rem;
+	padding:0.25rem 0.5rem;
+	width:95%;	/* Due to padding, make sure it won't overflow */
+	max-width:30rem;
+	color:$colorBlackish;
+}
+
+input[type="submit"] {
+	display:block;
+	text-align:center;
+	color:$colorWhite;
+	background:$colorLink;
+	padding:6px 2rem;
+	border:none;
+	width:auto;
+	border-radius:4px;
+}
+
+/*
+----------------------------------------
+Social Icons on home page only
+----------------------------------------
+*/
+
+.icons.popular {
+	position:absolute;
+	z-index:999;
+	bottom:41px; left:0; right:0; /* should match with height of nav */
+}
+
+/*
+----------------------------------------
+Homepage streaming links above the fold
+----------------------------------------
+*/
+
+.quick-stream {
+	background:rgba(255,255,255,0.85);
+}
+
+.quick-stream {
+	position:absolute;
+	z-index:999;
+	bottom:0; left:0; right:0;
+	text-align:center;
+	a {
+		padding:0 8px;
+		display:inline-block;
+		text-decoration:none;
+
+		span {
+			padding-left:0.5rem;
+		}
+	}
+	svg, img {
+		height:25px;	/* 25px minimum for apple logo guidelines */
+		padding:8px 0;	/* 6.25px minimum padding around apple logo per their guidelines */
+	}
+}
+
+@media only screen and (max-width:430px) {
+	.needs-medium {
+		display:none !important;
+	}
+}
+
+
+/*
+----------------------------------------
+Down arrow only below full page hero
+----------------------------------------
+*/
+
+
+.scrolldown {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	text-align:center;
+	z-index:999;
+}
+
+.bounce {
+	animation:bounce 2s infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		transform:translateY(0);
+	}
+	40% {
+		transform:translateY(-30px);
+	}
+	60% {
+		transform:translateY(-15px);
+	}
+}
+
+/*
+----------------------------------------
+Hero
+----------------------------------------
+*/
+
+.hero {
+	width:100%;
+	height:auto;
+	overflow:hidden;
+
+	img {
+		position:relative;
+		width:100%;
+		object-fit:cover;
+		z-index:-999;
+		top:0;
+		left:50%; transform:translatex(-50%); /* center horizontally */
+		filter:grayscale(100%);
+	}
+}
+
+.featured img {
+	position:absolute;
+	bottom:calc(16% + 41px + 40px);	/* above buying nav and social icons */
+	left:40px;
+	width:10%;
+	height:auto;
+	box-shadow:0 0 8px 8px rgba(0,0,0,0.3);
+	z-index:999;
+}
+.featured div {
+	color:white;
+	position:absolute;
+	bottom:calc(16% + 41px + 5px);	/* above img */
+	left:40px;
+}
+
+
+/* Not so likely but we need to be prepared for 3 rows */
+@media only screen and (max-width:500px) {
+
+	.featured img {
+		bottom:calc(17% + 123px + 40px);	/* above buying nav and social icons */
+	}
+	.featured div {
+		bottom:calc(17% + 123px + 5px);	/* above img */
+	}
+
+}
+
+@media only screen and (max-width:($mainBreakpoint - 1px)) {
+
+	.featured img {
+		bottom:calc(18% + 82px + 40px);	/* above buying nav and social icons */
+	}
+	.featured div {
+		bottom:calc(18% + 82px + 5px);	/* above img */
+	}
+}
+
+
+/*
+----------------------------------------
+Bands in Town
+----------------------------------------
+*/
+
+
+.bit-header-row, .bit-row {
+		@extend .clearfix;
+		padding:6px 0;
+		border-bottom:1px solid $colorGrayLight;
+	}
+	.bit-header { font-weight:bold; }
+.bit-header-row svg {
+	float:right;
+}
+
+
+.bit-row.bit-upcoming {
+	&:hover {
+		background:$colorWhiteish;
+	}
+	a {
+		text-decoration:none;
+		color:$colorBlackish;
+	}
+
+}
+
+	.bit-date { padding-left:5px; text-transform:uppercase; font-weight:bold; display:inline-block; width:7em; }
+	.bit-date, .bit-venue, .bit-citystate {
+		padding-top:10px;
+	}
+
+	.bit-button {
+		color:$colorWhite;
+		background:$colorLink;
+		padding:10px;
+		display:inline-block;
+		text-align:center;
+		width:8em;
+		text-transform:uppercase;
+		font-weight:bold;
+		font-size:90%;
+		float:right;
+	}
+
+.bit-after { padding-top:1em; }
+
+/*
+----------------------------------------
+Mailing, Download, EPK
+----------------------------------------
+*/
+
+
+/* image from svg/download.svg -- unable to 'include' it so it's inline here. */
+.download a {
+	background:url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="$colorGrayLight" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat left center;
+}
+
+
+.redeem {
+	float:left;
+	margin-left:1rem;
+	margin-top:1rem;
+}
+.epk {
+	float:right;
+	margin-right:1rem;
+	margin-top:1rem;
+
+	a {
+		color:$colorBlackish;
+		margin-top:5px;
+		padding:0 0.5rem 0 2rem;
+		font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
+		letter-spacing:1px;
+		text-transform:uppercase;
+		text-decoration:none;
+		white-space:nowrap;
+	}
+}
+
+
+.mailing-section {
+	padding-top:0;
+	padding-bottom:0;
+	.centered { text-align:center; }
+	form, input {
+		display:inline-block;
+	}
+	input[type=text], input[type=email], input[type=submit] {
+		padding:0.5rem; margin:0.5rem 0.5rem;
+		font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
+	}
+}
+#mce-FNAME { width:6em;}
+#mce-LNAME { width:9em;}
+#mce-EMAIL { width:10em;}
+
+.mailing-section {
+	background:$colorGrayLight;
+}
+
+
+/* Not so likely but we need to be prepared for 3 rows */
+@media only screen and (max-width:500px) {
+
+	.redeem, .epk {
+		width:100%;
+		text-align:center;
+		margin:0.5rem 0;
+	}
+}
+
+@media only screen and (max-width:($mainBreakpoint - 1px)) {
+
+	.mailing-section {
+		padding-top:0.5rem;
+		padding-bottom:0.5rem;
+		h3, form, input {
+			display:block;
+		}
+		h3 { padding:0; margin:0.5rem 0.5rem; }
+		input[type=text], input[type=email], input[type=submit] {
+			padding:0.5rem;
+			margin:0.5rem 0.5rem;
+		}
+	}
+	#mce-FNAME, #mce-LNAME, #mce-EMAIL { width:90%;}
+
+
+	.download {
+	font-size:12px; /* smaller text */
+	}
+
+}
+
+/*
+----------------------------------------
+Patreon
+----------------------------------------
+*/
+
+.patreon-section article {
+	text-align:center;
+	line-height:1.5;
+}
+
+.patreon-button svg {
+	max-width:1rem;
+	padding:0 0.3rem;
+}
+
+
+.patreon-section {
+	background:$colorBlackish;
+	color:$colorGrayLight;
+
+	a {
+		color:$colorWhite;
+		text-decoration:none;
+	}
+}
+
+.patreon-link {
+	border-bottom:3px solid $colorLink;
+}
+
+@media only screen and (min-width:800px) {
+
+	/* Wider screens, show patreon as a distinct button */
+
+	.patreon-button {
+		border:1px solid $colorWhite;
+		padding:0.5rem;
+		background:$colorGrayDark;
+	}
+	.patreon-link {
+		border-bottom:none;
+	}
+}
+
+
+
+/*
+----------------------------------------
+Instagram
+----------------------------------------
+*/
+
+.instagram-section {
+	article {
+		margin:0 auto;
+		max-width:1200px;
+	}
+
+	h2 {
+		padding-top:1rem;
+		padding-bottom:1rem;
+		margin:0;
+	}
+}
+
+.lightwidget-widget {
+	background:$colorWhite;
+	width:100%;
+	border:0;
+	overflow:hidden;
+	margin-top:0;
+}
+
+.instagram-section {
+	background:$colorGrayLight;
+	a {
+		color:$colorWhite;
+	}
+}
+
+
+
+/*
+----------------------------------------
+Download Section
+----------------------------------------
+*/
+
+.download-section {
+
+	.shadowed {
+		box-shadow:0 4px 10px rgba(0,0,0,0.5);
+	}
+
+	div {
+		margin:0 auto;
+		max-width:15em;
+		padding-bottom:1rem;
+	}
+
+	a {
+		text-decoration:none;
+
+		span {
+			padding-left:0.5rem;
+		}
+	}
+}
+
+a.buy-button {
+	background:$colorLink;
+	color:$colorWhiteish;
+	padding:6px 12px;
+	border-radius:4px;
+
+	font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
+	letter-spacing:1px;
+	text-transform:uppercase;
+	text-decoration:none;
+	white-space:nowrap;
+}
+
+
+.next-to-side-photo-padded {
+	padding:0 2rem;  /* Make sure box is indented to be separated from photo */
+}
+
+.side-photo img {
+	max-width:100%;
+}
+
+
+@media only screen and (max-width:($mainBreakpoint - 1px)) {
+
+	/* On mobile, center photo rather than side-by-side  */
+	.side-photo {
+		margin-left:25%;
+		width:50%;
+
+	}
+}
+
+@media only screen and (min-width:$mainBreakpoint) {
+
+	/* On wide screens, put photo to left of the 'download' icons */
+
+	.side-photo {
+		float:left;
+		width:33%;
+	}
+	.next-to-side-photo {
+		float:left;
+		width:66%;
+	}
+}
+
+
+/*
+----------------------------------------
+Disabled links to stream/download
+----------------------------------------
+*/
+
+a.disabled {
+	opacity:0.4;
+	position:relative;
+}
+a.disabled:after {
+	padding:0 5px;
+	font-weight:bold;
+	font-size:75%;
+	background:$colorWhite;
+	color:$colorBlackish;
+	border-radius:5px;
+	box-shadow:0 0 8px 8px $colorWhite;
+	line-height:1;
+
+	content:'Coming Soon';
+	position:absolute;
+	left:10%;
+	bottom:8px;
+	text-align:center;
+	display:block;
+	z-index:99;
+
+	opacity:0; /* Invisible until hovered */
+	transition:opacity .3s ease-in-out;
+}
+a.disabled:hover {
+	opacity:1.0;
+}
+a.disabled:hover:after {
+	opacity:0.75;
+}
+
+
+
+
+/*
+----------------------------------------
+Soundcloud
+----------------------------------------
+*/
+
+.soundcloud-section {
+	background:$colorWhiteish;
+	a { color:$colorGrayDark; }
+}
+
+// Show soundcloud iframe (loaded from script) at maximum width
+
+iframe.soundcloud {
+	width:100%;
+}
+
+@media only screen and (min-width:800px) {
+
+	/* Wider screens, there is room for 3 SoundClouds side by side. */
+
+	.soundcloud-column {
+		width:33%;
+		float:left;
+	}
+}
+
+
+/*
+----------------------------------------
+YouTube
+----------------------------------------
+*/
+
+.youtube-section {
+	background:$colorGray;
+	color:$colorWhite;
+	a { color:$colorWhiteish; }
+}
+
+/* YouTube player */
+
+.youtube {
+	background-color:$colorBlackish;
+	position:relative;
+	padding-top:56.25%;
+	overflow:hidden;
+	cursor:pointer;
+	img {
+		width:100%;
+		top:-16.84%;	// needed because sddefault.jpg image is letterboxed (though other sizes aren't)
+		left:0;
+		-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 25%);
+		mask-image:linear-gradient(to bottom, transparent 0%, black 25%);
+	}
+	.play-button {
+		width:68px;
+		height:48px;
+		background-color:$colorGrayDark;
+		box-shadow:0 0 20px rgba( 0,0,0,0.6 );
+		z-index:1;
+		opacity:0.9;
+		border-radius:6px/18px;
+	}
+
+	&:hover .play-button {
+		background-color:red;
+		opacity:1.0;
+	}
+	.play-button:before {
+		content:"";
+		border-style:solid;
+		border-width:10px 0 10px 16.0px;
+		border-color:transparent transparent transparent $colorWhite;
+	}
+	img, .play-button {
+		cursor:pointer;
+	}
+	img, iframe, .play-button, .play-button:before {
+		position:absolute;
+	}
+	.play-button, .play-button:before {
+		top:50%;
+		left:50%;
+		transform:translate3d( -50%, -50%, 0 );
+	}
+	iframe {
+		height:100%;
+		width:100%;
+		top:0;
+		left:0;
+	}
+	.title {
+		position:absolute;
+		top:12px;
+		left:20px;
+		color:$colorWhite;
+		text-shadow:0 0 4px $colorBlackish;
+	}
+}
+
+@media only screen and (min-width:$mainBreakpoint) {
+
+	/* Two YouTube videos side by side */
+
+	.youtube-column {
+		width:50%;
+		float:left;
+	}
+
+}
+
+
+/*
+----------------------------------------
+Contact Section
+----------------------------------------
+*/
+
+.contact-section {
+	background:$colorGrayLight;
+	color:$colorBlackish;
+}
+
+.input-form a {
+	color:$colorWhite;
+}
+.trapit { display:none !important; }
+
+
+/*
+----------------------------------------
+Bands in Town
+----------------------------------------
+*/
+
+.bandsintown-button {
+	display:block;
+	text-align:center;
+	color:$colorWhite;
+	background:$colorLink;
+	padding:6px;
+
+	a {
+		color:$colorWhite;
+		text-decoration:none;
+	}
+	svg {
+		width:1.5rem;
+		padding-bottom:0.3rem;
+	}
+}
+
+@media only screen and (max-width:($mainBreakpoint - 1px)) {
+
+	/* Bands in town just show square logo */
+	.bit-header-full {
+		display:none;
+	}
+	.bit-date, .bit-venue, .bit-citystate, .bit-button {
+		display:block;
+	}
+	.bit-date, .bit-venue, .bit-citystate {
+		padding:0;
+	}
+}
+
+@media only screen and (min-width:$mainBreakpoint) {
+
+	/* If wide enough, show button inline with text rather than 100% wide */
+
+	.bandsintown-button {
+		display:inline;
+		margin-right:0.3rem;
+	}
+
+	/* Bands in town just show square logo */
+	.bit-header-mobile {
+		display:none;
+	}
+
+	/* Make track link be a button */
+	.bit-track { text-decoration:none; color:$colorWhite; background:$colorLink; padding:10px; margin-right:0.5rem; }
+
+	/* Separator for city-state */
+	.bit-citystate:before { content:' — '; }
+
+}
+
+
+/*
+----------------------------------------
+Redeem form & cover
+----------------------------------------
+*/
+
+
+#redeem-form input {
+	width:8em;
+	background:$colorWhite;
+	font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
+	letter-spacing:1px;
+	text-transform:uppercase;
+}
+input#redeem-submit {
+	display:inline-block;
+	width:2em;
+	height:1.25em;
+	margin-left:0.5em;
+	padding:0.25em 0.25em;
+	border-radius:4px;
+	background:$colorLink url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat center center;
+	color:white;
+}
+
+#redeem-form ::-webkit-input-placeholder	 {text-align:center; }
+#redeem-form :-moz-placeholder		   		 {text-align:center; }
+#redeem-form ::-moz-placeholder		  		 {text-align:center; }
+#redeem-form :-ms-input-placeholder	  		 {text-align:center; }
+#redeem-form ::placeholder			   		 {text-align:center; }
+
+#cover {
+	position:fixed;
+	top:0;left:0;
+	background:rgba(0,0,0,0.5);
+	z-index:1000;
+	width:100%;
+	height:100%;
+}
+#redeemer {
+	position:fixed;
+	top:20%;
+	left:50%;
+	transform:translate(-50%, -20%);
+
+	min-width:$mainBreakpoint;
+	max-width:100%;
+	min-height:300px;
+	max-height:100%;
+	margin:auto auto;
+	background:$colorWhite;
+	border:5px solid black;
+	border-radius:10px;
+	padding:10px;
+	z-index:1010;
+}
+#close-redeem {
+	position:fixed;
+	top:0;
+	right:40px;
+	font-size:600%;
+	color:$colorWhite;
+	z-index:1011;
+	text-shadow:0 0 4px $colorBlackish;
+	cursor:pointer;
+}
+
+
+/* ============= Redeem iFrame ================ */
+
+/* Responsive, big containers */
+#redeem_console {
+	padding:20px;
+	@extend .clearfix;
+
+	h1 {
+		margin:0;
+	}
+}
+
+#cover-art-container {
+  width:20%;
+  float:left; }
+
+#downloader {
+  width:80%;
+  float:left; }
+
+#cover-art {
+  margin-right:20px; }
+
+#cover-art img {
+  width:100%;
+  height:auto; }
+
+/*******************************************************************
+ #list-container
+ *******************************************************************/
+.song {
+	@extend .clearfix;
+	margin-top:5px;
+}
+.song-meta-data {
+  float:left;
+  width:calc( 100% - 10em); }
+
+.song-download {
+  float:left;
+  text-align:right;
+  width:7em; }
+
+.song-title {
+  color:#272726;
+  font-size:16px;
+  display:block;
+  font-weight:300;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis; }
+
+.song-duration, .track-number {
+  float:left;
+  width:3em;
+  text-align:center;
+  color:#607D8B;
+  font-size:16px;
+  font-weight:500; }
+
+.track-number {
+  width:2em;
+}
+
+
+@media only screen and (max-width:($mainBreakpoint - 1px)) {
+	#redeemer {
+		border:none;
+		padding:0;
+		min-width:auto;
+		width:calc( 100% - 2em);
+	}
+
+	#cover-art-container {
+		width:70%;
+		float:none;
+		margin:0 auto;
+	}
+
+	#downloader {
+		width:100%;
+		float:none;
+	}
+
+	#cover-art {
+		margin-right:20px;
+	}
+}
+
+
+
+
+
+
+/*
+----------------------------------------
+
+----------------------------------------
+*/
+
+
+
+/*
+----------------------------------------
+
+----------------------------------------
+*/
+
+
+
+/*
+----------------------------------------
+
+----------------------------------------
+*/
+
+
+
+/*
+----------------------------------------
+
+----------------------------------------
+*/

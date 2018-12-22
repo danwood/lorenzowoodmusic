@@ -1,0 +1,271 @@
+/*
+================================================================================
+
+Classes and sections replicated across multiple pages
+
+================================================================================
+*/
+
+/*
+----------------------------------------
+Page Navigation Menu
+----------------------------------------
+*/
+
+
+// Initially do not show any page menu
+input#navigation[type="checkbox"], label.hamburger, nav.page-menu {
+    display:none;
+}
+
+
+// ######## FULL SCREEN NAVIGATION #######
+
+// Constants so we know actual height of menu area to place logo below it
+$page-menu-padding-h: 0.75rem;
+$page-menu-padding-v: 1.0rem;
+$page-menu-font-size: 1.0rem;
+
+@media only screen and (min-width:$mainBreakpoint) {
+
+	// override usual top to make room for page navigation
+	.logo svg {
+		padding-top:($page-menu-padding-v + $page-menu-padding-v + $page-menu-font-size);
+	}
+
+	// similar to quick-stream ?
+
+	nav.page-menu  {
+		display:block;
+		position:absolute;
+		z-index:999;
+		top:0; left:0; right:0;
+		text-align:center;
+
+		ul {
+		    padding:0;
+		    margin:0;
+		    list-style:none;
+		    overflow:hidden;
+		    text-align:right;
+		}
+		li {
+		    margin:0;
+		    color:#fff;
+		    display:inline-block;
+		    line-height:1;
+		    font-size:$page-menu-font-size;
+		    font-weight:300;
+		    letter-spacing:2px;
+		}
+		a {
+		    color:#fff;
+		    text-decoration:none;
+		    display:block;
+		    padding:$page-menu-padding-v $page-menu-padding-h;
+		}
+		a.active {
+			color:$inverseColor;
+		}
+		a:hover {
+		    background:$inverseColor;
+		    color:$colorGrayDark;
+		}
+	}
+}
+
+// ######## HAMBURGER MENU NAVIGATION #######
+
+
+@media only screen and (max-width:($mainBreakpoint - 1px)) {
+
+
+	/* ===== Navigation ===== */
+	// Based on https://codepen.io/marclloyd77/pen/gtypB
+
+	$menuWidth: 12rem;		//
+	$menuMargin: 0.5rem;	// Use same units so we don't need calc
+	$menuSize: 1rem;
+	$speed: 200ms;
+	$nav-background: #445566;
+
+	nav.page-menu {
+		display:block;
+	    position:absolute;	// becuase of offscreen margin, fixed acts just like absolute.
+	    top:0;
+	    right:0;
+	    width:$menuWidth;
+	    margin:0 0-$menuWidth 0 0;		// render offscreen to the right
+	    overflow:hidden;
+
+		ul {
+		    width:$menuWidth;
+		    height:100%;
+		    padding:0;
+		    margin:0;
+		    list-style:none;
+		    background:$nav-background;
+		    overflow:hidden;
+		}
+		li {
+		    margin:0;
+		    color:#fff
+		}
+		a {
+		    color:#fff;
+		    font-size:1rem;
+		    text-decoration:none;
+		    display:block;
+		    padding:12px 15px;
+		    font-weight:300;
+		    letter-spacing:2px;
+		}
+		a:hover {
+		    background:#111;
+		}
+	}
+
+	label.hamburger {
+	    display:block;
+	    position:absolute;
+	    top:$menuMargin;
+	    right:$menuMargin;
+	    height:$menuSize;
+	    width:$menuSize;
+	    transition:all $speed ease-in;
+	    z-index:1500;
+
+	    svg {
+	    	width:100%;
+	    	height:100%;
+	    	fill:$inverseColor;
+	    }
+	}
+	input#navigation[type="checkbox"] {
+
+		&:checked ~ label {
+		    right:$menuWidth+$menuMargin;		// when checked, move corresponding label (the psuedo button) over too
+		}
+		&:checked ~ header, &:checked ~ main, &:checked ~ footer {
+		    transform:translate3d(-$menuWidth, 0, 0);
+		}
+	}
+}
+
+
+
+
+
+/*
+----------------------------------------
+Header
+----------------------------------------
+*/
+
+body > header {
+	position:relative;
+}
+
+body.Home .logo {
+	position:absolute;
+	z-index:999;
+	top:0; left:0; right:0;
+}
+
+.logo svg {
+	padding:3% 0 1.5% 5%;
+	max-width:67%;
+	max-height:140px;
+	min-height:40px;
+}
+
+.logo {
+	background:#000;
+}
+
+/*
+----------------------------------------
+Icons (at top and bottom)
+----------------------------------------
+*/
+
+.icons {
+	background:rgba(0,0,0,0.5);
+}
+
+.exhaustive.icons {
+	background:$colorBlackish;
+}
+
+.icons a {
+	width:10%;
+	display:inline-block;
+
+	svg {
+		margin:10%;
+	}
+}
+
+.popular.icons a:first-child { /* Left margin for shorter icon list */
+	margin-left:20%;
+}
+.exhaustive.icons a:first-child { /* Smaller left margin for longer icon list */
+	margin-left:10%;
+}
+
+
+/* Special hover tooltip-like display over social icons */
+.icons {
+	a {
+		position:relative;
+	}
+	a:after {
+		padding:0 5px;
+		font-size:80%;
+		background:$colorWhite;
+		color:$colorBlackish;
+		border-radius:5px;
+		box-shadow:0 0 8px 8px $colorWhite;
+		line-height:1;
+
+		content:attr(data-title);
+		position:absolute;
+		left:10%;
+		bottom:8px;
+		text-align:center;
+		display:block;
+		z-index:99;
+
+		opacity:0; /* Invisible until hovered */
+		transition:opacity .3s ease-in-out;
+	}
+	a:hover:after {
+		opacity:0.75;
+	}
+	a:last-child:after { /* Also need to do below for 5th icon when we have two rows! SEE BELOW */
+		right:15%;  /* plenty of room for shadow effect to not overflow the container on phone */
+		left:auto;
+	}
+}
+
+
+@media only screen and (max-width:($mainBreakpoint - 1px)) {
+
+	/* Bigger social media icons on mobile ... 4-up when we have the 10 icons */
+	.exhaustive.icons a {
+		width:25%;
+	}
+	.exhaustive.icons a:nth-child(5):after { /* Need to not overflow text on right */
+		right:15%;
+		left:auto;
+	}
+
+	/* ... and 6-up without margins where we have the 6 icons */
+	.popular.icons a {
+		width:16.66%;
+	}
+	.popular.icons a:first-child, .exhaustive.icons a:first-child {
+		margin-left:0;
+	}
+}
+

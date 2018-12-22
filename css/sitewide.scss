@@ -1,0 +1,146 @@
+/*
+================================================================================
+
+General look and utility useful across the whole site
+
+================================================================================
+*/
+
+/*
+----------------------------------------
+Colors
+----------------------------------------
+*/
+
+$mainBreakpoint: 600px;
+
+// TODO - incorporate into other files
+
+
+
+/*
+----------------------------------------
+Colors
+----------------------------------------
+*/
+
+
+
+$colorLink:	  	#62b1de;
+$inverseColor:  #de8c62;
+$colorWarning:  purple;
+$colorWhite:	#ffffff;
+$colorWhiteish: #f5f5f5;
+$colorGrayLight:#bdbdbd;
+$colorGray:	  	#616161;
+$colorGrayDark:	#424242;
+$colorBlackish:	#212121;
+
+
+a { color:$colorLink; }
+
+.dimmer {
+	color:$colorGray;
+}
+
+main {
+	background:$colorWhite;
+}
+
+section.lightgray {
+	background:$colorGrayLight;
+}
+
+/*
+----------------------------------------
+Typography
+----------------------------------------
+*/
+
+body {
+	font:16px/1.6 Helvetica, Helvetica Neue, Arial;
+}
+
+
+/*
+----------------------------------------
+Geometry
+----------------------------------------
+*/
+
+h3 {
+	margin:0;
+	padding:1rem 1rem;
+	text-align:right;
+}
+
+section {
+	padding-top:1rem;			// don't specify sides since those are handled separately
+	padding-bottom:1rem;
+}
+section.balance-footer {
+	padding-bottom:0;
+}
+
+/* for header and footer, full window width but indented a bit */
+
+body > footer p {
+	padding:20px 5%;
+	margin:0;
+	font-size:80%;
+}
+
+article.textual {
+	margin:0 auto;
+	padding:2rem 0;  /* if we use margin above then it messes with background image */
+	max-width:60rem;
+}
+
+body > footer {
+	background:$colorGrayLight;
+	color:$colorWhite;
+}
+
+
+/*
+----------------------------------------
+Responsive Video
+----------------------------------------
+*/
+
+.embed-container {
+	position:relative;
+	padding-bottom:56.25%;
+	height:0; overflow:hidden;
+	max-width:100%;
+
+	iframe, object, embed {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
+}
+
+/*
+----------------------------------------
+Responsive Layout
+----------------------------------------
+*/
+
+@media only screen and (max-width:($mainBreakpoint - 1px)) {
+
+	/* On mobile, avoid left/right margin on some sections (except for their headers/footers which are textual) */
+
+	.maximize-mobile {
+		padding-left:0;
+		padding-right:0;
+		footer, header {
+			padding-left:1rem;
+			padding-right:1rem;
+		}
+	}
+}
+
+
