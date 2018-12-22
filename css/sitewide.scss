@@ -61,6 +61,9 @@ body {
 	font:16px/1.6 Helvetica, Helvetica Neue, Arial;
 }
 
+dt {
+	font-weight:bold;
+}
 
 /*
 ----------------------------------------
@@ -129,6 +132,21 @@ Responsive Layout
 ----------------------------------------
 */
 
+
+img {
+	max-width:100%;
+}
+img.right {
+	float:right;
+	max-width:50%;
+	padding-left:1em;
+}
+img.half {
+	float:left;
+	max-width:50%;
+}
+
+
 @media only screen and (max-width:($mainBreakpoint - 1px)) {
 
 	/* On mobile, avoid left/right margin on some sections (except for their headers/footers which are textual) */
@@ -140,6 +158,12 @@ Responsive Layout
 			padding-left:1rem;
 			padding-right:1rem;
 		}
+	}
+
+	img.right, img.half {
+		max-width:100%;
+		float:none;
+		padding:0;
 	}
 }
 

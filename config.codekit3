@@ -189,7 +189,7 @@
 		},
 	"/booking/band.jpg": {
 		"ft": 16384,
-		"iS": 799353,
+		"iS": 100565,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/booking/band.jpg",
@@ -200,7 +200,7 @@
 		},
 	"/booking/house-concert.jpg": {
 		"ft": 16384,
-		"iS": 70747,
+		"iS": 45701,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/booking/house-concert.jpg",
@@ -227,7 +227,7 @@
 		},
 	"/booking/misc.jpg": {
 		"ft": 16384,
-		"iS": 100334,
+		"iS": 72531,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/booking/misc.jpg",
@@ -238,7 +238,7 @@
 		},
 	"/booking/wedding.jpg": {
 		"ft": 16384,
-		"iS": 1537283,
+		"iS": 130857,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/booking/wedding.jpg",
@@ -581,6 +581,33 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/vendor/jquery-3.3.1.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/js/youtube-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/youtube-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/js/youtube-min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/js/youtube-min.js.map",
+		"oF": 0
+		},
+	"/js/youtube.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/youtube-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0

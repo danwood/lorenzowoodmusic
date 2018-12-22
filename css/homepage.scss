@@ -615,6 +615,9 @@ YouTube
 		text-shadow:0 0 4px $colorBlackish;
 	}
 }
+.youtube-border {
+	padding:1em;
+}
 
 @media only screen and (min-width:$mainBreakpoint) {
 
@@ -622,6 +625,10 @@ YouTube
 
 	.youtube-column {
 		width:50%;
+		float:left;
+	}
+	.youtube-column-3 {
+		width:33%;
 		float:left;
 	}
 

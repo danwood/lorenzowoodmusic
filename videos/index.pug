@@ -7,7 +7,48 @@ block vars
 	- var description = 'Videos of songs, music snippets, and Lorenzo Wood at work making music'
 
 block main
-	section
-		article.textual
-			p.
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae. Phasellus venenatis est in tempus dignissim. Vestibulum elit elit, malesuada sed nunc vitae, ultrices tristique mi. Praesent convallis nunc leo. Phasellus quis ornare nisi. Vivamus vestibulum, elit at dignissim pharetra, ligula urna maximus quam, a sagittis diam nibh nec sem. Quisque convallis nunc quis dolor euismod ultricies. Praesent eget aliquet magna. Vestibulum posuere risus massa, quis vehicula eros scelerisque at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae. Phasellus venenatis est in tempus dignissim. Vestibulum elit elit, malesuada sed nunc vitae, ultrices tristique mi. Praesent convallis nunc leo. Phasellus quis ornare nisi. Vivamus vestibulum, elit at dignissim pharetra, ligula urna maximus quam, a sagittis diam nibh nec sem. Quisque convallis nunc quis dolor euismod ultricies. Praesent eget aliquet magna. Vestibulum posuere risus massa, quis vehicula eros scelerisque at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae. Phasellus venenatis est in tempus dignissim. Vestibulum elit elit, malesuada sed nunc vitae, ultrices tristique mi. Praesent convallis nunc leo. Phasellus quis ornare nisi. Vivamus vestibulum, elit at dignissim pharetra, ligula urna maximus quam, a sagittis diam nibh nec sem. Quisque convallis nunc quis dolor euismod ultricies. Praesent eget aliquet magna. Vestibulum posuere risus massa, quis vehicula eros scelerisque at.
+	section.youtube-section.balance-footer.requires-js.maximize-mobile
+		header.ir(aria-hidden="true")
+			h2 YouTube
+
+
+		article.clearfix.textual
+			each info in ['MbT0Vmne8-A:Los Altos Street Fair','COfT-rhxVD4:Busking in Walnut Creek, May 2018']
+				.youtube-column
+					.youtube-border
+						.youtube.youtube-bordered(data-embed=info)
+
+		article.clearfix
+			each info in ['A8vcWMXVR7I:Imagine - John Lennon (Lorenzo Wood Cover)','70I6bRqtJfI:Shawn Mendes - In My Blood (Live Acoustic Cover)', 'ZMnSrxiWkBs:In The Air Tonight by Phil Collins (cover by Lorenzo Wood)']
+				.youtube-column-3
+					.youtube-border
+						.youtube.youtube-bordered(data-embed=info)
+
+		article.clearfix.textual
+				.youtube-border
+					.youtube(data-embed='ipoL1h1d7zA:Keith Urban - Female (Loop cover)')
+
+		article.clearfix
+			each info in ['FIN3qK-COZ8:Niall Horan - On My Own (Lorenzo Wood cover)','RynQ3nswXyk:Shawn Mendes - Ruin (Lorenzo Wood Cover)','d87LW4xjATw:Khalid - Young Dumb & Broke (Lorenzo Wood cover)']
+				.youtube-column-3
+					.youtube-border
+						.youtube.youtube-bordered(data-embed=info)
+
+		article.clearfix.textual
+				.youtube-border
+					.youtube(data-embed='VHcn_Nr4_u4:Charlie Puth - Attention (Lorenzo Wood Cover)')
+
+
+		footer
+			h3
+				a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
+
+
+block scripts
+	script
+		include ../js/youtube-min.js
+		//- Modernizer-like
+		//- Remove "no-js" class from element, if it exists
+		|document.documentElement.className = document.documentElement.className.replace("no-js","js");
+		//- FOR NOW - REPLACE MISSING VIDEO THUMBNAIL WITH OUR OWN!
+		|document.getElementById('video-A8vcWMXVR7I').src = 'https://img.youtube.com/vi/A8vcWMXVR7I/hqdefault.jpg';
