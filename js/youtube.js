@@ -9,6 +9,7 @@ for (var i = 0; i < youtube.length; i++) {
     var embed = youtube[i].dataset.embed.split(':');
     var code = embed[0];
     var title = embed[1];
+    var caption = embed[2];
 
     if (iOS) {
       // regular YouTube iframe embed so that it needs just one tap as expected
@@ -47,5 +48,10 @@ for (var i = 0; i < youtube.length; i++) {
       t.setAttribute("class", "title");
       t.innerText = title;
       youtube[i].appendChild(t);
+      if (caption) {
+        var captionDiv = document.createElement("p");
+        captionDiv.innerText = caption;
+        youtube[i].insertAdjacentElement('afterend',captionDiv);
+      }
     }
   }
