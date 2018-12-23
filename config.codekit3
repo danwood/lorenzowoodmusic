@@ -628,13 +628,6 @@
 		"oF": 0,
 		"oS": 1
 		},
-	"/photos/orig/.Lorenzo Wood-Photo Credit Claire Ashcraft-44.jpg-Cz4R": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/photos/orig/.Lorenzo Wood-Photo Credit Claire Ashcraft-44.jpg-Cz4R",
-		"oF": 0
-		},
 	"/photos/orig/IMG_0005.jpg": {
 		"ft": 16384,
 		"iS": 699684,
@@ -643,7 +636,7 @@
 		"oAP": "/photos/orig/IMG_0005.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/IMG_4405.jpg": {
@@ -654,7 +647,7 @@
 		"oAP": "/photos/orig/IMG_4405.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/IMG_4965.jpg": {
@@ -665,7 +658,7 @@
 		"oAP": "/photos/orig/IMG_4965.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/IMG_6557.jpg": {
@@ -676,7 +669,7 @@
 		"oAP": "/photos/orig/IMG_6557.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/IMG_9101.jpg": {
@@ -687,7 +680,7 @@
 		"oAP": "/photos/orig/IMG_9101.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/IMG_9111.jpg": {
@@ -698,7 +691,7 @@
 		"oAP": "/photos/orig/IMG_9111.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/IMG_9179.jpg": {
@@ -709,7 +702,7 @@
 		"oAP": "/photos/orig/IMG_9179.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/IMG_9286.jpg": {
@@ -731,7 +724,7 @@
 		"oAP": "/photos/orig/IMG_9560.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/IMG_9604.jpg": {
@@ -742,7 +735,7 @@
 		"oAP": "/photos/orig/IMG_9604.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/IMG_9651.jpg": {
@@ -764,7 +757,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood-Photo Credit Claire Ashcraft-11.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood-Photo Credit Claire Ashcraft-22.jpg": {
