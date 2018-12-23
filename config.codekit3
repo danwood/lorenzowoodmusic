@@ -628,6 +628,13 @@
 		"oF": 0,
 		"oS": 1
 		},
+	"/photos/orig/.Lorenzo Wood-Photo Credit Claire Ashcraft-44.jpg-Cz4R": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/photos/orig/.Lorenzo Wood-Photo Credit Claire Ashcraft-44.jpg-Cz4R",
+		"oF": 0
+		},
 	"/photos/orig/IMG_0005.jpg": {
 		"ft": 16384,
 		"iS": 699684,
@@ -768,7 +775,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood-Photo Credit Claire Ashcraft-22.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood-Photo Credit Claire Ashcraft-33.jpg": {
@@ -779,7 +786,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood-Photo Credit Claire Ashcraft-33.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood-Photo Credit Claire Ashcraft-42.jpg": {
@@ -790,7 +797,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood-Photo Credit Claire Ashcraft-42.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood-Photo Credit Claire Ashcraft-43.jpg": {
@@ -834,7 +841,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood-Photo Credit Claire Ashcraft-59.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/phpliteadmin-readme.md": {
