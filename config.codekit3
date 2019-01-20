@@ -665,17 +665,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/photos/Lorenzo Wood 6557.jpg": {
-		"ft": 16384,
-		"iS": 96563,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/photos/Lorenzo Wood 6557.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/photos/Lorenzo Wood 9101.jpg": {
 		"ft": 16384,
 		"iS": 473054,
@@ -1137,6 +1126,94 @@
 		"oAP": "/phpliteadmin.php",
 		"oF": 0
 		},
+	"/projects/IMG_4841.jpg": {
+		"ft": 16384,
+		"iS": 3631062,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/projects/IMG_4841.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/projects/IMG_6703.jpg": {
+		"ft": 16384,
+		"iS": 1984521,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/projects/IMG_6703.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/projects/IMG_6728.jpg": {
+		"ft": 16384,
+		"iS": 2018230,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/projects/IMG_6728.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/projects/IMG_6906.jpg": {
+		"ft": 16384,
+		"iS": 2396938,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/projects/IMG_6906.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/projects/IMG_6916.jpg": {
+		"ft": 16384,
+		"iS": 2708890,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/projects/IMG_6916.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/projects/IMG_8582.jpg": {
+		"ft": 16384,
+		"iS": 1122813,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/projects/IMG_8582.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/projects/IMG_9672.jpg": {
+		"ft": 16384,
+		"iS": 127878,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/projects/IMG_9672.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/projects/IMG_9898.jpg": {
+		"ft": 16384,
+		"iS": 777053,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/projects/IMG_9898.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/projects/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1152,6 +1229,17 @@
 		"oAP": "/projects/index.html",
 		"oF": 0,
 		"oS": 1
+		},
+	"/projects/now-in-control.jpg": {
+		"ft": 16384,
+		"iS": 157618,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/projects/now-in-control.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"/redeem.css": {
 		"aP": 1,
