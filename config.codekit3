@@ -539,6 +539,15 @@
 		"oAP": "/index.php",
 		"oF": 0
 		},
+	"/index.php older.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "/index.php older.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/index.php.pug": {
 		"cB": 0,
 		"cOD": 1,
