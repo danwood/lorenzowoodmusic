@@ -43,13 +43,15 @@ $('#lightweight_widget').html('<iframe src="https://lightwidget.com/widgets/9b56
 $('#contact-form').submit(function( event ) {
     $.ajax({
       type: 'POST',
-      url: 'https://jumprock.co/mail/lozobooking',
+      url: 'https://www.lorenzowoodmusic.com/mailme.php',
       data: $("#contact-form").serialize(),
 
       success: function(data, textStatus, jqXHR ) {
             if (data !== '') {
-                $('#email').val('');
-                $('#message').val('');
+              alert(data);
+                $('#e_fm').val('');
+                $('#e_ms').val('');
+                $('#e_na').val('');
                 setTimeout(function(){ window.alert("Success sending message"); },0);
             } else {
                 window.alert('Sorry, but the contact form submission did not work as expected.');
