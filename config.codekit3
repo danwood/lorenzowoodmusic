@@ -621,23 +621,45 @@
 		"oF": 0,
 		"oS": 1
 		},
-	"/photos/Lorenzo Wood 0005.jpg": {
+	"/photos/Lorenzo Wood 0221.jpg": {
 		"ft": 16384,
-		"iS": 100005,
+		"iS": 101593,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/photos/Lorenzo Wood 0005.jpg",
+		"oAP": "/photos/Lorenzo Wood 0221.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"/photos/Lorenzo Wood 4405.jpg": {
+	"/photos/Lorenzo Wood 0478.jpg": {
 		"ft": 16384,
-		"iS": 147353,
+		"iS": 124632,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/photos/Lorenzo Wood 4405.jpg",
+		"oAP": "/photos/Lorenzo Wood 0478.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/Lorenzo Wood 0691.jpg": {
+		"ft": 16384,
+		"iS": 93646,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/Lorenzo Wood 0691.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/Lorenzo Wood 4546.jpg": {
+		"ft": 16384,
+		"iS": 40910,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/Lorenzo Wood 4546.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -665,12 +687,67 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/photos/Lorenzo Wood 9101.jpg": {
+	"/photos/Lorenzo Wood 8901.jpg": {
 		"ft": 16384,
-		"iS": 473054,
+		"iS": 77026,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/photos/Lorenzo Wood 9101.jpg",
+		"oAP": "/photos/Lorenzo Wood 8901.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/Lorenzo Wood 8915.jpg": {
+		"ft": 16384,
+		"iS": 34918,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/Lorenzo Wood 8915.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/Lorenzo Wood 8967.jpg": {
+		"ft": 16384,
+		"iS": 56478,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/Lorenzo Wood 8967.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/Lorenzo Wood 8974.jpg": {
+		"ft": 16384,
+		"iS": 70980,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/Lorenzo Wood 8974.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/Lorenzo Wood 9023.jpg": {
+		"ft": 16384,
+		"iS": 64940,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/Lorenzo Wood 9023.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/Lorenzo Wood 9073.jpg": {
+		"ft": 16384,
+		"iS": 40320,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/Lorenzo Wood 9073.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -819,12 +896,23 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/photos/Lorenzo Wood Photo Credit Claire Ashcraft 59.jpg": {
+	"/photos/Lorenzo Wood Photo Credit Dave Weiland 01.jpg": {
 		"ft": 16384,
-		"iS": 304252,
+		"iS": 93517,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/photos/Lorenzo Wood Photo Credit Claire Ashcraft 59.jpg",
+		"oAP": "/photos/Lorenzo Wood Photo Credit Dave Weiland 01.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/Lorenzo Wood Photo Credit Dave Weiland 02.jpg": {
+		"ft": 16384,
+		"iS": 93020,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/Lorenzo Wood Photo Credit Dave Weiland 02.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -841,37 +929,48 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/photos/Lorenzo Wood Photo Credit Nikki Maguire 7297.jpg": {
+	"/photos/orig/Lorenzo Wood 0221.jpg": {
 		"ft": 16384,
-		"iS": 89324,
+		"iS": 1193582,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/photos/Lorenzo Wood Photo Credit Nikki Maguire 7297.jpg",
+		"oAP": "/photos/orig/Lorenzo Wood 0221.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"/photos/orig/Lorenzo Wood 0005.jpg": {
+	"/photos/orig/Lorenzo Wood 0478.jpg": {
 		"ft": 16384,
-		"iS": 699684,
+		"iS": 1819091,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/photos/orig/Lorenzo Wood 0005.jpg",
+		"oAP": "/photos/orig/Lorenzo Wood 0478.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
-	"/photos/orig/Lorenzo Wood 4405.jpg": {
+	"/photos/orig/Lorenzo Wood 0691.jpg": {
 		"ft": 16384,
-		"iS": 1248945,
+		"iS": 1231509,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/photos/orig/Lorenzo Wood 4405.jpg",
+		"oAP": "/photos/orig/Lorenzo Wood 0691.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/orig/Lorenzo Wood 4546.jpg": {
+		"ft": 16384,
+		"iS": 883608,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/orig/Lorenzo Wood 4546.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 4965.jpg": {
@@ -896,26 +995,70 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/photos/orig/Lorenzo Wood 6557.jpg": {
+	"/photos/orig/Lorenzo Wood 8901.jpg": {
 		"ft": 16384,
-		"iS": 151556,
+		"iS": 2248239,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/photos/orig/Lorenzo Wood 6557.jpg",
+		"oAP": "/photos/orig/Lorenzo Wood 8901.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
-	"/photos/orig/Lorenzo Wood 9101.jpg": {
+	"/photos/orig/Lorenzo Wood 8915.jpg": {
 		"ft": 16384,
-		"iS": 1286141,
+		"iS": 702275,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/photos/orig/Lorenzo Wood 9101.jpg",
+		"oAP": "/photos/orig/Lorenzo Wood 8915.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/orig/Lorenzo Wood 8967.jpg": {
+		"ft": 16384,
+		"iS": 1782954,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/orig/Lorenzo Wood 8967.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/orig/Lorenzo Wood 8974.jpg": {
+		"ft": 16384,
+		"iS": 2086606,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/orig/Lorenzo Wood 8974.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/orig/Lorenzo Wood 9023.jpg": {
+		"ft": 16384,
+		"iS": 2057807,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/orig/Lorenzo Wood 9023.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/orig/Lorenzo Wood 9073.jpg": {
+		"ft": 16384,
+		"iS": 1045495,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/orig/Lorenzo Wood 9073.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 9111.jpg": {
@@ -1061,15 +1204,26 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 59.jpg": {
+	"/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 01.jpg": {
 		"ft": 16384,
-		"iS": 974427,
+		"iS": 2275808,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 59.jpg",
+		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 01.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 02.jpg": {
+		"ft": 16384,
+		"iS": 1424437,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 02.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Nikki Maguire 7176.jpg": {
@@ -1078,17 +1232,6 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Nikki Maguire 7176.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/photos/orig/Lorenzo Wood Photo Credit Nikki Maguire 7297.jpg": {
-		"ft": 16384,
-		"iS": 302191,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Nikki Maguire 7297.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1294,6 +1437,17 @@
 		"oAP": "/sitemap.txt",
 		"oF": 0
 		},
+	"/studio/huntersfriends.png": {
+		"ft": 32768,
+		"iS": 3968,
+		"oA": 0,
+		"oAP": "/studio/huntersfriends.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/studio/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1308,7 +1462,7 @@
 		"oA": 0,
 		"oAP": "/studio/index.html",
 		"oF": 0,
-		"oS": 1
+		"oS": 0
 		},
 	"/svg/amazon-music.svg": {
 		"ft": 2097152,
