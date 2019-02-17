@@ -493,13 +493,12 @@ AddDefaultCharset utf-8
 
 <IfModule mod_headers.c>
 
-    Header set Content-Security-Policy "default-src 'self' data:; \
-        script-src 'unsafe-inline' code.jquery.com 'self'; \
-        style-src 'unsafe-inline' 'self'; \
-        img-src img.youtube.com 'self' data:; \
-        connect-src jumprock.co; \
-        frame-src lightwidget.com w.soundcloud.com www.youtube.com; \
-        frame-ancestors 'none'"
+   Header set Content-Security-Policy "default-src 'self' data:; \
+       script-src 'unsafe-inline' code.jquery.com 'self'; \
+       style-src 'unsafe-inline' 'self'; \
+       img-src img.youtube.com 'self' data:; \
+       frame-src lightwidget.com w.soundcloud.com www.facebook.com www.youtube.com; \
+       frame-ancestors 'none'"
 
     # `mod_headers` cannot match based on the content-type, however,
     # the `Content-Security-Policy` response header should be send
