@@ -222,20 +222,14 @@ else		// Everything looks OK, proceed
 		}
 	}
 
-	$headers = 'From: webmaster@lorenzowoodmusic.com' . "\r\n" .
-	    'Reply-To: ' . $emailOrName . "\r\n" .
-	    'X-Mailer: PHP/' . phpversion();
+	// No "From" header — this seems to stop the script from working, at least on NearlyFreeSpeech.
+	$headers = 'Reply-To: ' . $emailOrName . "\r\n";
 
-	$sent = mail($recipient, $subject, $message);
+	$sent = mail($recipient, $subject, $message, $headers);
 
 	if(!$sent)
 	{
 		$errorString = "Mail could not be sent.";
-	}
-	else
-	{
-		echo "Sent messsage apparently to $recipient";
-		die;
 	}
 }
 
