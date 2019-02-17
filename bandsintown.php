@@ -18,7 +18,11 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('accept: application/json'));
 
-curl_setopt($ch, CURLOPT_URL,'https://rest.bandsintown.com/artists/Lorenzo%20Wood%20Music?app_id=' . API_KEY);
+$url = 'https://rest.bandsintown.com/artists/Lorenzo%20Wood%20Music?app_id=' . API_KEY;
+
+error_log($url);
+
+curl_setopt($ch, CURLOPT_URL,$url);
 
 $json=curl_exec($ch);
 curl_close($ch);
@@ -32,7 +36,7 @@ $oneYearAgo = date('Y-m-d', strtotime('-1 year'));
 $oneYearAhead = date('Y-m-d', strtotime('+1 year'));
 $thisYear = date('Y');
 
-if ($artist['upcoming_event_count']) {
+if (TRUE || $artist['upcoming_event_count']) {
 // Get upcoming events
 
 	$ch = curl_init();
@@ -41,8 +45,11 @@ if ($artist['upcoming_event_count']) {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('accept: application/json'));
 
-	curl_setopt($ch, CURLOPT_URL,'https://rest.bandsintown.com/artists/Lorenzo%20Wood%20Music/events?app_id=' . API_KEY
-		. '&date=' . $oneYearAgo . ',' . $oneYearAhead);
+	$url = 'https://rest.bandsintown.com/artists/Lorenzo%20Wood%20Music/events?app_id=' . API_KEY
+		. '&date=' . $oneYearAgo . ',' . $oneYearAhead;
+	curl_setopt($ch, CURLOPT_URL, $url);
+
+	error_log($url);
 
 	$json=curl_exec($ch);
 	curl_close($ch);
@@ -88,6 +95,10 @@ if ($artist['upcoming_event_count']) {
 	to be notified of upcoming gigs!
 </div>
 <?php
+}
+else
+{
+	error_log("no upcoming events");
 }
 
 // Now to compress what was output. Not perfect but improves things a bit.
