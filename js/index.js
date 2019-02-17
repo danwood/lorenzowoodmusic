@@ -39,7 +39,7 @@ $('#lightweight_widget').html('<iframe src="https://lightwidget.com/widgets/9b56
 
 
 // Form Submission
-/*
+
 $('#contact-form').submit(function( event ) {
     $.ajax({
       type: 'POST',
@@ -66,7 +66,7 @@ $('#contact-form').submit(function( event ) {
     });
     event.preventDefault();
 });
-*/
+
 
 $('#redeem-form').submit(function( event ) {
     if ($('#redeem-input').val().length > 0) {
