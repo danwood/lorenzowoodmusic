@@ -567,7 +567,7 @@
 		"oA": 0,
 		"oAP": "/index.php",
 		"oF": 2,
-		"oS": 1
+		"oS": 0
 		},
 	"/js/index-min.js": {
 		"ft": 64,
@@ -639,6 +639,22 @@
 		"oA": 0,
 		"oAP": "/mailsent.php",
 		"oF": 0
+		},
+	"/mailtest.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/mailtest.php",
+		"oF": 0
+		},
+	"/mailtest.php.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "/mailtest.php",
+		"oF": 2,
+		"oS": 0
 		},
 	"/photos/index.html": {
 		"cB": 0,
