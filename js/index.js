@@ -48,17 +48,16 @@ $('#contact-form').submit(function( event ) {
 
       success: function(data, textStatus, jqXHR ) {
             if (data !== '') {
-              alert(data);
                 $('#e_fm').val('');
                 $('#e_ms').val('');
                 $('#e_na').val('');
-                setTimeout(function(){ window.alert("Success sending message"); },0);
+                setTimeout(function(){ window.alert("Your message was sent. You should hear back from us soon!"); },0);
             } else {
                 window.alert('Sorry, but the contact form submission did not work as expected.');
             }
       },
       error: function(jqXHR, textStatus, errorThrown ) {
-            window.alert(errorThrown + ' ' + textStatus + ' ' + jqXHR);
+            window.alert('ERROR. ' + errorThrown + ' ' + textStatus);
       },
       complete: function(jqXHR, textStatus ) {
 
