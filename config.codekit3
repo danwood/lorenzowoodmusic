@@ -267,6 +267,34 @@
 		"oAP": "/classes.php",
 		"oF": 0
 		},
+	"/classes/class.EmailAddressValidator.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/classes/class.EmailAddressValidator.php",
+		"oF": 0
+		},
+	"/classes/class.Encoding.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/classes/class.Encoding.php",
+		"oF": 0
+		},
+	"/classes/class.housekeeping.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/classes/class.housekeeping.php",
+		"oF": 0
+		},
+	"/classes/class.phpmailer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/classes/class.phpmailer.php",
+		"oF": 0
+		},
 	"/css/generic.css": {
 		"aP": 1,
 		"bl": 0,
@@ -604,6 +632,20 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"/mailme.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/mailme.php",
+		"oF": 0
+		},
+	"/mailsent.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/mailsent.php",
+		"oF": 0
 		},
 	"/photos/index.html": {
 		"cB": 0,
@@ -1437,17 +1479,6 @@
 		"oAP": "/sitemap.txt",
 		"oF": 0
 		},
-	"/studio/huntersfriends.png": {
-		"ft": 32768,
-		"iS": 3968,
-		"oA": 0,
-		"oAP": "/studio/huntersfriends.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"/studio/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1462,7 +1493,7 @@
 		"oA": 0,
 		"oAP": "/studio/index.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"/svg/amazon-music.svg": {
 		"ft": 2097152,
