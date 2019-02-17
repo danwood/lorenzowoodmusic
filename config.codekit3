@@ -288,13 +288,6 @@
 		"oAP": "/classes/class.housekeeping.php",
 		"oF": 0
 		},
-	"/classes/class.phpmailer.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/classes/class.phpmailer.php",
-		"oF": 0
-		},
 	"/css/generic.css": {
 		"aP": 1,
 		"bl": 0,

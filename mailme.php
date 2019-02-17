@@ -1,7 +1,5 @@
 <?php
 
-error_log("hi there");
-
 $recipient = "dan@gigliwood.com";
 
 if ( 0 == strcmp('GET',$_SERVER['REQUEST_METHOD'])  )
@@ -14,7 +12,6 @@ if ( 0 == strcmp('GET',$_SERVER['REQUEST_METHOD'])  )
 
 require_once('classes/class.housekeeping.php');
 require_once('classes/class.Encoding.php');		// Force into UTF-8
-require_once('classes/class.phpmailer.php');
 
 $MISSING_SENDER			= "You did not enter your email address, so your message was not sent.";
 $MISSING_MESSAGE		= "You did not enter a message, so no message was sent.";
@@ -132,8 +129,6 @@ $suffix   	= html_entity_decode($suffix, ENT_QUOTES|ENT_HTML5, 'UTF-8');
 
 $errorReturn = housekeeping::post('q', '');	// URL to return to (after landing page) if there was an error
 
-$recipEmails = extract_emails_from($recipient);
-
 
 $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
 $referer = str_replace("\n", ' ', $referer);
@@ -175,13 +170,6 @@ if (!empty($footer)) {
 	$message .= "\n\n$footer";
 }
 
-if ( !isset($_SERVER['HTTP_REFERER']) &&  !isset($_SERVER['HTTP________']) && !isset($_SERVER['HTTP________________']) && !strstr($_SERVER['HTTP_USER_AGENT'], 'Sandvox') )
-{
-// allow for HTTP________ instead of referer -- this is apparently a symantec firewall.
-
-	// error_log("mailme.php: " . date("c")." Referer missing, REMOTE_ADDR = ".$_SERVER['REMOTE_ADDR']." from ". $fromEmail ." to ". $recipient,1,BACKEND_ERROR_NOTIFICATION_EMAIL);
-}
-
 if (		containsNewlines($recipient)
 			||	containsNewlines($subject)
 			||	containsNewlines($fromEmail)
@@ -194,7 +182,7 @@ if (		containsNewlines($recipient)
 else if (!empty($honeypot1) || !empty($honeypot2))
 {
 	// I want to see what got posted and how often....
-	// error_log( "mailme.php: HONEYPOT ACTIVATED!\n\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipEmails, 1), 1, 'server@karelia.com' );
+	// error_log( "mailme.php: HONEYPOT ACTIVATED!\n\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipient, 1), 1, 'server@karelia.com' );
 
 	$suspectedSpam = true;
 }
@@ -205,12 +193,6 @@ else if ( empty($fromEmail) || 0 == count($fromEmails) )
 else if ( empty($subject) && empty($message) )
 {
 	$errorString = $MISSING_MESSAGE;
-}
-else if (0 == count($recipEmails))
-{
-	// error_log("mailme.php: Unable to extract emails from '$recipient', perhaps syntax needs to be fixed?", 1, BACKEND_ERROR_NOTIFICATION_EMAIL);
-		// $errorString = "Receiving email address on the web form at '$siteTitle' was not valid, so your message cannot be sent.";
-	$errorString = $MISSING_DESTINATION;
 }
 else		// Everything looks OK, proceed
 {
@@ -240,34 +222,20 @@ else		// Everything looks OK, proceed
 		}
 	}
 
-	$mail = new PHPMailer;
+	$headers = 'From: webmaster@lorenzowoodmusic.com' . "\r\n" .
+	    'Reply-To: ' . $emailOrName . "\r\n" .
+	    'X-Mailer: PHP/' . phpversion();
 
-	//From email address and name
-	$mail->From = "sweethomealameda@icloud.com";
-	$mail->FromName = "Website contact form";
+	$sent = mail($recipient, $subject, $message);
 
-	//To address and name
-	foreach ($recipEmails as $receipEmail) {
-		$mail->addAddress($receipEmail);
-	}
-	//Address to which recipient will reply
-	$mail->addReplyTo($emailOrName);
-
-	//CC and BCC
-	// $mail->addCC("cc@example.com");
-	// $mail->addBCC("bcc@example.com");
-
-	//Send HTML or Plain Text email
-	$mail->isHTML(true);
-
-	$mail->Subject = $subject;
-	$mail->Body = $message;
-
-	$mail->Mailer = 'mail';
-	
-	if(!$mail->send()) 
+	if(!$sent)
 	{
-		$errorString = "Mail could not be sent:" . $mail->ErrorInfo;
+		$errorString = "Mail could not be sent.";
+	}
+	else
+	{
+		echo "Sent messsage apparently to $recipient";
+		die;
 	}
 }
 

@@ -243,17 +243,17 @@ block main
 							div: textarea(type="text" id="e_ms" name="m" rows="10" cols="40" required="required")
 							div
 								
+								//- honeypot
 								input(type="text" name="subject" value="")
 								input(type="text" name="message" value="")
 
-								//- honeypot
 								input(type="hidden" name="f" value="This message was sent from the LorenzoWoodMusic.com website.")
 								input(type="hidden" name="s" value="Message sent from LorenzoWoodMusic.com")
 								input(type="hidden" name="r" value="/")
 								input(type="hidden" name="h" value="contact-form")
 
-
 								input.button(type="submit" value="Contact us")
+								
 							<?php if (isset($_GET['msg'])) { echo '<h2>' . htmlspecialchars($_GET['msg']) . '</h2>'; } ?>
 							<?php if (isset($_GET['e'])) { echo '<h2 style="color:#C00">' . htmlspecialchars($_GET['e']) . '</h2>'; } ?>
 
