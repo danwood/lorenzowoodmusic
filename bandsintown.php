@@ -96,6 +96,7 @@ if (TRUE || $artist['upcoming_event_count']) {
 </div>
 <?php
 	echo '<script type="application/ld+json">[' . PHP_EOL;
+	$needCommaBefore = FALSE;
 	foreach ($events as $event) {
 		$url = $event['url'];
 		$dateTime = strtotime($event['datetime']);
@@ -103,13 +104,16 @@ if (TRUE || $artist['upcoming_event_count']) {
 		$city_state = $event['venue']['city'] . ', ' . $event['venue']['region'];
 		$past = ($dateTime < time());
 		if (!$past) {
+			if ($needCommaBefore) echo ',';
 			echo '{' . PHP_EOL;
 			echo '"@context":"http://schema.org",' . PHP_EOL;
 			echo '"@type":"MusicEvent",' . PHP_EOL;
 	 		echo '"name":"' . htmlspecialchars($artistNameWithoutMusic) . '",' . PHP_EOL;
+	 		echo '"performer":"' . htmlspecialchars($artistNameWithoutMusic) . '",' . PHP_EOL;
 	 		echo '"startDate":"' . date(DATE_ISO8601, $dateTime) . '",' . PHP_EOL;
 	 		echo '"location":{"@type":"Place","name":"' . htmlspecialchars($venue) . '","address":"' . htmlspecialchars($city_state) . '"}' . PHP_EOL;
-			echo '},' . PHP_EOL;
+			echo '}' . PHP_EOL;
+			$needCommaBefore = TRUE;
 		}
 	}
 	echo ']</script>' . PHP_EOL;
