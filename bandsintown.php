@@ -95,6 +95,24 @@ if (TRUE || $artist['upcoming_event_count']) {
 	to be notified of upcoming gigs!
 </div>
 <?php
+	echo '<script type="application/ld+json">[' . PHP_EOL;
+	foreach ($events as $event) {
+		$url = $event['url'];
+		$dateTime = strtotime($event['datetime']);
+		$venue = trim($event['venue']['name']);
+		$city_state = $event['venue']['city'] . ', ' . $event['venue']['region'];
+		$past = ($dateTime < time());
+		if (!$past) {
+			echo '{' . PHP_EOL;
+			echo '"@context":"http://schema.org",' . PHP_EOL;
+			echo '"@type":"MusicEvent",' . PHP_EOL;
+	 		echo '"name":"' . htmlspecialchars($artistNameWithoutMusic) . '",' . PHP_EOL;
+	 		echo '"startDate":"' . date(DATE_ISO8601, $dateTime) . '",' . PHP_EOL;
+	 		echo '"location":{"@type":"Place","name":"' . htmlspecialchars($venue) . '","address":"' . htmlspecialchars($city_state) . '"}' . PHP_EOL;
+			echo '},' . PHP_EOL;
+		}
+	}
+	echo ']</script>' . PHP_EOL;
 }
 else
 {
