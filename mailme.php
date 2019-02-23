@@ -163,14 +163,14 @@ foreach($_POST as $postKey => $postValue)
 	}
 }
 
-$message = "$name <$fromEmail>\n\n" . $message;
+$message = "From: $name <$fromEmail>\n\n\n" . $message;
 
 if (!empty($fields)) {
 	$message = $fields . "\n" . $message;
 }
 
 if (!empty($footer)) {
-	$message .= "\n\n\n\n\n$footer";
+	$message .= "\n\n\n\n\n---------------------------------------------------\n$footer";
 }
 
 if (		containsNewlines($recipient)
@@ -226,7 +226,7 @@ else		// Everything looks OK, proceed
 	}
 
 	// No "From" header — this seems to stop the script from working, at least on NearlyFreeSpeech.
-	$headers = 'Reply-To: ' . $emailOrName . "\r\n";
+	$headers = 'Reply-To: ' . $fromEmails[0] . "\r\n";
 
 	$sent = mail($recipient, $subject, $message, $headers);
 
