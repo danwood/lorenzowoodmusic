@@ -10,7 +10,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     <meta name="description" content="Lorenzo Wood is a young musician from Alameda, California. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="/css/main.022319000004.css">
+    <link rel="stylesheet" href="/css/main.022319000005.css">
     <link rel="prefetch" href="//code.jquery.com">
     <link rel="prefetch" href="//w.soundcloud.com">
     <link rel="prefetch" href="//img.youtube.com">
@@ -229,7 +229,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     <script>
       // REQUIREMENT: JQUERY
 // Responsively resize the hero image. In sweet spot of screen aspect ratio, hero is full screen.
-function fullscreen(e){var t=$(window).width(),o=$(window).height(),i=!1;t/o<.85?o=Math.round(t/.85):1.618<t/o?o=Math.round(t/1.618):i=!0,
+function fullscreen(e){var t=$(window).width(),o=$(window).height(),i=!1;t/o<.75?o=Math.round(t/.75):1.618<t/o?o=Math.round(t/1.618):i=!0,
 // Show scroll arrow if first time here and we are showing full-screen hero
 i&&!e?$("#scroll-arrow").css("display","block"):$("#scroll-arrow").remove(),jQuery("#main-header,.hero img").css({width:t,height:o})}$(".down-arrow").click(function(e){return e.preventDefault(),$("html, body").animate({scrollTop:$(".down-arrow").offset().top},1e3),!1}),
 // Hide the arrow after a bit

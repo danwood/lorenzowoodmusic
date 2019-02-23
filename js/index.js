@@ -116,7 +116,7 @@ function fullscreen(event){
     var width = $(window).width();
     var height= $(window).height();
     var fullSizeHero = false;
-    if (width/height < 0.85) height = Math.round(width/0.85);
+    if (width/height < 0.75) height = Math.round(width/0.75);
     else if (width/height > 1.618) height = Math.round(width/1.618);
     else fullSizeHero = true;
 
