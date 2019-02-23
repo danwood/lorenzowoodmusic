@@ -10,7 +10,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     <meta name="description" content="Lorenzo Wood is a young musician from Alameda, California. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="/css/main.022319.css">
+    <link rel="stylesheet" href="/css/main.02232019.css">
     <link rel="prefetch" href="//code.jquery.com">
     <link rel="prefetch" href="//w.soundcloud.com">
     <link rel="prefetch" href="//img.youtube.com">
@@ -145,10 +145,10 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
           <h2>YouTube</h2>
         </header>
         <article class="clearfix">
-          <div class="youtube-column">
+          <div class="youtube-column-2">
             <div class="youtube" data-embed="70I6bRqtJfI:Shawn Mendes - In My Blood (Live Acoustic Cover)"></div>
           </div>
-          <div class="youtube-column">
+          <div class="youtube-column-2">
             <div class="youtube" data-embed="ZMnSrxiWkBs:In The Air Tonight by Phil Collins (cover by Lorenzo Wood)"></div>
           </div>
         </article>

@@ -6,44 +6,67 @@ block vars
 	- var current = 'Videos'
 	- var description = 'Videos of songs, music snippets, and Lorenzo Wood at work making music'
 
+block styles
+	|<style>
+	|	.no-js .youtube:after { position:absolute; top:1em; left:1em; color:white; content:"JavaScript Required"  }
+	|</style>
+
 block main
-	section.youtube-section.balance-footer.requires-js.maximize-mobile
+	section.youtube-section.balance-footer.maximize-mobile
 		header.ir(aria-hidden="true")
 			h2 YouTube
 
 		article.clearfix.textual
-			each info in ['MbT0Vmne8-A:Los Altos Street Fair:July 2018. A compilation of eight songs Lorenzo sang at the Los Altos Art & Wine Festival. Many songs employ the VoiceLive 3 Extreme to add bass, percussion, and guitar effects.','COfT-rhxVD4:Busking in Walnut Creek, May 2018:Lorenzo had just turned sixteen so here is a compilation of … well, eighteen songs that Lorenzo performed while busking at the Walnut Creek Air on the Main festival in 2018.']
-				.youtube-column
-					.youtube-border
-						.youtube.youtube-bordered(data-embed=info)
+			.youtube-column-2
+				.youtube-border
+					.youtube.youtube-bordered(data-embed='MbT0Vmne8-A:Los Altos Street Fair')
+					p July 2018. A compilation of eight songs Lorenzo sang at the Los Altos Art & Wine Festival. Many songs employ the VoiceLive 3 Extreme to add bass, percussion, and guitar effects.
+			.youtube-column-2
+				.youtube-border
+					.youtube.youtube-bordered(data-embed='COfT-rhxVD4:Busking in Walnut Creek, May 2018')
+					p Lorenzo had just turned sixteen so here is a compilation of … well, eighteen songs that Lorenzo performed while busking at the Walnut Creek Air on the Main festival in 2018.
 
 		article.clearfix
-			each info in ['A8vcWMXVR7I:Imagine - John Lennon (Lorenzo Wood Cover):A live cover of the 1971 John Lennon classic.','70I6bRqtJfI:Shawn Mendes - In My Blood (Live Acoustic Cover):Lorenzo learned, recorded, and released this cover just a few hours after Shawn Mendes released this song on March 22, 2018.', 'ZMnSrxiWkBs:In The Air Tonight by Phil Collins (cover by Lorenzo Wood):A live looping version of the Phil Collins song. Programmed using Apple MainStage.']
-				.youtube-column-3
-					.youtube-border
-						.youtube.youtube-bordered(data-embed=info)
+			.youtube-column-3
+				.youtube-border
+					.youtube.youtube-bordered(data-embed='A8vcWMXVR7I:Imagine - John Lennon (Lorenzo Wood Cover)')
+					p A live cover of the 1971 John Lennon classic.
+			.youtube-column-3
+				.youtube-border
+					.youtube.youtube-bordered(data-embed='70I6bRqtJfI:Shawn Mendes - In My Blood (Live Acoustic Cover)')
+					p Lorenzo learned, recorded, and released this cover just a few hours after Shawn Mendes released this song on March 22, 2018.
+			.youtube-column-3
+				.youtube-border
+					.youtube.youtube-bordered(data-embed='ZMnSrxiWkBs:In The Air Tonight by Phil Collins (cover by Lorenzo Wood)')
+					p A live looping version of the Phil Collins song. Programmed using Apple MainStage.
 
 		article.clearfix.textual
 				.youtube-border
 					.youtube(data-embed='RynQ3nswXyk:Shawn Mendes - Ruin (Lorenzo Wood Cover)')
+					p _________
 
 		article.clearfix
-			each info in ['ipoL1h1d7zA:Keith Urban - Female (Loop cover):A live looping cover. Voice, keyboards, synth percussion, bass, and guitar. Programmed using Apple MainStage.','FIN3qK-COZ8:Niall Horan - On My Own (Lorenzo Wood cover)','d87LW4xjATw:Khalid - Young Dumb & Broke (Lorenzo Wood cover):A simple live cover, with guest appearance by Capo the Dog.']
-				.youtube-column-3
-					.youtube-border
-						.youtube.youtube-bordered(data-embed=info)
+			.youtube-column-3
+				.youtube-border
+					.youtube.youtube-bordered(data-embed='ipoL1h1d7zA:Keith Urban - Female (Loop cover)')
+					p A live looping cover. Voice, keyboards, synth percussion, bass, and guitar. Programmed using Apple MainStage.
+			.youtube-column-3
+				.youtube-border
+					.youtube.youtube-bordered(data-embed='FIN3qK-COZ8:Niall Horan - On My Own (Lorenzo Wood cover)')
+					p _______
+			.youtube-column-3
+				.youtube-border
+					.youtube.youtube-bordered(data-embed='d87LW4xjATw:Khalid - Young Dumb & Broke (Lorenzo Wood cover)')
+					p A simple live cover, with guest appearance by Capo the Dog.
 
 		article.clearfix.textual
 				.youtube-border
-					.youtube(data-embed='VHcn_Nr4_u4:Charlie Puth - Attention (Lorenzo Wood Cover):Multi-layered version with Lorenzo singing melody and harmonies, and playing guitar, keyboards, bass, percussion, and drum pads.')
-
+					.youtube(data-embed='VHcn_Nr4_u4:Charlie Puth - Attention (Lorenzo Wood Cover)')
+					p Multi-layered version with Lorenzo singing melody and harmonies, and playing guitar, keyboards, bass, percussion, and drum pads.
 
 		footer
 			h3
 				a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
-
-	p.js-required.
-		JavaScript is disabled in your browser; please enable it to see missing content.
 
 block scripts
 	script
@@ -51,4 +74,6 @@ block scripts
 		//- Modernizer-like
 		//- Remove "no-js" class from element, if it exists
 		|document.documentElement.className = document.documentElement.className.replace("no-js","js");
+		//- FOR NOW - REPLACE MISSING VIDEO THUMBNAIL WITH OUR OWN!
+		|document.getElementById('video-A8vcWMXVR7I').src = 'https://img.youtube.com/vi/A8vcWMXVR7I/hqdefault.jpg';
 
