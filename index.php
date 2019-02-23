@@ -10,7 +10,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     <meta name="description" content="Lorenzo Wood is a young musician from Alameda, California. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="/css/main.012119.css">
+    <link rel="stylesheet" href="/css/main.022319.css">
     <link rel="prefetch" href="//code.jquery.com">
     <link rel="prefetch" href="//w.soundcloud.com">
     <link rel="prefetch" href="//img.youtube.com">

@@ -121,9 +121,9 @@ $page-menu-font-size: 1.0rem;
 		display:block;
 	    position:absolute;	// becuase of offscreen margin, fixed acts just like absolute.
 	    top:0;
-	    right:0;
+	    left:0;
 	    width:$menuWidth;
-	    margin:0 0-$menuWidth 0 0;		// render offscreen to the right
+	    margin:0 0 0 0-$menuWidth;		// render offscreen to the left
 	    overflow:hidden;
 
 		ul {
@@ -147,6 +147,9 @@ $page-menu-font-size: 1.0rem;
 		    padding:12px 15px;
 		    font-weight:300;
 		    letter-spacing:2px;
+		}
+		a.active {
+			color:$inverseColor;
 		}
 		a:hover {
 		    background:#111;
@@ -172,10 +175,10 @@ $page-menu-font-size: 1.0rem;
 	input#navigation[type="checkbox"] {
 
 		&:checked ~ label {
-		    right:$menuWidth+$menuMargin;		// when checked, move corresponding label (the psuedo button) over too
+		    display:none;
 		}
 		&:checked ~ header, &:checked ~ main, &:checked ~ footer {
-		    transform:translate3d(-$menuWidth, 0, 0);
+		    transform:translate3d($menuWidth, 0, 0);
 		}
 	}
 }
