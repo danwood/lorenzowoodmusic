@@ -408,9 +408,8 @@ Download Section
 
 	div {
 		padding-bottom:1rem;
-	}
-	div.download-button {
-		max-width:15em;
+		max-width:16em;
+		margin:0 auto;
 	}
 
 	a {
@@ -426,16 +425,20 @@ a.buy-button {
 	background:$colorLink;
 	color:$colorWhiteish;
 	padding:12px 12px;
-	border-radius:4px;
+	border-radius:10px;
 	display:block;
-	width:100%;
 	margin:0.5em 0;
+	text-align:center;
 
 	font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
 	letter-spacing:1px;
 	text-transform:uppercase;
 	text-decoration:none;
 	white-space:nowrap;
+
+	&:hover {
+		background:darken($colorLink,20%);
+	}
 }
 
 
@@ -454,7 +457,10 @@ a.buy-button {
 	.side-photo {
 		margin-left:25%;
 		width:50%;
-
+	}
+	.next-to-side-photo-padded {
+		padding:0;
+		margin:0 auto;
 	}
 }
 
@@ -719,7 +725,7 @@ Redeem form & cover
 
 
 #redeem-form input {
-	width:12em;
+	width:11em;
 	background:$colorWhite;
 	font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
 	letter-spacing:1px;
@@ -727,9 +733,10 @@ Redeem form & cover
 }
 input#redeem-submit {
 	display:inline-block;
-	width:3em;
+	width:2.5em;
 	height:1.25em;
-	padding:0.25em 0.25em;
+	padding:0.75em 0.25em;
+	float:right;
 	border-radius:4px;
 	background:$colorLink url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat center center;
 	color:white;
