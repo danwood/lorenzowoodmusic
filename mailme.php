@@ -162,12 +162,15 @@ foreach($_POST as $postKey => $postValue)
 		$fields .= $keyPlusValue;
 	}
 }
+
+$message = "$name <$fromEmail>\n\n" . $message;
+
 if (!empty($fields)) {
 	$message = $fields . "\n" . $message;
 }
 
 if (!empty($footer)) {
-	$message .= "\n\n$footer";
+	$message .= "\n\n\n\n\n$footer";
 }
 
 if (		containsNewlines($recipient)
