@@ -620,7 +620,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/youtube-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1774,7 +1774,7 @@
 		"oA": 0,
 		"oAP": "/videos/index.html",
 		"oF": 0,
-		"oS": 1
+		"oS": 0
 		},
 	"/Website.sublime-project": {
 		"cB": 0,

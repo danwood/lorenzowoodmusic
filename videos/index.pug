@@ -11,7 +11,6 @@ block main
 		header.ir(aria-hidden="true")
 			h2 YouTube
 
-
 		article.clearfix.textual
 			each info in ['MbT0Vmne8-A:Los Altos Street Fair:July 2018. A compilation of eight songs Lorenzo sang at the Los Altos Art & Wine Festival. Many songs employ the VoiceLive 3 Extreme to add bass, percussion, and guitar effects.','COfT-rhxVD4:Busking in Walnut Creek, May 2018:Lorenzo had just turned sixteen so here is a compilation of … well, eighteen songs that Lorenzo performed while busking at the Walnut Creek Air on the Main festival in 2018.']
 				.youtube-column
@@ -43,6 +42,8 @@ block main
 			h3
 				a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
 
+	p.js-required.
+		JavaScript is disabled in your browser; please enable it to see missing content.
 
 block scripts
 	script
@@ -50,5 +51,4 @@ block scripts
 		//- Modernizer-like
 		//- Remove "no-js" class from element, if it exists
 		|document.documentElement.className = document.documentElement.className.replace("no-js","js");
-		//- FOR NOW - REPLACE MISSING VIDEO THUMBNAIL WITH OUR OWN!
-		|document.getElementById('video-A8vcWMXVR7I').src = 'https://img.youtube.com/vi/A8vcWMXVR7I/hqdefault.jpg';
+
