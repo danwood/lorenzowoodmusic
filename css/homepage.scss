@@ -49,7 +49,6 @@ Social Icons on home page only
 
 .icons.popular {
 	position:absolute;
-	z-index:999;
 	bottom:0; left:0; right:0; /* should match with height of nav */
 }
 
@@ -64,7 +63,6 @@ Homepage streaming links above the fold
 }
 
 .quick-stream {
-	z-index:1999;
 	text-align:center;
 	a {
 		padding:0 8px;
@@ -111,7 +109,6 @@ Down arrow only below full page hero
 	bottom:0;
 	width:100%;
 	text-align:center;
-	z-index:999;
 }
 
 .bounce {
@@ -146,7 +143,7 @@ Hero
 	width:100%;
 	object-fit:cover;
 	object-position:75% 0%;
-	z-index:-999;
+	z-index:-1;
 	top:0;
 	filter:grayscale(100%);
 }
@@ -159,7 +156,6 @@ Hero
 	width:10%;
 	height:auto;
 	box-shadow:0 0 8px 8px rgba(0,0,0,0.3);
-	z-index:999;
 }
 .featured div {
 	color:white;
@@ -523,7 +519,6 @@ a.disabled:after {
 	bottom:8px;
 	text-align:center;
 	display:block;
-	z-index:99;
 
 	opacity:0; /* Invisible until hovered */
 	transition:opacity .3s ease-in-out;
@@ -598,7 +593,6 @@ YouTube
 		height:48px;
 		background-color:$colorGrayDark;
 		box-shadow:0 0 20px rgba( 0,0,0,0.6 );
-		z-index:1;
 		opacity:0.9;
 		border-radius:6px/18px;
 	}
@@ -770,7 +764,7 @@ input#redeem-submit {
 	position:fixed;
 	top:0;left:0;
 	background:rgba(0,0,0,0.5);
-	z-index:1000;
+	z-index:20;
 	width:100%;
 	height:100%;
 }
@@ -789,7 +783,7 @@ input#redeem-submit {
 	border:5px solid black;
 	border-radius:10px;
 	padding:10px;
-	z-index:1010;
+	z-index:21;
 }
 #close-redeem {
 	position:fixed;
@@ -797,7 +791,7 @@ input#redeem-submit {
 	right:40px;
 	font-size:600%;
 	color:$colorWhite;
-	z-index:1011;
+	z-index:22;
 	text-shadow:0 0 4px $colorBlackish;
 	cursor:pointer;
 }

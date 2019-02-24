@@ -16,12 +16,6 @@ body > header {
 	position:relative;
 }
 
-body.Home .logo {
-	z-index:999;
-	top:0; left:0; right:0;
-}
-
-
 .logo {
 	background:#000;
 	position:relative;
@@ -65,7 +59,7 @@ $page-menu-font-size: 1.0rem;
 	nav.page-menu {
 		display:block;
 		position:absolute;
-		z-index:999;
+		z-index:10;
 		top:0; left:0; right:0;
 		text-align:center;
 
@@ -120,7 +114,6 @@ $page-menu-font-size: 1.0rem;
 	nav.page-menu {
 		display:block;
 		position:fixed;
-		z-index:1000;
 		top:0;
 		right:0;
 		height:100%;
@@ -166,7 +159,7 @@ $page-menu-font-size: 1.0rem;
 		right:$menuMargin;
 		width:$menuSize;
 		height:25px;
-		z-index:1500;
+		z-index:11;
 		cursor: pointer;
 	}
 	input#navigation[type="checkbox"] {
@@ -263,7 +256,6 @@ Icons (at top and bottom)
 		bottom:8px;
 		text-align:center;
 		display:block;
-		z-index:99;
 
 		opacity:0; /* Invisible until hovered */
 		transition:opacity .3s ease-in-out;
