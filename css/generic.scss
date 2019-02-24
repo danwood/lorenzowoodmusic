@@ -113,13 +113,16 @@ JS detection
 ----------------------------------------
 */
 
-.no-js .requires-js {
+.no-js .requires-js {		// Hide stuff that requires JS when JS is unavailable
 	display:none;
 }
-.js .js-required {
+.js .js-warning {			// For warning that JS is required, hide if JS is available
 	display:none;
 }
-.no-js p.js-required {
+.js .js-hidden {			// Content that is initially hidden if JS is available. (Remove class to reveal.)
+	display:none;
+}
+.no-js p.js-warning {
 	padding:0.5rem 1rem;
 	margin:0;
 	color:purple;

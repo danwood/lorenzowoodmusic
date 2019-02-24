@@ -147,7 +147,7 @@ block main
 		article
 			#lightweight_widget
 		footer
-			h3
+			h3.righthand
 				a(href="https://instagram.com/LorenzoWoodMusic") More from Instagram
 
 
@@ -163,7 +163,7 @@ block main
 				.soundcloud-column
 					.soundcloud-proxy(data-code=code)
 		footer
-			h3
+			h3.righthand
 				a(href="https://soundcloud.com/LorenzoWoodMusic") More from SoundCloud
 
 
@@ -178,7 +178,7 @@ block main
 					.youtube(data-embed=info)
 
 		footer
-			h3
+			h3.righthand
 				a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
 
 	section.download-section
@@ -270,6 +270,9 @@ block additional-html
 	#scroll-arrow.scrolldown.bounce(style="display:none")
 		a.down-arrow(href="#")
 			include svg/downarrow.svg
+
+
+//- NOTE THAT HOME PAGE IS ONLY PAGE THAT IS CURRENTLY USING JQUERY
 
 block scripts
 	script(
