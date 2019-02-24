@@ -24,6 +24,7 @@ body.Home .logo {
 
 .logo {
 	background:#000;
+	position:relative;
 }
 
 .logo svg {
@@ -160,7 +161,8 @@ $page-menu-font-size: 1.0rem;
 	label.hamburger {
 		display:block;
 		position:absolute;
-		top:$menuMargin;
+		top: 50%;
+		transform: translateY(-50%);
 		right:$menuMargin;
 		width:$menuSize;
 		height:25px;
@@ -174,6 +176,8 @@ $page-menu-font-size: 1.0rem;
 		}
 		&:checked ~ label {
 			position:fixed;	// make sure icon doesn't scroll off of screen since whole menu is fixed
+			transform:none;
+			top:$menuMargin;
 		}
 		&:checked ~ label > .horizontal {
 			opacity: 0;						// fade out middle

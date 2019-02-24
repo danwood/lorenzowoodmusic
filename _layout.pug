@@ -12,7 +12,7 @@ html(class="no-js", lang="en-us")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		block links
 			link(rel="apple-touch-icon" href="icon.png")
-			link(rel="stylesheet" href="/css/main.022419.css")
+			link(rel="stylesheet" href="/css/main.02242019.css")
 		block styles
 
 	body(class=current)
@@ -32,28 +32,27 @@ html(class="no-js", lang="en-us")
 				.logo
 					include svg/lorenzowoodmusic.svg
 
-				//- Make this a block so that we can remove the menu by defining an empty block
-				block hamburger
+					//- Hamburger Menu
 					input#navigation(type="checkbox")
 					label.hamburger(for="navigation")
 						div.spinner.diagonal.part-1
 						div.spinner.horizontal
 						div.spinner.diagonal.part-2
 
-				mixin navLink(link, name)
-					li: a(
-						href=link
-						class={active: name === current}
-					) #{name}
+					mixin navLink(link, name)
+						li: a(
+							href=link
+							class={active: name === current}
+						) #{name}
 
-				nav.page-menu
-					ul
-						+navLink('/', 'Home')
-						+navLink('/photos/', 'Photos')
-						+navLink('/videos/', 'Videos')
-						//- +navLink('/studio/', 'Studio')
-						//- +navLink('/projects/', 'Projects')
-						+navLink('/booking/', 'Booking')
+					nav.page-menu
+						ul
+							+navLink('/', 'Home')
+							+navLink('/photos/', 'Photos')
+							+navLink('/videos/', 'Videos')
+							//- +navLink('/studio/', 'Studio')
+							//- +navLink('/projects/', 'Projects')
+							+navLink('/booking/', 'Booking')
 
 
 
