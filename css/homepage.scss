@@ -139,13 +139,15 @@ Hero
 	overflow:hidden;
 }
 .hero-image {
-	position:fixed;
 	width:100%;
 	object-fit:cover;
 	object-position:75% 0%;
 	z-index:-1;
 	top:0;
 	filter:grayscale(100%);
+}
+.js .hero-image {
+	position:fixed;
 }
 
 
