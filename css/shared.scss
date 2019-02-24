@@ -39,10 +39,9 @@ Page Navigation Menu
 ----------------------------------------
 */
 
-
-// Initially do not show any page menu
-input#navigation[type="checkbox"], label.hamburger, nav.page-menu {
-    display:none;
+// Unless overridden, do not show hamburger menu
+input#navigation[type="checkbox"], label.hamburger {
+	display:none;
 }
 
 
@@ -109,21 +108,24 @@ $page-menu-font-size: 1.0rem;
 
 	/* ===== Navigation ===== */
 	// Based on https://codepen.io/marclloyd77/pen/gtypB
+	// and later on https://codepen.io/plavookac/pen/qomrMw
 
 	$menuWidth: 12rem;		//
 	$menuMargin: 0.5rem;	// Use same units so we don't need calc
-	$menuSize: 1rem;
+	$menuSize: 2rem;
 	$speed: 200ms;
 	$nav-background: #445566;
 
 	nav.page-menu {
 		display:block;
-	    position:absolute;	// becuase of offscreen margin, fixed acts just like absolute.
+	    position:fixed;
+	    z-index:1000;
 	    top:0;
-	    left:0;
+	    right:0;
+	    height:100%;
 	    width:$menuWidth;
-	    margin:0 0 0 0-$menuWidth;		// render offscreen to the left
-	    overflow:hidden;
+    	transform: translateX(250px);
+    	transition: transform 250ms ease-in-out;
 
 		ul {
 		    width:$menuWidth;
@@ -172,11 +174,12 @@ $page-menu-font-size: 1.0rem;
 	}
 	input#navigation[type="checkbox"] {
 
-		&:checked ~ label {
-		    display:none;
+		&:checked ~ .page-menu {
+	    	transform: translateX(0);
 		}
-		&:checked ~ header, &:checked ~ main, &:checked ~ footer {
-		    transform:translate3d($menuWidth, 0, 0);
+
+		&:checked ~ label {
+		    position:fixed;
 		}
 	}
 }

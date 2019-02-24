@@ -24,14 +24,6 @@ html(class="no-js", lang="en-us")
 				|  to improve your experience.
 		<![endif]-->
 
-		//- Make this a block so that we can remove the menu by defining an empty block
-		block hamburger
-			//- Hamburger menu lives outside of main document flow.
-			//- For CSS, we want these elements to be siblings, and nav under header
-			input#navigation(type="checkbox")
-			label.hamburger(for="navigation")
-				include svg/hamburger.svg
-
 
 		header#main-header
 			block header
@@ -39,6 +31,12 @@ html(class="no-js", lang="en-us")
 				h1.ir Lorenzo Wood Music
 				.logo
 					include svg/lorenzowoodmusic.svg
+
+				//- Make this a block so that we can remove the menu by defining an empty block
+				block hamburger
+					input#navigation(type="checkbox")
+					label.hamburger(for="navigation")
+						include svg/hamburger.svg
 
 				mixin navLink(link, name)
 					li: a(
