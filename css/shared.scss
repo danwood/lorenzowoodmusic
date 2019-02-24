@@ -112,7 +112,7 @@ $page-menu-font-size: 1.0rem;
 
 	$menuWidth: 12rem;		//
 	$menuMargin: 0.5rem;	// Use same units so we don't need calc
-	$menuSize: 2rem;
+	$menuSize: 32px;
 	$speed: 200ms;
 	$nav-background: #445566;
 
@@ -162,8 +162,8 @@ $page-menu-font-size: 1.0rem;
 		position:absolute;
 		top:$menuMargin;
 		right:$menuMargin;
-		height:$menuSize;
 		width:$menuSize;
+		height:25px;
 		z-index:1500;
 		cursor: pointer;
 	}
