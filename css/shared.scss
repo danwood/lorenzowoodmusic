@@ -184,24 +184,21 @@ $page-menu-font-size: 1.0rem;
 		}
 
 		&:checked ~ label {
-		    position:fixed;
+		    position:fixed;	// make sure icon doesn't scroll off of screen since whole menu is fixed
 		}
 
 		&:checked ~ label > .horizontal {
 		    transition: all 0.3s;
-		    box-sizing: border-box;
-		    opacity: 0;
+		    opacity: 0;					// fade out middle
 		}
 		&:checked ~ label > .diagonal.part-1 {
 		    transition: all 0.3s;
-		    box-sizing: border-box;
-		    transform: rotate(135deg);
+		    transform: rotate(135deg);		// animate to diagonal
 		    margin-top: 8px;
 		}
 		&:checked ~ label > .diagonal.part-2 {
 		    transition: all 0.3s;
-		    box-sizing: border-box;
-		    transform: rotate(-135deg);
+		    transform: rotate(-135deg);		// animate to diagonal
 		    margin-top: -9px;
 		}
 	}
