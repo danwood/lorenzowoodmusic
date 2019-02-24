@@ -700,17 +700,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/photos/Lorenzo Wood 4965.jpg": {
-		"ft": 16384,
-		"iS": 522129,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/photos/Lorenzo Wood 4965.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/photos/Lorenzo Wood 6135.jpg": {
 		"ft": 16384,
 		"iS": 76359,
@@ -1006,17 +995,6 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"q": 100
-		},
-	"/photos/orig/Lorenzo Wood 4965.jpg": {
-		"ft": 16384,
-		"iS": 1082852,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/photos/orig/Lorenzo Wood 4965.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 6135.jpg": {
