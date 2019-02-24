@@ -26,15 +26,15 @@ Colors
 
 
 
-$colorLink:	  	#62b1de;
-$inverseColor:  #de8c62;
-$colorWarning:  purple;
-$colorWhite:	#ffffff;
-$colorWhiteish: #f5f5f5;
-$colorGrayLight:#bdbdbd;
-$colorGray:	  	#616161;
-$colorGrayDark:	#424242;
-$colorBlackish:	#212121;
+$colorLink:			#62b1de;
+$inverseColor:		#de8c62;
+$colorWarning:		purple;
+$colorWhite:		#ffffff;
+$colorWhiteish:		#f5f5f5;
+$colorGrayLight:	#bdbdbd;
+$colorGray:			#616161;
+$colorGrayDark:		#424242;
+$colorBlackish:		#212121;
 
 
 a { color:$colorLink; }
@@ -117,7 +117,7 @@ body > footer p {
 
 article.textual {
 	margin:0 auto;
-	padding:2rem 0;  /* if we use margin above then it messes with background image */
+	padding:2rem 0;		/* if we use margin above then it messes with background image */
 	max-width:60rem;
 }
 

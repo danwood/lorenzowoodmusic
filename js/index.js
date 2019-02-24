@@ -2,28 +2,28 @@
 // REQUIREMENT: JQUERY
 
 $('.down-arrow').click(function(event) {
-  event.preventDefault();
-  $('html, body').animate({
-        scrollTop: $('.down-arrow').offset().top
-}, 1000);
-  return false;
+	event.preventDefault();
+	$('html, body').animate({
+		scrollTop: $('.down-arrow').offset().top
+	}, 1000);
+	return false;
 });
 
 // Hide the arrow after a bit
 setTimeout(function(){
-  $( "#scroll-arrow" ).fadeOut( "slow", function() {
-    $('#scroll-arrow').remove();
-  });
+	$( "#scroll-arrow" ).fadeOut( "slow", function() {
+		$('#scroll-arrow').remove();
+	});
 }, 2000);
 
-// Bands in Town - display past events.  Not showing anything if no javascript.
+// Bands in Town - display past events. Not showing anything if no javascript.
 $('#recent-performances').html('<a id="recent-link" href="#">Show Recent</a>');
 
-// If we click to show recent performances too, this gets revealed.  A one-way street BTW.
+// If we click to show recent performances too, this gets revealed. A one-way street BTW.
 $('#recent-link').click(function() {
-    $('.bit-header').text('Recent & Upcoming Performances');
-    $('.bit-past').show();
-    return false;
+	$('.bit-header').text('Recent & Upcoming Performances');
+	$('.bit-past').show();
+	return false;
 });
 
 
@@ -41,97 +41,97 @@ $('#lightweight_widget').html('<iframe src="https://lightwidget.com/widgets/9b56
 // Form Submission
 
 $('#contact-form').submit(function( event ) {
-    $.ajax({
-      type: 'POST',
-      url: 'https://www.lorenzowoodmusic.com/mailme.php',
-      data: $("#contact-form").serialize(),
+	$.ajax({
+		type: 'POST',
+		url: 'https://www.lorenzowoodmusic.com/mailme.php',
+		data: $("#contact-form").serialize(),
 
-      success: function(data, textStatus, jqXHR ) {
-            if (data !== '') {
-                $('#e_fm').val('');
-                $('#e_ms').val('');
-                $('#e_na').val('');
-                setTimeout(function(){ window.alert("Your message was sent. You should hear back from us soon!"); },0);
-            } else {
-                window.alert('Sorry, but the contact form submission did not work as expected.');
-            }
-      },
-      error: function(jqXHR, textStatus, errorThrown ) {
-            window.alert('ERROR. ' + errorThrown + ' ' + textStatus);
-      },
-      complete: function(jqXHR, textStatus ) {
+		success: function(data, textStatus, jqXHR ) {
+			if (data !== '') {
+				$('#e_fm').val('');
+				$('#e_ms').val('');
+				$('#e_na').val('');
+				setTimeout(function(){ window.alert("Your message was sent. You should hear back from us soon!"); },0);
+			} else {
+				window.alert('Sorry, but the contact form submission did not work as expected.');
+			}
+		},
+		error: function(jqXHR, textStatus, errorThrown ) {
+			window.alert('ERROR. ' + errorThrown + ' ' + textStatus);
+		},
+		complete: function(jqXHR, textStatus ) {
 
-      }
-    });
-    event.preventDefault();
+		}
+	});
+	event.preventDefault();
 });
 
 
 $('#redeem-form').submit(function( event ) {
-    if ($('#redeem-input').val().length > 0) {
-      $.ajax({
-        type: 'POST',
-        url: '/redeem.php',
-        data: $("#redeem-form").serialize(),
+	if ($('#redeem-input').val().length > 0) {
+		$.ajax({
+			type: 'POST',
+			url: '/redeem.php',
+			data: $("#redeem-form").serialize(),
 
-        success: function(data, textStatus, jqXHR ) {
-              if (data !== '') {
-                  $('#cover').show();
-                  $('#redeemer').show();
-                  $('#close-redeem').show();
-                  $('#redeemer').html(data);  // We’re done; let the content here do the rest.
-              } else {
-                  window.alert('Sorry, but the code you entered has already been redeemed or was entered incorrectly.');
-                  $('#redeem-input').focus();
-              }
-        },
-        error: function(jqXHR, textStatus, errorThrown ) {
-              window.alert(errorThrown + ' ' + textStatus);
-        },
-        complete: function(jqXHR, textStatus ) {
+			success: function(data, textStatus, jqXHR ) {
+				if (data !== '') {
+					$('#cover').show();
+					$('#redeemer').show();
+					$('#close-redeem').show();
+					$('#redeemer').html(data);		// We’re done; let the content here do the rest.
+				} else {
+					window.alert('Sorry, but the code you entered has already been redeemed or was entered incorrectly.');
+					$('#redeem-input').focus();
+				}
+			},
+			error: function(jqXHR, textStatus, errorThrown ) {
+				window.alert(errorThrown + ' ' + textStatus);
+			},
+			complete: function(jqXHR, textStatus ) {
 
-        }
-      });
-    }
-    event.preventDefault();
+			}
+		});
+	}
+	event.preventDefault();
 });
 $('#close-redeem').click(function() {
-    $('#cover').fadeOut('slow');
-    $('#close-redeem').fadeOut('slow');
-    $('#redeemer').fadeOut('fast');
+	$('#cover').fadeOut('slow');
+	$('#close-redeem').fadeOut('slow');
+	$('#redeemer').fadeOut('fast');
 });
 
 
 // Replace all soundcloud proxies with a real embed.
 
 $('.soundcloud-proxy').each(function() {
-  var code = $(this).data('code');
-  var iframeCode = '<iframe class="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+ code + '&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false" />';
-   $(this).replaceWith(iframeCode);
+	var code = $(this).data('code');
+	var iframeCode = '<iframe class="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+ code + '&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false" />';
+		$(this).replaceWith(iframeCode);
 });
 
 
 // Responsively resize the hero image. In sweet spot of screen aspect ratio, hero is full screen.
 function fullscreen(event){
-    var width = $(window).width();
-    var height= $(window).height();
-    var fullSizeHero = false;
-    if (width/height < 0.575) height = Math.round(width/0.575); // fill iphone x/xr/xs
-    else if (width/height > 1.618) height = Math.round(width/1.618);
-    else fullSizeHero = true;
+	var width = $(window).width();
+	var height= $(window).height();
+	var fullSizeHero = false;
+	if (width/height < 0.575) height = Math.round(width/0.575); // fill iphone x/xr/xs
+	else if (width/height > 1.618) height = Math.round(width/1.618);
+	else fullSizeHero = true;
 
-    // Show scroll arrow if first time here and we are showing full-screen hero
-    if (fullSizeHero && !event) {
-      $('#scroll-arrow').css('display', 'block');
-    } else {
-      $('#scroll-arrow').remove();
-    }
+	// Show scroll arrow if first time here and we are showing full-screen hero
+	if (fullSizeHero && !event) {
+		$('#scroll-arrow').css('display', 'block');
+	} else {
+		$('#scroll-arrow').remove();
+	}
 
-    jQuery('#main-header,img.hero-image').css({
-        width: width,
-        height: height
-    });
-    //$( ".info" ).text( width + ' x ' + height + ' … ' + width/height  );
+	jQuery('#main-header,img.hero-image').css({
+		width: width,
+		height: height
+	});
+	//$( ".info" ).text( width + ' x ' + height + ' … ' + width/height );
 }
 
 fullscreen(null);
@@ -141,17 +141,17 @@ fullscreen(null);
 var targetOffset = $("main").offset().top;
 
 var $w = $(window).scroll(function(){
-    $('#scroll-arrow').remove();
-    if ( $w.scrollTop() > targetOffset ) {
-        $('img.hero-image').css({"filter":"grayscale(0%)"});
-    }
+	$('#scroll-arrow').remove();
+	if ( $w.scrollTop() > targetOffset ) {
+		$('img.hero-image').css({"filter":"grayscale(0%)"});
+	}
 });
 
 
 // Run the function in case of window resize
 $(window).resize(function(event) {
-     fullscreen(event);
-  });
+	fullscreen(event);
+});
 
 
 

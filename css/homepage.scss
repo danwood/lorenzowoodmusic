@@ -455,7 +455,7 @@ a.buy-button {
 
 
 .next-to-side-photo-padded {
-	padding:0 0 0 2rem;  /* Make sure box is indented to be separated from photo */
+	padding:0 0 0 2rem;	/* Make sure box is indented to be separated from photo */
 }
 
 .side-photo img {
@@ -465,7 +465,7 @@ a.buy-button {
 
 @media only screen and (max-width:($mainBreakpoint - 1px)) {
 
-	/* On mobile, center photo rather than side-by-side  */
+	/* On mobile, center photo rather than side-by-side */
 	.side-photo {
 		margin-left:25%;
 		width:50%;
@@ -754,11 +754,11 @@ input#redeem-submit {
 	color:white;
 }
 
-#redeem-form ::-webkit-input-placeholder	 {text-align:center; }
-#redeem-form :-moz-placeholder		   		 {text-align:center; }
-#redeem-form ::-moz-placeholder		  		 {text-align:center; }
-#redeem-form :-ms-input-placeholder	  		 {text-align:center; }
-#redeem-form ::placeholder			   		 {text-align:center; }
+#redeem-form ::-webkit-input-placeholder		{text-align:center; }
+#redeem-form :-moz-placeholder					{text-align:center; }
+#redeem-form ::-moz-placeholder					{text-align:center; }
+#redeem-form :-ms-input-placeholder				{text-align:center; }
+#redeem-form ::placeholder						{text-align:center; }
 
 #cover {
 	position:fixed;
@@ -810,19 +810,19 @@ input#redeem-submit {
 }
 
 #cover-art-container {
-  width:20%;
-  float:left; }
+	width:20%;
+	float:left; }
 
 #downloader {
-  width:80%;
-  float:left; }
+	width:80%;
+	float:left; }
 
 #cover-art {
-  margin-right:20px; }
+	margin-right:20px; }
 
 #cover-art img {
-  width:100%;
-  height:auto; }
+	width:100%;
+	height:auto; }
 
 /*******************************************************************
  #list-container
@@ -832,33 +832,33 @@ input#redeem-submit {
 	margin-top:5px;
 }
 .song-meta-data {
-  float:left;
-  width:calc( 100% - 10em); }
+	float:left;
+	width:calc( 100% - 10em); }
 
 .song-download {
-  float:left;
-  text-align:right;
-  width:7em; }
+	float:left;
+	text-align:right;
+	width:7em; }
 
 .song-title {
-  color:#272726;
-  font-size:16px;
-  display:block;
-  font-weight:300;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis; }
+	color:#272726;
+	font-size:16px;
+	display:block;
+	font-weight:300;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis; }
 
 .song-duration, .track-number {
-  float:left;
-  width:3em;
-  text-align:center;
-  color:#607D8B;
-  font-size:16px;
-  font-weight:500; }
+	float:left;
+	width:3em;
+	text-align:center;
+	color:#607D8B;
+	font-size:16px;
+	font-weight:500; }
 
 .track-number {
-  width:2em;
+	width:2em;
 }
 
 

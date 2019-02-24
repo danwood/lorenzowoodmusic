@@ -61,7 +61,7 @@ $page-menu-font-size: 1.0rem;
 
 	// similar to quick-stream ?
 
-	nav.page-menu  {
+	nav.page-menu {
 		display:block;
 		position:absolute;
 		z-index:999;
@@ -69,33 +69,33 @@ $page-menu-font-size: 1.0rem;
 		text-align:center;
 
 		ul {
-		    padding:0;
-		    margin:0;
-		    list-style:none;
-		    overflow:hidden;
-		    text-align:right;
+			padding:0;
+			margin:0;
+			list-style:none;
+			overflow:hidden;
+			text-align:right;
 		}
 		li {
-		    margin:0;
-		    color:#fff;
-		    display:inline-block;
-		    line-height:1;
-		    font-size:$page-menu-font-size;
-		    font-weight:300;
-		    letter-spacing:2px;
+			margin:0;
+			color:#fff;
+			display:inline-block;
+			line-height:1;
+			font-size:$page-menu-font-size;
+			font-weight:300;
+			letter-spacing:2px;
 		}
 		a {
-		    color:#fff;
-		    text-decoration:none;
-		    display:block;
-		    padding:$page-menu-padding-v $page-menu-padding-h;
+			color:#fff;
+			text-decoration:none;
+			display:block;
+			padding:$page-menu-padding-v $page-menu-padding-h;
 		}
 		a.active {
 			color:$inverseColor;
 		}
 		a:hover {
-		    background:$inverseColor;
-		    color:$colorGrayDark;
+			background:$inverseColor;
+			color:$colorGrayDark;
 		}
 	}
 }
@@ -118,118 +118,118 @@ $page-menu-font-size: 1.0rem;
 
 	nav.page-menu {
 		display:block;
-	    position:fixed;
-	    z-index:1000;
-	    top:0;
-	    right:0;
-	    height:100%;
-	    width:$menuWidth;
-    	transform: translateX(250px);
-    	transition: transform 250ms ease-in-out;
+		position:fixed;
+		z-index:1000;
+		top:0;
+		right:0;
+		height:100%;
+		width:$menuWidth;
+		transform: translateX(250px);
+		transition: transform 250ms ease-in-out;
 
 		ul {
-		    width:$menuWidth;
-		    height:100%;
-		    padding:0;
-		    margin:0;
-		    list-style:none;
-		    background:$nav-background;
-		    overflow:hidden;
+			width:$menuWidth;
+			height:100%;
+			padding:0;
+			margin:0;
+			list-style:none;
+			background:$nav-background;
+			overflow:hidden;
 		}
 		li {
-		    margin:0;
-		    color:#fff
+			margin:0;
+			color:#fff
 		}
 		a {
-		    color:#fff;
-		    font-size:1rem;
-		    text-decoration:none;
-		    display:block;
-		    padding:12px 15px;
-		    font-weight:300;
-		    letter-spacing:2px;
+			color:#fff;
+			font-size:1rem;
+			text-decoration:none;
+			display:block;
+			padding:12px 15px;
+			font-weight:300;
+			letter-spacing:2px;
 		}
 		a.active {
 			color:$inverseColor;
 		}
 		a:hover {
-		    background:#111;
+			background:#111;
 		}
 	}
 
 	label.hamburger {
-	    display:block;
-	    position:absolute;
-	    top:$menuMargin;
-	    right:$menuMargin;
-	    height:$menuSize;
-	    width:$menuSize;
-	    z-index:1500;
-	    transition: all 0.3s;
+		display:block;
+		position:absolute;
+		top:$menuMargin;
+		right:$menuMargin;
+		height:$menuSize;
+		width:$menuSize;
+		z-index:1500;
+		transition: all 0.3s;
 		cursor: pointer;
 
 
-	    svg {
-	    	width:100%;
-	    	height:100%;
-	    	fill:$inverseColor;
-	    }
+		svg {
+			width:100%;
+			height:100%;
+			fill:$inverseColor;
+		}
 	}
 	input#navigation[type="checkbox"] {
 
 		transition: all 0.3s;
 
 		&:checked ~ .page-menu {
-	    	transform: translateX(0);
+			transform: translateX(0);
 		}
 
 		&:checked ~ label {
-		    position:fixed;	// make sure icon doesn't scroll off of screen since whole menu is fixed
+			position:fixed;	// make sure icon doesn't scroll off of screen since whole menu is fixed
 		}
 
 		&:checked ~ label > .horizontal {
-		    transition: all 0.3s;
-		    opacity: 0;					// fade out middle
+			transition: all 0.3s;
+			opacity: 0;					// fade out middle
 		}
 		&:checked ~ label > .diagonal.part-1 {
-		    transition: all 0.3s;
-		    transform: rotate(135deg);		// animate to diagonal
-		    margin-top: 8px;
+			transition: all 0.3s;
+			transform: rotate(135deg);		// animate to diagonal
+			margin-top: 8px;
 		}
 		&:checked ~ label > .diagonal.part-2 {
-		    transition: all 0.3s;
-		    transform: rotate(-135deg);		// animate to diagonal
-		    margin-top: -9px;
+			transition: all 0.3s;
+			transform: rotate(-135deg);		// animate to diagonal
+			margin-top: -9px;
 		}
 	}
 
 	.spinner {
-	    transition: all 0.3s;
-	    box-sizing: border-box;
-	    position: absolute;
-	    height: 3px;
-	    width: 100%;
-	    background-color: #fff;
+		transition: all 0.3s;
+		box-sizing: border-box;
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		background-color: #fff;
 	}
 	.horizontal {
-	    transition: all 0.3s;
-	    box-sizing: border-box;
-	    position: relative;
-	    float: left;
-	    margin-top: 3px;
+		transition: all 0.3s;
+		box-sizing: border-box;
+		position: relative;
+		float: left;
+		margin-top: 3px;
 	}
 	.diagonal.part-1 {
-	    position: relative;
-	    transition: all 0.3s;
-	    box-sizing: border-box;
-	    float: left;
+		position: relative;
+		transition: all 0.3s;
+		box-sizing: border-box;
+		float: left;
 	}
 	.diagonal.part-2 {
-	    transition: all 0.3s;
-	    box-sizing: border-box;
-	    position: relative;
-	    float: left;
-	    margin-top: 3px;
+		transition: all 0.3s;
+		box-sizing: border-box;
+		position: relative;
+		float: left;
+		margin-top: 3px;
 	}
 }
 
@@ -298,8 +298,8 @@ Icons (at top and bottom)
 	a:hover:after {
 		opacity:0.75;
 	}
-	a:last-child:after { /* Also need to do below for 5th icon when we have two rows! SEE BELOW */
-		right:15%;  /* plenty of room for shadow effect to not overflow the container on phone */
+	a:last-child:after {	/* Also need to do below for 5th icon when we have two rows! SEE BELOW */
+		right:15%;			/* plenty of room for shadow effect to not overflow the container on phone */
 		left:auto;
 	}
 }
@@ -334,35 +334,35 @@ Masonry
 
 /* The Masonry Container */
 .masonry {
-  max-width: 1500px;
-  margin:0 auto;
-  column-gap: 1.5em;
+	max-width: 1500px;
+	margin:0 auto;
+	column-gap: 1.5em;
 }
 
 /* The Masonry Brick */
 .item {
-  background: #fff;
-  margin: 0 0 1.5em;
-  border:1px solid rgba(0,0,0,0.5);
+	background: #fff;
+	margin: 0 0 1.5em;
+	border:1px solid rgba(0,0,0,0.5);
 }
 
 /* Masonry on large screens */
 @media only screen and (min-width: 1024px) {
-  .masonry {
-    column-count: 4;
-  }
+	.masonry {
+		column-count: 4;
+	}
 }
 
 /* Masonry on medium-sized screens */
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
-  .masonry {
-    column-count: 3;
-  }
+	.masonry {
+		column-count: 3;
+	}
 }
 
 /* Masonry on small screens */
 @media only screen and (max-width: 767px) and (min-width: 540px) {
-  .masonry {
-    column-count: 2;
-  }
+	.masonry {
+		column-count: 2;
+	}
 }
