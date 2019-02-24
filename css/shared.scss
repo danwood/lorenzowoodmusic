@@ -165,6 +165,9 @@ $page-menu-font-size: 1.0rem;
 	    height:$menuSize;
 	    width:$menuSize;
 	    z-index:1500;
+	    transition: all 0.3s;
+		cursor: pointer;
+
 
 	    svg {
 	    	width:100%;
@@ -174,6 +177,8 @@ $page-menu-font-size: 1.0rem;
 	}
 	input#navigation[type="checkbox"] {
 
+		transition: all 0.3s;
+
 		&:checked ~ .page-menu {
 	    	transform: translateX(0);
 		}
@@ -181,6 +186,53 @@ $page-menu-font-size: 1.0rem;
 		&:checked ~ label {
 		    position:fixed;
 		}
+
+		&:checked ~ label > .horizontal {
+		    transition: all 0.3s;
+		    box-sizing: border-box;
+		    opacity: 0;
+		}
+		&:checked ~ label > .diagonal.part-1 {
+		    transition: all 0.3s;
+		    box-sizing: border-box;
+		    transform: rotate(135deg);
+		    margin-top: 8px;
+		}
+		&:checked ~ label > .diagonal.part-2 {
+		    transition: all 0.3s;
+		    box-sizing: border-box;
+		    transform: rotate(-135deg);
+		    margin-top: -9px;
+		}
+	}
+
+	.spinner {
+	    transition: all 0.3s;
+	    box-sizing: border-box;
+	    position: absolute;
+	    height: 3px;
+	    width: 100%;
+	    background-color: #fff;
+	}
+	.horizontal {
+	    transition: all 0.3s;
+	    box-sizing: border-box;
+	    position: relative;
+	    float: left;
+	    margin-top: 3px;
+	}
+	.diagonal.part-1 {
+	    position: relative;
+	    transition: all 0.3s;
+	    box-sizing: border-box;
+	    float: left;
+	}
+	.diagonal.part-2 {
+	    transition: all 0.3s;
+	    box-sizing: border-box;
+	    position: relative;
+	    float: left;
+	    margin-top: 3px;
 	}
 }
 

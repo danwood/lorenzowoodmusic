@@ -36,7 +36,9 @@ html(class="no-js", lang="en-us")
 				block hamburger
 					input#navigation(type="checkbox")
 					label.hamburger(for="navigation")
-						include svg/hamburger.svg
+						div.spinner.diagonal.part-1
+						div.spinner.horizontal
+						div.spinner.diagonal.part-2
 
 				mixin navLink(link, name)
 					li: a(
