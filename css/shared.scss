@@ -59,7 +59,6 @@ $page-menu-font-size: 1.0rem;
 	nav.page-menu {
 		display:block;
 		position:absolute;
-		z-index:10;
 		top:0; left:0; right:0;
 		text-align:center;
 
@@ -118,6 +117,7 @@ $page-menu-font-size: 1.0rem;
 		right:0;
 		height:100%;
 		width:$menuWidth;
+		z-index:10;
 		transform: translateX(250px);
 		transition: transform 250ms ease-in-out;
 
