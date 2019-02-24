@@ -17,7 +17,7 @@ setTimeout(function(){
 }, 2000);
 
 // Bands in Town - display past events. Not showing anything if no javascript.
-$('#recent-performances').html('<a id="recent-link" href="#">Show Recent</a>');
+$('#recent-performances').html('<a id="recent-link" href="#">& Recent</a>');
 
 // If we click to show recent performances too, this gets revealed. A one-way street BTW.
 $('#recent-link').click(function() {
