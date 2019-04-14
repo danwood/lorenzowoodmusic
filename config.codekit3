@@ -274,6 +274,28 @@
 		"oAP": "/build/CACHE",
 		"oF": 0
 		},
+	"/CD100.png": {
+		"ft": 32768,
+		"iS": 2178,
+		"oA": 0,
+		"oAP": "/CD100.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/CD50.png": {
+		"ft": 32768,
+		"iS": 1087,
+		"oA": 0,
+		"oAP": "/CD50.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/classes.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -537,17 +559,6 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"q": 100
-		},
-	"/img/CD.png": {
-		"ft": 32768,
-		"iS": 1087,
-		"oA": 0,
-		"oAP": "/img/CD.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
 		"q": 100
 		},
 	"/img/southshore.jpg": {
