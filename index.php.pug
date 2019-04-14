@@ -45,7 +45,7 @@ block append header
 		picture
 			source(srcset="img/beach.webp 1920w" type="image/webp")
 			source(srcset="img/beach.jpg 1920w, img/beach50.jpg 960w, img/beach33.jpg 640w")
-			img.hero-image(src="img/beach.jpg" alt="Lorenzo Wood")
+			img.hero-image(src="img/beach.jpg" loading="eager" alt="Lorenzo Wood")
 	//-.featured
 	//-	a(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
 	//-		img(src="album_art/now_in_control.jpg" alt="EP thumbnail")
@@ -217,7 +217,7 @@ block main
 				picture
 					source(srcset="img/southshore.webp 990w" type="image/webp")
 					source(srcset="img/southshore.jpg 990w, img/southshore50.jpg 495w")
-					img(src="img/southshore.jpg" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
+					img(src="img/southshore.jpg" loading="lazy" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
 			.next-to-side-photo
 				.next-to-side-photo-padded
 					header
