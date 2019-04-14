@@ -12,9 +12,14 @@ block styles
 	|</style>
 block main
 	section
-		article.textual
+		article.clearfix.textual
 			blockquote "Had the pleasure of booking Lorenzo Wood and his band at West End Night Market on Webster in Alameda... It was great to see these teenagers writing and performing originals! Solid set, professional and easy to work with. Fantastic Lorenzo is also into the sound/producing side; this young man will do nothing but keep improving and entertaining."
 				footer Tanoa Stewart / A-Town Agency
+
+			.youtube-column-half
+				.youtube-border
+					.youtube.youtube-bordered(data-embed='Lo29EPo_ewk:Band & Solo Performance Samples (06ː32)')
+
 		article.textual
 			header
 				h1 Private Events
@@ -114,6 +119,8 @@ block main
 					I'll need a power outlet to plug into, of course!
 
 block append scripts
+	script
+		include ../js/youtube-min.js
 	script.
 		//
 		document.getElementById('disclosure').addEventListener('click', function(evt) {

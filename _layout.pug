@@ -12,7 +12,7 @@ html(class="no-js", lang="en-us")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		block links
 			link(rel="apple-touch-icon" href="icon.png")
-			link(rel="stylesheet" href="/css/main.022419000003.css")
+			link(rel="stylesheet" href="/css/main.04132019.css")
 		block styles
 
 	body(class=current)
@@ -87,8 +87,8 @@ html(class="no-js", lang="en-us")
 		block additional-html
 		
 		block scripts
+			// Modernizer-like
+			// Remove "no-js" class from element, if it exists
 			script.
-				// Modernizer-like
-				// Remove "no-js" class from element, if it exists
 				document.documentElement.className = document.documentElement.className.replace("no-js","js");
 

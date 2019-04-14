@@ -7,11 +7,12 @@
 		"uuidString": "24DFFC34-B0CB-40BD-AA10-5ADCA258D482"
 		}
 	],
-"creatorBuild": "28905",
+"creatorBuild": "29156",
 "files": {
 	"/.generate.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/.generate.php",
 		"oF": 0
@@ -19,6 +20,7 @@
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/.gitignore",
 		"oF": 0
@@ -26,6 +28,7 @@
 	"/.htaccess": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/.htaccess",
 		"oF": 0
@@ -33,6 +36,7 @@
 	"/404.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/404.html",
 		"oF": 0
@@ -41,6 +45,7 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/_layout.html",
 		"oF": 0,
@@ -49,6 +54,7 @@
 	"/_sources/BandsInTown.opacity": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/_sources/BandsInTown.opacity",
 		"oF": 0
@@ -56,6 +62,7 @@
 	"/_sources/downarrow.opacity": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/_sources/downarrow.opacity",
 		"oF": 0
@@ -96,6 +103,7 @@
 	"/_sources/list-play.opacity": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/_sources/list-play.opacity",
 		"oF": 0
@@ -103,6 +111,7 @@
 	"/_sources/Patreon.opacity": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/_sources/Patreon.opacity",
 		"oF": 0
@@ -110,6 +119,7 @@
 	"/_sources/ReverbNation.opacity": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/_sources/ReverbNation.opacity",
 		"oF": 0
@@ -183,6 +193,7 @@
 	"/bandsintown.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/bandsintown.php",
 		"oF": 0
@@ -212,6 +223,7 @@
 	"/booking/index.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/booking/index.html",
 		"oF": 0
@@ -220,6 +232,7 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/booking/index.html",
 		"oF": 0,
@@ -250,6 +263,7 @@
 	"/browserconfig.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/browserconfig.xml",
 		"oF": 0
@@ -263,6 +277,7 @@
 	"/classes.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/classes.php",
 		"oF": 0
@@ -270,6 +285,7 @@
 	"/classes/class.EmailAddressValidator.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/classes/class.EmailAddressValidator.php",
 		"oF": 0
@@ -277,6 +293,7 @@
 	"/classes/class.Encoding.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/classes/class.Encoding.php",
 		"oF": 0
@@ -284,6 +301,7 @@
 	"/classes/class.housekeeping.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/classes/class.housekeeping.php",
 		"oF": 0
@@ -357,6 +375,7 @@
 	"/css/main.css.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/css/main.css.map",
 		"oF": 0
@@ -423,6 +442,7 @@
 	"/download.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/download.php",
 		"oF": 0
@@ -430,6 +450,7 @@
 	"/EPK.zip": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/EPK.zip",
 		"oF": 0
@@ -437,6 +458,7 @@
 	"/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/favicon.ico",
 		"oF": 0
@@ -444,6 +466,7 @@
 	"/fetchCACHE.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/fetchCACHE.php",
 		"oF": 0
@@ -451,6 +474,7 @@
 	"/googlebc63703f4fb8681a.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/googlebc63703f4fb8681a.html",
 		"oF": 0
@@ -458,6 +482,7 @@
 	"/humans.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/humans.txt",
 		"oF": 0
@@ -487,6 +512,7 @@
 	"/img/beach.webp": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/img/beach.webp",
 		"oF": 0
@@ -538,6 +564,7 @@
 	"/img/southshore.webp": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/img/southshore.webp",
 		"oF": 0
@@ -556,6 +583,7 @@
 	"/index.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/index.php",
 		"oF": 0
@@ -564,12 +592,14 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/index.php",
 		"oF": 2,
 		"oS": 1
 		},
 	"/js/index-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -580,6 +610,7 @@
 		"tS": 0
 		},
 	"/js/index.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -590,6 +621,7 @@
 		"tS": 0
 		},
 	"/js/vendor/jquery-3.3.1.min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -600,6 +632,7 @@
 		"tS": 0
 		},
 	"/js/youtube-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -612,11 +645,13 @@
 	"/js/youtube-min.js.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/js/youtube-min.js.map",
 		"oF": 0
 		},
 	"/js/youtube.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -629,6 +664,7 @@
 	"/mailme.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/mailme.php",
 		"oF": 0
@@ -636,6 +672,7 @@
 	"/mailsent.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/mailsent.php",
 		"oF": 0
@@ -643,6 +680,7 @@
 	"/photos/index.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/photos/index.html",
 		"oF": 0
@@ -651,6 +689,7 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/photos/index.html",
 		"oF": 0,
@@ -1280,6 +1319,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/phpliteadmin-readme.html",
 		"oF": 0,
@@ -1293,6 +1333,7 @@
 	"/phpliteadmin.config.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/phpliteadmin.config.php",
 		"oF": 0
@@ -1300,6 +1341,7 @@
 	"/phpliteadmin.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/phpliteadmin.php",
 		"oF": 0
@@ -1395,6 +1437,7 @@
 	"/projects/index.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/projects/index.html",
 		"oF": 0
@@ -1403,6 +1446,7 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/projects/index.html",
 		"oF": 0,
@@ -1432,6 +1476,7 @@
 	"/redeem.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/redeem.php",
 		"oF": 0
@@ -1440,6 +1485,7 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/redeem.php",
 		"oF": 2,
@@ -1461,6 +1507,7 @@
 	"/robots.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/robots.txt",
 		"oF": 0
@@ -1468,6 +1515,7 @@
 	"/sitemap.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/sitemap.txt",
 		"oF": 0
@@ -1475,6 +1523,7 @@
 	"/studio/index.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/studio/index.html",
 		"oF": 0
@@ -1483,6 +1532,7 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/studio/index.html",
 		"oF": 0,
@@ -1593,16 +1643,6 @@
 		"miP": 0,
 		"oA": 1,
 		"oAP": "/svg/google-play.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/hamburger.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/svg/hamburger.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -1763,6 +1803,7 @@
 	"/videos/index.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/videos/index.html",
 		"oF": 0
@@ -1771,6 +1812,7 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/videos/index.html",
 		"oF": 0,
@@ -1779,6 +1821,7 @@
 	"/Website.sublime-project": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/Website.sublime-project",
 		"oF": 0
@@ -1878,6 +1921,12 @@
 		"function-sent": {
 			"active": 0
 			},
+		"inline-consecutive-adds": {
+			"active": 0
+			},
+		"inline-environment-variables": {
+			"active": 0
+			},
 		"instanceof": {
 			"active": 0
 			},
@@ -1897,6 +1946,36 @@
 			"active": 0
 			},
 		"minify-booleans": {
+			"active": 0
+			},
+		"minify-builtins": {
+			"active": 0
+			},
+		"minify-constant-folding": {
+			"active": 0
+			},
+		"minify-dead-code-elimination": {
+			"active": 0
+			},
+		"minify-flip-comparisons": {
+			"active": 0
+			},
+		"minify-guarded-expressions": {
+			"active": 0
+			},
+		"minify-infinity": {
+			"active": 0
+			},
+		"minify-mangle-names": {
+			"active": 0
+			},
+		"minify-numeric-literals": {
+			"active": 0
+			},
+		"minify-simplify": {
+			"active": 0
+			},
+		"minify-type-constructors": {
 			"active": 0
 			},
 		"modules-amd": {
@@ -1947,6 +2026,9 @@
 		"pipeline-operator": {
 			"active": 0
 			},
+		"private-methods": {
+			"active": 0
+			},
 		"property-literals": {
 			"active": 0
 			},
@@ -1980,10 +2062,16 @@
 		"regenerator": {
 			"active": 0
 			},
+		"regexp-constructors": {
+			"active": 0
+			},
 		"remove-console": {
 			"active": 0
 			},
 		"remove-debugger": {
+			"active": 0
+			},
+		"remove-undefined": {
 			"active": 0
 			},
 		"reserved-words": {
@@ -2932,6 +3020,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-useless-catch": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-useless-computed-key": {
 			"active": 0,
 			"optionString": ""
@@ -3594,6 +3686,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -3615,6 +3708,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"bundleFormat": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
@@ -3637,7 +3731,8 @@
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -3676,6 +3771,7 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -3685,7 +3781,8 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -3706,7 +3803,8 @@
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
 		"outputStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -3735,7 +3833,8 @@
 		"outputFormat": 0,
 		"outputStyle": 1,
 		"railsCompatible": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
@@ -3823,16 +3922,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"ascii_only": {
-			"active": 0,
+		"arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
-		"bare_returns": {
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
 		"booleans": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"booleans_as_integers": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"braces": {
@@ -3844,14 +3947,14 @@
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"comparisons": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"compress": {
+		"computed_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -3874,6 +3977,10 @@
 		"drop_debugger": {
 			"active": 1,
 			"flagValue": -1
+			},
+		"ecma": {
+			"active": 1,
+			"flagValue": 5
 			},
 		"eval": {
 			"active": 0,
@@ -3899,10 +4006,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"html5_comments": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"ie8": {
 			"active": 0,
 			"flagValue": -1
@@ -3911,13 +4014,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-start": {
-			"active": 0,
-			"flagValue": 0
-			},
 		"indent_level": {
 			"active": 0,
 			"flagValue": 4
+			},
+		"indent_start": {
+			"active": 0,
+			"flagValue": 0
 			},
 		"inline": {
 			"active": 1,
@@ -3929,6 +4032,10 @@
 			},
 		"join_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"keep_classnames": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"keep_fargs": {
@@ -3951,13 +4058,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"mangle": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
+			},
+		"module": {
+			"active": 0,
+			"flagValue": -1
 			},
 		"negate_iife": {
 			"active": 1,
@@ -3966,10 +4073,6 @@
 		"passes": {
 			"active": 1,
 			"flagValue": 1
-			},
-		"preserve_line": {
-			"active": 0,
-			"flagValue": -1
 			},
 		"properties": {
 			"active": 1,
@@ -3993,6 +4096,10 @@
 			},
 		"reduce_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"safari10": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -4027,6 +4134,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"unsafe_arrows": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"unsafe_comps": {
 			"active": 0,
 			"flagValue": -1
@@ -4036,6 +4147,10 @@
 			"flagValue": -1
 			},
 		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_methods": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -4063,15 +4178,12 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"width": {
-			"active": 1,
-			"flagValue": 80
-			},
 		"wrap_iife": {
 			"active": 0,
 			"flagValue": -1
 			}
 		},
+	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$",
 	"websiteRelativeRoot": ""
 	},
