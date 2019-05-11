@@ -59,6 +59,24 @@
 		"oAP": "/_sources/BandsInTown.opacity",
 		"oF": 0
 		},
+	"/_sources/cd-handreduced-still-too-big.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/_sources/cd-handreduced-still-too-big.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/_sources/CD-redrawn.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_sources/CD-redrawn.pdf",
+		"oF": 0
+		},
 	"/_sources/CD100.png": {
 		"ft": 32768,
 		"iS": 2178,
@@ -117,6 +135,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/_sources/IMG_4541 need to rotate 358.5°.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/_sources/jacket-large.jpg": {
+		"ft": 16384,
+		"iS": 1772311,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/_sources/jacket-large.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -196,6 +225,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/_sources/scaled high quality/southshore50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art/jacket.jpg": {
+		"ft": 16384,
+		"iS": 11500,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art/jacket.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
