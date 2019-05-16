@@ -635,9 +635,9 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/index.php",
-		"oF": 0
+		"oF": 1
 		},
 	"/index.php.pug": {
 		"cB": 0,
@@ -647,7 +647,7 @@
 		"oA": 0,
 		"oAP": "/index.php",
 		"oF": 2,
-		"oS": 1
+		"oS": 0
 		},
 	"/js/index-min.js": {
 		"bF": 0,

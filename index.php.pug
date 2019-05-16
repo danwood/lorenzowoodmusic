@@ -32,9 +32,10 @@ block append header
 	.hero
 		.quick-stream.clearfix.safe-area-only
 			p
-				img(style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art/jacket.jpg" alt="Jacket cover image")
-				| New single “Jacket (I'm Sensitive)’ will be released May 24!
-				| &nbsp;
+				a(target="_blank" href="https://itunes.apple.com/album/id1462960331?ls=1&app=itunes&at=1000lKSp")
+					img(style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art/jacket.jpg" alt="Jacket cover image")
+				span New single “Jacket (I'm Sensitive)” will be released May 24!
+					| &nbsp;
 				b
 					|<?php
 					|date_default_timezone_set('America/New_York');
@@ -42,8 +43,7 @@ block append header
 					|$release = new DateTime('2019-05-24 00:00:00');
 					|$now = new DateTime();
 					|if ($now >= $release) { echo 'Order it or stream it now!'; }
-					|else if ($now >= $prerelease) { echo 'Pre-order it now on iTunes!'; }
-					|else { echo 'Pre-order on iTunes starting May 16.'; }
+					|else if ($now >= $prerelease) { echo '<a target="_blank" style="text-decoration:underline" href="https://itunes.apple.com/album/id1462960331?ls=1&app=itunes&at=1000lKSp">Pre-order it now on iTunes!</a>'; }
 					|?>
 
 
