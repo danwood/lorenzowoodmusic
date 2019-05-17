@@ -230,6 +230,14 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art/384-pixels.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/album_art/384-pixels.txt",
+		"oF": 0
+		},
 	"/album_art/jacket.jpg": {
 		"ft": 16384,
 		"iS": 11500,
@@ -241,12 +249,45 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art/now-in-control.jpg": {
+		"ft": 16384,
+		"iS": 19883,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art/now-in-control.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art/now_in_control.jpg": {
 		"ft": 16384,
 		"iS": 19883,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art/now_in_control.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art/old-town-road.jpg": {
+		"ft": 16384,
+		"iS": 17071,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art/old-town-road.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art/you-and-me-now.jpg": {
+		"ft": 16384,
+		"iS": 67671,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art/you-and-me-now.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
