@@ -146,7 +146,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
       </section>
       <section class="download-section">
         <article class="textual clearfix">
-          <div class="side-photo"><img class="shadowed" src="album_art/now_in_control.jpg" alt="EP thumbnail"></div>
+          <div class="side-photo"><img class="shadowed" src="album_art/now-in-control.jpg" alt="EP thumbnail"></div>
           <div class="next-to-side-photo">
             <div class="next-to-side-photo-padded">
               <div><a class="buy-button" data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control">Buy “Now In Control” EP</a></div>
