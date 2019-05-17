@@ -10,11 +10,46 @@ block vars
 
 block footer
 
+block h1logo
+	div(style="width:100%; height:4em; background-color:black")
 
-block prelude
+
+block main
+	div
+		|<?php
+		|require_once('../classes.php');
+		|$db = new DowncodeDB();
+		|$slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
+		|// Figure out something clever to display if no album specified; show all. maybe in columns?
+		|$albums = Array();
+		|if (empty($slug)) {
+		|	$albums = $db->allAlbums();
+		|} else {
+		|	$albums[] = $db->albumForSlug($slug);
+		|}
+		|foreach ($albums as $album) {
+		|?>
+		.album
+			|album
+		|<?php
+		|}
+		|?>
+
+block scripts
 	|<?php
-	|	date_default_timezone_set('America/Los_Angeles');
-	| 	$slug = isset($_GET['slug']) ? $_GET['slug'] : '';
-	|
+	|$db->close();
 	|?>
- 
+
+//- [title] => You and Me Now
+//- [description] => 
+//- [imageName] => you-and-me-now
+//- [timestamp] => 2019-05-17 01:08:12
+//- [artist] => Aendru
+//- [featuring] => Lorenzo Wood
+//- [itunes_id] => 
+//- [apple_music_id] => 
+//- [spotify_id] => https://open.spotify.com/album/1XaP6iC5xkcaqVZdf2hXRC?si=eHxI7fTAS3OnDNnqIIiriA
+//- [google_play_id] => 
+//- [amazon_music_id] => 
+//- [soundcloud_id] => https://soundcloud.com/andrewwilsonmusic/aendru-you-me-now-feat-lorenzo-wood
+//- [deezer_id] => //- 

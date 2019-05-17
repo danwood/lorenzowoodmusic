@@ -418,6 +418,29 @@ class DowncodeDB extends SQLite3
     return $result;
   }
 
+  function allAlbums()
+  {
+    $result = Array();
+    $statement = $this->prepare('SELECT * FROM album order by ID');
+    $ret = $statement->execute();
+    while ($album = $ret->fetchArray(SQLITE3_ASSOC) ){
+      $result[] = $album;
+    }
+    return $result;
+  }
+
+  function albumForSlug($slug)
+  {
+    $result = NULL;
+    $statement = $this->prepare('SELECT * FROM album WHERE slug = :slug');
+    $statement->bindValue(':slug', strtolower(trim($slug)));
+    $ret = $statement->execute();
+    while ($album = $ret->fetchArray(SQLITE3_ASSOC) ){
+      $result = $album;
+    }
+    return $result;
+  }
+
   function fileNameForAlbumTrackExtension($albumID, $trackID, $formatID)
   {
     $result = NULL;
