@@ -1,7 +1,6 @@
 |<?php
 |
-|error_log("TEMPORARILY ALLOWING THIS PAGE TO BE ACCESSED BY GET");
-|//if ($_SERVER['REQUEST_METHOD'] != 'POST') die;	// really this shouldn't come from a GET
+|if ($_SERVER['REQUEST_METHOD'] != 'POST') die;	// really this shouldn't come from a GET
 |
 |$inputs = $_SERVER['REQUEST_METHOD'] == 'POST' ? $_POST : $_GET;
 |
