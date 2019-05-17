@@ -42,7 +42,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
           <p><a target="_blank" href="https://itunes.apple.com/album/id1462960331?ls=1&amp;app=itunes&amp;at=1000lKSp"><img style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art/jacket.jpg" alt="Jacket cover image"></a><span>
               New single “Jacket (I'm Sensitive)” will be released May 24!&nbsp;</span><b>
               <?php
-              date_default_timezone_set('America/New_York');
+              date_default_timezone_set('America/Los_Angeles');
               $prerelease = new DateTime('2019-05-16 00:00:00');
               $release = new DateTime('2019-05-24 00:00:00');
               $now = new DateTime();

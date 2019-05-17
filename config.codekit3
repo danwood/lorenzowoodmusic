@@ -745,13 +745,15 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/link/index.php": {
+	"/link/index.php.pug": {
 		"cB": 0,
-		"ft": 8192,
+		"cOD": 1,
+		"ft": 512,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/link/index.php",
-		"oF": 0
+		"oF": 2,
+		"oS": 0
 		},
 	"/mailme.php": {
 		"cB": 0,
