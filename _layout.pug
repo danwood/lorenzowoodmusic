@@ -7,8 +7,9 @@ html(class="no-js", lang="en-us")
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
 		block title
 			title #{current} | Lorenzo Wood Music
-		meta(name="description"
-			content=description)
+		block description
+			meta(name="description"
+				content=description)
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		block links
 			link(rel="apple-touch-icon" href="icon.png")

@@ -761,7 +761,7 @@
 		"oA": 0,
 		"oAP": "/link/index.php",
 		"oF": 2,
-		"oS": 0
+		"oS": 1
 		},
 	"/link/link.css": {
 		"aP": 1,
@@ -801,16 +801,6 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/link/music-service_applemusic.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/link/music-service_brunomars.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/link/music-service_brunomars.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -861,6 +851,76 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/link/music-service_youtube.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/link/orig/music-service_amazonmp3.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/link/orig/music-service_amazonmp3.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/link/orig/music-service_applemusic.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/link/orig/music-service_applemusic.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/link/orig/music-service_deezer.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/link/orig/music-service_deezer.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/link/orig/music-service_google-play.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/link/orig/music-service_google-play.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/link/orig/music-service_itunes.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/link/orig/music-service_itunes.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/link/orig/music-service_spotify.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/link/orig/music-service_spotify.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/link/orig/music-service_youtube.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/link/orig/music-service_youtube.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,

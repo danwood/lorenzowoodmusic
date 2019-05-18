@@ -1,5 +1,4 @@
 <?php
-
 error_reporting(E_ALL);
 date_default_timezone_set('America/Los_Angeles');
 
@@ -11,19 +10,22 @@ include_once(PRIVATE_RESOLVED . '/downcode_db/secrets.php');    // $password
 define('DOWNCODE_DBDIR',    PRIVATE_RESOLVED . '/downcode_db');
 define('DOWNCODE_FILESDIR', PRIVATE_RESOLVED . '/downcode_files');
 
+function baseURL() {
+	$pageURL = 'http';
+	if(isset($_SERVER["HTTPS"]))
+	if ($_SERVER["HTTPS"] == "on") {
+			$pageURL .= "s";
+	}
+	$pageURL .= "://";
+	if ($_SERVER["SERVER_PORT"] != "80") {
+			$pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"];
+	} else {
+			$pageURL .= $_SERVER["SERVER_NAME"];
+	}
+	return $pageURL;
+}
 function curPageURL() {
-		$pageURL = 'http';
-		if(isset($_SERVER["HTTPS"]))
-		if ($_SERVER["HTTPS"] == "on") {
-				$pageURL .= "s";
-		}
-		$pageURL .= "://";
-		if ($_SERVER["SERVER_PORT"] != "80") {
-				$pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
-		} else {
-				$pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
-		}
-		return $pageURL;
+	return baseURL() . $_SERVER["REQUEST_URI"];
 }
 // Adapted from https://github.com/dflydev/dflydev-base32-crockford (MIT license)
 
@@ -517,4 +519,4 @@ However, due to the second character acting as a salt, we now have the ability t
 		}
 	}
 }
-
+?>
