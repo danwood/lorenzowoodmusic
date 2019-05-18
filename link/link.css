@@ -347,7 +347,7 @@ p {
     border-color: #222; }
   #prefpage .service img {
     max-width: 125px;
-    display: block;
+    display: inline-block;
     background-size: 100%;
     margin: 14px 0 14px 15px; }
   #prefpage .service:hover {
