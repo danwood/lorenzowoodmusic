@@ -32,7 +32,7 @@ block append header
 	.hero
 		.quick-stream.clearfix.safe-area-only
 			p
-				a(target="_blank" href="https://itunes.apple.com/album/id1462960331?ls=1&app=itunes&at=1000lKSp")
+				a(target="_blank" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&app=itunes&at=1000lKSp")
 					img(style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art/jacket.jpg" alt="Jacket cover image")
 				span New single “Jacket (I'm Sensitive)” will be released May 24!
 					| &nbsp;
@@ -43,11 +43,11 @@ block append header
 					|$release = new DateTime('2019-05-24 00:00:00');
 					|$now = new DateTime();
 					|if ($now >= $release) { echo 'Order it or stream it now!'; }
-					|else if ($now >= $prerelease) { echo '<a target="_blank" style="text-decoration:underline" href="https://itunes.apple.com/album/id1462960331?ls=1&app=itunes&at=1000lKSp">Pre-order it now on iTunes!</a>'; }
+					|else if ($now >= $prerelease) { echo '<a target="_blank" style="text-decoration:underline" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&app=itunes&at=1000lKSp">Pre-order it now on iTunes!</a>'; }
 					|?>
 
 
-			//-a.needs-medium-small(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album///-now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
+			//-a.needs-medium-small(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
 			//-	//- Apple marketing guidelines for lockup images:
 			//-	//- minimum 25px tall, 25% of height margin
 			//-	include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
@@ -297,5 +297,5 @@ block scripts
 
 
 	<?php if ($code) { ?><script>$('#redeem-form').submit();</script><?php } ?>
-	<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"Lorenzo Wood","url":"https://www.lorenzowoodmusic.com/","sameAs":["https://www.facebook.com/lorenzowoodmusic/","https://twitter.com/lorenzowmusic","https://www.instagram.com/LorenzoWoodMusic/","https://www.youtube.com/lorenzowoodmusic","https://soundcloud.com/LorenzoWoodMusic","https://itunes.apple.com/us/artist/lorenzo-wood/1262743720","https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA?si=kAr7Wf29R7WkScnbG9d2dg"]}</script>
+	<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"Lorenzo Wood","url":"https://www.lorenzowoodmusic.com/","sameAs":["https://www.facebook.com/lorenzowoodmusic/","https://twitter.com/lorenzowmusic","https://www.instagram.com/LorenzoWoodMusic/","https://www.youtube.com/lorenzowoodmusic","https://soundcloud.com/LorenzoWoodMusic","https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp","https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA?si=kAr7Wf29R7WkScnbG9d2dg"]}</script>
 
