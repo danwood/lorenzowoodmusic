@@ -7,7 +7,7 @@ $slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
 $album = $db->albumForSlug($slug);
 if ($album) {
 	$longTitle = $album['title'];
-	if (!empty($album['featuring'])) { $longTitle .= '[feat. ' . $album['featuring'] . ']'; }
+	if (!empty($album['featuring'])) { $longTitle .= ' [feat. ' . $album['featuring'] . ']'; }
 	$longTitle .= ' - by ' . $album['artist'];
 }
 else {

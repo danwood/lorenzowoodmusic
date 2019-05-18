@@ -210,18 +210,6 @@ p {
 .container:after {
   clear: both; }
 
-@font-face {
-  font-family: Roboto-Bold;
-  src: local("Roboto-Bold"), url(../fonts/Roboto-Bold.ttf); }
-
-@font-face {
-  font-family: Roboto-Light;
-  src: local("Roboto-Light"), url(../fonts/Roboto-Light.ttf); }
-
-@font-face {
-  font-family: Roboto;
-  src: local("Roboto-Regular"), url(../fonts/Roboto-Regular.ttf); }
-
 #prefpage {
   overflow: visible;
   max-width: 320px;
@@ -298,15 +286,15 @@ p {
       #prefpage #header .header h1 {
         padding: 16px 20px 0;
         font-size: 18px;
-        font-family: Roboto,sans-serif;
+        font-family: Helvetica,sans-serif;
         font-weight: 500;
         white-space: pre; }
       #prefpage #header .header p {
         font-weight: 300;
-        font-family: Roboto, sans-serif; }
+        font-family: Helvetica, sans-serif; }
   #prefpage .service .play {
     font-weight: 300;
-    font-family: Roboto, sans-serif; }
+    font-family: Helvetica, sans-serif; }
   #prefpage #header .header p {
     padding: 5px 20px 20px;
     font-size: 14px;
