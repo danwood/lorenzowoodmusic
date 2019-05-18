@@ -280,15 +280,12 @@ p {
       #prefpage #header .header h1, #prefpage #header .header p {
         margin-bottom: 0;
         margin-top: 0;
-        line-height: 1.3em;
-        text-overflow: ellipsis;
-        overflow: hidden; }
+        line-height: 1.3em; }
       #prefpage #header .header h1 {
         padding: 16px 20px 0;
         font-size: 18px;
         font-family: Helvetica,sans-serif;
-        font-weight: 500;
-        white-space: pre; }
+        font-weight: 500; }
       #prefpage #header .header p {
         font-weight: 300;
         font-family: Helvetica, sans-serif; }

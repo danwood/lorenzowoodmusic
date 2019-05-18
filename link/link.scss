@@ -353,8 +353,6 @@ p {
         margin-bottom: 0;
         margin-top: 0;
         line-height: 1.3em;
-        text-overflow: ellipsis;
-        overflow: hidden;
       }
       background-color: #181818;
       text-align: center;
@@ -364,7 +362,6 @@ p {
         font-size: 18px;
         font-family: Helvetica,sans-serif;
         font-weight: 500;
-        white-space: pre;
       }
       p {
         font-weight: 300;
