@@ -39,7 +39,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
       </div>
       <div class="hero">
         <div class="quick-stream clearfix safe-area-only">
-          <p><a target="_blank" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&amp;app=itunes&amp;at=1000lKSp"><img style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art/jacket.jpg" alt="Jacket cover image"></a><span>
+          <p><a target="_blank" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&amp;app=itunes&amp;at=1000lKSp"><img style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art_384/jacket.jpg" alt="Jacket cover image"></a><span>
               New single “Jacket (I'm Sensitive)” will be released May 24!&nbsp;</span><b>
               <?php
               date_default_timezone_set('America/Los_Angeles');
@@ -146,7 +146,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
       </section>
       <section class="download-section">
         <article class="textual clearfix">
-          <div class="side-photo"><img class="shadowed" src="album_art/now-in-control.jpg" alt="EP thumbnail"></div>
+          <div class="side-photo"><img class="shadowed" src="album_art_384/now-in-control.jpg" alt="EP thumbnail"></div>
           <div class="next-to-side-photo">
             <div class="next-to-side-photo-padded">
               <div><a class="buy-button" data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control">Buy “Now In Control” EP</a></div>

@@ -62,19 +62,21 @@ block footer-icons
 block append links
 
 	//- only do the metadata if we have a single album
-	// FB OG tags
+	//- FB OG tags
 	<meta property='og:title' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 	<meta property='og:description' content='Preview, download or stream <?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 	<meta property='og:url' content='<?php echo htmlentities(curPageURL()); ?>'>
 	<meta property='og:type' content='article'>
-	<meta property='og:image' content='<?php echo baseURL() . '/album_art/' . htmlentities($album['imageName'], ENT_QUOTES); ?>'> <!-- 600 x 315 ideally 1200x630 -->
-	// additional media
-	// Twitter summary card meta tags
+	<meta property='og:image' content='<?php echo baseURL() . '/album_art_1200x630/' . htmlentities($album['imageName'], ENT_QUOTES); ?>'> 
+	//- 600 x 315 ideally 1200x630
+	//- additional media
+	//- Twitter summary card meta tags
 	<meta name='twitter:url' value='<?php echo htmlentities(curPageURL()); ?>'>
 	<meta name='twitter:title' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 	<meta name='twitter:description' content='Preview, download or stream <?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 	<meta name='twitter:card' content='summary_large_image'>
-	<meta name='twitter:image' content='<?php echo baseURL() . '/album_art/' . htmlentities($album['imageName'], ENT_QUOTES); ?>'> <!-- square 144 up to 4000, 5 MB max -->
+	<meta name='twitter:image' content='<?php echo baseURL() . '/album_art_large/' . htmlentities($album['imageName'], ENT_QUOTES); ?>'>
+	//- square 144 up to 4000, 5 MB max
 
 block append styles
 	link(rel='stylesheet', href='link.css')
@@ -83,12 +85,12 @@ block append styles
 block main
 
 	.background-blur
-		// Really we should have 640 square for good retina image.
-		<img src="../album_art/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
+		//- use the exact same image as the displayed one so we don't need another image loaded
+		<img src="../album_art_640/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
 
 	.center-column
 		.imagecontainer
-			<img src="../album_art/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
+			<img src="../album_art_640/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
 		.title-container
 			h1
 				| <?php echo htmlspecialchars($album['artist']); ?> 
@@ -125,7 +127,8 @@ block main
 
 			<?php } if ($album['youtube_music_id']) { ?>
 			
-			<div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($album['youtube_music_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div><!-- can also watch at https://music.youtube.com/watch?v= + youtube_video_id -->
+			<div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($album['youtube_music_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
+			//- can also watch at https://music.youtube.com/watch?v= + youtube_video_id
 
 			<?php } if ($album['youtube_video_id']) { ?>
 			

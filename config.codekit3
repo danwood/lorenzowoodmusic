@@ -230,67 +230,147 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/album_art/384-pixels.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
+	"/album_art_1200x630/jacket.jpg": {
+		"ft": 16384,
+		"iS": 36762,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "/album_art/384-pixels.txt",
-		"oF": 0
+		"oAP": "/album_art_1200x630/jacket.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
-	"/album_art/jacket.jpg": {
+	"/album_art_1200x630/now-in-control.jpg": {
+		"ft": 16384,
+		"iS": 512401,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_1200x630/now-in-control.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/album_art_1200x630/you-and-me-now.jpg": {
+		"ft": 16384,
+		"iS": 79115,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_1200x630/you-and-me-now.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_384/jacket.jpg": {
 		"ft": 16384,
 		"iS": 11500,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/album_art/jacket.jpg",
+		"oAP": "/album_art_384/jacket.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"/album_art/now-in-control.jpg": {
+	"/album_art_384/now-in-control.jpg": {
 		"ft": 16384,
 		"iS": 19883,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/album_art/now-in-control.jpg",
+		"oAP": "/album_art_384/now-in-control.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"/album_art/now_in_control.jpg": {
-		"ft": 16384,
-		"iS": 19883,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/album_art/now_in_control.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/album_art/old-town-road.jpg": {
+	"/album_art_384/old-town-road.jpg": {
 		"ft": 16384,
 		"iS": 17071,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/album_art/old-town-road.jpg",
+		"oAP": "/album_art_384/old-town-road.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"/album_art/you-and-me-now.jpg": {
+	"/album_art_384/you-and-me-now.jpg": {
+		"ft": 16384,
+		"iS": 32832,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_384/you-and-me-now.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_640/jacket.jpg": {
+		"ft": 16384,
+		"iS": 683207,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_640/jacket.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/album_art_640/now-in-control.jpg": {
+		"ft": 16384,
+		"iS": 273659,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_640/now-in-control.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/album_art_640/you-and-me-now.jpg": {
 		"ft": 16384,
 		"iS": 67671,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/album_art/you-and-me-now.jpg",
+		"oAP": "/album_art_640/you-and-me-now.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/album_art_large/jacket.jpg": {
+		"ft": 16384,
+		"iS": 683207,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_large/jacket.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_large/now-in-control.jpg": {
+		"ft": 16384,
+		"iS": 274129,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_large/now-in-control.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/album_art_large/you-and-me-now.jpg": {
+		"ft": 16384,
+		"iS": 67671,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_large/you-and-me-now.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/bandsintown.php": {
@@ -1889,6 +1969,16 @@
 		"miP": 0,
 		"oA": 1,
 		"oAP": "/svg/soundcloud-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/soundcloud.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/soundcloud.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,

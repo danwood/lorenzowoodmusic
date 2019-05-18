@@ -38,7 +38,7 @@ html(lang="en-us")
 			p <?php echo htmlspecialchars($album['description']); ?>
 			#cover-art-container
 				#cover-art
-					img(src!="/album_art/<?php echo htmlspecialchars($album['imageName']); ?>" alt!="<?php echo htmlspecialchars($album['title']); ?>")
+					img(src!="/album_art_384/<?php echo htmlspecialchars($album['imageName']); ?>" alt!="<?php echo htmlspecialchars($album['title']); ?>")
 			form#downloader
 				input(type="hidden" id="a_input" name="a" value!="<?php echo $album['ID']; ?>")
 				input(type="hidden" id="c_input" name="c" value!="<?php echo $code; ?>")
