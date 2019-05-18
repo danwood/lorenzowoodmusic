@@ -357,6 +357,13 @@ AddDefaultCharset utf-8
     RewriteCond %{HTTPS} !=on
     RewriteRule ^ - [env=proto:http]
 
+    # Rewrite lorenzowoodmusic.com/link/something to lorenzowoodmusic.com/link/index.php?slug=something
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^/?link/(.*?)/?$ /link/index.php?slug=$1 [L]
+
+
 </IfModule>
 
 # ----------------------------------------------------------------------
