@@ -329,6 +329,17 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/album_art_640/old-town-road.jpg": {
+		"ft": 16384,
+		"iS": 52713,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_640/old-town-road.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_640/you-and-me-now.jpg": {
 		"ft": 16384,
 		"iS": 67671,
@@ -360,6 +371,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
+		"q": 100
+		},
+	"/album_art_large/old-town-road.jpg": {
+		"ft": 16384,
+		"iS": 52713,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_large/old-town-road.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"/album_art_large/you-and-me-now.jpg": {
