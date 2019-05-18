@@ -642,6 +642,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/img/cd100.png": {
+		"ft": 32768,
+		"iS": 2178,
+		"oA": 0,
+		"oAP": "/img/cd100.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/img/southshore.jpg": {
 		"ft": 16384,
 		"iS": 86937,
@@ -745,6 +756,14 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/link/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/link/index.php",
+		"oF": 0
+		},
 	"/link/index.php.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -753,7 +772,7 @@
 		"oA": 0,
 		"oAP": "/link/index.php",
 		"oF": 2,
-		"oS": 0
+		"oS": 1
 		},
 	"/link/link.css": {
 		"aP": 1,
@@ -1825,6 +1844,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/svg/pandora.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/pandora.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/svg/patreon-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1865,6 +1894,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/svg/soundcloud.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/soundcloud.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/svg/spotify-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1900,6 +1939,16 @@
 		"miP": 0,
 		"oA": 1,
 		"oAP": "/svg/youtube-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/youtube-music.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/youtube-music.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
