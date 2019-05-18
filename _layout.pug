@@ -31,7 +31,7 @@ html(class="no-js", lang="en-us")
 
 				h1.ir Lorenzo Wood Music
 				.logo
-					block h1logo
+					block logo
 						include svg/lorenzowoodmusic.svg
 
 					//- Hamburger Menu
@@ -64,23 +64,24 @@ html(class="no-js", lang="en-us")
 		block footer
 			footer
 
-				.icons.exhaustive.safe-area-only
-					a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
-						include svg/instagram-logo.svg
-					a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
-						include svg/facebook-logo.svg
-					a(data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood")
-						include svg/snapchat-logo.svg
-					a(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
-						include svg/twitter-logo.svg
-					a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
-						include svg/youtube-logo.svg
-					a(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
-						include svg/soundcloud-logo.svg
-					a(data-title="Reverb Nation" href="https://www.reverbnation.com/lorenzowoodmusic")
-						include svg/reverbnation-logo.svg
-					a(data-title="Bands in Town" href="https://bandsintown.com/lorenzowoodmusic")
-						include svg/bandsintown-logo.svg
+				block footer-icons
+					.icons.exhaustive.safe-area-only
+						a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
+							include svg/instagram-logo.svg
+						a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
+							include svg/facebook-logo.svg
+						a(data-title="Snapchat" href="https://www.snapchat.com/add/lorenzo.wood")
+							include svg/snapchat-logo.svg
+						a(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
+							include svg/twitter-logo.svg
+						a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
+							include svg/youtube-logo.svg
+						a(data-title="SoundCloud" href="https://soundcloud.com/LorenzoWoodMusic")
+							include svg/soundcloud-logo.svg
+						a(data-title="Reverb Nation" href="https://www.reverbnation.com/lorenzowoodmusic")
+							include svg/reverbnation-logo.svg
+						a(data-title="Bands in Town" href="https://bandsintown.com/lorenzowoodmusic")
+							include svg/bandsintown-logo.svg
 				p
 					b Copyright © 2017-2019 Lorenzo Wood
 					block more-credits

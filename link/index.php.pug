@@ -48,10 +48,16 @@ block title
 block description
 	<meta name='description' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 
-block footer
-
-block h1logo
-	div(style="width:100%; height:4em; background-color:black")
+block append logo
+	.mini-icons
+		a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
+			include ../svg/instagram-logo.svg
+		a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
+			include ../svg/facebook-logo.svg
+		a(data-title="Twitter" href="https://twitter.com/lorenzowmusic")
+			include ../svg/twitter-logo.svg
+	
+block footer-icons
 
 block append links
 
@@ -75,70 +81,69 @@ block append styles
 
 
 block main
-	div
-		#prefpage
-			#bg
-				// Really we should have 640 square for good retina image.
-				<img src="../album_art/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>", alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
-			#img.imagecontainer(style='position:relative;')
-				<img src="../album_art/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>", alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
-			#header.service-container.sticky(style='z-index:9000; ;')
-				.header
-					h1.artist
-						| <?php echo htmlspecialchars($album['artist']); ?> 
-						br
-						|  <?php echo htmlspecialchars($album['title']); ?>
-						<?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
-					p.where
-						<?php if ($releaseDateString) {
-						|	echo 'Releasing ' . htmlspecialchars($releaseDateString);
-						|} else {
-						|	echo 'Download and stream now';
-						|}?>
-						
-				.arrow
-			#service.service-container
-				<?php if ($album['itunes_id']) { ?>
-				
-				<div class="service"><a class="img-btn redirect" href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img class="service" src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo $releaseDateString ? 'Pre-order' : 'Download'; ?></span></a></div>
 
-				<?php } if ($album['itunes_id'] && empty($releaseDateString)) { ?>
+	.background-blur
+		// Really we should have 640 square for good retina image.
+		<img src="../album_art/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
 
-				<div class="service"><a class="img-btn redirect" href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img class="service" src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
+	.center-column
+		.imagecontainer
+			<img src="../album_art/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
+		.title-container
+			h1
+				| <?php echo htmlspecialchars($album['artist']); ?> 
+				br
+				|  <?php echo htmlspecialchars($album['title']); ?>
+				<?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
+			p
+				<?php if ($releaseDateString) {
+				|	echo 'Releasing ' . htmlspecialchars($releaseDateString);
+				|} else {
+				|	echo 'Download and stream now';
+				|}?>
+					
+		.service-container
+			<?php if ($album['itunes_id']) { ?>
+			
+			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo $releaseDateString ? 'Pre-order' : 'Download'; ?></span></a></div>
 
-				<?php } if ($album['spotify_id']) { ?>
-				
-				<div class="service"><a class="img-btn redirect" href="https://play.spotify.com/album/<?php echo htmlentities($album['spotify_id'], ENT_QUOTES); ?>"><img class="service" src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
+			<?php } if ($album['itunes_id'] && empty($releaseDateString)) { ?>
 
-				<?php } if ($album['amazon_music_id']) { ?>
-				
-				<div class="service"><a class="img-btn redirect" href="https://www.amazon.com/dp/<?php echo htmlentities($album['amazon_music_id'], ENT_QUOTES); ?>"><img class="service" src="../svg/amazon-music.svg" alt="Amazon Music"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
 
-				<?php } if ($album['google_play_id']) { ?>
-				
-				<div class="service"><a class="img-btn redirect" href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><img class="service" src="../svg/google-play.svg" alt="Google Play"><span class="play">Download</span></a></div>
+			<?php } if ($album['spotify_id']) { ?>
+			
+			<div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($album['spotify_id'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
 
-				<?php } if ($album['youtube_music_id']) { ?>
-				
-				<div class="service"><a class="img-btn redirect" href="https://music.youtube.com/browse/<?php echo htmlentities($album['youtube_music_id'], ENT_QUOTES); ?>"><img class="service" src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div><!-- can also watch at https://music.youtube.com/watch?v= + youtube_video_id -->
+			<?php } if ($album['amazon_music_id']) { ?>
+			
+			<div class="service"><a href="https://www.amazon.com/dp/<?php echo htmlentities($album['amazon_music_id'], ENT_QUOTES); ?>"><img src="../svg/amazon-music.svg" alt="Amazon Music"><span class="play">Play</span></a></div>
 
-				<?php } if ($album['youtube_video_id']) { ?>
-				
-				<div class="service"><a class="img-btn redirect" href="https://www.youtube.com/watch?v=<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>"><img class="service" src="../svg/youtube.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
+			<?php } if ($album['google_play_id']) { ?>
+			
+			<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play">Download</span></a></div>
 
-				<?php } if ($album['soundcloud_id']) { ?>
-				
-				<div class="service"><a class="img-btn redirect" href="https://soundcloud.com/<?php echo htmlentities($album['soundcloud_id'], ENT_QUOTES); ?>"><img class="service" src="../svg/soundcloud.svg" alt="Soundcloud"><span class="play">Play</span></a></div>
+			<?php } if ($album['youtube_music_id']) { ?>
+			
+			<div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($album['youtube_music_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div><!-- can also watch at https://music.youtube.com/watch?v= + youtube_video_id -->
 
-				<?php } if ($album['deezer_id']) { ?>
-				
-				<div class="service"><a class="img-btn redirect" href="https://www.deezer.com/us/album/<?php echo htmlentities($album['deezer_id'], ENT_QUOTES); ?>"><img class="service" src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
+			<?php } if ($album['youtube_video_id']) { ?>
+			
+			<div class="service"><a href="https://www.youtube.com/watch?v=<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>"><img src="../svg/youtube.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
 
-				<?php } if ($album['cd_id']) { ?>
-				
-				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['cd_id'], ENT_QUOTES); ?>"><img class="service" src="/img/cd100.png" alt="Buy CD"><span class="play">Buy</span></a></div>
+			<?php } if ($album['soundcloud_id']) { ?>
+			
+			<div class="service"><a href="https://soundcloud.com/<?php echo htmlentities($album['soundcloud_id'], ENT_QUOTES); ?>"><img src="../svg/soundcloud.svg" alt="Soundcloud"><span class="play">Play</span></a></div>
 
-				<?php } ?>
+			<?php } if ($album['deezer_id']) { ?>
+			
+			<div class="service"><a href="https://www.deezer.com/us/album/<?php echo htmlentities($album['deezer_id'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
+
+			<?php } if ($album['cd_id']) { ?>
+			
+			<div class="service"><a href="<?php echo htmlentities($album['cd_id'], ENT_QUOTES); ?>"><img src="/img/cd100.png" alt="Buy CD"><span class="play">Buy</span></a></div>
+
+			<?php } ?>
 
 block scripts
 	|<?php
