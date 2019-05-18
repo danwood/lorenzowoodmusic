@@ -786,76 +786,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/link/music-service_amazonmp3.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/link/music-service_amazonmp3.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/link/music-service_applemusic.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/link/music-service_applemusic.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/link/music-service_deezer.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/link/music-service_deezer.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/link/music-service_google-play.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/link/music-service_google-play.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/link/music-service_itunes.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/link/music-service_itunes.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/link/music-service_spotify.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/link/music-service_spotify.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/link/music-service_youtube.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/link/music-service_youtube.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"/link/orig/music-service_amazonmp3.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1813,11 +1743,11 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/apple.svg": {
+	"/svg/apple-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/apple.svg",
+		"oAP": "/svg/apple-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -1843,11 +1773,11 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/bandsintown.svg": {
+	"/svg/bandsintown-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
-		"oAP": "/svg/bandsintown.svg",
+		"oAP": "/svg/bandsintown-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -1873,6 +1803,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/svg/deezer.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/deezer.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/svg/downarrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1893,11 +1833,11 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/facebook.svg": {
+	"/svg/facebook-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
-		"oAP": "/svg/facebook.svg",
+		"oAP": "/svg/facebook-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -1913,21 +1853,21 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/holonis.svg": {
+	"/svg/holonis-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/holonis.svg",
+		"oAP": "/svg/holonis-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/instagram.svg": {
+	"/svg/instagram-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
-		"oAP": "/svg/instagram.svg",
+		"oAP": "/svg/instagram-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -1963,41 +1903,41 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/patreon.svg": {
+	"/svg/patreon-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/patreon.svg",
+		"oAP": "/svg/patreon-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/reverbnation.svg": {
+	"/svg/reverbnation-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
-		"oAP": "/svg/reverbnation.svg",
+		"oAP": "/svg/reverbnation-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/snapchat.svg": {
+	"/svg/snapchat-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
-		"oAP": "/svg/snapchat.svg",
+		"oAP": "/svg/snapchat-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/soundcloud.svg": {
+	"/svg/soundcloud-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
-		"oAP": "/svg/soundcloud.svg",
+		"oAP": "/svg/soundcloud-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -2023,11 +1963,21 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/twitter.svg": {
+	"/svg/twitter-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
-		"oAP": "/svg/twitter.svg",
+		"oAP": "/svg/twitter-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/youtube-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "/svg/youtube-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -2036,7 +1986,7 @@
 	"/svg/youtube.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/youtube.svg",
 		"oF": 0,
 		"opt": 0,

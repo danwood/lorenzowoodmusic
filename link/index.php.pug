@@ -80,27 +80,27 @@ block main
 			#service.service-container
 				<?php if ($album['itunes_id']) { ?>
 				
-				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="music-service_itunes.svg" alt="itunes"></span><span class="play">Download</span></a></div>
+				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="itunes"></span><span class="play">Download</span></a></div>
 
 				<?php } if ($album['spotify_id']) { ?>
 				
-				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['spotify_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="music-service_spotify.svg" alt="spotify"></span><span class="play">Play</span></a></div>
+				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['spotify_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="../svg/spotify-text.svg" alt="spotify"></span><span class="play">Play</span></a></div>
 
 				<?php } if ($album['apple_music_id']) { ?>
 				
-				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['apple_music_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="music-service_applemusic.svg" alt="applemusic"></span><span class="play">Play</span></a></div>
+				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['apple_music_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="applemusic"></span><span class="play">Play</span></a></div>
 
-				<?php } if ($album['amazon_music_id']) { ?>
+				<?php } if ($album['title']) { ?>
 				
-				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['amazon_music_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="music-service_amazonmp3.svg" alt="amazonmp3"></span><span class="play">Play</span></a></div>
+				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['amazon_music_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="../svg/amazon-music.svg" alt="amazonmp3"></span><span class="play">Play</span></a></div>
 
 				<?php } if ($album['google_play_id']) { ?>
 				
-				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="music-service_google-play.svg" alt="google-play"></span><span class="play">Download</span></a></div>
+				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="../svg/google-play.svg" alt="google-play"></span><span class="play">Download</span></a></div>
 
-				<?php } if ($album['deezer_id']) { ?>
+				<?php } if ($album['title']) { ?>
 				
-				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['deezer_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="music-service_deezer.svg" alt="deezer"></span><span class="play">Play</span></a></div>
+				<div class="service"><a class="img-btn redirect" href="<?php echo htmlentities($album['deezer_id'], ENT_QUOTES); ?>"><span><img width="125px" height="40px" style="display:inline-block;" src="../svg/deezer.svg" alt="deezer"></span><span class="play">Play</span></a></div>
 
 				<?php } ?>
 
