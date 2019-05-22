@@ -105,7 +105,12 @@ block main
 				|}?>
 					
 		.service-container
-			<?php if ($album['itunes_id']) { ?>
+
+			<?php if ($album['bandcamp_id']) { ?>
+			
+			<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp_id'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a></div>
+
+			<?php } if ($album['itunes_id']) { ?>
 			
 			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo $releaseDateString ? 'Pre-order' : 'Download'; ?></span></a></div>
 
