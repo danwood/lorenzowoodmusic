@@ -1,27 +1,51 @@
-header#main-header, body > footer, .page-menu {
-  z-index: 2; }
+// Make sure header, footer are above the blurred background
+header#main-header, body>footer, .page-menu {
+  z-index:2;
+}
+body>footer {
+  background:none;
+  p {
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
 
-body > footer {
-  background: none; }
-  body > footer p {
-    text-shadow: 2px 2px 1px #000; }
+      @media only screen and (max-width:(599px)) {
+        opacity:0.5;
+        font-size:0.7;
+        text-shadow:none;
+      }
 
+  }
+
+
+}
+
+// We don't need to warn about missing JS
 .js-warning {
-  display: none; }
+  display:none;
+}
 
+// Resize lorenzowoodmusic logo to be small
 .logo svg {
-  padding: 0.2em 0 0.1em 1em;
-  max-width: 150px; }
+  padding:0.2em 0 0.1em 1em;
+  max-width:150px;
+
+
+}
 
 .mini-icons {
-  padding-left: 10px;
-  display: inline-block; }
-  .mini-icons svg {
-    width: 24px;
-    padding: 6px; }
+  padding-left:10px;
+  display:inline-block;
+  svg {
+    width:24px;
+    padding:6px;
+  }
+      @media only screen and (max-width:(359px)) {
+        padding-left:0em;
+      }
+
+}
 
 .background-blur {
-  z-index: 0;
+  z-index:0;
   position: fixed;
   top: -50%;
   left: -50%;
@@ -31,8 +55,8 @@ body > footer {
   -o-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0); }
-  .background-blur img {
+  -webkit-transform: translate3d(0, 0, 0);
+  img {
     position: absolute;
     top: 0;
     left: 0;
@@ -46,10 +70,12 @@ body > footer {
     -moz-filter: blur(30px);
     -o-filter: blur(30px);
     -ms-filter: blur(30px);
-    opacity: 0.7; }
+    opacity: 0.7;
+  }
+}
 
 .center-column {
-  position: relative;
+  position:relative;
   z-index: 1;
   overflow: visible;
   max-width: 320px;
@@ -58,53 +84,69 @@ body > footer {
   padding: 0;
   border: 0;
   font-size: 16px;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
+
 
 .imagecontainer {
   position: relative;
   display: block;
-  overflow: hidden; }
-  .imagecontainer img {
+  overflow: hidden;
+  img {
     width: 320px;
     display: block;
     position: relative;
-    background-size: 100%; }
+    background-size: 100%;
+  }
+}
 
 .title-container {
   background-color: #181818;
   text-align: center;
-  color: #fff; }
-  .title-container h1, .title-container p {
+  color: #fff;
+  h1, p {
     margin-bottom: 0;
     margin-top: 0;
-    line-height: 1.3em; }
-  .title-container h1 {
+    line-height: 1.3em;
+  }
+  h1 {
     padding: 16px 20px 0;
     font-size: 18px;
-    font-weight: 500; }
-  .title-container p {
+    font-weight: 500;
+  }
+
+  p {
     padding: 5px 20px 20px;
     font-size: 14px;
-    word-break: normal; }
+    word-break: normal;
+  }
+}
+
 
 .service-container {
-  background-color: #fff; }
+  background-color: #fff;
+}
+
+
 
 .service {
   padding: 2px 0;
   border-bottom: 1px solid #f5f5f5;
   transition: background-color .3s ease;
-  cursor: pointer; }
-  .service a {
+  cursor: pointer;
+  a {
     width: 100%;
     display: inline-block;
-    text-decoration: none !important; }
-  .service a:hover .play {
+    text-decoration: none !important;
+  }
+  a:hover .play {
     transition: .3s ease;
     color: #fff;
     background-color: #222;
-    border-color: #222; }
-  .service .play {
+    border-color: #222;
+  }
+
+  .play {
     text-align: center;
     display: inline-block;
     float: right;
@@ -116,11 +158,15 @@ body > footer {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 155px;
-    color: #777; }
-  .service img {
+    color: #777;
+  }
+  img {
     max-width: 170px;
     display: inline-block;
-    margin: 14px 0 14px 15px; }
-  .service:hover {
+    margin: 14px 0 14px 15px;
+  }
+  &:hover {
     transition: background-color .3s ease;
-    background-color: #f5f5f5; }
+    background-color: #f5f5f5;
+  }
+}

@@ -578,6 +578,29 @@
 		"oF": 1,
 		"oS": 3
 		},
+	"/css/linkstyles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/linkstyles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/linkstyles.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/linkstyles.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/css/main.css": {
 		"aP": 1,
 		"bl": 0,
@@ -886,29 +909,6 @@
 		"oAP": "/link/index.php",
 		"oF": 2,
 		"oS": 1
-		},
-	"/link/link.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/link/link-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/link/link.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/link/link.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"/mailme.php": {
 		"cB": 0,
