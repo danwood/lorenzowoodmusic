@@ -108,7 +108,11 @@ block main
 
 			<?php if ($album['bandcamp_id']) { ?>
 			
+			div.service-barrier Artist Preferred download:
+
 			<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp_id'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a></div>
+
+			div.service-barrier Also available from:
 
 			<?php } if ($album['itunes_id']) { ?>
 			
