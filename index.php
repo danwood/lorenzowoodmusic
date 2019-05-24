@@ -40,15 +40,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
       <div class="hero">
         <div class="quick-stream clearfix safe-area-only">
           <p><a target="_blank" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&amp;app=itunes&amp;at=1000lKSp"><img style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art_384/jacket.jpg" alt="Jacket cover image"></a><span>
-              New single “Jacket (I'm Sensitive)” will be released May 24!&nbsp;</span><b>
-              <?php
-              date_default_timezone_set('America/Los_Angeles');
-              $prerelease = new DateTime('2019-05-16 00:00:00');
-              $release = new DateTime('2019-05-24 00:00:00');
-              $now = new DateTime();
-              if ($now >= $release) { echo 'Order it or stream it now!'; }
-              else if ($now >= $prerelease) { echo '<a target="_blank" style="text-decoration:underline" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&app=itunes&at=1000lKSp">Pre-order it now on iTunes!</a>'; }
-              ?></b></p>
+              New single “Jacket (I'm Sensitive)” —&nbsp;</span><b><a style="text-decoration:underline" href="/link/jacket">Download or stream it now!</a></b></p>
         </div>
         <picture>
           <source srcset="img/beach.webp 1920w" type="image/webp">
