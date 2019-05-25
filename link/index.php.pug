@@ -6,6 +6,7 @@ block prelude
 	|require_once('../classes.php');
 	|$db = new DowncodeDB();
 	|$slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
+	|/*
 	|if (empty($slug)) {
 	|	$albums = $db->allAlbums();
 	|	foreach ($albums as $album) {
@@ -15,6 +16,7 @@ block prelude
 	|	}
 	|	die();
 	|}
+	|*/
 	|$album = $db->albumForSlug($slug);
 	|if ($album) {
 	|	$longTitle = $album['title'];

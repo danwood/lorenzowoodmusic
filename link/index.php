@@ -3,6 +3,7 @@
 require_once('../classes.php');
 $db = new DowncodeDB();
 $slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
+/*
 if (empty($slug)) {
 	$albums = $db->allAlbums();
 	foreach ($albums as $album) {
@@ -12,6 +13,7 @@ if (empty($slug)) {
 	}
 	die();
 }
+*/
 $album = $db->albumForSlug($slug);
 if ($album) {
 	$longTitle = $album['title'];
