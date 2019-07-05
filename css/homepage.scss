@@ -27,14 +27,14 @@ Input Forms
 	padding:0.25rem 0.5rem;
 	width:95%;	/* Due to padding, make sure it won't overflow */
 	max-width:30rem;
-	color:$colorBlackish;
+	color:var(--color-ink-high);
 }
 
 input[type="submit"] {
 	display:block;
 	text-align:center;
-	color:$colorWhite;
-	background:$colorLink;
+	color:var(--color-paper-high);
+	background:var(--color-Link);
 	padding:6px 2rem;
 	border:none;
 	width:auto;
@@ -59,7 +59,7 @@ Homepage streaming links above the fold
 */
 
 .quick-stream {
-	background:rgba(255,255,255,0.6);
+	background:var(--color-paper-low);
 }
 
 .quick-stream {
@@ -200,7 +200,7 @@ Bands in Town
 .bit-header-row, .bit-row {
 		@extend .clearfix;
 		padding:6px 0;
-		border-bottom:1px solid $colorGrayLight;
+		border-bottom:1px solid var(--color-paper-low);
 	}
 	.bit-header { font-weight:bold; }
 .bit-header-row svg {
@@ -210,11 +210,11 @@ Bands in Town
 
 .bit-row.bit-upcoming {
 	&:hover {
-		background:$colorWhiteish;
+		background:var(--color-paper-med);
 	}
 	a {
 		text-decoration:none;
-		color:$colorBlackish;
+		color:var(--color-ink-high);
 	}
 
 }
@@ -225,8 +225,8 @@ Bands in Town
 	}
 
 	.bit-button {
-		color:$colorWhite;
-		background:$colorLink;
+		color:var(--color-paper-high);
+		background:var(--color-Link);
 		padding:10px;
 		display:inline-block;
 		text-align:center;
@@ -257,7 +257,7 @@ Mailing, Download, EPK
 	margin-top:1rem;
 
 	a {
-		color:$colorLink;
+		color:var(--color-Link);
 		margin-top:5px;
 		padding:0 0.5rem 0 2rem;
 		font:normal 16px HelveticaNeue-CondensedBold, Impact, sans-serif;
@@ -290,7 +290,7 @@ Mailing, Download, EPK
 #mce-EMAIL { width:10em;}
 
 .mailing-section {
-	background:$colorGrayLight;
+	background:var(--color-paper-low);
 }
 
 
@@ -345,17 +345,17 @@ Patreon
 
 
 .patreon-section {
-	background:$colorBlackish;
-	color:$colorGrayLight;
+	background:var(--color-ink-high);
+	color:var(--color-paper-low);
 
 	a {
-		color:$colorWhite;
+		color:var(--color-paper-high);
 		text-decoration:none;
 	}
 }
 
 .patreon-link {
-	border-bottom:3px solid $colorLink;
+	border-bottom:3px solid var(--color-Link);
 }
 
 @media only screen and (min-width:800px) {
@@ -363,9 +363,9 @@ Patreon
 	/* Wider screens, show patreon as a distinct button */
 
 	.patreon-button {
-		border:1px solid $colorWhite;
+		border:1px solid var(--color-paper-high);
 		padding:0.5rem;
-		background:$colorGrayDark;
+		background:var(--color-ink-med);
 	}
 	.patreon-link {
 		border-bottom:none;
@@ -394,7 +394,7 @@ Instagram
 }
 
 .lightwidget-widget {
-	background:$colorWhite;
+	background:var(--color-paper-high);
 	width:100%;
 	border:0;
 	overflow:hidden;
@@ -402,9 +402,9 @@ Instagram
 }
 
 .instagram-section {
-	background:$colorGrayLight;
+	background:var(--color-paper-low);
 	a {
-		color:$colorWhite;
+		color:var(--color-ink-low);
 	}
 }
 
@@ -438,8 +438,8 @@ Download Section
 }
 
 a.buy-button {
-	background:$colorLink;
-	color:$colorWhiteish;
+	background:var(--color-Link);
+	color:var(--color-paper-med);
 	padding:12px 12px;
 	border-radius:10px;
 	display:block;
@@ -453,7 +453,7 @@ a.buy-button {
 	white-space:nowrap;
 
 	&:hover {
-		background:darken($colorLink,20%);
+		background:var(--color-Link-hover);
 	}
 }
 
@@ -509,10 +509,10 @@ a.disabled:after {
 	padding:0 5px;
 	font-weight:bold;
 	font-size:75%;
-	background:$colorWhite;
-	color:$colorBlackish;
+	background:var(--color-paper-high);
+	color:var(--color-ink-high);
 	border-radius:5px;
-	box-shadow:0 0 8px 8px $colorWhite;
+	box-shadow:0 0 8px 8px var(--color-paper-high);
 	line-height:1;
 
 	content:'Coming Soon';
@@ -542,8 +542,8 @@ Soundcloud
 */
 
 .soundcloud-section {
-	background:$colorWhiteish;
-	a { color:$colorGrayDark; }
+	background:var(--color-paper-med);
+	a { color:var(--color-ink-med); }
 }
 
 // Show soundcloud iframe (loaded from script) at maximum width
@@ -570,15 +570,15 @@ YouTube
 */
 
 .youtube-section {
-	background:$colorGray;
-	color:$colorWhite;
-	a { color:$colorWhiteish; }
+	background:var(--color-ink-low);
+	color:var(--color-paper-high);
+	a { color:var(--color-paper-med); }
 }
 
 /* YouTube player */
 
 .youtube {
-	background-color:$colorBlackish;
+	background-color:var(--color-ink-high);
 	position:relative;
 	padding-top:56.25%;
 	overflow:hidden;
@@ -593,7 +593,7 @@ YouTube
 	.play-button {
 		width:68px;
 		height:48px;
-		background-color:$colorGrayDark;
+		background-color:var(--color-ink-med);
 		box-shadow:0 0 20px rgba( 0,0,0,0.6 );
 		opacity:0.9;
 		border-radius:6px/18px;
@@ -607,7 +607,7 @@ YouTube
 		content:"";
 		border-style:solid;
 		border-width:10px 0 10px 16.0px;
-		border-color:transparent transparent transparent $colorWhite;
+		border-color:transparent transparent transparent var(--color-paper-high);
 	}
 	img, .play-button {
 		cursor:pointer;
@@ -630,8 +630,8 @@ YouTube
 		position:absolute;
 		top:12px;
 		left:20px;
-		color:$colorWhite;
-		text-shadow:0 0 4px $colorBlackish;
+		color:var(--color-paper-high);
+		text-shadow:0 0 4px var(--color-ink-high);
 	}
 }
 .youtube-border {
@@ -667,12 +667,12 @@ Contact Section
 */
 
 .contact-section {
-	background:$colorGrayLight;
-	color:$colorBlackish;
+	background:var(--color-paper-low);
+	color:var(--color-ink-high);
 }
 
 .input-form a {
-	color:$colorWhite;
+	color:var(--color-paper-high);
 }
 .trapit { display:none !important; }
 
@@ -686,12 +686,12 @@ Bands in Town
 .bandsintown-button {
 	display:block;
 	text-align:center;
-	color:$colorWhite;
-	background:$colorLink;
+	color:var(--color-paper-high);
+	background:var(--color-Link);
 	padding:6px;
 
 	a {
-		color:$colorWhite;
+		color:var(--color-paper-high);
 		text-decoration:none;
 	}
 	svg {
@@ -729,7 +729,7 @@ Bands in Town
 	}
 
 	/* Make track link be a button */
-	.bit-track { text-decoration:none; color:$colorWhite; background:$colorLink; padding:10px; margin-right:0.5rem; }
+	.bit-track { text-decoration:none; color:var(--color-paper-high); background:var(--color-Link); padding:10px; margin-right:0.5rem; }
 
 	/* Separator for city-state */
 	.bit-citystate:before { content:' — '; }
@@ -746,7 +746,8 @@ Redeem form & cover
 
 #redeem-form input {
 	width:11em;
-	background:$colorWhite;
+	background:var(--color-paper-high);
+	border-color:var(--color-ink-low);
 	font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
 	letter-spacing:1px;
 	text-transform:uppercase;
@@ -758,7 +759,7 @@ input#redeem-submit {
 	padding:0.75em 0.25em;
 	float:right;
 	border-radius:4px;
-	background:$colorLink url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat center center;
+	background:var(--color-Link) url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat center center;
 	color:white;
 }
 
@@ -787,7 +788,7 @@ input#redeem-submit {
 	min-height:300px;
 	max-height:100%;
 	margin:auto auto;
-	background:$colorWhite;
+	background:var(--color-paper-high);
 	border:5px solid black;
 	border-radius:10px;
 	padding:10px;
@@ -798,9 +799,9 @@ input#redeem-submit {
 	top:0;
 	right:40px;
 	font-size:600%;
-	color:$colorWhite;
+	color:var(--color-paper-high);
 	z-index:22;
-	text-shadow:0 0 4px $colorBlackish;
+	text-shadow:0 0 4px var(--color-ink-high);
 	cursor:pointer;
 }
 

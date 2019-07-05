@@ -42,7 +42,7 @@ block append header
 					|$prerelease = new DateTime('2019-05-16 00:00:00');
 					|$release = new DateTime('2019-05-24 00:00:00');
 					|$now = new DateTime();
-					|if ($now >= $release) { echo 'Order it or stream it now!'; }
+					|if ($now >= $release) { echo '<a href="/link/jacket">Order it or stream it now!</a>'; }
 					|else if ($now >= $prerelease) { echo '<a target="_blank" style="text-decoration:underline" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&app=itunes&at=1000lKSp">Pre-order it now on iTunes!</a>'; }
 					|?>
 
@@ -281,11 +281,11 @@ block additional-html
 
 block scripts
 	script(
-		src="https://code.jquery.com/jquery-3.3.1.min.js"
-		integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		crossorigin="anonymous")
 	script.
-		window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\\/script>')
+		window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\\/script>')
 	script
 		include js/index-min.js
 		include js/youtube-min.js

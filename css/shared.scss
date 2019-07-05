@@ -85,11 +85,11 @@ $page-menu-font-size: 1.0rem;
 			padding:$page-menu-padding-v $page-menu-padding-h;
 		}
 		a.active {
-			color:$inverseColor;
+			color:var(--color-Inverse);
 		}
 		a:hover {
-			background:$inverseColor;
-			color:$colorGrayDark;
+			background:var(--color-Inverse);
+			color:var(--color-ink-med);
 		}
 	}
 }
@@ -144,7 +144,7 @@ $page-menu-font-size: 1.0rem;
 			letter-spacing:2px;
 		}
 		a.active {
-			color:$inverseColor;
+			color:var(--color-Inverse);
 		}
 		a:hover {
 			background:#111;
@@ -192,7 +192,7 @@ $page-menu-font-size: 1.0rem;
 		height: 5px;
 		border-radius: 2px;
 		width: 100%;
-		background-color: $inverseColor;
+		background-color: var(--color-Inverse);
 	}
 	.horizontal, .diagonal.part-2 {
 		margin-top: 5px;			// spacing between layers
@@ -216,7 +216,7 @@ Icons (at top and bottom)
 }
 
 .exhaustive.icons {
-	background:$colorBlackish;
+	background:var(--color-dark-high);
 }
 
 .icons a {
@@ -244,10 +244,10 @@ Icons (at top and bottom)
 	a:after {
 		padding:0 5px;
 		font-size:80%;
-		background:$colorWhite;
-		color:$colorBlackish;
+		background:var(--color-paper-high);
+		color:var(--color-ink-high);
 		border-radius:5px;
-		box-shadow:0 0 8px 8px $colorWhite;
+		box-shadow:0 0 8px 8px var(--color-paper-high);
 		line-height:1;
 
 		content:attr(data-title);

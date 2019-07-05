@@ -143,7 +143,7 @@ var targetOffset = $("main").offset().top;
 var $w = $(window).scroll(function(){
 	$('#scroll-arrow').remove();
 	if ( $w.scrollTop() > targetOffset ) {
-		$('img.hero-image').css({"filter":"grayscale(0%)"});
+		$('img.hero-image').css({filter:"grayscale(0%)",opacity:"1.0"});
 	}
 });
 

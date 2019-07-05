@@ -8,7 +8,7 @@ General look and utility useful across the whole site
 
 /*
 ----------------------------------------
-Colors
+Layout
 ----------------------------------------
 */
 
@@ -24,32 +24,72 @@ Colors
 ----------------------------------------
 */
 
+:root {
+    color-scheme: light dark;
+
+	--color-Link:			hsl(202, 65%, 63%);
+	--color-Link-hover:		hsl(202, 65%, 43%);
+	--color-Inverse:		hsl(20, 65%, 63%);
+	--color-Warning:		purple;
+	--color-paper-high:		white;
+	--color-paper-med:		hsl(0, 0%, 96%);
+	--color-paper-low:		hsl(0, 0%, 74%);
+	--color-ink-low:		hsl(0, 0%, 38%);
+	--color-ink-med:		hsl(0, 0%, 26%);
+	--color-ink-high:		hsl(0, 0%, 13%);
+	--color-ink-max:		black;
 
 
-$colorLink:			#62b1de;
-$inverseColor:		#de8c62;
-$colorWarning:		purple;
-$colorWhite:		#ffffff;
-$colorWhiteish:		#f5f5f5;
-$colorGrayLight:	#bdbdbd;
-$colorGray:			#616161;
-$colorGrayDark:		#424242;
-$colorBlackish:		#212121;
+	--color-dark-high:		hsl(0, 0%, 13%);
+
+}
 
 
-a { color:$colorLink; }
+
+@media (prefers-color-scheme: dark) {
+
+	:root {
+		--color-Link:			hsl(202, 65%, 63%);
+		--color-Link-hover:		hsl(202, 65%, 43%);
+		--color-Inverse:		hsl(20, 65%, 63%);
+		--color-Warning:		purple;
+		--color-paper-high:		hsl(0, 0%, 0%);
+		--color-paper-med:		hsl(0, 0%, 4%);
+		--color-paper-low:		hsl(0, 0%, 26%);
+		--color-ink-low:		hsl(0, 0%, 62%);
+		--color-ink-med:		hsl(0, 0%, 74%);
+		--color-ink-high:		hsl(0, 0%, 87%);
+
+		--color-dark-high:		hsl(0, 0%, 4%);
+
+		// SOUNDCLOUD
+		.g-background-default { background-color:hsl(0, 0%, 50%) !important; }
+
+   }
+
+	.hero-image {
+	  opacity:0.7;	// let the dark background through, which mixes with dark-gray
+	}
+
+
+}
+
+html { color:var(--color-ink-high); }
+
+a { color:var(--color-Link); }
 
 .dimmer {
-	color:$colorGray;
+	color:var(--color-ink-low);
 }
 
 main {
-	background:$colorWhite;
+	background:var(--color-paper-high);
 }
 
 section.lightgray {
-	background:$colorGrayLight;
+	background:var(--color-paper-low);
 }
+
 
 /*
 ----------------------------------------
@@ -67,7 +107,7 @@ dt {
 
 .blogdate {
 	font-weight:normal;
-	color:$colorGrayLight;
+	color:var(--color-paper-low);
 }
 
 img.small {
@@ -116,8 +156,8 @@ article.textual {
 }
 
 body > footer {
-	background:$colorGrayLight;
-	color:$colorWhite;
+	background:var(--color-paper-low);
+	color:var(--color-paper-high);
 }
 
 

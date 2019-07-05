@@ -484,12 +484,6 @@
 		"oAP": "/browserconfig.xml",
 		"oF": 0
 		},
-	"/CACHE": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/CACHE",
-		"oF": 0
-		},
 	"/classes.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -836,13 +830,13 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/js/vendor/jquery-3.3.1.min.js": {
+	"/js/vendor/jquery-3.4.1.min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/vendor/jquery-3.3.1.min-min.js",
+		"oAP": "/js/vendor/jquery-3.4.1.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -2132,8 +2126,8 @@
 	},
 "projectAttributes": {
 	"creationDate": 536607628,
-	"displayValue": "lorenzowoodmusic.github.io",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "lorenzowoodmusic",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
 	"iconImageWasSetByUser": 0
 	},

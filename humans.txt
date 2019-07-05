@@ -16,6 +16,7 @@
     Apache Server Configs, jQuery, Normalize.css
     ImageOptim (with mozjpeg)
     Sketch and Opacity for hand-made SVG creation
+    https://realfavicongenerator.net for favicons
     https://www.vectorizer.io for automated SVG creation
     https://jakearchibald.github.io/svgomg/ to compress the SVGs
     https://pugjs.org/
