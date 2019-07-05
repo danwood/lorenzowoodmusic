@@ -34,18 +34,10 @@ block append header
 			p
 				a(target="_blank" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&app=itunes&at=1000lKSp")
 					img(style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art_384/jacket.jpg" alt="Jacket cover image")
-				span New single “Jacket (I'm Sensitive)” will be released May 24!
+				span New single “Jacket (I'm Sensitive)” —
 					| &nbsp;
 				b
-					|<?php
-					|date_default_timezone_set('America/Los_Angeles');
-					|$prerelease = new DateTime('2019-05-16 00:00:00');
-					|$release = new DateTime('2019-05-24 00:00:00');
-					|$now = new DateTime();
-					|if ($now >= $release) { echo '<a href="/link/jacket">Order it or stream it now!</a>'; }
-					|else if ($now >= $prerelease) { echo '<a target="_blank" style="text-decoration:underline" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&app=itunes&at=1000lKSp">Pre-order it now on iTunes!</a>'; }
-					|?>
-
+					a(style="text-decoration:underline", href="/link/jacket") Download or stream it now!
 
 			//-a.needs-medium-small(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
 			//-	//- Apple marketing guidelines for lockup images:

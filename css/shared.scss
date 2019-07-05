@@ -59,7 +59,7 @@ $page-menu-font-size: 1.0rem;
 	nav.page-menu {
 		display:block;
 		position:absolute;
-		top:0; left:0; right:0;
+		top:0; right:0;
 		text-align:center;
 
 		ul {
@@ -199,8 +199,10 @@ $page-menu-font-size: 1.0rem;
 	}
 }
 
-
-
+a.active {
+  pointer-events: none;
+  cursor: default;
+}
 
 
 

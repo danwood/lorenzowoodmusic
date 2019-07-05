@@ -34,7 +34,8 @@ html(class="no-js", lang="en-us")
 				h1.ir Lorenzo Wood Music
 				.logo
 					block logo
-						include svg/lorenzowoodmusic.svg
+						a(href="/", class={active: current === 'Home'})
+							include svg/lorenzowoodmusic.svg
 
 					//- Hamburger Menu
 					input#navigation(type="checkbox")

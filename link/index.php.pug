@@ -6,6 +6,7 @@ block prelude
 	|require_once('../classes.php');
 	|$db = new DowncodeDB();
 	|$slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
+	|/*
 	|if (empty($slug)) {
 	|	$albums = $db->allAlbums();
 	|	foreach ($albums as $album) {
@@ -15,6 +16,7 @@ block prelude
 	|	}
 	|	die();
 	|}
+	|*/
 	|$album = $db->albumForSlug($slug);
 	|if ($album) {
 	|	$longTitle = $album['title'];
@@ -79,7 +81,7 @@ block append links
 	//- square 144 up to 4000, 5 MB max
 
 block append styles
-	link(rel='stylesheet', href='link.css')
+	link(rel='stylesheet', href='/css/linkstyles.052619.css')
 
 
 block main
@@ -105,6 +107,7 @@ block main
 				|}?>
 					
 		.service-container
+
 			<?php if ($album['itunes_id']) { ?>
 			
 			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo $releaseDateString ? 'Pre-order' : 'Download'; ?></span></a></div>
@@ -141,6 +144,10 @@ block main
 			<?php } if ($album['deezer_id']) { ?>
 			
 			<div class="service"><a href="https://www.deezer.com/us/album/<?php echo htmlentities($album['deezer_id'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
+
+			<?php } if ($album['bandcamp_id']) { ?>
+			
+			<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp_id'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a></div>
 
 			<?php } if ($album['cd_id']) { ?>
 			
