@@ -572,6 +572,29 @@
 		"oF": 1,
 		"oS": 3
 		},
+	"/css/linkstyles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/linkstyles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/linkstyles.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/linkstyles.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/css/main.css": {
 		"aP": 1,
 		"bl": 0,
@@ -635,19 +658,6 @@
 		"oAP": "/css/sitewide-min.css",
 		"oF": 0,
 		"oS": 3
-		},
-	"/css/sitewide.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/sitewide.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"/download.php": {
 		"cB": 0,
@@ -966,17 +976,6 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 0691.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/photos/Lorenzo Wood 4546.jpg": {
-		"ft": 16384,
-		"iS": 40910,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/photos/Lorenzo Wood 4546.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1816,6 +1815,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/svg/Apple_Music_lockup_RGB_wht.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/bandcamp.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/bandcamp.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
