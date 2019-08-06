@@ -484,6 +484,12 @@
 		"oAP": "/browserconfig.xml",
 		"oF": 0
 		},
+	"/CACHE": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/CACHE",
+		"oF": 0
+		},
 	"/classes.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -658,6 +664,19 @@
 		"oAP": "/css/sitewide-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/css/sitewide.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/sitewide.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/download.php": {
 		"cB": 0,
