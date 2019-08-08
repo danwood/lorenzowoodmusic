@@ -101,7 +101,7 @@ block main
 		.imagecontainer
 			<img src="../album_art_640/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
 			<?php if ($album['youtube_video_id']) { ?>
-			<div class="youtube-button"><a href="https://www.youtube.com/watch?v=<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-play.svg" alt="Youtube"></div>
+			<div class="youtube-button"><a href="https://www.youtube.com/watch?v=<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-play.svg" alt="Youtube"></a></div>
 			<?php } ?>
 
 		.title-container

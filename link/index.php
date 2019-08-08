@@ -45,7 +45,7 @@ else {
 <div class="centered additional"><a href="<?php echo htmlentities($album['additional_info_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($album['additional_info']); ?></a></div>
 <?php } ?><div class="imagecontainer"><img src="../album_art_640/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
 <?php if ($album['youtube_video_id']) { ?>
-<div class="youtube-button"><a href="https://www.youtube.com/watch?v=<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-play.svg" alt="Youtube"></div>
+<div class="youtube-button"><a href="https://www.youtube.com/watch?v=<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-play.svg" alt="Youtube"></a></div>
 <?php } ?></div><div class="title-container"><h1><?php echo htmlspecialchars($album['artist']); ?> <br> <?php echo htmlspecialchars($album['title']); ?><?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?></h1><p><?php if ($releaseDateString) {	echo 'Releasing ' . htmlspecialchars($releaseDateString);
 } else {
 	echo 'Download and stream now';
