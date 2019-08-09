@@ -41,7 +41,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
       <div class="hero">
         <div class="quick-stream clearfix safe-area-only">
           <p><a target="_blank" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&amp;app=itunes&amp;at=1000lKSp"><img style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art_384/jacket.jpg" alt="Jacket cover image"></a><span>
-              New single “Jacket (I'm Sensitive)” —&nbsp;</span><b><a style="text-decoration:underline" href="/link/jacket">Download or stream it now!</a></b></p>
+              New single “Jacket (I'm Sensitive)” —&nbsp;</span><b><a style="text-decoration:underline" href="/link/jacket">Watch, download or stream now!</a></b></p>
         </div>
         <picture>
           <source srcset="img/beach.webp 1920w" type="image/webp">
