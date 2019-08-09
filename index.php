@@ -7,7 +7,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
   <head>
     <meta charset="utf-8"><!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
     <title>Lorenzo Wood Music — Official Site</title>
-    <meta name="description" content="Lorenzo Wood is a young musician from Alameda, California. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.">
+    <meta name="description" content="Lorenzo Wood is a musician, singer-songwriter, and producer from Alameda, California USA. He sings and plays guitar, keys, drums, bass, and has fun on mandolin and banjo.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="supported-color-schemes" content="light dark">
     <link rel="apple-touch-icon" href="icon.png">
@@ -66,26 +66,18 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
           <h2>Bio</h2>
         </header>
         <article class="textual">
-          <p>Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, piano/keyboards, bass, and, in an emergency, ukulele & mandolin. He also beat-boxes, and uses a looper for live performances. He writes and co-writes his own songs. He produces and records his music (using Apple Logic) and creates live performance videos.</p>
-          <p>Lorenzo started learning to play the drums at the age of four. At the age of seven, he performed in children’s musical theatre productions, and restarted <a href="http://www.tomorrowyouthrep.org/">performances</a> at age eleven, including key roles in <em>Annie</em>, <em>High School Musical</em>, and <em>Into the Woods</em>. He later took music/piano lessons and voice lessons. He is entirely self-taught on guitar.</p>
+          <p>Lorenzo Wood is a musician, singer-songwriter, and producer from Alameda, California USA. He sings and plays guitar, keys, drums, bass, and has fun on mandolin and banjo.</p>
+          <p>Lorenzo performs solo or with a band in concert and at street fairs and private events. In addition to playing live, Lorenzo runs a recording studio in Alameda producing local artists as well as his own music.</p>
           <p>
-            Lorenzo lists
-            <a href="http://www.maroon5.com">Maroon 5</a>,
-            <a href="http://www.shawnmendesofficial.com">Shawn Mendes</a>,
-            <a href="http://www.jamestaylor.com">James Taylor</a>,
-            <a href="http://www.johnmayer.com">John Mayer</a>,
-            <a href="http://www.thebeatles.com">The Beatles</a>,
-            <a href="http://samsmithworld.com">Sam Smith</a>,
-            <a href="http://www.niallhoran.com">Niall Horan</a>, and
-            <a href="http://www.savemesanfrancisco.com">Train</a>
-            as his musical influences.
+            Lorenzo’s single, <a href="href="/link/jacket">Jacket (I’m Sensitive)</a> won Song of the Year in Redwood City and Song of the Month in Palo Alto for West Coast Songwriters.
+            
           </p>
           <blockquote>“His voice is like ear candy”
-            <footer>wheeler cole, westcoast songwriters song in progress</footer>
+            <footer>Wheeler Cole, West Coast Songwriters</footer>
           </blockquote>
-          <p>Lorenzo has been busking at local street festivals or busy streets since age 13. He frequently performs on stage, solo or with his band (also teen musicians) and sits in with other bands as drummer. He also has practical experience in audio engineering, having worked at professional live sound events. He has also started helping other local artists record their own songs in his home studio.</p>
+          <p>He also runs live sound, and is knowledgeable and experienced with most audio and musical equipment.</p>
           <p>
-            He recently recorded and produced his first EP, <i>Now In Control</i>, released May 2018.
+            Lorenzo lists Maroon 5, Shawn Mendes, Julia Michaels, John Mayer, The Beatles, U2, Fleetwood Mac, Niall Horan and Train as his musical influences.
             
           </p>
           <aside class="epk download"><a href="EPK.zip">Electronic Press Kit</a></aside><?php include 'CACHE/bandsintown.html'; ?>
