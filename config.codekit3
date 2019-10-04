@@ -7,7 +7,7 @@
 		"uuidString": "24DFFC34-B0CB-40BD-AA10-5ADCA258D482"
 		}
 	],
-"creatorBuild": "29156",
+"creatorBuild": "31491",
 "files": {
 	"/.generate.php": {
 		"cB": 0,
@@ -230,6 +230,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_1200x630/jacket-ep.jpg": {
+		"ft": 16384,
+		"iS": 75220,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_1200x630/jacket-ep.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_1200x630/jacket.jpg": {
 		"ft": 16384,
 		"iS": 36762,
@@ -272,6 +283,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/album_art_384/jacket-ep.jpg": {
+		"ft": 16384,
+		"iS": 995101,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_384/jacket-ep.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_384/jacket.jpg": {
@@ -318,6 +340,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_640/jacket-ep.jpg": {
+		"ft": 16384,
+		"iS": 995101,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_640/jacket-ep.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/album_art_640/jacket.jpg": {
 		"ft": 16384,
 		"iS": 683207,
@@ -357,6 +390,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/you-and-me-now.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_large/jacket-ep.jpg": {
+		"ft": 16384,
+		"iS": 588887,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_large/jacket-ep.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -658,6 +702,19 @@
 		"oAP": "/css/sitewide-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/css/sitewide.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/sitewide.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/download.php": {
 		"cB": 0,
@@ -2142,6 +2199,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
+	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
@@ -2153,6 +2211,7 @@
 	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
+	"babelExcludeString": "'node_modules/**', 'bower_components/**', /\\/core-js\\//",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
@@ -2292,6 +2351,9 @@
 		"modules-umd": {
 			"active": 0
 			},
+		"named-capturing-groups-regex": {
+			"active": 0
+			},
 		"new-target": {
 			"active": 0
 			},
@@ -2323,6 +2385,9 @@
 			"active": 0
 			},
 		"parameters": {
+			"active": 0
+			},
+		"partial-application": {
 			"active": 0
 			},
 		"pipeline-operator": {
@@ -2417,11 +2482,10 @@
 			}
 		},
 	"babelRetainLines": 0,
+	"babelUseBuiltInsType": 0,
 	"bowerAbbreviatedPath": "bower_components",
-	"bowerAutoCreateInfoFile": 1,
-	"bowerInstallDevDependencies": 0,
-	"bowerSaveDependencies": 1,
-	"bowerSaveDevDependencies": 0,
+	"bowerForceLatestOnConflict": 1,
+	"bowerTargetDependencyListType": 1,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
 	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
@@ -3426,6 +3490,10 @@
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
 			},
+		"prefer-named-capture-group": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
@@ -4179,6 +4247,11 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"npmAbbreviatedPath": "",
+	"npmCreatePackageLock": 1,
+	"npmInstallOptionalDependencies": 0,
+	"npmSaveExactVersion": 0,
+	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
