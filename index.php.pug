@@ -14,7 +14,7 @@ block prelude
 
 block vars
 	- var current = 'Home'
-	- var description = 'Lorenzo Wood is a young musician from Alameda, California. He sings, plays guitar, drums, keyboards, etc. He also writes and produces original songs.'
+	- var description = 'Lorenzo Wood is a musician, singer-songwriter, and producer from Alameda, California USA. He sings and plays guitar, keys, drums, bass, and has fun on mandolin and banjo.'
 
 block title
 	title Lorenzo Wood Music — Official Site
@@ -37,7 +37,7 @@ block append header
 				span New single “Jacket (I'm Sensitive)” —
 					| &nbsp;
 				b
-					a(style="text-decoration:underline", href="/link/jacket") Download or stream it now!
+					a(style="text-decoration:underline", href="/link/jacket") Watch, download or stream now!
 
 			//-a.needs-medium-small(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
 			//-	//- Apple marketing guidelines for lockup images:
@@ -99,27 +99,21 @@ block main
 		article.textual
 
 			//- Try to match meta description above with text below
+
 			p.
-				Lorenzo Wood is a young musician from Alameda, California USA. He sings, plays guitar, drums, piano/keyboards, bass, and, in an emergency, ukulele & mandolin. He also beat-boxes, and uses a looper for live performances. He writes and co-writes his own songs. He produces and records his music (using Apple Logic) and creates live performance videos.
+				Lorenzo Wood is a musician, singer-songwriter, and producer from Alameda, California USA. He sings and plays guitar, keys, drums, bass, and has fun on mandolin and banjo.
 			p.
-				Lorenzo started learning to play the drums at the age of four. At the age of seven, he performed in children’s musical theatre productions, and restarted #[a(href="http://www.tomorrowyouthrep.org/") performances] at age eleven, including key roles in #[em Annie], #[em High School Musical], and #[em Into the Woods]. He later took music/piano lessons and voice lessons. He is entirely self-taught on guitar.
+				Lorenzo performs solo or with a band in concert and at street fairs and private events. In addition to playing live, Lorenzo runs a recording studio in Alameda producing local artists as well as his own music.
 			p.
-				Lorenzo lists
-				#[a(href="http://www.maroon5.com") Maroon 5],
-				#[a(href="http://www.shawnmendesofficial.com") Shawn Mendes],
-				#[a(href="http://www.jamestaylor.com") James Taylor],
-				#[a(href="http://www.johnmayer.com") John Mayer],
-				#[a(href="http://www.thebeatles.com") The Beatles],
-				#[a(href="http://samsmithworld.com") Sam Smith],
-				#[a(href="http://www.niallhoran.com") Niall Horan], and
-				#[a(href="http://www.savemesanfrancisco.com") Train]
-				as his musical influences.
+				Lorenzo’s single, <a href="href="/link/jacket">Jacket (I’m Sensitive)</a> won Song of the Year in Redwood City and Song of the Month in Palo Alto for West Coast Songwriters.
+
 			blockquote “His voice is like ear candy”
-				footer wheeler cole, westcoast songwriters song in progress
+				footer Wheeler Cole, West Coast Songwriters
+
 			p.
-				Lorenzo has been busking at local street festivals or busy streets since age 13. He frequently performs on stage, solo or with his band (also teen musicians) and sits in with other bands as drummer. He also has practical experience in audio engineering, having worked at professional live sound events. He has also started helping other local artists record their own songs in his home studio.
+				He also runs live sound, and is knowledgeable and experienced with most audio and musical equipment.
 			p.
-				He recently recorded and produced his first EP, <i>Now In Control</i>, released May 2018.
+				Lorenzo lists Maroon 5, Shawn Mendes, Julia Michaels, John Mayer, The Beatles, U2, Fleetwood Mac, Niall Horan and Train as his musical influences.
 
 			aside.epk.download
 				a(href="EPK.zip") Electronic Press Kit
@@ -130,7 +124,7 @@ block main
 
 			//- p
 			//-	span.bandsintown-button
-			//-		a(href="https://www.bandsintown.com/track/lorenzowoodmusic")
+			//-		a(href="https://www.bandsintown.com/a/14965242")
 			//-			include svg/bandsintown-logo.svg
 			//-			| Track Lorenzo Wood on BandsInTown
 			//-	|
@@ -205,10 +199,10 @@ block main
 					div
 						a(data-title="Stream on Spotify" href="https://open.spotify.com/album/1SbBCWfrhKUrgp8AqDvESa?si=BmIlypbURYms7AmVbjOpMw")
 							include svg/spotify-text.svg
-					div
-						a(data=title="Buy CD" title="Buy CD shipped to you" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
-							img(alt="CD" style="width:50px;height:50px;" src="img/cd100.png")
-							span: b Buy CD
+					//-div
+					//-	a(data=title="Buy CD" title="Buy CD shipped to you" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
+					//-		img(alt="CD" style="width:50px;height:50px;" src="img/cd100.png")
+					//-		span: b Buy CD
 					div
 						form#redeem-form
 							input#redeem-input(type="text" name="code" placeholder="Enter Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
