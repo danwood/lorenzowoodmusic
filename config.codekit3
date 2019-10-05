@@ -528,6 +528,12 @@
 		"oAP": "/browserconfig.xml",
 		"oF": 0
 		},
+	"/CACHE": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/CACHE",
+		"oF": 0
+		},
 	"/classes.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -947,29 +953,6 @@
 		"oAP": "/link/index.php",
 		"oF": 2,
 		"oS": 1
-		},
-	"/link/link.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/link/link-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/link/link.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/link/link.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"/mailme.php": {
 		"cB": 0,
@@ -2122,6 +2105,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/svg/youtube-music.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/youtube-play.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/youtube-play.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
