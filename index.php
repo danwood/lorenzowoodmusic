@@ -40,7 +40,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
       </div>
       <div class="hero">
         <div class="quick-stream clearfix safe-area-only">
-          <p><a target="_blank" href="https://geo.itunes.apple.com/album/id1462960331?ls=1&amp;app=itunes&amp;at=1000lKSp"><img style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art_384/jacket-ep.jpg" alt="Jacket EP cover image"></a><span>
+          <p><a target="_blank" href="/link/jacket"><img style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art_384/jacket-ep.jpg" alt="Jacket EP cover image"></a><span>
               New 4-track EP “Jacket (I'm Sensitive)” —&nbsp;</span><b><a style="text-decoration:underline" href="/link/jacket">Watch, download or stream now!</a></b></p>
         </div>
         <picture>
