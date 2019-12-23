@@ -230,13 +230,9 @@ Icons (at top and bottom)
 	}
 }
 
-.popular.icons a:first-child { /* Left margin for shorter icon list */
-	margin-left:20%;
+.icons a:first-child { /* Left margin for shorter icon list */
+	margin-left:30%;
 }
-.exhaustive.icons a:first-child { /* Smaller left margin for longer icon list */
-	margin-left:10%;
-}
-
 
 /* Special hover tooltip-like display over social icons */
 .icons {
@@ -275,19 +271,11 @@ Icons (at top and bottom)
 @media only screen and (max-width:($mainBreakpoint - 1px)) {
 
 	/* Bigger social media icons on mobile ... 4-up when we have the 10 icons */
-	.exhaustive.icons a {
+	.icons a {
 		width:25%;
 	}
-	.exhaustive.icons a:nth-child(5):after { /* Need to not overflow text on right */
-		right:15%;
-		left:auto;
-	}
 
-	/* ... and 6-up without margins where we have the 6 icons */
-	.popular.icons a {
-		width:16.66%;
-	}
-	.popular.icons a:first-child, .exhaustive.icons a:first-child {
+	.icons a:first-child {
 		margin-left:0;
 	}
 }
