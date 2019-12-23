@@ -69,7 +69,7 @@ else {
 <div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp_id'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a></div>
 <?php } if ($album['cd_id']) { ?>
 <div class="service"><a href="<?php echo htmlentities($album['cd_id'], ENT_QUOTES); ?>"><img src="/img/cd100.png" alt="Buy CD"><span class="play">Buy</span></a></div>
-<?php } ?></div></div></main><footer><p><b>Copyright © 2017-2019 Lorenzo Wood</b></p><p class="js-warning">JavaScript is disabled in your browser; please enable it to see missing content.
+<?php } ?></div></div></main><footer><p><b>Copyright © 2017-2020 Lorenzo Wood</b></p><p class="js-warning">JavaScript is disabled in your browser; please enable it to see missing content.
 </p></footer><?php
 $db->close();
 ?></body></html>
