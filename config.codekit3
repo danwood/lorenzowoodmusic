@@ -118,6 +118,14 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/_sources/heartless cover.acorn": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_sources/heartless cover.acorn",
+		"oF": 0
+		},
 	"/_sources/IMG_2880 crop 13,11,2702,4066, scale 990x1490.JPG": {
 		"ft": 16384,
 		"iS": 1831349,
@@ -230,6 +238,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_1200x630/heartless.jpg": {
+		"ft": 16384,
+		"iS": 23574,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_1200x630/heartless.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_1200x630/jacket-ep.jpg": {
 		"ft": 16384,
 		"iS": 75220,
@@ -280,6 +299,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_1200x630/you-and-me-now.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_384/heartless.jpg": {
+		"ft": 16384,
+		"iS": 10932,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_384/heartless.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -340,6 +370,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_640/heartless.jpg": {
+		"ft": 16384,
+		"iS": 22505,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_640/heartless.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_640/jacket-ep.jpg": {
 		"ft": 16384,
 		"iS": 995101,
@@ -390,6 +431,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/you-and-me-now.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_large/heartless.jpg": {
+		"ft": 16384,
+		"iS": 198894,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_large/heartless.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -564,6 +616,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/classes/class.housekeeping.php",
+		"oF": 0
+		},
+	"/css/.sass-cache/656850f86ce4269fddc8c1fa3320e29a3c4c74fd/main.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/css/.sass-cache/656850f86ce4269fddc8c1fa3320e29a3c4c74fd/main.scssc",
 		"oF": 0
 		},
 	"/css/generic.css": {
@@ -2023,7 +2083,7 @@
 	"/svg/reverbnation-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/reverbnation-logo.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2033,7 +2093,7 @@
 	"/svg/snapchat-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/snapchat-logo.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2043,7 +2103,7 @@
 	"/svg/soundcloud-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/soundcloud-logo.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2083,7 +2143,7 @@
 	"/svg/twitter-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/twitter-logo.svg",
 		"oF": 0,
 		"opt": 0,
