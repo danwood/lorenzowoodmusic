@@ -85,7 +85,7 @@ $message = str_replace("\r\n", "\n", $message);		// try to get rid of \r's
 $message = str_replace("\r", "\n", $message);
 
 $originalMessage = $message;	// for error checking below
-error_log("original message = $originalMessage");
+
 
 $suspectedSpam = false;			// This might be turned on in a couple of cases; disable form submission from that IP address.
 
@@ -195,7 +195,7 @@ else if ( empty($fromEmail) || 0 == count($fromEmails) )
 {
 	$errorString = $MISSING_SENDER;
 }
-else if ( empty($subject) && strlen($originalMessage) < 25 )
+else if ( strlen($originalMessage) < 25 )
 {
 	$errorString = $MISSING_MESSAGE;
 }
