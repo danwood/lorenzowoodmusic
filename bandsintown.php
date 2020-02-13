@@ -20,8 +20,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array('accept: application/json'));
 
 $url = 'https://rest.bandsintown.com/artists/Lorenzo%20Wood%20Music?app_id=' . API_KEY;
 
-error_log($url);
-
 curl_setopt($ch, CURLOPT_URL,$url);
 
 $json=curl_exec($ch);
