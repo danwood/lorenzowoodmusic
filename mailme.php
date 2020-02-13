@@ -85,8 +85,7 @@ $message = str_replace("\r\n", "\n", $message);		// try to get rid of \r's
 $message = str_replace("\r", "\n", $message);
 
 $originalMessage = $message;	// for error checking below
-error_log("original message = $originalMessage");
-error_log("strlen = " . strlen($originalMessage) );
+
 
 $suspectedSpam = false;			// This might be turned on in a couple of cases; disable form submission from that IP address.
 
