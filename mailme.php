@@ -258,6 +258,4 @@ if (!empty($successReturnHash)) {
 }
 
 header("Location: $redirectSite");
-
-echo $errorString;	// for XHR
 ?>
