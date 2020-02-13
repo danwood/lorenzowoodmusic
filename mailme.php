@@ -14,7 +14,7 @@ require_once('classes/class.housekeeping.php');
 require_once('classes/class.Encoding.php');		// Force into UTF-8
 
 $MISSING_SENDER			= "You did not enter your email address, so your message was not sent.";
-$MISSING_MESSAGE		= "You did not enter a message, so no message was sent.";
+$MISSING_MESSAGE		= "You did not enter a reasonably long message, so no message was sent.";
 $MISSING_DESTINATION	= "Can't send message -- the creator of this web page did not specify a valid email address for receiving messages.";
 $MESSAGE_SENT			= "Your message was successfully sent via email.";
 
@@ -193,7 +193,7 @@ else if ( empty($fromEmail) || 0 == count($fromEmails) )
 {
 	$errorString = $MISSING_SENDER;
 }
-else if ( empty($subject) && empty($message) )
+else if ( empty($subject) && strlen($message) < 25 )
 {
 	$errorString = $MISSING_MESSAGE;
 }
