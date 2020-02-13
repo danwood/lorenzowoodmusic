@@ -84,6 +84,7 @@ then we are getting a mix of 8859 Latin and the UTF-8 which we really need this 
 $message = str_replace("\r\n", "\n", $message);		// try to get rid of \r's
 $message = str_replace("\r", "\n", $message);
 
+$originalMessage = $message;	// for error checking below
 
 $suspectedSpam = false;			// This might be turned on in a couple of cases; disable form submission from that IP address.
 
@@ -193,7 +194,7 @@ else if ( empty($fromEmail) || 0 == count($fromEmails) )
 {
 	$errorString = $MISSING_SENDER;
 }
-else if ( empty($subject) && strlen($message) < 25 )
+else if ( empty($subject) && strlen($originalMessage) < 25 )
 {
 	$errorString = $MISSING_MESSAGE;
 }
