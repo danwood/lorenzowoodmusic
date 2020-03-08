@@ -903,6 +903,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/img/Apple_Music_Icon.png": {
+		"ft": 32768,
+		"iS": 5260,
+		"oA": 0,
+		"oAP": "/img/Apple_Music_Icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/img/beach.jpg": {
 		"ft": 16384,
 		"iS": 2886286,
@@ -1973,6 +1984,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/svg/apple-music-icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "/svg/apple-music-icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/svg/Apple_Music_Icon_blk.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -2216,7 +2237,7 @@
 	"/svg/spotify-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/spotify-logo.svg",
 		"oF": 0,
 		"opt": 0,
