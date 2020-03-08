@@ -224,7 +224,12 @@ Icons (at top and bottom)
 	svg {
 		margin:10%;
 	}
+
+	&.smaller svg {
+		margin: 20%;
+	}
 }
+
 
 .icons a:first-child { /* Left margin for shorter icon list */
 	margin-left:20%;	// room for 6
