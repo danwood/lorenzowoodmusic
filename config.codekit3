@@ -7,7 +7,7 @@
 		"uuidString": "24DFFC34-B0CB-40BD-AA10-5ADCA258D482"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "31491",
 "files": {
 	"/.generate.php": {
 		"cB": 0,
@@ -293,6 +293,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_1200x630/still-need-love.jpg": {
+		"ft": 16384,
+		"iS": 23971,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_1200x630/still-need-love.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_1200x630/you-and-me-now.jpg": {
 		"ft": 16384,
 		"iS": 79115,
@@ -354,6 +365,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_384/old-town-road.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_384/still-need-love.jpg": {
+		"ft": 16384,
+		"iS": 10772,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_384/still-need-love.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -425,6 +447,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_640/still-need-love.jpg": {
+		"ft": 16384,
+		"iS": 21937,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_640/still-need-love.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_640/you-and-me-now.jpg": {
 		"ft": 16384,
 		"iS": 67671,
@@ -486,6 +519,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_large/old-town-road.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_large/still-need-love.jpg": {
+		"ft": 16384,
+		"iS": 295106,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_large/still-need-love.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -616,6 +660,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/classes/class.housekeeping.php",
+		"oF": 0
+		},
+	"/css/.sass-cache/656850f86ce4269fddc8c1fa3320e29a3c4c74fd/main.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/css/.sass-cache/656850f86ce4269fddc8c1fa3320e29a3c4c74fd/main.scssc",
 		"oF": 0
 		},
 	"/css/generic.css": {
@@ -1854,6 +1906,17 @@
 		"oAP": "/sitemap.txt",
 		"oF": 0
 		},
+	"/still-need-love.instagram.jpg": {
+		"ft": 16384,
+		"iS": 52279,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/still-need-love.instagram.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/studio/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -2675,7 +2738,6 @@
 			"flagValue": -1
 			}
 		},
-	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
 	"esLintEnvironmentsMask": 1,
@@ -2777,10 +2839,6 @@
 			"optionString": "'all'"
 			},
 		"default-case": {
-			"active": 0,
-			"optionString": ""
-			},
-		"default-param-last": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -3130,10 +3188,6 @@
 			},
 		"no-implied-eval": {
 			"active": 0,
-			"optionString": ""
-			},
-		"no-import-assign": {
-			"active": 1,
 			"optionString": ""
 			},
 		"no-inline-comments": {
@@ -3559,10 +3613,6 @@
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
-			},
-		"prefer-regex-literals": {
-			"active": 0,
-			"optionString": ""
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -4172,6 +4222,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"enableJavascript": 0,
+		"ieCompatibility": 0,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
@@ -4311,9 +4362,6 @@
 	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"rollupExternals": "",
-	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
-	"rollupTreeshakingEnabled": 1,
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,

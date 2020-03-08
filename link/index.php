@@ -55,6 +55,10 @@ else {
 <div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
 <?php } if ($album['spotify_id']) { ?>
 <div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($album['spotify_id'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
+<?php } if ( ($now < $release) && $album['spotify_presave_url']) { ?>
+<div class="service"><a href="<?php echo htmlentities($album['spotify_presave_url'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Presave on Spotify"><span class="play">Pre-save</span></a>
+<div style="padding-left:5em; font-size:80%; color:gray;">This step takes you to our DistroKid.com page to continue. You will be asked to log into your Spotify account.</div>
+</div>
 <?php } if ($album['amazon_music_id']) { ?>
 <div class="service"><a href="https://www.amazon.com/dp/<?php echo htmlentities($album['amazon_music_id'], ENT_QUOTES); ?>"><img src="../svg/amazon-music.svg" alt="Amazon Music"><span class="play">Play</span></a></div>
 <?php } if ($album['google_play_id']) { ?>
