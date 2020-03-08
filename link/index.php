@@ -56,7 +56,7 @@ else {
 <?php } if ($album['spotify_id']) { ?>
 <div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($album['spotify_id'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
 <?php } if ( ($now < $release) && $album['spotify_presave_url']) { ?>
-<div class="service"><a href="<?php echo htmlentities($album['spotify_presave_url'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Presave on Spotify"><span class="play">Pre-save</span></a>
+<div class="service"><a rel="nofollow" href="<?php echo htmlentities($album['spotify_presave_url'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Presave on Spotify"><span class="play">Pre-save</span></a>
 <div style="padding-left:5em; font-size:80%; color:gray;">This step takes you to our DistroKid.com page to continue. You will be asked to log into your Spotify account.</div>
 </div>
 <?php } if ($album['amazon_music_id']) { ?>
