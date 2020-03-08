@@ -26,6 +26,10 @@ section.bio {
 	background-color:var(--color3);
 }
 
+section.gigs {
+ 	background-color:var(--color5);
+}
+
 section.latest-releases {
  	background-color:var(--color4);
 }
@@ -837,10 +841,51 @@ input#redeem-submit {
 
 /*
 ----------------------------------------
-
+Latest Releases
 ----------------------------------------
 */
+.latest-releases article {
+	display: flex;
+	padding-bottom:100px;
 
+	margin:0 auto;
+	max-width:90rem;
+
+	&.reversed {
+		flex-direction: row-reverse;
+	}
+
+	.release-image {
+		width:25%;
+	}
+
+	.release-blurb {
+		width:40%;
+   		padding:15px 15px;
+
+		&.no-video {
+			width:75%;
+		}
+
+		h3 {
+			margin-top:0;
+		}
+	}
+
+	.release-video {
+		width:35%;
+	}
+
+	@media only screen and (max-width:($mainBreakpoint - 1px)) {
+		display:block;
+
+		&>div {
+			width:100% !important;
+		}
+	}
+}
+
+	
 
 
 /*

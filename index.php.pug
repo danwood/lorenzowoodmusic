@@ -115,6 +115,8 @@ block main
 				a(href="EPK.zip") Electronic Press Kit
 
 
+	section.gigs
+
 			//- Bands in Town content gets loaded here from cache.
 			|<?php include 'CACHE/bandsintown.html'; ?>
 
@@ -130,54 +132,59 @@ block main
 		header
 			h2 Latest Releases
 
+		article
+			.release-image
+				img(src="/album_art_640/still-need-love.jpg")
+			.release-blurb.no-video
+				h3: a(href="/link/still-need-love") Still Need Love
+				p The first of several singles that I'm releasing in Spring 2020.  My saxophone debut!
+
+		article.reversed
+			.release-image
+				img(src="/album_art_640/jacket-ep.jpg")
+			.release-blurb
+				h3: a(href="link/jacket-ep") Jacket (EP)
+				p It's about how your friends need to support you, even if they don't understand what you're going through.
+				p This is an EP with four versions of the same song! The original (the version used in the video here), a remix by <a class="spotify" href="https://open.spotify.com/artist/1BGQD9MGL3oUkS4sN86Wec">Aendru</a>, a rock version, and an acoustic duet with <a href="https://www.kaiasongs.com">Kaia</a>.
+			.release-video
+				.youtube(data-embed='iVHF1RM7a9I:Lorenzo Wood - Jacket (I\'m Sensitive)')
+
+		article
+			.release-image
+				img(src="/album_art_640/heartless.jpg")
+			.release-blurb
+				h3: a(href="/link/heartless") Heartless
+				h4 2AM in the Basement
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.
+			.release-video
+				.youtube(data-embed='PfjIqix5ZZw:Heartless (Diplo & Morgan Wallen) Cover by 2AM In The Basement')
+
+		article
+			.release-image
+				img(src="/album_art_640/old-town-road.jpg")
+			.release-blurb.no-video
+				h3: a(href="/link/old-town-road") Old Town Road
+				h4 2AM in the Basement
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.
+
+		article
+			.release-image
+				img(src="/album_art_640/now-in-control.jpg")
+			.release-blurb.no-video
+				h3: a(href="link/now-in-control") Now In Control (EP)
+				p My debut EP, completed when I was just 15 years old. That seems so long ago now!
+
+
 
 	section.audio-section.balance-footer.requires-js.maximize-mobile
-		header.ir(aria-hidden="true")
-			h2 Other Unreleased Tracks
+		h2 Other Unreleased Tracks
+		p Some other tracks I've done in the last few years that aren't (yet?) released officially.
+
 
 
 		footer
 			h3.righthand
 				a(href="https://soundcloud.com/LorenzoWoodMusic") More from SoundCloud
-
-
-	section.download-section
-
-		article.textual.clearfix
-			.side-photo
-				img.shadowed(src="album_art_384/now-in-control.jpg" alt="EP thumbnail")
-			.next-to-side-photo
-				.next-to-side-photo-padded
-					div
-						a.buy-button(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
-							| Buy “Now In Control” EP
-					div
-						a(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
-							//- Apple marketing guidelines for lockup images:
-							//- minimum 25px tall, 25% of height margin
-							include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
-					//-div
-					//-	a.disabled(data-title="Buy on Amazon Music" href="")
-					//-		include svg/amazon-music.svg
-					div
-						a(data-title="Stream on Google Play" href="https://play.google.com/store/music/artist/Lorenzo_Wood?id=An7ymzwbymdsefsxsdls3ffz56u")
-							include svg/google-play.svg
-					div
-						a(data-title="Stream on Apple Music" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?mt=1&app=music&at=1000lKSp")
-							include svg/Apple_Music_lockup_RGB_blk.svg
-					div
-						a(data-title="Stream on Spotify" href="https://open.spotify.com/album/1SbBCWfrhKUrgp8AqDvESa?si=BmIlypbURYms7AmVbjOpMw")
-							include svg/spotify-text.svg
-					//-div
-					//-	a(data=title="Buy CD" title="Buy CD shipped to you" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
-					//-		img(alt="CD" style="width:50px;height:50px;" src="img/cd100.png")
-					//-		span: b Buy CD
-					div
-						form#redeem-form
-							input#redeem-input(type="text" name="code" placeholder="Enter Download Code" pattern="[A-Za-z0-9- ]+{6,12}$" value!="<?php echo htmlspecialchars($code); ?>")
-							input(type="hidden" name="email" value!="<?php echo htmlspecialchars($email); ?>")
-							input#form-album(type="hidden" name="album" value="3948")
-							input#redeem-submit(type="submit" value="" name="submit")
 
 
 
