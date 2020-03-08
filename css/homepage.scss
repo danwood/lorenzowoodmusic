@@ -12,6 +12,37 @@ h3.righthand {
 	text-align:right;
 }
 
+
+
+.icons {
+	background-color:var(--color1);
+}
+
+section.mailing-section {
+	background-color:var(--color2);
+}
+
+section.bio {
+	background-color:var(--color3);
+}
+
+section.latest-releases {
+ 	background-color:var(--color4);
+}
+
+section.download-section {
+ 	background-color:var(--color5);
+}
+
+section.contact-section {
+ 	background-color:var(--color1);
+}
+
+section.audio-section {
+ 	background-color:var(--color2);
+}
+
+
 /*
 ----------------------------------------
 Input Forms
@@ -34,7 +65,7 @@ input[type="submit"] {
 	display:block;
 	text-align:center;
 	color:var(--color-paper-high);
-	background:var(--color-Link);
+	background-color:var(--color-Link);
 	padding:6px 2rem;
 	border:none;
 	width:auto;
@@ -59,7 +90,7 @@ Homepage streaming links above the fold
 */
 
 .quick-stream {
-	background:var(--color-paper-low);
+	background-color:var(--color-paper-low);
 }
 
 .quick-stream {
@@ -190,6 +221,14 @@ Hero
 }
 
 
+
+/*
+----------------------------------------
+Latest Releases Section
+----------------------------------------
+*/
+
+
 /*
 ----------------------------------------
 Bands in Town
@@ -210,7 +249,7 @@ Bands in Town
 
 .bit-row.bit-upcoming {
 	&:hover {
-		background:var(--color-paper-med);
+		background-color:var(--color-paper-med);
 	}
 	a {
 		text-decoration:none;
@@ -226,7 +265,7 @@ Bands in Town
 
 	.bit-button {
 		color:var(--color-paper-high);
-		background:var(--color-Link);
+		background-color:var(--color-Link);
 		padding:10px;
 		display:inline-block;
 		text-align:center;
@@ -289,9 +328,6 @@ Mailing, Download, EPK
 #mce-LNAME { width:9em;}
 #mce-EMAIL { width:10em;}
 
-.mailing-section {
-	background:var(--color-paper-low);
-}
 
 
 /* Not so likely but we need to be prepared for 3 rows */
@@ -327,87 +363,6 @@ Mailing, Download, EPK
 
 }
 
-/*
-----------------------------------------
-Patreon
-----------------------------------------
-*/
-
-.patreon-section article {
-	text-align:center;
-	line-height:1.5;
-}
-
-.patreon-button svg {
-	max-width:1rem;
-	padding:0 0.3rem;
-}
-
-
-.patreon-section {
-	background:var(--color-ink-high);
-	color:var(--color-paper-low);
-
-	a {
-		color:var(--color-paper-high);
-		text-decoration:none;
-	}
-}
-
-.patreon-link {
-	border-bottom:3px solid var(--color-Link);
-}
-
-@media only screen and (min-width:800px) {
-
-	/* Wider screens, show patreon as a distinct button */
-
-	.patreon-button {
-		border:1px solid var(--color-paper-high);
-		padding:0.5rem;
-		background:var(--color-ink-med);
-	}
-	.patreon-link {
-		border-bottom:none;
-	}
-}
-
-
-
-/*
-----------------------------------------
-Instagram
-----------------------------------------
-*/
-
-.instagram-section {
-	article {
-		margin:0 auto;
-		max-width:1200px;
-	}
-
-	h2 {
-		padding-top:1rem;
-		padding-bottom:1rem;
-		margin:0;
-	}
-}
-
-.lightwidget-widget {
-	background:var(--color-paper-high);
-	width:100%;
-	border:0;
-	overflow:hidden;
-	margin-top:0;
-}
-
-.instagram-section {
-	background:var(--color-paper-low);
-	a {
-		color:var(--color-ink-low);
-	}
-}
-
 
 
 /*
@@ -438,7 +393,7 @@ Download Section
 }
 
 a.buy-button {
-	background:var(--color-Link);
+	background-color:var(--color-Link);
 	color:var(--color-paper-med);
 	padding:12px 12px;
 	border-radius:10px;
@@ -453,7 +408,7 @@ a.buy-button {
 	white-space:nowrap;
 
 	&:hover {
-		background:var(--color-Link-hover);
+		background-color:var(--color-Link-hover);
 	}
 }
 
@@ -509,7 +464,7 @@ a.disabled:after {
 	padding:0 5px;
 	font-weight:bold;
 	font-size:75%;
-	background:var(--color-paper-high);
+	background-color:var(--color-paper-high);
 	color:var(--color-ink-high);
 	border-radius:5px;
 	box-shadow:0 0 8px 8px var(--color-paper-high);
@@ -537,26 +492,20 @@ a.disabled:hover:after {
 
 /*
 ----------------------------------------
-Soundcloud
+Audio Player
 ----------------------------------------
 */
 
-.soundcloud-section {
-	background:var(--color-paper-med);
+.audio-section {
+	background-color:var(--color-paper-med);
 	a { color:var(--color-ink-med); }
-}
-
-// Show soundcloud iframe (loaded from script) at maximum width
-
-iframe.soundcloud {
-	width:100%;
 }
 
 @media only screen and (min-width:800px) {
 
-	/* Wider screens, there is room for 3 SoundClouds side by side. */
+	/* Wider screens, there is room for 3 audio players side by side. */
 
-	.soundcloud-column {
+	.audioplayer-column {
 		width:33%;
 		float:left;
 	}
@@ -568,12 +517,6 @@ iframe.soundcloud {
 YouTube
 ----------------------------------------
 */
-
-.youtube-section {
-	background:var(--color-ink-low);
-	color:var(--color-paper-high);
-	a { color:var(--color-paper-med); }
-}
 
 /* YouTube player */
 
@@ -666,14 +609,6 @@ Contact Section
 ----------------------------------------
 */
 
-.contact-section {
-	background:var(--color-paper-low);
-	color:var(--color-ink-high);
-}
-
-.input-form a {
-	color:var(--color-paper-high);
-}
 .trapit { display:none !important; }
 
 
@@ -687,7 +622,7 @@ Bands in Town
 	display:block;
 	text-align:center;
 	color:var(--color-paper-high);
-	background:var(--color-Link);
+	background-color:var(--color-Link);
 	padding:6px;
 
 	a {
@@ -729,7 +664,7 @@ Bands in Town
 	}
 
 	/* Make track link be a button */
-	.bit-track { text-decoration:none; color:var(--color-paper-high); background:var(--color-Link); padding:10px; margin-right:0.5rem; }
+	.bit-track { text-decoration:none; color:var(--color-paper-high); background-color:var(--color-Link); padding:10px; margin-right:0.5rem; }
 
 	/* Separator for city-state */
 	.bit-citystate:before { content:' — '; }
@@ -746,7 +681,7 @@ Redeem form & cover
 
 #redeem-form input {
 	width:11em;
-	background:var(--color-paper-high);
+	background-color:var(--color-paper-high);
 	border-color:var(--color-ink-low);
 	font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
 	letter-spacing:1px;
@@ -759,7 +694,7 @@ input#redeem-submit {
 	padding:0.75em 0.25em;
 	float:right;
 	border-radius:4px;
-	background:var(--color-Link) url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat center center;
+	background-color:var(--color-Link) url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat center center;
 	color:white;
 }
 
@@ -788,7 +723,7 @@ input#redeem-submit {
 	min-height:300px;
 	max-height:100%;
 	margin:auto auto;
-	background:var(--color-paper-high);
+	background-color:var(--color-paper-high);
 	border:5px solid black;
 	border-radius:10px;
 	padding:10px;

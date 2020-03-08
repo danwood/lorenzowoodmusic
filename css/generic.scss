@@ -94,16 +94,12 @@ section, .safe-area {
 @supports(padding:max(0px)) {
 	section {
 		// use m#{a}x instead of max to allow this to be compiled with Sass
-		padding-left: m#{a}x(1rem, constant(safe-area-inset-left));
-		padding-right:m#{a}x(1rem, constant(safe-area-inset-right));	/* iOS 11.0, 11.1 … phase out soon */
 		padding-left: m#{a}x(1rem, env(safe-area-inset-left));
-		padding-right:m#{a}x(1rem, env(safe-area-inset-right));			/* iOS 11.2 beta and up */
+		padding-right:m#{a}x(1rem, env(safe-area-inset-right));
 	}
 	.safe-area-only {
-		padding-left:constant(safe-area-inset-left);
-		padding-right:constant(safe-area-inset-right);		/* iOS 11.0, 11.1 … phase out soon */
 		padding-left:env(safe-area-inset-left);
-		padding-right:env(safe-area-inset-right);			/* iOS 11.2 beta and up */
+		padding-right:env(safe-area-inset-right);
 	}
 }
 

@@ -42,6 +42,14 @@ Colors
 
 	--color-dark-high:		hsl(0, 0%, 13%);
 
+
+	/* Coolors Exported Palette - coolors.co/3a405a-aadb9b-99b2dd-ffbfc6-fff29e */
+
+	--color1: hsl(229, 22%, 29%);
+	--color2: hsl(106, 47%, 73%);
+	--color3: hsl(218, 50%, 73%);
+	--color4: hsl(353,100%, 87%);
+	--color5: hsl( 52,100%, 81%);
 }
 
 
@@ -79,13 +87,8 @@ a { color:var(--color-Link); }
 }
 
 main {
-	background:var(--color-paper-high);
+	background-color:var(--color-paper-high);
 }
-
-section.lightgray {
-	background:var(--color-paper-low);
-}
-
 
 /*
 ----------------------------------------
@@ -93,8 +96,13 @@ Typography
 ----------------------------------------
 */
 
-body {
-	font:16px/1.6 Helvetica, Helvetica Neue, Arial;
+body { 
+	font:16px/1.6 'PT Serif', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight:700;
 }
 
 dt {
@@ -152,7 +160,7 @@ article.textual {
 }
 
 body > footer {
-	background:var(--color-paper-low);
+	background-color:var(--color-paper-low);
 	color:var(--color-paper-high);
 }
 

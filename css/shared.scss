@@ -88,7 +88,7 @@ $page-menu-font-size: 1.0rem;
 			color:var(--color-Inverse);
 		}
 		a:hover {
-			background:var(--color-Inverse);
+			background-color:var(--color-Inverse);
 			color:var(--color-ink-med);
 		}
 	}
@@ -213,12 +213,8 @@ Icons (at top and bottom)
 ----------------------------------------
 */
 
-.icons {
-	background:rgba(0,0,0,0.5);
-}
-
 .exhaustive.icons {
-	background:var(--color-dark-high);
+	background-color:var(--color-dark-high);
 }
 
 .icons a {
@@ -242,7 +238,7 @@ Icons (at top and bottom)
 	a:after {
 		padding:0 5px;
 		font-size:80%;
-		background:var(--color-paper-high);
+		background-color:var(--color-paper-high);
 		color:var(--color-ink-high);
 		border-radius:5px;
 		box-shadow:0 0 8px 8px var(--color-paper-high);

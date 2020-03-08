@@ -21,7 +21,6 @@ block title
 	
 block append links
 	link(rel="prefetch" href="//code.jquery.com")
-	link(rel="prefetch" href="//w.soundcloud.com")
 	link(rel="prefetch" href="//img.youtube.com")
 
 //- REMINDER: DASH AFTER SLASH-SLASH HIDES COMMENTS FROM PUG COMPILER
@@ -127,47 +126,20 @@ block main
 			//-	|
 			//-	|to be notified of upcoming gigs!
 
-
-
-	section.instagram-section.requires-js.maximize-mobile
+	section.latest-releases
 		header
-			h2 Instagram
-		article
-			#lightweight_widget
-		footer
-			h3.righthand
-				a(href="https://instagram.com/LorenzoWoodMusic") More from Instagram
+			h2 Latest Releases
 
 
-
-	section.soundcloud-section.balance-footer.requires-js.maximize-mobile
+	section.audio-section.balance-footer.requires-js.maximize-mobile
 		header.ir(aria-hidden="true")
-			h2 SoundCloud
+			h2 Other Unreleased Tracks
 
-		//- In my Blood, Believer, Trip Switch
 
-		article.clearfix
-			each code in ['417471444', '423059013','386311568']
-				.soundcloud-column
-					.soundcloud-proxy(data-code=code)
 		footer
 			h3.righthand
 				a(href="https://soundcloud.com/LorenzoWoodMusic") More from SoundCloud
 
-
-
-	section.youtube-section.balance-footer.requires-js.maximize-mobile
-		header.ir(aria-hidden="true")
-			h2 YouTube
-
-		article.clearfix
-			each info in ['PfjIqix5ZZw:Heartless (Diplo & Morgan Wallen) Cover by 2AM In The Basement', 'iVHF1RM7a9I:Lorenzo Wood - Jacket (I\'m Sensitive)']
-				.youtube-column-2
-					.youtube(data-embed=info)
-
-		footer
-			h3.righthand
-				a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
 
 	section.download-section
 

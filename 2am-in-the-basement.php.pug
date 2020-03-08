@@ -1,0 +1,103 @@
+extends _layout.pug
+
+block vars
+	- var current = '2AM in the Basement'
+	- var description = '2AM in the Basement is a side project of musician Lorenzo Wood featuring covers of songs by some of Lorenzo‘s favorite artists.'
+
+block title
+	title Lorenzo Wood Music — Official Site
+	
+block append links
+	link(rel="prefetch" href="//code.jquery.com")
+	link(rel="prefetch" href="//img.youtube.com")
+
+//- REMINDER: DASH AFTER SLASH-SLASH HIDES COMMENTS FROM PUG COMPILER
+
+//-.info(style="position:absolute; top:0; left:0; width:100%; height:20px; color:red;z-index:9999")
+
+block append header
+	.hero
+		.quick-stream.clearfix.safe-area-only
+
+		picture
+			source(srcset="img/beach.webp 1920w" type="image/webp")
+			source(srcset="img/beach.jpg 1920w, img/beach50.jpg 960w, img/beach33.jpg 640w")
+			img.hero-image(src="img/beach.jpg" loading="eager" alt="Lorenzo Wood")
+
+block main
+
+
+	section.bio
+
+		header.ir(aria-hidden="true")
+			h2 Bio
+		article.textual
+
+			//- Try to match meta description above with text below
+
+			p.
+				2AM in the Basement is a side project of musician <a href="./">Lorenzo Wood</a> featuring covers of songs by some of Lorenzo's favorite artists.
+
+
+
+	section.contact-section
+		article.textual.clearfix
+			.side-photo
+				picture
+					source(srcset="img/southshore.webp 990w" type="image/webp")
+					source(srcset="img/southshore.jpg 990w, img/southshore50.jpg 495w")
+					img(src="img/southshore.jpg" loading="lazy" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
+			.next-to-side-photo
+				.next-to-side-photo-padded
+					header
+						h2 Contact Lorenzo Wood Music
+					p.
+						Book a gig, suggest a collaboration or song, or just say hi!
+					.input-form
+						form#contact-form(action="mailme.php" method="post")
+							div
+								//- Use raw HTML here since the escaping happens too early when processed by pug
+								<input type="email" name="e" id="e_fm" placeholder="Your Email Address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+							div
+								input(type="text" id="e_na" name="n" placeholder="Your Name" value="")
+							div: textarea(type="text" id="e_ms" name="m" rows="10" cols="40" required="required" placeholder="Message")
+							div
+								
+								//- honeypot
+								input(type="text" name="subject" value="" class="ir")
+								input(type="text" name="message" value="" class="ir")
+
+								input(type="hidden" name="f" value="This message was sent from the LorenzoWoodMusic.com website.")
+								input(type="hidden" name="s" value="Message sent from LorenzoWoodMusic.com")
+								input(type="hidden" name="r" value="/")
+								input(type="hidden" name="h" value="contact-form")
+
+								input.button(type="submit" value="Contact us")
+								
+							<?php if (isset($_GET['msg'])) { echo '<h2>' . htmlspecialchars($_GET['msg']) . '</h2>'; } ?>
+							<?php if (isset($_GET['e'])) { echo '<h2 style="color:#C00">' . htmlspecialchars($_GET['e']) . '</h2>'; } ?>
+
+block additional-html
+
+	#scroll-arrow.scrolldown.bounce(style="display:none")
+		a.down-arrow(href="#")
+			include svg/downarrow.svg
+
+
+//- NOTE THAT HOME PAGE IS ONLY PAGE THAT IS CURRENTLY USING JQUERY
+
+block scripts
+	script(
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous")
+	script.
+		window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\\/script>')
+	script
+		include js/index-min.js
+		include js/youtube-min.js
+		//- Modernizer-like
+		//- Remove "no-js" class from element, if it exists
+		|document.documentElement.className = document.documentElement.className.replace("no-js","js");
+
+

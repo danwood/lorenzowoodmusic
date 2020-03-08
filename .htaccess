@@ -502,8 +502,9 @@ AddDefaultCharset utf-8
 
    Header set Content-Security-Policy "default-src 'self' data:; \
        script-src 'unsafe-inline' code.jquery.com 'self'; \
-       style-src 'unsafe-inline' 'self'; \
+       style-src 'unsafe-inline' fonts.googleapis.com 'self'; \
        img-src img.youtube.com 'self' data:; \
+       font-src fonts.gstatic.com 'self'; \
        frame-src lightwidget.com w.soundcloud.com www.facebook.com www.youtube.com; \
        frame-ancestors 'none'"
 
