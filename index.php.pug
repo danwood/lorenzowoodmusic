@@ -121,6 +121,7 @@ block main
 
 
 	section.gigs
+		article.textual
 
 			//- Bands in Town content gets loaded here from cache.
 			|<?php include 'CACHE/bandsintown.html'; ?>
@@ -133,57 +134,66 @@ block main
 			//-	|
 			//-	|to be notified of upcoming gigs!
 
-	section.latest-releases
-		header
-			h2 Latest Releases
+	section.latest-releases.unpadded
+		.subsection
+			article
+				header
+					h2 Latest Releases
 
-		article
-			.release-image
-				img(src="/album_art_640/still-need-love.jpg")
-			.release-blurb.no-video
-				h3: a(href="/link/still-need-love") Still Need Love
-				p The first of several singles that I'm releasing in Spring 2020.  My saxophone debut!
+		.subsection(style="background-color:#3b8abb")
+			article
+				.release-image
+					img(src="/album_art_640/still-need-love.jpg")
+				.release-blurb.no-video
+					h3: a(href="/link/still-need-love") Still Need Love
+					p The first of several singles that I'm releasing in Spring 2020.  My saxophone debut!
 
-		article.reversed
-			.release-image
-				img(src="/album_art_640/jacket-ep.jpg")
-			.release-blurb
-				h3: a(href="link/jacket-ep") Jacket (EP)
-				p It's about how your friends need to support you, even if they don't understand what you're going through.
-				p This is an EP with four versions of the same song! The original (the version used in the video here), a remix by <a class="spotify" href="https://open.spotify.com/artist/1BGQD9MGL3oUkS4sN86Wec">Aendru</a>, a rock version, and an acoustic duet with <a href="https://www.kaiasongs.com">Kaia</a>.
-			.release-video
-				.youtube(data-embed='iVHF1RM7a9I:Lorenzo Wood - Jacket (I\'m Sensitive)')
+		.subsection.reversed(style="background-color:#c6a581")
+			article
+				.release-image
+					img(src="/album_art_640/jacket-ep.jpg")
+				.release-blurb
+					h3: a(href="link/jacket-ep") Jacket (EP)
+					p It's about how your friends need to support you, even if they don't understand what you're going through.
+					p This is an EP with four versions of the same song! The original (the version used in the video here), a remix by <a class="spotify" href="https://open.spotify.com/artist/1BGQD9MGL3oUkS4sN86Wec">Aendru</a>, a rock version, and an acoustic duet with <a href="https://www.kaiasongs.com">Kaia</a>.
+				.release-video
+					.youtube(data-embed='iVHF1RM7a9I:Lorenzo Wood - Jacket (I\'m Sensitive)')
 
-		article
-			.release-image
-				img(src="/album_art_640/heartless.jpg")
-			.release-blurb
-				h3: a(href="/link/heartless") Heartless
-				h4 2AM in the Basement
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.
-			.release-video
-				.youtube(data-embed='PfjIqix5ZZw:Heartless (Diplo & Morgan Wallen) Cover by 2AM In The Basement')
+		.subsection(style="background-color:#c68a4f")
+			article
+				.release-image
+					img(src="/album_art_640/heartless.jpg")
+				.release-blurb
+					h3: a(href="/link/heartless") Heartless
+					h4 2AM in the Basement
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.
+				.release-video
+					.youtube(data-embed='PfjIqix5ZZw:Heartless (Diplo & Morgan Wallen) Cover by 2AM In The Basement')
 
-		article
-			.release-image
-				img(src="/album_art_640/old-town-road.jpg")
-			.release-blurb.no-video
-				h3: a(href="/link/old-town-road") Old Town Road
-				h4 2AM in the Basement
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.
+		.subsection(style="background-color:#d0aa85")
+			article
+				.release-image
+					img(src="/album_art_640/old-town-road.jpg")
+				.release-blurb.no-video
+					h3: a(href="/link/old-town-road") Old Town Road
+					h4 2AM in the Basement
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.
 
-		article
-			.release-image
-				img(src="/album_art_640/now-in-control.jpg")
-			.release-blurb.no-video
-				h3: a(href="link/now-in-control") Now In Control (EP)
-				p My debut EP, completed when I was just 15 years old. That seems so long ago now!
+		.subsection(style="background-color:#bec7cc")
+			article
+				.release-image
+					img(src="/album_art_640/now-in-control.jpg")
+				.release-blurb.no-video
+					h3: a(href="link/now-in-control") Now In Control (EP)
+					p My debut EP, completed when I was just 15 years old. That seems so long ago now!
 
 
 
 	section.audio-section.balance-footer.requires-js.maximize-mobile
-		h2 Other Unreleased Tracks
-		p Some other tracks I've done in the last few years that aren't (yet?) released officially.
+
+		article.textual
+			h2 Other Unreleased Tracks
+			p Some other tracks I've done in the last few years that aren't (yet?) released officially.
 
 
 

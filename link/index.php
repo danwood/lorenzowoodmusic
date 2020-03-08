@@ -31,7 +31,7 @@ else {
 	readfile('../404.html');
 	exit();
 }
-?><!DOCTYPE html><html class="no-js" lang="en-us"><head><meta charset="utf-8"><!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]--><title><?php echo htmlentities($longTitle); ?></title><meta name='description' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="supported-color-schemes" content="light dark"><link href="https://fonts.googleapis.com/css?family=Montserrat:700|PT+Serif&amp;display=swap" rel="stylesheet"><link rel="apple-touch-icon" href="icon.png"><link rel="stylesheet" href="/css/main.122219.css"><meta property='og:title' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
+?><!DOCTYPE html><html class="no-js" lang="en-us"><head><meta charset="utf-8"><!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]--><title><?php echo htmlentities($longTitle); ?></title><meta name='description' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="supported-color-schemes" content="light dark"><link href="https://fonts.googleapis.com/css?family=Montserrat:700|PT+Serif&amp;display=swap" rel="stylesheet"><link rel="apple-touch-icon" href="icon.png"><link rel="stylesheet" href="/css/main.130820.css"><meta property='og:title' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 <meta property='og:description' content='Preview, download or stream <?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 <meta property='og:url' content='<?php echo htmlentities(curPageURL()); ?>'>
 <meta property='og:type' content='article'>

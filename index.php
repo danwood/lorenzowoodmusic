@@ -12,7 +12,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     <meta name="supported-color-schemes" content="light dark">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700|PT+Serif&amp;display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="/css/main.122219.css">
+    <link rel="stylesheet" href="/css/main.130820.css">
     <link rel="prefetch" href="//code.jquery.com">
     <link rel="prefetch" href="//img.youtube.com">
   </head>
@@ -83,59 +83,77 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
           <aside class="epk download"><a href="EPK.zip">Electronic Press Kit</a></aside>
         </article>
       </section>
-      <section class="gigs"><?php include 'CACHE/bandsintown.html'; ?></section>
-      <section class="latest-releases">
-        <header>
-          <h2>Latest Releases</h2>
-        </header>
-        <article>
-          <div class="release-image"><img src="/album_art_640/still-need-love.jpg"></div>
-          <div class="release-blurb no-video">
-            <h3><a href="/link/still-need-love">Still Need Love</a></h3>
-            <p>The first of several singles that I'm releasing in Spring 2020.  My saxophone debut!</p>
-          </div>
-        </article>
-        <article class="reversed">
-          <div class="release-image"><img src="/album_art_640/jacket-ep.jpg"></div>
-          <div class="release-blurb">
-            <h3><a href="link/jacket-ep">Jacket (EP)</a></h3>
-            <p>It's about how your friends need to support you, even if they don't understand what you're going through.</p>
-            <p>This is an EP with four versions of the same song! The original (the version used in the video here), a remix by <a class="spotify" href="https://open.spotify.com/artist/1BGQD9MGL3oUkS4sN86Wec">Aendru</a>, a rock version, and an acoustic duet with <a href="https://www.kaiasongs.com">Kaia</a>.</p>
-          </div>
-          <div class="release-video">
-            <div class="youtube" data-embed="iVHF1RM7a9I:Lorenzo Wood - Jacket (I'm Sensitive)"></div>
-          </div>
-        </article>
-        <article>
-          <div class="release-image"><img src="/album_art_640/heartless.jpg"></div>
-          <div class="release-blurb">
-            <h3><a href="/link/heartless">Heartless</a></h3>
-            <h4>2AM in the Basement</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.</p>
-          </div>
-          <div class="release-video">
-            <div class="youtube" data-embed="PfjIqix5ZZw:Heartless (Diplo &amp; Morgan Wallen) Cover by 2AM In The Basement"></div>
-          </div>
-        </article>
-        <article>
-          <div class="release-image"><img src="/album_art_640/old-town-road.jpg"></div>
-          <div class="release-blurb no-video">
-            <h3><a href="/link/old-town-road">Old Town Road</a></h3>
-            <h4>2AM in the Basement</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.</p>
-          </div>
-        </article>
-        <article>
-          <div class="release-image"><img src="/album_art_640/now-in-control.jpg"></div>
-          <div class="release-blurb no-video">
-            <h3><a href="link/now-in-control">Now In Control (EP)</a></h3>
-            <p>My debut EP, completed when I was just 15 years old. That seems so long ago now!</p>
-          </div>
-        </article>
+      <section class="gigs">
+        <article class="textual"><?php include 'CACHE/bandsintown.html'; ?></article>
+      </section>
+      <section class="latest-releases unpadded">
+        <div class="subsection">
+          <article>
+            <header>
+              <h2>Latest Releases</h2>
+            </header>
+          </article>
+        </div>
+        <div class="subsection" style="background-color:#3b8abb">
+          <article>
+            <div class="release-image"><img src="/album_art_640/still-need-love.jpg"></div>
+            <div class="release-blurb no-video">
+              <h3><a href="/link/still-need-love">Still Need Love</a></h3>
+              <p>The first of several singles that I'm releasing in Spring 2020.  My saxophone debut!</p>
+            </div>
+          </article>
+        </div>
+        <div class="subsection reversed" style="background-color:#c6a581">
+          <article>
+            <div class="release-image"><img src="/album_art_640/jacket-ep.jpg"></div>
+            <div class="release-blurb">
+              <h3><a href="link/jacket-ep">Jacket (EP)</a></h3>
+              <p>It's about how your friends need to support you, even if they don't understand what you're going through.</p>
+              <p>This is an EP with four versions of the same song! The original (the version used in the video here), a remix by <a class="spotify" href="https://open.spotify.com/artist/1BGQD9MGL3oUkS4sN86Wec">Aendru</a>, a rock version, and an acoustic duet with <a href="https://www.kaiasongs.com">Kaia</a>.</p>
+            </div>
+            <div class="release-video">
+              <div class="youtube" data-embed="iVHF1RM7a9I:Lorenzo Wood - Jacket (I'm Sensitive)"></div>
+            </div>
+          </article>
+        </div>
+        <div class="subsection" style="background-color:#c68a4f">
+          <article>
+            <div class="release-image"><img src="/album_art_640/heartless.jpg"></div>
+            <div class="release-blurb">
+              <h3><a href="/link/heartless">Heartless</a></h3>
+              <h4>2AM in the Basement</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.</p>
+            </div>
+            <div class="release-video">
+              <div class="youtube" data-embed="PfjIqix5ZZw:Heartless (Diplo &amp; Morgan Wallen) Cover by 2AM In The Basement"></div>
+            </div>
+          </article>
+        </div>
+        <div class="subsection" style="background-color:#d0aa85">
+          <article>
+            <div class="release-image"><img src="/album_art_640/old-town-road.jpg"></div>
+            <div class="release-blurb no-video">
+              <h3><a href="/link/old-town-road">Old Town Road</a></h3>
+              <h4>2AM in the Basement</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.</p>
+            </div>
+          </article>
+        </div>
+        <div class="subsection" style="background-color:#bec7cc">
+          <article>
+            <div class="release-image"><img src="/album_art_640/now-in-control.jpg"></div>
+            <div class="release-blurb no-video">
+              <h3><a href="link/now-in-control">Now In Control (EP)</a></h3>
+              <p>My debut EP, completed when I was just 15 years old. That seems so long ago now!</p>
+            </div>
+          </article>
+        </div>
       </section>
       <section class="audio-section balance-footer requires-js maximize-mobile">
-        <h2>Other Unreleased Tracks</h2>
-        <p>Some other tracks I've done in the last few years that aren't (yet?) released officially.</p>
+        <article class="textual">
+          <h2>Other Unreleased Tracks</h2>
+          <p>Some other tracks I've done in the last few years that aren't (yet?) released officially.</p>
+        </article>
         <footer>
           <h3 class="righthand"><a href="https://soundcloud.com/LorenzoWoodMusic">More from SoundCloud</a></h3>
         </footer>
