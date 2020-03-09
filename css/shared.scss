@@ -232,7 +232,7 @@ Icons (at top and bottom)
 
 
 .icons a:first-child { /* Left margin for shorter icon list */
-	margin-left:20%;	// room for 6
+	margin-left:25%;	// room for 5
 }
 
 /* Special hover tooltip-like display over social icons */
@@ -271,9 +271,9 @@ Icons (at top and bottom)
 
 @media only screen and (max-width:($mainBreakpoint - 1px)) {
 
-	/* Bigger social media icons on mobile ... 4-up when we have the 10 icons */
+	/* Bigger social media icons on mobile ... 5-up */
 	.icons a {
-		width:16.6%;
+		width:20%;
 	}
 
 	.icons a:first-child {
@@ -283,9 +283,9 @@ Icons (at top and bottom)
 
 // For a really small screen, make them 3 across
 
-@media only screen and (max-width:376px) {
+@media only screen and (max-width:320px) {
 
-	/* Bigger social media icons on mobile ... 4-up when we have the 10 icons */
+	/* Bigger social media icons on mobile ... 3-up */
 	.icons a {
 		width:33%;
 	}
@@ -293,6 +293,10 @@ Icons (at top and bottom)
 	.icons a:first-child {
 		margin-left:0;
 	}
+	.icons a:nth-child(4) {		// second row, indent to center
+		margin-left:16.6%;
+	}
+
 }
 
 

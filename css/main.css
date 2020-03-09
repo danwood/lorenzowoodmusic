@@ -1005,7 +1005,7 @@ Icons (at top and bottom)
 
 .icons a:first-child {
   /* Left margin for shorter icon list */
-  margin-left: 20%; }
+  margin-left: 25%; }
 
 /* Special hover tooltip-like display over social icons */
 .icons a {
@@ -1039,18 +1039,20 @@ Icons (at top and bottom)
   left: auto; }
 
 @media only screen and (max-width: 629px) {
-  /* Bigger social media icons on mobile ... 4-up when we have the 10 icons */
+  /* Bigger social media icons on mobile ... 5-up */
   .icons a {
-    width: 16.6%; }
+    width: 20%; }
   .icons a:first-child {
     margin-left: 0; } }
 
-@media only screen and (max-width: 376px) {
-  /* Bigger social media icons on mobile ... 4-up when we have the 10 icons */
+@media only screen and (max-width: 320px) {
+  /* Bigger social media icons on mobile ... 3-up */
   .icons a {
     width: 33%; }
   .icons a:first-child {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .icons a:nth-child(4) {
+    margin-left: 16.6%; } }
 
 /*
 ----------------------------------------
