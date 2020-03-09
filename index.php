@@ -10,7 +10,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     <meta name="description" content="Lorenzo Wood is a musician, singer-songwriter, and producer from Alameda, California USA. He sings and plays guitar, keys, drums, bass, and has fun on mandolin and banjo.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="supported-color-schemes" content="light dark">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|PT+Serif&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&amp;display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="stylesheet" href="/css/main.130820.css">
     <link rel="prefetch" href="//code.jquery.com">
@@ -96,20 +96,22 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
         </div>
         <div class="subsection" style="background-color:#3b8abb">
           <article>
-            <div class="release-image"><img src="/album_art_640/still-need-love.jpg"></div>
+            <div class="release-image"><a href="/link/still-need-love"><img src="/album_art_640/still-need-love.jpg"></a></div>
             <div class="release-blurb no-video">
               <h3><a href="/link/still-need-love">Still Need Love</a></h3>
+              <h4>March 2020</h4>
               <p>The first of several singles that I'm releasing in Spring 2020.  My saxophone debut!</p>
             </div>
           </article>
         </div>
         <div class="subsection reversed" style="background-color:#c6a581">
           <article>
-            <div class="release-image"><img src="/album_art_640/jacket-ep.jpg"></div>
+            <div class="release-image"><a href="link/jacket-ep"><img src="/album_art_640/jacket-ep.jpg"></a></div>
             <div class="release-blurb">
               <h3><a href="link/jacket-ep">Jacket (EP)</a></h3>
+              <h4>May 2019 (Single), Oct 2019 (EP)</h4>
               <p>It's about how your friends need to support you, even if they don't understand what you're going through.</p>
-              <p>This is an EP with four versions of the same song! The original (the version used in the video here), a remix by <a class="spotify" href="https://open.spotify.com/artist/1BGQD9MGL3oUkS4sN86Wec">Aendru</a>, a rock version, and an acoustic duet with <a href="https://www.kaiasongs.com">Kaia</a>.</p>
+              <p>This is an EP with four versions of the same song! The original (in the video here), a remix by <a class="spotify" href="https://open.spotify.com/artist/1BGQD9MGL3oUkS4sN86Wec">Aendru</a>, a rock version, and an acoustic duet with <a href="https://www.kaiasongs.com">Kaia</a>.</p>
             </div>
             <div class="release-video">
               <div class="youtube" data-embed="iVHF1RM7a9I:Lorenzo Wood - Jacket (I'm Sensitive)"></div>
@@ -118,10 +120,10 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
         </div>
         <div class="subsection" style="background-color:#c68a4f">
           <article>
-            <div class="release-image"><img src="/album_art_640/heartless.jpg"></div>
+            <div class="release-image"><a href="/link/heartless"><img src="/album_art_640/heartless.jpg"></a></div>
             <div class="release-blurb">
               <h3><a href="/link/heartless">Heartless</a></h3>
-              <h4>2AM in the Basement</h4>
+              <h4>2AM in the Basement • December 2019</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.</p>
             </div>
             <div class="release-video">
@@ -131,20 +133,21 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
         </div>
         <div class="subsection" style="background-color:#d0aa85">
           <article>
-            <div class="release-image"><img src="/album_art_640/old-town-road.jpg"></div>
+            <div class="release-image"><a href="/link/old-town-road"><img src="/album_art_640/old-town-road.jpg"></a></div>
             <div class="release-blurb no-video">
               <h3><a href="/link/old-town-road">Old Town Road</a></h3>
-              <h4>2AM in the Basement</h4>
+              <h4>2AM in the Basement • May 2019</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.</p>
             </div>
           </article>
         </div>
         <div class="subsection" style="background-color:#bec7cc">
           <article>
-            <div class="release-image"><img src="/album_art_640/now-in-control.jpg"></div>
+            <div class="release-image"><a href="link/now-in-control"><img src="/album_art_640/now-in-control.jpg"></a></div>
             <div class="release-blurb no-video">
               <h3><a href="link/now-in-control">Now In Control (EP)</a></h3>
-              <p>My debut EP, completed when I was just 15 years old. That seems so long ago now!</p>
+              <h4>May 2018</h4>
+              <p>My debut EP, released when I was just 15 years old. That seems so long ago now!</p>
             </div>
           </article>
         </div>
