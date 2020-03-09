@@ -1235,9 +1235,6 @@ Hero
   top: 0;
   filter: grayscale(100%); }
 
-.js .hero-image {
-  position: fixed; }
-
 .featured img {
   position: absolute;
   bottom: calc(16% + 40px);
