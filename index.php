@@ -94,7 +94,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
             </header>
           </article>
         </div>
-        <div class="subsection lightheader" style="background-color:#3b8abb">
+        <div class="subsection lightanchor" style="background-color:#3b8abb">
           <article>
             <div class="release-image"><a href="/link/still-need-love"><img src="/album_art_640/still-need-love.jpg"></a></div>
             <div class="release-blurb no-video">
@@ -104,7 +104,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
             </div>
           </article>
         </div>
-        <div class="subsection darkheader reversed" style="background-color:#c6a581">
+        <div class="subsection darkanchor reversed" style="background-color:#c6a581">
           <article>
             <div class="release-image"><a href="link/jacket-ep"><img src="/album_art_640/jacket-ep.jpg"></a></div>
             <div class="release-blurb">
@@ -118,7 +118,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
             </div>
           </article>
         </div>
-        <div class="subsection lightheader" style="background-color:#c68a4f">
+        <div class="subsection lightanchor" style="background-color:#c68a4f">
           <article>
             <div class="release-image"><a href="/link/heartless"><img src="/album_art_640/heartless.jpg"></a></div>
             <div class="release-blurb">
@@ -131,17 +131,17 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
             </div>
           </article>
         </div>
-        <div class="subsection darkheader reversed" style="background-color:#d0aa85">
+        <div class="subsection darkanchor reversed" style="background-color:#d0aa85">
           <article>
             <div class="release-image"><a href="/link/old-town-road"><img src="/album_art_640/old-town-road.jpg"></a></div>
             <div class="release-blurb no-video">
               <h3><a href="/link/old-town-road">Old Town Road</a></h3>
               <h4>2AM in the Basement • May 2019</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.</p>
+              <p>As soon as the Lil Nas X original came out, I knew it would be a hit, so I quickly got to work and produced my take on the song. It's one of my more successful releases.</p>
             </div>
           </article>
         </div>
-        <div class="subsection darkheader" style="background-color:#bec7cc">
+        <div class="subsection darkanchor" style="background-color:#bec7cc">
           <article>
             <div class="release-image"><a href="link/now-in-control"><img src="/album_art_640/now-in-control.jpg"></a></div>
             <div class="release-blurb no-video">
