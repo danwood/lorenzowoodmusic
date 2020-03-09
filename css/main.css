@@ -724,7 +724,7 @@ Typography
 body {
   font: 16px/1.6 'Montserrat', sans-serif; }
 
-h1, h2, h3, h4, h5, h6, h7 {
+h1, h2, h3, h4, h5, h6, h7, .bold {
   font-weight: 800; }
 
 dt {
@@ -1815,8 +1815,14 @@ Latest Releases
       .latest-releases article .release-video {
         width: 44.5%; } }
 
-.latest-releases .subsection.reversed {
+.latest-releases .subsection.reversed article {
   flex-direction: row-reverse; }
+
+.darkheader h3 a {
+  color: rgba(0, 0, 0, 0.6); }
+
+.lightheader h3 a {
+  color: rgba(255, 255, 255, 0.6); }
 
 /*
 ----------------------------------------

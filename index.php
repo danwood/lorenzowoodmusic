@@ -94,7 +94,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
             </header>
           </article>
         </div>
-        <div class="subsection" style="background-color:#3b8abb">
+        <div class="subsection lightheader" style="background-color:#3b8abb">
           <article>
             <div class="release-image"><a href="/link/still-need-love"><img src="/album_art_640/still-need-love.jpg"></a></div>
             <div class="release-blurb no-video">
@@ -104,7 +104,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
             </div>
           </article>
         </div>
-        <div class="subsection reversed" style="background-color:#c6a581">
+        <div class="subsection darkheader reversed" style="background-color:#c6a581">
           <article>
             <div class="release-image"><a href="link/jacket-ep"><img src="/album_art_640/jacket-ep.jpg"></a></div>
             <div class="release-blurb">
@@ -118,7 +118,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
             </div>
           </article>
         </div>
-        <div class="subsection" style="background-color:#c68a4f">
+        <div class="subsection lightheader" style="background-color:#c68a4f">
           <article>
             <div class="release-image"><a href="/link/heartless"><img src="/album_art_640/heartless.jpg"></a></div>
             <div class="release-blurb">
@@ -131,7 +131,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
             </div>
           </article>
         </div>
-        <div class="subsection" style="background-color:#d0aa85">
+        <div class="subsection darkheader reversed" style="background-color:#d0aa85">
           <article>
             <div class="release-image"><a href="/link/old-town-road"><img src="/album_art_640/old-town-road.jpg"></a></div>
             <div class="release-blurb no-video">
@@ -141,7 +141,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
             </div>
           </article>
         </div>
-        <div class="subsection" style="background-color:#bec7cc">
+        <div class="subsection darkheader" style="background-color:#bec7cc">
           <article>
             <div class="release-image"><a href="link/now-in-control"><img src="/album_art_640/now-in-control.jpg"></a></div>
             <div class="release-blurb no-video">
@@ -151,15 +151,15 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
             </div>
           </article>
         </div>
-      </section>
-      <section class="audio-section balance-footer requires-js maximize-mobile">
-        <article class="textual">
-          <h2>Other Unreleased Tracks</h2>
-          <p>Some other tracks I've done in the last few years that aren't (yet?) released officially.</p>
-        </article>
-        <footer>
-          <h3 class="righthand"><a href="https://soundcloud.com/LorenzoWoodMusic">More from SoundCloud</a></h3>
-        </footer>
+        <div class="subsection">
+          <article>
+            <footer>
+              Find more unreleased tracks on my
+               <a class="bold" href="https://soundcloud.com/LorenzoWoodMusic">SoundCloud</a> 
+              page.
+            </footer>
+          </article>
+        </div>
       </section>
       <section class="contact-section">
         <article class="textual clearfix">

@@ -884,9 +884,6 @@ Latest Releases
 		margin:0 auto;
 		max-width:90rem;
 
-		&.reversed {
-			flex-direction: row-reverse;
-		}
 
 		.release-image {
 			width:25%;
@@ -909,6 +906,17 @@ Latest Releases
 			width:44.5%;	// width that makes the video be the same height as the artwork
 		}
 	}
+}
+
+.latest-releases .subsection.reversed article {
+	flex-direction: row-reverse;
+}
+
+.darkheader h3 a {
+	color:rgba(0,0,0,0.6);
+}
+.lightheader h3 a {
+	color:rgba(255,255,255,0.6);
 }
 
 	
