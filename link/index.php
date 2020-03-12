@@ -62,7 +62,7 @@ else {
 <?php } if ($album['amazon_music_id']) { ?>
 <div class="service"><a href="https://www.amazon.com/dp/<?php echo htmlentities($album['amazon_music_id'], ENT_QUOTES); ?>"><img src="../svg/amazon-music.svg" alt="Amazon Music"><span class="play">Play</span></a></div>
 <?php } if ($album['google_play_id']) { ?>
-<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play">Download</span></a></div>
+<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play"><?php echo $releaseDateString ? 'Pre-order' : 'Download'; ?></span></a></div>
 <?php } if ($album['youtube_music_id']) { ?>
 <div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($album['youtube_music_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
 <?php } if ($album['soundcloud_id']) { ?>

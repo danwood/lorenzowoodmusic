@@ -33,6 +33,24 @@
 		"oAP": "/.htaccess",
 		"oF": 0
 		},
+	"/2am-in-the-basement.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/2am-in-the-basement.html",
+		"oF": 0
+		},
+	"/2am-in-the-basement.php.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/2am-in-the-basement.html",
+		"oF": 2,
+		"oS": 0
+		},
 	"/404.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -777,7 +795,7 @@
 		"oA": 0,
 		"oAP": "/css/main.css",
 		"oF": 0,
-		"oS": 3,
+		"oS": 0,
 		"uL": 1
 		},
 	"/css/normalize.css": {
@@ -1955,10 +1973,40 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/Apple_Music_lockup_RGB_blk.svg": {
+	"/svg/apple-music-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
+		"oAP": "/svg/apple-music-icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/Apple_Music_Icon_blk.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/Apple_Music_Icon_blk.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/Apple_Music_Icon_wht.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/Apple_Music_Icon_wht.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/Apple_Music_lockup_RGB_blk.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
 		"oAP": "/svg/Apple_Music_lockup_RGB_blk.svg",
 		"oF": 0,
 		"opt": 0,
@@ -1988,7 +2036,7 @@
 	"/svg/bandsintown-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/bandsintown-logo.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2058,7 +2106,7 @@
 	"/svg/google-play.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/google-play.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2088,7 +2136,7 @@
 	"/svg/iTunes_Store_Buy_Lockup_RGB_blk.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/iTunes_Store_Buy_Lockup_RGB_blk.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2105,10 +2153,20 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/lorenzowoodmusic.svg": {
+	"/svg/lorenzowood.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
+		"oAP": "/svg/lorenzowood.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/lorenzowoodmusic.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
 		"oAP": "/svg/lorenzowoodmusic.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2178,7 +2236,7 @@
 	"/svg/spotify-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/spotify-logo.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2188,7 +2246,7 @@
 	"/svg/spotify-text.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/spotify-text.svg",
 		"oF": 0,
 		"opt": 0,
