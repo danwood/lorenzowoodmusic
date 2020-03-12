@@ -20,6 +20,8 @@ if ($album) {
 	if (!empty($album['featuring'])) { $longTitle .= ' [feat. ' . $album['featuring'] . ']'; }
 	$longTitle .= ' - by ' . $album['artist'];
 	$releaseDateString = NULL;
+	$now = new DateTime();
+	$release = 0;
 	if (!empty($album['release_date'])) {
 		$release = new DateTime($album['release_date']);
 		$now = new DateTime();
