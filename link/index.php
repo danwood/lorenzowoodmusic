@@ -21,7 +21,7 @@ if ($album) {
 	$longTitle .= ' - by ' . $album['artist'];
 	$releaseDateString = NULL;
 	$now = new DateTime();
-	$release = 0;
+	$release = $now;	// default to now, so it should show up as released
 	if (!empty($album['release_date'])) {
 		$release = new DateTime($album['release_date']);
 		$now = new DateTime();
