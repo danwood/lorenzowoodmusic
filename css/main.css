@@ -993,7 +993,7 @@ a.active {
 Icons (at top and bottom)
 ----------------------------------------
 */
-.exhaustive.icons {
+.icons.icons-footer {
   background-color: var(--color-dark-high); }
 
 .icons a {
@@ -1004,9 +1004,13 @@ Icons (at top and bottom)
   .icons a.smaller svg {
     margin: 20%; }
 
-.icons a:first-child {
+.icons-5 a:first-child {
   /* Left margin for shorter icon list */
   margin-left: 25%; }
+
+.icons-2 a:first-child {
+  /* Left margin for shorter icon list */
+  margin-left: 40%; }
 
 /* Special hover tooltip-like display over social icons */
 .icons a {
@@ -1043,16 +1047,20 @@ Icons (at top and bottom)
   /* Bigger social media icons on mobile ... 5-up */
   .icons a {
     width: 20%; }
-  .icons a:first-child {
-    margin-left: 0; } }
+  .icons-5 a:first-child {
+    margin-left: 0; }
+  .icons-2 a:first-child {
+    margin-left: 30%; }
+  .logo svg {
+    max-width: 75%; } }
 
 @media only screen and (max-width: 320px) {
   /* Bigger social media icons on mobile ... 3-up */
-  .icons a {
+  .icons-5 a {
     width: 33%; }
-  .icons a:first-child {
+  .icons-5 a:first-child {
     margin-left: 0; }
-  .icons a:nth-child(4) {
+  .icons-5 a:nth-child(4) {
     margin-left: 16.6%; } }
 
 /*
@@ -1099,7 +1107,7 @@ h3.righthand {
   padding: 1rem 1rem;
   text-align: right; }
 
-.icons {
+.icons-header {
   background-color: var(--color1); }
 
 section.mailing-section {
