@@ -1994,6 +1994,16 @@
 		"oF": 0,
 		"oS": 1
 		},
+	"/svg/2am.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "/svg/2am.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/svg/amazon-music.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -2047,7 +2057,7 @@
 	"/svg/Apple_Music_lockup_RGB_blk.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/Apple_Music_lockup_RGB_blk.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2077,7 +2087,7 @@
 	"/svg/bandsintown-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/bandsintown-logo.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2147,7 +2157,7 @@
 	"/svg/google-play.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/google-play.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2177,7 +2187,7 @@
 	"/svg/iTunes_Store_Buy_Lockup_RGB_blk.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/iTunes_Store_Buy_Lockup_RGB_blk.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2207,7 +2217,7 @@
 	"/svg/lorenzowoodmusic.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/lorenzowoodmusic.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2277,7 +2287,7 @@
 	"/svg/spotify-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/spotify-logo.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2287,7 +2297,7 @@
 	"/svg/spotify-text.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/spotify-text.svg",
 		"oF": 0,
 		"opt": 0,

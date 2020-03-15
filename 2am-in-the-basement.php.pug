@@ -5,11 +5,15 @@ block vars
 	- var description = '2AM in the Basement is a side project of musician Lorenzo Wood featuring covers of songs by some of Lorenzo‘s favorite artists.'
 
 block title
-	title Lorenzo Wood Music — Official Site
+	title 2AM in the Basement — Official Site
 	
 block append links
 	link(rel="prefetch" href="//code.jquery.com")
 	link(rel="prefetch" href="//img.youtube.com")
+
+block logo
+	a(href="/", class={active: current === 'Home'})
+		include svg/2am.svg
 
 //- REMINDER: DASH AFTER SLASH-SLASH HIDES COMMENTS FROM PUG COMPILER
 
@@ -20,9 +24,9 @@ block append header
 		.quick-stream.clearfix.safe-area-only
 
 		picture
-			source(srcset="img/beach.webp 1920w" type="image/webp")
-			source(srcset="img/beach.jpg 1920w, img/beach50.jpg 960w, img/beach33.jpg 640w")
-			img.hero-image(src="img/beach.jpg" loading="eager" alt="Lorenzo Wood")
+			source(srcset="img/2am.webp 1920w" type="image/webp")
+			source(srcset="img/2am.jpg 1920w, img/2am50.jpg 960w, img/2am33.jpg 640w")
+			img.hero-image(src="img/2am.jpg" loading="eager" alt="2AM in the Basement")
 
 block main
 
@@ -36,7 +40,7 @@ block main
 			//- Try to match meta description above with text below
 
 			p.
-				2AM in the Basement is a side project of musician <a href="./">Lorenzo Wood</a> featuring covers of songs by some of Lorenzo's favorite artists.
+				Hey! 2AM in the Basement is a side project of musician <a href="./">Lorenzo Wood</a> featuring covers of songs by some of Lorenzo's favorite artists.
 
 
 
