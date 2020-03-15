@@ -1,7 +1,7 @@
 extends _layout.pug
 
 block vars
-	- var current = '2AM in the Basement'
+	- var current = '2AM'
 	- var description = '2AM in the Basement is a side project of musician Lorenzo Wood featuring covers of songs by some of Lorenzo‘s favorite artists.'
 
 block title
@@ -12,7 +12,7 @@ block append links
 	link(rel="prefetch" href="//img.youtube.com")
 
 block logo
-	a(href="/", class={active: current === 'Home'})
+	a(href="/", class={active: current === '2AM'})
 		include svg/2am.svg
 
 //- REMINDER: DASH AFTER SLASH-SLASH HIDES COMMENTS FROM PUG COMPILER

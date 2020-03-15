@@ -34,6 +34,7 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
                     <li><a class="active" href="/">Home</a></li>
                     <li><a href="/photos/">Photos</a></li>
                     <li><a href="/videos/">Videos</a></li>
+                    <li><a href="/2am-in-the-basement.html">2AM</a></li>
                     <li><a href="/booking/">Booking</a></li>
           </ul>
         </nav>
