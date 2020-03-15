@@ -23,6 +23,8 @@ block prelude
 	|	if (!empty($album['featuring'])) { $longTitle .= ' [feat. ' . $album['featuring'] . ']'; }
 	|	$longTitle .= ' - by ' . $album['artist'];
 	|	$releaseDateString = NULL;
+	|	$now = new DateTime();
+	|	$release = $now;	// default to now, so it should show up as released
 	|	if (!empty($album['release_date'])) {
 	|		$release = new DateTime($album['release_date']);
 	|		$now = new DateTime();
@@ -75,7 +77,7 @@ block append links
 	<meta name='twitter:title' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 	<meta name='twitter:description' content='Preview, download or stream <?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 	<meta name='twitter:card' content='summary_large_image'>
-	<meta name='twitter:image' content='<?php echo baseURL() . '/album_art_large/' . htmlentities($album['imageName'], ENT_QUOTES); ?>'>
+	<meta name='twitter:image' content='<?php echo baseURL() . '/album_art_1200x630/' . htmlentities($album['imageName'], ENT_QUOTES); ?>'>
 	//- square 144 up to 4000, 5 MB max
 
 block append styles
@@ -142,7 +144,7 @@ block main
 
 			<?php } if ($album['google_play_id']) { ?>
 			
-			<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play">Download</span></a></div>
+			<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play"><?php echo $releaseDateString ? 'Pre-order' : 'Download'; ?></span></a></div>
 
 			<?php } if ($album['youtube_music_id']) { ?>
 			
