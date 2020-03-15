@@ -108,7 +108,7 @@ function fullscreen(event){
 		$('#scroll-arrow').remove();
 	}
 
-	jQuery('#main-header,img.hero-image').css({
+	jQuery('#main-header,img.covering-image').css({
 		width: width,
 		height: height
 	});
@@ -124,7 +124,7 @@ var targetOffset = $("main").offset().top;
 var $w = $(window).scroll(function(){
 	$('#scroll-arrow').remove();
 	if ( $w.scrollTop() > targetOffset ) {
-		$('img.hero-image').css({filter:"grayscale(0%)",opacity:"1.0"});
+		$('img.bw-image').css({filter:"grayscale(0%)",opacity:"1.0"});
 	}
 });
 

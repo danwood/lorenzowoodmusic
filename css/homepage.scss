@@ -82,7 +82,7 @@ Social Icons on home page only
 ----------------------------------------
 */
 
-.icons.popular {
+.icons.absolute {
 	position:absolute;
 	bottom:0; left:0; right:0; /* should match with height of nav */
 }
@@ -175,16 +175,19 @@ Hero
 }
 .hero-image {
 	width:100%;
+}
+.covering-image {
 	object-fit:cover;
 	object-position:75% 0%;
 	z-index:-1;
 	top:0;
-	filter:grayscale(100%);
 }
-.js .hero-image {
+.js .covering-image {
 	position:fixed;
 }
-
+.bw-image {
+	filter:grayscale(100%);
+}
 
 .featured img {
 	position:absolute;
