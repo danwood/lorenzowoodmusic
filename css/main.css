@@ -810,7 +810,7 @@ img.half {
   float: left;
   max-width: 50%; }
 
-@media only screen and (max-width: 729px) {
+@media only screen and (max-width: 767px) {
   /* On mobile, avoid left/right margin on some sections (except for their headers/footers which are textual) */
   .maximize-mobile {
     padding-left: 0;
@@ -880,7 +880,7 @@ Page Navigation Menu
 input#navigation[type="checkbox"], label.hamburger {
   display: none; }
 
-@media only screen and (min-width: 730px) {
+@media only screen and (min-width: 768px) {
   .logo svg {
     padding-top: 3rem; }
   nav.page-menu {
@@ -907,14 +907,14 @@ input#navigation[type="checkbox"], label.hamburger {
       color: #fff;
       text-decoration: none;
       display: block;
-      padding: 1rem 0.75rem; }
+      padding: 1rem 0.6rem; }
     nav.page-menu a.active {
       color: var(--color-Inverse); }
     nav.page-menu a:hover {
       background-color: var(--color-Inverse);
       color: var(--color-ink-med); } }
 
-@media only screen and (max-width: 729px) {
+@media only screen and (max-width: 767px) {
   /* ===== Navigation ===== */
   nav.page-menu {
     display: block;
@@ -1043,7 +1043,7 @@ Icons (at top and bottom)
   /* plenty of room for shadow effect to not overflow the container on phone */
   left: auto; }
 
-@media only screen and (max-width: 729px) {
+@media only screen and (max-width: 767px) {
   /* Bigger social media icons on mobile ... 5-up */
   .icons a {
     width: 20%; }
@@ -1287,7 +1287,7 @@ Hero
     bottom: calc(17% + 123px + 5px);
     /* above img */ } }
 
-@media only screen and (max-width: 729px) {
+@media only screen and (max-width: 767px) {
   .featured img {
     bottom: calc(18% + 82px + 40px);
     /* above buying nav and social icons */ }
@@ -1300,7 +1300,7 @@ Hero
   .quick-stream a {
     color: var(--color-ink-high); }
 
-@media only screen and (min-width: 730px) {
+@media only screen and (min-width: 768px) {
   .quick-stream {
     position: absolute;
     top: 0;
@@ -1429,7 +1429,7 @@ Mailing, Download, EPK
     text-align: center;
     margin: 0.5rem 0; } }
 
-@media only screen and (max-width: 729px) {
+@media only screen and (max-width: 767px) {
   .mailing-section {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem; }
@@ -1488,7 +1488,7 @@ a.buy-button {
 .side-photo img {
   max-width: 100%; }
 
-@media only screen and (max-width: 729px) {
+@media only screen and (max-width: 767px) {
   /* On mobile, center photo rather than side-by-side */
   .side-photo {
     margin-left: 25%;
@@ -1497,7 +1497,7 @@ a.buy-button {
     padding: 0;
     margin: 0 auto; } }
 
-@media only screen and (min-width: 730px) {
+@media only screen and (min-width: 768px) {
   /* On wide screens, put photo to left of the 'download' icons */
   .side-photo {
     float: left;
@@ -1612,7 +1612,7 @@ YouTube
 .youtube-border {
   padding: 1em; }
 
-@media only screen and (min-width: 730px) {
+@media only screen and (min-width: 768px) {
   /* Two YouTube videos side by side */
   .youtube-column-half {
     width: 50%;
@@ -1651,7 +1651,7 @@ Bands in Town
     width: 1.5rem;
     padding-bottom: 0.3rem; }
 
-@media only screen and (max-width: 729px) {
+@media only screen and (max-width: 767px) {
   /* Bands in town just show square logo */
   .bit-header-full {
     display: none; }
@@ -1660,7 +1660,7 @@ Bands in Town
   .bit-date, .bit-venue, .bit-citystate {
     padding: 0; } }
 
-@media only screen and (min-width: 730px) {
+@media only screen and (min-width: 768px) {
   /* If wide enough, show button inline with text rather than 100% wide */
   .bandsintown-button {
     display: inline;
@@ -1731,7 +1731,7 @@ input#redeem-submit {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -20%);
-  min-width: 730px;
+  min-width: 768px;
   max-width: 100%;
   min-height: 300px;
   max-height: 100%;
@@ -1809,7 +1809,7 @@ input#redeem-submit {
 .track-number {
   width: 2em; }
 
-@media only screen and (max-width: 729px) {
+@media only screen and (max-width: 767px) {
   #redeemer {
     border: none;
     padding: 0;
@@ -1834,13 +1834,13 @@ Latest Releases
   display: block;
   padding-top: 4em;
   padding-bottom: 4em; }
-  @media only screen and (max-width: 729px) {
+  @media only screen and (max-width: 767px) {
     .latest-releases article .release-image img {
       max-width: 320px;
       margin: 0 auto; }
     .latest-releases article h3, .latest-releases article h4 {
       text-align: center; } }
-  @media only screen and (min-width: 730px) {
+  @media only screen and (min-width: 768px) {
     .latest-releases article {
       padding-top: 2.5em;
       padding-bottom: 2.5em;

@@ -29,6 +29,7 @@ body > footer {
     color: black; }
 
 .mini-icons {
+  padding-left: 10px;
   display: inline-block; }
   .mini-icons svg {
     width: 24px;
