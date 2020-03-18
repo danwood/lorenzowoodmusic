@@ -7,7 +7,7 @@
 		"uuidString": "24DFFC34-B0CB-40BD-AA10-5ADCA258D482"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "31491",
 "files": {
 	"/.generate.php": {
 		"cB": 0,
@@ -31,6 +31,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/.htaccess",
+		"oF": 0
+		},
+	"/2am-in-the-basement.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/2am-in-the-basement.html",
 		"oF": 0
 		},
 	"/404.html": {
@@ -713,9 +721,9 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/css/html5boilerplate-min.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 3
 		},
 	"/css/linkstyles.css": {
@@ -777,9 +785,9 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/css/normalize-min.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 3
 		},
 	"/css/shared.scss": {
@@ -817,6 +825,24 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"/css2am/.sass-cache/656850f86ce4269fddc8c1fa3320e29a3c4c74fd/main.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/css2am/.sass-cache/656850f86ce4269fddc8c1fa3320e29a3c4c74fd/main.scssc",
+		"oF": 0
+		},
+	"/css2am/main.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css2am/main-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/download.php": {
 		"cB": 0,
@@ -875,6 +901,47 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"/img/2am.jpg": {
+		"ft": 16384,
+		"iS": 990962,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/2am.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/img/2am.webp": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/img/2am.webp",
+		"oF": 0
+		},
+	"/img/2am33.jpg": {
+		"ft": 16384,
+		"iS": 154958,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/2am33.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/img/2am50.jpg": {
+		"ft": 16384,
+		"iS": 320018,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/2am50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/beach.jpg": {
@@ -975,7 +1042,7 @@
 		"oA": 0,
 		"oAP": "/index.php",
 		"oF": 2,
-		"oS": 0
+		"oS": 1
 		},
 	"/js/index-min.js": {
 		"bF": 0,
@@ -1950,7 +2017,7 @@
 	"/svg/Apple_Music_lockup_RGB_blk.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/Apple_Music_lockup_RGB_blk.svg",
 		"oF": 0,
 		"opt": 0,
@@ -1980,7 +2047,7 @@
 	"/svg/bandsintown-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/bandsintown-logo.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2050,7 +2117,7 @@
 	"/svg/google-play.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/google-play.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2080,7 +2147,7 @@
 	"/svg/iTunes_Store_Buy_Lockup_RGB_blk.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/iTunes_Store_Buy_Lockup_RGB_blk.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2100,7 +2167,7 @@
 	"/svg/lorenzowoodmusic.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/lorenzowoodmusic.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2170,7 +2237,7 @@
 	"/svg/spotify-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/spotify-logo.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2180,7 +2247,7 @@
 	"/svg/spotify-text.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/spotify-text.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2730,7 +2797,6 @@
 			"flagValue": -1
 			}
 		},
-	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
 	"esLintEnvironmentsMask": 1,
@@ -2832,10 +2898,6 @@
 			"optionString": "'all'"
 			},
 		"default-case": {
-			"active": 0,
-			"optionString": ""
-			},
-		"default-param-last": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -3185,10 +3247,6 @@
 			},
 		"no-implied-eval": {
 			"active": 0,
-			"optionString": ""
-			},
-		"no-import-assign": {
-			"active": 1,
 			"optionString": ""
 			},
 		"no-inline-comments": {
@@ -3614,10 +3672,6 @@
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
-			},
-		"prefer-regex-literals": {
-			"active": 0,
-			"optionString": ""
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -4227,6 +4281,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"enableJavascript": 0,
+		"ieCompatibility": 0,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
@@ -4366,9 +4421,6 @@
 	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"rollupExternals": "",
-	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
-	"rollupTreeshakingEnabled": 1,
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
