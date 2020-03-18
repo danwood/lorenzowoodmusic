@@ -36,6 +36,10 @@ section.bio {
 	background-color:var(--color3);
 }
 
+section.videos {
+	background-color:var(--color2);
+}
+
 section.gigs {
  	background-color:var(--color5);
 }
@@ -186,13 +190,13 @@ Hero
 .hero-image {
 	width:100%;
 }
-.covering {
+img.covering {
 	object-fit:cover;
 	object-position:75% 0%;
-	z-index:-1;
 	top:0;
+	z-index:-1;
 }
-.js .covering {
+.js img.covering {
 	position:fixed;
 }
 .bw-image {
@@ -646,13 +650,15 @@ YouTube
 
 @media only screen and (min-width:$mainBreakpoint) {
 
-	/* Two YouTube videos side by side */
+	/* One half-size youtube video */
 
 	.youtube-column-half {
 		width:50%;
 		float:left;
 		margin-left:25%;
 	}
+
+	/* Two YouTube videos side by side */
 
 	.youtube-column-2 {
 		width:50%;
