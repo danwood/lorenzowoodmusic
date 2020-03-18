@@ -1,6 +1,7 @@
 extends _layout.pug
 
 block vars
+	- var herostyle = 'covering'
 	- var current = '2AM'
 	- var description = '2AM in the Basement is a side project of musician Lorenzo Wood featuring covers of songs by some of Lorenzo‘s favorite artists.'
 
@@ -20,8 +21,7 @@ block logo
 //-.info(style="position:absolute; top:0; left:0; width:100%; height:20px; color:red;z-index:9999")
 
 block append header
-	.hero.covering
-		.quick-stream.clearfix.safe-area-only
+	.hero
 
 		picture
 			source(srcset="img/2am.webp 1920w" type="image/webp")
