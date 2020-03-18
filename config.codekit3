@@ -49,7 +49,7 @@
 		"oA": 0,
 		"oAP": "/2am-in-the-basement.html",
 		"oF": 2,
-		"oS": 0
+		"oS": 1
 		},
 	"/404.html": {
 		"cB": 0,
@@ -944,15 +944,37 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/img/banner1.png": {
-		"ft": 32768,
-		"iS": 53362744,
+	"/img/banner.jpg": {
+		"ft": 16384,
+		"iS": 289616,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "/img/banner1.png",
+		"oAP": "/img/banner.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
+		"opt": 1,
+		"q": 100
+		},
+	"/img/banner33.jpg": {
+		"ft": 16384,
+		"iS": 27147,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner33.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/img/banner50.jpg": {
+		"ft": 16384,
+		"iS": 62553,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/beach.jpg": {
@@ -1053,7 +1075,7 @@
 		"oA": 0,
 		"oAP": "/index.php",
 		"oF": 2,
-		"oS": 0
+		"oS": 1
 		},
 	"/js/index-min.js": {
 		"bF": 0,

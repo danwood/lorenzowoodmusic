@@ -49,10 +49,10 @@ block append header
 			//-a.needs-medium(data=title="Buy CD" title="Buy CD shipped to you" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
 			//-	img(alt="CD" src="img/cd100.png")
 			//-	span Buy CD
-			//-picture
-			//-source(srcset="img/beach.webp 1920w" type="image/webp")
-			//-source(srcset="img/beach.jpg 1920w, img/beach50.jpg 960w, img/beach33.jpg 640w")
-		img.hero-image(src="img/banner1.png" loading="eager" alt="Lorenzo Wood")
+
+		picture
+			source(srcset="img/banner.jpg 2560w, img/banner50.jpg 1280w, img/banner33.jpg 856w")
+			img.hero-image(src="img/banner.jpg" loading="eager" alt="Lorenzo Wood")
 	//-.featured
 	//-	a(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
 	//-		img(src="album_art_384/now-in-control.jpg" alt="EP thumbnail")

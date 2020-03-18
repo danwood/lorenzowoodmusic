@@ -1107,7 +1107,8 @@ Home-Page specific classes
 
 .logo h1 {
   margin: 0;
-  padding: 0.5em; }
+  padding: 0.5rem 0 0 1rem;
+  display: inline-block; }
 
 h3.righthand {
   margin: 0;
@@ -1196,7 +1197,7 @@ Homepage streaming links above the fold
     text-decoration: none; }
     .quick-stream a span {
       padding-left: 0.5rem; }
-  .quick-stream svg, .quick-stream img {
+  .quick-stream svg {
     height: 25px;
     /* 25px minimum for apple logo guidelines */
     padding: 8px 0;
