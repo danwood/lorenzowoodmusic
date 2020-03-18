@@ -810,7 +810,7 @@ img.half {
   float: left;
   max-width: 50%; }
 
-@media only screen and (max-width: 629px) {
+@media only screen and (max-width: 729px) {
   /* On mobile, avoid left/right margin on some sections (except for their headers/footers which are textual) */
   .maximize-mobile {
     padding-left: 0;
@@ -880,7 +880,7 @@ Page Navigation Menu
 input#navigation[type="checkbox"], label.hamburger {
   display: none; }
 
-@media only screen and (min-width: 630px) {
+@media only screen and (min-width: 730px) {
   .logo svg {
     padding-top: 3rem; }
   nav.page-menu {
@@ -914,7 +914,7 @@ input#navigation[type="checkbox"], label.hamburger {
       background-color: var(--color-Inverse);
       color: var(--color-ink-med); } }
 
-@media only screen and (max-width: 629px) {
+@media only screen and (max-width: 729px) {
   /* ===== Navigation ===== */
   nav.page-menu {
     display: block;
@@ -1043,7 +1043,7 @@ Icons (at top and bottom)
   /* plenty of room for shadow effect to not overflow the container on phone */
   left: auto; }
 
-@media only screen and (max-width: 629px) {
+@media only screen and (max-width: 729px) {
   /* Bigger social media icons on mobile ... 5-up */
   .icons a {
     width: 20%; }
@@ -1102,10 +1102,20 @@ Home-Page specific classes
 
 ================================================================================
 */
+.logo a {
+  text-decoration: none; }
+
+.logo h1 {
+  margin: 0;
+  padding: 0.5em; }
+
 h3.righthand {
   margin: 0;
   padding: 1rem 1rem;
   text-align: right; }
+
+.centered {
+  text-align: center; }
 
 .icons-header {
   background-color: var(--color1); }
@@ -1175,8 +1185,8 @@ Social Icons on home page only
 Homepage streaming links above the fold
 ----------------------------------------
 */
-.quick-stream {
-  background-color: var(--color-paper-low); }
+.hero {
+  position: relative; }
 
 .quick-stream {
   text-align: center; }
@@ -1239,13 +1249,13 @@ Hero
 .hero-image {
   width: 100%; }
 
-.covering-image {
+.covering {
   object-fit: cover;
   object-position: 75% 0%;
   z-index: -1;
   top: 0; }
 
-.js .covering-image {
+.js .covering {
   position: fixed; }
 
 .bw-image {
@@ -1276,13 +1286,25 @@ Hero
     bottom: calc(17% + 123px + 5px);
     /* above img */ } }
 
-@media only screen and (max-width: 629px) {
+@media only screen and (max-width: 729px) {
   .featured img {
     bottom: calc(18% + 82px + 40px);
     /* above buying nav and social icons */ }
   .featured div {
     bottom: calc(18% + 82px + 5px);
     /* above img */ } }
+
+.quick-stream {
+  background: #568bac; }
+  .quick-stream a {
+    color: var(--color-ink-high); }
+
+@media only screen and (min-width: 730px) {
+  .quick-stream {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; } }
 
 /*
 ----------------------------------------
@@ -1383,8 +1405,6 @@ Mailing, Download, EPK
 .mailing-section {
   padding-top: 0;
   padding-bottom: 0; }
-  .mailing-section .centered {
-    text-align: center; }
   .mailing-section form, .mailing-section input {
     display: inline-block; }
   .mailing-section input[type=text], .mailing-section input[type=email], .mailing-section input[type=submit] {
@@ -1408,7 +1428,7 @@ Mailing, Download, EPK
     text-align: center;
     margin: 0.5rem 0; } }
 
-@media only screen and (max-width: 629px) {
+@media only screen and (max-width: 729px) {
   .mailing-section {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem; }
@@ -1467,7 +1487,7 @@ a.buy-button {
 .side-photo img {
   max-width: 100%; }
 
-@media only screen and (max-width: 629px) {
+@media only screen and (max-width: 729px) {
   /* On mobile, center photo rather than side-by-side */
   .side-photo {
     margin-left: 25%;
@@ -1476,7 +1496,7 @@ a.buy-button {
     padding: 0;
     margin: 0 auto; } }
 
-@media only screen and (min-width: 630px) {
+@media only screen and (min-width: 730px) {
   /* On wide screens, put photo to left of the 'download' icons */
   .side-photo {
     float: left;
@@ -1591,7 +1611,7 @@ YouTube
 .youtube-border {
   padding: 1em; }
 
-@media only screen and (min-width: 630px) {
+@media only screen and (min-width: 730px) {
   /* Two YouTube videos side by side */
   .youtube-column-half {
     width: 50%;
@@ -1630,7 +1650,7 @@ Bands in Town
     width: 1.5rem;
     padding-bottom: 0.3rem; }
 
-@media only screen and (max-width: 629px) {
+@media only screen and (max-width: 729px) {
   /* Bands in town just show square logo */
   .bit-header-full {
     display: none; }
@@ -1639,7 +1659,7 @@ Bands in Town
   .bit-date, .bit-venue, .bit-citystate {
     padding: 0; } }
 
-@media only screen and (min-width: 630px) {
+@media only screen and (min-width: 730px) {
   /* If wide enough, show button inline with text rather than 100% wide */
   .bandsintown-button {
     display: inline;
@@ -1710,7 +1730,7 @@ input#redeem-submit {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -20%);
-  min-width: 630px;
+  min-width: 730px;
   max-width: 100%;
   min-height: 300px;
   max-height: 100%;
@@ -1788,7 +1808,7 @@ input#redeem-submit {
 .track-number {
   width: 2em; }
 
-@media only screen and (max-width: 629px) {
+@media only screen and (max-width: 729px) {
   #redeemer {
     border: none;
     padding: 0;
@@ -1813,11 +1833,13 @@ Latest Releases
   display: block;
   padding-top: 4em;
   padding-bottom: 4em; }
-  @media only screen and (max-width: 629px) {
+  @media only screen and (max-width: 729px) {
     .latest-releases article .release-image img {
       max-width: 320px;
-      margin: 0 auto; } }
-  @media only screen and (min-width: 630px) {
+      margin: 0 auto; }
+    .latest-releases article h3, .latest-releases article h4 {
+      text-align: center; } }
+  @media only screen and (min-width: 730px) {
     .latest-releases article {
       padding-top: 2.5em;
       padding-bottom: 2.5em;

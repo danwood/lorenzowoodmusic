@@ -16,7 +16,7 @@ html(class="no-js", lang="en-us")
 		block links
 			link(href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet")
 			link(rel="apple-touch-icon" href="icon.png")
-			link(rel="stylesheet" href="/css/main.031520.css")
+			link(rel="stylesheet" href="/css/main.031720.css")
 		block styles
 
 	body(class=current)
@@ -32,11 +32,10 @@ html(class="no-js", lang="en-us")
 		header#main-header
 			block header
 
-				h1.ir Lorenzo Wood Music
 				.logo
 					block logo
 						a(href="/", class={active: current === 'Home'})
-							include svg/lorenzowood.svg
+							h1 Lorenzo Wood
 
 					//- Hamburger Menu
 					input#navigation(type="checkbox")

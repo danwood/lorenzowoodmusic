@@ -108,7 +108,7 @@ function fullscreen(event){
 		$('#scroll-arrow').remove();
 	}
 
-	jQuery('#main-header,img.covering-image').css({
+	jQuery('.covering').css({
 		width: width,
 		height: height
 	});

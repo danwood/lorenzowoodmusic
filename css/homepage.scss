@@ -6,12 +6,21 @@ Home-Page specific classes
 ================================================================================
 */
 
+.logo a {
+	text-decoration: none;
+}
+.logo h1 {
+	margin:0;
+	padding:0.5em;
+}
+
 h3.righthand {
 	margin:0;
 	padding:1rem 1rem;
 	text-align:right;
 }
 
+.centered { text-align:center; }
 
 
 .icons-header {
@@ -93,8 +102,8 @@ Homepage streaming links above the fold
 ----------------------------------------
 */
 
-.quick-stream {
-	background-color:var(--color-paper-low);
+.hero {
+	position: relative;
 }
 
 .quick-stream {
@@ -176,13 +185,13 @@ Hero
 .hero-image {
 	width:100%;
 }
-.covering-image {
+.covering {
 	object-fit:cover;
 	object-position:75% 0%;
 	z-index:-1;
 	top:0;
 }
-.js .covering-image {
+.js .covering {
 	position:fixed;
 }
 .bw-image {
@@ -217,6 +226,7 @@ Hero
 
 }
 
+
 @media only screen and (max-width:($mainBreakpoint - 1px)) {
 
 	.featured img {
@@ -227,6 +237,25 @@ Hero
 	}
 }
 
+.quick-stream {
+	background: rgb(86, 139, 172);
+
+	a {
+		color: var(--color-ink-high);
+	}
+}
+
+@media only screen and (min-width:$mainBreakpoint) {
+
+.quick-stream {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+}
+
+
+}
 
 
 /*
@@ -349,7 +378,6 @@ Mailing, Download, EPK
 .mailing-section {
 	padding-top:0;
 	padding-bottom:0;
-	.centered { text-align:center; }
 	form, input {
 		display:inline-block;
 	}
@@ -891,13 +919,17 @@ Latest Releases
 			max-width:320px;
 			margin:0 auto;
 		}
+
+		h3, h4 {
+			text-align:center;
+		}
 	}
 
 	@media only screen and (min-width:$mainBreakpoint) {
 
-	// don't need as much space
-	padding-top:2.5em;
-	padding-bottom:2.5em;
+		// don't need as much space
+		padding-top:2.5em;
+		padding-bottom:2.5em;
 
 		display: flex;
 

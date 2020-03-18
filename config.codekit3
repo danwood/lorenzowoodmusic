@@ -944,6 +944,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/img/banner1.png": {
+		"ft": 32768,
+		"iS": 53362744,
+		"oA": 0,
+		"oAP": "/img/banner1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/img/beach.jpg": {
 		"ft": 16384,
 		"iS": 2886286,
@@ -2207,7 +2218,7 @@
 	"/svg/lorenzowood.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/lorenzowood.svg",
 		"oF": 0,
 		"opt": 0,
