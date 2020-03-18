@@ -243,7 +243,7 @@ img.covering {
 }
 
 .quick-stream {
-	background: rgb(86, 139, 172);
+	background: var(--color-banner-background);
 
 	a {
 		color: var(--color-ink-high);
@@ -644,6 +644,16 @@ YouTube
 		text-shadow:0 0 4px var(--color-ink-high);
 	}
 }
+.square-video {
+	margin-left:22%;
+	margin-right:22%;
+
+	img {
+		max-width:180%;
+		width:180%;
+		margin-left:-40%;
+	}
+}
 .youtube-border {
 	padding:1em;
 }
@@ -929,6 +939,8 @@ Latest Releases
 
 		h3, h4 {
 			text-align:center;
+			margin-top:0.5rem;
+			margin-bottom:0;
 		}
 	}
 
@@ -956,8 +968,8 @@ Latest Releases
 				width:75%;
 			}
 
-			h3 {
-				margin-top:0;
+			h3, h4 {
+				margin:0;
 			}
 		}
 

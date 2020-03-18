@@ -27,7 +27,11 @@ Colors
 :root {
     color-scheme: light dark;
 
-	--color-Link:			hsl(202, 65%, 63%);
+	--color-banner-background: rgb(86, 139, 172);
+
+	--color-Link:			rgb(86, 139, 172);	// match the blue banner
+
+
 	--color-Link-hover:		hsl(202, 65%, 43%);
 	--color-Inverse:		hsl(20, 65%, 63%);
 	--color-Warning:		purple;
@@ -41,6 +45,7 @@ Colors
 
 
 	--color-dark-high:		hsl(0, 0%, 13%);
+
 
 
 	/* Coolors Exported Palette - coolors.co/3a405a-aadb9b-99b2dd-ffbfc6-fff29e */

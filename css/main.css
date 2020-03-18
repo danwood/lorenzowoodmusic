@@ -669,7 +669,8 @@ Colors
 */
 :root {
   color-scheme: light dark;
-  --color-Link:			hsl(202, 65%, 63%);
+  --color-banner-background: rgb(86, 139, 172);
+  --color-Link:			rgb(86, 139, 172);
   --color-Link-hover:		hsl(202, 65%, 43%);
   --color-Inverse:		hsl(20, 65%, 63%);
   --color-Warning:		purple;
@@ -1299,7 +1300,7 @@ img.covering {
     /* above img */ } }
 
 .quick-stream {
-  background: #568bac; }
+  background: var(--color-banner-background); }
   .quick-stream a {
     color: var(--color-ink-high); }
 
@@ -1612,6 +1613,14 @@ YouTube
     color: var(--color-paper-high);
     text-shadow: 0 0 4px var(--color-ink-high); }
 
+.square-video {
+  margin-left: 22%;
+  margin-right: 22%; }
+  .square-video img {
+    max-width: 180%;
+    width: 180%;
+    margin-left: -40%; }
+
 .youtube-border {
   padding: 1em; }
 
@@ -1843,7 +1852,9 @@ Latest Releases
       max-width: 320px;
       margin: 0 auto; }
     .latest-releases article h3, .latest-releases article h4 {
-      text-align: center; } }
+      text-align: center;
+      margin-top: 0.5rem;
+      margin-bottom: 0; } }
   @media only screen and (min-width: 768px) {
     .latest-releases article {
       padding-top: 2.5em;
@@ -1858,8 +1869,8 @@ Latest Releases
         padding: 15px 15px; }
         .latest-releases article .release-blurb.no-video {
           width: 75%; }
-        .latest-releases article .release-blurb h3 {
-          margin-top: 0; }
+        .latest-releases article .release-blurb h3, .latest-releases article .release-blurb h4 {
+          margin: 0; }
       .latest-releases article .release-video {
         width: 44.5%; } }
 
