@@ -936,50 +936,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/img/banner1_big.jpg": {
-		"ft": 16384,
-		"iS": 372528,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/img/banner1_big.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/img/banner1_giant.jpg": {
-		"ft": 16384,
-		"iS": 712373,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/img/banner1_giant.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/img/banner1_medium.jpg": {
-		"ft": 16384,
-		"iS": 76680,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/img/banner1_medium.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/img/banner1_small.jpg": {
-		"ft": 16384,
-		"iS": 33164,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/img/banner1_small.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 100
-		},
 	"/img/beach.jpg": {
 		"ft": 16384,
 		"iS": 2886286,
