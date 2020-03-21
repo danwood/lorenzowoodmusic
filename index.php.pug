@@ -33,7 +33,7 @@ block append header
 		.action-banner.clearfix.safe-area-only
 			p
 				a(target="_blank" href="/link/still-need-love")
-					img(style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art_384/still-need-love.jpg" alt="Still Need Love, cover image")
+					img(style="display:inline-block; width:2em; height:auto; padding:0;" src="album_art_384/still-need-love.jpg" alt="Still Need Love, cover image")
 				span New single “Still Need Love” —
 					| &nbsp;
 				b
@@ -92,7 +92,7 @@ block main
 				a(href="EPK.zip") Electronic Press Kit
 
 
-	section.mailing-section
+	section.mailchimp-section
 		div.centered
 			form.validate.taller(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&amp;id=1c68d63e9a"
 				method="post"
@@ -124,43 +124,48 @@ block main
 	section.latest-releases.unpadded
 		.subsection
 			article
-				header
-					h2.centered Latest Releases
+				header.centered
+					h2 Latest Releases
 
 		.subsection.lightanchor(style="background-color:#3b8abb")
 			article
-				.release-image
+				.release-image.bordered
 					a(href="/link/still-need-love")
 						img(src="/album_art_640/still-need-love.jpg")
 				.release-blurb.no-video
 					h3: a(href="/link/still-need-love") Still Need Love
 					h4 March 2020
-					p The first of several singles that I'm releasing in Spring 2020.  My saxophone debut!
+					p The first of several singles that I'm releasing in Spring 2020. The start of my new era of music with a fiery beat and smooth saxophone.
+					p Originally meant to be a song about depression and heartbreak, it gains new meaning during the lonely times of social distancing and being stuck at home.
 					p: a.bold(href="link/still-need-love") Download/Stream
 
-		.subsection.darkanchor.reversed(style="background-color:#c6a581")
+		.subsection.lightanchor.reversed(style="background-color:#1D2C1D") 
 			article
-				.release-image
+				.release-image.bordered
 					a(href="link/jacket")
 						img(src="/album_art_640/jacket-ep.jpg")
 				.release-blurb
 					h3: a(href="link/jacket") Jacket (EP)
 					h4 May 2019 (Single), Oct 2019 (EP)
 					p It's about how your friends need to support you, even if they don't understand what you're going through.
-					p This is an EP with four versions of the same song! The original (in the video here), a remix by <a class="spotify" href="https://open.spotify.com/artist/1BGQD9MGL3oUkS4sN86Wec">Aendru</a>, a rock version, and an acoustic duet with <a href="https://www.kaiasongs.com">Kaia</a> — <a href="https://youtu.be/iVHF1RM7a9I">Watch acoustic duet video</a>
+					p This is an EP with four versions of the same song! The original (in the video here), a remix by <a class="spotify" href="https://open.spotify.com/artist/1BGQD9MGL3oUkS4sN86Wec">Aendru</a>, a rock version, and an acoustic-driven duet with <a href="https://www.kaiasongs.com">Kaia</a>.
 					p: a.bold(href="link/jacket") Download/Stream
 				.release-video
 					.youtube(data-embed='iVHF1RM7a9I:Lorenzo Wood - Jacket (I\'m Sensitive)')
+					div: a(href="https://youtu.be/iVHF1RM7a9I") Original video
+					div: a(href="https://youtu.be/_______") Duet with Kaia
+					div: a(href="https://youtu.be/Jg1yOnHlcYA") Live Acoustic performance
 
-		.subsection.lightanchor(style="background-color:hsl(30, 51%, 64%)")
+
+		.subsection.lightanchor(style="background-color:#490B19")
 			article
-				.release-image
+				.release-image.bordered
 					a(href="/link/heartless")
 						img(src="/album_art_640/heartless.jpg")
 				.release-blurb
 					h3: a(href="/link/heartless") Heartless
 					h4 2AM in the Basement • December 2019
-					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum pretium erat, in mattis leo consectetur vitae.
+					p After listening to Heartless by Diplo and Morgan Wallen a few times, I knew I had to cover it. I used it as an opportunity to learn to produce and edit video and try out singing in a different style.
 					p: a.bold(href="link/heartless") Download/Stream
 				.release-video
 					.youtube(data-embed='PfjIqix5ZZw:Heartless (Diplo & Morgan Wallen) Cover by 2AM In The Basement')
@@ -173,7 +178,7 @@ block main
 				.release-blurb.no-video
 					h3: a(href="/link/old-town-road") Old Town Road
 					h4 2AM in the Basement • May 2019
-					p As soon as the Lil Nas X original came out, I knew it would be a hit, so I quickly got to work and produced my take on the song. It's one of my more successful releases.
+					p I made this track from start to finish in just over twenty-fours just before the peak of the song's popularity. <a href="http://designology.co">Kyle Wonzen</a> did an awesome job on the artwork, and I've had him contributing artwork ever since.
 					p: a.bold(href="link/old-town-road") Download/Stream
 
 		.subsection.darkanchor(style="background-color:#bec7cc")
@@ -184,7 +189,7 @@ block main
 				.release-blurb.no-video
 					h3: a(href="link/now-in-control") Now In Control (EP)
 					h4 May 2018
-					p My debut EP, released when I was just 15 years old. That seems so long ago now!
+					p My debut EP, released when I was just 15 years old. That seems so long ago now! My favorite track is "Don't Look Back"; It's stood the test of time (two years, haha) the most, in my opinion.
 					p: a.bold(href="link/now-in-control") Download/Stream
 
 

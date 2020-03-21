@@ -14,6 +14,8 @@ Home-Page specific classes
 	padding:0.5rem 0 0 1rem;
 	display:inline-block;
 	font-weight:400;
+	color:var(--color-accent-whiter);
+	letter-spacing:3px;
 }
 
 h3.righthand {
@@ -22,23 +24,22 @@ h3.righthand {
 	text-align:right;
 }
 
-.centered { text-align:center; }
+.centered { text-align:center; margin-left:auto; margin-right:auto; }
 
 
 .icons-header {
-	background-color:var(--color1);
 
 	svg {
-		fill:white;
+		fill:var(--color-accent-whiter);
 	}
 }
 
-section.mailing-section {
-	background-color:var(--color2);
+section.mailchimp-section {
+	background-color:var(--color3);
 }
 
 section.bio {
-	background-color:var(--color3);
+	background-color:var(--color-accent-whiter);
 }
 
 section.videos {
@@ -46,11 +47,11 @@ section.videos {
 }
 
 section.gigs {
- 	background-color:var(--color5);
+ 	background-color:var(--color3);
 }
 
 section.latest-releases {
- 	background-color:var(--color4);
+ 	background-color:var(--color1);
 }
 
 section.download-section {
@@ -196,9 +197,13 @@ Hero
 }
 img.covering {
 	object-fit:cover;
-	object-position:50% 0%;
+	object-position:50% 75%;
 	top:0;
 	z-index:-1;
+
+	@media only screen and (max-width:$mainBreakpoint - 1) {
+		top:3em;		// make some room for the .action-banner
+	}
 }
 .js img.covering {
 	position:fixed;
@@ -248,7 +253,7 @@ img.covering {
 
 .action-banner {
 
-	background: orange;//var(--color-banner-background);
+	background: var(--color-banner-background);
 
 	a {
 		color: var(--color-ink-high);
@@ -259,7 +264,7 @@ img.covering {
 
 	.action-banner {
 
-		background: var(--color-banner-background);
+		background: transparent;
 
 		position: absolute;
 		top:0;
@@ -322,9 +327,9 @@ Bands in Town
 
 
 .bit-row.bit-upcoming {
-	&:hover {
-		background-color:var(--color-paper-med);
-	}
+//	&:hover {
+//		background-color:var(--color-paper-med);
+//	}
 	a {
 		text-decoration:none;
 		color:var(--color-ink-high);
@@ -386,7 +391,7 @@ Mailing, Download, EPK
 }
 
 
-.mailing-section {
+.mailchimp-section {
 	padding-top:0;
 	padding-bottom:0;
 	form, input {
@@ -415,7 +420,7 @@ Mailing, Download, EPK
 
 @media only screen and (max-width:($mainBreakpoint - 1px)) {
 
-	.mailing-section {
+	.mailchimp-section {
 		padding-top:0.5rem;
 		padding-bottom:0.5rem;
 		h3, form, input {
@@ -992,8 +997,14 @@ Latest Releases
 .darkanchor a {
 	color:rgba(0,0,0,0.6) !important;
 }
+.lightanchor {
+	color:white !important;
+}
 .lightanchor a {
 	color:rgba(255,255,255,0.6) !important;
+}
+.release-image.bordered img {
+	border:1px solid rgba(255,255,255,0.5);
 }
 
 	

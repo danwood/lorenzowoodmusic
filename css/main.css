@@ -672,7 +672,6 @@ Colors
   --color-banner-background: rgb(86, 139, 172);
   --color-Link:			rgb(86, 139, 172);
   --color-Link-hover:		hsl(202, 65%, 43%);
-  --color-Inverse:		hsl(20, 65%, 63%);
   --color-Warning:		purple;
   --color-paper-high:		white;
   --color-paper-med:		hsl(0, 0%, 96%);
@@ -684,16 +683,18 @@ Colors
   --color-dark-high:		hsl(0, 0%, 13%);
   /* Coolors Exported Palette - coolors.co/3a405a-aadb9b-99b2dd-ffbfc6-fff29e */
   --color1: hsl(229, 22%, 29%);
-  --color2: hsl(106, 47%, 73%);
+  --color2: hsl(150, 25%, 80%);
   --color3: hsl(218, 50%, 73%);
   --color4: hsl(353,100%, 87%);
-  --color5: hsl( 52,100%, 81%); }
+  --color5: hsl( 52,100%, 81%);
+  --color-accent: hsl(33, 100%, 80%);
+  --color-accent-whiter: hsl(33, 100%, 91%); }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-Link:			hsl(202, 65%, 63%);
     --color-Link-hover:		hsl(202, 65%, 43%);
-    --color-Inverse:		hsl(20, 65%, 63%);
+    --color-accent:		hsl(20, 65%, 63%);
     --color-Warning:		purple;
     --color-paper-high:		hsl(0, 0%, 0%);
     --color-paper-med:		hsl(0, 0%, 4%);
@@ -909,9 +910,9 @@ input#navigation[type="checkbox"], label.hamburger {
       display: block;
       padding: 1rem 0.6rem; }
     nav.page-menu a.active {
-      color: var(--color-Inverse); }
+      color: var(--color-accent); }
     nav.page-menu a:hover {
-      background-color: var(--color-Inverse);
+      background-color: var(--color-accent);
       color: var(--color-ink-med); } }
 
 @media only screen and (max-width: 767px) {
@@ -946,7 +947,7 @@ input#navigation[type="checkbox"], label.hamburger {
       font-weight: 300;
       letter-spacing: 2px; }
     nav.page-menu a.active {
-      color: var(--color-Inverse); }
+      color: var(--color-accent); }
     nav.page-menu a:hover {
       background: #111; }
   label.hamburger {
@@ -980,7 +981,7 @@ input#navigation[type="checkbox"], label.hamburger {
     height: 5px;
     border-radius: 2px;
     width: 100%;
-    background-color: var(--color-Inverse); }
+    background-color: var(--color-accent); }
   .horizontal, .diagonal.part-2 {
     margin-top: 5px; } }
 
@@ -1109,7 +1110,9 @@ Home-Page specific classes
   margin: 0;
   padding: 0.5rem 0 0 1rem;
   display: inline-block;
-  font-weight: 400; }
+  font-weight: 400;
+  color: var(--color-accent-whiter);
+  letter-spacing: 3px; }
 
 h3.righthand {
   margin: 0;
@@ -1117,27 +1120,27 @@ h3.righthand {
   text-align: right; }
 
 .centered {
-  text-align: center; }
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
 
-.icons-header {
-  background-color: var(--color1); }
-  .icons-header svg {
-    fill: white; }
+.icons-header svg {
+  fill: var(--color-accent-whiter); }
 
-section.mailing-section {
-  background-color: var(--color2); }
+section.mailchimp-section {
+  background-color: var(--color3); }
 
 section.bio {
-  background-color: var(--color3); }
+  background-color: var(--color-accent-whiter); }
 
 section.videos {
   background-color: var(--color2); }
 
 section.gigs {
-  background-color: var(--color5); }
+  background-color: var(--color3); }
 
 section.latest-releases {
-  background-color: var(--color4); }
+  background-color: var(--color1); }
 
 section.download-section {
   background-color: var(--color5); }
@@ -1257,9 +1260,12 @@ Hero
 
 img.covering {
   object-fit: cover;
-  object-position: 50% 0%;
+  object-position: 50% 75%;
   top: 0;
   z-index: -1; }
+  @media only screen and (max-width: 767px) {
+    img.covering {
+      top: 3em; } }
 
 .js img.covering {
   position: fixed; }
@@ -1301,13 +1307,13 @@ img.covering {
     /* above img */ } }
 
 .action-banner {
-  background: orange; }
+  background: var(--color-banner-background); }
   .action-banner a {
     color: var(--color-ink-high); }
 
 @media only screen and (min-width: 768px) {
   .action-banner {
-    background: var(--color-banner-background);
+    background: transparent;
     position: absolute;
     top: 0;
     left: 0;
@@ -1351,9 +1357,6 @@ Bands in Town
 
 .bit-header-row svg {
   float: right; }
-
-.bit-row.bit-upcoming:hover {
-  background-color: var(--color-paper-med); }
 
 .bit-row.bit-upcoming a {
   text-decoration: none;
@@ -1409,12 +1412,12 @@ Mailing, Download, EPK
 .taller {
   margin: 1em auto; }
 
-.mailing-section {
+.mailchimp-section {
   padding-top: 0;
   padding-bottom: 0; }
-  .mailing-section form, .mailing-section input {
+  .mailchimp-section form, .mailchimp-section input {
     display: inline-block; }
-  .mailing-section input[type=text], .mailing-section input[type=email], .mailing-section input[type=submit] {
+  .mailchimp-section input[type=text], .mailchimp-section input[type=email], .mailchimp-section input[type=submit] {
     padding: 0.5rem;
     margin: 0.5rem 0.5rem;
     font: normal 16px HelveticaNeue-CondensedBold, impact, sans-serif; }
@@ -1436,15 +1439,15 @@ Mailing, Download, EPK
     margin: 0.5rem 0; } }
 
 @media only screen and (max-width: 767px) {
-  .mailing-section {
+  .mailchimp-section {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem; }
-    .mailing-section h3, .mailing-section form, .mailing-section input {
+    .mailchimp-section h3, .mailchimp-section form, .mailchimp-section input {
       display: block; }
-    .mailing-section h3 {
+    .mailchimp-section h3 {
       padding: 0;
       margin: 0.5rem 0.5rem; }
-    .mailing-section input[type=text], .mailing-section input[type=email], .mailing-section input[type=submit] {
+    .mailchimp-section input[type=text], .mailchimp-section input[type=email], .mailchimp-section input[type=submit] {
       padding: 0.5rem;
       margin: 0.5rem 0.5rem; }
   #mce-FNAME, #mce-LNAME, #mce-EMAIL {
@@ -1882,8 +1885,14 @@ Latest Releases
 .darkanchor a {
   color: rgba(0, 0, 0, 0.6) !important; }
 
+.lightanchor {
+  color: white !important; }
+
 .lightanchor a {
   color: rgba(255, 255, 255, 0.6) !important; }
+
+.release-image.bordered img {
+  border: 1px solid rgba(255, 255, 255, 0.5); }
 
 /*
 ----------------------------------------

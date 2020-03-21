@@ -85,10 +85,10 @@ $page-menu-font-size: 1.0rem;
 			padding:$page-menu-padding-v $page-menu-padding-h;
 		}
 		a.active {
-			color:var(--color-Inverse);
+			color:var(--color-accent);
 		}
 		a:hover {
-			background-color:var(--color-Inverse);
+			background-color:var(--color-accent);
 			color:var(--color-ink-med);
 		}
 	}
@@ -144,7 +144,7 @@ $page-menu-font-size: 1.0rem;
 			letter-spacing:2px;
 		}
 		a.active {
-			color:var(--color-Inverse);
+			color:var(--color-accent);
 		}
 		a:hover {
 			background:#111;
@@ -192,7 +192,7 @@ $page-menu-font-size: 1.0rem;
 		height: 5px;
 		border-radius: 2px;
 		width: 100%;
-		background-color: var(--color-Inverse);
+		background-color: var(--color-accent);
 	}
 	.horizontal, .diagonal.part-2 {
 		margin-top: 5px;			// spacing between layers
