@@ -26,7 +26,6 @@ body > header {
 	max-width:67%;
 	max-height:140px;
 	min-height:40px;
-	fill:pink;
 }
 
 /*
@@ -55,7 +54,7 @@ $page-menu-font-size: 1.0rem;
 		padding-top:($page-menu-padding-v + $page-menu-padding-v + $page-menu-font-size);
 	}
 
-	// similar to quick-stream ?
+	// similar to action-banner ?
 
 	nav.page-menu {
 		display:block;
@@ -227,7 +226,7 @@ Icons (at top and bottom)
 	}
 
 	&.smaller svg {
-		margin: 20%;
+		margin: 15%;
 	}
 }
 

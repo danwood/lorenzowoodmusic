@@ -13,6 +13,7 @@ block prelude
 
 
 block vars
+	- var herostyle = 'covering'
 	- var current = 'Home'
 	- var description = 'Lorenzo Wood is a musician, singer-songwriter, and producer from Alameda, California USA. He sings and plays guitar, keys, drums, bass, and has fun on mandolin and banjo.'
 
@@ -29,7 +30,7 @@ block append links
 
 block append header
 	.hero
-		.quick-stream.clearfix.safe-area-only
+		.action-banner.clearfix.safe-area-only
 			p
 				a(target="_blank" href="/link/still-need-love")
 					img(style="display:inline-block; width:2em; height:auto; margin:-1em 1em -1em 0; padding:0" src="album_art_384/still-need-love.jpg" alt="Still Need Love, cover image")
@@ -38,35 +39,23 @@ block append header
 				b
 					a(style="text-decoration:underline", href="/link/still-need-love") Pre-order or pre-save now!
 
-			//-a.needs-medium-small(data-title="Buy on iTunes" href="https://geo.itunes.apple.com/us/album/now-in-control-ep/1382944981?app=itunes&at=1000lKSp")
-			//-	//- Apple marketing guidelines for lockup images:
-			//-	//- minimum 25px tall, 25% of height margin
-			//-	include svg/iTunes_Store_Buy_Lockup_RGB_blk.svg
-			//-a(data-title="Stream on Apple Music" href="https://geo.itunes.apple.com/us/album///-now-in-control-ep/1382944981?mt=1&app=music&at=1000lKSp")
-			//-	include svg/Apple_Music_lockup_RGB_blk.svg
-			//-a(data-title="Stream on Spotify" href="https://open.spotify.com/album/1SbBCWfrhKUrgp8AqDvESa?si=BmIlypbURYms7AmVbjOpMw")
-			//-	include svg/spotify-text.svg
-			//-a.needs-medium(data=title="Buy CD" title="Buy CD shipped to you" href="http://kunaki.com/Sales.asp?PID=PX00GLNZNL")
-			//-	img(alt="CD" src="img/cd100.png")
-			//-	span Buy CD
-
 		picture
-			source(srcset="img/banner.jpg 2560w, img/banner50.jpg 1280w, img/banner33.jpg 856w")
-			img.hero-image(src="img/banner.jpg" loading="eager" alt="Lorenzo Wood")
+			source(srcset="img/banner1_giant.jpg 2560w, img/banner1_big.jpg 1920w, img/banner1_medium.jpg 960w, img/banner1_small.jpg 640w")
+			img.hero-image.covering(src="img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
 	//-.featured
 	//-	a(data-title="Buy at Bandcamp.com" href="https://lorenzowoodmusic.bandcamp.com/album/now-in-control")
 	//-		img(src="album_art_384/now-in-control.jpg" alt="EP thumbnail")
 	//-	div Buy the new EP here
 
-	.icons.icons-header.icons-5.safe-area-only
+	.icons.icons-header.absolute.icons-5.safe-area-only
 		a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 			include svg/instagram-logo.svg
-		a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
+		a.smaller(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
 			include svg/facebook-logo.svg
 		a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
 			include svg/youtube-logo.svg
 		a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp")
-			include svg/apple-music-icon.svg
+			include svg/Apple_Music_Icon.svg
 		a(data-title="Spotify" href="https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA?si=kAr7Wf29R7WkScnbG9d2dg")
 			include svg/spotify-logo.svg
 

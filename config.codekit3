@@ -936,34 +936,45 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/img/banner.jpg": {
+	"/img/banner1_big.jpg": {
 		"ft": 16384,
-		"iS": 289616,
+		"iS": 372528,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/img/banner.jpg",
+		"oAP": "/img/banner1_big.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
-	"/img/banner33.jpg": {
+	"/img/banner1_giant.jpg": {
 		"ft": 16384,
-		"iS": 27147,
+		"iS": 712373,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/img/banner33.jpg",
+		"oAP": "/img/banner1_giant.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
-	"/img/banner50.jpg": {
+	"/img/banner1_medium.jpg": {
 		"ft": 16384,
-		"iS": 62553,
+		"iS": 76680,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/img/banner50.jpg",
+		"oAP": "/img/banner1_medium.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/banner1_small.jpg": {
+		"ft": 16384,
+		"iS": 33164,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner1_small.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
@@ -1140,7 +1151,7 @@
 		"oA": 0,
 		"oAP": "/link/index.php",
 		"oF": 2,
-		"oS": 1
+		"oS": 0
 		},
 	"/mailme.php": {
 		"cB": 0,
@@ -2059,21 +2070,11 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/Apple_Music_Icon_blk.svg": {
+	"/svg/Apple_Music_Icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
-		"oAP": "/svg/Apple_Music_Icon_blk.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/Apple_Music_Icon_wht.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/svg/Apple_Music_Icon_wht.svg",
+		"oA": 1,
+		"oAP": "/svg/Apple_Music_Icon.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,

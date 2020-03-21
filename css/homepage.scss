@@ -27,6 +27,10 @@ h3.righthand {
 
 .icons-header {
 	background-color:var(--color1);
+
+	svg {
+		fill:white;
+	}
 }
 
 section.mailing-section {
@@ -112,7 +116,7 @@ Homepage streaming links above the fold
 	position: relative;
 }
 
-.quick-stream {
+.action-banner {
 	text-align:center;
 	a {
 		padding:0 8px;
@@ -130,7 +134,7 @@ Homepage streaming links above the fold
 }
 
 @media only screen and (max-width:270px) {
-	.quick-stream {
+	.action-banner {
 		display:none !important;
 	}
 }
@@ -186,14 +190,13 @@ Hero
 .hero {
 	width:100%;
 	height:auto;
-	overflow:hidden;
 }
 .hero-image {
 	width:100%;
 }
 img.covering {
 	object-fit:cover;
-	object-position:75% 0%;
+	object-position:50% 0%;
 	top:0;
 	z-index:-1;
 }
@@ -243,8 +246,9 @@ img.covering {
 	}
 }
 
-.quick-stream {
-	background: var(--color-banner-background);
+.action-banner {
+
+	background: orange;//var(--color-banner-background);
 
 	a {
 		color: var(--color-ink-high);
@@ -253,14 +257,15 @@ img.covering {
 
 @media only screen and (min-width:$mainBreakpoint) {
 
-.quick-stream {
-	position: absolute;
-	top:0;
-	left:0;
-	right:0;
-}
+	.action-banner {
 
+		background: var(--color-banner-background);
 
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+	}
 }
 
 

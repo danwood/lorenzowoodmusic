@@ -870,8 +870,7 @@ body > header {
   padding: 3% 0 1.5% 5%;
   max-width: 67%;
   max-height: 140px;
-  min-height: 40px;
-  fill: pink; }
+  min-height: 40px; }
 
 /*
 ----------------------------------------
@@ -1003,7 +1002,7 @@ Icons (at top and bottom)
   .icons a svg {
     margin: 10%; }
   .icons a.smaller svg {
-    margin: 20%; }
+    margin: 15%; }
 
 .icons-5 a:first-child {
   /* Left margin for shorter icon list */
@@ -1122,6 +1121,8 @@ h3.righthand {
 
 .icons-header {
   background-color: var(--color1); }
+  .icons-header svg {
+    fill: white; }
 
 section.mailing-section {
   background-color: var(--color2); }
@@ -1194,22 +1195,22 @@ Homepage streaming links above the fold
 .hero {
   position: relative; }
 
-.quick-stream {
+.action-banner {
   text-align: center; }
-  .quick-stream a {
+  .action-banner a {
     padding: 0 8px;
     display: inline-block;
     text-decoration: none; }
-    .quick-stream a span {
+    .action-banner a span {
       padding-left: 0.5rem; }
-  .quick-stream svg {
+  .action-banner svg {
     height: 25px;
     /* 25px minimum for apple logo guidelines */
     padding: 8px 0;
     /* 6.25px minimum padding around apple logo per their guidelines */ }
 
 @media only screen and (max-width: 270px) {
-  .quick-stream {
+  .action-banner {
     display: none !important; } }
 
 @media only screen and (max-width: 370px) {
@@ -1249,15 +1250,14 @@ Hero
 */
 .hero {
   width: 100%;
-  height: auto;
-  overflow: hidden; }
+  height: auto; }
 
 .hero-image {
   width: 100%; }
 
 img.covering {
   object-fit: cover;
-  object-position: 75% 0%;
+  object-position: 50% 0%;
   top: 0;
   z-index: -1; }
 
@@ -1300,13 +1300,14 @@ img.covering {
     bottom: calc(18% + 82px + 5px);
     /* above img */ } }
 
-.quick-stream {
-  background: var(--color-banner-background); }
-  .quick-stream a {
+.action-banner {
+  background: orange; }
+  .action-banner a {
     color: var(--color-ink-high); }
 
 @media only screen and (min-width: 768px) {
-  .quick-stream {
+  .action-banner {
+    background: var(--color-banner-background);
     position: absolute;
     top: 0;
     left: 0;
