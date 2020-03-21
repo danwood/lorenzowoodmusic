@@ -1109,7 +1109,8 @@ Home-Page specific classes
 .logo h1 {
   margin: 0;
   padding: 0.5rem 0 0 1rem;
-  display: inline-block; }
+  display: inline-block;
+  font-weight: 400; }
 
 h3.righthand {
   margin: 0;
