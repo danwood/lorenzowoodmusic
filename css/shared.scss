@@ -45,7 +45,7 @@ input#navigation[type="checkbox"], label.hamburger {
 // Constants so we know actual height of menu area to place logo below it
 $page-menu-padding-h: 0.6rem;
 $page-menu-padding-v: 1.0rem;
-$page-menu-font-size: 1.0rem;
+$page-menu-font-size: 0.9rem;
 
 @media only screen and (min-width:$mainBreakpoint) {
 
@@ -76,7 +76,8 @@ $page-menu-font-size: 1.0rem;
 			line-height:1;
 			font-size:$page-menu-font-size;
 			font-weight:300;
-			letter-spacing:2px;
+			letter-spacing:4px;
+			text-transform:uppercase;
 		}
 		a {
 			color:#fff;

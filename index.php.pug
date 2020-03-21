@@ -124,7 +124,7 @@ block main
 	section.latest-releases.unpadded
 		.subsection
 			article
-				header.centered
+				header.ir(aria-hidden="true")
 					h2 Latest Releases
 
 		.subsection.lightanchor(style="background-color:#3b8abb")
@@ -165,7 +165,7 @@ block main
 				.release-blurb
 					h3: a(href="/link/heartless") Heartless
 					h4 2AM in the Basement • December 2019
-					p After listening to Heartless by Diplo and Morgan Wallen a few times, I knew I had to cover it. I used it as an opportunity to learn to produce and edit video and try out singing in a different style.
+					p After listening to Heartless by Diplo and Morgan Wallen a few times, I knew I had to cover it. I used it as an opportunity to learn to produce and edit video, and to try out singing in a different style.
 					p: a.bold(href="link/heartless") Download/Stream
 				.release-video
 					.youtube(data-embed='PfjIqix5ZZw:Heartless (Diplo & Morgan Wallen) Cover by 2AM In The Basement')
@@ -178,7 +178,7 @@ block main
 				.release-blurb.no-video
 					h3: a(href="/link/old-town-road") Old Town Road
 					h4 2AM in the Basement • May 2019
-					p I made this track from start to finish in just over twenty-fours just before the peak of the song's popularity. <a href="http://designology.co">Kyle Wonzen</a> did an awesome job on the artwork, and I've had him contributing artwork ever since.
+					p I made this track from start to finish in just over twenty-fours just before the peak of the song's popularity. <a href="http://designology.co">Kyle Wonzen</a> did an awesome job on the graphics, and I've had him contributing artwork ever since.
 					p: a.bold(href="link/old-town-road") Download/Stream
 
 		.subsection.darkanchor(style="background-color:#bec7cc")
@@ -203,7 +203,7 @@ block main
 			.next-to-side-photo
 				.next-to-side-photo-padded
 					header
-						h2 Contact Lorenzo Wood Music
+						h2 Contact Lorenzo and the team
 					p.
 						Book a gig, suggest a collaboration or song, or just say hi!
 					.input-form
@@ -237,6 +237,10 @@ block additional-html
 	#cover(style="display:none")
 	#redeemer(style="display:none")
 	#close-redeem(style="display:none") &#215;
+
+	#scroll-arrow.scrolldown.bounce(style="display:none; stroke:purple;")
+		a.down-arrow(href="#")
+			include svg/downarrow.svg
 
 
 //- NOTE THAT HOME PAGE IS ONLY PAGE THAT IS CURRENTLY USING JQUERY
