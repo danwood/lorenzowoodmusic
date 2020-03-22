@@ -46,6 +46,9 @@ block vars
 	//- setting curent to link-page means we can style a body.link-page specially
 	- var current = link-page
 
+block append links
+	link(rel="prefetch" href="//img.youtube.com")
+
 block title
 	<title><?php echo htmlentities($longTitle); ?></title>
 
@@ -100,16 +103,19 @@ block main
 
 		.imagecontainer
 			<img src="../album_art_640/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
-			<?php if ($album['youtube_video_id']) { ?>
-			<div class="youtube-button"><a href="https://www.youtube.com/watch?v=<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-play.svg" alt="Youtube"></a></div>
-			<?php } ?>
 
 		.title-container
 			h1
 				| <?php echo htmlspecialchars($album['artist']); ?> 
 				br
 				|  <?php echo htmlspecialchars($album['title']); ?>
-				<?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
+			<?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
+			<?php if ($album['youtube_video_id']) { ?>
+			<div class="youtube-border"><div class="youtube" data-embed='<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>:'></div></div>
+			<?php } ?>
+
+
+		.title-container
 			p
 				<?php if ($releaseDateString) {
 				|	echo 'Releasing ' . htmlspecialchars($releaseDateString);
@@ -170,6 +176,8 @@ block main
 			<?php } ?>
 
 block scripts
+	script
+		include ../js/youtube-min.js
 	|<?php
 	|$db->close();
 	|?>

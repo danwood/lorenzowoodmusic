@@ -42,7 +42,8 @@ else {
     <meta name="supported-color-schemes" content="light dark">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&amp;display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="/css/main.031720.css"><meta property='og:title' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
+    <link rel="stylesheet" href="/css/main.031720.css">
+    <link rel="prefetch" href="//img.youtube.com"><meta property='og:title' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 <meta property='og:description' content='Preview, download or stream <?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 <meta property='og:url' content='<?php echo htmlentities(curPageURL()); ?>'>
 <meta property='og:type' content='article'>
@@ -84,13 +85,14 @@ else {
       <div class="center-column"><?php if ($album['additional_info']) { ?>
 <div class="centered additional"><a href="<?php echo htmlentities($album['additional_info_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($album['additional_info']); ?></a></div>
 <?php } ?>
-        <div class="imagecontainer"><img src="../album_art_640/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
+        <div class="imagecontainer"><img src="../album_art_640/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>"></div>
+        <div class="title-container">
+          <h1><?php echo htmlspecialchars($album['artist']); ?> <br> <?php echo htmlspecialchars($album['title']); ?></h1><?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
 <?php if ($album['youtube_video_id']) { ?>
-<div class="youtube-button"><a href="https://www.youtube.com/watch?v=<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-play.svg" alt="Youtube"></a></div>
+<div class="youtube-border"><div class="youtube" data-embed='<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>:'></div></div>
 <?php } ?>
         </div>
         <div class="title-container">
-          <h1><?php echo htmlspecialchars($album['artist']); ?> <br> <?php echo htmlspecialchars($album['title']); ?><?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?></h1>
           <p>
             <?php if ($releaseDateString) {	echo 'Releasing ' . htmlspecialchars($releaseDateString);
             } else {
@@ -134,7 +136,7 @@ else {
         
       </p>
     </footer>
-    <?php
+    <script>for(var iOS=/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream,youtube=document.querySelectorAll(".youtube"),i=0;i<youtube.length;i++){var embed=youtube[i].dataset.embed.split(":"),code=embed[0],title=embed[1],caption=embed[2];if(iOS){var iframe=document.createElement("iframe");iframe.setAttribute("allowfullscreen",""),iframe.setAttribute("src","https://www.youtube.com/embed/"+code),youtube[i].appendChild(iframe)}else{var source="https://img.youtube.com/vi/"+code+"/sddefault.jpg",image=new Image;image.src=source,image.id="video-"+code,image.alt="YouTube thumbnail",image.addEventListener("load",void youtube[i].appendChild(image)),youtube[i].addEventListener("click",function(){var e,t=this.dataset.embed.split(":")[0],i=document.createElement("iframe");i.setAttribute("frameborder","0"),i.setAttribute("allowfullscreen",""),i.setAttribute("src","https://www.youtube.com/embed/"+t+"?rel=0&showinfo=0&autoplay=1"),this.innerHTML="",this.appendChild(i)});var play=document.createElement("div");play.setAttribute("class","play-button"),youtube[i].appendChild(play);var t=document.createElement("div");t.setAttribute("class","title"),t.innerText=title,youtube[i].appendChild(t)}if(caption){var captionDiv=document.createElement("p");captionDiv.innerText=caption,youtube[i].insertAdjacentElement("afterend",captionDiv)}}</script><?php
     $db->close();
     ?>
   </body>
