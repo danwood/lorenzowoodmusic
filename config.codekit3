@@ -988,7 +988,7 @@
 		"oAP": "/img/banner2_big.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/banner2_giant.jpg": {
@@ -999,7 +999,7 @@
 		"oAP": "/img/banner2_giant.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/banner2_medium.jpg": {
