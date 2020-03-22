@@ -10,7 +10,7 @@ for (var i = 0; i < youtube.length; i++) {
 	var code = embed[0];
 	var title = embed[1];
 	var caption = embed[2];
-	var popup = youtube[i].dataset.popup;
+	var linking = youtube[i].dataset.linking;
 
 	if (iOS) {
 		// regular YouTube iframe embed so that it needs just one tap as expected
@@ -31,16 +31,22 @@ for (var i = 0; i < youtube.length; i++) {
  
 		youtube[i].addEventListener( "click", function() {
 
-			// Need to recalculate the code we are using
 			var embed = this.dataset.embed.split(':');
 			var code = embed[0];
 
-			var iframe = document.createElement( "iframe" );
-			iframe.setAttribute( "frameborder", "0" );
-			iframe.setAttribute( "allowfullscreen", "" );
-			iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code +"?rel=0&showinfo=0&autoplay=1" );
-			this.innerHTML = "";
-			this.appendChild( iframe );
+			if (linking) {
+				window.location.href = 'https://www.youtube.com/watch?v=' + code;
+			}
+			else {
+				// Need to recalculate the code we are using
+
+				var iframe = document.createElement( "iframe" );
+				iframe.setAttribute( "frameborder", "0" );
+				iframe.setAttribute( "allowfullscreen", "" );
+				iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code +"?rel=0&showinfo=0&autoplay=1" );
+				this.innerHTML = "";
+				this.appendChild( iframe );
+			}
 		});
 		var play = document.createElement("div");
 		play.setAttribute("class", "play-button");

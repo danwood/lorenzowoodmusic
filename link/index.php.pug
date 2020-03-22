@@ -111,7 +111,7 @@ block main
 				|  <?php echo htmlspecialchars($album['title']); ?>
 			<?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
 			<?php if ($album['youtube_video_id']) { ?>
-			<div class="youtube-border"><div class="youtube" data-popup="yep" data-embed='<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>:'></div></div>
+			<div class="youtube-border"><div class="youtube" data-linking="yep" data-embed='<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>:'></div></div>
 			<?php } ?>
 
 
