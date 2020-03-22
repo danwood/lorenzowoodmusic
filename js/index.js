@@ -117,14 +117,43 @@ function fullscreen(event){
 
 fullscreen(null);
 
-// Do something clever: when we scroll past the hero image, turn off the grayscale filter to make it color
+// Do something clever: when we scroll past the hero image,
+// turn off any specified grayscale filter to make it color
+// and change the image from image1 to image2 if that's specified
 
 var targetOffset = $("main").offset().top;
 
 var $w = $(window).scroll(function(){
 	$('#scroll-arrow').remove();
-	if ( $w.scrollTop() > targetOffset ) {
-		$('img.bw-image').css({filter:"grayscale(0%)",opacity:"1.0"});
+	if ( $w.scrollTop() > targetOffset) {
+		if (! $('body').hasClass('swapped-hero') ) {
+
+			// convert an initially grayscale image to be full color when you get back!
+			$('img.bw-image').css({filter:"grayscale(0%)",opacity:"1.0"});
+
+			if ($('body').hasClass('showing-2') ) {
+
+				$('img.swapping-image').attr('src', function() {
+		    		return $(this).attr('src').replace('2', '1');
+				});
+				$('source.swapping-image').attr('srcset', function() {
+		    		return $(this).attr('srcset').replace('2', '1');
+				});
+				$('body').removeClass('showing-2');
+			} else {
+				$('img.swapping-image').attr('src', function() {
+		    		return $(this).attr('src').replace('1', '2');
+				});
+				$('source.swapping-image').attr('srcset', function() {
+		    		return $(this).attr('srcset').replace('1', '2');
+				});
+				$('body').addClass('showing-2');
+			}
+			$('body').addClass('swapped-hero');
+		}
+	}
+	if ( $w.scrollTop() == 0) {
+		$('body').removeClass('swapped-hero');
 	}
 });
 
