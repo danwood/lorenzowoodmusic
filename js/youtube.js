@@ -6,10 +6,9 @@ var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
 var youtube = document.querySelectorAll( ".youtube" );
 for (var i = 0; i < youtube.length; i++) {
-	var embed = youtube[i].dataset.embed.split(':');
-	var code = embed[0];
-	var title = embed[1];
-	var caption = embed[2];
+	var code	= youtube[i].dataset.code;
+	var title	= youtube[i].dataset.title;
+	var caption = youtube[i].dataset.caption;
 	var linking = youtube[i].dataset.linking;
 
 	if (iOS) {
@@ -31,8 +30,7 @@ for (var i = 0; i < youtube.length; i++) {
  
 		youtube[i].addEventListener( "click", function() {
 
-			var embed = this.dataset.embed.split(':');
-			var code = embed[0];
+			var code	= this.dataset.code;
 
 			if (linking) {
 				window.location.href = 'https://www.youtube.com/watch?v=' + code;
