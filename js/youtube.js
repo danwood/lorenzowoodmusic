@@ -10,6 +10,7 @@ for (var i = 0; i < youtube.length; i++) {
 	var code = embed[0];
 	var title = embed[1];
 	var caption = embed[2];
+	var popup = youtube[i].dataset.popup;
 
 	if (iOS) {
 		// regular YouTube iframe embed so that it needs just one tap as expected
