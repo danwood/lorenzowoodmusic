@@ -980,6 +980,50 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/img/banner2_big.jpg": {
+		"ft": 16384,
+		"iS": 368537,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner2_big.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/banner2_giant.jpg": {
+		"ft": 16384,
+		"iS": 712459,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner2_giant.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/banner2_medium.jpg": {
+		"ft": 16384,
+		"iS": 71555,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner2_medium.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/banner2_small.jpg": {
+		"ft": 16384,
+		"iS": 29846,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner2_small.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/img/beach.jpg": {
 		"ft": 16384,
 		"iS": 2886286,
@@ -1098,17 +1142,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/index-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/js/link.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/link-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
