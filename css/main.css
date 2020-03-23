@@ -1270,7 +1270,7 @@ img.covering {
   z-index: -1; }
   @media only screen and (max-width: 767px) {
     img.covering {
-      top: 3em; } }
+      border-top: 3em solid var(--color-banner-background); } }
 
 .js img.covering {
   position: fixed; }
@@ -1311,14 +1311,11 @@ img.covering {
     bottom: calc(18% + 82px + 5px);
     /* above img */ } }
 
-.action-banner {
-  background: var(--color-banner-background); }
-  .action-banner a {
-    color: var(--color-ink-high); }
+.action-banner a {
+  color: var(--color-ink-high); }
 
 @media only screen and (min-width: 768px) {
   .action-banner {
-    background: transparent;
     position: absolute;
     top: 0;
     left: 0;

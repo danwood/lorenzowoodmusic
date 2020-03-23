@@ -203,7 +203,7 @@ img.covering {
 	z-index:-1;
 
 	@media only screen and (max-width:$mainBreakpoint - 1) {
-		top:3em;		// make some room for the .action-banner
+		border-top:3em solid var(--color-banner-background);		// make some room for the .action-banner – give it a solid color top border 
 	}
 }
 .js img.covering {
@@ -254,8 +254,6 @@ img.covering {
 
 .action-banner {
 
-	background: var(--color-banner-background);
-
 	a {
 		color: var(--color-ink-high);
 	}
@@ -264,8 +262,6 @@ img.covering {
 @media only screen and (min-width:$mainBreakpoint) {
 
 	.action-banner {
-
-		background: transparent;
 
 		position: absolute;
 		top:0;
