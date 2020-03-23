@@ -223,6 +223,7 @@ block prepend scripts
 		window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\\/script>')
 	script
 		include js/index-min.js
+		include js/hero-min.js
 		include js/youtube-min.js
 		//- This goes after the youtube code for "iOS"
 		|if (iOS) $('#form-album').val(window.DeviceMotionEvent ? '2938' : '8603');

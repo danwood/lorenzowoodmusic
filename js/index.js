@@ -1,21 +1,6 @@
 
 // REQUIREMENT: JQUERY
 
-$('.down-arrow').click(function(event) {
-	event.preventDefault();
-	$('html, body').animate({
-		scrollTop: $('.down-arrow').offset().top
-	}, 1000);
-	return false;
-});
-
-// Hide the arrow after a bit
-setTimeout(function(){
-	$( "#scroll-arrow" ).fadeOut( "slow", function() {
-		$('#scroll-arrow').remove();
-	});
-}, 2000);
-
 // Bands in Town - display past events. Not showing anything if no javascript.
 $('#recent-performances').html('<a id="recent-link" href="#">& Recent</a>');
 
@@ -94,6 +79,7 @@ $('#redeem-form').submit(function( event ) {
 	}
 	event.preventDefault();
 });
+
 $('#close-modal').click(function() {
 	$('#cover').fadeOut('slow');
 	$('#close-modal').fadeOut('slow');
@@ -102,30 +88,6 @@ $('#close-modal').click(function() {
 });
 
 
-// Responsively resize the hero image. In sweet spot of screen aspect ratio, hero is full screen.
-function fullscreen(event){
-	var width = $(window).width();
-	var height= $(window).height();
-	var fullSizeHero = false;
-	if (width/height < 0.575) height = Math.round(width/0.575); // fill iphone x/xr/xs
-	else if (width/height > 1.55) height = Math.round(width/1.55);	// 1 is square, higher is more "landscape" - find a ratio that works
-	else fullSizeHero = true;
-
-	// Show scroll arrow if first time here and we are showing full-screen hero
-	if (fullSizeHero && !event) {
-		$('#scroll-arrow').css('display', 'block');
-	} else {
-		$('#scroll-arrow').remove();
-	}
-
-	jQuery('.covering').css({
-		width: width,
-		height: height
-	});
-	//$( ".info" ).text( width + ' x ' + height + ' … ' + width/height );
-}
-
-fullscreen(null);
 
 // Do something clever: when we scroll past the hero image,
 // turn off any specified grayscale filter to make it color
@@ -165,12 +127,6 @@ var $w = $(window).scroll(function(){
 	if ( $w.scrollTop() == 0) {
 		$('body').removeClass('swapped-hero');
 	}
-});
-
-
-// Run the function in case of window resize
-$(window).resize(function(event) {
-	fullscreen(event);
 });
 
 
