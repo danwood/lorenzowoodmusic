@@ -26,38 +26,4 @@ block main
 					img(src="img/southshore.jpg" loading="lazy" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
 			.next-to-side-photo
 				.next-to-side-photo-padded
-					header
-						h2 Contact Lorenzo and the team
-					p.
-						Book a gig, suggest a collaboration or song, or just say hi!
-					.input-form
-						form#contact-form(action="mailme.php" method="post")
-							div
-								//- Use raw HTML here since the escaping happens too early when processed by pug
-								<input type="email" name="e" id="e_fm" placeholder="Your Email Address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-							div
-								input(type="text" id="e_na" name="n" placeholder="Your Name" value="")
-							div: textarea(type="text" id="e_ms" name="m" rows="10" cols="40" required="required" placeholder="Message")
-							div
-								
-								//- honeypot
-								input(type="text" name="subject" value="" class="ir")
-								input(type="text" name="message" value="" class="ir")
-
-								input(type="hidden" name="f" value="This message was sent from the LorenzoWoodMusic.com website.")
-								input(type="hidden" name="s" value="Message sent from LorenzoWoodMusic.com")
-								input(type="hidden" name="r" value="/")
-								input(type="hidden" name="h" value="contact-form")
-
-								input.button(type="submit" value="Contact us")
-								
-							<?php if (isset($_GET['msg'])) { echo '<h2>' . htmlspecialchars($_GET['msg']) . '</h2>'; } ?>
-							<?php if (isset($_GET['e'])) { echo '<h2 style="color:#C00">' . htmlspecialchars($_GET['e']) . '</h2>'; } ?>
-
-
-
-block scripts
-	script
-		//- Modernizer-like
-		//- Remove "no-js" class from element, if it exists
-		|document.documentElement.className = document.documentElement.className.replace("no-js","js");
+					include _contact.html

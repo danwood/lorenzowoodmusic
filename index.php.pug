@@ -201,8 +201,11 @@ block more-credits
 
 block additional-html
 	#cover(style="display:none")
-	#redeemer(style="display:none")
-	#close-redeem(style="display:none") &#215;
+	.modal#redeemer(style="display:none")
+	.modal#contacter(style="display:none")
+		include _contact.html
+		//- Contact form popup gets its "guts" from this file, just the HTML innards
+	#close-modal(style="display:none") &#215;
 
 	#scroll-arrow.scrolldown.bounce(style="display:none; stroke:purple;")
 		a.down-arrow(href="#")
@@ -211,7 +214,7 @@ block additional-html
 
 //- NOTE THAT HOME PAGE & 2AM PAGE ARE ONLY PAGES USING JQUERY
 
-block scripts
+block prepend scripts
 	script(
 		src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -223,9 +226,6 @@ block scripts
 		include js/youtube-min.js
 		//- This goes after the youtube code for "iOS"
 		|if (iOS) $('#form-album').val(window.DeviceMotionEvent ? '2938' : '8603');
-		//- Modernizer-like
-		//- Remove "no-js" class from element, if it exists
-		|document.documentElement.className = document.documentElement.className.replace("no-js","js");
 
 
 	<?php if ($code) { ?><script>$('#redeem-form').submit();</script><?php } ?>

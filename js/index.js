@@ -27,33 +27,14 @@ $('#recent-link').click(function() {
 });
 
 
+// Only on the home page does the contact form link bring up a modal layer.
 
-// Form Submission
+$('.contact-link').click(function() {
+	$('#cover').show();
+	$('#contacter').show();
+	$('#close-modal').show();
 
-$('#contact-form').submit(function( event ) {
-	$.ajax({
-		type: 'POST',
-		url: 'https://www.lorenzowoodmusic.com/mailme.php',
-		data: $("#contact-form").serialize(),
-
-		success: function(data, textStatus, jqXHR ) {
-			if (data !== '') {
-				$('#e_fm').val('');
-				$('#e_ms').val('');
-				$('#e_na').val('');
-				setTimeout(function(){ window.alert("Your message was sent. You should hear back from us soon!"); },0);
-			} else {
-				window.alert('Sorry, but the contact form submission did not work as expected.');
-			}
-		},
-		error: function(jqXHR, textStatus, errorThrown ) {
-			window.alert('ERROR. ' + errorThrown + ' ' + textStatus);
-		},
-		complete: function(jqXHR, textStatus ) {
-
-		}
-	});
-	event.preventDefault();
+	return false;
 });
 
 
@@ -68,7 +49,7 @@ $('#redeem-form').submit(function( event ) {
 				if (data !== '') {
 					$('#cover').show();
 					$('#redeemer').show();
-					$('#close-redeem').show();
+					$('#close-modal').show();
 					$('#redeemer').html(data);		// We’re done; let the content here do the rest.
 				} else {
 					window.alert('Sorry, but the code you entered has already been redeemed or was entered incorrectly.');
@@ -85,10 +66,11 @@ $('#redeem-form').submit(function( event ) {
 	}
 	event.preventDefault();
 });
-$('#close-redeem').click(function() {
+$('#close-modal').click(function() {
 	$('#cover').fadeOut('slow');
-	$('#close-redeem').fadeOut('slow');
-	$('#redeemer').fadeOut('fast');
+	$('#close-modal').fadeOut('slow');
+	$('#redeemer').fadeOut('fast');		// hide whichever modal is showing
+	$('#contacter').fadeOut('fast');	// hide whichever modal is showing
 });
 
 

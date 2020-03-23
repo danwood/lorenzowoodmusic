@@ -59,6 +59,24 @@
 		"oAP": "/404.html",
 		"oF": 0
 		},
+	"/_contact.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_contact.html",
+		"oF": 0
+		},
+	"/_contact.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_contact.html",
+		"oF": 1,
+		"oS": 1
+		},
 	"/_layout.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -1177,6 +1195,17 @@
 		"oAP": "/index.php",
 		"oF": 2,
 		"oS": 1
+		},
+	"/js/contactform.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/contactform-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"/js/index-min.js": {
 		"bF": 0,

@@ -83,12 +83,9 @@ block main
 			h3
 				a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
 
-block scripts
+block prepend scripts
 	script
 		include ../js/youtube-min.js
-		//- Modernizer-like
-		//- Remove "no-js" class from element, if it exists
-		|document.documentElement.className = document.documentElement.className.replace("no-js","js");
 		//- FOR NOW - REPLACE MISSING VIDEO THUMBNAIL WITH OUR OWN!
 		|document.getElementById('video-A8vcWMXVR7I').src = 'https://img.youtube.com/vi/A8vcWMXVR7I/hqdefault.jpg';
 

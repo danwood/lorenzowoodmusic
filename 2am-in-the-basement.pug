@@ -77,7 +77,7 @@ block additional-html
 
 //- NOTE THAT HOME PAGE & 2AM PAGE ARE ONLY PAGES USING JQUERY
 
-block scripts
+block prepend scripts
 	script(
 		src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -87,8 +87,5 @@ block scripts
 	script
 		include js/index-min.js
 		include js/youtube-min.js
-		//- Modernizer-like
-		//- Remove "no-js" class from element, if it exists
-		|document.documentElement.className = document.documentElement.className.replace("no-js","js");
 
 
