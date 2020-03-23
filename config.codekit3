@@ -7,7 +7,7 @@
 		"uuidString": "24DFFC34-B0CB-40BD-AA10-5ADCA258D482"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "31491",
 "files": {
 	"/.generate.php": {
 		"cB": 0,
@@ -564,6 +564,17 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 10490,
+		"oA": 0,
+		"oAP": "/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/bandsintown.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -633,14 +644,6 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
-		},
-	"/browserconfig.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/browserconfig.xml",
-		"oF": 0
 		},
 	"/CACHE": {
 		"ft": 65536,
@@ -852,6 +855,28 @@
 		"oAP": "/EPK.zip",
 		"oF": 0
 		},
+	"/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 874,
+		"oA": 0,
+		"oAP": "/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 1570,
+		"oA": 0,
+		"oAP": "/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
@@ -883,17 +908,6 @@
 		"oA": 0,
 		"oAP": "/humans.txt",
 		"oF": 0
-		},
-	"/icon.png": {
-		"ft": 32768,
-		"iS": 18130,
-		"oA": 0,
-		"oAP": "/icon.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
 		},
 	"/img/2am.jpg": {
 		"ft": 16384,
@@ -2446,28 +2460,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/tile-wide.png": {
-		"ft": 32768,
-		"iS": 40263,
-		"oA": 0,
-		"oAP": "/tile-wide.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/tile.png": {
-		"ft": 32768,
-		"iS": 123246,
-		"oA": 0,
-		"oAP": "/tile.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"/videos/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -2503,7 +2495,7 @@
 	"creationDate": 536607628,
 	"displayValue": "lorenzowoodmusic",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "meme-ive",
+	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
@@ -2939,7 +2931,6 @@
 			"flagValue": -1
 			}
 		},
-	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
 	"esLintEnvironmentsMask": 1,
@@ -3041,10 +3032,6 @@
 			"optionString": "'all'"
 			},
 		"default-case": {
-			"active": 0,
-			"optionString": ""
-			},
-		"default-param-last": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -3394,10 +3381,6 @@
 			},
 		"no-implied-eval": {
 			"active": 0,
-			"optionString": ""
-			},
-		"no-import-assign": {
-			"active": 1,
 			"optionString": ""
 			},
 		"no-inline-comments": {
@@ -3823,10 +3806,6 @@
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
-			},
-		"prefer-regex-literals": {
-			"active": 0,
-			"optionString": ""
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -4436,6 +4415,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"enableJavascript": 0,
+		"ieCompatibility": 0,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
@@ -4575,9 +4555,6 @@
 	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"rollupExternals": "",
-	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
-	"rollupTreeshakingEnabled": 1,
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
