@@ -1,8 +1,6 @@
 //- Contact page, usually not loaded as a separate page, but in case there wasn't javascript.
 
-extends _layout.pug
-
-
+extends ../_layout.pug
 
 block vars
 	- var pageTitle = 'Contact Us'
@@ -21,9 +19,9 @@ block main
 		article.textual.clearfix
 			.side-photo
 				picture
-					source(srcset="img/southshore.webp 990w" type="image/webp")
-					source(srcset="img/southshore.jpg 990w, img/southshore50.jpg 495w")
-					img(src="img/southshore.jpg" loading="lazy" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
+					source(srcset="/img/southshore.webp 990w" type="image/webp")
+					source(srcset="/img/southshore.jpg 990w, /img/southshore50.jpg 495w")
+					img(src="/img/southshore.jpg" loading="lazy" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
 			.next-to-side-photo
 				.next-to-side-photo-padded
-					include _contact.html
+					include ../_contact.html

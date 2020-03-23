@@ -72,10 +72,10 @@
 		"cOD": 1,
 		"ft": 512,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_contact.html",
-		"oF": 1,
-		"oS": 1
+		"oF": 0,
+		"oS": 0
 		},
 	"/_layout.pug": {
 		"cB": 0,
@@ -701,23 +701,15 @@
 		"oAP": "/classes/class.housekeeping.php",
 		"oF": 0
 		},
-	"/contact.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/contact.html",
-		"oF": 0
-		},
-	"/contact.pug": {
+	"/contact/index.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/contact.html",
+		"oAP": "/contact/index.html",
 		"oF": 0,
-		"oS": 1
+		"oS": 0
 		},
 	"/css/generic.css": {
 		"aP": 1,
