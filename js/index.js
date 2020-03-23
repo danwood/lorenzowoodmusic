@@ -93,11 +93,9 @@ $('#close-modal').click(function() {
 // turn off any specified grayscale filter to make it color
 // and change the image from image1 to image2 if that's specified
 
-var targetOffset = $("main").offset().top;
-
 var $w = $(window).scroll(function(){
 	$('#scroll-arrow').remove();
-	if ( $w.scrollTop() > targetOffset) {
+	if ( $w.scrollTop() > $("main").offset().top) {
 		if (! $('body').hasClass('swapped-hero') ) {
 
 			// convert an initially grayscale image to be full color when you get back!

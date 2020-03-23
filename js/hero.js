@@ -40,7 +40,6 @@ function fullscreen(event){
 
 fullscreen(null);
 
-
 // Run the function in case of window resize
 $(window).resize(function(event) {
 	fullscreen(event);
