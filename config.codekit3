@@ -72,9 +72,9 @@
 		"cOD": 1,
 		"ft": 512,
 		"hM": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/_contact.html",
-		"oF": 0,
+		"oF": 1,
 		"oS": 0
 		},
 	"/_layout.pug": {
