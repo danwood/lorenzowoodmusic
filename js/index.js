@@ -98,7 +98,7 @@ function fullscreen(event){
 	var height= $(window).height();
 	var fullSizeHero = false;
 	if (width/height < 0.575) height = Math.round(width/0.575); // fill iphone x/xr/xs
-	else if (width/height > 1.5) height = Math.round(width/1.5);	// 1 is square, higher is more "landscape" - find a ratio that works
+	else if (width/height > 1.55) height = Math.round(width/1.55);	// 1 is square, higher is more "landscape" - find a ratio that works
 	else fullSizeHero = true;
 
 	// Show scroll arrow if first time here and we are showing full-screen hero
