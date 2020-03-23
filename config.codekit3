@@ -1196,17 +1196,6 @@
 		"oF": 2,
 		"oS": 1
 		},
-	"/js/contactform.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/contactform-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"/js/index-min.js": {
 		"bF": 0,
 		"ft": 64,
