@@ -51,14 +51,18 @@ Colors
 
 	/* Coolors Exported Palette - coolors.co/3a405a-aadb9b-99b2dd-ffbfc6-fff29e */
 
-	--color1: hsl(229, 22%, 29%);
-	--color2: hsl(150, 25%, 80%);		// was 73%
+	--color1: hsl(229, 22%, 29%);		// dark
+	--color2: hsl(150, 25%, 80%);
 	--color3: hsl(218, 50%, 73%);
 	--color4: hsl(353,100%, 87%);
 	--color5: hsl( 52,100%, 81%);
+	--color6: hsl(33, 100%, 91%);
+
 
 	--color-accent: hsl(33, 100%, 80%);
-	--color-accent-whiter: hsl(33, 100%, 91%);
+	--color-logo: hsl(33, 100%, 91%);
+
+	--color-accent-ink: hsl(33, 100%, 9%);
 }
 
 
@@ -78,6 +82,14 @@ Colors
 		--color-ink-high:		hsl(0, 0%, 87%);
 
 		--color-dark-high:		hsl(0, 0%, 4%);
+
+		--color1: hsl(229, 22%, 9%);		// dark
+		--color2: hsl(150, 25%, 20%);
+		--color3: hsl(218, 50%, 53%);
+		--color4: hsl(353,100%, 67%);
+		--color5: hsl( 52,100%, 61%);
+		--color6: hsl(33, 50%, 8%);
+
    }
 
 	.bw-image {

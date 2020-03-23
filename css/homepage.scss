@@ -14,7 +14,7 @@ Home-Page specific classes
 	padding:0.5rem 0 0 1rem;
 	display:inline-block;
 	font-weight:400;
-	color:var(--color-accent-whiter);
+	color:var(--color-logo);
 	letter-spacing:3px;
 	font-size:2em;
 }
@@ -31,7 +31,7 @@ h3.righthand {
 .icons-header {
 
 	svg {
-		fill:var(--color-accent-whiter);
+		fill:var(--color6);
 	}
 }
 
@@ -40,7 +40,7 @@ section.mailchimp-section {
 }
 
 section.bio {
-	background-color:var(--color-accent-whiter);
+	background-color:var(--color6);
 }
 
 section.videos {
@@ -49,6 +49,10 @@ section.videos {
 
 section.gigs {
  	background-color:var(--color3);
+
+ 	a {
+ 		color: hsl(0, 35%, 43%);
+ 	}
 }
 
 section.latest-releases {
@@ -602,8 +606,8 @@ YouTube
 		width:100%;
 		top:-16.84%;	// needed because sddefault.jpg image is letterboxed (though other sizes aren't)
 		left:0;
-		-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 25%);
-		mask-image:linear-gradient(to bottom, transparent 0%, black 25%);
+		-webkit-mask-image:linear-gradient(to bottom, gba(0,0,0,0) 0%, black 25%);
+		mask-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, black 25%);
 	}
 	.play-button {
 		width:68px;
@@ -645,8 +649,8 @@ YouTube
 		position:absolute;
 		top:12px;
 		left:20px;
-		color:var(--color-paper-high);
-		text-shadow:0 0 4px var(--color-ink-high);
+		color:white;
+		text-shadow:0 1px 3px black;
 	}
 }
 .square-video {
@@ -988,15 +992,19 @@ Latest Releases
 	flex-direction: row-reverse;
 }
 
-.darkanchor a {
+.dark-text {
+	color:rgba(0,0,0,0.9) !important;
+}
+.dark-text a {
 	color:rgba(0,0,0,0.6) !important;
 }
-.lightanchor {
+.light-text {
 	color:white !important;
 }
-.lightanchor a {
+.light-text a {
 	color:rgba(255,255,255,0.6) !important;
 }
+
 .release-image.bordered img {
 	border:1px solid rgba(255,255,255,0.5);
 }
