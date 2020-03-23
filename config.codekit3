@@ -699,7 +699,7 @@
 		"oA": 0,
 		"oAP": "/contact.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"/css/generic.css": {
 		"aP": 1,
@@ -808,7 +808,7 @@
 		"oA": 0,
 		"oAP": "/css/main.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		},
 	"/css/normalize.css": {
@@ -1249,7 +1249,7 @@
 		"oA": 0,
 		"oAP": "/link/index.php",
 		"oF": 2,
-		"oS": 0
+		"oS": 1
 		},
 	"/mailme.php": {
 		"cB": 0,

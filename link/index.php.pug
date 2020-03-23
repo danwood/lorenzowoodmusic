@@ -42,10 +42,8 @@ block prelude
 
 
 block vars
-	- var title = link-page
-	//- setting curent to link-page means we can style a body.link-page specially
-	- var current = Linking page
 	- var currentClass = link-page
+	//- do not define pageTitle; it breaks things (?) and isn't need since title is generated from database
 
 block append links
 	link(rel="prefetch" href="//img.youtube.com")

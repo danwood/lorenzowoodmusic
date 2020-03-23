@@ -14,12 +14,13 @@ block prelude
 
 block vars
 	- var herostyle = 'covering'
-	- var current = 'Home'
 	- var currentClass = 'home'
+	//- Not using pageTitle; full title tag is overridden below
 	- var description = 'Lorenzo Wood is a musician, singer-songwriter, and producer from Alameda, California USA. He sings and plays guitar, keys, drums, bass, and has fun on mandolin and banjo.'
 
 block title
 	title Lorenzo Wood Music — Official Site
+	//- overrides generated page title used on other pages
 	
 block append links
 	link(rel="prefetch" href="//code.jquery.com")

@@ -6,7 +6,7 @@ html(class="no-js", lang="en-us")
 		meta(charset="utf-8")
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
 		block title
-			title #{current} | Lorenzo Wood Music
+			title #{pageTitle} | Lorenzo Wood Music
 		block description
 			meta(name="description"
 				content=description)
@@ -36,7 +36,7 @@ html(class="no-js", lang="en-us")
 
 				.logo
 					block logo
-						a(href="/", class={active: current === 'Home'})
+						a(href="/", class={active: currentClass === 'home'})
 							h1 Lorenzo Wood
 
 					//- Hamburger Menu
@@ -49,7 +49,7 @@ html(class="no-js", lang="en-us")
 					mixin navLink(link, name)
 						li: a(
 							href=link
-							class={active: name === current}
+							class={active: name === currentClass}
 						) #{name}
 
 					nav.page-menu
@@ -85,6 +85,7 @@ html(class="no-js", lang="en-us")
 				p
 					b Copyright © 2017-2020 Lorenzo Wood
 					block more-credits
+					a.contact-popup(href="/contact.html") Contact us
 				p.js-warning.
 					JavaScript is disabled in your browser; please enable it to see missing content.
 
