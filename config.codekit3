@@ -683,6 +683,14 @@
 		"oAP": "/classes/class.housekeeping.php",
 		"oF": 0
 		},
+	"/contact.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/contact.html",
+		"oF": 0
+		},
 	"/contact.pug": {
 		"cB": 0,
 		"cOD": 1,
