@@ -4,6 +4,7 @@ header#main-header, body > footer, .page-menu {
 body > footer {
   background: none; }
   body > footer p {
+    color: #d9d9d9;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5); }
     @media only screen and (max-width: 599px) {
       body > footer p {
