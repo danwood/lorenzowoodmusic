@@ -11,7 +11,9 @@ block title
 	
 block append links
 	link(rel="prefetch" href="//code.jquery.com")
+		//- This should be done on any page using jquery - ONLY HOME PAGE & 2AM PAGE
 	link(rel="prefetch" href="//img.youtube.com")
+		//- This should be done on any page showing YOUTUBE VIDEOS
 
 block logo
 	a.filled(href="/", class={active: currentClass === '2am'}, style="color:pink")
