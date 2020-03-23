@@ -91,7 +91,7 @@ block main
 
 	.background-blur
 		//- use the exact same image as the displayed one so we don't need another image loaded
-		<img src="../album_art_640/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
+		<img src="../album_art_640/<?php echo $album['blurring_image'] ? htmlentities($album['blurring_image'], ENT_QUOTES) : htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
 
 	.center-column
 
