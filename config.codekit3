@@ -582,17 +582,6 @@
 		"opt": 1,
 		"q": 100
 		},
-	"/apple-touch-icon.png": {
-		"ft": 32768,
-		"iS": 10490,
-		"oA": 0,
-		"oAP": "/apple-touch-icon.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"/bandsintown.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -881,36 +870,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/EPK.zip",
-		"oF": 0
-		},
-	"/favicon-16x16.png": {
-		"ft": 32768,
-		"iS": 874,
-		"oA": 0,
-		"oAP": "/favicon-16x16.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/favicon-32x32.png": {
-		"ft": 32768,
-		"iS": 1570,
-		"oA": 0,
-		"oAP": "/favicon-32x32.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/favicon.ico": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/favicon.ico",
 		"oF": 0
 		},
 	"/fetchCACHE.php": {
