@@ -41,7 +41,7 @@
 		"oAP": "/2am-in-the-basement.html",
 		"oF": 0
 		},
-	"/2am-in-the-basement.php.pug": {
+	"/2am-in-the-basement.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
@@ -682,6 +682,16 @@
 		"oA": 0,
 		"oAP": "/classes/class.housekeeping.php",
 		"oF": 0
+		},
+	"/contact.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/contact.html",
+		"oF": 0,
+		"oS": 0
 		},
 	"/css/generic.css": {
 		"aP": 1,
