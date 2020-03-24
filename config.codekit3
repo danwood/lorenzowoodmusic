@@ -439,17 +439,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/album_art_640/heartless_blur.jpg": {
-		"ft": 16384,
-		"iS": 22505,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/album_art_640/heartless_blur.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 100
-		},
 	"/album_art_640/jacket-ep.jpg": {
 		"ft": 16384,
 		"iS": 995101,
@@ -611,6 +600,17 @@
 		"oA": 0,
 		"oAP": "/bandsintown.php",
 		"oF": 0
+		},
+	"/blurred_100/heartless.jpg": {
+		"ft": 16384,
+		"iS": 38515,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/blurred_100/heartless.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
 		},
 	"/booking/band.jpg": {
 		"ft": 16384,
