@@ -35,9 +35,9 @@ body > footer {
   .mini-icons svg {
     width: 24px;
     padding: 6px 6px 1rem 6px; }
-  @media only screen and (max-width: 359px) {
+  @media only screen and (max-width: 413px) {
     .mini-icons {
-      padding-left: 0em; } }
+      display: none; } }
 
 .background-blur {
   z-index: 0;
