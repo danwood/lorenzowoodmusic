@@ -14,14 +14,14 @@ if (empty($slug)) {
 	die();
 }
 
+$now = new DateTime();
+$release = $now;	// default to now, so it should show up as released
 $album = $db->albumForSlug($slug);
 if ($album) {
 	$longTitle = $album['title'];
 	if (!empty($album['featuring'])) { $longTitle .= ' [feat. ' . $album['featuring'] . ']'; }
 	$longTitle .= ' - by ' . $album['artist'];
 	$releaseDateString = NULL;
-	$now = new DateTime();
-	$release = $now;	// default to now, so it should show up as released
 	if (!empty($album['release_date'])) {
 		$release = new DateTime($album['release_date']);
 		$now = new DateTime();
@@ -48,30 +48,30 @@ else {
 <?php } ?><div class="imagecontainer"><img src="../album_art_640/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>"></div><div class="title-container"><h1><?php echo htmlspecialchars($album['artist']); ?> <br> <?php echo htmlspecialchars($album['title']); ?></h1><?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
 <?php if ($album['youtube_video_id']) { ?>
 <div class="youtube-border"><div class="youtube" data-linking="yep" data-code='<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>' data-title=''></div></div>
-<?php } ?></div><div class="title-container"><p><?php if ($releaseDateString) {	echo 'Releasing ' . htmlspecialchars($releaseDateString);
+<?php } ?></div><div class="title-container"><p><?php if ($now < $release) {	echo 'Releasing ' . htmlspecialchars($releaseDateString);
 } else {
 	echo 'Download and stream now';
 }?></p></div><div class="service-container"><?php if ($album['itunes_id']) { ?>
-<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo $releaseDateString ? 'Pre-order' : 'Download'; ?></span></a></div>
-<?php } if ($album['itunes_id'] && empty($releaseDateString)) { ?>
+<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
+<?php } if ($album['itunes_id'] && ($now >= $release)) { ?>
 <div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
-<?php } if ($album['spotify_id']) { ?>
+<?php } if ($album['spotify_id'] && ($now >= $release)) { ?>
 <div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($album['spotify_id'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
 <?php } if ( ($now < $release) && $album['spotify_presave_url']) { ?>
 <div class="service"><a rel="nofollow" href="<?php echo htmlentities($album['spotify_presave_url'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Presave on Spotify"><span class="play">Pre-save</span></a>
 <div style="padding-left:5em; font-size:80%; color:gray;">This step takes you to our DistroKid.com page to continue. You will be asked to log into your Spotify account.</div>
 </div>
-<?php } if ($album['amazon_music_id']) { ?>
+<?php } if ($album['amazon_music_id'] && ($now >= $release)) { ?>
 <div class="service"><a href="https://www.amazon.com/dp/<?php echo htmlentities($album['amazon_music_id'], ENT_QUOTES); ?>"><img src="../svg/amazon-music.svg" alt="Amazon Music"><span class="play">Play</span></a></div>
 <?php } if ($album['google_play_id']) { ?>
-<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play"><?php echo $releaseDateString ? 'Pre-order' : 'Download'; ?></span></a></div>
-<?php } if ($album['youtube_music_id']) { ?>
+<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
+<?php } if ($album['youtube_music_id']  && ($now >= $release)) { ?>
 <div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($album['youtube_music_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
-<?php } if ($album['soundcloud_id']) { ?>
+<?php } if ($album['soundcloud_id']  && ($now >= $release)) { ?>
 <div class="service"><a href="https://soundcloud.com/<?php echo htmlentities($album['soundcloud_id'], ENT_QUOTES); ?>"><img src="../svg/soundcloud.svg" alt="Soundcloud"><span class="play">Play</span></a></div>
-<?php } if ($album['deezer_id']) { ?>
+<?php } if ($album['deezer_id']  && ($now >= $release)) { ?>
 <div class="service"><a href="https://www.deezer.com/us/album/<?php echo htmlentities($album['deezer_id'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
-<?php } if ($album['bandcamp_id']) { ?>
+<?php } if ($album['bandcamp_id']  && ($now >= $release)) { ?>
 <div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp_id'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a></div>
 <?php } if ($album['cd_id']) { ?>
 <div class="service"><a href="<?php echo htmlentities($album['cd_id'], ENT_QUOTES); ?>"><img src="/img/cd100.png" alt="Buy CD"><span class="play">Buy</span></a></div>
