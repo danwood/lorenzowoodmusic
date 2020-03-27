@@ -14,35 +14,35 @@ block main
 		article.masonry
 			- 
 				var images = [
-					['Lorenzo Wood 0140.jpg', '______________'],
-					['Lorenzo Wood 0221.jpg', '______________'],
-					['Lorenzo Wood 1946.jpg', '______________'],
-					['Lorenzo Wood 2089.jpg', '______________'],
-					['Lorenzo Wood 2156.jpg', '______________'],
-					['Lorenzo Wood 2168.jpg', '______________'],
-					['Lorenzo Wood 2169.jpg', '______________'],
-					['Lorenzo Wood 2453.jpg', '______________'],
-					['Lorenzo Wood 2558.jpg', '______________'],
+					['Lorenzo Wood 0140.jpg', ''],
+					['Lorenzo Wood 0221.jpg', 'Lorenzo Wood and band at Alameda Mini Maker Faire, 2018'],
+					['Lorenzo Wood 1946.jpg', 'Lorenzo Wood and band at Lone Tree Cemetary Summer Concert Series, 2019'],
+					['Lorenzo Wood 2089.jpg', 'Lorenzo Wood and band at Lone Tree Cemetary Summer Concert Series, 2019'],
+					['Lorenzo Wood 2156.jpg', 'Lorenzo Wood and band at Lone Tree Cemetary Summer Concert Series, 2019'],
+					['Lorenzo Wood 2168.jpg', 'Lorenzo Wood and band at Lone Tree Cemetary Summer Concert Series, 2019'],
+					['Lorenzo Wood 2169.jpg', ''],
+					['Lorenzo Wood 2453.jpg', ''],
+					['Lorenzo Wood 2558.jpg', ''],
 					['Lorenzo Wood 4965.jpg', 'Lorenzo Wood and band at Alameda Mini Maker Faire, 2018'],
-					['Lorenzo Wood 5687.jpg', '______________'],
-					['Lorenzo Wood 6115.jpg', '______________'],
-					['Lorenzo Wood 6184.jpg', '______________'],
-					['Lorenzo Wood 6190.jpg', '______________'],
-					['Lorenzo Wood 7646.jpg', '______________'],
-					['Lorenzo Wood 8967.jpg', '______________'],
+					['Lorenzo Wood 5687.jpg', ''],
+					['Lorenzo Wood 6115.jpg', ''],
+					['Lorenzo Wood 6184.jpg', ''],
+					['Lorenzo Wood 6190.jpg', ''],
+					['Lorenzo Wood 7646.jpg', ''],
+					['Lorenzo Wood 8967.jpg', ''],
 					['Lorenzo Wood 9179.jpg', 'Lorenzo Wood and band performing in Oakland'],
 					['Lorenzo Wood 9286.jpg', 'Lorenzo Wood and band performing in Alameda'],
-					['Lorenzo Wood 9999.jpg', '______________'],
-					['Lorenzo Wood Photo Credit Claire Ashcraft 11.jpg', '______________'],
-					['Lorenzo Wood Photo Credit Claire Ashcraft 22.jpg', '______________'],
-					['Lorenzo Wood Photo Credit Dave Weiland 01.jpg', '______________'],
-					['Lorenzo Wood Photo Credit Dave Weiland 02.jpg', '______________'],
+					['Lorenzo Wood 9999.jpg', ''],
+					['Lorenzo Wood Photo Credit Claire Ashcraft 11.jpg', ''],
+					['Lorenzo Wood Photo Credit Claire Ashcraft 22.jpg', ''],
+					['Lorenzo Wood Photo Credit Dave Weiland 01.jpg', ''],
+					['Lorenzo Wood Photo Credit Dave Weiland 02.jpg', ''],
 					];
 
 			//- The smaller size are 960 pixels wide; larger ones can be much bigger (but optimized for size)
 			each imageDuple, i in images
 				a(target='_BLANK', href='orig/' + imageDuple[0]) 
-					img(alt='Lorenzo Wood Music', title=imageDuple[1], src=imageDuple[0])
+					img(class="item" alt='Lorenzo Wood Music', title=imageDuple[1], src=imageDuple[0])
 
 
 
