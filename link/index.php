@@ -23,7 +23,7 @@ if ($album) {
 	$longTitle .= ' - by ' . $album['artist'];
 	$releaseDateString = NULL;
 	if (!empty($album['release_date'])) {
-		$release = new DateTime($album['release_date']);
+		$release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
 		$now = new DateTime();
 		if ($now < $release) $releaseDateString = $release->format('l, F jS');
 	}
