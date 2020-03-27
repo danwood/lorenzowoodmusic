@@ -50,30 +50,36 @@ else {
 <?php } ?><h1><?php echo htmlspecialchars($album['artist']); ?> <br> <?php echo htmlspecialchars($album['title']); ?></h1><?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?></div><div class="title-container"><p><?php if ($now < $release) {	echo 'Releasing ' . htmlspecialchars($releaseDateString);
 } else {
 	echo 'Download and stream now';
-}?></p></div><div class="service-container"><?php if ($album['itunes_id']) { ?>
-<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
-<?php } if ($album['itunes_id'] && ($now >= $release)) { ?>
-<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_id'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
-<?php } if ($album['spotify_id'] && ($now >= $release)) { ?>
-<div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($album['spotify_id'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
+}?></p></div><div class="service-container"><?php if ($album['itunes_album']) { ?>
+<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_album'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
+<?php } if ($album['itunes_album'] && ($now >= $release)) { ?>
+<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_album'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
+<?php } if ($album['spotify_album'] && ($now >= $release)) { ?>
+<div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($album['spotify_album'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
 <?php } if ( ($now < $release) && $album['spotify_presave_url']) { ?>
 <div class="service"><a rel="nofollow" href="<?php echo htmlentities($album['spotify_presave_url'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Presave on Spotify"><span class="play">Pre-save</span></a>
 <div style="padding-left:5em; font-size:80%; color:gray;">This step takes you to our DistroKid.com page to continue. You will be asked to log into your Spotify account.</div>
 </div>
-<?php } if ($album['amazon_music_id'] && ($now >= $release)) { ?>
-<div class="service"><a href="https://www.amazon.com/dp/<?php echo htmlentities($album['amazon_music_id'], ENT_QUOTES); ?>"><img src="../svg/amazon-music.svg" alt="Amazon Music"><span class="play">Play</span></a></div>
-<?php } if ($album['google_play_id']) { ?>
-<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_id'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
-<?php } if ($album['youtube_music_id']  && ($now >= $release)) { ?>
-<div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($album['youtube_music_id'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
-<?php } if ($album['soundcloud_id']  && ($now >= $release)) { ?>
-<div class="service"><a href="https://soundcloud.com/<?php echo htmlentities($album['soundcloud_id'], ENT_QUOTES); ?>"><img src="../svg/soundcloud.svg" alt="Soundcloud"><span class="play">Play</span></a></div>
-<?php } if ($album['deezer_id']  && ($now >= $release)) { ?>
-<div class="service"><a href="https://www.deezer.com/us/album/<?php echo htmlentities($album['deezer_id'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
-<?php } if ($album['bandcamp_id']  && ($now >= $release)) { ?>
-<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp_id'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a></div>
-<?php } if ($album['cd_id']) { ?>
-<div class="service"><a href="<?php echo htmlentities($album['cd_id'], ENT_QUOTES); ?>"><img src="/img/cd100.png" alt="Buy CD"><span class="play">Buy</span></a></div>
+<?php } if ($album['google_play_album']) { ?>
+<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_album'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
+<?php } if ($now >= $release) { ?>
+<?php      if ($album['amazon_dp']) { ?>
+<div class="service"><a href="https://www.amazon.com/dp/<?php echo htmlentities($album['amazon_dp'], ENT_QUOTES); ?>"><img src="../svg/amazon-music.svg" alt="Amazon Music"><span class="play">Play</span></a></div>
+<?php } if ($album['youtube_music_MPRE']) { ?>
+<div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($album['youtube_music_MPRE'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
+<?php } if ($album['bandcamp']) { ?>
+<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a></div>
+<?php } if ($album['soundcloud_path']) { ?>
+<div class="service"><a href="https://soundcloud.com/<?php echo htmlentities($album['soundcloud_path'], ENT_QUOTES); ?>"><img src="../svg/soundcloud.svg" alt="Soundcloud"><span class="play">Play</span></a></div>
+<?php } if ($album['deezer_album']) { ?>
+<div class="service"><a href="https://www.deezer.com/us/album/<?php echo htmlentities($album['deezer_album'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
+<?php } if ($album['tidal_album']) { ?>
+<div class="service"><a href="https://listen.tidal.com/album/<?php echo htmlentities($album['tidal_album'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
+<?php } if ($album['tidal_track']) { ?>
+<div class="service"><a href="https://listen.tidal.com/track/<?php echo htmlentities($album['tidal_track'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
+<?php } if ($album['cd_url']) { ?>
+<div class="service"><a href="<?php echo htmlentities($album['cd_url'], ENT_QUOTES); ?>"><img src="/img/cd100.png" alt="Buy CD"><span class="play">Buy</span></a></div>
+<?php } ?>
 <?php } ?></div></div></main><footer><p><b>Copyright © 2017-2020 Lorenzo Wood</b><span class="widespace"></span><span class="widespace"></span><a class="contact-link" href="/contact/">Contact us</a></p><p class="js-warning">JavaScript is disabled in your browser; please enable it to see missing content.
 </p></footer><script>for(var iOS=/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream,youtube=document.querySelectorAll(".youtube"),i=0;i<youtube.length;i++){var code=youtube[i].dataset.code,title=youtube[i].dataset.title,caption=youtube[i].dataset.caption,linking=youtube[i].dataset.linking;if(iOS){var iframe=document.createElement("iframe");iframe.setAttribute("allowfullscreen",""),iframe.setAttribute("src","https://www.youtube.com/embed/"+code),youtube[i].appendChild(iframe)}else{var source="https://img.youtube.com/vi/"+code+"/sddefault.jpg",image=new Image;image.src=source,image.id="video-"+code,image.alt="YouTube thumbnail",image.addEventListener("load",void youtube[i].appendChild(image)),youtube[i].addEventListener("click",function(){var e=this.dataset.code;if(linking)window.location.href="https://www.youtube.com/watch?v="+e;else{var t=document.createElement("iframe");t.setAttribute("frameborder","0"),t.setAttribute("allowfullscreen",""),t.setAttribute("src","https://www.youtube.com/embed/"+e+"?rel=0&showinfo=0&autoplay=1"),this.innerHTML="",this.appendChild(t)}});var play=document.createElement("div");play.setAttribute("class","play-button"),youtube[i].appendChild(play);var t=document.createElement("div");t.setAttribute("class","title"),t.innerText=title,youtube[i].appendChild(t)}if(caption){var captionDiv=document.createElement("p");captionDiv.innerText=caption,youtube[i].insertAdjacentElement("afterend",captionDiv)}}</script><?php
 $db->close();
