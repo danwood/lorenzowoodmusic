@@ -9,9 +9,14 @@ for (var i = 0; i < youtube.length; i++) {
 	var code	= youtube[i].dataset.code;
 	var title	= youtube[i].dataset.title;
 	var caption = youtube[i].dataset.caption;
-	var linking = true; // < ALWAYS LINK NOW????   youtube[i].dataset.linking;
+	var linking = youtube[i].dataset.linking;
 
-	if (iOS) {
+	// experiment - try ALWAYS linking iOS
+	if (iOS) linking = true;
+
+	// EXPERIMENT - take out the special iOS embedding
+	
+	if (false) {
 		// regular YouTube iframe embed so that it needs just one tap as expected
 		var iframe = document.createElement( "iframe" );
 		iframe.setAttribute( "allowfullscreen", "" );
