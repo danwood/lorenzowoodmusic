@@ -351,6 +351,83 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_3000/heartless.jpg": {
+		"ft": 16384,
+		"iS": 198894,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_3000/heartless.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_3000/jacket-ep.jpg": {
+		"ft": 16384,
+		"iS": 588887,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_3000/jacket-ep.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_3000/jacket.jpg": {
+		"ft": 16384,
+		"iS": 683207,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_3000/jacket.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/album_art_3000/now-in-control.jpg": {
+		"ft": 16384,
+		"iS": 274129,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_3000/now-in-control.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/album_art_3000/old-town-road.jpg": {
+		"ft": 16384,
+		"iS": 585653,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_3000/old-town-road.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_3000/still-need-love.jpg": {
+		"ft": 16384,
+		"iS": 295106,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_3000/still-need-love.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_3000/you-and-me-now.jpg": {
+		"ft": 16384,
+		"iS": 67671,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_3000/you-and-me-now.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/album_art_384/heartless.jpg": {
 		"ft": 16384,
 		"iS": 10932,
@@ -503,83 +580,6 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"q": 100
-		},
-	"/album_art_large/heartless.jpg": {
-		"ft": 16384,
-		"iS": 198894,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/album_art_large/heartless.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/album_art_large/jacket-ep.jpg": {
-		"ft": 16384,
-		"iS": 588887,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/album_art_large/jacket-ep.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/album_art_large/jacket.jpg": {
-		"ft": 16384,
-		"iS": 683207,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/album_art_large/jacket.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"/album_art_large/now-in-control.jpg": {
-		"ft": 16384,
-		"iS": 274129,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/album_art_large/now-in-control.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"/album_art_large/old-town-road.jpg": {
-		"ft": 16384,
-		"iS": 585653,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/album_art_large/old-town-road.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/album_art_large/still-need-love.jpg": {
-		"ft": 16384,
-		"iS": 295106,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/album_art_large/still-need-love.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/album_art_large/you-and-me-now.jpg": {
-		"ft": 16384,
-		"iS": 67671,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/album_art_large/you-and-me-now.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
 		"q": 100
 		},
 	"/apple-touch-icon.png": {
