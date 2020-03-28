@@ -1,8 +1,8 @@
-extends _layout.pug
+extends ../_layout.pug
 
 block prelude
 	|<?php
-	|require_once('classes/downcode.php');
+	|require_once('../classes/downcode.php');
 	|$db = new DowncodeDB();
 	|$album = $db->featuredAlbum('2AM in the Basement');
 	|
@@ -36,7 +36,7 @@ block append links
 
 block logo
 	a.filled(href="/", class={active: currentClass === '2am'}, style="color:pink")
-		include svg/2am.svg
+		include ../svg/2am.svg
 
 //- REMINDER: DASH AFTER SLASH-SLASH HIDES COMMENTS FROM PUG COMPILER
 
@@ -49,7 +49,7 @@ block append header
 		.action-banner.clearfix.safe-area-only(style="background:rgba(255,255,255,0.4")
 			p
 				<a target="_blank" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>">
-					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
+					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="/album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
 				</a>
 				span <?php echo htmlspecialchars( $now < $release ? 'Upcoming' : ($release < $oneMonthAgo ? 'Latest' : 'New') . ' ' . $album['album_ep_single'] . ' “' . $album['title'] . '”'); ?> —
 					| &nbsp;
@@ -58,9 +58,9 @@ block append header
 		<?php } ?>
 
 		picture
-			source(srcset="img/2am.webp 1920w" type="image/webp")
-			source(srcset="img/2am.jpg 1920w, img/2am50.jpg 960w, img/2am33.jpg 640w")
-			img.hero-image.covering(src="img/2am.jpg" loading="eager" alt="2AM in the Basement")
+			source(srcset="/img/2am.webp 1920w" type="image/webp")
+			source(srcset="/img/2am.jpg 1920w, /img/2am50.jpg 960w, /img/2am33.jpg 640w")
+			img.hero-image.covering(src="/img/2am.jpg" loading="eager" alt="2AM in the Basement")
 
 block main
 
@@ -79,9 +79,9 @@ block main
 			p Find 2AM in the Basement songs online:
 			.icons.icons-2
 				a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/2am-in-the-basement/1461919405?at=1000lKSp")
-					include svg/apple-music-icon.svg
+					include ../svg/apple-music-icon.svg
 				a(data-title="Spotify" href="https://open.spotify.com/artist/4xWrKxTS7gyybHbJ94LZtx?si=P5Cy1GEHS8aLFNkjsFAx_Q" style="fill:#1ED760")
-					include svg/spotify-logo.svg
+					include ../svg/spotify-logo.svg
 
 
 	section.videos.clearfix
@@ -105,7 +105,7 @@ block additional-html
 
 	#scroll-arrow.scrolldown.bounce(style="display:none; stroke:white")
 		a.down-arrow(href="#")
-			include svg/downarrow.svg
+			include ../svg/downarrow.svg
 
 
 //- NOTE THAT HOME PAGE & 2AM PAGE ARE ONLY PAGES USING JQUERY
@@ -116,9 +116,9 @@ block prepend scripts
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		crossorigin="anonymous")
 	script.
-		window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\\/script>')
+		window.jQuery || document.write('<script src="/js/vendor/jquery-3.4.1.min.js"><\\/script>')
 	script
-		include js/hero-min.js
-		include js/youtube-min.js
+		include ../js/hero-min.js
+		include ../js/youtube-min.js
 
 

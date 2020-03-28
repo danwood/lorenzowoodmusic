@@ -52,7 +52,7 @@ if ($album) {
                     <li><a href="/photos/">photos</a></li>
                     <li><a href="/videos/">videos</a></li>
                     <li><a href="/booking/">booking</a></li>
-                    <li><a href="/2am-in-the-basement.html">2am</a></li>
+                    <li><a href="/2am-in-the-basement/">2am</a></li>
           </ul>
         </nav>
       </div>
