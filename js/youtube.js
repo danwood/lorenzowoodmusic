@@ -9,7 +9,7 @@ for (var i = 0; i < youtube.length; i++) {
 	var code	= youtube[i].dataset.code;
 	var title	= youtube[i].dataset.title;
 	var caption = youtube[i].dataset.caption;
-	var linking = youtube[i].dataset.linking;
+	var linking = true; // < ALWAYS LINK NOW????   youtube[i].dataset.linking;
 
 	if (iOS) {
 		// regular YouTube iframe embed so that it needs just one tap as expected
