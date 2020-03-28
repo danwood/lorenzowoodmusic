@@ -9,6 +9,20 @@ block prelude
 	//-}
 	|$code = isset($_GET['code']) ? htmlspecialchars($_GET['code']) : '';
 	|$email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
+	|
+	|require_once('classes/downcode.php');
+	|$db = new DowncodeDB();
+	|$now = new DateTime();
+	|$release = $now;	// default to now, so it should show up as released
+	|$album = $db->featuredAlbum();
+	|if ($album) {
+	|	$releaseDateString = NULL;
+	|	if (!empty($album['release_date'])) {
+	|		$release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
+	|		$now = new DateTime();
+	|		if ($now < $release) $releaseDateString = $release->format('l, F jS');
+	|	}
+	|}
 	|?>
 
 
@@ -34,14 +48,17 @@ block append links
 
 block append header
 	.hero
+		<?php if ($album) { ?>
 		.action-banner.clearfix.safe-area-only
 			p
-				a(target="_blank" href="/link/still-need-love")
-					img(style="display:inline-block; width:32px; height:auto; padding:0;" src="album_art_64/still-need-love.jpg" alt="Still Need Love, cover image")
-				span New single “Still Need Love” —
+				<a target="_blank" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>">
+					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
+				</a>
+				span New <?php echo htmlspecialchars($album['album_ep_single'] . ' “' . $album['title'] . '”'); ?> —
 					| &nbsp;
 				b
-					a(style="text-decoration:underline", href="/link/still-need-love") Download or stream now!
+					<a style="text-decoration:underline" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>"><?php echo ($now < $release) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
+		<?php } ?>
 
 		picture
 			source.swapping-image(srcset="img/banner1_giant.jpg 2560w, img/banner1_big.jpg 1920w, img/banner1_medium.jpg 960w, img/banner1_small.jpg 640w")

@@ -457,6 +457,27 @@ class DowncodeDB extends SQLite3
 		return $result;
 	}
 
+	/*
+		Figure out which album to feature at the top of the home page / 2AM page.
+		Pass in $artist, defaults to Lorenzo Wood
+
+		This returns the most recent (by timestamp, which entry creation date probably near release date)
+		album/ep/single that at least has an iTunes/Apple Music entry, and a Spotify Presave or Stream link.
+		This means we only show this featured item when there is an action available for the visitor to take!
+		Otherwise we keep showing the latest release that fits that criteria.
+	*/
+	function featuredAlbum($artist = 'Lorenzo Wood')
+	{
+		$result = NULL;
+		$statement = $this->prepare("SELECT * FROM ALBUM WHERE artist = :artist AND (spotify_presave_url != '' OR spotify_album != '') AND itunes_album != '' ORDER BY TIMESTAMP DESC LIMIT 1");
+		$statement->bindValue(':artist', $artist);
+		$ret = $statement->execute();
+		while ($album = $ret->fetchArray(SQLITE3_ASSOC) ){
+			$result = $album;
+		}
+		return $result;
+	}
+
 	function fileNameForAlbumTrackExtension($albumID, $trackID, $formatID)
 	{
 		$result = NULL;
