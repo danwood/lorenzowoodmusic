@@ -2710,6 +2710,14 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/test.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/test.txt",
+		"oF": 0
+		},
 	"/videos/index.html": {
 		"cB": 0,
 		"ft": 8192,
