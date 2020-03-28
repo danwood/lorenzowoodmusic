@@ -219,7 +219,7 @@
 		"oAP": "/album_art_1200x630/more-than-friends.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_1200x630/now-in-control.jpg": {
@@ -395,7 +395,7 @@
 		"oAP": "/album_art_384/more-than-friends.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_384/now-in-control.jpg": {
@@ -450,7 +450,7 @@
 		"oAP": "/album_art_64/more-than-friends.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_64/still-need-love.jpg": {
@@ -505,7 +505,7 @@
 		"oAP": "/album_art_640/more-than-friends.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_640/now-in-control.jpg": {
