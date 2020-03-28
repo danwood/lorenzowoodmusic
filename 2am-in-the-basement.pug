@@ -1,5 +1,24 @@
 extends _layout.pug
 
+block prelude
+	|<?php
+	|require_once('classes/downcode.php');
+	|$db = new DowncodeDB();
+	|$album = $db->featuredAlbum('2AM in the Basement');
+	|
+	|$now = new DateTime();
+	|$release = $now;	// default to now, so it should show up as released
+	|if ($album) {
+	|	$releaseDateString = NULL;
+	|	if (!empty($album['release_date'])) {
+	|		$release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
+	|		if ($now < $release) $releaseDateString = $release->format('l, F jS');
+	|	}
+	|	$oneMonthAgo = new \DateTime('1 month ago');
+	|}
+	|?>
+
+
 block vars
 	- var herostyle = 'covering'
 	- var pageTitle = '2AM in the Basement'
@@ -25,6 +44,18 @@ block logo
 
 block append header
 	.hero
+
+		<?php if ($album) { ?>
+		.action-banner.clearfix.safe-area-only(style="background:rgba(255,255,255,0.4")
+			p
+				<a target="_blank" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>">
+					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
+				</a>
+				span <?php echo htmlspecialchars( $now < $release ? 'Upcoming' : ($release < $oneMonthAgo ? 'Latest' : 'New') . ' ' . $album['album_ep_single'] . ' “' . $album['title'] . '”'); ?> —
+					| &nbsp;
+				b
+					<a style="text-decoration:underline" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>"><?php echo ($now < $release) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
+		<?php } ?>
 
 		picture
 			source(srcset="img/2am.webp 1920w" type="image/webp")

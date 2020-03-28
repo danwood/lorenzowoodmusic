@@ -5,16 +5,17 @@ $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
 
 require_once('classes/downcode.php');
 $db = new DowncodeDB();
+$album = $db->featuredAlbum();
+
 $now = new DateTime();
 $release = $now;	// default to now, so it should show up as released
-$album = $db->featuredAlbum();
 if ($album) {
 	$releaseDateString = NULL;
 	if (!empty($album['release_date'])) {
 		$release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
-		$now = new DateTime();
 		if ($now < $release) $releaseDateString = $release->format('l, F jS');
 	}
+	$oneMonthAgo = new \DateTime('1 month ago');
 }
 ?><!DOCTYPE html>
 <html class="no-js" lang="en-us">
@@ -60,7 +61,7 @@ if ($album) {
           <p><a target="_blank" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>">
 <img style="display:inline-block; width:32px; height:auto; padding:0;" src="album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
 </a><span>
-              New <?php echo htmlspecialchars($album['album_ep_single'] . ' “' . $album['title'] . '”'); ?> —&nbsp;</span><b><a style="text-decoration:underline" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>"><?php echo ($now < $release) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a></b>
+              <?php echo htmlspecialchars( $now < $release ? 'Upcoming' : ($release < $oneMonthAgo ? 'Latest' : 'New') . ' ' . $album['album_ep_single'] . ' “' . $album['title'] . '”'); ?> —&nbsp;</span><b><a style="text-decoration:underline" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>"><?php echo ($now < $release) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a></b>
           </p>
         </div><?php } ?>
         <picture>

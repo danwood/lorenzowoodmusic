@@ -442,6 +442,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_64/heartless.jpg": {
+		"ft": 16384,
+		"iS": 3165,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_64/heartless.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/album_art_64/more-than-friends.jpg": {
 		"ft": 16384,
 		"iS": 2403,
