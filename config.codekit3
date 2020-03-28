@@ -409,6 +409,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_64/still-need-love.jpg": {
+		"ft": 16384,
+		"iS": 21937,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_64/still-need-love.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_640/heartless.jpg": {
 		"ft": 16384,
 		"iS": 22505,
