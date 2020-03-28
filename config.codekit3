@@ -307,7 +307,7 @@
 		"oAP": "/album_art_3000/more-than-friends.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_3000/now-in-control.jpg": {
@@ -461,7 +461,7 @@
 		"oAP": "/album_art_64/still-need-love.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_640/heartless.jpg": {
