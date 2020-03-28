@@ -20,7 +20,7 @@ if (!$albumID || !$formatID || !$code) {
 	die;
 }
 
-require_once('classes.php');
+require_once('classes/downcode.php');
 $db = new DowncodeDB();
 
 $filename = $db->fileNameForAlbumTrackExtension($albumID, $trackID, $formatID);

@@ -1,6 +1,6 @@
 <?php
 
-require_once('../classes.php');
+require_once('../classes/downcode.php');
 $db = new DowncodeDB();
 $slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
 

@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') die;	// really this shouldn't come fro
 
 $inputs = $_SERVER['REQUEST_METHOD'] == 'POST' ? $_POST : $_GET;
 
-require_once('classes.php');
+require_once('classes/downcode.php');
 $iOSDevice = false;	// or set to a non-false text value
 $userAgent = $_SERVER['HTTP_USER_AGENT'];
 if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $userAgent, $matches)) {

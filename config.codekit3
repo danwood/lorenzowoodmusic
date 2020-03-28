@@ -154,47 +154,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/_sources/heartless cover.acorn": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/_sources/heartless cover.acorn",
-		"oF": 0
-		},
-	"/_sources/IMG_2880 crop 13,11,2702,4066, scale 990x1490.JPG": {
-		"ft": 16384,
-		"iS": 1831349,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/_sources/IMG_2880 crop 13,11,2702,4066, scale 990x1490.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/_sources/IMG_4541 need to rotate 358.5°.JPG": {
-		"ft": 16384,
-		"iS": 2251971,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/_sources/IMG_4541 need to rotate 358.5°.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/_sources/jacket-large.jpg": {
-		"ft": 16384,
-		"iS": 1772311,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/_sources/jacket-large.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/_sources/list-play.opacity": {
 		"cB": 0,
 		"ft": 8192,
@@ -218,61 +177,6 @@
 		"oA": 0,
 		"oAP": "/_sources/ReverbNation.opacity",
 		"oF": 0
-		},
-	"/_sources/scaled high quality/beach.jpg": {
-		"ft": 16384,
-		"iS": 2886286,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/_sources/scaled high quality/beach.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/_sources/scaled high quality/beach33.jpg": {
-		"ft": 16384,
-		"iS": 399322,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/_sources/scaled high quality/beach33.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/_sources/scaled high quality/beach50.jpg": {
-		"ft": 16384,
-		"iS": 850137,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/_sources/scaled high quality/beach50.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/_sources/scaled high quality/southshore.jpg": {
-		"ft": 16384,
-		"iS": 1503252,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/_sources/scaled high quality/southshore.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/_sources/scaled high quality/southshore50.jpg": {
-		"ft": 16384,
-		"iS": 458004,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/_sources/scaled high quality/southshore50.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
 		},
 	"/album_art_1200x630/heartless.jpg": {
 		"ft": 16384,
@@ -680,14 +584,6 @@
 		"oAP": "/build/CACHE",
 		"oF": 0
 		},
-	"/classes.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/classes.php",
-		"oF": 0
-		},
 	"/classes/class.EmailAddressValidator.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -710,6 +606,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/classes/class.housekeeping.php",
+		"oF": 0
+		},
+	"/classes/downcode.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/classes/downcode.php",
 		"oF": 0
 		},
 	"/contact/index.php": {
