@@ -295,6 +295,7 @@ Latest Releases Section
 	}
 
 	.release-image img {
+		max-height:320px;	// width already capped to 100% so max-height will help make sure square min size for square
 		display:block;
 		transition: transform .5s ease;
 		&:hover {
@@ -936,13 +937,12 @@ Latest Releases
 	padding-top:4em;
 	padding-bottom:4em;
 
+
 	@media only screen and (max-width:$mainBreakpoint - 1px) {
 
-		// Make sure image doesn't get TOO big in intermediate size displays
-		// This is for smaller displays only because in wider displays, with flex view,
-		// image is max-width 100% instead.
+		// SEE THE coverArtSizes DECLARATION IN index.php.pug TO MAKE SURE THIS BREAKPOINT IS LINED UP WITH THAT WIDTH CALC
+
 		.release-image img {
-			max-width:320px;
 			margin:0 auto;
 		}
 
