@@ -435,6 +435,8 @@ AddDefaultCharset utf-8
     RewriteRule ^ %{ENV:PROTO}://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 	Redirect 301 /2am-in-the-basement.html /2am-in-the-basement/
+	Redirect 301 /falling /link/falling
+	Redirect 301 /friends /link/more-than-friends
 
 </IfModule>
 
