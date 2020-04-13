@@ -8,33 +8,33 @@ block prelude
 	|$slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
 	|
 	|if (empty($slug)) {
-	|	$albums = $db->allAlbums();
-	|	foreach ($albums as $album) {
-	|		echo '<a href="' . htmlentities($album['slug'], ENT_QUOTES) . '">';
-	|		echo htmlspecialchars($album['title']);
-	|		echo '</a><br />' . PHP_EOL;
-	|	}
-	|	die();
+	|   $albums = $db->allAlbums();
+	|   foreach ($albums as $album) {
+	|       echo '<a href="' . htmlentities($album['slug'], ENT_QUOTES) . '">';
+	|       echo htmlspecialchars($album['title']);
+	|       echo '</a><br />' . PHP_EOL;
+	|   }
+	|   die();
 	|}
 	|
 	|$now = new DateTime();
-	|$release = $now;	// default to now, so it should show up as released
+	|$release = $now;   // default to now, so it should show up as released
 	|$album = $db->albumForSlug($slug);
 	|if ($album) {
-	|	$longTitle = $album['title'];
-	|	if (!empty($album['featuring'])) { $longTitle .= ' [feat. ' . $album['featuring'] . ']'; }
-	|	$longTitle .= ' - by ' . $album['artist'];
-	|	$releaseDateString = NULL;
-	|	if (!empty($album['release_date'])) {
-	|		$release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
-	|		$now = new DateTime();
-	|		if ($now < $release) $releaseDateString = $release->format('l, F jS');
-	|	}
+	|   $longTitle = $album['title'];
+	|   if (!empty($album['featuring'])) { $longTitle .= ' [feat. ' . $album['featuring'] . ']'; }
+	|   $longTitle .= ' - by ' . $album['artist'];
+	|   $releaseDateString = NULL;
+	|   if (!empty($album['release_date'])) {
+	|       $release = new DateTime(/*$album['release_date']*/ '2020-01-01 00:00:00', new DateTimeZone('America/New_York'));
+	|       $now = new DateTime();
+	|       if ($now < $release) $releaseDateString = $release->format('l, F jS');
+	|   }
 	|}
 	|else {
-	|	header('HTTP/1.0 404 Not Found');
-	|	readfile('../404.html');
-	|	exit();
+	|   header('HTTP/1.0 404 Not Found');
+	|   readfile('../404.html');
+	|   exit();
 	|}
 	|?>
 
@@ -84,7 +84,7 @@ block append links
 	//- square 144 up to 4000, 5 MB max
 
 block append styles
-	link(rel='stylesheet', href='/css/linkstyles.122219.css')
+	link(rel='stylesheet', href='/css/linkstyles.041320.css')
 
 
 block main
@@ -118,12 +118,29 @@ block main
 			<?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
 
 		.title-container
-			p
-				<?php if ($now < $release) {
-				|	echo 'Releasing ' . htmlspecialchars($releaseDateString);
-				|} else {
-				|	echo 'Download and stream now';
-				|}?>
+			p.
+				<?php
+				if ($now < $release) {
+					echo 'Releasing ' . htmlspecialchars($releaseDateString);
+				} else {
+					echo 'Download and stream now';
+				}
+				if ($album['explicit_or_clean_slug']) { ?>
+				<div class="switch">
+					<input type="radio" class="switch-input" name="view2" value="dirty" id="dirty" checked>
+					<label for="dirty" class="switch-label switch-label-off">Explicit</label>
+					<input type="radio" class="switch-input" name="view2" value="clean" id="clean">
+					<label for="clean" class="switch-label switch-label-on">Radio Edit</label>
+					<span class="switch-selection"></span>
+				</div>
+
+
+
+				<?php }
+				//-explicit - "true" if this is an explicit version (of a single, generally)
+				//- - the slug of the other version that user can switch to.
+				?>
+
 			
 					
 		.service-container
@@ -168,7 +185,13 @@ block main
 
 			<?php } if ($album['bandcamp']) { ?>
 			
-			<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a></div>
+			<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a>
+
+			<?php if ($album['bandcamp_additional_info_url']) { ?>
+
+			<div style="padding-left:5em; margin-top:-20px; font-size:80%;"><a style="text-decoration:underline !important" href="<?php echo htmlentities($album['bandcamp_additional_info_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($album['bandcamp_additional_info']); ?></a></div>
+			<?php } ?>
+			</div>
 
 			<?php } if ($album['soundcloud_path']) { ?>
 			
