@@ -17,21 +17,21 @@ if (empty($slug)) {
 $now = new DateTime();
 $release = $now;   // default to now, so it should show up as released
 $album = $db->albumForSlug($slug);
-if ($album) {
-  $longTitle = $album['title'];
-  if (!empty($album['featuring'])) { $longTitle .= ' [feat. ' . $album['featuring'] . ']'; }
-  $longTitle .= ' - by ' . $album['artist'];
-  $releaseDateString = NULL;
-  if (!empty($album['release_date'])) {
-      $release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
-      $now = new DateTime();
-      if ($now < $release) $releaseDateString = $release->format('l, F jS');
-  }
-}
-else {
+if (!$album) {
   header('HTTP/1.0 404 Not Found');
   readfile('../404.html');
   exit();
+}
+
+$longTitle = $album['title'];
+$explicit = $album['explicit'] == 'true' || $album['explicit'] == 1;
+if (!empty($album['featuring'])) { $longTitle .= ' [feat. ' . $album['featuring'] . ']'; }
+$longTitle .= ' - by ' . $album['artist'];
+$releaseDateString = NULL;
+if (!empty($album['release_date'])) {
+   $release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
+   $now = new DateTime();
+   if ($now < $release) $releaseDateString = $release->format('l, F jS');
 }
 ?><!DOCTYPE html><html class="no-js" lang="en-us"><head><meta charset="utf-8"><!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]--><title><?php echo htmlentities($longTitle); ?></title><meta name='description' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="supported-color-schemes" content="light dark"><link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&amp;display=swap" rel="stylesheet"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="stylesheet" href="/css/main.033120.css"><link rel="prefetch" href="//img.youtube.com"><meta property='og:title' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 <meta property='og:description' content='Preview, download or stream <?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
@@ -52,19 +52,68 @@ if ($now < $release) {
 	echo 'Releasing ' . htmlspecialchars($releaseDateString);
 } else {
 	echo 'Download and stream now';
-} ?></p><div><?php
+} ?></p><div class="requires-js"><?php
 if ($album['explicit_or_clean_slug']) { ?>
 <div class="switch">
-	<input type="radio" class="switch-input" name="view2" value="dirty" id="dirty" checked>
-	<label for="dirty" class="switch-label switch-label-off">Explicit</label>
-	<input type="radio" class="switch-input" name="view2" value="clean" id="clean">
-	<label for="clean" class="switch-label switch-label-on">Radio Edit</label>
+	<input type="radio" class="switch-input" name="view2" value="dirty" id="dirty" <?php if ($explicit) { echo 'checked'; } ?>>
+	<label for="dirty" class="switch-label switch-label-off"
+	<?php
+	if (!$explicit) {
+		echo 'onclick="window.location=\'https://www.lorenzowoodmusic.com/link/' 
+			. htmlentities($album['explicit_or_clean_slug'], ENT_QUOTES) 
+			. '\'"'; 
+	} ?>
+	>Explicit</label>
+	<input type="radio" class="switch-input" name="view2" value="clean" id="clean"  <?php if (!$explicit) { echo 'checked'; } ?>>
+	<label for="clean" class="switch-label switch-label-on"
+	<?php
+	if ($explicit) {
+		echo 'onclick="window.location=\'https://www.lorenzowoodmusic.com/link/' 
+			. htmlentities($album['explicit_or_clean_slug'], ENT_QUOTES) 
+			. '\'"'; 
+	} ?>
+	>Radio Edit</label>
 	<span class="switch-selection"></span>
 </div>
-<?php }
-//-explicit - "true" if this is an explicit version (of a single, generally)
-//- - the slug of the other version that user can switch to.
-?>
+<?php } ?>
+</div><div class="js-hidden"><?php
+if ($album['explicit_or_clean_slug']) { ?>
+	<?php
+	if (!$explicit) {
+		echo "<a href='https://www.lorenzowoodmusic.com/link/"
+			. htmlentities($album['explicit_or_clean_slug'], ENT_QUOTES) 
+			. "'>"; 
+	}
+	else {
+		echo '<b>';
+	}
+	echo 'Explicit';
+	if (!$explicit) {
+		echo "</a>";
+	}
+	else {
+		echo '</b>';
+	}
+
+
+	echo ' &middot; ';
+
+	if ($explicit) {
+		echo "<a href='https://www.lorenzowoodmusic.com/link/"
+			. htmlentities($album['explicit_or_clean_slug'], ENT_QUOTES) 
+			. "'>"; 
+	}
+	else {
+		echo '<b>';
+	}
+	echo 'Radio Edit';
+	if ($explicit) {
+		echo "</a>";
+	}
+	else {
+		echo '</b>';
+	}
+} ?>
 
 
 	</div></div><div class="service-container"><?php if ($album['itunes_album']) { ?>
