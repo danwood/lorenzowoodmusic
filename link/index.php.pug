@@ -26,7 +26,7 @@ block prelude
 	|   $longTitle .= ' - by ' . $album['artist'];
 	|   $releaseDateString = NULL;
 	|   if (!empty($album['release_date'])) {
-	|       $release = new DateTime(/*$album['release_date']*/ '2020-01-01 00:00:00', new DateTimeZone('America/New_York'));
+	|       $release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
 	|       $now = new DateTime();
 	|       if ($now < $release) $releaseDateString = $release->format('l, F jS');
 	|   }
@@ -124,7 +124,9 @@ block main
 					echo 'Releasing ' . htmlspecialchars($releaseDateString);
 				} else {
 					echo 'Download and stream now';
-				}
+				} ?>
+			div.
+				<?php
 				if ($album['explicit_or_clean_slug']) { ?>
 				<div class="switch">
 					<input type="radio" class="switch-input" name="view2" value="dirty" id="dirty" checked>
@@ -133,9 +135,6 @@ block main
 					<label for="clean" class="switch-label switch-label-on">Radio Edit</label>
 					<span class="switch-selection"></span>
 				</div>
-
-
-
 				<?php }
 				//-explicit - "true" if this is an explicit version (of a single, generally)
 				//- - the slug of the other version that user can switch to.

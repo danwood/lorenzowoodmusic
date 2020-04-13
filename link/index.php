@@ -23,7 +23,7 @@ if ($album) {
   $longTitle .= ' - by ' . $album['artist'];
   $releaseDateString = NULL;
   if (!empty($album['release_date'])) {
-      $release = new DateTime(/*$album['release_date']*/ '2020-01-01 00:00:00', new DateTimeZone('America/New_York'));
+      $release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
       $now = new DateTime();
       if ($now < $release) $releaseDateString = $release->format('l, F jS');
   }
@@ -52,7 +52,7 @@ if ($now < $release) {
 	echo 'Releasing ' . htmlspecialchars($releaseDateString);
 } else {
 	echo 'Download and stream now';
-}
+} ?></p><div><?php
 if ($album['explicit_or_clean_slug']) { ?>
 <div class="switch">
 	<input type="radio" class="switch-input" name="view2" value="dirty" id="dirty" checked>
@@ -61,16 +61,13 @@ if ($album['explicit_or_clean_slug']) { ?>
 	<label for="clean" class="switch-label switch-label-on">Radio Edit</label>
 	<span class="switch-selection"></span>
 </div>
-
-
-
 <?php }
 //-explicit - "true" if this is an explicit version (of a single, generally)
 //- - the slug of the other version that user can switch to.
 ?>
 
 
-	</p></div><div class="service-container"><?php if ($album['itunes_album']) { ?>
+	</div></div><div class="service-container"><?php if ($album['itunes_album']) { ?>
 <div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_album'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
 <?php } if ($album['itunes_album'] && ($now >= $release)) { ?>
 <div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_album'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>

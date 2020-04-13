@@ -110,6 +110,7 @@ body>footer {
 
 .title-container {
 	background-color: #181818;
+	padding-bottom:10px;
 	text-align: center;
 	color: #fff;
 	h1, p {
@@ -203,9 +204,8 @@ body>footer {
 .switch {
   position: relative;
   height: 26px;
-  width: 120px;					// SIZE
-  margin: 20px auto;
-  background: rgba(0, 0, 0, 0.25);
+  width: 200px;					// SIZE
+  margin: 0 auto;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
 }
@@ -214,10 +214,10 @@ body>footer {
   position: relative;
   z-index: 2;
   float: left;
-  width: 58px;					// SIZE
+  width: 98px;					// SIZE
   line-height: 26px;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.75);
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
   cursor: pointer;
@@ -246,7 +246,7 @@ body>footer {
   transition-property: color, text-shadow;
 }
 .switch-input:checked + .switch-label-on ~ .switch-selection {
-  left: 60px;		// SIZE
+  left: 100px;		// SIZE
   /* Note: left: 50%; doesn't transition in WebKit */
 }
 
@@ -256,7 +256,7 @@ body>footer {
   top: 2px;
   left: 2px;
   display: block;
-  width: 58px;					// SIZE
+  width: 98px;					// SIZE
   height: 22px;
   border-radius: 3px;
   background-color: #c4bb61;
