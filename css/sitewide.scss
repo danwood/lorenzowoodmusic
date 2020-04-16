@@ -183,6 +183,9 @@ article.textual {
 	padding:2rem 0;		/* if we use margin above then it messes with background image */
 	max-width:60rem;
 }
+article.textual.unpadded {
+	padding:0;
+}
 
 body > footer {
 	background-color:var(--color-paper-low);

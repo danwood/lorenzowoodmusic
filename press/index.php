@@ -20,10 +20,14 @@ $albums = $db->allAlbums();
     <link rel="stylesheet" href="/css/main.041520.css">
     <link rel="prefetch" href="//img.youtube.com">
     <style>
-      td { padding:4px 10px }
+      table { border-collapse: collapse; border:1px solid rgba(0,0,0,0.25);}
+      td { padding:5px; }
       td a { display:block; text-decoration:none }
       td.info { opacity:0.5 }
+      td.thumb { min-width:32px; }
+      .thumb img { width:32px; }
       .socials svg { width:2em; padding:10px 10px 10px 0; }
+      tr:nth-child(even) {background: rgba(0,0,0,0.1)}
     </style>
   </head>
   <body class="press"><!--[if lt IE 9]>
@@ -51,6 +55,11 @@ $albums = $db->allAlbums();
       </div>
     </header>
     <main>
+      <section>
+        <article class="textual unpadded">
+          <h4>Press Kit - Lorenzo Wood (and 2AM in the Basement)</h4>
+        </article>
+      </section>
       <section>
         <article class="textual">
           <h1>
@@ -201,10 +210,17 @@ $albums = $db->allAlbums();
           <h2>Music Releases</h2>
           <table>
             <?php foreach ($albums as $album) {	if ('false' == $album['explicit'] && $album['explicit_or_clean_slug']) { continue; }	// don't want clean if both
+            	$now = new DateTime();
+            	$release = $now;   // default to now, so it should show up as released
+            	$releaseDateString = NULL;
+            	if (empty($album['release_date'])) { continue; } // must have a release date
+            	$release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
+            	$now = new DateTime();
+            	$releaseDateString = ($now < $release) ? $release->format('l, F jS') : $release->format('F Y');
             	?>
             <tr>
-              <td><img src="../album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>" /></td>
-              <td class="info"><?php echo htmlspecialchars($album['title']); ?></td>
+              <td class="thumb"><img src="../album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>" /></td>
+              <td><?php echo htmlspecialchars($album['title']); ?></td>
               <td class="info">
                  <?php
                 echo htmlspecialchars($album['artist']);
@@ -212,9 +228,15 @@ $albums = $db->allAlbums();
                 	echo '<br> feat. ' . htmlspecialchars($album['featuring']);
                 } ?>
               </td>
+              <td class="info"><?php echo (($now<$release)?'<b>':'') . htmlspecialchars($releaseDateString) . (($now<$release)?'<b>':''); ?></td>
+              <td>
+                <?php if ($now >= $release) {
+                	echo '<a href="/link/' . htmlentities($album['slug'], ENT_QUOTES) . '">Stream/<br/>Download</a>';
+                } ?>
+              </td>
               <td>
                 <?php if ('true' == $album['has_press_page']) {
-                	echo '<a href="' . $album['slug'] . '">Press Page</a>';
+                	echo '<a href="' . htmlentities($album['slug'], ENT_QUOTES) . '">Press Page</a>';
                 } ?>
               </td>
             </tr><?php }  ?>
