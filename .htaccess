@@ -443,6 +443,9 @@ AddDefaultCharset utf-8
 	Redirect 301 /2am-in-the-basement.html /2am-in-the-basement/
 	Redirect 301 /falling /link/falling
 	Redirect 301 /friends /link/more-than-friends
+        Redirect 301 /mtf /link/more-than-friends
+        Redirect 301 /mtfp /press/more-than-friends
+
 
 </IfModule>
 
