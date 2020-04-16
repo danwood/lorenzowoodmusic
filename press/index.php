@@ -9,7 +9,7 @@ $albums = $db->allAlbums();
 <html class="no-js" lang="en-us">
   <head>
     <meta charset="utf-8"><!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
-    <title>Press | Lorenzo Wood Music</title>
+    <title>Press &amp; Media | Lorenzo Wood Music</title>
     <meta name="description" content="Press Kit for Lorenzo Wood">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="supported-color-schemes" content="light dark">
