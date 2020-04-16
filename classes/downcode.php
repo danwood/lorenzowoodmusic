@@ -434,10 +434,10 @@ class DowncodeDB extends SQLite3
 		return $result;
 	}
 
-	function allAlbums()
+	function allAlbums()	// reverse order by timestamp, so most recent added at top
 	{
 		$result = Array();
-		$statement = $this->prepare('SELECT * FROM album order by ID');
+		$statement = $this->prepare('SELECT * FROM album order by timestamp desc');
 		$ret = $statement->execute();
 		while ($album = $ret->fetchArray(SQLITE3_ASSOC) ){
 			$result[] = $album;

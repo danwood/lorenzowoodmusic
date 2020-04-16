@@ -689,6 +689,17 @@ YouTube
 		float:left;
 	}
 
+	.youtube-column-4 {
+		width:25%;
+		float:left;
+
+		.title {
+			font-size: 80%;
+			line-height:1.1;
+			background-color:rgba(0,0,0,0.3);
+		}
+	}
+
 }
 
 

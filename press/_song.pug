@@ -1,0 +1,108 @@
+extends ../_layout.pug
+
+
+block append vars
+	- var currentClass = 'press'
+
+block title
+	title #{pageTitle} - Press page | Lorenzo Wood Music
+block description
+
+block styles
+	style
+		|.releaseDate { text-align:right; opacity:0.5; }
+		|.cover { float:left; width:192px; margin:0 1em 1em 0; }
+		|.column { float:left; margin-left:1em; }
+		|.socials svg { width:2em; padding:10px 10px 10px 0; }
+
+//- Force video thumbnails NOT to appear on song pages
+
+block main
+	section
+		article.textual
+			h1 Song: #{pageTitle}
+			h2 Artist: #{pageArtist}
+
+			p.releaseDate Song Release Date: #{releaseDate}
+
+			block song
+
+			-
+				var slug = slugAndCoverFile.replace(slugAndCoverFile.substr(slugAndCoverFile.lastIndexOf('.')), '')
+
+			h2 Web Page
+			p
+				|Please use this URL to link to "#{pageTitle}":
+				|
+				a(href='https://www.lorenzowoodmusic.com/link/' + slug) https://www.lorenzowoodmusic.com/link/#{slug}
+			block moreLinks
+
+			div.clearfix
+				h2 Album Artwork
+				a(href='../album_art_3000/' + slugAndCoverFile)
+					img.cover(src='../album_art_384/' + slugAndCoverFile, alt=pageTitle)
+				if slugAndCoverFile2 != undefined
+					a(href='../album_art_3000/' + slugAndCoverFile2)
+						img.cover(src='../album_art_384/' + slugAndCoverFile2, alt=pageTitle)
+
+				div.column
+					p: a(href='../album_art_3000/' + slugAndCoverFile) Link to large image (3000 pixels square)
+					if slugAndCoverFile2 != undefined
+						p: a(href='../album_art_3000/' + slugAndCoverFile2) Link to second large image (3000 pixels square)
+
+					if artworkDesigner != undefined
+						p
+							|Designed by
+							|
+							a(href=artworkDesignerURL) #{artworkDesigner}
+
+			if youtubeSlug != undefined
+				if youtubeSlug2 == undefined
+					h2 Music Video
+				else
+					h2 Music Videos
+				div.clearfix
+					a(href='https://www.youtube.com/watch?v=' + youtubeSlug)
+						img.cover(src='https://img.youtube.com/vi/' + youtubeSlug + '/sddefault.jpg', alt=pageTitle)
+					div.column
+						p: a(href='https://www.youtube.com/watch?v=' + youtubeSlug) Link to music video
+						p: a(href='https://img.youtube.com/vi/' + youtubeSlug + '/maxresdefault.jpg') Link to thumbnail image
+				if youtubeSlug2 != undefined
+					div.clearfix
+						a(href='https://www.youtube.com/watch?v=' + youtubeSlug2)
+							img.cover(src='https://img.youtube.com/vi/' + youtubeSlug2 + '/sddefault.jpg', alt=pageTitle)
+						div.column
+							p: a(href='https://www.youtube.com/watch?v=' + youtubeSlug2) Link to music video (YouTube)
+							p: a(href='https://img.youtube.com/vi/' + youtubeSlug2 + '/maxresdefault.jpg') Link to thumbnail image
+
+	div#generic
+	noscript
+		|More information: 
+		a(href="./") General press kit for Lorenzo Wood
+
+	section
+		article.textual
+
+			p.
+				Additional resources: <a href="/video/">videos</a> page and downloadable <a href="/photos/">photos</a>.
+			
+block append scripts
+	script.
+		var el = document.getElementById('generic');
+		// IE8+
+		var request = new XMLHttpRequest();
+		request.open('GET', 'shared.html', true);
+
+		request.onreadystatechange = function() {
+		  if (this.readyState === 4) {
+		    if (this.status >= 200 && this.status < 400) {
+		      var resp = this.responseText;
+		      el.innerHTML = resp;
+		    } else {
+		      el.innerHTML = 'More information: <a href="./">General press kit for Lorenzo Wood</a>';
+		    }
+		  }
+		};
+		request.send();
+		request = null;
+

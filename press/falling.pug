@@ -1,0 +1,94 @@
+extends _song.pug
+
+block vars
+	- var pageTitle = 'Falling'
+	- var pageArtist = '2AM in the Basement'
+	- var releaseDate = 'May 1, 2020'
+
+	//- - var youtubeSlug = ''
+
+	//- used for link page (without file extension) and to identify cover file.
+	- var slugAndCoverFile = 'falling.jpg'
+
+block song
+	h3 For Immediate Release
+
+	p: b Teen Musicians Create Cover of the Harry Styles Song "Falling" To Raise Funds for COVID-19 Relief
+
+	p.
+		ALAMEDA, CALIFORNIA, May 1, 2020 — Musician Lorenzo Wood today is releasing a cover of the hit song "Falling," in collaboration with 11 other teen musicians from around the United States, to raise money for COVID-19 relief. Proceeds from downloads and streams of the song will go to charity and listeners are encouraged to contribute what they can do a fundraising page that Wood has set up.
+
+	p.
+		"Falling" was originally recorded by English singer and songwriter Harry Styles, and released earlier this year.
+
+	p.
+		Wood initially recorded the song in his home studio with vocals and basic instrumentation of keyboards, guitars, and electric bass. But then, after being in touch online throughout the Coronavirus crisis with a number of fellow young musicians all over the country, he had the idea of accumulating additional parts for the song. He wrote arrangements for new instrumentation and emailed sheet music or scratch recordings to his new collaborators.
+	p.
+		"I was a little worried about how some of the contributions would sound," said Wood.  "Many of these musicians are stuck at home with their instrument but without any recording equipment.  So a lot of them used their iPhone to record their part. Fortunately I was able to process and clean up the sounds just fine. The microphone built into the iPhone is acutally prety good."
+
+	p.
+		Additional instruments added to the mix include backing vocals, strings, horns, clarinet, and both acoustic and electronic percussion.
+		
+	p.
+		Lorenzo is releasing the song "Falling" under his pseudonym, 2AM in the Basement, that he uses for cover songs. (He records his own compositions under his own name.) This version of the song adds additional energy to the original version. Singer/Producer Delanie Leclerc of Southeast Florida is a featured vocalist, singing the final chorus before a reprise featuring the all of the contributing musicians at once.
+
+	p.
+		The song also comes with a music video. Everybody made video recordings of their part, allowing Lorenzo to collect them into a production that evokes the online conferences that many people are using to keep in touch with friends and work.
+
+	p.
+		Wood and his collaborators have decided to use this release, and its unique circumstances, as a way to raise funds for some COVID-19 relief charities. Lorenzo will be contributing the net proceeds from downloads and streams of the song collected for the first 2 months after its release to a mix of relief charities: American Guild of Musical Artists (AGMA) Relief Fund, COVID-19 Emergency Response Fund for Community Bail & Bond Fund, Feeding America, Freelancers Relief Fund.
+
+	p.
+		Wood credits his parents with the idea of using the song to raise money. "We are all feeling a bit overwhelmed with staying at home and social distancing," said Lorenzo. "But they helped me understand that what I'm going through is nothing to complain about. The unemployment levels are horrible, and like me, musicians all over the world are having their gigs cancelled. And many people who are still working are putting their lives on the line every day."
+
+	p.
+		Musicians are especially impacted by the societal changes due to the Coronavirus, as many rely on crowds at live performances, cancelled for the forseeable future. The AGMA relief fund, one of the targetted charities, was chosen out of solidarity with fellow musicians.
+
+	p.
+		The fundraising goal is $5,000. Readers are encouraged to stream or purchase the song, and if possible, make an additional contribution at the website that Wood has set up.
+
+
+
+	p: b Press Contact
+	p Lorenzo Wood, <a href="mailto:info@lorenzowoodmusic.com">info@lorenzowoodmusic.com</a>
+	
+
+
+block moreLinks
+
+	h3 Fundraising Page
+	p
+		a(href="https://secure.actblue.com/donate/covid-falling") https://secure.actblue.com/donate/covid-falling
+
+	h3 Collaborators
+	p Most of the collaborators can be contacted via Instagram. Listed alphabetically by last name here:
+
+	mixin instagram(name, instrument, handle)
+
+		li
+			|#{name}
+			|
+			|(#{instrument})
+			|
+			if handle != ''
+				a(href='https://www.instagram.com/' + handle) @#{handle}
+
+	ul
+		+instagram('Terry Cowley', 'Tuba, Upright Bass', 'mea_hookani_pila')
+		+instagram('Ana-Laura Galindo', 'Clarinet', 'analaura_galindo')
+		+instagram('Elina Graham', 'Clarinet', '')
+		+instagram('Delanie Leclerc', 'Vocals', 'delanieleclerc')
+		+instagram('Ada Papila', 'Voice', 'adapapilamusic')
+		+instagram('Anna Renton', 'Violin and Viola', 'anna.renton')
+		+instagram('J Tolub', 'Trumpet', 'jthecomposer')
+		+instagram('Zander Scott', 'Drums', 'zander_scott_')
+		+instagram('Bailey Wise', 'Cello', 'baileymwise')
+		+instagram('Andrew Wilson', '808s/Drum Pads', 'parayasound')
+		+instagram('Lorenzo Wood', 'Vocals, Arrangement, Production', 'lorenzowoodmusic')
+		+instagram('Andy Young', 'Trombone', 'andyyru')
+
+	p
+		|Delanie Leclerc on
+		|
+		a(href='https://open.spotify.com/artist/547XK7rrl55NSCTqDa7TUx') Spotify
+

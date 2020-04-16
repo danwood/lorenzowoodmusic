@@ -343,6 +343,12 @@ AddDefaultCharset utf-8
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^/?link/(.*?)/?$ /link/index.php?slug=$1 [L]
 
+    # Rewrite lorenzowoodmusic.com/press/something to lorenzowoodmusic.com/press/something.html
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^/?press/([^.]*?)/?$ /press/$1.html [L]
+
 
 </IfModule>
 

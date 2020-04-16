@@ -1,0 +1,105 @@
+extends ../_layout.pug
+
+block prelude
+	|<?php
+	|
+	|require_once('../classes/downcode.php');
+	|$db = new DowncodeDB();
+	|$albums = $db->allAlbums();
+	|
+	|?>
+
+
+block vars
+	- var pageTitle = 'Press'
+	- var currentClass = 'press'
+	- var description = 'Press Kit for Lorenzo Wood'
+
+block styles
+	style
+		|td { padding:4px 10px }
+		|td a { display:block; text-decoration:none }
+		|td.info { opacity:0.5 }
+		|.socials svg { width:2em; padding:10px 10px 10px 0; }
+
+block append links
+	link(rel="prefetch" href="//img.youtube.com")
+		//- This should be done on any page showing YOUTUBE VIDEOS
+	
+include shared.pug
+
+block append main
+	section
+		article.textual
+
+			h1 Additional Resources
+
+			h2 Photos
+
+			include ../photos/_photos.pug
+
+
+			h2 Video
+
+			p Lorenzo Wood's videos appear on primarily on his YouTube channel at <a href="https://youtube.com/lorenzowoodmusic">youtube.com/lorenzowoodmusic</a>.
+			
+			article.clearfix.textual
+				.youtube-column-4
+					.youtube-border
+						.youtube(data-code='TkDhR4FMHVg' data-title='Lorenzo Wood - Still Need Love (Official Lyric Video)' data-linking='true')
+						p 2020 single - Written, produced, mixed, mastered, filmed, directed, edited by Lorenzo Wood
+
+				.youtube-column-4
+					.youtube-border
+						.youtube(data-code='PfjIqix5ZZw' data-title='Heartless - Cover by 2AM In The Basement' data-linking='true')
+						p A cover of a song by Diplo & Morgan Wallen; Video edited by Lorenzo Wood
+
+				.youtube-column-4
+					.youtube-border
+						.youtube(data-code='iVHF1RM7a9I' data-title='Lorenzo Wood - Jacket (I\'m Sensitive)' data-linking='true')
+						p Official music video of the 2019 single, directed by Jeremy Stuart
+
+				.youtube-column-4
+					.youtube-border
+						.youtube(data-code='JZaKGj-LSbg' data-title='Lorenzo Wood Live at Lone Tree Cemetery (highlights)' data-linking='true')
+						p The band played at nearby cemetery's summer concert series. Here are some snippets from the performance.
+			
+
+			h2 Music Releases
+
+			table
+				<?php foreach ($albums as $album) { ?>
+				tr
+					<td><img src="../album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>" /></td>
+					<td><?php echo htmlspecialchars($album['title']); ?></td>
+				<?php }  ?>
+
+			
+
+
+			h2 Press pages for individual songs
+
+			mixin songLink(imgName, title, artist, releaseMonth)
+				-
+					var slug = imgName.replace(imgName.substr(imgName.lastIndexOf('.')), '')
+				tr
+					td: a(href=slug)
+						img(src='../album_art_64/' + imgName, alt=title)
+					td: a(href=slug) #{title}
+					td.info #{artist}
+					td.info #{releaseMonth}
+
+			//- filename of song (minus the .jpg or .png) MUST match the slug used for the press page
+			//- REVERSE CHRONOLOGICAL...
+			//- Maybe make this database-driven at some point
+
+			table
+				+songLink('falling.jpg',			'Falling',			'2AM in the Basement',	'XXX 2020')
+				+songLink('more-than-friends.png',	'More Than Friends','Lorenzo Wood',			'May 2020')
+				+songLink('still-need-love.jpg',	'Still Need Love',	'Lorenzo Wood',			'March 2020')
+				+songLink('jacket.jpg',				'Jacket',			'Lorenzo Wood',			'May/October 2019')
+
+block prepend scripts
+	script
+		include ../js/youtube-min.js
+
