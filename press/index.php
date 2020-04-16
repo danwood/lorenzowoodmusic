@@ -67,7 +67,7 @@ $albums = $db->allAlbums();
             
           </h1>
           <p>
-            Lorenzo Wood is a musician, singer-songwriter, and producer from Alameda, California USA. He sings and plays a number of other instruments.
+            Lorenzo Wood is a musician, singer-songwriter, and producer from Alameda, California USA. He sings and plays several instruments.
             
           </p>
           <p>
@@ -80,7 +80,7 @@ $albums = $db->allAlbums();
           </p>
           <h3>Songwriting</h3>
           <p>
-            Lorenzo writes or co-writes all his own songs. Lorenzo is a frequent participant in West Coast Songwriters and is also a member of Nashville Songwriters Association International. His songs have won numerous "Song of the Month" awards since 2018. His song "Jacket" won "Best Song of the Year" for 2019 with the Menlo Park chapter of West Coast Songwriters.
+            Lorenzo writes all his own songs. Lorenzo is a frequent participant in West Coast Songwriters and is also a member of Nashville Songwriters Association International. His songs have won numerous "Song of the Month" awards since 2018. His song "Jacket" won "Best Song of the Year" for 2019 with the Menlo Park chapter of West Coast Songwriters.
             
           </p>
           <h3>Performance</h3>

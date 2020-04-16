@@ -104,7 +104,7 @@ block append header
 				<a target="_blank" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>">
 					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
 				</a>
-				span <?php echo htmlspecialchars( $now < $release ? 'Upcoming' : ($release < $oneMonthAgo ? 'Latest' : 'New') . ' ' . $album['album_ep_single'] . ' “' . $album['title'] . '”'); ?> —
+				span <?php echo htmlspecialchars( ($now < $release ? 'Upcoming' : ($release < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $album['album_ep_single'] . ' “' . $album['title'] . '”'); ?> —
 					| &nbsp;
 				b
 					<a style="text-decoration:underline" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>"><?php echo ($now < $release) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
