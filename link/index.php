@@ -143,6 +143,8 @@ if ($album['explicit_or_clean_slug']) { ?>
 <div class="service"><a href="https://soundcloud.com/<?php echo htmlentities($album['soundcloud_path'], ENT_QUOTES); ?>"><img src="../svg/soundcloud.svg" alt="Soundcloud"><span class="play">Play</span></a></div>
 <?php } if ($album['deezer_album']) { ?>
 <div class="service"><a href="https://www.deezer.com/us/album/<?php echo htmlentities($album['deezer_album'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
+<?php } if ($album['iheartradio_songs']) { ?>
+<div class="service"><a href="https://www.iheart.com/artist/lorenzo-wood-32159981/songs/<?php echo htmlentities($album['iheartradio_songs'], ENT_QUOTES); ?>"><img src="../svg/iheartradio-logo.svg" alt="IHeartRadio"><span class="play">Play</span></a></div>
 <?php } if ($album['tidal_album']) { ?>
 <div class="service"><a href="https://listen.tidal.com/album/<?php echo htmlentities($album['tidal_album'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
 <?php } if ($album['tidal_track']) { ?>

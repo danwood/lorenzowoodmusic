@@ -475,6 +475,28 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_64/castle-on-the-hill.jpg": {
+		"ft": 16384,
+		"iS": 2119,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_64/castle-on-the-hill.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_64/heartless.jpg": {
+		"ft": 16384,
+		"iS": 1626,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_64/heartless.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_64/jacket-ep.jpg": {
 		"ft": 16384,
 		"iS": 1335,
@@ -484,6 +506,28 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/album_art_64/jacket.jpg": {
+		"ft": 16384,
+		"iS": 1406,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_64/jacket.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_64/more-than-friends.png": {
+		"ft": 32768,
+		"iS": 272,
+		"oA": 0,
+		"oAP": "/album_art_64/more-than-friends.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/album_art_64/now-in-control.jpg": {
@@ -503,6 +547,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_64/old-town-road.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_64/still-need-love.jpg": {
+		"ft": 16384,
+		"iS": 1891,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_64/still-need-love.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
