@@ -68,36 +68,27 @@ block append main
 			h2 Music Releases
 
 			table
-				<?php foreach ($albums as $album) { ?>
+				<?php foreach ($albums as $album) {
+				|	if ('false' == $album['explicit'] && $album['explicit_or_clean_slug']) { continue; }	// don't want clean if both
+				|	?>
+					
 				tr
-					<td><img src="../album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>" /></td>
-					<td><?php echo htmlspecialchars($album['title']); ?></td>
+					td <img src="../album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>" />
+					td.info <?php echo htmlspecialchars($album['title']); ?>
+					td.info 
+						|<?php
+						|echo htmlspecialchars($album['artist']);
+						|if ($album['featuring']) {
+						|	echo ' feat. ' . htmlspecialchars($album['featuring']);
+						|} ?>
+					td
+						|<?php if ('true' == $album['has_press_page']) {
+						|	echo '<a href="' . $album['slug'] . '">Press Page</a>';
+						|} ?>
+
 				<?php }  ?>
 
 			
-
-
-			h2 Press pages for individual songs
-
-			mixin songLink(imgName, title, artist, releaseMonth)
-				-
-					var slug = imgName.replace(imgName.substr(imgName.lastIndexOf('.')), '')
-				tr
-					td: a(href=slug)
-						img(src='../album_art_64/' + imgName, alt=title)
-					td: a(href=slug) #{title}
-					td.info #{artist}
-					td.info #{releaseMonth}
-
-			//- filename of song (minus the .jpg or .png) MUST match the slug used for the press page
-			//- REVERSE CHRONOLOGICAL...
-			//- Maybe make this database-driven at some point
-
-			table
-				+songLink('falling.jpg',			'Falling',			'2AM in the Basement',	'XXX 2020')
-				+songLink('more-than-friends.png',	'More Than Friends','Lorenzo Wood',			'May 2020')
-				+songLink('still-need-love.jpg',	'Still Need Love',	'Lorenzo Wood',			'March 2020')
-				+songLink('jacket.jpg',				'Jacket',			'Lorenzo Wood',			'May/October 2019')
 
 block prepend scripts
 	script
