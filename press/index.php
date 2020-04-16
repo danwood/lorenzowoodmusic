@@ -17,7 +17,7 @@ $albums = $db->allAlbums();
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="stylesheet" href="/css/main.041520.css">
+    <link rel="stylesheet" href="/css/main.041420.css">
     <link rel="prefetch" href="//img.youtube.com">
     <style>
       table { border-collapse: collapse; border:1px solid rgba(0,0,0,0.25);}
@@ -99,8 +99,27 @@ $albums = $db->allAlbums();
           <p>
             For his performances and in support of others, Lorenzo also runs live sound, and is knowledgeable and experienced with most audio and musical equipment.
             
-            
           </p>
+          <h3>Recent Gigs</h3>
+          <ul style="column-count:2">
+            <li>2019: Monkey King Restaurant, Alameda CA</li>
+            <li>2019: Town Hall Theatre, Lafayette CA</li>
+            <li>2019: San Francisco Brewing Company</li>
+            <li>2019: Private event (with full band), Hayward CA</li>
+            <li>2019: Walnut Festival, Walnut Creek CA			</li>
+            <li>2019: Summer Concert Series <a href="https://lonetreecemetery.com/event/summer-concert-series/">[link]</a>, Hayward CA</li>
+            <li>2019: Downtown Alameda Spring Festival</li>
+            <li>2019: Novato Art, Wine & Music Fair</li>
+            <li>2019: Alameda South Shore Center</li>
+            <li>2018: Private event, San Francisco</li>
+            <li>2018: Walnut Festival, Walnut Creek				</li>
+            <li>2018: Downtown Alameda Spring Festival</li>
+            <li>2018: Teen Rock Band Showcase, Oakland</li>
+            <li>2017: Webster Street Jam, Alameda</li>
+            <li>2017: Wedding, Berkeley</li>
+            <li>2017: Private events, San Carlos & Redwood City</li>
+            <li>2017: Alameda South Shore Center, opened for The Sun Kings </li>
+          </ul>
           <h3>Production</h3>
           <p>
             Lorenzo has been producing, and releasing a number of singles for the last few months, working up to a full-length album release.
@@ -157,6 +176,8 @@ $albums = $db->allAlbums();
           </ul>
           <h2>Contact Info</h2>
           <p>Please contact <a href="mailto:info@lorenzowoodmusic.com">info@lorenzowoodmusic.com</a>.</p>
+          <p>Booking: ☎ <img class="ghost" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAAAOBAMAAAA8gTSSAAAAGFBMVEX///8GBgZfX1+/v7/f399/f3+fn58/Pz/0OKciAAAA30lEQVR4XtWRwUrDUBRED+/lNetrW9xG6AdchabbbKrbCsF1ggu3poZ+v2UutOQHBGcRDmeYXEL485h9c2ygeppRqmlGhmInmXczh9EFUUED+dJA6hJK7YcwnDuUntJRXVygSrt4HK8OCJApqpQEdesBhJ5sELasXCL5S5Q1t+zhQ/VelVLNwk/ykMweyLaOMj1vkYGeqtGuv+94Xd5780MXu10ZiDQUs43gvmuX36cXaCcPkE8gK5Bc7fIsrP2L5b18u1c67QJix/jo2Wyt36bk6QcZxi2RBGAbgap/k18A4SCIF3ziIAAAAABJRU5ErkJggg==" alt="" /></p>
+          <p>Lorenzo Direct: ☎ <img class="ghost" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAAAOCAMAAAD5cdmTAAAAGFBMVEX///+/v78FBQXf398/Pz9fX1+fn59/f3+gQYbBAAAAzklEQVR42u2TyxbDIAhECwP4/39cQlKI2KSbrno6izjqHR+H+Ph1sUu8xdB9AMqCCSFhoZhygzKpi7gxLfBBkdjhFPtgScin35jQdRxi1OBaOaHhn4FH00BONeYyLmS0LCjMbCeetk5w8+mD8HNqmVk9PizaFYageKMjpLxJA2COIHEzyaxxaHQKLsE+3k7hWFShzO3tBm/qcDH3tcPIpcrc1y6QBpvitbfmf2iy2zNCt7fr8dyuw8bxqIg30fqmCnFIJpO6iPsIEv7ry3oCwzcEhnvsnVwAAAAASUVORK5CYII=" alt="" /></p>
           <h2>Press Coverage</h2>
           <!-- May 30 2019-->
           <p><a href="https://alamedasun.com/news/young-alameda-musician-releases-new-single">Young Alameda Musician Releases New Single</a></p>

@@ -287,6 +287,10 @@ a.spotify {
 
 }
 
-
+.ghost {
+	user-select: none;
+	user-drag: none;
+	pointer-events: none;
+}
 
 
