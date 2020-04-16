@@ -209,7 +209,7 @@ $albums = $db->allAlbums();
                  <?php
                 echo htmlspecialchars($album['artist']);
                 if ($album['featuring']) {
-                	echo ' feat. ' . htmlspecialchars($album['featuring']);
+                	echo '<br> feat. ' . htmlspecialchars($album['featuring']);
                 } ?>
               </td>
               <td>

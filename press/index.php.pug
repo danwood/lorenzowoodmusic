@@ -79,7 +79,7 @@ block append main
 						|<?php
 						|echo htmlspecialchars($album['artist']);
 						|if ($album['featuring']) {
-						|	echo ' feat. ' . htmlspecialchars($album['featuring']);
+						|	echo '<br> feat. ' . htmlspecialchars($album['featuring']);
 						|} ?>
 					td
 						|<?php if ('true' == $album['has_press_page']) {
