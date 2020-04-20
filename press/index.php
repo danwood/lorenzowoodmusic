@@ -67,40 +67,32 @@ $albums = $db->allAlbums();
             
           </h1>
           <p>
-            Lorenzo Wood is a musician, singer-songwriter, and producer from Alameda, California USA. He sings and plays several instruments.
+            Lorenzo Wood is a musician, songwriter, producer, and vocalist from Alameda, California USA. 
             
           </p>
+          <p>In addition to recording and producing songs and videos in his home studio, Lorenzo performs solo or with a band live. With a skillset of music performace technology, he puts together unique, intricate live setups that make his performances stand out. </p>
           <p>
-            Lorenzo performs solo or with a band in concert and at street fairs and private events. In addition to playing live, Lorenzo runs a recording studio in Alameda producing local artists as well as his own music.
-            
-          </p>
-          <p>
-            Lorenzo lists Maroon 5, Shawn Mendes, Julia Michaels, John Mayer, The Beatles, U2, Fleetwood Mac, Niall Horan and Train as his musical influences.
-            
-          </p>
-          <h3>Songwriting</h3>
-          <p>
-            Lorenzo writes all his own songs. Lorenzo is a frequent participant in West Coast Songwriters and is also a member of Nashville Songwriters Association International. His songs have won numerous "Song of the Month" awards since 2018. His song "Jacket" won "Best Song of the Year" for 2019 with the Menlo Park chapter of West Coast Songwriters.
+            Lorenzo lists Maroon 5, Train, U2, Shawn Mendes, and John Mayer as his initial musical influences. But now feels his style resembles more that of artists like Bazzi, Julia Michaels, Post Malone, and Jonas Brothers.
             
           </p>
           <h3>Performance</h3>
           <p>
-            Lorenzo has been performing his songs since a young age. At age 13, he discovered busking, and has been performing primarily at street festivals in the San Francisco Bay Area every summer/fall since then, as well as performing occasionally in downtown San Francisco.
+            Lorenzo has been performing and recording his songs since a young age. At age 13, he discovered busking, and has been performing primarily at street festivals in the San Francisco Bay Area every summer/fall since then.
             
           </p>
           <p>
-            At age 16, he first formed a band and performed his own songs live during the summers of 2018 and 2019.
+            In 2018, while releasing his first EP at the age of 15, he put together and hired a band to play the newly released songs with him on stage. He performed again 2019 with a new lineup.
             
           </p>
           <p>
-            Lorenzo has also performed as a member of several local bands. Recently he has supported Kat Van Morgan, Saint Benjamin/Ben LaMar, and others - playing guitar, keys, or drums as needed.
+            Lorenzo has also performed as a member of several local bands. Recently he has supported Kat Van Morgan, Saint Benjamin, and others, playing whatever instruments were needed.
             
           </p>
           <p>
-            For his performances and in support of others, Lorenzo also runs live sound, and is knowledgeable and experienced with most audio and musical equipment.
+            For many of his own performances and those of others, Lorenzo coordinates and runs live sound, being knowledgeable and experienced with most audio and musical equipment.
             
           </p>
-          <h3>Recent Gigs</h3>
+          <h3>Recent Gig Highlights</h3>
           <ul style="column-count:2">
             <li>2019: Monkey King Restaurant, Alameda CA</li>
             <li>2019: Town Hall Theatre, Lafayette CA</li>
@@ -110,11 +102,13 @@ $albums = $db->allAlbums();
             <li>2019: Summer Concert Series <a href="https://lonetreecemetery.com/event/summer-concert-series/">[link]</a>, Hayward CA</li>
             <li>2019: Downtown Alameda Spring Festival</li>
             <li>2019: Novato Art, Wine & Music Fair</li>
+            <li>2019: Lafayette Art & Wine Fair</li>
             <li>2019: Alameda South Shore Center</li>
             <li>2018: Private event, San Francisco</li>
-            <li>2018: Walnut Festival, Walnut Creek				</li>
-            <li>2018: Downtown Alameda Spring Festival</li>
-            <li>2018: Teen Rock Band Showcase, Oakland</li>
+            <li>2018: Walnut Festival, Walnut Creek	</li>
+            <li>2018: Lafayette Art & Wine Fair			</li>
+            <li>2018: Downtown Alameda Spring Festival (with full band)</li>
+            <li>2018: Alameda Mini Maker Faire (with full band)</li>
             <li>2017: Webster Street Jam, Alameda</li>
             <li>2017: Wedding, Berkeley</li>
             <li>2017: Private events, San Carlos & Redwood City</li>
@@ -122,35 +116,32 @@ $albums = $db->allAlbums();
           </ul>
           <h3>Production</h3>
           <p>
-            Lorenzo has been producing, and releasing a number of singles for the last few months, working up to a full-length album release.
+            Lorenzo has been producing and releasing a number of singles for the last few months, with several more songs coming soon.
             
           </p>
           <p>
-            Lorenzo is an accomplished music producer, both for his own music and for other musicians. He produced and co-wrote four of the tracks from <a href="http://katvanmorgan.com">Kat Van Morgan</a>'s EP, and has also recorded full tracks and demos for other musicians.
+            Lorenzo is an accomplished music producer, both for his own music and for other artists. He produced and co-wrote four of the tracks from <a href="http://katvanmorgan.com">Kat Van Morgan</a>'s EP, and has also recorded full tracks and demos for other musicians.
             
           </p>
           <p>
-            He is also versed at video production, creating videos both for his own songs as well as others, such as performance videos for Sam Johnson.
+            He is also versed at video production, creating videos both for his own songs as well as others, such as performance videos for <a href="https://samjohnsonlive.com">Sam Johnson</a>.
             
           </p>
           <p>
-            Lorenzo enjoys collaborations with other musicians.  He bought singer/songwriter Kaia onboard as a featured vocalist for the acoustic version of his 2019 single "Jacket," and contributed vocals to the song "You and Me Now" by Aendru.
+            Lorenzo enjoys collaborating with other musicians.  He brought singer/songwriter Kaia onboard as a featured vocalist for the acoustic version of his 2019 single "Jacket"; Working with Andrew Wilson, he co-wrote and sang on "You and Me Now", and produced the vocals on "Lonely." Lorenzo plans for more collaborations and featured artists in his upcoming releases.
             
           </p>
           <h3>Awards</h3>
           <p>
-            Lorenzo was a national merit winner in the 2020 <a href="http://www.youngarts.org/winners">National YoungArts Foundation</a> in the cateogry of Voice/Singer-Songwriter. He joins some of the nation’s most accomplished artists in the visual, literary and performing arts and was selected based on his caliber of artistic achievement by an esteemed discipline-specific panel of artists through a rigorous blind adjudication process. This year’s award winners represent the top 9.5% of applications across ten artistic disciplines.
+            Lorenzo was a merit winner in the 2020 <a href="http://www.youngarts.org/winners">National YoungArts Foundation</a> in the category of Voice/Singer-Songwriter. He joins some of the nation’s most accomplished artists in the visual, literary and performing arts and was selected based on his caliber of artistic achievement by an esteemed discipline-specific panel of artists through a rigorous blind adjudication process. This year’s award winners represent the top 9.5% of applications across ten artistic disciplines.
             
           </p>
           <p>
             Lorenzo was awarded a grant from the <a href="https://www.hunterwatson.org">Hunter Brooks Watson Memorial Fund</a> of McLean, Virginia. This fund seeks out young people who dream of something they are deeply curious and passionate about, then provides them with financial resources to explore that passion. Lorenzo was awarded a grant to upgrade his home music studio. <a href="https://static1.squarespace.com/static/5d39310e96ef000001b54025/t/5d77b2f6ad1ebf5ae039115f/1568125687968/Spring+Web+Newsletter+2019+Optimized.pdf">[Newsletter article]</a>
             
-            
           </p>
-          <h3>2AM in the Basement</h3>
           <p>
-            2AM in the Basement is the pseudonym for Lorenzo's additional projects, covers of songs by other artists. Starting with a cover of "Old Town Road" by Lil Nas X, Lorenzo started releasing his productions of other people's songs so as not to "muddy the waters." and detract from his own songs.
-            
+            Lorenzo is a frequent participant in <a href="https://www.westcoastsongwriters.org">West Coast Songwriters</a>. His songs have won numerous "Song of the Month" awards since 2018. His song "Jacket" won "Best Song of the Year" in 2019 with the Redwood City chapter of West Coast Songwriters, and was a finalist in West Coast Songwriter's Song of the Year competition.
             
             
           </p>
@@ -163,16 +154,8 @@ $albums = $db->allAlbums();
                 <svg aria-label="Facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on Facebook</desc><!-- #3b5998 --><path d="M22.68 0H1.32C.6 0 0 .6 0 1.32v21.36C0 23.4.6 24 1.32 24h11.5v-9.3H9.69v-3.62h3.13V8.41c0-3.1 1.9-4.79 4.66-4.79 1.32 0 2.46.1 2.8.15V7h-1.92c-1.5 0-1.8.71-1.8 1.76v2.32h3.59l-.47 3.62h-3.12V24h6.12c.73 0 1.32-.6 1.32-1.32V1.32C24 .6 23.4 0 22.68 0z"/></svg>Facebook</a></li>
             <li><a data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic" style="fill:#b00">
                 <svg aria-label="YouTube" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on YouTube</desc><!-- #b00 --><path d="M4.65 0H6.1l.99 3.7L8 0h1.45L7.79 5.5v3.76H6.35V5.51L4.65 0zm6.6 2.37c-1.12 0-1.86.74-1.86 1.84v3.35c0 1.2.62 1.83 1.86 1.83 1.02 0 1.82-.69 1.82-1.83V4.2c0-1.07-.8-1.84-1.82-1.84zm.53 5.13c0 .37-.2.65-.53.65-.36 0-.56-.3-.56-.65V4.32c0-.37.17-.65.53-.65.39 0 .56.27.56.65V7.5zm4.73-5.07v5.19c-.16.19-.5.5-.75.5-.27 0-.34-.18-.34-.45V2.43h-1.27v5.71c0 .68.2 1.22.89 1.22.38 0 .92-.2 1.47-.85v.75h1.27V2.43H16.5zm2.2 13.86c-.45 0-.54.31-.54.76v.66h1.07v-.66c0-.44-.1-.76-.53-.76zm-4.7.04a.93.93 0 0 0-.25.2v4.05c.1.1.19.18.28.23.2.1.49.1.62-.07.07-.09.1-.24.1-.45v-3.36a.82.82 0 0 0-.12-.5c-.15-.19-.42-.2-.63-.1zm4.82-5.2a183 183 0 0 0-13.66 0c-2.82.2-3.15 1.9-3.17 6.37.02 4.47.35 6.17 3.17 6.37a183 183 0 0 0 13.66 0c2.82-.2 3.15-1.9 3.17-6.37-.02-4.47-.35-6.17-3.17-6.37zM6.51 21.82H5.15v-7.54H3.74V13h4.18v1.28H6.5v7.54zm4.84 0h-1.2v-.72c-.23.27-.46.47-.7.6-.65.38-1.55.37-1.55-.95v-5.44h1.21v5c0 .25.06.43.32.43.24 0 .57-.3.71-.49v-4.94h1.21v6.5zm4.66-1.35c0 .8-.3 1.43-1.1 1.43-.45 0-.82-.16-1.15-.58v.5h-1.22V13h1.22v2.84c.27-.33.64-.6 1.07-.6.89 0 1.18.74 1.18 1.62v3.61zm4.47-1.75h-2.31v1.23c0 .49.04.9.53.9.5 0 .54-.34.54-.9v-.45h1.24v.48c0 1.26-.53 2.02-1.81 2.02-1.16 0-1.75-.85-1.75-2.02v-2.92c0-1.13.75-1.91 1.84-1.91 1.16 0 1.72.74 1.72 1.91v1.66z"/></svg>YouTube</a></li>
-            <li><a data-title="Twitter" href="https://www.twitter.com/lorenzomusic">
-                <svg aria-label="Twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on Twitter</desc><path fill="#55acee" d="M24 4.56c-.88.39-1.83.65-2.83.77a4.93 4.93 0 0 0 2.17-2.72c-.95.56-2 .97-3.13 1.2a4.92 4.92 0 0 0-8.4 4.48A13.9 13.9 0 0 1 1.68 3.15 4.93 4.93 0 0 0 3.2 9.72a4.9 4.9 0 0 1-2.23-.61A4.93 4.93 0 0 0 4.91 14a5 5 0 0 1-2.22.08 4.93 4.93 0 0 0 4.6 3.42A9.9 9.9 0 0 1 0 19.54a13.94 13.94 0 0 0 7.55 2.21c9.14 0 14.3-7.72 14-14.64.95-.7 1.79-1.57 2.45-2.55z"/></svg>Twitter</a>
-              <tt style="opacity:0.5">@lorenzowmusic</tt>
-            </li>
             <li><a data-title="BandsInTown" href="https://www.bandsintown.com/lorenzowoodmusic">
                 <svg aria-label="Bands in Town" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on Bands in Town</desc><path fill="#00AEA8" d="M0 0h24v24H0z"/><path fill="#FFF" d="M12.5 7.5h4v5h-4zm4.5-5h4v10h-4z"/><path d="M3.5 3v18.5H21V13H8v4h9v.5H7.5V3h-4z" fill="#FFF"/><path fill="#FFF" d="M8 7.5h4v5H8z"/></svg>BandsInTown</a></li>
-            <li><a data-title="ReverbNation" href="https://www.reverbnation.com/lorenzowoodmusic">
-                <svg aria-label="ReberbNation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on ReverbNation</desc><ellipse cx="12" cy="12" rx="12" ry="12" fill="#DB9834"/><path d="M17.95 10.72l-2.84 5.06.63 2.07L12.75 24s-5.23.64-8.9-3.2C.17 16.96.07 14.02.07 14.02l11.89-7.68.08 5.52 5.91-1.14z" fill="#A37122"/><path d="M8.3 17.89l3.72-2.75 3.72 2.75-1.42-4.45 3.71-2.75h-4.59l-1.42-4.44-1.42 4.44H6.01l3.72 2.75L8.3 17.9z" fill="#FFF"/></svg>ReverbNation </a></li>
-            <li><a data-title="SoundCloud" href="https://www.soundcloud.com/lorenzowoodmusic">
-                <svg aria-label="SoundCloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><desc>Lorenzo Wood Music on SoundCloud</desc><path fill="#f50" d="M7 17.94H6V9.87c.3-.23.64-.43 1-.56v8.63zm3 0h1V8.7c-.23.27-.44.55-.62.86L10 9.4v8.55zm-2 0h1V9.09c-.5-.08-.62-.05-1 0v8.85zm-4 0h1v-7.02a4.7 4.7 0 0 0-.7 1.53l-.3-.18v5.67zm-3-5.25a3.07 3.07 0 0 0 0 4.53V12.7zm18.88-.67c-.2-2.84-2.4-5.08-5.12-5.08-1.02 0-1.96.33-2.76.88v10.12h9.09c1.6 0 2.91-1.4 2.91-3.1 0-2.24-2.17-3.78-4.12-2.82zM3 11.99c-.3-.02-.53-.03-1 .12v5.7c.45.14.64.13 1 .13v-5.95z"/></svg>SoundCloud </a></li>
           </ul>
           <h2>Contact Info</h2>
           <p>Email: <a href="mailto:info@lorenzowoodmusic.com">info@lorenzowoodmusic.com</a>.</p>
@@ -262,6 +245,13 @@ $albums = $db->allAlbums();
               </td>
             </tr><?php }  ?>
           </table>
+          <p>
+            2AM in the Basement is the pseudonym for Lorenzo's additional projects, covers of songs by other artists. Starting with a cover of "Old Town Road" by Lil Nas X, Lorenzo started releasing his productions of other people's songs so as not to "muddy the waters." and detract from his own songs.
+            
+            
+            
+            
+          </p>
         </article>
       </section>
     </main>
