@@ -207,6 +207,29 @@ block main
 			"25vw"
 			];
 
+		.subsection.light-text(style="background-color:#222222")
+			article
+				.release-image.bordered
+					a(href="/link/more-than-friends")
+						+img("more-than-friends.png", "Cover image of More Than Friends", coverArtResolutions, coverArtSizes)
+				.release-blurb.no-video
+					h3: a(href="/link/more-than-friends") More Than Friends
+
+					p More Than Friends is an upbeat song about the hopeful transition from being just friends into something more.
+
+					<?php $release = new DateTime('2020-05-01 00:00:00', new DateTimeZone('America/New_York'));
+					|if ($now < $release) { ?>
+
+					h4 Releasing May 1, 2020
+					p: a.bold(href="link/more-than-friends") Pre-Save / Pre-Order
+
+					<?php } else { ?>
+
+					h4 May 2020
+					p: a.bold(href="link/more-than-friends") Download/Stream
+
+					<?php } ?>
+
 		.subsection.light-text(style="background-color:#3b8abb")
 			article
 				.release-image.bordered
