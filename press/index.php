@@ -256,7 +256,7 @@ $albums = $db->allAlbums();
       </section>
     </main>
     <footer>
-      <p><b>Copyright © 2017-2020 Lorenzo Wood</b><span class="widespace"></span><span class="widespace"></span><a class="contact-link" href="/contact/">Contact us</a>
+      <p><b>Copyright © 2017-2020 Lorenzo Wood</b><span class="widespace"></span><span class="widespace"></span><a class="contact-link" href="/contact/">Contact us</a><span class="widespace"></span><a class="press-link active" href="/press/">Press & Media</a>
       </p>
       <p class="js-warning">
         JavaScript is disabled in your browser; please enable it to see missing content.
