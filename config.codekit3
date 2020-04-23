@@ -307,7 +307,7 @@
 		"oAP": "/album_art_3000/falling.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_3000/heartless.jpg": {
@@ -417,7 +417,7 @@
 		"oAP": "/album_art_384/falling.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_384/heartless.jpg": {
@@ -527,7 +527,7 @@
 		"oAP": "/album_art_64/falling.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_64/heartless.jpg": {
@@ -637,7 +637,7 @@
 		"oAP": "/album_art_640/falling.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/album_art_640/heartless.jpg": {
