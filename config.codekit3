@@ -189,6 +189,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_1200x630/falling.jpg": {
+		"ft": 16384,
+		"iS": 2820351,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_1200x630/falling.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/album_art_1200x630/heartless.jpg": {
 		"ft": 16384,
 		"iS": 23574,
@@ -398,6 +409,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_384/falling.jpg": {
+		"ft": 16384,
+		"iS": 28165,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_384/falling.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_384/heartless.jpg": {
 		"ft": 16384,
 		"iS": 10932,
@@ -497,6 +519,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_64/falling.jpg": {
+		"ft": 16384,
+		"iS": 4586,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_64/falling.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_64/heartless.jpg": {
 		"ft": 16384,
 		"iS": 1626,
@@ -591,6 +624,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/castle-on-the-hill.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_640/falling.jpg": {
+		"ft": 16384,
+		"iS": 60438,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_640/falling.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
