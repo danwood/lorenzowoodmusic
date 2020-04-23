@@ -14,6 +14,7 @@ block styles
 		|.cover { float:left; width:192px; margin:0 1em 1em 0; }
 		|.column { float:left; margin-left:1em; }
 		|.socials svg { width:2em; padding:10px 10px 10px 0; }
+		|.soundCloudLink svg { width:3em; padding-right:5px; }
 
 //- Force video thumbnails NOT to appear on song pages
 
@@ -36,6 +37,14 @@ block main
 				|
 				a(href='https://www.lorenzowoodmusic.com/link/' + slug) https://www.lorenzowoodmusic.com/link/#{slug}
 			block moreLinks
+
+			//if privateSoundCloud != undefined
+			h2 Prerelease - SoundCloud Link
+			p: i For review use only - not for distribution
+			p
+				a.soundCloudLink(href=privateSoundCloud)
+					include ../svg/soundcloud-logo.svg
+					|#{pageTitle} on SoundCloud
 
 			div.clearfix
 				h2 Album Artwork
