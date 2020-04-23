@@ -239,7 +239,7 @@ $albums = $db->allAlbums();
                 } ?>
               </td>
               <td>
-                <?php if ('true' == $album['has_press_page']) {
+                <?php if (now>=$release && 'true' == $album['has_press_page']) {
                 	echo '<a href="' . htmlentities($album['slug'], ENT_QUOTES) . '">Press Page</a>';
                 } ?>
               </td>

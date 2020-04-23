@@ -106,7 +106,7 @@ block append main
 						|	echo '<a href="/link/' . htmlentities($album['slug'], ENT_QUOTES) . '">Stream/<br/>Download</a>';
 						|} ?>
 					td
-						|<?php if ('true' == $album['has_press_page']) {
+						|<?php if (now>=$release && 'true' == $album['has_press_page']) {
 						|	echo '<a href="' . htmlentities($album['slug'], ENT_QUOTES) . '">Press Page</a>';
 						|} ?>
 
