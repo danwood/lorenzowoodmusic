@@ -220,6 +220,8 @@ $albums = $db->allAlbums();
             	if (empty($album['release_date'])) { continue; } // must have a release date
             	$release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
             	$now = new DateTime();
+            	if ($now < $release) { continue; }		// DO NOT SHOW UNRELEASED
+            
             	$releaseDateString = ($now < $release) ? $release->format('l, F jS') : $release->format('F Y');
             	?>
             <tr>
@@ -239,7 +241,7 @@ $albums = $db->allAlbums();
                 } ?>
               </td>
               <td>
-                <?php if (now>=$release && 'true' == $album['has_press_page']) {
+                <?php if ($now>=$release && 'true' == $album['has_press_page']) {
                 	echo '<a href="' . htmlentities($album['slug'], ENT_QUOTES) . '">Press Page</a>';
                 } ?>
               </td>
