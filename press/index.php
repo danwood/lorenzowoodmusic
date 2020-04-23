@@ -185,6 +185,7 @@ $albums = $db->allAlbums();
           </section>
           <h2>Video</h2>
           <p>Lorenzo Wood's videos appear on primarily on his YouTube channel at <a href="https://youtube.com/lorenzowoodmusic">youtube.com/lorenzowoodmusic</a>.</p>
+          <p>For example:</p>
           <article class="clearfix textual">
             <div class="youtube-column-4">
               <div class="youtube-border">
