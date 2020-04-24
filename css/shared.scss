@@ -362,3 +362,23 @@ Masonry
 //- On contact page only, hide the contact link since we're on that page!
 
 body.contact a.contact-link { display:none; }
+
+@media only screen and (max-width: 767px)  {
+
+	table.flipping {
+
+		td { display: block}
+		td:first-child { font-weight: bold; }
+		tr { display: block; border-bottom:1px solid gray; }
+
+	}
+}
+
+img.bio {
+	max-width: 240px;
+
+	@media only screen and (min-width: 768px)  {
+
+		float: right;
+	}
+}

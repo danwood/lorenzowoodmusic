@@ -17,7 +17,7 @@ $albums = $db->allAlbums();
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="stylesheet" href="/css/main.041420.css">
+    <link rel="stylesheet" href="/css/main.041423.css">
     <link rel="prefetch" href="//img.youtube.com">
     <style>
       table { width:100%; border-collapse: collapse; border:1px solid rgba(0,0,0,0.25);}
@@ -66,22 +66,24 @@ $albums = $db->allAlbums();
             About Lorenzo Wood
             
           </h1>
-          <p>
-            Lorenzo Wood is a musician, songwriter, producer, and vocalist from Alameda, California USA. 
-            
-          </p>
-          <p>In addition to recording and producing songs and videos in his home studio, Lorenzo performs solo or with a band live. With a skillset of music performace technology, he puts together unique, intricate live setups that make his performances stand out. </p>
-          <p>
-            Lorenzo lists Maroon 5, Train, U2, Shawn Mendes, and John Mayer as his initial musical influences. But now feels his style resembles more that of artists like Bazzi, Julia Michaels, Post Malone, and Jonas Brothers.
-            
-          </p>
+          <div class="clearfix"><a href="http://localhost:8081/photos/orig/Lorenzo%20Wood%206190.jpg"><img class="bio" src="http://localhost:8081/photos/Lorenzo%20Wood%206190.jpg"></a>
+            <p>
+              Lorenzo Wood is an award-winning musician, songwriter, producer, and vocalist from Alameda, California USA. 
+              
+            </p>
+            <p>In addition to recording and producing songs and videos in his home studio, Lorenzo performs live, solo or with a band. With a skillset of music performace technology, he puts together unique, intricate live setups that make his performances stand out. </p>
+            <p>
+              Lorenzo lists Maroon 5, Train, U2, Shawn Mendes, and John Mayer as his initial musical influences. But now he feels his style resembles more that of artists like Bazzi, Julia Michaels, Post Malone, and Jonas Brothers.
+              
+            </p>
+          </div>
           <h3>Performance</h3>
           <p>
             Lorenzo has been performing and recording his songs since a young age. At age 13, he discovered busking, and has been performing primarily at street festivals in the San Francisco Bay Area every summer/fall since then.
             
           </p>
           <p>
-            In 2018, while releasing his first EP at the age of 15, he put together and hired a band to play the newly released songs with him on stage. He performed again 2019 with a new lineup.
+            In 2018, while releasing his first EP at the age of 15, he put together and hired a band to play the newly released songs with him on stage. He performed again in 2019 with a new lineup.
             
           </p>
           <p>
@@ -137,7 +139,7 @@ $albums = $db->allAlbums();
             
           </p>
           <p>
-            Lorenzo was awarded a grant from the <a href="https://www.hunterwatson.org">Hunter Brooks Watson Memorial Fund</a> of McLean, Virginia. This fund seeks out young people who dream of something they are deeply curious and passionate about, then provides them with financial resources to explore that passion. Lorenzo was awarded a grant to upgrade his home music studio. <a href="https://static1.squarespace.com/static/5d39310e96ef000001b54025/t/5d77b2f6ad1ebf5ae039115f/1568125687968/Spring+Web+Newsletter+2019+Optimized.pdf">[Newsletter article]</a>
+            Lorenzo was awarded a grant in 2019 from the <a href="https://www.hunterwatson.org">Hunter Brooks Watson Memorial Fund</a> of McLean, Virginia. This fund seeks out young people who dream of something they are deeply curious and passionate about, then provides them with financial resources to explore that passion. The grant was awarded for Lorenzo to upgrade his home music studio. <a href="https://static1.squarespace.com/static/5d39310e96ef000001b54025/t/5d77b2f6ad1ebf5ae039115f/1568125687968/Spring+Web+Newsletter+2019+Optimized.pdf">[Newsletter article]</a>
             
           </p>
           <p>
