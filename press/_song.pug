@@ -14,9 +14,11 @@ block styles
 		|.cover { float:left; width:192px; margin:0 1em 1em 0; }
 		|.column { float:left; margin-left:1em; }
 		|.socials svg { width:2em; padding:10px 10px 10px 0; }
-		|.soundCloudLink { text-indent: -3.5em; margin-left: 3.5em; line-height:1 }
+		|.soundCloudLink { text-indent: -3.5em; margin-left: 3.5em; line-height:1; font-size:80%;  }
 		|.soundCloudLink svg { width:3em; padding-right:0.5em; }
+		|.soundCloudLink b { white-space: nowrap }
 		|td { padding:0 1em;}
+		|pre.lyrics { font: 16px/1.6 'Montserrat', sans-serif; }
 
 //- Force video thumbnails NOT to appear on song pages
 
@@ -74,6 +76,7 @@ block main
 						|!{privateSoundCloud}
 					if privateSoundCloudClean != undefined
 						|
+						|
 						b (Explicit lyrics)
 
 				if privateSoundCloudClean != undefined
@@ -81,6 +84,7 @@ block main
 						a(href=privateSoundCloudClean)
 							include ../svg/soundcloud-logo.svg
 							|!{privateSoundCloudClean}
+						|
 						|
 						b (Radio Edit)
 
@@ -107,6 +111,10 @@ block main
 							p: a(href='https://www.youtube.com/watch?v=' + youtubeSlug2) Link to music video (YouTube)
 							p: a(href='https://img.youtube.com/vi/' + youtubeSlug2 + '/maxresdefault.jpg') Link to thumbnail image
 
+			if noLyrics == undefined
+				h2 Lyrics
+				block lyrics
+
 	div#generic
 	noscript
 		|More information: 
@@ -115,8 +123,8 @@ block main
 	section
 		article.textual
 
-			p.
-				Additional resources: <a href="/video/">videos</a> page and downloadable <a href="/photos/">photos</a>.
+			h2 Additional resources
+			p <a href="/video/">videos</a> page and downloadable <a href="/photos/">photos</a>.
 
 block footer-icons
 		
