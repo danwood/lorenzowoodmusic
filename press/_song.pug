@@ -14,7 +14,8 @@ block styles
 		|.cover { float:left; width:192px; margin:0 1em 1em 0; }
 		|.column { float:left; margin-left:1em; }
 		|.socials svg { width:2em; padding:10px 10px 10px 0; }
-		|.soundCloudLink svg { width:3em; padding-right:5px; }
+		|.soundCloudLink { text-indent: -3.5em; margin-left: 3.5em; line-height:1 }
+		|.soundCloudLink svg { width:3em; padding-right:0.5em; }
 		|td { padding:0 1em;}
 
 //- Force video thumbnails NOT to appear on song pages
@@ -67,10 +68,23 @@ block main
 			if privateSoundCloud != undefined
 				h2 Prerelease - SoundCloud Link
 				p: i For review use only - not for distribution
-				p
-					a.soundCloudLink(href=privateSoundCloud)
+				p.soundCloudLink
+					a(href=privateSoundCloud)
 						include ../svg/soundcloud-logo.svg
 						|!{privateSoundCloud}
+					if privateSoundCloudClean != undefined
+						|
+						b (Explicit lyrics)
+
+				if privateSoundCloudClean != undefined
+					p.soundCloudLink
+						a(href=privateSoundCloudClean)
+							include ../svg/soundcloud-logo.svg
+							|!{privateSoundCloudClean}
+						|
+						b (Radio Edit)
+
+	
 			if privateSoundCloudEmbed != undefined
 				|!{privateSoundCloudEmbed}
 

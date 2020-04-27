@@ -1452,7 +1452,7 @@
 		"oA": 0,
 		"oAP": "/photos/index.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"/photos/Lorenzo Wood 0140.jpg": {
 		"ft": 16384,
@@ -2428,7 +2428,7 @@
 		"oA": 0,
 		"oAP": "/press/falling.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"/press/index.php": {
 		"cB": 0,
@@ -2446,7 +2446,7 @@
 		"oA": 0,
 		"oAP": "/press/index.php",
 		"oF": 2,
-		"oS": 0
+		"oS": 1
 		},
 	"/press/jacket.html": {
 		"cB": 0,
@@ -2464,7 +2464,7 @@
 		"oA": 0,
 		"oAP": "/press/jacket.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"/press/more-than-friends.html": {
 		"cB": 0,
@@ -2482,7 +2482,7 @@
 		"oA": 0,
 		"oAP": "/press/more-than-friends.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"/press/shared.html": {
 		"cB": 0,
@@ -2501,14 +2501,6 @@
 		"oAP": "/press/shared.html",
 		"oF": 1,
 		"oS": 1
-		},
-	"/press/still-need-love copy.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/press/still-need-love copy.html",
-		"oF": 0
 		},
 	"/press/still-need-love.html": {
 		"cB": 0,
