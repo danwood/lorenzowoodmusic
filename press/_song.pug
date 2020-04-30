@@ -12,7 +12,7 @@ block styles
 	style
 		|.releaseDate { text-align:right; opacity:0.5; }
 		|.cover { float:left; width:192px; margin:0 1em 1em 0; }
-		|.column { float:left; margin-left:1em; }
+		|.column { float:left; margin-left:1em; font-size:90% }
 		|.socials svg { width:2em; padding:10px 10px 10px 0; }
 		|.soundCloudLink { text-indent: -3.5em; margin-left: 3.5em; line-height:1; font-size:80%;  }
 		|.soundCloudLink svg { width:3em; padding-right:0.5em; }
@@ -106,6 +106,12 @@ block main
 							|
 							- var youtubeLink = 'https://www.youtube.com/watch?v=' + youtubeSlug
 							a(href=youtubeLink) !{youtubeLink}
+						if youtubePreviewSlug != undefined
+							p
+								|Preview for Press/Media ONLY, before release
+								|
+								- var youtubePreviewLink = 'https://www.youtube.com/watch?v=' + youtubePreviewSlug
+								a(href=youtubePreviewLink) !{youtubePreviewLink}
 						p
 
 							if youtubeThumb != undefined
