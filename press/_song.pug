@@ -101,8 +101,21 @@ block main
 					a(href='https://www.youtube.com/watch?v=' + youtubeSlug)
 						img.cover(src='https://img.youtube.com/vi/' + youtubeSlug + '/sddefault.jpg', alt=pageTitle)
 					div.column
-						p: a(href='https://www.youtube.com/watch?v=' + youtubeSlug) Link to music video
-						p: a(href='https://img.youtube.com/vi/' + youtubeSlug + '/maxresdefault.jpg') Link to thumbnail image
+						p
+							|Music video:
+							|
+							- var youtubeLink = 'https://www.youtube.com/watch?v=' + youtubeSlug
+							a(href=youtubeLink) !{youtubeLink}
+						p
+
+							if youtubeThumb != undefined
+								- var youtubeFullThumb = 'https://www.lorenzowoodmusic.com/press/' + youtubeThumb
+							else
+								- var youtubeFullThumb = 'https://img.youtube.com/vi/' + youtubeSlug + '/maxresdefault.jpg'
+							|Thumbnail image:
+							|
+							a(href=youtubeFullThumb) !{youtubeFullThumb}
+
 				if youtubeSlug2 != undefined
 					div.clearfix
 						a(href='https://www.youtube.com/watch?v=' + youtubeSlug2)
