@@ -120,13 +120,14 @@ if ($album['explicit_or_clean_slug']) { ?>
 <div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_album'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
 <?php } if ($album['itunes_album'] && ($now >= $release)) { ?>
 <div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_album'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
-<?php } if ($album['spotify_album'] && ($now >= $release)) { ?>
+<?php } if ($album['spotify_album']) { ?>
 <div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($album['spotify_album'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
-<?php } if ( ($now < $release) && $album['spotify_presave_url']) { ?>
+<?php } if ( (!$album['spotify_album']) && $album['spotify_presave_url']) { ?>
 <div class="service"><a rel="nofollow" href="<?php echo htmlentities($album['spotify_presave_url'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Presave on Spotify"><span class="play">Pre-save</span></a>
-<div style="padding-left:5em; font-size:80%; color:gray;">This step takes you to our DistroKid.com page to continue. You will be asked to log into your Spotify account.</div>
-</div>
-<?php } if ($album['google_play_album']) { ?>
+<div style="padding-left:5em; font-size:80%; color:gray"><?php if ($now >= $release) { ?>
+<div><b>Direct spotify link coming soon!</b></div>
+<?php } ?>
+This step takes you to our DistroKid.com page to continue. You will be asked to log into your Spotify account.</div><?php } if ($album['google_play_album']) { ?>
 <div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($album['google_play_album'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
 <?php } if ($now >= $release) { ?>
 <?php      if ($album['amazon_dp']) { ?>
