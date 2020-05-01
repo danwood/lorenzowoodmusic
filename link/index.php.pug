@@ -207,14 +207,19 @@ block main
 
 			//- We will only have the spotify link if the song has been released, unless things change...
 
-			<?php } if ($album['spotify_album']) { ?>
+			<?php } if ($album['spotify_track']) { ?>
+			
+			<div class="service"><a href="https://play.spotify.com/track/<?php echo htmlentities($album['spotify_track'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
+
+			//- Use spotify ALBUM link only if we don't have a TRACK specified.
+			<?php } if ($album['spotify_album'] && !$album['spotify_track']) { ?>
 			
 			<div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($album['spotify_album'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
 
 			//- Show the spotify presave link if we don't have a real spotify link. Spotify might be slow in taking the release live,
 			//- or maybe we were slow in putting the link into our database.
 
-			<?php } if ( (!$album['spotify_album']) && $album['spotify_presave_url']) { ?>
+			<?php } if ( (!$album['spotify_album']) && (!$album['spotify_track']) &&$album['spotify_presave_url']) { ?>
 			
 			<div class="service"><a rel="nofollow" href="<?php echo htmlentities($album['spotify_presave_url'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Presave on Spotify"><span class="play">Pre-save</span></a>
 
@@ -257,7 +262,13 @@ block main
 			
 			<div class="service"><a href="https://soundcloud.com/<?php echo htmlentities($album['soundcloud_path'], ENT_QUOTES); ?>"><img src="../svg/soundcloud.svg" alt="Soundcloud"><span class="play">Play</span></a></div>
 
-			<?php } if ($album['deezer_album']) { ?>
+			<?php } if ($album['deezer_track']) { ?>
+			
+			<div class="service"><a href="https://www.deezer.com/us/track/<?php echo htmlentities($album['deezer_track'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
+
+			//- Use deezer ALBUM link only if we don't have a TRACK specified.
+
+			<?php } if ($album['deezer_album'] && !$album['deezer_track']) { ?>
 			
 			<div class="service"><a href="https://www.deezer.com/us/album/<?php echo htmlentities($album['deezer_album'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
 
@@ -266,13 +277,16 @@ block main
 			
 			<div class="service"><a href="https://www.iheart.com/artist/lorenzo-wood-32159981/songs/<?php echo htmlentities($album['iheartradio_songs'], ENT_QUOTES); ?>"><img src="../svg/iheartradio-logo.svg" alt="IHeartRadio"><span class="play">Play</span></a></div>
 
-			<?php } if ($album['tidal_album']) { ?>
-			
-			<div class="service"><a href="https://listen.tidal.com/album/<?php echo htmlentities($album['tidal_album'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
-
 			<?php } if ($album['tidal_track']) { ?>
 			
 			<div class="service"><a href="https://listen.tidal.com/track/<?php echo htmlentities($album['tidal_track'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
+
+			//- Use tidal ALBUM link only if we don't have a TRACK specified.
+
+			<?php } if ($album['tidal_album'] && !$album['tidal_track']) { ?>
+			
+			<div class="service"><a href="https://listen.tidal.com/album/<?php echo htmlentities($album['tidal_album'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
+
 
 
 

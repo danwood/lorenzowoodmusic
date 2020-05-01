@@ -120,9 +120,11 @@ if ($album['explicit_or_clean_slug']) { ?>
 <div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_album'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
 <?php } if ($album['itunes_album'] && ($now >= $release)) { ?>
 <div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_album'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
-<?php } if ($album['spotify_album']) { ?>
+<?php } if ($album['spotify_track']) { ?>
+<div class="service"><a href="https://play.spotify.com/track/<?php echo htmlentities($album['spotify_track'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
+<?php } if ($album['spotify_album'] && !$album['spotify_track']) { ?>
 <div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($album['spotify_album'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
-<?php } if ( (!$album['spotify_album']) && $album['spotify_presave_url']) { ?>
+<?php } if ( (!$album['spotify_album']) && (!$album['spotify_track']) &&$album['spotify_presave_url']) { ?>
 <div class="service"><a rel="nofollow" href="<?php echo htmlentities($album['spotify_presave_url'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Presave on Spotify"><span class="play">Pre-save</span></a>
 <div style="padding-left:5em; font-size:80%; color:gray"><?php if ($now >= $release) { ?>
 <div><b>Direct spotify link coming soon!</b></div>
@@ -142,14 +144,16 @@ This step takes you to our DistroKid.com page to continue. You will be asked to 
 </div>
 <?php } if ($album['soundcloud_path']) { ?>
 <div class="service"><a href="https://soundcloud.com/<?php echo htmlentities($album['soundcloud_path'], ENT_QUOTES); ?>"><img src="../svg/soundcloud.svg" alt="Soundcloud"><span class="play">Play</span></a></div>
-<?php } if ($album['deezer_album']) { ?>
+<?php } if ($album['deezer_track']) { ?>
+<div class="service"><a href="https://www.deezer.com/us/track/<?php echo htmlentities($album['deezer_track'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
+<?php } if ($album['deezer_album'] && !$album['deezer_track']) { ?>
 <div class="service"><a href="https://www.deezer.com/us/album/<?php echo htmlentities($album['deezer_album'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
 <?php } if ($album['iheartradio_songs']) { ?>
 <div class="service"><a href="https://www.iheart.com/artist/lorenzo-wood-32159981/songs/<?php echo htmlentities($album['iheartradio_songs'], ENT_QUOTES); ?>"><img src="../svg/iheartradio-logo.svg" alt="IHeartRadio"><span class="play">Play</span></a></div>
-<?php } if ($album['tidal_album']) { ?>
-<div class="service"><a href="https://listen.tidal.com/album/<?php echo htmlentities($album['tidal_album'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
 <?php } if ($album['tidal_track']) { ?>
 <div class="service"><a href="https://listen.tidal.com/track/<?php echo htmlentities($album['tidal_track'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
+<?php } if ($album['tidal_album'] && !$album['tidal_track']) { ?>
+<div class="service"><a href="https://listen.tidal.com/album/<?php echo htmlentities($album['tidal_album'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
 <?php } if ($album['cd_url']) { ?>
 <div class="service"><a href="<?php echo htmlentities($album['cd_url'], ENT_QUOTES); ?>"><img src="/img/cd100.png" alt="Buy CD"><span class="play">Buy</span></a></div>
 <?php } ?>
