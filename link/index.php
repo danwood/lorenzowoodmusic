@@ -134,7 +134,9 @@ This step takes you to our DistroKid.com page to continue. You will be asked to 
 <?php } if ($now >= $release) { ?>
 <?php      if ($album['amazon_dp']) { ?>
 <div class="service"><a href="https://www.amazon.com/dp/<?php echo htmlentities($album['amazon_dp'], ENT_QUOTES); ?>"><img src="../svg/amazon-music.svg" alt="Amazon Music"><span class="play">Play</span></a></div>
-<?php } if ($album['youtube_music_MPRE']) { ?>
+<?php } if ($album['youtube_music_v']) { ?>
+<div class="service"><a href="https://music.youtube.com/watch?v=<?php echo htmlentities($album['youtube_music_v'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
+<?php } if ($album['youtube_music_MPRE'] && !$album['youtube_music_v']) { ?>
 <div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($album['youtube_music_MPRE'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
 <?php } if ($album['bandcamp']) { ?>
 <div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a>

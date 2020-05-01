@@ -243,10 +243,18 @@ block main
 			
 			<div class="service"><a href="https://www.amazon.com/dp/<?php echo htmlentities($album['amazon_dp'], ENT_QUOTES); ?>"><img src="../svg/amazon-music.svg" alt="Amazon Music"><span class="play">Play</span></a></div>
 
-			<?php } if ($album['youtube_music_MPRE']) { ?>
+			<?php } if ($album['youtube_music_v']) { ?>
+			
+			<div class="service"><a href="https://music.youtube.com/watch?v=<?php echo htmlentities($album['youtube_music_v'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
+
+			//- Use YouTube Music ALBUM (MPREb...) link only if we don't have a TRACK specified.
+
+			<?php } if ($album['youtube_music_MPRE'] && !$album['youtube_music_v']) { ?>
 			
 			<div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($album['youtube_music_MPRE'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
-			//- can also watch at https://music.youtube.com/watch?v= + youtube_video_id
+
+
+
 
 			<?php } if ($album['bandcamp']) { ?>
 			
