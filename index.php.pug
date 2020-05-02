@@ -199,7 +199,10 @@ block main
 				header.ir(aria-hidden="true")
 					h2 Latest Releases
 
-  
+		.subsection.dark-text(style="background-color:#efefef")
+			article
+				div: i Be sure to also check out Lorenzo's cover songs made under the name <a href="/2am-in-the-basement/">2AM in the Basement</a>.
+ 
 		-
 			var coverArtResolutions = [64, 384, 640];	//- really the 384 is rarely used except on small 1x screens?
 			var coverArtSizes = [
@@ -216,6 +219,8 @@ block main
 					h3: a(href="/link/more-than-friends") More Than Friends
 
 					p More Than Friends is an upbeat song about the hopeful transition from being just friends into something more.
+					blockquote ’More Than Friends’ is a soft Electro Pop track with a brief interlude of sultry saxophone to add to the musical layers and production. The emotion of the lyrics is real, and Wood’s performance is genuine as you can feel the plaintive hope in every word.
+						footer: a(href="https://www.laonlock.com/reviews/5/1/2020/lorenzo-wood-more-than-friends-review") LA on Lock
 
 					<?php $release = new DateTime('2020-05-01 00:00:00', new DateTimeZone('America/New_York'));
 					|if ($now < $release) { ?>
