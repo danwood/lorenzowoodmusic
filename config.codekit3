@@ -1428,6 +1428,14 @@
 		"oF": 2,
 		"oS": 1
 		},
+	"/link/list.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/link/list.php",
+		"oF": 0
+		},
 	"/mailme.php": {
 		"cB": 0,
 		"ft": 8192,
