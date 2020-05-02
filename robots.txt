@@ -5,4 +5,5 @@ User-agent: *
 Disallow: /svg/
 Disallow: /img/*.png
 Disallow: /img/*.webp
-Disallow: /press/shared.html
+Disallow: /press/
+
