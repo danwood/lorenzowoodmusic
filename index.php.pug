@@ -61,15 +61,15 @@ block prelude
 	|
 	|require_once('classes/downcode.php');
 	|$db = new DowncodeDB();
-	|$album = $db->featuredAlbum();
+	|$album = $db->featuredRelease();
 	|
 	|$now = new DateTime();
-	|$release = $now;	// default to now, so it should show up as released
+	|$releaseDate = $now;	// default to now, so it should show up as released
 	|if ($album) {
 	|	$releaseDateString = NULL;
 	|	if (!empty($album['release_date'])) {
-	|		$release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
-	|		if ($now < $release) $releaseDateString = $release->format('l, F jS');
+	|		$releaseDate = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
+	|		if ($now < $releaseDate) $releaseDateString = $releaseDate->format('l, F jS');
 	|	}
 	|	$oneMonthAgo = new \DateTime('1 month ago');
 	|}
@@ -103,12 +103,12 @@ block append header
 		.action-banner.clearfix.safe-area-only
 			p
 				<a target="_blank" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>">
-					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
+					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="album_art_64/<?php echo htmlentities($album['image_64'] ? $album['image_64'] : $album['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
 				</a>
-				span <?php echo htmlspecialchars( ($now < $release ? 'Upcoming' : ($release < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $album['album_ep_single'] . ' “' . $album['title'] . '”'); ?> —
+				span <?php echo htmlspecialchars( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $album['release_type_name'] . ' “' . $album['title'] . '”'); ?> —
 					| &nbsp;
 				b
-					<a style="text-decoration:underline" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>"><?php echo ($now < $release) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
+					<a style="text-decoration:underline" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
 		<?php } ?>
 
 		img.hero-image.covering.swapping-image(srcset="img/banner1_giant.jpg 2560w, img/banner1_big.jpg 1920w, img/banner1_medium.jpg 960w, img/banner1_small.jpg 640w" sizes="100vw" src="img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
@@ -227,8 +227,8 @@ block main
 							span(style="opacity:0.3") (translated from Swedish)
 
 
-					<?php $release = new DateTime('2020-05-01 00:00:00', new DateTimeZone('America/New_York'));
-					|if ($now < $release) { ?>
+					<?php $releaseDate = new DateTime('2020-05-01 00:00:00', new DateTimeZone('America/New_York'));
+					|if ($now < $releaseDate) { ?>
 
 					h4 Releasing May 1, 2020
 					p: a.bold(href="link/more-than-friends") Pre-Save / Pre-Order

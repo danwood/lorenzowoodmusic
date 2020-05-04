@@ -13,7 +13,7 @@ $db = new DowncodeDB();
 $slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
 
 if (empty($slug)) {
-   $albums = $db->allAlbums();
+   $albums = $db->allReleases();
    foreach ($albums as $album) {
        echo '<a href="' . htmlentities($album['slug'], ENT_QUOTES) . '">';
        echo htmlspecialchars($album['title']);

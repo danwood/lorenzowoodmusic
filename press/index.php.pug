@@ -5,7 +5,7 @@ block prelude
 	|
 	|require_once('../classes/downcode.php');
 	|$db = new DowncodeDB();
-	|$albums = $db->allAlbums();
+	|$albums = $db->allReleases();
 	|
 	|?>
 
@@ -82,7 +82,6 @@ block append main
 
 			table
 				<?php foreach ($albums as $album) {
-				|	if ('false' == $album['explicit'] && $album['explicit_or_clean_slug']) { continue; }	// don't want clean if both
 				|	$now = new DateTime();
 				|	$release = $now;   // default to now, so it should show up as released
 				|	$releaseDateString = NULL;
@@ -95,11 +94,11 @@ block append main
 				|	?>
 					
 				tr
-					td.thumb <img src="../album_art_64/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>" />
+					td.thumb <img src="../album_art_64/<?php echo htmlentities($album['image_64'] ? $album['image_64'] : $album['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>" />
 					td <?php echo htmlspecialchars($album['title']); ?>
 					td.info 
 						|<?php
-						|echo htmlspecialchars($album['artist']);
+						|echo htmlspecialchars($album['artist_name']);
 						|if ($album['featuring']) {
 						|	echo '<br> feat. ' . htmlspecialchars($album['featuring']);
 						|} ?>
@@ -109,7 +108,7 @@ block append main
 						|	echo '<a href="/link/' . htmlentities($album['slug'], ENT_QUOTES) . '">Stream/<br/>Download</a>';
 						|} ?>
 					td
-						|<?php if ($now>=$release && 'true' == $album['has_press_page']) {
+						|<?php if ($now>=$release && $album['has_press_page']) {
 						|	echo '<a href="' . htmlentities($album['slug'], ENT_QUOTES) . '">Press Page</a>';
 						|} ?>
 

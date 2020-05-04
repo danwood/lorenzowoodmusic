@@ -15,17 +15,26 @@ block prelude
 	|
 	|$now = new DateTime();
 	|$release = $now;   // default to now, so it should show up as released
-	|$album = $db->albumForSlug($slug);
-	|if (!$album) {
+	|$releases = $db->releasesForSlug($slug);
+	|if (!$releases) {
 	|   header('HTTP/1.0 404 Not Found');
 	|   readfile('../404.html');
 	|   exit();
 	|}
+	|$album = $releases[0];
+	|
+	|$has_radio_edit = false;
+	|$has_explicit = false;
+	|foreach($releases as $release) {
+	|	if ($release['variation_id'] == 2) { $has_radio_edit = true; }
+	|	if ($release['variation_id'] == 1) { $has_explicit = true; }
+	|}
+	|$is_explicit = $album['variation_id'] == 1;	// is *this* page marked explicit?
 	|
 	|$longTitle = $album['title'];
-	|$explicit = $album['explicit'] == 'true' || $album['explicit'] == 1;
+	|
 	|if (!empty($album['featuring'])) { $longTitle .= ' [feat. ' . $album['featuring'] . ']'; }
-	|$longTitle .= ' - by ' . $album['artist'];
+	|$longTitle .= ' - by ' . $album['artist_name'];
 	|$releaseDateString = NULL;
 	|if (!empty($album['release_date'])) {
 	|    $release = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
@@ -87,28 +96,28 @@ block main
 
 	.background-blur
 		//- use the exact same image as the displayed one so we don't need another image loaded
-		<img src="<?php echo ( $album['separate_blurred_image'] ? '../blurred_100/' : '../album_art_640/') . htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
+		<img src="<?php $blur = $album['image_blurred'] ? '../blurred_100/' . $album['image_blurred'] : '../album_art_640/' . htmlentities($album['image']); echo htmlentities($blur, ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
 
 	.center-column
 
-		<?php if ($album['additional_info']) { ?>
+		<?php if ($album['blurb']) { ?>
 		
-		<div class="centered additional"><a href="<?php echo htmlentities($album['additional_info_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($album['additional_info']); ?></a></div>
+		<div class="centered additional"><a href="<?php echo htmlentities($album['blurb_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($album['blurb']); ?></a></div>
 
 		<?php } ?>
 
 		.imagecontainer
-			<img src="../album_art_640/<?php echo htmlentities($album['imageName'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
+			<img src="../album_art_640/<?php echo htmlentities($album['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>">
 
 		.title-container
 			
-			<?php if ($album['youtube_video_id']) { ?>
-			<div class="youtube-border"><div class="youtube" data-linking="yep" data-code='<?php echo htmlentities($album['youtube_video_id'], ENT_QUOTES); ?>' data-title=''></div></div>
+			<?php if ($album['youtube_video_v']) { ?>
+			<div class="youtube-border"><div class="youtube" data-linking="yep" data-code='<?php echo htmlentities($album['youtube_video_v'], ENT_QUOTES); ?>' data-title=''></div></div>
 			<?php } ?>
 
 
 			h1
-				| <?php echo htmlspecialchars($album['artist']); ?> 
+				| <?php echo htmlspecialchars($album['artist_name']); ?> 
 				br
 				|  <?php echo htmlspecialchars($album['title']); ?>
 			<?php $featuring = $album['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
@@ -124,23 +133,23 @@ block main
 			//- The Javascript slide-switch to change between explicit and radio-edit versions.
 			div.requires-js.
 				<?php
-				if ($album['explicit_or_clean_slug']) { ?>
+				if ($has_radio_edit && $has_explicit) { ?>
 				<div class="switch">
-					<input type="radio" class="switch-input" name="view2" value="dirty" id="dirty" <?php if ($explicit) { echo 'checked'; } ?>>
+					<input type="radio" class="switch-input" name="view2" value="dirty" id="dirty" <?php if ($is_explicit) { echo 'checked'; } ?>>
 					<label for="dirty" class="switch-label switch-label-off"
 					<?php
-					if (!$explicit) {
-						echo 'onclick="window.location=\'https://www.lorenzowoodmusic.com/link/' 
-							. htmlentities($album['explicit_or_clean_slug'], ENT_QUOTES) 
+					if (!$is_explicit) {
+						echo 'onclick="window.location=\'' . baseURL() . '/link/' 
+							. htmlentities($album['slug'], ENT_QUOTES) 
 							. '\'"'; 
 					} ?>
 					>Explicit</label>
-					<input type="radio" class="switch-input" name="view2" value="clean" id="clean"  <?php if (!$explicit) { echo 'checked'; } ?>>
+					<input type="radio" class="switch-input" name="view2" value="clean" id="clean"  <?php if (!$is_explicit) { echo 'checked'; } ?>>
 					<label for="clean" class="switch-label switch-label-on"
 					<?php
-					if ($explicit) {
-						echo 'onclick="window.location=\'https://www.lorenzowoodmusic.com/link/' 
-							. htmlentities($album['explicit_or_clean_slug'], ENT_QUOTES) 
+					if ($is_explicit) {
+						echo 'onclick="window.location=\'' . baseURL() . '/link/' 
+							. htmlentities($album['slug'] . '-radio-edit', ENT_QUOTES) 
 							. '\'"'; 
 					} ?>
 					>Radio Edit</label>
@@ -151,18 +160,18 @@ block main
 			//- The NON-Javascript slide-switch to change between explicit and radio-edit versions.
 			div.js-hidden.
 				<?php
-				if ($album['explicit_or_clean_slug']) { ?>
+				if ($has_radio_edit && $has_explicit) { ?>
 					<?php
-					if (!$explicit) {
-						echo "<a href='https://www.lorenzowoodmusic.com/link/"
-							. htmlentities($album['explicit_or_clean_slug'], ENT_QUOTES) 
+					if (!$is_explicit) {
+						echo "<a href='" . baseURL() . "/link/"
+							. htmlentities($album['slug'], ENT_QUOTES) 
 							. "'>"; 
 					}
 					else {
 						echo '<b>';
 					}
 					echo 'Explicit';
-					if (!$explicit) {
+					if (!$is_explicit) {
 						echo "</a>";
 					}
 					else {
@@ -172,16 +181,16 @@ block main
 
 					echo ' &middot; ';
 
-					if ($explicit) {
-						echo "<a href='https://www.lorenzowoodmusic.com/link/"
-							. htmlentities($album['explicit_or_clean_slug'], ENT_QUOTES) 
+					if ($is_explicit) {
+						echo "<a href='" . baseURL() . "/link/"
+							. htmlentities($album['slug'] . '-radio-edit', ENT_QUOTES) 
 							. "'>"; 
 					}
 					else {
 						echo '<b>';
 					}
 					echo 'Radio Edit';
-					if ($explicit) {
+					if ($is_explicit) {
 						echo "</a>";
 					}
 					else {
@@ -193,13 +202,13 @@ block main
 					
 		.service-container
 
-			<?php if ($album['itunes_album']) { ?>
+			<?php if ($album['apple_music_album']) { ?>
 			
-			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_album'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
+			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['apple_music_album'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo ($now < $release) ? 'Pre-order' : 'Download'; ?></span></a></div>
 
-			<?php } if ($album['itunes_album'] && ($now >= $release)) { ?>
+			<?php } if ($album['apple_music_album'] && ($now >= $release)) { ?>
 
-			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['itunes_album'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($album['apple_music_album'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
 
 			//- We will only have the spotify link if the song has been released, unless things change...
 
@@ -252,13 +261,13 @@ block main
 
 
 
-			<?php } if ($album['bandcamp']) { ?>
+			<?php } if ($album['bandcamp_path']) { ?>
 			
-			<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a>
+			<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($album['bandcamp_path'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a>
 
-			<?php if ($album['bandcamp_additional_info_url']) { ?>
+			<?php if ($album['bandcamp_blurb_url']) { ?>
 
-			<div style="padding-left:5em; margin-top:-20px; font-size:80%;"><a style="text-decoration:underline !important" href="<?php echo htmlentities($album['bandcamp_additional_info_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($album['bandcamp_additional_info']); ?></a></div>
+			<div style="padding-left:5em; margin-top:-20px; font-size:80%;"><a style="text-decoration:underline !important" href="<?php echo htmlentities($album['bandcamp_blurb_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($album['bandcamp_blurb']); ?></a></div>
 			<?php } ?>
 			</div>
 

@@ -558,8 +558,8 @@
 		"oA": 0,
 		"oAP": "/album_art_64/drown.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1056,14 +1056,6 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
-		},
-	"/download.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/download.php",
-		"oF": 0
 		},
 	"/favicon-16x16.png": {
 		"ft": 32768,
@@ -2611,47 +2603,6 @@
 		"oAP": "/press/still-need-love.html",
 		"oF": 0,
 		"oS": 1
-		},
-	"/redeem.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/redeem-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/redeem.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/redeem.php",
-		"oF": 0
-		},
-	"/redeem.php.pug": {
-		"cB": 0,
-		"cOD": 1,
-		"ft": 512,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/redeem.php",
-		"oF": 2,
-		"oS": 1
-		},
-	"/redeem.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/redeem.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"/robots.txt": {
 		"cB": 0,
