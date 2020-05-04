@@ -189,6 +189,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_1200x630/drown.jpg": {
+		"ft": 16384,
+		"iS": 35908,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_1200x630/drown.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_1200x630/falling.jpg": {
 		"ft": 16384,
 		"iS": 2820351,
@@ -294,6 +305,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_3000/castle-on-the-hill.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_3000/drown.jpg": {
+		"ft": 16384,
+		"iS": 388738,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_3000/drown.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -409,6 +431,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_384/drown.jpg": {
+		"ft": 16384,
+		"iS": 15212,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_384/drown.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_384/falling.jpg": {
 		"ft": 16384,
 		"iS": 28165,
@@ -519,6 +552,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_64/drown.png": {
+		"ft": 32768,
+		"iS": 438,
+		"oA": 0,
+		"oAP": "/album_art_64/drown.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/album_art_64/falling.jpg": {
 		"ft": 16384,
 		"iS": 4586,
@@ -624,6 +668,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/castle-on-the-hill.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_640/drown.jpg": {
+		"ft": 16384,
+		"iS": 37941,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_640/drown.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
