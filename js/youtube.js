@@ -14,6 +14,8 @@ for (var i = 0; i < youtube.length; i++) {
 	// experiment - try ALWAYS linking iOS
 	if (iOS) linking = true;
 
+
+
 	// EXPERIMENT - take out the special iOS embedding
 	
 	if (false) {
@@ -54,10 +56,12 @@ for (var i = 0; i < youtube.length; i++) {
 		var play = document.createElement("div");
 		play.setAttribute("class", "play-button");
 		youtube[i].appendChild(play);
-		var t = document.createElement("div");
-		t.setAttribute("class", "title");
-		t.innerText = title;
-		youtube[i].appendChild(t);
+		if (typeof title !== 'undefined') {
+			var t = document.createElement("div");
+			t.setAttribute("class", "title");
+			t.innerText = title;
+			youtube[i].appendChild(t);
+		}
 	}
 	if (caption) {
 		var captionDiv = document.createElement("p");

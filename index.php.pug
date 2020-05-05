@@ -179,7 +179,7 @@ block main
 					<?php $releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
 					|if ($now < $releaseDate) { ?>
 
-					<h4>Releasing <?php echo htmlspecialchars($releaseDate->format('F n, Y')); ?></h4>
+					<h4>Releasing <?php echo htmlspecialchars($releaseDate->format('F j, Y')); ?></h4>
 					<p><a class="bold" href="link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">Pre-Save / Pre-Order</a></p>
 
 					<?php } else { ?>
@@ -189,7 +189,7 @@ block main
 
 					<?php } ?>
 				</div> <!-- end release blurb -->
-				<?php if ($release['youtube_video_v']) { echo '<div class="release-video"><div class="youtube" data-code="' . $release['youtube_video_v'] . '" data-title="' . htmlentities($release['title'], ENT_QUOTES) . '"></div></div>'; } ?>
+				<?php if ($release['youtube_video_v']) { echo '<div class="release-video"><div class="youtube" data-code="' . $release['youtube_video_v'] . '"></div></div>'; } ?>
 		</div> <!-- end subsection-->
 
 		<?php } ?>

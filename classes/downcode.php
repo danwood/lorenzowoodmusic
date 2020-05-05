@@ -84,10 +84,10 @@ class DowncodeDB extends SQLite3
 
 	/*
 		Figure out which album to feature at the top of the home page / 2AM page.
-		Pass in $artist, defaults to Lorenzo Wood
+		Pass in $artist, defaults to 1 = Lorenzo Wood
 
-		This returns the most recent (by timestamp, which entry creation date probably near release date)
-		album/ep/single that at least has an iTunes/Apple Music entry, and a Spotify Presave or Stream link.
+		This returns the most recent (by release date)
+		release that at least has an iTunes/Apple Music entry, and a Spotify Presave or Stream link.
 		This means we only show this featured item when there is an action available for the visitor to take!
 		Otherwise we keep showing the latest release that fits that criteria.
 
@@ -95,7 +95,7 @@ class DowncodeDB extends SQLite3
 		At that point, we stop featuring the released one, and switch to the upcoming one.
 
 		Ideally we would be able to have a longer tease period (several weeks) before release, if there is no recent release,
-		but then again we should be promoting what we have already released usually.
+		but then again we should be promoting what we have already released usually. Still, we can show the upcoming release further down - see marketingRelease().
 	*/
 	function featuredRelease($artist_id = 1)
 	{
@@ -109,10 +109,15 @@ class DowncodeDB extends SQLite3
 		return $result;
 	}
 
+	// All released, or upcoming with the ability to pre-save/pre-order, are listed here.
+
 	function marketingReleases()
 	{
-		$statement = $this->prepare("SELECT *, T.name as release_type_name, a.name as artist_name FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND release_date < date('now', 'start of day','+7 days') ORDER BY R.release_date DESC, E.variation_id DESC");
+		$statement = $this->prepare("SELECT *, T.name as release_type_name, a.name as artist_name FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' ORDER BY R.release_date DESC, E.variation_id DESC");
 		$ret = $statement->execute();
+
+		//  AND release_date < date('now', 'start of day','+7 days')
+
 		$result = Array();
 		$lastReleaseID = -1;		// Can't figure out the SQL to only get one row per release so cheat here!
 		while ($release = $ret->fetchArray(SQLITE3_ASSOC) ){
