@@ -153,21 +153,21 @@ block main
 
 		<div class="subsection <?php echo $release['light_text'] ? 'light-text' : 'dark-text'; if ($reversed) { echo ' reversed'; } $reversed = !$reversed; ?>" style="background-color:<?php echo htmlentities($release['color'], ENT_QUOTES); ?>">
 			article
-				.release-image.bordered
-					<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php
-					|	echo '<img src="';
-					|	echo htmlentities($db->pathForImageSize($release, 64), ENT_QUOTES);
-					|	echo '" alt= "Cover image of ';
-					|	echo htmlentities($release['title'], ENT_QUOTES);
-					|	echo '" srcset="';
-					|	echo htmlentities(
-					|		$db->pathForImageSize($release, 64) . ' 64w, ' .
-					|		$db->pathForImageSize($release, 384) . ' 384w, ' .
-					|		$db->pathForImageSize($release, 640) . ' 640w', ENT_QUOTES);
-					|	echo '" sizes="(max-width: 768px) 100vw, 25vw"/>';
-					|?>
-					</a>
-				<div class="release-blurb <?php if (!$release['youtube_video_v']) { echo ' no-video'; } ?>">
+				<div class="release-blurb<?php if (!$release['youtube_video_v']) { echo ' no-video'; } ?>">
+					.release-image.bordered
+						<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php
+						|	echo '<img src="';
+						|	echo htmlentities($db->pathForImageSize($release, 64), ENT_QUOTES);
+						|	echo '" alt= "Cover image of ';
+						|	echo htmlentities($release['title'], ENT_QUOTES);
+						|	echo '" srcset="';
+						|	echo htmlentities(
+						|		$db->pathForImageSize($release, 64) . ' 64w, ' .
+						|		$db->pathForImageSize($release, 384) . ' 384w, ' .
+						|		$db->pathForImageSize($release, 640) . ' 640w', ENT_QUOTES);
+						|	echo '" sizes="(max-width: 768px) 100vw, 25vw"/>';
+						|?>
+						</a>
 					h3
 						<a href="<?php echo '/link/' . htmlentities($release['slug'], ENT_QUOTES); ?>">
 							<?php echo htmlspecialchars($release['title']); ?>

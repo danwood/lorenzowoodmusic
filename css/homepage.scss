@@ -952,6 +952,20 @@ Latest Releases
 	padding-top:4em;
 	padding-bottom:4em;
 
+	@media only screen and (min-width:$mainBreakpoint) {
+
+		// don't need as much space
+		padding-top:2.5em;
+		padding-bottom:2.5em;
+
+		display: flex;
+
+		margin:0 auto;
+		max-width:90rem;
+	}
+}
+
+.latest-releases {
 
 	@media only screen and (max-width:$mainBreakpoint - 1px) {
 
@@ -968,28 +982,30 @@ Latest Releases
 		}
 	}
 
+
 	@media only screen and (min-width:$mainBreakpoint) {
 
-		// don't need as much space
-		padding-top:2.5em;
-		padding-bottom:2.5em;
-
-		display: flex;
-
-		margin:0 auto;
-		max-width:90rem;
-
-
 		.release-image {
-			width:25%;
+			width:41%;
+			float:left;
+			margin:0 1em 0 0;
+		}
+
+		.reversed .release-image {
+			float:right;
+			margin:0 0 0 1em;
+		}
+
+		.no-video .release-image {
+			width:22.7%;
 		}
 
 		.release-blurb {
-			width:30.5%;
+			width:55.5%;
 	   		padding:15px 15px;
 
 			&.no-video {
-				width:75%;
+				width:100%;
 			}
 
 			h3, h4 {
@@ -1002,6 +1018,7 @@ Latest Releases
 		}
 	}
 }
+
 
 .latest-releases .subsection.reversed article {
 	flex-direction: row-reverse;
