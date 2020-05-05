@@ -4,11 +4,10 @@ require_once('../classes/downcode.php');
 $db = new DowncodeDB();
 
 
-$now = new DateTime();
+$now = new DateTime(isset($_GET['ymd']) ? $_GET['ymd'] : 'now');
 $releaseDate = $now;   // default to now, so it should show up as released
 $release = $db->releaseForSlug($slug);
 
-$now = new DateTime();
 $releaseDate = $now;	// default to now, so it should show up as released
 if ($release) {
 	$releaseDateString = NULL;
@@ -37,7 +36,7 @@ pre.lyrics { font: 16px/1.6 'Montserrat', sans-serif; }</style></head><body><!--
 <img class="cover" src="<?php echo htmlentities($db->pathForImageSize($release, 384), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
 </a><div class="column"><p>Link to large image (3000 pixels square):<br><a href='<?php echo htmlentities($db->pathForImageSize($release, 3000), ENT_QUOTES); ?>'>https://lorenzowoodmusic.com/<?php echo htmlspecialchars($db->pathForImageSize($release, 3000)); ?></a></p><p>Designed by
 <a href="http://designology.co">Kyle Wonzen</a></p></div></div><?php if ($now < $releaseDate ) { ?><h2>Prerelease - SoundCloud Link</h2><p><i>For review use only - not for distribution</i></p><p class="soundCloudLink"><a><svg aria-label="SoundCloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 6 24 12"><desc>Lorenzo Wood Music on SoundCloud</desc><path fill="#f50" d="M7 17.94H6V9.87c.3-.23.64-.43 1-.56v8.63zm3 0h1V8.7c-.23.27-.44.55-.62.86L10 9.4v8.55zm-2 0h1V9.09c-.5-.08-.62-.05-1 0v8.85zm-4 0h1v-7.02a4.7 4.7 0 0 0-.7 1.53l-.3-.18v5.67zm-3-5.25a3.07 3.07 0 0 0 0 4.53V12.7zm18.88-.67c-.2-2.84-2.4-5.08-5.12-5.08-1.02 0-1.96.33-2.76.88v10.12h9.09c1.6 0 2.91-1.4 2.91-3.1 0-2.24-2.17-3.78-4.12-2.82zM3 11.99c-.3-.02-.53-.03-1 .12v5.7c.45.14.64.13 1 .13v-5.95z"/></svg></a></p><?php } ?><h2>Music Video</h2><div class="clearfix"><a href="https://www.youtube.com/watch?v=TkDhR4FMHVg"><img class="cover" src="https://img.youtube.com/vi/TkDhR4FMHVg/sddefault.jpg"></a><div class="column"><p>Music video:
-<a href="https://www.youtube.com/watch?v=TkDhR4FMHVg">https://www.youtube.com/watch?v=TkDhR4FMHVg</a></p><p>Thumbnail image:
+<a href="https://www.youtube.com/watch?v=TkDhR4FMHVg">https://www.youtube.com/watch?v=TkDhR4FMHVg</a></p><?php if ($now < $releaseDate) { ?><?php } ?><p>Thumbnail image:
 <a href="https://img.youtube.com/vi/TkDhR4FMHVg/maxresdefault.jpg">https://img.youtube.com/vi/TkDhR4FMHVg/maxresdefault.jpg</a></p></div></div><h2>Lyrics</h2><pre class="lyrics">Lying in my room again on my iPhone 
 All the days wasting away, where’d they all go?
 I’ve been watching Netflix again just to escape 

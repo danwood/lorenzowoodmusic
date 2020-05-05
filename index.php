@@ -5,7 +5,7 @@ require_once('classes/downcode.php');
 $db = new DowncodeDB();
 $release = $db->featuredRelease();
 
-$now = new DateTime();
+$now = new DateTime(isset($_GET['ymd']) ? $_GET['ymd'] : 'now');
 $releaseDate = $now;	// default to now, so it should show up as released
 if ($release) {
 	$releaseDateString = NULL;

@@ -4,11 +4,10 @@ require_once('../classes/downcode.php');
 $db = new DowncodeDB();
 
 
-$now = new DateTime();
+$now = new DateTime(isset($_GET['ymd']) ? $_GET['ymd'] : 'now');
 $releaseDate = $now;   // default to now, so it should show up as released
 $release = $db->releaseForSlug($slug);
 
-$now = new DateTime();
 $releaseDate = $now;	// default to now, so it should show up as released
 if ($release) {
 	$releaseDateString = NULL;
@@ -48,8 +47,8 @@ pre.lyrics { font: 16px/1.6 'Montserrat', sans-serif; }</style></head><body><!--
 <a href="https://open.spotify.com/artist/547XK7rrl55NSCTqDa7TUx">https://open.spotify.com/artist/547XK7rrl55NSCTqDa7TUx</a></p><div class="clearfix"><h2>Album Artwork</h2><a href='<?php echo htmlentities($db->pathForImageSize($release, 3000), ENT_QUOTES); ?>'>
 <img class="cover" src="<?php echo htmlentities($db->pathForImageSize($release, 384), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
 </a><div class="column"><p>Link to large image (3000 pixels square):<br><a href='<?php echo htmlentities($db->pathForImageSize($release, 3000), ENT_QUOTES); ?>'>https://lorenzowoodmusic.com/<?php echo htmlspecialchars($db->pathForImageSize($release, 3000)); ?></a></p></div></div><?php if ($now < $releaseDate ) { ?><h2>Prerelease - SoundCloud Link</h2><p><i>For review use only - not for distribution</i></p><p class="soundCloudLink"><a href="https://soundcloud.com/lorenzowoodmusic/falling/s-ptYg7eF2lVL"><svg aria-label="SoundCloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 6 24 12"><desc>Lorenzo Wood Music on SoundCloud</desc><path fill="#f50" d="M7 17.94H6V9.87c.3-.23.64-.43 1-.56v8.63zm3 0h1V8.7c-.23.27-.44.55-.62.86L10 9.4v8.55zm-2 0h1V9.09c-.5-.08-.62-.05-1 0v8.85zm-4 0h1v-7.02a4.7 4.7 0 0 0-.7 1.53l-.3-.18v5.67zm-3-5.25a3.07 3.07 0 0 0 0 4.53V12.7zm18.88-.67c-.2-2.84-2.4-5.08-5.12-5.08-1.02 0-1.96.33-2.76.88v10.12h9.09c1.6 0 2.91-1.4 2.91-3.1 0-2.24-2.17-3.78-4.12-2.82zM3 11.99c-.3-.02-.53-.03-1 .12v5.7c.45.14.64.13 1 .13v-5.95z"/></svg>https://soundcloud.com/lorenzowoodmusic/falling/s-ptYg7eF2lVL</a></p><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/805053907%3Fsecret_token%3Ds-ptYg7eF2lVL&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><?php } ?><h2>Music Video</h2><div class="clearfix"><a href="https://www.youtube.com/watch?v=ixUV87pKtBg"><img class="cover" src="https://img.youtube.com/vi/ixUV87pKtBg/sddefault.jpg"></a><div class="column"><p>Music video:
-<a href="https://www.youtube.com/watch?v=ixUV87pKtBg">https://www.youtube.com/watch?v=ixUV87pKtBg</a></p><p>Preview for Press/Media ONLY, before release
-<a href="https://www.youtube.com/watch?v=6tgTYadpb7o">https://www.youtube.com/watch?v=6tgTYadpb7o</a></p><p>Thumbnail image:
+<a href="https://www.youtube.com/watch?v=ixUV87pKtBg">https://www.youtube.com/watch?v=ixUV87pKtBg</a></p><?php if ($now < $releaseDate) { ?><p>Preview for Press/Media ONLY, before release
+<a href="https://www.youtube.com/watch?v=6tgTYadpb7o">https://www.youtube.com/watch?v=6tgTYadpb7o</a></p><?php } ?><p>Thumbnail image:
 <a href="https://www.lorenzowoodmusic.com/press/falling_thumb.jpg">https://www.lorenzowoodmusic.com/press/falling_thumb.jpg</a></p></div></div></article></section><div id="generic"></div><noscript>More information: <a href="./">General press kit for Lorenzo Wood</a></noscript><section><article class="textual"><h2>Additional resources</h2><p><a href="/video/">Videos</a> page and downloadable <a href="/photos/">photos</a>.</p></article></section></main><footer><p><b>Copyright © 2017-2020 Lorenzo Wood</b><span class="widespace"></span><span class="widespace"></span><a class="contact-link" href="/contact/">Contact us</a><span class="widespace"></span><a class="press-link" href="/press/">Press & Media</a></p><p class="js-warning">JavaScript is disabled in your browser; please enable it to see missing content.
 </p></footer><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script><script>var el = document.getElementById('generic');
 // IE8+

@@ -46,7 +46,7 @@ class DowncodeDB extends SQLite3
 
 	function allReleases()	// reverse order by timestamp, so most recent added at top
 	{
-		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, Artist A WHERE R.artist_id = A.ID ORDER BY timestamp DESC');
+		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, Artist A WHERE R.artist_id = A.ID ORDER BY release_date DESC');
 		$ret = $statement->execute();
 		$result = Array();
 		while ($release = $ret->fetchArray(SQLITE3_ASSOC) ){

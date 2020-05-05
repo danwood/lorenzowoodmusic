@@ -81,13 +81,13 @@ block append main
 			h2 Music Releases
 
 			table
-				<?php foreach ($releases as $release) {
-				|	$now = new DateTime();
+				<?php
+				|	$now = new DateTime(isset($_GET['ymd']) ? $_GET['ymd'] : 'now');
+				|	foreach ($releases as $release) {
 				|	$releaseDate = $now;   // default to now, so it should show up as released
 				|	$releaseDateString = NULL;
 				|	if (empty($release['release_date'])) { continue; } // must have a release date
 				|	$releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
-				|	$now = new DateTime();
 				|	if ($now < $releaseDate) { continue; }		// DO NOT SHOW UNRELEASED
 				|
 				|	$releaseDateString = ($now < $releaseDate) ? $releaseDate->format('l, F jS') : $releaseDate->format('F Y');
