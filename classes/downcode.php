@@ -46,9 +46,9 @@ class DowncodeDB extends SQLite3
 
 	function allReleases()	// reverse order by timestamp, so most recent added at top
 	{
-		$result = Array();
 		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, Artist A WHERE R.artist_id = A.ID ORDER BY timestamp DESC');
 		$ret = $statement->execute();
+		$result = Array();
 		while ($release = $ret->fetchArray(SQLITE3_ASSOC) ){
 			$result[] = $release;
 		}
@@ -72,10 +72,10 @@ class DowncodeDB extends SQLite3
 		}
 
 		$result = NULL;
-		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, External E, Artist A WHERE R.ID = E.release_id AND R.artist_id = A.ID AND R.slug = :slug ORDER BY E.variation_id ' . ($radio_edit ? 'desc' : 'asc'));
+		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, External E, Marketing M, Artist A WHERE R.ID = E.release_id AND M.release_id = R.ID AND R.artist_id = A.ID AND R.slug = :slug ORDER BY E.variation_id ' . ($radio_edit ? 'desc' : 'asc'));
 		$statement->bindValue(':slug', $slug);
 		$ret = $statement->execute();
-		$result = [];
+		$result = Array();
 		while ($album = $ret->fetchArray(SQLITE3_ASSOC) ){
 			$result[] = $album;
 		}
@@ -108,6 +108,22 @@ class DowncodeDB extends SQLite3
 		}
 		return $result;
 	}
+
+	function marketingReleases()
+	{
+		$statement = $this->prepare("SELECT *, T.name as release_type_name, a.name as artist_name FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND release_date < date('now', 'start of day','+7 days') ORDER BY R.release_date DESC, E.variation_id DESC");
+		$ret = $statement->execute();
+		$result = Array();
+		$lastReleaseID = -1;		// Can't figure out the SQL to only get one row per release so cheat here!
+		while ($release = $ret->fetchArray(SQLITE3_ASSOC) ){
+			if ($release['release_id'] != $lastReleaseID) {
+				$result[] = $release;
+			}
+			$lastReleaseID = $release['release_id'];
+		}
+		return count($result) ? $result : NULL;		// return array of releases, with preferred one first
+	}
+
 
 	function pathForImageSize($release, $size = 3000) {
 		if (!in_array($size, Array(64, 384, 640, '1200x630', 3000, 'blurred'))) return NULL;

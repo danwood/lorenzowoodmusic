@@ -1,62 +1,9 @@
 extends _layout.pug
 
 
-//-   MIXIN FOR IMAGE WITH SRCET AND SIZES ATTRIBUTES
-//-   Takes 4 arguments:
-//-   src: a string with path to original(default) file;
-//-   alt: string with alt text;
-//-   resolutions: an array with all necessary resolutions, for example [450, 520, 680, 768, 992, 1200];
-//-   sizes: a 2-dimensional array. The inner values can be an array of length 2, where array[0] is a string with media query condition, and array[1] is a string with width including units. Besides the array, there can be included one string, representing the default width. Example:
-//-    var coverArtSizes = [
-//-    		["min-width: 24em", "50vw"],
-//-    		["min-width: 36em", "33.3vw"],
-//-    		"100vw"
-//-    	];
-//-    FILE NAMING: to get this mixin working properly, all your source files need to be located in the same folder and follow the same naming scheme.
-//-    Default image: {fileName}.{FileExtention} --> this value is to be included as src argument
-//-    Alternative sources:{fileName}-(resolutions value, corresponding to the image).{fileExtention}.
-//-   Example:
-//-   Default image: src/img/heroimage.jpg
-//-   Source image for 500w viewport: src/img/heroimage-500.jpg
-
-mixin img(src, alt, resolutions, sizes)
-	-
-		var directoryPrelude = "/album_art_";
-		var newSrc = directoryPrelude + resolutions[0] + "/" + src;
-		var srcset = [];
-		for (i = 0; i  <  resolutions.length; i++) {
-			srcset.push(directoryPrelude + resolutions[i] + "/" + src + " " + resolutions[i] + "w");
-		}
-		srcset = srcset.join(", ");
-		var mediaSizes = [];
-		var defaultSize;
-		if (sizes.constructor === Array) {
-			for (var i = 0; i < sizes.length; i++) {
-				if (sizes[i].constructor === Array && sizes[i].length === 2) {
-				mediaSizes.push("\(" + sizes[i][0] + "\) " + sizes[i][1]);
-				}
-				else if (sizes[i].constructor === String) {
-					defaultSize = sizes[i];
-				}
-				else {
-					console.log("Check Sizes value: it can only take arrays of length 2, containing media query and width/pixel density descriptor, or default width as string")
-				}
-			}
-			sizes = mediaSizes.join(" ") + " " + defaultSize;
-		}
-		else {
-			console.log("Sizes must be array or number")
-		}
-	img(src=newSrc, alt=alt, srcset=srcset, sizes=sizes)
 
 block prelude
 	|<?php
-	//- We could show an initial warning that downloads from iOS don't go into the library directly?
-	//-$iOSDevice = false; // or set to a non-false text value
-	//-if (preg_match("/(\\(iPod|\\(iPhone|\\(iPad)/", $_SERVER['HTTP_USER_AGENT'], $matches)) {
-	//-	$iOSDevice = substr($matches[1], 1);
-	//-}
-	|$code = isset($_GET['code']) ? htmlspecialchars($_GET['code']) : '';
 	|$email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
 	|
 	|require_once('classes/downcode.php');
@@ -73,6 +20,8 @@ block prelude
 	|	}
 	|	$oneMonthAgo = new \DateTime('1 month ago');
 	|}
+	|
+	|$marketingReleases = $db->marketingReleases();
 	|?>
 
 
@@ -199,113 +148,51 @@ block main
 				header
 					h2 Latest Releases
 
-		-
-			var coverArtResolutions = [64, 384, 640];	//- really the 384 is rarely used except on small 1x screens?
-			var coverArtSizes = [
-			["max-width: 768px", "100vw"],
-			"25vw"
-			];
 
-		.subsection.light-text(style="background-color:#222222")
+		<?php $reversed = false; foreach ($marketingReleases as $release) { ?>
+
+		<div class="subsection <?php echo $release['light_text'] ? 'light-text' : 'dark-text'; if ($reversed) { echo ' reversed'; } $reversed = !$reversed; ?>" style="background-color:<?php echo htmlentities($release['color'], ENT_QUOTES); ?>">
 			article
 				.release-image.bordered
-					a(href="/link/more-than-friends")
-						+img("more-than-friends.png", "Cover image of More Than Friends", coverArtResolutions, coverArtSizes)
-				.release-blurb.no-video
-					h3: a(href="/link/more-than-friends") More Than Friends
+					<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php
+					|	echo '<img src="';
+					|	echo htmlentities($db->pathForImageSize($release, 64), ENT_QUOTES);
+					|	echo '" alt= "Cover image of ';
+					|	echo htmlentities($release['title'], ENT_QUOTES);
+					|	echo '" srcset="';
+					|	echo htmlentities(
+					|		$db->pathForImageSize($release, 64) . ' 64w, ' .
+					|		$db->pathForImageSize($release, 384) . ' 384w, ' .
+					|		$db->pathForImageSize($release, 640) . ' 640w', ENT_QUOTES);
+					|	echo '" sizes="(max-width: 768px) 100vw, 25vw"/>';
+					|?>
+					</a>
+				<div class="release-blurb <?php if (!$release['youtube_video_v']) { echo ' no-video'; } ?>">
+					h3
+						<a href="<?php echo '/link/' . htmlentities($release['slug'], ENT_QUOTES); ?>">
+							<?php echo htmlspecialchars($release['title']); ?>
+						</a>
+					<?php if ($release['artist_id'] != 1) { echo '<h4>' . htmlspecialchars($release['artist_name']) . '</h4>'; } ?>
+					<?php echo $release['description_html']; ?>
 
-					p More Than Friends is an upbeat song about the hopeful transition from being just friends into a relationship.
 
-					blockquote ’More Than Friends’ is a soft Electro Pop track with a brief interlude of sultry saxophone to add to the musical layers and production. The emotion of the lyrics is real, and Wood’s performance is genuine as you can feel the plaintive hope in every word.
-						footer: a(href="https://www.laonlock.com/reviews/5/1/2020/lorenzo-wood-more-than-friends-review") LA on Lock
-
-					blockquote(title="En upplyftande poplåt om att satsa helhjärtat på ett förhållande och ta det från vänskap till något mer. Allt skriven och producerat av sångaren och du hittar även en kryddning med saxofon i låten. Så väldigt charmig.") An uplifting pop song about investing wholeheartedly in a relationship and taking it from friendship to something more. Everything written and produced by the singer and you also find spice with saxophone in the song. So very charming.
-						footer
-							a(href="https://popmuzik.se/104966/lorenzo-wood-more-than-friends/") Popmuzik
-							|
-							|
-							span(style="opacity:0.3") (translated from Swedish)
-
-
-					<?php $releaseDate = new DateTime('2020-05-01 00:00:00', new DateTimeZone('America/New_York'));
+					<?php $releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
 					|if ($now < $releaseDate) { ?>
 
-					h4 Releasing May 1, 2020
-					p: a.bold(href="link/more-than-friends") Pre-Save / Pre-Order
+					<h4>Releasing <?php echo htmlspecialchars($releaseDate->format('F n, Y')); ?></h4>
+					<p><a class="bold" href="link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">Pre-Save / Pre-Order</a></p>
 
 					<?php } else { ?>
 
-					h4 May 2020
-					p: a.bold(href="link/more-than-friends") Download/Stream
+					<h4><?php echo htmlspecialchars($releaseDate->format('F Y')); ?></h4>
+					<p><a class="bold" href="link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">Download/Stream</a></p>
 
 					<?php } ?>
+				</div> <!-- end release blurb -->
+				<?php if ($release['youtube_video_v']) { echo '<div class="release-video"><div class="youtube" data-code="' . $release['youtube_video_v'] . '" data-title="' . htmlentities($release['title'], ENT_QUOTES) . '"></div></div>'; } ?>
+		</div> <!-- end subsection-->
 
-		.subsection.light-text(style="background-color:#3b8abb")
-			article
-				.release-image.bordered
-					a(href="/link/still-need-love")
-						+img("still-need-love.jpg", "Cover image of Still Need Love", coverArtResolutions, coverArtSizes)
-				.release-blurb
-					h3: a(href="/link/still-need-love") Still Need Love
-					h4 March 2020
-					p The first of several singles that I'm releasing in Spring 2020. The start of my new era of music with a fiery beat and smooth saxophone.
-					p Originally meant to be a song about depression and heartbreak, it gains new meaning during the lonely times of social distancing and being stuck at home.
-					p: a.bold(href="link/still-need-love") Download/Stream
-				.release-video
-					.youtube(data-code='TkDhR4FMHVg' data-title='Lorenzo Wood - Still Need Love (Official Lyric Video)')
-
-		.subsection.light-text.reversed(style="background-color:#1D2C1D") 
-			article
-				.release-image.bordered
-					a(href="link/jacket")
-						+img("jacket-ep.jpg", "Cover image of Jacket EP", coverArtResolutions, coverArtSizes)
-				.release-blurb
-					h3: a(href="link/jacket") Jacket (EP)
-					h4 May 2019 (Single), Oct 2019 (EP)
-					p It's about how your friends need to support you, even if they don't understand what you're going through.
-					p This is an EP with four versions of the same song! The original (in the video here), a remix by <a class="spotify" href="https://open.spotify.com/artist/1BGQD9MGL3oUkS4sN86Wec">Aendru</a>, a rock version, and an acoustic-driven duet with <a href="https://www.kaiasongs.com">Kaia</a>.
-					p: a.bold(href="link/jacket") Download/Stream
-				.release-video
-					.youtube(data-code='iVHF1RM7a9I' data-title='Lorenzo Wood - Jacket (I\'m Sensitive)')
-					div: a(href="https://youtu.be/iVHF1RM7a9I") Original video
-					div: a(href="https://youtu.be/_______") Duet with Kaia
-					div: a(href="https://youtu.be/Jg1yOnHlcYA") Live Acoustic performance
-
-
-		.subsection.light-text(style="background-color:#490B19")
-			article
-				.release-image.bordered
-					a(href="/link/heartless")
-						+img("heartless.jpg", "Cover image of Heartless", coverArtResolutions, coverArtSizes)
-				.release-blurb
-					h3: a(href="/link/heartless") Heartless
-					h4 2AM in the Basement • December 2019
-					p After listening to Heartless by Diplo and Morgan Wallen a few times, I knew I had to cover it. I used it as an opportunity to learn to produce and edit video, and to try out singing in a different style.
-					p: a.bold(href="link/heartless") Download/Stream
-				.release-video
-					.youtube(data-code='PfjIqix5ZZw' data-title='Heartless (Diplo & Morgan Wallen) Cover by 2AM In The Basement')
-
-		.subsection.dark-text.reversed(style="background-color:#d0aa85")
-			article
-				.release-image
-					a(href="/link/old-town-road")
-						+img("old-town-road.jpg", "Cover image of Old Town Road", coverArtResolutions, coverArtSizes)
-				.release-blurb.no-video
-					h3: a(href="/link/old-town-road") Old Town Road
-					h4 2AM in the Basement • May 2019
-					p I made this track from start to finish in just over twenty-fours just before the peak of the song's popularity. <a href="http://designology.co">Kyle Wonzen</a> did an awesome job on the graphics, and I've had him contributing artwork ever since.
-					p: a.bold(href="link/old-town-road") Download/Stream
-
-		.subsection.dark-text(style="background-color:#bec7cc")
-			article
-				.release-image
-					a(href="link/now-in-control")
-						+img("now-in-control.jpg", "Cover image of Now In Control", coverArtResolutions, coverArtSizes)
-				.release-blurb.no-video
-					h3: a(href="link/now-in-control") Now In Control (EP)
-					h4 May 2018
-					p My debut EP, released when I was just 15 years old. That seems so long ago now! My favorite track is "Don't Look Back"; It's stood the test of time (two years, haha) the most, in my opinion.
-					p: a.bold(href="link/now-in-control") Download/Stream
+		<?php } ?>
 
 
 
@@ -342,6 +229,5 @@ block prepend scripts
 		|if (iOS) $('#form-album').val(window.DeviceMotionEvent ? '2938' : '8603');
 
 
-	<?php if ($code) { ?><script>$('#redeem-form').submit();</script><?php } ?>
 	<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"Lorenzo Wood","url":"https://www.lorenzowoodmusic.com/","sameAs":["https://www.facebook.com/lorenzowoodmusic/","https://twitter.com/lorenzowmusic","https://www.instagram.com/LorenzoWoodMusic/","https://www.youtube.com/lorenzowoodmusic","https://listen.tidal.com/artist/9832731","https://soundcloud.com/LorenzoWoodMusic","https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp","https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA?si=kAr7Wf29R7WkScnbG9d2dg"]}</script>
 

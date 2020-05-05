@@ -83,13 +83,12 @@ if (TRUE || $artist['upcoming_event_count']) {
 	} ?>
 
 		<?php if (!$past) { ?><?php } ?>
-	</a>
 </div>
 <?php
 	}
 ?>
 <div class='bit-after'>
-	<a class='bit-track' href='<?php echo htmlspecialchars($artistURL); ?>'>Track <?php echo htmlspecialchars($artistNameWithoutMusic); ?> on BandsInTown</span></a>
+	<a class='bit-track' href='<?php echo htmlspecialchars($artistURL); ?>'>Track <?php echo htmlspecialchars($artistNameWithoutMusic); ?> on BandsInTown</a>
 	to be notified of upcoming gigs!
 </div>
 <?php
