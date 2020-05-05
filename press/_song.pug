@@ -82,7 +82,7 @@ block main
 						|Link to large image (3000 pixels square):
 						br
 						<a href='<?php echo htmlentities($db->pathForImageSize($release, 3000), ENT_QUOTES); ?>'>
-						|https://lorenzowoodmusic.com/<?php echo htmlspecialchars($db->pathForImageSize($release, 3000)); ?></a>
+						|https://lorenzowoodmusic.com<?php echo htmlspecialchars($db->pathForImageSize($release, 3000)); ?></a>
 					if slugAndCoverFile2 != undefined
 						p: a(href='../album_art_3000/' + slugAndCoverFile2) Link to second large image (3000 pixels square)
 
