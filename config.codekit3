@@ -2493,22 +2493,40 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"/press/falling.html": {
+	"/press/drown.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/press/falling.html",
+		"oAP": "/press/drown.php",
 		"oF": 0
 		},
-	"/press/falling.pug": {
+	"/press/drown.php.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/press/falling.html",
-		"oF": 0,
+		"oAP": "/press/drown.php",
+		"oF": 2,
+		"oS": 1
+		},
+	"/press/falling.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/press/falling.php",
+		"oF": 0
+		},
+	"/press/falling.php.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/press/falling.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/press/falling_thumb.jpg": {
@@ -2540,40 +2558,40 @@
 		"oF": 2,
 		"oS": 1
 		},
-	"/press/jacket.html": {
+	"/press/jacket.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/press/jacket.html",
+		"oAP": "/press/jacket.php",
 		"oF": 0
 		},
-	"/press/jacket.pug": {
+	"/press/jacket.php.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/press/jacket.html",
-		"oF": 0,
+		"oAP": "/press/jacket.php",
+		"oF": 2,
 		"oS": 1
 		},
-	"/press/more-than-friends.html": {
+	"/press/more-than-friends.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/press/more-than-friends.html",
+		"oAP": "/press/more-than-friends.php",
 		"oF": 0
 		},
-	"/press/more-than-friends.pug": {
+	"/press/more-than-friends.php.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/press/more-than-friends.html",
-		"oF": 0,
+		"oAP": "/press/more-than-friends.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/press/shared.html": {
@@ -2594,22 +2612,32 @@
 		"oF": 1,
 		"oS": 1
 		},
-	"/press/still-need-love.html": {
+	"/press/still-need-love.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/press/still-need-love.html",
+		"oAP": "/press/still-need-love.php",
 		"oF": 0
 		},
-	"/press/still-need-love.pug": {
+	"/press/still-need-love.php.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/press/still-need-love.html",
-		"oF": 0,
+		"oAP": "/press/still-need-love.php",
+		"oF": 2,
+		"oS": 1
+		},
+	"/press/unfollow.php.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/press/unfollow.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/robots.txt": {

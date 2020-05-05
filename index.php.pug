@@ -8,14 +8,14 @@ block prelude
 	|
 	|require_once('classes/downcode.php');
 	|$db = new DowncodeDB();
-	|$album = $db->featuredRelease();
+	|$release = $db->featuredRelease();
 	|
 	|$now = new DateTime();
 	|$releaseDate = $now;	// default to now, so it should show up as released
-	|if ($album) {
+	|if ($release) {
 	|	$releaseDateString = NULL;
-	|	if (!empty($album['release_date'])) {
-	|		$releaseDate = new DateTime($album['release_date'], new DateTimeZone('America/New_York'));
+	|	if (!empty($release['release_date'])) {
+	|		$releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
 	|		if ($now < $releaseDate) $releaseDateString = $releaseDate->format('l, F jS');
 	|	}
 	|	$oneMonthAgo = new \DateTime('1 month ago');
@@ -48,16 +48,16 @@ block append links
 
 block append header
 	.hero
-		<?php if ($album) { ?>
+		<?php if ($release) { ?>
 		.action-banner.clearfix.safe-area-only
 			p
-				<a target="_blank" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>">
-					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="<?php echo htmlentities($db->pathForImageSize($album, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
+				<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
+					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="<?php echo htmlentities($db->pathForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
 				</a>
-				span <?php echo htmlspecialchars( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $album['release_type_name'] . ' “' . $album['title'] . '”'); ?> —
+				span <?php echo htmlspecialchars( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
 					| &nbsp;
 				b
-					<a style="text-decoration:underline" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
+					<a style="text-decoration:underline" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
 		<?php } ?>
 
 		img.hero-image.covering.swapping-image(srcset="img/banner1_giant.jpg 2560w, img/banner1_big.jpg 1920w, img/banner1_medium.jpg 960w, img/banner1_small.jpg 640w" sizes="100vw" src="img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")

@@ -58,7 +58,7 @@ class DowncodeDB extends SQLite3
 	// Returns an array of releases: the desired (explicit/non-explicit) followed by the other one
 	// so client knows if there is also an alternate version.
 
-	function releasesForSlug($slug)
+	function releasesExtendedForSlug($slug)
 	{
 		$slug = strtolower(trim($slug));
 		// If it ends with -radio-edit we are getting a different 'album'
@@ -80,6 +80,22 @@ class DowncodeDB extends SQLite3
 			$result[] = $album;
 		}
 		return count($result) ? $result : NULL;		// return array of releases, with preferred one first
+	}
+
+	// JUST the release wthout the External stuff. No variations, so just one item.
+
+	function releaseForSlug($slug)
+	{
+		$slug = strtolower(trim($slug));
+
+		$result = NULL;
+		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, Artist A WHERE R.artist_id = A.ID AND R.slug = :slug');
+		$statement->bindValue(':slug', $slug);
+		$ret = $statement->execute();
+		while ($release = $ret->fetchArray(SQLITE3_ASSOC) ){
+			$result = $release;
+		}
+		return $result;
 	}
 
 	/*

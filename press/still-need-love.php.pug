@@ -1,14 +1,13 @@
 extends _song.pug
 
+block prepend prelude
+	<?php $slug = 'still-need-love';?>
+
 block vars
-	- var pageTitle = 'Still Need Love'
-	- var pageArtist = 'Lorenzo Wood'
-	- var releaseDate = 'March 27, 2020'
 
 	- var youtubeSlug = 'TkDhR4FMHVg'
 
 	//- used for link page (without file extension) and to identify cover file.
-	- var slugAndCoverFile = 'still-need-love.jpg'
 	- var artworkDesigner = 'Kyle Wonzen'
 	- var artworkDesignerURL = 'http://designology.co'
 

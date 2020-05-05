@@ -1,11 +1,39 @@
 extends ../_layout.pug
 
+block prelude
+	|<?php
+	|
+	|require_once('../classes/downcode.php');
+	|$db = new DowncodeDB();
+	|
+	|
+	|$now = new DateTime();
+	|$releaseDate = $now;   // default to now, so it should show up as released
+	|$release = $db->releaseForSlug($slug);
+	|
+	|$now = new DateTime();
+	|$releaseDate = $now;	// default to now, so it should show up as released
+	|if ($release) {
+	|	$releaseDateString = NULL;
+	|	if (!empty($release['release_date'])) {
+	|		$releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
+	|		if ($now < $releaseDate) {
+	|			$releaseDateString = $releaseDate->format('l, F jS');
+	|		} else {
+	|			$releaseDateString = $releaseDate->format('F jS Y');
+	|		}
+	|	}
+	|	$oneMonthAgo = new \DateTime('1 month ago');
+	|}
+
+	|?>
+
 
 block append vars
 	- var currentClass = 'press'
 
 block title
-	title #{pageTitle} - Press page | Lorenzo Wood Music
+	title <?php echo htmlspecialchars($release['title']); ?> - Press page | Lorenzo Wood Music
 block description
 
 block styles
@@ -25,30 +53,27 @@ block styles
 block main
 	section
 		article.textual
-			h1 Song: #{pageTitle}
-			h2 Artist: #{pageArtist}
+			h1 <?php echo htmlspecialchars($release['title']); ?>
+			h2 Artist: <?php echo htmlspecialchars($release['artist_name']); ?>
 
-			p.releaseDate Song Release Date: #{releaseDate}
+			p.releaseDate Song Release Date: <?php echo htmlspecialchars($releaseDateString); ?>
 
 			block song
 
-			-
-				var slug = slugAndCoverFile.replace(slugAndCoverFile.substr(slugAndCoverFile.lastIndexOf('.')), '')
+			block credits
 
 			h2 Web Page
 			p
-				|Please use this URL to link to "#{pageTitle}":
+				|Please use this URL to link to "<?php echo htmlspecialchars($release['title']); ?>":
 				|
-				if songLinkURL != undefined
-					a(href=songLinkURL) #{songLinkURL}
-				else
-					a(href='https://www.lorenzowoodmusic.com/link/' + slug) https://www.lorenzowoodmusic.com/link/#{slug}
+				<a href='https://www.lorenzowoodmusic.com/link/<?php echo htmlspecialchars($release['slug']); ?>'> https://www.lorenzowoodmusic.com/link/<?php echo htmlspecialchars($release['slug']); ?></a>
 			block moreLinks
 
 			div.clearfix
 				h2 Album Artwork
-				a(href='../album_art_3000/' + slugAndCoverFile)
-					img.cover(src='../album_art_384/' + slugAndCoverFile, alt=pageTitle)
+				<a href='<?php echo htmlentities($db->pathForImageSize($release, 3000), ENT_QUOTES); ?>'>
+					<img class="cover" src="<?php echo htmlentities($db->pathForImageSize($release, 384), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
+				</a>
 				if slugAndCoverFile2 != undefined
 					a(href='../album_art_3000/' + slugAndCoverFile2)
 						img.cover(src='../album_art_384/' + slugAndCoverFile2, alt=pageTitle)
@@ -57,7 +82,8 @@ block main
 					p
 						|Link to large image (3000 pixels square):
 						br
-						a(href='../album_art_3000/' + slugAndCoverFile) https://lorenzowoodmusic.com/album_art_3000/#{slugAndCoverFile}
+						<a href='<?php echo htmlentities($db->pathForImageSize($release, 3000), ENT_QUOTES); ?>'>
+						|https://lorenzowoodmusic.com/<?php echo htmlspecialchars($db->pathForImageSize($release, 3000)); ?></a>
 					if slugAndCoverFile2 != undefined
 						p: a(href='../album_art_3000/' + slugAndCoverFile2) Link to second large image (3000 pixels square)
 
@@ -67,7 +93,10 @@ block main
 							|
 							a(href=artworkDesignerURL) #{artworkDesigner}
 
-			if privateSoundCloud != undefined
+			//- Only show PUG-defined SoundCloud stuff if we are pre-release.
+
+			<?php if ($now < $releaseDate ) { ?>
+
 				h2 Prerelease - SoundCloud Link
 				p: i For review use only - not for distribution
 				p.soundCloudLink
@@ -91,6 +120,8 @@ block main
 	
 			if privateSoundCloudEmbed != undefined
 				|!{privateSoundCloudEmbed}
+
+			<?php } ?>
 
 			if youtubeSlug != undefined
 				if youtubeSlug2 == undefined
@@ -124,11 +155,23 @@ block main
 
 				if youtubeSlug2 != undefined
 					div.clearfix
-						a(href='https://www.youtube.com/watch?v=' + youtubeSlug2)
-							img.cover(src='https://img.youtube.com/vi/' + youtubeSlug2 + '/sddefault.jpg', alt=pageTitle)
+						- var youtubeLink2 = 'https://www.youtube.com/watch?v=' + youtubeSlug2
+						- var youtubeThumb2 = 'https://img.youtube.com/vi/' + youtubeSlug2 + '/sddefault.jpg'
+						- var youtubeFullThumb2 = 'https://img.youtube.com/vi/' + youtubeSlug2 + '/maxresdefault.jpg'
+						a(href=youtubeLink2)
+							img.cover(src=youtubeThumb2)
 						div.column
-							p: a(href='https://www.youtube.com/watch?v=' + youtubeSlug2) Link to music video (YouTube)
-							p: a(href='https://img.youtube.com/vi/' + youtubeSlug2 + '/maxresdefault.jpg') Link to thumbnail image
+							p
+								|Music video:
+								|
+								a(href=youtubeLink2) !{youtubeLink2}
+
+							p
+								|Thumbnail image:
+								|
+								a(href=youtubeFullThumb2) !{youtubeFullThumb2}
+
+
 
 			if noLyrics == undefined
 				h2 Lyrics
@@ -143,7 +186,7 @@ block main
 		article.textual
 
 			h2 Additional resources
-			p <a href="/video/">videos</a> page and downloadable <a href="/photos/">photos</a>.
+			p <a href="/video/">Videos</a> page and downloadable <a href="/photos/">photos</a>.
 
 block footer-icons
 		

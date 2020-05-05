@@ -1,22 +1,21 @@
 extends _song.pug
 
+block prepend prelude
+	<?php $slug = 'more-than-friends';?>
+
 block vars
-	- var pageTitle = 'More Than Friends'
-	- var pageArtist = 'Lorenzo Wood'
-	- var releaseDate = 'May 1, 2020'
 
 	//- - var youtubeSlug = ''
 
-	//- var privateSoundCloud = 'https://soundcloud.com/lorenzowoodmusic/more-than-friends-releasing-on-may-1/s-Jznggs6I7kA'
-	//- var privateSoundCloudClean = 'https://soundcloud.com/lorenzowoodmusic/more-than-friends-clean-version/s-nX1HoYzNcUN'
+	- var privateSoundCloud = 'https://soundcloud.com/lorenzowoodmusic/more-than-friends-releasing-on-may-1/s-Jznggs6I7kA'
+	- var privateSoundCloudClean = 'https://soundcloud.com/lorenzowoodmusic/more-than-friends-clean-version/s-nX1HoYzNcUN'
 
 	
 
-	//- var privateSoundCloudEmbed = '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/797933995%3Fsecret_token%3Ds-Jznggs6I7kA&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
+	- var privateSoundCloudEmbed = '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/797933995%3Fsecret_token%3Ds-Jznggs6I7kA&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
 
 
 	//- used for link page (without file extension) and to identify cover file.
-	- var slugAndCoverFile = 'more-than-friends.png'
 	- var artworkDesigner = 'Kyle Wonzen'
 	- var artworkDesignerURL = 'http://designology.co'
 
@@ -38,6 +37,11 @@ block song
 			|
 			|
 			span(style="opacity:0.3") (translated from Swedish)
+
+	blockquote
+		|I love how this song conveys the underlying anxieties of a crush; the vocals are very smooth, but accompanied by a faster beat, which mimics the way your heart might beat faster around someone despite your normal behavior.
+		footer
+			a(href="https://www.unheardgems.com/post/more-than-friends-lorenzo-wood-review") Unheard Gems
 
 
 	p.
