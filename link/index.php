@@ -22,12 +22,11 @@ $release = $releases[0];
 
 $has_radio_edit = false;
 $has_explicit = false;
-foreach($releases as $release) {
-	if ($release['variation_id'] == 2) { $has_radio_edit = true; }
-	if ($release['variation_id'] == 1) { $has_explicit = true; }
+foreach($releases as $r) {
+	if ($r['variation_id'] == 2) { $has_radio_edit = true; }
+	if ($r['variation_id'] == 1) { $has_explicit = true; }
 }
 $is_explicit = $release['variation_id'] == 1;	// is *this* page marked explicit?
-
 $longTitle = $release['title'];
 
 if (!empty($release['featuring'])) { $longTitle .= ' [feat. ' . $release['featuring'] . ']'; }
