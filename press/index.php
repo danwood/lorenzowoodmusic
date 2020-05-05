@@ -36,7 +36,7 @@ tr:nth-child(even) {background: rgba(0,0,0,0.1)}</style></head><body class="pres
 	if ($now < $release) { continue; }		// DO NOT SHOW UNRELEASED
 
 	$releaseDateString = ($now < $release) ? $release->format('l, F jS') : $release->format('F Y');
-	?><tr><td class="thumb"><img src="../album_art_64/<?php echo htmlentities($album['image_64'] ? $album['image_64'] : $album['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>" /></td><td><?php echo htmlspecialchars($album['title']); ?></td><td class="info"> <?php
+	?><tr><td class="thumb"><img src="<?php echo htmlentities($db->pathForImageSize($album, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>" /></td><td><?php echo htmlspecialchars($album['title']); ?></td><td class="info"> <?php
 echo htmlspecialchars($album['artist_name']);
 if ($album['featuring']) {
 	echo '<br> feat. ' . htmlspecialchars($album['featuring']);

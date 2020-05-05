@@ -103,7 +103,7 @@ block append header
 		.action-banner.clearfix.safe-area-only
 			p
 				<a target="_blank" href="/link/<?php echo htmlentities($album['slug'], ENT_QUOTES); ?>">
-					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="album_art_64/<?php echo htmlentities($album['image_64'] ? $album['image_64'] : $album['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
+					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="<?php echo htmlentities($db->pathForImageSize($album, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($album['title'], ENT_QUOTES); ?>, cover image" />
 				</a>
 				span <?php echo htmlspecialchars( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $album['release_type_name'] . ' “' . $album['title'] . '”'); ?> —
 					| &nbsp;

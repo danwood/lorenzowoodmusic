@@ -109,6 +109,19 @@ class DowncodeDB extends SQLite3
 		return $result;
 	}
 
+	function pathForImageSize($release, $size = 3000) {
+		if (!in_array($size, Array(64, 384, 640, '1200x630', 3000, 'blurred'))) return NULL;
+
+		$dir = 'album_art_' . $size;
+		$file = $release['image'];
+		if ($size == 64 && $release['image_64']) {
+			$file = $release['image_64'];
+		}
+
+
+		return '/' . $dir . '/' . $file;
+	}
+
 
 }
 ?>
