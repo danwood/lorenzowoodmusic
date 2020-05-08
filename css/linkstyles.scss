@@ -106,9 +106,11 @@ body>footer {
 	overflow: hidden;
 	img {
 		width: 320px;
+		height:320px;
 		display: block;
 		position: relative;
 		background-size: 100%;
+		background:rgba(0,0,0,0.5);
 	}
 }
 
