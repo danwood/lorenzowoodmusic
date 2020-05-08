@@ -2664,24 +2664,6 @@
 		"oAP": "/sitemap.txt",
 		"oF": 0
 		},
-	"/studio/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/studio/index.html",
-		"oF": 0
-		},
-	"/studio/index.pug": {
-		"cB": 0,
-		"cOD": 1,
-		"ft": 512,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/studio/index.html",
-		"oF": 0,
-		"oS": 1
-		},
 	"/svg/2am.svg": {
 		"ft": 2097152,
 		"miP": 0,

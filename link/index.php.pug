@@ -49,8 +49,10 @@ block vars
 	//- do not define pageTitle; it breaks things (?) and isn't need since title is generated from database
 
 block append links
+	<?php if ($release['youtube_video_v']) { ?>
 	link(rel="prefetch" href="//img.youtube.com")
 		//- This should be done on any page showing YOUTUBE VIDEOS
+	<?php } ?>
 
 block title
 	<title><?php echo htmlentities($longTitle); ?></title>
@@ -87,7 +89,7 @@ block append links
 	//- square 144 up to 4000, 5 MB max
 
 block append styles
-	link(rel='stylesheet', href='/css/linkstyles.050520.css')
+	link(rel='stylesheet', href='/css/linkstyles.050720.css')
 
 
 block main
@@ -104,9 +106,6 @@ block main
 
 		<?php } ?>
 
-		.imagecontainer
-			<img src="../album_art_640/<?php echo htmlentities($release['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
-
 		.title-container
 			
 			<?php if ($release['youtube_video_v']) { ?>
@@ -120,8 +119,11 @@ block main
 				|  <?php echo htmlspecialchars($release['title']); ?>
 			<?php $featuring = $release['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
 
+		.imagecontainer
+			<img src="../album_art_640/<?php echo htmlentities($release['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
+
 		.title-container
-			p.
+			h2.
 				<?php
 				if ($now < $releaseDate) {
 					echo 'Releasing ' . htmlspecialchars($releaseDateString);
