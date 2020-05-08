@@ -72,7 +72,7 @@ class DowncodeDB extends SQLite3
 		}
 
 		$result = NULL;
-		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, External E, Marketing M, Artist A WHERE R.ID = E.release_id AND M.release_id = R.ID AND R.artist_id = A.ID AND R.slug = :slug ORDER BY E.variation_id ' . ($radio_edit ? 'desc' : 'asc'));
+		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, External E, Artist A LEFT OUTER JOIN Marketing M ON R.ID = M.release_id WHERE R.ID = E.release_id AND R.artist_id = A.ID AND R.slug = :slug ORDER BY E.variation_id ' . ($radio_edit ? 'desc' : 'asc'));
 		$statement->bindValue(':slug', $slug);
 		$ret = $statement->execute();
 		$result = Array();

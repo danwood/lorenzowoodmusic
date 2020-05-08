@@ -6,6 +6,7 @@ block prelude
 	|require_once('../classes/downcode.php');
 	|$db = new DowncodeDB();
 	|$slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
+	|$genBlurhash = isset($_GET['blurhash']);
 	|
 	|if (empty($slug)) {
 	|   header('HTTP/1.0 404 Not Found');
@@ -41,7 +42,12 @@ block prelude
 	|}
 	|?>
 
-
+block append header
+	<?php if ($genBlurhash) { ?>
+	<input type="number" id="x" value="4" min="1" max="9" /> × <input type="number" id="y" value="4" min="1" max="9" />
+	<input type="text" id="blurhash" style="width:100%" value="Blurhash goes here" />
+	<canvas id="originalCanvas" style="display:none" width="100" height="100"></canvas>
+	<?php } ?>
 
 
 block vars
@@ -89,10 +95,17 @@ block append links
 	//- square 144 up to 4000, 5 MB max
 
 block append styles
-	link(rel='stylesheet', href='/css/linkstyles.050720.css')
+	link(rel='stylesheet', href='/css/linkstyles.050820.css')
 
 
 block main
+
+	.blurhash
+		//- This gets loaded with Javascript
+		<img id="blurhashImage" />
+		//- Hidden working canvas
+		<canvas id="outputCanvas" style="display:none" width="32" height="32"></canvas>
+
 
 	.background-blur
 		//- use the exact same image as the displayed one so we don't need another image loaded
@@ -316,6 +329,80 @@ block main
 block prepend scripts
 	script
 		include ../js/youtube-min.js
+		include ../js/blurhash-shared-min.js
+		include ../js/blurhash-decode-min.js
+		|var blurhashData = '<?php echo htmlspecialchars($release['blurhash']); ?>';
+		include ../js/linkpage-min.js
+
+
+	<?php if ($genBlurhash) { ?>
+	script
+		include ../js/blurhash-encode-min.js
+	script.
+		var sourceImageElement = document.getElementById("blurry");
+		var componentXElement = document.getElementById("x");
+		var componentYElement = document.getElementById("y");
+		var blurhashElement = document.getElementById("blurhash");
+		var originalCanvas = document.getElementById("originalCanvas");
+		var outputCanvas = document.getElementById("outputCanvas");
+
+		function render() {
+			var blurhash = blurhashElement.value;
+			if (blurhash) {
+				var pixels = decode(blurhash, 32, 32);
+				if (pixels) {
+					var ctx = outputCanvas.getContext("2d");
+					var imageData = new ImageData(pixels, 32, 32);
+					ctx.putImageData(imageData, 0, 0);
+
+
+				    dataUrl = outputCanvas.toDataURL();
+					sourceImageElement.src = dataUrl;
+				}
+			}
+		}
+
+		// Re-render if we change the blurhash value
+		blurhashElement.addEventListener("keyup", render);
+
+		function clamp(n) {
+		    return Math.min(9, Math.max(1, n));
+		}
+
+		function doEncode() {
+		    var componentX = clamp(+componentXElement.value);
+		    var componentY = clamp(+componentYElement.value);
+
+			var ctx_1 = originalCanvas.getContext("2d");
+			var imageData = ctx_1.getImageData(0, 0, originalCanvas.width, originalCanvas.height);
+			var blurhash = encode(imageData.data, imageData.width, imageData.height, componentX, componentY);
+			blurhashElement.value = blurhash;
+
+			// Immediately render now that we have a blurhash value
+			render();
+		};
+
+		componentXElement.addEventListener("change", doEncode);
+		componentYElement.addEventListener("change", doEncode);
+
+		var loaded = false;
+
+		// As soon as real background image is loaded, put it into the canvas.
+		sourceImageElement.onload = function () {
+			if (!loaded) {
+				var ctx_1 = originalCanvas.getContext("2d");
+
+				ctx_1.drawImage(sourceImageElement, 0, 0, originalCanvas.width, originalCanvas.height);
+
+				doEncode();
+
+				loaded = true;
+			}
+		};
+
+
+	<?php } ?>
+
 	|<?php
 	|$db->close();
 	|?>
