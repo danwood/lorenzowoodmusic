@@ -359,13 +359,6 @@ Masonry
 	}
 }
 
-//- On contact page only, hide the contact link since we're on that page!
-
-body.contact a.contact-link { display:none; }
-
-
-
-
 @media only screen and (min-width: 768px)  {
 
 	table.flipping td { border-bottom:1px solid rgba(128,128,128,0.30); }

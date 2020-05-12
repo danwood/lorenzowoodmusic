@@ -69,9 +69,9 @@ block description
 block append logo
 	.mini-icons
 		a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic" style="fill:#e95950")
-			include ../svg/instagram-logo.svg
+			svg: use(xlink:href="/svg/homepage.svg#instagram")
 		a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic" style="fill:#3b5998")
-			include ../svg/facebook-logo.svg
+			svg: use(xlink:href="/svg/homepage.svg#facebook")
 	
 block footer-icons
 
@@ -217,29 +217,29 @@ block main
 
 			<?php if ($release['apple_music_album']) { ?>
 			
-			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($release['apple_music_album'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/iTunes_Store_Buy_Lockup_RGB_blk.svg" alt="iTunes"><span class="play"><?php echo ($now < $releaseDate) ? 'Pre-order' : 'Download'; ?></span></a></div>
+			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($release['apple_music_album'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><svg><use xlink:href="/svg/linkpage.svg#itunes" /></svg><span class="play"><?php echo ($now < $releaseDate) ? 'Pre-order' : 'Download'; ?></span></a></div>
 
 			<?php } if ($release['apple_music_album'] && ($now >= $releaseDate)) { ?>
 
-			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($release['apple_music_album'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/Apple_Music_lockup_RGB_blk.svg" alt="Apple Music"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($release['apple_music_album'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><svg><use xlink:href="/svg/linkpage.svg#apple-music" /></svg><span class="play">Play</span></a></div>
 
 			//- We will only have the spotify link if the song has been released, unless things change...
 
 			<?php } if ($release['spotify_track']) { ?>
 			
-			<div class="service"><a href="https://play.spotify.com/track/<?php echo htmlentities($release['spotify_track'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://play.spotify.com/track/<?php echo htmlentities($release['spotify_track'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#spotify-text" /></svg><span class="play">Play</span></a></div>
 
 			//- Use spotify ALBUM link only if we don't have a TRACK specified.
 			<?php } if ($release['spotify_album'] && !$release['spotify_track']) { ?>
 			
-			<div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($release['spotify_album'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Spotify"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://play.spotify.com/album/<?php echo htmlentities($release['spotify_album'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#spotify-text" /></svg><span class="play">Play</span></a></div>
 
 			//- Show the spotify presave link if we don't have a real spotify link. Spotify might be slow in taking the release live,
 			//- or maybe we were slow in putting the link into our database.
 
 			<?php } if ( (!$release['spotify_album']) && (!$release['spotify_track']) &&$release['spotify_presave_url']) { ?>
 			
-			<div class="service"><a rel="nofollow" href="<?php echo htmlentities($release['spotify_presave_url'], ENT_QUOTES); ?>"><img src="../svg/spotify-text.svg" alt="Presave on Spotify"><span class="play">Pre-save</span></a>
+			<div class="service"><a rel="nofollow" href="<?php echo htmlentities($release['spotify_presave_url'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#spotify-text" /></svg><span class="play">Pre-save</span></a>
 
 			<div style="padding-left:5em; font-size:80%; color:gray">
 			|<?php if ($now >= $releaseDate) { ?>
@@ -249,7 +249,7 @@ block main
 
 			<?php } if ($release['google_play_album']) { ?>
 			
-			<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($release['google_play_album'], ENT_QUOTES); ?>"><img src="../svg/google-play.svg" alt="Google Play"><span class="play"><?php echo ($now < $releaseDate) ? 'Pre-order' : 'Download'; ?></span></a></div>
+			<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($release['google_play_album'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#google-play" /></svg><span class="play"><?php echo ($now < $releaseDate) ? 'Pre-order' : 'Download'; ?></span></a></div>
 
 
 
@@ -259,24 +259,24 @@ block main
 
 			<?php      if ($release['amazon_dp']) { ?>
 			
-			<div class="service"><a href="https://www.amazon.com/dp/<?php echo htmlentities($release['amazon_dp'], ENT_QUOTES); ?>"><img src="../svg/amazon-music.svg" alt="Amazon Music"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://www.amazon.com/dp/<?php echo htmlentities($release['amazon_dp'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#amazon-music" /></svg><span class="play">Play</span></a></div>
 
 			<?php } if ($release['youtube_music_v']) { ?>
 			
-			<div class="service"><a href="https://music.youtube.com/watch?v=<?php echo htmlentities($release['youtube_music_v'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://music.youtube.com/watch?v=<?php echo htmlentities($release['youtube_music_v'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#youtube-music" /></svg><span class="play">Play</span></a></div>
 
 			//- Use YouTube Music ALBUM (MPREb...) link only if we don't have a TRACK specified.
 
 			<?php } if ($release['youtube_music_MPRE'] && !$release['youtube_music_v']) { ?>
 			
-			<div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($release['youtube_music_MPRE'], ENT_QUOTES); ?>"><img src="../svg/youtube-music.svg" alt="Youtube Music"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://music.youtube.com/browse/<?php echo htmlentities($release['youtube_music_MPRE'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#youtube-music" /></svg><span class="play">Play</span></a></div>
 
 
 
 
 			<?php } if ($release['bandcamp_path']) { ?>
 			
-			<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($release['bandcamp_path'], ENT_QUOTES); ?>"><img src="../svg/bandcamp.svg" alt="Bandcamp"><span class="play">Download</span></a>
+			<div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($release['bandcamp_path'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#bandcamp" /></svg><span class="play">Download</span></a>
 
 			<?php if ($release['bandcamp_blurb_url']) { ?>
 
@@ -286,32 +286,32 @@ block main
 
 			<?php } if ($release['soundcloud_path']) { ?>
 			
-			<div class="service"><a href="https://soundcloud.com/<?php echo htmlentities($release['soundcloud_path'], ENT_QUOTES); ?>"><img src="../svg/soundcloud.svg" alt="Soundcloud"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://soundcloud.com/<?php echo htmlentities($release['soundcloud_path'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#soundcloud" /></svg><span class="play">Play</span></a></div>
 
 			<?php } if ($release['deezer_track']) { ?>
 			
-			<div class="service"><a href="https://www.deezer.com/us/track/<?php echo htmlentities($release['deezer_track'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://www.deezer.com/us/track/<?php echo htmlentities($release['deezer_track'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#deezer" /></svg><span class="play">Play</span></a></div>
 
 			//- Use deezer ALBUM link only if we don't have a TRACK specified.
 
 			<?php } if ($release['deezer_album'] && !$release['deezer_track']) { ?>
 			
-			<div class="service"><a href="https://www.deezer.com/us/album/<?php echo htmlentities($release['deezer_album'], ENT_QUOTES); ?>"><img src="../svg/deezer.svg" alt="Deezer"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://www.deezer.com/us/album/<?php echo htmlentities($release['deezer_album'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#deezer" /></svg><span class="play">Play</span></a></div>
 
 
 			<?php } if ($release['iheartradio_songs']) { ?>
 			
-			<div class="service"><a href="https://www.iheart.com/artist/lorenzo-wood-32159981/songs/<?php echo htmlentities($release['iheartradio_songs'], ENT_QUOTES); ?>"><img src="../svg/iheartradio-logo.svg" alt="IHeartRadio"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://www.iheart.com/artist/lorenzo-wood-32159981/songs/<?php echo htmlentities($release['iheartradio_songs'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#iheartradio" /></svg><span class="play">Play</span></a></div>
 
 			<?php } if ($release['tidal_track']) { ?>
 			
-			<div class="service"><a href="https://listen.tidal.com/track/<?php echo htmlentities($release['tidal_track'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://listen.tidal.com/track/<?php echo htmlentities($release['tidal_track'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#tidal" /></svg><span class="play">Play</span></a></div>
 
 			//- Use tidal ALBUM link only if we don't have a TRACK specified.
 
 			<?php } if ($release['tidal_album'] && !$release['tidal_track']) { ?>
 			
-			<div class="service"><a href="https://listen.tidal.com/album/<?php echo htmlentities($release['tidal_album'], ENT_QUOTES); ?>"><img src="../svg/tidal.svg" alt="Tidal"><span class="play">Play</span></a></div>
+			<div class="service"><a href="https://listen.tidal.com/album/<?php echo htmlentities($release['tidal_album'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#tidal" /></svg><span class="play">Play</span></a></div>
 
 
 

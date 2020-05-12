@@ -86,20 +86,17 @@ block main
 
 			ul.socials
 				li: a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic" style="fill:#e95950")
-					include ../svg/instagram-logo.svg
+					svg: use(xlink:href="/svg/homepage.svg#instagram")
 					|Instagram
 				li: a.smaller(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic" style="fill:#3b5998")
-					include ../svg/facebook-logo.svg
+					svg: use(xlink:href="/svg/homepage.svg#facebook")
 					|Facebook
 				li: a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic" style="fill:#b00")
-					include ../svg/youtube-logo.svg
+					svg: use(xlink:href="/svg/homepage.svg#youtube")
 					|YouTube
 				li: a(data-title="BandsInTown" href="https://www.bandsintown.com/lorenzowoodmusic")
-					include ../svg/bandsintown-logo.svg
+					svg: use(xlink:href="/svg/homepage.svg#bandsintown")
 					|BandsInTown
-
-
-
 
 			h2 Contact Info
 

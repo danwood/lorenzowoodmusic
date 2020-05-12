@@ -36,6 +36,7 @@ block append links
 
 block logo
 	a.filled(href="/", class={active: currentClass === '2am'}, style="color:pink")
+		//- include the SVG inline since it's only used here
 		include ../svg/2am.svg
 
 //- REMINDER: DASH AFTER SLASH-SLASH HIDES COMMENTS FROM PUG COMPILER
@@ -79,10 +80,9 @@ block main
 			p Find 2AM in the Basement songs online:
 			.icons.icons-2
 				a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/2am-in-the-basement/1461919405?at=1000lKSp")
-					include ../svg/apple-music-icon.svg
+					svg: use(xlink:href="/svg/homepage.svg#apple-music-color")
 				a(data-title="Spotify" href="https://open.spotify.com/artist/4xWrKxTS7gyybHbJ94LZtx?si=P5Cy1GEHS8aLFNkjsFAx_Q" style="fill:#1ED760")
-					include ../svg/spotify-logo.svg
-
+					svg: use(xlink:href="/svg/homepage.svg#spotify")
 
 	section.videos.clearfix
 
@@ -105,7 +105,7 @@ block additional-html
 
 	#scroll-arrow.scrolldown.bounce(style="display:none; stroke:white")
 		a.down-arrow(href="#")
-			include ../svg/downarrow.svg
+			svg: use(xlink:href="/svg/homepage.svg#spotify")
 
 
 //- NOTE THAT HOME PAGE & 2AM PAGE ARE ONLY PAGES USING JQUERY

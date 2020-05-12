@@ -73,21 +73,21 @@ html(class="no-js", lang="en-us")
 				block footer-icons
 					.icons.icons-5.icons-footer.safe-area-only
 						a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic" style="fill:#e95950")
-							include svg/instagram-logo.svg
+							svg: use(xlink:href="/svg/homepage.svg#instagram")
 						a.smaller(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic" style="fill:#3b5998")
-							include svg/facebook-logo.svg
+							svg: use(xlink:href="/svg/homepage.svg#facebook")
 						a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic" style="fill:#b00")
-							include svg/youtube-logo.svg
+							svg: use(xlink:href="/svg/homepage.svg#youtube")
 						a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp")
-							include svg/apple-music-icon.svg
+							svg: use(xlink:href="/svg/homepage.svg#apple-music-color")
 						a(data-title="Spotify" href="https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA?si=kAr7Wf29R7WkScnbG9d2dg" style="fill:#1ED760")
-							include svg/spotify-logo.svg
+							svg: use(xlink:href="/svg/homepage.svg#spotify")
 				p
 					b Copyright © 2017-2020 Lorenzo Wood
 					span.widespace
 					block more-credits
 					span.widespace
-					a.contact-link(href="/contact/") Contact us
+					a.contact-link(href="/contact/" class={active: currentClass === 'contact'}) Contact us
 					span.widespace
 					a.press-link(href="/press/" class={active: currentClass === 'press'}) Press & Media
 				p.js-warning.
@@ -96,6 +96,9 @@ html(class="no-js", lang="en-us")
 		block additional-html
 		
 		block scripts
+			//- SVG for Everybody
+			script(src='/js/svg4everybody.min.js')
+			script svg4everybody();
 			//- MINIMAL script block, but it's often extended with block append/prepend
 			//- Modernizer-like
 			//- Remove "no-js" class from element, if it exists

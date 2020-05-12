@@ -24,14 +24,6 @@ body>footer {
 	display:none;
 }
 
-// Resize lorenzowoodmusic logo to be small
-.logo svg {
-	padding:0.2em 0 0.1em 1em;
-	max-width:150px;
-
-
-}
-
 .centered { text-align:center; }
 .additional { background-color:rgba(255,255,0,0.3);
 	a { color:black; }
@@ -182,8 +174,9 @@ body>footer {
 		max-width: 155px;
 		color: #777;
 	}
-	img {
+	img, svg {
 		max-width: 170px;
+		max-height: 45px;		// empirically derived, must specify or somehow it is 150 px tall
 		display: inline-block;
 		margin: 14px 0 14px 15px;
 	}

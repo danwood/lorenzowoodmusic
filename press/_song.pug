@@ -40,9 +40,9 @@ block styles
 		|.releaseDate { text-align:right; opacity:0.5; }
 		|.cover { float:left; width:192px; margin:0 1em 1em 0; }
 		|.column { float:left; margin-left:1em; font-size:90% }
-		|.socials svg { width:2em; padding:10px 10px 10px 0; }
+		|.socials svg { width:2em; height: 2em; padding:10px 10px 10px 0; }
 		|.soundCloudLink { text-indent: -3.5em; margin-left: 3.5em; line-height:1; font-size:80%;  }
-		|.soundCloudLink svg { width:3em; padding-right:0.5em; }
+		|.soundCloudLink img { width:3em; padding-right:0.5em; }
 		|.soundCloudLink b { white-space: nowrap }
 		|td { padding:0 1em;}
 		|pre.lyrics { font: 16px/1.6 'Montserrat', sans-serif; }
@@ -100,7 +100,7 @@ block main
 				p: i For review use only - not for distribution
 				p.soundCloudLink
 					a(href=privateSoundCloud)
-						include ../svg/soundcloud-logo.svg
+						img(src="/svg/soundcloud-icon.svg" alt="")
 						|!{privateSoundCloud}
 					if privateSoundCloudClean != undefined
 						|
@@ -110,7 +110,7 @@ block main
 				if privateSoundCloudClean != undefined
 					p.soundCloudLink
 						a(href=privateSoundCloudClean)
-							include ../svg/soundcloud-logo.svg
+							img(src="/svg/soundcloud-icon.svg" alt="")
 							|!{privateSoundCloudClean}
 						|
 						|

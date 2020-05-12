@@ -64,15 +64,15 @@ block append header
 
 	.icons.icons-header.absolute.icons-5.safe-area-only
 		a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
-			include svg/instagram-logo.svg
+			svg: use(xlink:href="/svg/homepage.svg#instagram")
 		a.smaller(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
-			include svg/facebook-logo.svg
+			svg: use(xlink:href="/svg/homepage.svg#facebook")
 		a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
-			include svg/youtube-logo.svg
+			svg: use(xlink:href="/svg/homepage.svg#youtube")
 		a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp")
-			include svg/Apple_Music_Icon.svg
+			svg: use(xlink:href="/svg/homepage.svg#apple-music-monochrome")
 		a(data-title="Spotify" href="https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA?si=kAr7Wf29R7WkScnbG9d2dg")
-			include svg/spotify-logo.svg
+			svg: use(xlink:href="/svg/homepage.svg#spotify")
 
 
 		//- NOTE: I tried using SVG 'defs' and 'use' to reduce duplication, but somehow
@@ -206,7 +206,7 @@ block additional-html
 
 	#scroll-arrow.scrolldown.bounce(style="display:none; stroke:purple;")
 		a.down-arrow(href="#")
-			include svg/downarrow.svg
+			svg: use(xlink:href="/svg/homepage.svg#spotify")
 
 
 //- NOTE THAT HOME PAGE & 2AM PAGE ARE ONLY PAGES USING JQUERY
