@@ -109,7 +109,7 @@ block main
 
 	.background-blur
 		//- use the exact same image as the displayed one so we don't need another image loaded
-		<img src="<?php $blur = $release['image_blurred'] ? '../blurred_100/' . $release['image_blurred'] : '../album_art_640/' . htmlentities($release['image']); echo htmlentities($blur, ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
+		<img src="<?php $blur = CLOUDPREFIX . ($release['image_blurred'] ? 'blurred_100/' . $release['image_blurred'] : 'album_art_640/' . htmlentities($release['image'])); echo htmlentities($blur, ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
 
 	.center-column
 
@@ -133,7 +133,7 @@ block main
 			<?php $featuring = $release['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
 
 		.imagecontainer
-			<img src="../album_art_640/<?php echo htmlentities($release['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
+			<img src="<?php echo CLOUDPREFIX . 'album_art_640/' . htmlentities($release['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
 
 		.title-container
 			h2.

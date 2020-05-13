@@ -26,7 +26,12 @@ for (var i = 0; i < youtube.length; i++) {
 		youtube[i].appendChild( iframe );
 	}
 	else {
-		var source = "https://img.youtube.com/vi/"+ code +"/sddefault.jpg"; // 640 x 480, letterboxed
+		// 
+		
+		// NON-CDN:
+		var prefix = "https://img.youtube.com/vi/";
+		// DOESN'T WORK??? var prefix = "https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/youtube_image/";
+		var source = prefix + code +"/sddefault.jpg"; // 640 x 480, letterboxed
 		var image = new Image();
 		image.src = source;
 		image.id = "video-" + code;

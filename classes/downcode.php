@@ -146,8 +146,10 @@ class DowncodeDB extends SQLite3
 	}
 
 
-	function pathForImageSize($release, $size = 3000) {
+	function pathCDNForImageSize($release, $size = 3000) {
 		if (!in_array($size, Array(64, 384, 640, '1200x630', 3000, 'blurred'))) return NULL;
+
+		$cloudPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/';
 
 		$dir = 'album_art_' . $size;
 		$file = $release['image'];
@@ -156,7 +158,7 @@ class DowncodeDB extends SQLite3
 		}
 
 
-		return '/' . $dir . '/' . $file;
+		return $cloudPrefix . $dir . '/' . $file;
 	}
 
 

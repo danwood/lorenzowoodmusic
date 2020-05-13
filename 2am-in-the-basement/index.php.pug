@@ -50,7 +50,7 @@ block append header
 		.action-banner.clearfix.safe-area-only(style="background:rgba(255,255,255,0.4")
 			p
 				<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
-					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="<?php echo htmlentities($db->pathForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
+					<img style="display:inline-block; width:32px; height:auto; padding:0;" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
 				</a>
 				span <?php echo htmlspecialchars( $now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New') . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
 					| &nbsp;
@@ -59,9 +59,9 @@ block append header
 		<?php } ?>
 
 		picture
-			source(srcset="/img/2am.webp 1920w" type="image/webp")
-			source(srcset="/img/2am.jpg 1920w, /img/2am50.jpg 960w, /img/2am33.jpg 640w")
-			img.hero-image.covering(src="/img/2am.jpg" loading="eager" alt="2AM in the Basement")
+			source(srcset=cloudPrefix + "img/2am.webp 1920w" type="image/webp")
+			source(srcset=cloudPrefix + "img/2am.jpg 1920w, " + cloudPrefix + "img/2am50.jpg 960w, " + cloudPrefix + "img/2am33.jpg 640w")
+			img.hero-image.covering(src=cloudPrefix + "img/2am.jpg" loading="eager" alt="2AM in the Basement")
 
 block main
 

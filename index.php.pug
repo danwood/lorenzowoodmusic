@@ -52,7 +52,7 @@ block append header
 		.action-banner.clearfix.safe-area-only
 			p
 				<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
-					<img loading="lazy" style="display:inline-block; width:32px; height:auto; padding:0;" src="<?php echo htmlentities($db->pathForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
+					<img loading="lazy" style="display:inline-block; width:32px; height:auto; padding:0;" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
 				</a>
 				span <?php echo htmlspecialchars( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
 					| &nbsp;
@@ -60,7 +60,7 @@ block append header
 					<a style="text-decoration:underline" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
 		<?php } ?>
 
-		img.hero-image.covering.swapping-image(srcset="img/banner1_giant.jpg 2560w, img/banner1_big.jpg 1920w, img/banner1_medium.jpg 960w, img/banner1_small.jpg 640w" sizes="100vw" src="img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
+		img.hero-image.covering.swapping-image(srcset=cloudPrefix + "img/banner1_giant.jpg 2560w, " + cloudPrefix + "img/banner1_big.jpg 1920w, " + cloudPrefix + "img/banner1_medium.jpg 960w, " + cloudPrefix + "img/banner1_small.jpg 640w" sizes="100vw" src=cloudPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
 
 	.icons.icons-header.absolute.icons-5.safe-area-only
 		.icon
@@ -159,14 +159,14 @@ block main
 					.release-image.bordered
 						<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php
 						|	echo '<img src="';
-						|	echo htmlentities($db->pathForImageSize($release, 64), ENT_QUOTES);
+						|	echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES);
 						|	echo '" alt= "Cover image of ';
 						|	echo htmlentities($release['title'], ENT_QUOTES);
 						|	echo '" srcset="';
 						|	echo htmlentities(
-						|		$db->pathForImageSize($release, 64) . ' 64w, ' .
-						|		$db->pathForImageSize($release, 384) . ' 384w, ' .
-						|		$db->pathForImageSize($release, 640) . ' 640w', ENT_QUOTES);
+						|		$db->pathCDNForImageSize($release, 64) . ' 64w, ' .
+						|		$db->pathCDNForImageSize($release, 384) . ' 384w, ' .
+						|		$db->pathCDNForImageSize($release, 640) . ' 640w', ENT_QUOTES);
 						|	echo '" sizes="(max-width: 768px) 100vw, 25vw"/>';
 						|?>
 						</a>
