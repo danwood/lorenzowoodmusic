@@ -8,7 +8,9 @@ define('PRIVATE_RESOLVED', is_link(PRIVATE_DIR) ? readlink(PRIVATE_DIR) : PRIVAT
 include_once(PRIVATE_RESOLVED . '/downcode_db/secrets.php');    // $password
 
 define('DOWNCODE_DBDIR',    PRIVATE_RESOLVED . '/downcode_db');
-define('DOWNCODE_FILESDIR', PRIVATE_RESOLVED . '/downcode_files');
+
+define('CLOUDPREFIX', 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/');
+
 
 function baseURL() {
 	$pageURL = 'http';
@@ -149,7 +151,7 @@ class DowncodeDB extends SQLite3
 	function pathCDNForImageSize($release, $size = 3000, $useCDN = true) {
 		if (!in_array($size, Array(64, 384, 640, '1200x630', 3000, 'blurred'))) return NULL;
 
-		$cloudPrefix = $useCDN ? 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/' : '/';
+		$cloudPrefix = $useCDN ? CLOUDPREFIX : '/';
 
 		$dir = 'album_art_' . $size;
 		$file = $release['image'];
