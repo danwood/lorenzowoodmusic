@@ -283,3 +283,11 @@ a.spotify {
 	// original fill color: 1ED760
 
 }
+
+// Don't let phone number images be selected
+.ghost {
+	user-select: none;
+	user-drag: none;
+	pointer-events: none;
+}
+
