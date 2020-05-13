@@ -158,7 +158,7 @@ block main
 				<div class="release-blurb<?php if (!$release['youtube_video_v']) { echo ' no-video'; } ?>">
 					.release-image.bordered
 						<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php
-						|	echo '<img src="';
+						|	echo '<img loading="lazy" src="';
 						|	echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES);
 						|	echo '" alt= "Cover image of ';
 						|	echo htmlentities($release['title'], ENT_QUOTES);

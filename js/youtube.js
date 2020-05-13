@@ -37,6 +37,7 @@ for (var i = 0; i < youtube.length; i++) {
 		var image = new Image();
 		image.src = source;
 		image.id = "video-" + code;
+		image.setAttribute("loading", "lazy");
 		image.alt = "YouTube thumbnail";
 		image.addEventListener( "load", function() {
 			youtube[ i ].appendChild( image );
