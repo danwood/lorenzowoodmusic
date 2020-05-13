@@ -31,7 +31,9 @@ for (var i = 0; i < youtube.length; i++) {
 		// NON-CDN:
 		var prefix = "https://img.youtube.com/vi/";
 		// DOESN'T WORK??? var prefix = "https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/youtube_image/";
-		var source = prefix + code +"/sddefault.jpg"; // 640 x 480, letterboxed
+		// var source = prefix + code +"/sddefault.jpg"; // 640 x 480, letterboxed
+		// Special Cloudinary URL:
+		var source = "https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/youtube/" + code + ".jpg";
 		var image = new Image();
 		image.src = source;
 		image.id = "video-" + code;

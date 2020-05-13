@@ -96,5 +96,8 @@ block prepend scripts
 	script
 		include ../js/youtube-min.js
 		//- FOR NOW - REPLACE MISSING VIDEO THUMBNAIL WITH OUR OWN!
+		//- EVEN NEEDED WITH CLOUDINARY BECAUSE FULL SIZE IS NOT AVAILABLE
 		|document.getElementById('video-A8vcWMXVR7I').src = 'https://img.youtube.com/vi/A8vcWMXVR7I/hqdefault.jpg';
+		|document.getElementById('video-A8vcWMXVR7I').style = 'top:-16.84%';
+
 

@@ -21,7 +21,7 @@ html(class="no-js", lang="en-us")
 			link(rel="apple-touch-icon" sizes="180x180" href=cloudPrefix + "apple-touch-icon.png")
 			link(rel="icon" type="image/png" sizes="32x32" href=cloudPrefix + "favicon-32x32.png")
 			link(rel="icon" type="image/png" sizes="16x16" href=cloudPrefix + "favicon-16x16.png")
-			link(rel="stylesheet" href="/css/main.051220.css")
+			link(rel="stylesheet" href="/css/main.051320.css")
 		block styles
 
 	body(class=currentClass)
@@ -105,13 +105,13 @@ html(class="no-js", lang="en-us")
 		block additional-html
 		
 		block scripts
-			//- SVG for Everybody
-			script(src='/js/svg4everybody.min.js')
-			script svg4everybody();
 			//- MINIMAL script block, but it's often extended with block append/prepend
 			//- Modernizer-like
 			//- Remove "no-js" class from element, if it exists
-			script.
-				document.documentElement.className = document.documentElement.className.replace("no-js","js");
+			script
+				|document.documentElement.className = document.documentElement.className.replace("no-js","js");
+				//- SVG for Everybody
+				include js/svg4everybody-min.js
+				|svg4everybody();
 
 
