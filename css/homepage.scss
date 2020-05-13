@@ -165,6 +165,11 @@ Down arrow only below full page hero
 	bottom:0;
 	width:100%;
 	text-align:center;
+
+	svg {
+		width:24px;
+		height:24px;
+	}
 }
 
 .bounce {
@@ -357,7 +362,7 @@ Bands in Town
 
 /*
 ----------------------------------------
-Mailing, Download, EPK
+Mailing, EPK
 ----------------------------------------
 */
 
@@ -440,8 +445,6 @@ Mailing, Download, EPK
 }
 
 @media only screen and (min-width:$mainBreakpoint) {
-
-	/* On wide screens, put photo to left of the 'download' icons */
 
 	.side-photo {
 		float:left;
@@ -699,37 +702,6 @@ Bands in Town
 }
 
 
-/*
-----------------------------------------
-Redeem form & cover
-----------------------------------------
-*/
-
-
-#redeem-form input {
-	width:11em;
-	background-color:var(--color-paper-high);
-	border-color:var(--color-ink-low);
-	font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
-	letter-spacing:1px;
-	text-transform:uppercase;
-}
-input#redeem-submit {
-	display:inline-block;
-	width:2.5em;
-	height:1.25em;
-	padding:0.75em 0.25em;
-	float:right;
-	border-radius:4px;
-	background-color:var(--color-Link) url('data:image/svg+xml;utf8,<svg viewBox="0 0 400 400" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M337.15 187.9a52.69 52.69 0 0 0 7.24-26.64 53 53 0 0 0-87.14-40.52c-15.3-37.91-52.42-64.68-95.81-64.68-57.06 0-103.31 46.26-103.31 103.31 0 3.48.17 6.92.5 10.3-31.68 14.29-53.77 46.08-53.77 83.1a91.17 91.17 0 0 0 91.17 91.17h220.86c41.49 0 78.25-29.56 78.25-79.9v-.82c0-38.63-24.06-65.07-58-75.32zm-78.05 34.9l-71.3 70.1-77.63-76.32h52.88v-73.52a8.61 8.61 0 0 1 8.61-8.61h31.21a8.6 8.6 0 0 1 8.61 8.6v73.53h53.96l-6.34 6.23z"/></svg>') no-repeat center center;
-	color:white;
-}
-
-#redeem-form ::-webkit-input-placeholder		{text-align:center; }
-#redeem-form :-moz-placeholder					{text-align:center; }
-#redeem-form ::-moz-placeholder					{text-align:center; }
-#redeem-form :-ms-input-placeholder				{text-align:center; }
-#redeem-form ::placeholder						{text-align:center; }
 
 #cover {
 	position:fixed;
@@ -765,96 +737,6 @@ input#redeem-submit {
 	z-index:22;
 	text-shadow:0 0 4px var(--color-ink-high);
 	cursor:pointer;
-}
-
-
-/* ============= Redeem iFrame ================ */
-
-/* Responsive, big containers */
-#redeem_console {
-	padding:20px;
-	@extend .clearfix;
-
-	h1 {
-		margin:0;
-	}
-}
-
-#cover-art-container {
-	width:20%;
-	float:left; }
-
-#downloader {
-	width:80%;
-	float:left; }
-
-#cover-art {
-	margin-right:20px; }
-
-#cover-art img {
-	width:100%;
-	height:auto; }
-
-/*******************************************************************
- #list-container
- *******************************************************************/
-.song {
-	@extend .clearfix;
-	margin-top:5px;
-}
-.song-meta-data {
-	float:left;
-	width:calc( 100% - 10em); }
-
-.song-download {
-	float:left;
-	text-align:right;
-	width:7em; }
-
-.song-title {
-	color:#272726;
-	font-size:16px;
-	display:block;
-	font-weight:300;
-	white-space:nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis; }
-
-.song-duration, .track-number {
-	float:left;
-	width:3em;
-	text-align:center;
-	color:#607D8B;
-	font-size:16px;
-	font-weight:500; }
-
-.track-number {
-	width:2em;
-}
-
-
-@media only screen and (max-width:($mainBreakpoint - 1px)) {
-	.modal {
-		border:none;
-		padding:0;
-		min-width:auto;
-		width:calc( 100% - 2em);
-	}
-
-	#cover-art-container {
-		width:70%;
-		float:none;
-		margin:0 auto;
-	}
-
-	#downloader {
-		width:100%;
-		float:none;
-	}
-
-	#cover-art {
-		margin-right:20px;
-	}
 }
 
 

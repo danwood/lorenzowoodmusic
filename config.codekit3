@@ -1531,13 +1531,13 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/js/vendor/jquery-3.5.0.min.js": {
+	"/js/vendor/jquery-3.5.1.min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/vendor/jquery-3.5.0.min-min.js",
+		"oAP": "/js/vendor/jquery-3.5.1.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0

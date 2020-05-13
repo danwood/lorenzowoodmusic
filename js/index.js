@@ -51,39 +51,9 @@ $('#contact-form').submit(function( event ) {
 });
 
 
-$('#redeem-form').submit(function( event ) {
-	if ($('#redeem-input').val().length > 0) {
-		$.ajax({
-			type: 'POST',
-			url: '/redeem.php',
-			data: $("#redeem-form").serialize(),
-
-			success: function(data, textStatus, jqXHR ) {
-				if (data !== '') {
-					$('#cover').show();
-					$('#redeemer').show();
-					$('#close-modal').show();
-					$('#redeemer').html(data);		// We’re done; let the content here do the rest.
-				} else {
-					window.alert('Sorry, but the code you entered has already been redeemed or was entered incorrectly.');
-					$('#redeem-input').focus();
-				}
-			},
-			error: function(jqXHR, textStatus, errorThrown ) {
-				window.alert(errorThrown + ' ' + textStatus);
-			},
-			complete: function(jqXHR, textStatus ) {
-
-			}
-		});
-	}
-	event.preventDefault();
-});
-
 $('#close-modal').click(function() {
 	$('#cover').fadeOut('slow');
 	$('#close-modal').fadeOut('slow');
-	$('#redeemer').fadeOut('fast');		// hide whichever modal is showing
 	$('#contacter').fadeOut('fast');	// hide whichever modal is showing
 });
 
