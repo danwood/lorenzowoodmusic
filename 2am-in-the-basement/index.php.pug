@@ -79,10 +79,13 @@ block main
 
 			p Find 2AM in the Basement songs online:
 			.icons.icons-2
-				a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/2am-in-the-basement/1461919405?at=1000lKSp")
-					svg: use(xlink:href="/svg/homepage.svg#apple-music-color")
-				a(data-title="Spotify" href="https://open.spotify.com/artist/4xWrKxTS7gyybHbJ94LZtx?si=P5Cy1GEHS8aLFNkjsFAx_Q" style="fill:#1ED760")
-					svg: use(xlink:href="/svg/homepage.svg#spotify")
+				.icon
+					a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/2am-in-the-basement/1461919405?at=1000lKSp")
+						include ../svg/homepage/apple-music-icon-color.svg
+						//- Apple music icon doesn't show color when loaded with svg-use !!!
+				.icon
+					a(data-title="Spotify" href="https://open.spotify.com/artist/4xWrKxTS7gyybHbJ94LZtx?si=P5Cy1GEHS8aLFNkjsFAx_Q" style="fill:#1ED760")
+						svg: use(xlink:href="/svg/homepage.svg#spotify")
 
 	section.videos.clearfix
 
@@ -93,10 +96,16 @@ block main
 
 			.youtube-column-2
 				.youtube-border
-					.youtube(data-code='PfjIqix5ZZw' data-title='Heartless (Diplo & Morgan Wallen) Cover by 2AM In The Basement')
+					.youtube(data-code='ixUV87pKtBg' data-title='Falling (Harry Styles cover)')
 			.youtube-column-2
 				.youtube-border
-					.youtube.square-video(data-code='21RcD1TRKv4' data-title='Old Town Road')
+					.youtube.square-video(data-code='t7EPz9g9Do4' data-title='Castle on the Hill (Ed Sheeran cover)')
+			.youtube-column-2
+				.youtube-border
+					.youtube.square-video(data-code='21RcD1TRKv4' data-title='Old Town Road (Lil Nas X cover)')
+			.youtube-column-2
+				.youtube-border
+					.youtube(data-code='PfjIqix5ZZw' data-title='Heartless (Diplo & Morgan Wallen cover)')
 
 
 
