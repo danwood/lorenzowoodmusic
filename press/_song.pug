@@ -70,7 +70,7 @@ block main
 
 			div.clearfix
 				h2 Album Artwork
-				<a href='<?php echo htmlentities($db->pathCDNForImageSize($release, 3000), ENT_QUOTES); ?>'>
+				<a href='<?php echo htmlentities($db->pathCDNForImageSize($release, 3000, false), ENT_QUOTES); ?>'>
 					<img class="cover" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 384), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
 				</a>
 				if slugAndCoverFile2 != undefined
@@ -81,8 +81,8 @@ block main
 					p
 						|Link to large image (3000 pixels square):
 						br
-						<a href='<?php echo htmlentities($db->pathCDNForImageSize($release, 3000), ENT_QUOTES); ?>'>
-						|https://lorenzowoodmusic.com<?php echo htmlspecialchars($db->pathCDNForImageSize($release, 3000)); ?></a>
+						<a href='<?php echo htmlentities($db->pathCDNForImageSize($release, 3000, false), ENT_QUOTES); ?>'>
+						|https://www.lorenzowoodmusic.com<?php echo htmlspecialchars($db->pathCDNForImageSize($release, 3000, false)); ?></a>
 					if slugAndCoverFile2 != undefined
 						p: a(href='../album_art_3000/' + slugAndCoverFile2) Link to second large image (3000 pixels square)
 
