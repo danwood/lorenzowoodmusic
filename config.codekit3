@@ -2796,7 +2796,7 @@
 	"/svg/homepage.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/homepage.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2804,12 +2804,12 @@
 		"prP": 0
 		},
 	"/svg/homepage.svg.kit": {
-		"cB": 1,
+		"cB": 0,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
-		"oAP": "/svg/homepage.svg",
-		"oF": 3
+		"oAP": "/svg/homepage.svg.html",
+		"oF": 0
 		},
 	"/svg/homepage/apple-music-icon-color.svg": {
 		"ft": 2097152,
@@ -2901,13 +2901,21 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/linkpage.svg.kit": {
-		"cB": 1,
-		"ft": 2048,
-		"hM": 1,
+	"/svg/linkpage.svg.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
-		"oAP": "/svg/linkpage.svg",
-		"oF": 2
+		"oAP": "/svg/linkpage.svg.html",
+		"oF": 0
+		},
+	"/svg/linkpage.svg.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/svg/linkpage.svg.html",
+		"oF": 0
 		},
 	"/svg/linkpage/amazon-music.svg": {
 		"ft": 2097152,
@@ -2922,7 +2930,7 @@
 	"/svg/linkpage/apple-music.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/linkpage/apple-music.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2972,7 +2980,7 @@
 	"/svg/linkpage/itunes.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/svg/linkpage/itunes.svg",
 		"oF": 0,
 		"opt": 0,
@@ -2992,7 +3000,7 @@
 	"/svg/linkpage/spotify.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/linkpage/spotify.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3029,121 +3037,121 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/apple-icon.svg": {
+	"/svg/unused-check-unique-ids/apple-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/apple-icon.svg",
+		"oAP": "/svg/unused-check-unique-ids/apple-icon.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/Apple_Music_lockup_RGB_wht.svg": {
+	"/svg/unused-check-unique-ids/Apple_Music_lockup_RGB_wht.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/Apple_Music_lockup_RGB_wht.svg",
+		"oAP": "/svg/unused-check-unique-ids/Apple_Music_lockup_RGB_wht.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/download.svg": {
+	"/svg/unused-check-unique-ids/download.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/download.svg",
+		"oAP": "/svg/unused-check-unique-ids/download.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/holonis-icon-color.svg": {
+	"/svg/unused-check-unique-ids/holonis-icon-color.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/holonis-icon-color.svg",
+		"oAP": "/svg/unused-check-unique-ids/holonis-icon-color.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/iTunes_Store_Buy_Lockup_RGB_wht.svg": {
+	"/svg/unused-check-unique-ids/iTunes_Store_Buy_Lockup_RGB_wht.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/iTunes_Store_Buy_Lockup_RGB_wht.svg",
+		"oAP": "/svg/unused-check-unique-ids/iTunes_Store_Buy_Lockup_RGB_wht.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/pandora.svg": {
+	"/svg/unused-check-unique-ids/pandora.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/pandora.svg",
+		"oAP": "/svg/unused-check-unique-ids/pandora.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/patreon-icon-color.svg": {
+	"/svg/unused-check-unique-ids/patreon-icon-color.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/patreon-icon-color.svg",
+		"oAP": "/svg/unused-check-unique-ids/patreon-icon-color.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/reverbnation-icon-color.svg": {
+	"/svg/unused-check-unique-ids/reverbnation-icon-color.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/reverbnation-icon-color.svg",
+		"oAP": "/svg/unused-check-unique-ids/reverbnation-icon-color.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/snapchat-icon.svg": {
+	"/svg/unused-check-unique-ids/snapchat-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/snapchat-icon.svg",
+		"oAP": "/svg/unused-check-unique-ids/snapchat-icon.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/twitter-icon.svg": {
+	"/svg/unused-check-unique-ids/twitter-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/twitter-icon.svg",
+		"oAP": "/svg/unused-check-unique-ids/twitter-icon.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/youtube-play.svg": {
+	"/svg/unused-check-unique-ids/youtube-play.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/youtube-play.svg",
+		"oAP": "/svg/unused-check-unique-ids/youtube-play.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/unused/youtube.svg": {
+	"/svg/unused-check-unique-ids/youtube.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/unused/youtube.svg",
+		"oAP": "/svg/unused-check-unique-ids/youtube.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,

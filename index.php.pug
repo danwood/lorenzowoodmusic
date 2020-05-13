@@ -63,16 +63,21 @@ block append header
 		img.hero-image.covering.swapping-image(srcset="img/banner1_giant.jpg 2560w, img/banner1_big.jpg 1920w, img/banner1_medium.jpg 960w, img/banner1_small.jpg 640w" sizes="100vw" src="img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
 
 	.icons.icons-header.absolute.icons-5.safe-area-only
-		a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
-			svg: use(xlink:href="/svg/homepage.svg#instagram")
-		a.smaller(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
-			svg: use(xlink:href="/svg/homepage.svg#facebook")
-		a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
-			svg: use(xlink:href="/svg/homepage.svg#youtube")
-		a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp")
-			svg: use(xlink:href="/svg/homepage.svg#apple-music-monochrome")
-		a(data-title="Spotify" href="https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA?si=kAr7Wf29R7WkScnbG9d2dg")
-			svg: use(xlink:href="/svg/homepage.svg#spotify")
+		.icon
+			a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
+				svg: use(xlink:href="/svg/homepage.svg#instagram")
+		.icon.smaller
+			a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
+				svg: use(xlink:href="/svg/homepage.svg#facebook")
+		.icon
+			a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
+				svg: use(xlink:href="/svg/homepage.svg#youtube")
+		.icon.smaller
+			a(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp")
+				svg: use(xlink:href="/svg/homepage.svg#apple-music-monochrome")
+		.icon
+			a(data-title="Spotify" href="https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA?si=kAr7Wf29R7WkScnbG9d2dg")
+				svg: use(xlink:href="/svg/homepage.svg#spotify")
 
 
 		//- NOTE: I tried using SVG 'defs' and 'use' to reduce duplication, but somehow
@@ -206,7 +211,7 @@ block additional-html
 
 	#scroll-arrow.scrolldown.bounce(style="display:none; stroke:purple;")
 		a.down-arrow(href="#")
-			svg: use(xlink:href="/svg/homepage.svg#spotify")
+			svg: use(xlink:href="/svg/homepage.svg#downarrow")
 
 
 //- NOTE THAT HOME PAGE & 2AM PAGE ARE ONLY PAGES USING JQUERY

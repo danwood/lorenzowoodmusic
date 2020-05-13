@@ -95,7 +95,7 @@ block append links
 	//- square 144 up to 4000, 5 MB max
 
 block append styles
-	link(rel='stylesheet', href='/css/linkstyles.050920.css')
+	link(rel='stylesheet', href='/css/linkstyles.051220.css')
 
 
 block main
@@ -217,11 +217,13 @@ block main
 
 			<?php if ($release['apple_music_album']) { ?>
 			
-			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($release['apple_music_album'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><svg><use xlink:href="/svg/linkpage.svg#itunes" /></svg><span class="play"><?php echo ($now < $releaseDate) ? 'Pre-order' : 'Download'; ?></span></a></div>
+			//- NOTE PROBLEM WITH SVG-USE; THE SVG IS MESSED UP
+			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($release['apple_music_album'], ENT_QUOTES); ?>?app=itunes&amp;at=1000lKSp"><img src="../svg/linkpage/itunes.svg" alt="iTunes"><span class="play"><?php echo ($now < $releaseDate) ? 'Pre-order' : 'Download'; ?></span></a></div>
 
 			<?php } if ($release['apple_music_album'] && ($now >= $releaseDate)) { ?>
 
-			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($release['apple_music_album'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><svg><use xlink:href="/svg/linkpage.svg#apple-music" /></svg><span class="play">Play</span></a></div>
+			//- NOTE PROBLEM WITH SVG-USE; THE SVG IS MESSED UP
+			<div class="service"><a href="https://geo.itunes.apple.com/us/album/<?php echo htmlentities($release['apple_music_album'], ENT_QUOTES); ?>?mt=1&app=music&amp;at=1000lKSp"><img src="../svg/linkpage/apple-music.svg" alt="iTunes"><span class="play">Play</span></a></div>
 
 			//- We will only have the spotify link if the song has been released, unless things change...
 

@@ -221,25 +221,33 @@ Icons (at top and bottom)
 	background-color:var(--color-dark-high);
 }
 
-.icons a {
-	width:10%;
-	display:inline-block;
+.icons {
+	.icon {
+		width:10vw;
+		height:10vw;
+		display:inline-block;
 
-	svg {
-		margin:10%;
-	}
+		margin:1vw;
 
-	&.smaller svg {
-		margin: 15%;
+		svg {
+			height:100%;
+			width:100%;
+		}
+
+		&.smaller svg {
+			height:90%;
+			width:90%;
+			margin:5%;
+		}
 	}
 }
 
 
-.icons-5 a:first-child { /* Left margin for shorter icon list */
+.icons-5 .icon:first-child { /* Left margin for shorter icon list */
 	margin-left:25%;	// room for 5
 }
 
-.icons-2 a:first-child { /* Left margin for shorter icon list */
+.icons-2 .icon:first-child { /* Left margin for shorter icon list */
 	margin-left:40%;	// room for 2
 }
 
@@ -281,14 +289,15 @@ Icons (at top and bottom)
 @media only screen and (max-width:($mainBreakpoint - 1px)) {
 
 	/* Bigger social media icons on mobile ... 5-up */
-	.icons a {
-		width:20%;
+	.icons .icon {
+		width:18vw;
+		height:18vw;
 	}
 
-	.icons-5 a:first-child {
-		margin-left:0;
+	.icons-5 .icon:first-child {
+		margin-left:1vw;
 	}
-	.icons-2 a:first-child {
+	.icons-2 .icon:first-child {
 		margin-left:30%;
 	}
 
@@ -304,15 +313,16 @@ Icons (at top and bottom)
 @media only screen and (max-width:320px) {
 
 	/* Bigger social media icons on mobile ... 3-up */
-	.icons-5 a {
-		width:33%;
+	.icons-5 .icon {
+		width:31vw;
+		height:31vw
 	}
 
-	.icons-5 a:first-child {
-		margin-left:0;
+	.icons-5 .icon:first-child {
+		margin-left:1vw;
 	}
-	.icons-5 a:nth-child(4) {		// second row, indent to center
-		margin-left:16.6%;
+	.icons-5 .icon:nth-child(4) {		// second row, indent to center
+		margin-left:16vw;
 	}
 
 }
