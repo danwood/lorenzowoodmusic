@@ -1,0 +1,41 @@
+@import 'constants';
+
+a.contact-link {
+	font-weight: bold; text-decoration:none;
+}
+
+// Photo next to the contact form
+
+.next-to-side-photo-padded {
+	padding:0 0 0 2rem;	/* Make sure box is indented to be separated from photo */
+}
+
+.side-photo img {
+	max-width:100%;
+}
+
+
+@media only screen and (max-width:($mainBreakpoint - 1px)) {
+
+	/* On mobile, center photo rather than side-by-side */
+	.side-photo {
+		margin-left:25%;
+		width:50%;
+	}
+	.next-to-side-photo-padded {
+		padding:0;
+		margin:0 auto;
+	}
+}
+
+@media only screen and (min-width:$mainBreakpoint) {
+
+	.side-photo {
+		float:left;
+		width:33%;
+	}
+	.next-to-side-photo {
+		float:left;
+		width:66%;
+	}
+}
