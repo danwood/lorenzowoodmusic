@@ -1,0 +1,15 @@
+@media only screen and (min-width: 768px)  {
+
+	table.flipping td { border-bottom:1px solid rgba(128,128,128,0.30); }
+}
+
+@media only screen and (max-width: 767px)  {
+
+	table.flipping {
+
+		td { display: block}
+		td:first-child { font-weight: bold; }
+		tr { display: block; border-bottom:1px solid gray; }
+
+	}
+}

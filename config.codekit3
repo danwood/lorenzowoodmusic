@@ -1109,6 +1109,32 @@
 		"oS": 3,
 		"sct": 0
 		},
+	"/css/masonry.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 2,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/css/masonry.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 0
+		},
+	"/css/navigation.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 2,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/css/navigation.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 0
+		},
 	"/css/normalize.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1132,15 +1158,28 @@
 		"oS": 3,
 		"sct": 0
 		},
-	"/css/sitewide.scss": {
+	"/css/social-icons.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
 		"ft": 4,
 		"ma": 1,
-		"oA": 0,
-		"oAP": "/css/sitewide.css",
+		"oA": 1,
+		"oAP": "/css/social-icons.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 0
+		},
+	"/css/tables.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 2,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/css/tables.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 0

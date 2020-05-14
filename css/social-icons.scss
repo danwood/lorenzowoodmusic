@@ -1,0 +1,111 @@
+
+
+.icons.icons-footer {
+	background-color:var(--color-dark-high);
+}
+
+.icons {
+	.icon {
+		width:10vw;
+		height:10vw;
+		display:inline-block;
+
+		margin:1vw;
+
+		svg {
+			height:100%;
+			width:100%;
+		}
+
+		&.smaller svg {
+			height:90%;
+			width:90%;
+			margin:5%;
+		}
+	}
+}
+
+
+.icons-5 .icon:first-child { /* Left margin for shorter icon list */
+	margin-left:25%;	// room for 5
+}
+
+.icons-2 .icon:first-child { /* Left margin for shorter icon list */
+	margin-left:40%;	// room for 2
+}
+
+
+/* Special hover tooltip-like display over social icons */
+.icons {
+	a {
+		position:relative;
+	}
+	a:after {
+		padding:0 5px;
+		font-size:80%;
+		background-color:var(--color-paper-high);
+		color:var(--color-ink-high);
+		border-radius:5px;
+		box-shadow:0 0 8px 8px var(--color-paper-high);
+		line-height:1;
+
+		content:attr(data-title);
+		position:absolute;
+		left:10%;
+		bottom:8px;
+		text-align:center;
+		display:block;
+
+		opacity:0; /* Invisible until hovered */
+		transition:opacity .3s ease-in-out;
+	}
+	a:hover:after {
+		opacity:0.75;
+	}
+	a:last-child:after {	/* Also need to do below for 5th icon when we have two rows! SEE BELOW */
+		right:15%;			/* plenty of room for shadow effect to not overflow the container on phone */
+		left:auto;
+	}
+}
+
+
+@media only screen and (max-width:($mainBreakpoint - 1px)) {
+
+	/* Bigger social media icons on mobile ... 5-up */
+	.icons .icon {
+		width:18vw;
+		height:18vw;
+	}
+
+	.icons-5 .icon:first-child {
+		margin-left:1vw;
+	}
+	.icons-2 .icon:first-child {
+		margin-left:30%;
+	}
+
+	// Make the logo come up next to the hamburger menu
+	.logo svg {
+		max-width:75%;
+	}
+
+}
+
+// For a really small screen, make them 3 across
+
+@media only screen and (max-width:320px) {
+
+	/* Bigger social media icons on mobile ... 3-up */
+	.icons-5 .icon {
+		width:31vw;
+		height:31vw
+	}
+
+	.icons-5 .icon:first-child {
+		margin-left:1vw;
+	}
+	.icons-5 .icon:nth-child(4) {		// second row, indent to center
+		margin-left:16vw;
+	}
+
+}
