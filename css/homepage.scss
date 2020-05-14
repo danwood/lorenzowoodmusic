@@ -11,6 +11,17 @@ Home-Page ONLY classes.
 ================================================================================
 */
 
+/*
+---------------------------------------------
+Social Icons on home page only at page bottom
+---------------------------------------------
+*/
+
+.icons.absolute {
+	position:absolute;
+	bottom:0; left:0; right:0; /* should match with height of nav */
+}
+
 
 /*
 ----------------------------------------
