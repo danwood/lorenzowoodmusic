@@ -19,11 +19,6 @@ $page-menu-font-size: 0.9rem;
 
 @media only screen and (min-width:$mainBreakpoint) {
 
-	// override usual top to make room for page navigation
-	.logo svg {
-		padding-top:($page-menu-padding-v + $page-menu-padding-v + $page-menu-font-size);
-	}
-
 	// similar to action-banner ?
 
 	nav.page-menu {

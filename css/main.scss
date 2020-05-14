@@ -17,10 +17,10 @@ $mainBreakpoint: 768px;
 @import 'masonry.scss';
 
 // Classes and sections replicated across multiple pages
-// @import 'shared.scss';
+@import 'shared.scss';
 
 // For now, use the same CSS for all pages but we may want to separate later.
-// @import 'homepage.scss';
+@import 'homepage.scss';
 
 /* Debugging
 section:nth-child(even)	{background:cyan !important;}

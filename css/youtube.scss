@@ -1,0 +1,113 @@
+/*
+----------------------------------------
+YouTube
+----------------------------------------
+*/
+
+/* YouTube player */
+
+.youtube {
+	background-color:var(--color-ink-high);
+	position:relative;
+	padding-top:56.25%;
+	overflow:hidden;
+	cursor:pointer;
+	img {
+		width:100%;
+		bottom:0; // top:-16.84%;	// needed because sddefault.jpg image is letterboxed (though other sizes aren't)
+		left:0;
+		-webkit-mask-image:linear-gradient(to bottom, gba(0,0,0,0) 0%, black 25%);
+		mask-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, black 25%);
+	}
+
+	.play-button {
+		width:68px;
+		height:48px;
+		background-color:var(--color-ink-med);
+		box-shadow:0 0 20px rgba( 0,0,0,0.6 );
+		opacity:0.9;
+		border-radius:6px/18px;
+	}
+
+	&:hover .play-button {
+		background-color:red;
+		opacity:1.0;
+	}
+	.play-button:before {
+		content:"";
+		border-style:solid;
+		border-width:10px 0 10px 16.0px;
+		border-color:transparent transparent transparent var(--color-paper-high);
+	}
+	img, .play-button {
+		cursor:pointer;
+	}
+	img, iframe, .play-button, .play-button:before {
+		position:absolute;
+	}
+	.play-button, .play-button:before {
+		top:50%;
+		left:50%;
+		transform:translate3d( -50%, -50%, 0 );
+	}
+	iframe {
+		height:100%;
+		width:100%;
+		top:0;
+		left:0;
+	}
+	.title {
+		position:absolute;
+		top:12px;
+		left:20px;
+		color:white;
+		text-shadow:0 1px 3px black;
+	}
+}
+.square-video {
+	margin-left:22%;
+	margin-right:22%;
+
+	img {
+		max-width:180%;
+		width:180%;
+		margin-left:-40%;
+	}
+}
+.youtube-border {
+	padding:1em;
+}
+
+@media only screen and (min-width:$mainBreakpoint) {
+
+	/* One half-size youtube video */
+
+	.youtube-column-half {
+		width:50%;
+		float:left;
+		margin-left:25%;
+	}
+
+	/* Two YouTube videos side by side */
+
+	.youtube-column-2 {
+		width:50%;
+		float:left;
+	}
+	.youtube-column-3 {
+		width:33%;
+		float:left;
+	}
+
+	.youtube-column-4 {
+		width:25%;
+		float:left;
+
+		.title {
+			font-size: 80%;
+			line-height:1.1;
+			background-color:rgba(0,0,0,0.3);
+		}
+	}
+
+}
