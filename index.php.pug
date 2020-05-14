@@ -1,7 +1,5 @@
 extends _layout.pug
 
-
-
 block prelude
 	|<?php
 	|$email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
@@ -41,6 +39,10 @@ block append links
 		//- This should be done on any page using jquery - ONLY HOME PAGE & 2AM PAGE
 	link(rel="prefetch" href="//img.youtube.com")
 		//- This should be done on any page showing YOUTUBE VIDEOS
+
+block styles
+	style
+		include css/homepage.css
 
 //- REMINDER: DASH AFTER SLASH-SLASH HIDES COMMENTS FROM PUG COMPILER
 

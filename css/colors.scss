@@ -9,22 +9,22 @@ Colors for the whole site
 :root {
     color-scheme: light dark;
 
-	--color-banner-background: rgb(86, 139, 172);
+	--cBanner: rgb(86, 139, 172);
 
-	--color-Link:			rgb(86, 139, 172);	// match the blue banner
+	--cLink:			rgb(86, 139, 172);	// match the blue banner
 
-	--color-Link-hover:		hsl(202, 65%, 43%);
-	--color-Warning:		purple;
-	--color-paper-high:		white;
-	--color-paper-med:		hsl(0, 0%, 96%);
-	--color-paper-low:		hsl(0, 0%, 74%);
-	--color-ink-low:		hsl(0, 0%, 38%);
-	--color-ink-med:		hsl(0, 0%, 26%);
-	--color-ink-high:		hsl(0, 0%, 13%);
-	--color-ink-max:		black;
+	--cLink-hover:		hsl(202, 65%, 43%);
+	--cWarn:			purple;
+	--cPaperH:			white;
+	--cPaperM:			hsl(0, 0%, 96%);
+	--cPaperL:			hsl(0, 0%, 74%);
+	--cInkL:			hsl(0, 0%, 38%);
+	--cInkM:			hsl(0, 0%, 26%);
+	--cInkH:			hsl(0, 0%, 13%);
+	--cInk:				black;
 
 
-	--color-dark-high:		hsl(0, 0%, 13%);
+	--cDarkH:		hsl(0, 0%, 13%);
 
 
 
@@ -38,10 +38,10 @@ Colors for the whole site
 	--color6: hsl(33, 100%, 91%);
 
 
-	--color-accent: hsl(33, 100%, 80%);
-	--color-logo: hsl(33, 100%, 91%);
+	--cAccent: hsl(33, 100%, 80%);
+	--cLogo1: hsl(33, 100%, 91%);
 
-	--color-accent-ink: hsl(33, 100%, 9%);
+	--cAccent-ink: hsl(33, 100%, 9%);
 }
 
 
@@ -49,18 +49,18 @@ Colors for the whole site
 @media (prefers-color-scheme: dark) {
 
 	:root {
-		--color-Link:			hsl(202, 65%, 63%);
-		--color-Link-hover:		hsl(202, 65%, 43%);
-		--color-accent:		hsl(20, 65%, 63%);
-		--color-Warning:		purple;
-		--color-paper-high:		hsl(0, 0%, 0%);
-		--color-paper-med:		hsl(0, 0%, 4%);
-		--color-paper-low:		hsl(0, 0%, 26%);
-		--color-ink-low:		hsl(0, 0%, 62%);
-		--color-ink-med:		hsl(0, 0%, 74%);
-		--color-ink-high:		hsl(0, 0%, 87%);
+		--cLink:		hsl(202, 65%, 63%);
+		--cLink-hover:	hsl(202, 65%, 43%);
+		--cAccent:		hsl(20, 65%, 63%);
+		--cWarn:		purple;
+		--cPaperH:		hsl(0, 0%, 0%);
+		--cPaperM:		hsl(0, 0%, 4%);
+		--cPaperL:		hsl(0, 0%, 26%);
+		--cInkL:		hsl(0, 0%, 62%);
+		--cInkM:		hsl(0, 0%, 74%);
+		--cInkH:		hsl(0, 0%, 87%);
 
-		--color-dark-high:		hsl(0, 0%, 4%);
+		--cDarkH:		hsl(0, 0%, 4%);
 
 		--color1: hsl(229, 22%, 9%);		// dark
 		--color2: hsl(150, 25%, 20%);
@@ -72,21 +72,21 @@ Colors for the whole site
    }
 }
 
-html { color:var(--color-ink-high); }
+html { color:var(--cInkH); }
 
-a { color:var(--color-Link); }
+a { color:var(--cLink); }
 
 .dimmer {
-	color:var(--color-ink-low);
+	color:var(--cInkL);
 }
 
 main {
-	background-color:var(--color-paper-high);
+	background-color:var(--cPaperH);
 }
 
 body > footer {
-	background-color:var(--color-paper-low);
-	color:var(--color-paper-high);
+	background-color:var(--cPaperL);
+	color:var(--cPaperH);
 }
 
 
@@ -115,7 +115,7 @@ article.textual.unpadded {
 }
 
 body > footer {
-	background-color:var(--color-paper-low);
-	color:var(--color-paper-high);
+	background-color:var(--cPaperL);
+	color:var(--cPaperH);
 }
 

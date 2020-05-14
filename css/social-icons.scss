@@ -1,7 +1,16 @@
+.icon {
+	
+	.instagram { fill:#e95950 }
+	.facebook  { fill:#3b5998 }
+	.youtube   { fill:#b00 }
+	.spotify   { fill:#1ED760 }
+}
+
+
 
 
 .icons.icons-footer {
-	background-color:var(--color-dark-high);
+	background-color:var(--cDarkH);
 }
 
 .icons {
@@ -43,10 +52,10 @@
 	a:after {
 		padding:0 5px;
 		font-size:80%;
-		background-color:var(--color-paper-high);
-		color:var(--color-ink-high);
+		background-color:var(--cPaperH);
+		color:var(--cInkH);
 		border-radius:5px;
-		box-shadow:0 0 8px 8px var(--color-paper-high);
+		box-shadow:0 0 8px 8px var(--cPaperH);
 		line-height:1;
 
 		content:attr(data-title);

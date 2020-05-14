@@ -27,6 +27,10 @@ block vars
 
 block title
 	title 2AM in the Basement — Official Site
+
+block styles
+	style
+		include ../css/homepage.css
 	
 block append links
 	link(rel="prefetch" href="//code.jquery.com")
@@ -84,7 +88,7 @@ block main
 						include ../svg/homepage/apple-music-icon-color.svg
 						//- Apple music icon doesn't show color when loaded with svg-use !!!
 				.icon
-					a(data-title="Spotify" href="https://open.spotify.com/artist/4xWrKxTS7gyybHbJ94LZtx?si=P5Cy1GEHS8aLFNkjsFAx_Q" style="fill:#1ED760")
+					a(data-title="Spotify" href="https://open.spotify.com/artist/4xWrKxTS7gyybHbJ94LZtx?si=P5Cy1GEHS8aLFNkjsFAx_Q")
 						svg: use(xlink:href="/svg/homepage.svg#spotify")
 
 	section.videos.clearfix

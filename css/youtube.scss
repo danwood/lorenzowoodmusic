@@ -7,7 +7,7 @@ YouTube
 /* YouTube player */
 
 .youtube {
-	background-color:var(--color-ink-high);
+	background-color:var(--cInkH);
 	position:relative;
 	padding-top:56.25%;
 	overflow:hidden;
@@ -23,7 +23,7 @@ YouTube
 	.play-button {
 		width:68px;
 		height:48px;
-		background-color:var(--color-ink-med);
+		background-color:var(--cInkM);
 		box-shadow:0 0 20px rgba( 0,0,0,0.6 );
 		opacity:0.9;
 		border-radius:6px/18px;
@@ -37,7 +37,7 @@ YouTube
 		content:"";
 		border-style:solid;
 		border-width:10px 0 10px 16.0px;
-		border-color:transparent transparent transparent var(--color-paper-high);
+		border-color:transparent transparent transparent var(--cPaperH);
 	}
 	img, .play-button {
 		cursor:pointer;
@@ -110,4 +110,13 @@ YouTube
 		}
 	}
 
+}
+
+
+.no-js .youtube:after {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	color: white;
+	content: "JavaScript Required"
 }

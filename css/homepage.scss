@@ -1,3 +1,5 @@
+@import 'constants';
+
 /*
 ================================================================================
 
@@ -45,7 +47,7 @@ a.filled svg {
 	padding:0.5rem 0 0 1rem;
 	display:inline-block;
 	font-weight:400;
-	color:var(--color-logo);
+	color:var(--cLogo1);
 	letter-spacing:3px;
 	font-size:2em;
 }
@@ -102,14 +104,14 @@ Input Forms
 	margin-bottom:1rem;
 	padding:0.25rem 0.5rem;
 	width:95%;	/* Due to padding, make sure it won't overflow */
-	color:var(--color-ink-high);
+	color:var(--cInkH);
 }
 
 input[type="submit"] {
 	display:block;
 	text-align:center;
-	color:var(--color-paper-high);
-	background-color:var(--color-Link);
+	color:var(--cPaperH);
+	background-color:var(--cLink);
 	padding:6px 2rem;
 	border:none;
 	width:auto;
@@ -138,13 +140,13 @@ Homepage streaming links above the fold
 	}
 }
 @media only screen and (max-width:370px) {
-	.needs-medium-small {
+	.needsMium-small {
 		display:none !important;
 	}
 }
 
 @media only screen and (max-width:470px) {
-	.needs-medium {
+	.needsMium {
 		display:none !important;
 	}
 }
@@ -207,7 +209,7 @@ img.covering {
 	z-index:-1;
 
 	@media only screen and (max-width:$mainBreakpoint - 1) {
-		border-top:3em solid var(--color-banner-background);		// make some room for the .action-banner – give it a solid color top border 
+		border-top:3em solid var(--cBanner);		// make some room for the .action-banner – give it a solid color top border 
 	}
 }
 .js img.covering {
@@ -217,7 +219,7 @@ img.covering {
 .action-banner {
 
 	a {
-		color: var(--color-ink-high);
+		color: var(--cInkH);
 	}
 }
 
@@ -275,24 +277,22 @@ Bands in Town
 */
 
 
-.bit-header-row, .bit-row {
-		@extend .clearfix;
-		padding:6px 0;
-		border-bottom:1px solid var(--color-paper-low);
-	}
-	.bit-header { font-weight:bold; }
-.bit-header-row svg {
-	float:right;
+.bit-row {
+	padding:6px 0;
+	border-bottom:1px solid var(--cPaperL);
+}
+.bit-header { 
+	font-weight:bold;
 }
 
 
-.bit-row.bit-upcoming {
+.bit-row.bit-upcoming.clearfix {
 //	&:hover {
-//		background-color:var(--color-paper-med);
+//		background-color:var(--cPaperM);
 //	}
 	a {
 		text-decoration:none;
-		color:var(--color-ink-high);
+		color:var(--cInkH);
 	}
 
 }
@@ -303,8 +303,8 @@ Bands in Town
 	}
 
 	.bit-button {
-		color:var(--color-paper-high);
-		background-color:var(--color-Link);
+		color:var(--cPaperH);
+		background-color:var(--cLink);
 		padding:10px;
 		display:inline-block;
 		text-align:center;
@@ -436,7 +436,7 @@ Mailing, EPK
 	}
 
 	/* Make track link be a button */
-	.bit-track { text-decoration:none; color:var(--color-paper-high); background-color:var(--color-Link); padding:10px; margin-right:0.5rem; }
+	.bit-track { text-decoration:none; color:var(--cPaperH); background-color:var(--cLink); padding:10px; margin-right:0.5rem; }
 
 	/* Separator for city-state */
 	.bit-citystate:before { content:' — '; }
@@ -464,7 +464,7 @@ Mailing, EPK
 	min-height:300px;
 	max-height:100%;
 	margin:auto auto;
-	background-color:var(--color-paper-high);
+	background-color:var(--cPaperH);
 	border:5px solid black;
 	border-radius:10px;
 	padding:10px;
@@ -475,9 +475,9 @@ Mailing, EPK
 	top:0;
 	right:40px;
 	font-size:600%;
-	color:var(--color-paper-high);
+	color:var(--cPaperH);
 	z-index:22;
-	text-shadow:0 0 4px var(--color-ink-high);
+	text-shadow:0 0 4px var(--cInkH);
 	cursor:pointer;
 }
 
