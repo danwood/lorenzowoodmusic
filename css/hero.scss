@@ -1,0 +1,154 @@
+@import 'constants';
+
+/*
+================================================================================
+
+HERO kinds of classes.  For actual Home page, and the 2AM home page.
+
+================================================================================
+*/
+
+.logo {
+	background:#000;
+	position:relative;
+}
+
+.logo a {
+	text-decoration: none;
+}
+
+
+.logo h1 {
+	margin:0;
+	padding:0.5rem 0 0 1rem;
+	display:inline-block;
+	font-weight:400;
+	color:var(--cLogo1);
+	letter-spacing:3px;
+	font-size:2em;
+}
+
+
+.icons-header {
+
+	svg {
+		fill:var(--color6);
+	}
+}
+
+/*
+----------------------------------------
+Homepage streaming links above the fold
+----------------------------------------
+*/
+
+.action-banner {
+	text-align:center;
+	a {
+		padding:0 8px;
+		display:inline-block;
+		text-decoration:none;
+	}
+}
+
+@media only screen and (max-width:270px) {
+	.action-banner {
+		display:none !important;
+	}
+}
+@media only screen and (max-width:370px) {
+	.needsMedium-small {
+		display:none !important;
+	}
+}
+
+@media only screen and (max-width:470px) {
+	.needsMedium {
+		display:none !important;
+	}
+}
+
+
+/*
+----------------------------------------
+Down arrow only below full page hero
+----------------------------------------
+*/
+
+
+.scrolldown {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	text-align:center;
+
+	svg {
+		width:24px;
+		height:24px;
+	}
+}
+
+.bounce {
+	animation:bounce 2s infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		transform:translateY(0);
+	}
+	40% {
+		transform:translateY(-30px);
+	}
+	60% {
+		transform:translateY(-15px);
+	}
+}
+
+/*
+----------------------------------------
+Hero
+----------------------------------------
+*/
+
+
+.hero {
+	position: relative;
+	width:100%;
+	height:auto;
+}
+.hero-image {
+	width:100%;
+}
+img.covering {
+	object-fit:cover;
+	object-position:50% 75%;
+	top:0;
+	z-index:-1;
+
+	@media only screen and (max-width:$mainBreakpoint - 1) {
+		border-top:3em solid var(--cBanner);		// make some room for the .action-banner – give it a solid color top border 
+	}
+}
+.js img.covering {
+	position:fixed;
+}
+
+.action-banner {
+
+	a {
+		color: var(--cInkH);
+	}
+}
+
+@media only screen and (min-width:$mainBreakpoint) {
+
+	.action-banner {
+
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+	}
+}
+
+

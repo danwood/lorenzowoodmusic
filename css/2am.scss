@@ -1,3 +1,8 @@
+@import 'constants';
+
+// Needs the 'hero' stuff on this page
+@import 'hero';
+
 // 2AM PAGE, SVG-BASED LOGO
 
 .logo svg {
@@ -9,3 +14,16 @@
 a.filled svg {
 	fill:currentColor;
 }
+
+@media only screen and (min-width:$mainBreakpoint) {
+
+	// override usual top to make room for page navigation
+	.logo svg {
+		padding-top:($page-menu-padding-v + $page-menu-padding-v + $page-menu-font-size);
+	}
+}
+
+section.videos {
+	background-color:var(--color2);
+}
+

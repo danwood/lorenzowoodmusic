@@ -71,7 +71,7 @@ if (TRUE || $artist['upcoming_event_count']) {
 		$city_state = $event['venue']['city'] . ', ' . $event['venue']['region'];
 		$past = ($dateTime < time())
 ?>
-<div class='bit-row <?php echo ($past ? 'bit-past' : 'bit-upcoming'); ?>'
+<div class='bit-row <?php echo ($past ? 'bit-past' : 'bit-upcoming'); ?> clearfix'
 	<?php if ($past) { echo ' style="display:none"'; } ?>>
 	<?php if (!$past) { echo '<a href="' . htmlspecialchars($url) . '">'; } ?>
 		<span class='bit-date'><?php echo htmlspecialchars($month_day); ?></span>
