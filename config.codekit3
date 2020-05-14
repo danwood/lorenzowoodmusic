@@ -944,7 +944,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/css/2ampage-min.css",
 		"oF": 0,
 		"oS": 3
@@ -3004,8 +3004,8 @@
 		"ft": 2048,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/svg/homepage.svg.html",
-		"oF": 0
+		"oAP": "/svg/homepage.svg",
+		"oF": 2
 		},
 	"/svg/homepage/apple-music-icon-color.svg": {
 		"ft": 2097152,
@@ -3097,21 +3097,13 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/linkpage.svg.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/svg/linkpage.svg.html",
-		"oF": 0
-		},
 	"/svg/linkpage.svg.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/svg/linkpage.svg.html",
-		"oF": 0
+		"oAP": "/svg/linkpage.svg",
+		"oF": 2
 		},
 	"/svg/linkpage/amazon-music.svg": {
 		"ft": 2097152,
