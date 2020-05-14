@@ -68,9 +68,6 @@ var $w = $(window).scroll(function(){
 	if ( $w.scrollTop() > $("main").offset().top) {
 		if (! $('body').hasClass('swapped-hero') ) {
 
-			// convert an initially grayscale image to be full color when you get back!
-			$('img.bw-image').css({filter:"grayscale(0%)",opacity:"1.0"});
-
 			if ($('body').hasClass('showing-2') ) {
 
 				$('img.swapping-image').attr('src', function() {

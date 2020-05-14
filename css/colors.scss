@@ -1,27 +1,9 @@
 /*
 ================================================================================
 
-General look and utility useful across the whole site
+Colors for the whole site
 
 ================================================================================
-*/
-
-/*
-----------------------------------------
-Layout
-----------------------------------------
-*/
-
-$mainBreakpoint: 768px;
-
-// TODO - incorporate into other files
-
-
-
-/*
-----------------------------------------
-Colors
-----------------------------------------
 */
 
 :root {
@@ -102,34 +84,12 @@ main {
 	background-color:var(--color-paper-high);
 }
 
-/*
-----------------------------------------
-Typography
-----------------------------------------
-*/
-
-body { 
-	font:16px/1.6 'Montserrat', sans-serif;
+body > footer {
+	background-color:var(--color-paper-low);
+	color:var(--color-paper-high);
 }
 
-h1, h2, h3, h4, h5, h6, h7, .bold {
-	font-weight:800;
-}
 
-dt {
-	font-weight:bold;
-}
-
-blockquote {
-	font-style:italic;
-	letter-spacing:2px;
-
-	footer {
-		font-style:normal;
-		letter-spacing:normal;
-		font-size:80%;
-	}
-}
 
 /*
 ----------------------------------------

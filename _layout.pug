@@ -25,7 +25,7 @@ html(class="no-js", lang="en-us")
 		block styles
 
 	body(class=currentClass)
-		<!--[if lt IE 9]>
+		<!--[if lt IE 10]>
 			p.browserupgrade
 				| You are using an #[strong outdated] browser. Please
 				|
@@ -96,8 +96,12 @@ html(class="no-js", lang="en-us")
 					span.widespace
 					block more-credits
 					span.widespace
+					|
+					|
 					a.contact-link(href="/contact/" class={active: currentClass === 'contact'}) Contact us
 					span.widespace
+					|
+					|
 					a.press-link(href="/press/" class={active: currentClass === 'press'}) Press & Media
 				p.js-warning.
 					JavaScript is disabled in your browser; please enable it to see missing content.

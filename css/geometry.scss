@@ -1,0 +1,18 @@
+
+section {
+	padding-top:1rem;			// don't specify sides since those are handled separately
+	padding-bottom:1rem;
+}
+section.balance-footer {
+	padding-bottom:0;
+}
+
+article.textual {
+	margin:0 auto;
+	padding:2rem 0;		/* if we use margin above then it messes with background image */
+	max-width:60rem;
+}
+article.textual.unpadded {
+	padding:0;
+}
+
