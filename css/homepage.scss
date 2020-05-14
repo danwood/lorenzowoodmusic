@@ -52,6 +52,7 @@ Latest Releases Section
 */
 
 .latest-releases {
+
 	h3 {
 		font-size:2rem;
 		a {
@@ -77,36 +78,27 @@ Latest Releases Section
   			transform: scale(1.05);
 		}
 	}
-}
 
+	article {
 
-/*
-----------------------------------------
-Latest Releases
-----------------------------------------
-*/
-.latest-releases article {
+		display:block;
 
-	display:block;
+		// Lots of space in between
+		padding-top:4em;
+		padding-bottom:4em;
 
-	// Lots of space in between
-	padding-top:4em;
-	padding-bottom:4em;
+		@media only screen and (min-width:$mainBreakpoint) {
 
-	@media only screen and (min-width:$mainBreakpoint) {
+			// don't need as much space
+			padding-top:2.5em;
+			padding-bottom:2.5em;
 
-		// don't need as much space
-		padding-top:2.5em;
-		padding-bottom:2.5em;
+			display: flex;
 
-		display: flex;
-
-		margin:0 auto;
-		max-width:90rem;
+			margin:0 auto;
+			max-width:90rem;
+		}
 	}
-}
-
-.latest-releases {
 
 	@media only screen and (max-width:$mainBreakpoint - 1px) {
 
@@ -158,31 +150,30 @@ Latest Releases
 			width:44.5%;	// width that makes the video be the same height as the artwork
 		}
 	}
+
+	.subsection.reversed article {
+		flex-direction: row-reverse;
+	}
+
+	.dark-text {
+		color:rgba(0,0,0,0.9) !important;
+	}
+	.dark-text a {
+		color:rgba(0,0,0,0.6) !important;
+	}
+	.light-text {
+		color:white !important;
+	}
+	.light-text a {
+		color:rgba(255,255,255,0.6) !important;
+	}
+
+	.release-image.bordered img {
+		border:1px solid rgba(255,255,255,0.5);
+	}
 }
 
 
-.latest-releases .subsection.reversed article {
-	flex-direction: row-reverse;
-}
-
-.dark-text {
-	color:rgba(0,0,0,0.9) !important;
-}
-.dark-text a {
-	color:rgba(0,0,0,0.6) !important;
-}
-.light-text {
-	color:white !important;
-}
-.light-text a {
-	color:rgba(255,255,255,0.6) !important;
-}
-
-.release-image.bordered img {
-	border:1px solid rgba(255,255,255,0.5);
-}
-
-	
 
 
 /*
@@ -202,17 +193,20 @@ Bands in Town
 
 
 .bit-row.bit-upcoming {
-//	&:hover {
-//		background-color:var(--cPaperM);
-//	}
 	a {
 		text-decoration:none;
 		color:var(--cInkH);
 	}
-
 }
 
-.bit-date { padding-left:5px; text-transform:uppercase; font-weight:bold; display:inline-block; width:7em; }
+.bit-date {
+	padding-left: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: inline-block;
+	width: 7em;
+}
+
 .bit-date, .bit-venue, .bit-citystate {
 	padding-top:10px;
 }
@@ -231,7 +225,6 @@ Bands in Town
 }
 
 .bit-after { padding-top:1em; }
-
 
 
 @media only screen and (max-width:($mainBreakpoint - 1px)) {
@@ -262,36 +255,6 @@ Bands in Town
 	.bit-citystate:before { content:' — '; }
 
 }
-
-
-/*
-----------------------------------------
-Input Forms (for mailchimp, contact)
-----------------------------------------
-*/
-
-.input-form input,
-.input-form textarea,
-.input-form select {
-	display:inline-block;
-	font-size:1rem;
-	margin-bottom:1rem;
-	padding:0.25rem 0.5rem;
-	width:95%;	/* Due to padding, make sure it won't overflow */
-	color:var(--cInkH);
-}
-
-input[type="submit"] {
-	display:block;
-	text-align:center;
-	color:var(--cPaperH);
-	background-color:var(--cLink);
-	padding:6px 2rem;
-	border:none;
-	width:auto;
-	border-radius:4px;
-}
-
 
 
 /*
@@ -383,27 +346,3 @@ Modal for Contact Form
 
 
 
-
-
-
-/*
-----------------------------------------
-
-----------------------------------------
-*/
-
-
-
-/*
-----------------------------------------
-
-----------------------------------------
-*/
-
-
-
-/*
-----------------------------------------
-
-----------------------------------------
-*/
