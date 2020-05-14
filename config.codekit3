@@ -939,17 +939,17 @@
 		"oF": 0,
 		"oS": 1
 		},
-	"/css/2am.css": {
+	"/css/2ampage.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/2am-min.css",
+		"oAP": "/css/2ampage-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/css/2am.scss": {
+	"/css/2ampage.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 2,
@@ -957,7 +957,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/css/2am.css",
+		"oAP": "/css/2ampage.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 0
@@ -987,6 +987,16 @@
 		"oF": 0,
 		"oS": 3,
 		"sct": 0
+		},
+	"/css/contact.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/contact-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/css/contact.scss": {
 		"aP": 1,
@@ -1056,8 +1066,8 @@
 		"dP": 2,
 		"ec": 1,
 		"ft": 4,
-		"ma": 1,
-		"oA": 1,
+		"ma": 0,
+		"oA": 0,
 		"oAP": "/css/homepage.css",
 		"oF": 1,
 		"oS": 3,
