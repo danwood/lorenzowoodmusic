@@ -8,10 +8,10 @@ Home-Page specific classes.  For actual Home page, and the 2AM home page.
 ================================================================================
 */
 
-body > header {
-	position:relative;
-}
-
+// body > header {
+// 	position:relative;
+// }
+// 
 .logo {
 	background:#000;
 	position:relative;
@@ -19,18 +19,6 @@ body > header {
 
 .logo a {
 	text-decoration: none;
-}
-
-// 2AM PAGE, SVG-BASED LOGO
-
-.logo svg {
-	padding:3% 0 1.5% 5%;
-	max-width:67%;
-	max-height:140px;
-	min-height:40px;
-}
-a.filled svg {
-	fill:currentColor;
 }
 
 @media only screen and (min-width:$mainBreakpoint) {

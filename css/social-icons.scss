@@ -1,9 +1,9 @@
 .icon {
 	
-	.instagram { fill:#e95950 }
-	.facebook  { fill:#3b5998 }
-	.youtube   { fill:#b00 }
-	.spotify   { fill:#1ED760 }
+	&.instagram { fill:#e95950 }
+	&.facebook  { fill:#3b5998 }
+	&.youtube   { fill:#b00 }
+	&.spotify   { fill:#1ED760 }
 }
 
 
@@ -48,6 +48,7 @@
 .icons {
 	a {
 		position:relative;
+		display:block;
 	}
 	a:after {
 		padding:0 5px;

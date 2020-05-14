@@ -4,7 +4,7 @@
 
 var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
-var youtube = document.querySelectorAll( ".youtube" );
+var youtube = document.querySelectorAll( ".youtube-player" );
 for (var i = 0; i < youtube.length; i++) {
 	var code	= youtube[i].dataset.code;
 	var title	= youtube[i].dataset.title;
