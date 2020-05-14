@@ -568,7 +568,7 @@ AddDefaultCharset utf-8
 <IfModule mod_headers.c>
 
 Header set Content-Security-Policy "default-src 'self' data:; \
-prefetch-src res.cloudinary.com code.jquery.com fonts.googleapis.com 'self' data:; \
+prefetch-src res.cloudinary.com code.jquery.com fonts.googleapis.com; \
 script-src 'unsafe-inline' code.jquery.com 'self'; \
 style-src 'unsafe-inline' fonts.googleapis.com 'self'; \
 img-src res.cloudinary.com img.youtube.com 'self' data:; \
