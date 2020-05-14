@@ -54,11 +54,6 @@ block vars
 	- var currentClass = link-page
 	//- do not define pageTitle; it breaks things (?) and isn't need since title is generated from database
 
-block append links
-	<?php if ($release['youtube_video_v']) { ?>
-	link(rel="prefetch" href="//img.youtube.com")
-		//- This should be done on any page showing YOUTUBE VIDEOS
-	<?php } ?>
 
 block title
 	<title><?php echo htmlentities($longTitle); ?></title>
