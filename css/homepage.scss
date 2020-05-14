@@ -1,14 +1,39 @@
 /*
 ================================================================================
 
-Home-Page specific classes
+Home-Page specific classes.  For actual Home page, and the 2AM home page.
 
 ================================================================================
 */
 
+body > header {
+	position:relative;
+}
+
+.logo {
+	background:#000;
+	position:relative;
+}
+
 .logo a {
 	text-decoration: none;
 }
+
+// 2AM PAGE, SVG-BASED LOGO
+
+.logo svg {
+	padding:3% 0 1.5% 5%;
+	max-width:67%;
+	max-height:140px;
+	min-height:40px;
+}
+a.filled svg {
+	fill:currentColor;
+}
+
+
+
+
 .logo h1 {
 	margin:0;
 	padding:0.5rem 0 0 1rem;
@@ -18,14 +43,6 @@ Home-Page specific classes
 	letter-spacing:3px;
 	font-size:2em;
 }
-
-h3.righthand {
-	margin:0;
-	padding:1rem 1rem;
-	text-align:right;
-}
-
-.centered { text-align:center; margin-left:auto; margin-right:auto; }
 
 
 .icons-header {
@@ -97,26 +114,12 @@ input[type="submit"] {
 	border-radius:4px;
 }
 
-/*
-----------------------------------------
-Social Icons on home page only
-----------------------------------------
-*/
-
-.icons.absolute {
-	position:absolute;
-	bottom:0; left:0; right:0; /* should match with height of nav */
-}
 
 /*
 ----------------------------------------
 Homepage streaming links above the fold
 ----------------------------------------
 */
-
-.hero {
-	position: relative;
-}
 
 .action-banner {
 	text-align:center;
@@ -194,7 +197,9 @@ Hero
 ----------------------------------------
 */
 
+
 .hero {
+	position: relative;
 	width:100%;
 	height:auto;
 }
