@@ -446,7 +446,7 @@ AddDefaultCharset utf-8
 	Redirect 301 /friends /link/more-than-friends
         Redirect 301 /mtf /link/more-than-friends
         Redirect 301 /mtfp /press/more-than-friends
-        Redirect 301 /falling /link/drown
+        Redirect 301 /drown /link/drown
 
 
 </IfModule>
