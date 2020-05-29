@@ -210,7 +210,7 @@
 		},
 	"/album_art_1200x630/falling.jpg": {
 		"ft": 16384,
-		"iS": 2820351,
+		"iS": 58342,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_1200x630/falling.jpg",
@@ -232,7 +232,7 @@
 		},
 	"/album_art_1200x630/jacket-ep.jpg": {
 		"ft": 16384,
-		"iS": 75220,
+		"iS": 39385,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_1200x630/jacket-ep.jpg",
@@ -243,7 +243,7 @@
 		},
 	"/album_art_1200x630/jacket.jpg": {
 		"ft": 16384,
-		"iS": 36762,
+		"iS": 33870,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_1200x630/jacket.jpg",
@@ -265,7 +265,7 @@
 		},
 	"/album_art_1200x630/now-in-control.jpg": {
 		"ft": 16384,
-		"iS": 512401,
+		"iS": 45780,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_1200x630/now-in-control.jpg",
@@ -276,7 +276,7 @@
 		},
 	"/album_art_1200x630/old-town-road.jpg": {
 		"ft": 16384,
-		"iS": 59038,
+		"iS": 55296,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_1200x630/old-town-road.jpg",
@@ -298,7 +298,7 @@
 		},
 	"/album_art_1200x630/you-and-me-now.jpg": {
 		"ft": 16384,
-		"iS": 79115,
+		"iS": 73549,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_1200x630/you-and-me-now.jpg",
@@ -309,7 +309,7 @@
 		},
 	"/album_art_3000/castle-on-the-hill.jpg": {
 		"ft": 16384,
-		"iS": 269662,
+		"iS": 270204,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_3000/castle-on-the-hill.jpg",
@@ -331,7 +331,7 @@
 		},
 	"/album_art_3000/falling.jpg": {
 		"ft": 16384,
-		"iS": 1367667,
+		"iS": 489258,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_3000/falling.jpg",
@@ -364,7 +364,7 @@
 		},
 	"/album_art_3000/jacket.jpg": {
 		"ft": 16384,
-		"iS": 683207,
+		"iS": 333129,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_3000/jacket.jpg",
@@ -386,7 +386,7 @@
 		},
 	"/album_art_3000/now-in-control.jpg": {
 		"ft": 16384,
-		"iS": 274129,
+		"iS": 273659,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_3000/now-in-control.jpg",
@@ -419,7 +419,7 @@
 		},
 	"/album_art_3000/you-and-me-now.jpg": {
 		"ft": 16384,
-		"iS": 67671,
+		"iS": 61793,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_3000/you-and-me-now.jpg",
@@ -452,7 +452,7 @@
 		},
 	"/album_art_384/falling.jpg": {
 		"ft": 16384,
-		"iS": 28165,
+		"iS": 25492,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_384/falling.jpg",
@@ -474,7 +474,7 @@
 		},
 	"/album_art_384/jacket-ep.jpg": {
 		"ft": 16384,
-		"iS": 995101,
+		"iS": 10116,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_384/jacket-ep.jpg",
@@ -485,7 +485,7 @@
 		},
 	"/album_art_384/jacket.jpg": {
 		"ft": 16384,
-		"iS": 11500,
+		"iS": 10454,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_384/jacket.jpg",
@@ -507,7 +507,7 @@
 		},
 	"/album_art_384/now-in-control.jpg": {
 		"ft": 16384,
-		"iS": 19883,
+		"iS": 16229,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_384/now-in-control.jpg",
@@ -518,7 +518,7 @@
 		},
 	"/album_art_384/old-town-road.jpg": {
 		"ft": 16384,
-		"iS": 17071,
+		"iS": 15883,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_384/old-town-road.jpg",
@@ -540,7 +540,7 @@
 		},
 	"/album_art_384/you-and-me-now.jpg": {
 		"ft": 16384,
-		"iS": 32832,
+		"iS": 28885,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_384/you-and-me-now.jpg",
@@ -562,7 +562,7 @@
 		},
 	"/album_art_64/drown.png": {
 		"ft": 32768,
-		"iS": 438,
+		"iS": 506,
 		"oA": 0,
 		"oAP": "/album_art_64/drown.png",
 		"oF": 0,
@@ -573,7 +573,7 @@
 		},
 	"/album_art_64/falling.jpg": {
 		"ft": 16384,
-		"iS": 4586,
+		"iS": 2213,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_64/falling.jpg",
@@ -694,7 +694,7 @@
 		},
 	"/album_art_640/falling.jpg": {
 		"ft": 16384,
-		"iS": 60438,
+		"iS": 49127,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/falling.jpg",
@@ -716,7 +716,7 @@
 		},
 	"/album_art_640/jacket-ep.jpg": {
 		"ft": 16384,
-		"iS": 995101,
+		"iS": 24218,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/jacket-ep.jpg",
@@ -727,7 +727,7 @@
 		},
 	"/album_art_640/jacket.jpg": {
 		"ft": 16384,
-		"iS": 683207,
+		"iS": 25549,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/jacket.jpg",
@@ -749,7 +749,7 @@
 		},
 	"/album_art_640/now-in-control.jpg": {
 		"ft": 16384,
-		"iS": 273659,
+		"iS": 37305,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/now-in-control.jpg",
@@ -760,7 +760,7 @@
 		},
 	"/album_art_640/old-town-road.jpg": {
 		"ft": 16384,
-		"iS": 52713,
+		"iS": 49618,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/old-town-road.jpg",
@@ -782,7 +782,7 @@
 		},
 	"/album_art_640/you-and-me-now.jpg": {
 		"ft": 16384,
-		"iS": 67671,
+		"iS": 61793,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/you-and-me-now.jpg",
@@ -1335,7 +1335,7 @@
 		},
 	"/img/2am.jpg": {
 		"ft": 16384,
-		"iS": 990962,
+		"iS": 203731,
 		"jF": 0,
 		"oA": 1,
 		"oAP": "/img/2am.jpg",
@@ -1354,7 +1354,7 @@
 		},
 	"/img/2am33.jpg": {
 		"ft": 16384,
-		"iS": 154958,
+		"iS": 34066,
 		"jF": 0,
 		"oA": 1,
 		"oAP": "/img/2am33.jpg",
@@ -1365,7 +1365,7 @@
 		},
 	"/img/2am50.jpg": {
 		"ft": 16384,
-		"iS": 320018,
+		"iS": 66938,
 		"jF": 0,
 		"oA": 1,
 		"oAP": "/img/2am50.jpg",
@@ -1376,7 +1376,7 @@
 		},
 	"/img/banner1_big.jpg": {
 		"ft": 16384,
-		"iS": 39807,
+		"iS": 65101,
 		"jF": 0,
 		"oA": 1,
 		"oAP": "/img/banner1_big.jpg",
@@ -1387,7 +1387,7 @@
 		},
 	"/img/banner1_giant.jpg": {
 		"ft": 16384,
-		"iS": 712373,
+		"iS": 128773,
 		"jF": 0,
 		"oA": 1,
 		"oAP": "/img/banner1_giant.jpg",
@@ -1398,7 +1398,7 @@
 		},
 	"/img/banner1_medium.jpg": {
 		"ft": 16384,
-		"iS": 14497,
+		"iS": 22475,
 		"jF": 0,
 		"oA": 1,
 		"oAP": "/img/banner1_medium.jpg",
@@ -1409,7 +1409,7 @@
 		},
 	"/img/banner1_small.jpg": {
 		"ft": 16384,
-		"iS": 8269,
+		"iS": 12270,
 		"jF": 0,
 		"oA": 1,
 		"oAP": "/img/banner1_small.jpg",
@@ -1420,7 +1420,7 @@
 		},
 	"/img/banner2_big.jpg": {
 		"ft": 16384,
-		"iS": 368537,
+		"iS": 35671,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/banner2_big.jpg",
@@ -1431,7 +1431,7 @@
 		},
 	"/img/banner2_giant.jpg": {
 		"ft": 16384,
-		"iS": 712459,
+		"iS": 65036,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/banner2_giant.jpg",
@@ -1442,7 +1442,7 @@
 		},
 	"/img/banner2_medium.jpg": {
 		"ft": 16384,
-		"iS": 71555,
+		"iS": 19128,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/banner2_medium.jpg",
@@ -1453,7 +1453,7 @@
 		},
 	"/img/banner2_small.jpg": {
 		"ft": 16384,
-		"iS": 29846,
+		"iS": 10292,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/banner2_small.jpg",
@@ -1464,7 +1464,7 @@
 		},
 	"/img/beach.jpg": {
 		"ft": 16384,
-		"iS": 2886286,
+		"iS": 179335,
 		"jF": 0,
 		"oA": 1,
 		"oAP": "/img/beach.jpg",
@@ -1538,7 +1538,7 @@
 		},
 	"/img/southshore.jpg": {
 		"ft": 16384,
-		"iS": 86937,
+		"iS": 85717,
 		"jF": 0,
 		"oA": 1,
 		"oAP": "/img/southshore.jpg",
@@ -1557,7 +1557,7 @@
 		},
 	"/img/southshore50.jpg": {
 		"ft": 16384,
-		"iS": 63514,
+		"iS": 31769,
 		"jF": 0,
 		"oA": 1,
 		"oAP": "/img/southshore50.jpg",
@@ -1832,7 +1832,7 @@
 		},
 	"/photos/Lorenzo Wood 0140.jpg": {
 		"ft": 16384,
-		"iS": 91644,
+		"iS": 86998,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 0140.jpg",
@@ -1843,7 +1843,7 @@
 		},
 	"/photos/Lorenzo Wood 0221.jpg": {
 		"ft": 16384,
-		"iS": 101593,
+		"iS": 150128,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 0221.jpg",
@@ -1854,7 +1854,7 @@
 		},
 	"/photos/Lorenzo Wood 0478.jpg": {
 		"ft": 16384,
-		"iS": 124632,
+		"iS": 124445,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 0478.jpg",
@@ -1865,7 +1865,7 @@
 		},
 	"/photos/Lorenzo Wood 0691.jpg": {
 		"ft": 16384,
-		"iS": 93646,
+		"iS": 93711,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 0691.jpg",
@@ -1876,7 +1876,7 @@
 		},
 	"/photos/Lorenzo Wood 1946.jpg": {
 		"ft": 16384,
-		"iS": 74691,
+		"iS": 70816,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 1946.jpg",
@@ -1887,7 +1887,7 @@
 		},
 	"/photos/Lorenzo Wood 2089.jpg": {
 		"ft": 16384,
-		"iS": 50574,
+		"iS": 45400,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 2089.jpg",
@@ -1898,7 +1898,7 @@
 		},
 	"/photos/Lorenzo Wood 2156.jpg": {
 		"ft": 16384,
-		"iS": 87313,
+		"iS": 82641,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 2156.jpg",
@@ -1909,7 +1909,7 @@
 		},
 	"/photos/Lorenzo Wood 2168.jpg": {
 		"ft": 16384,
-		"iS": 109638,
+		"iS": 103678,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 2168.jpg",
@@ -1920,7 +1920,7 @@
 		},
 	"/photos/Lorenzo Wood 2169.jpg": {
 		"ft": 16384,
-		"iS": 40404,
+		"iS": 37531,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 2169.jpg",
@@ -1931,7 +1931,7 @@
 		},
 	"/photos/Lorenzo Wood 2453.jpg": {
 		"ft": 16384,
-		"iS": 77432,
+		"iS": 67983,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 2453.jpg",
@@ -1942,7 +1942,7 @@
 		},
 	"/photos/Lorenzo Wood 2558.jpg": {
 		"ft": 16384,
-		"iS": 47687,
+		"iS": 39618,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 2558.jpg",
@@ -1953,7 +1953,7 @@
 		},
 	"/photos/Lorenzo Wood 4965.jpg": {
 		"ft": 16384,
-		"iS": 139595,
+		"iS": 134082,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 4965.jpg",
@@ -1964,7 +1964,7 @@
 		},
 	"/photos/Lorenzo Wood 5687.jpg": {
 		"ft": 16384,
-		"iS": 89811,
+		"iS": 84012,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 5687.jpg",
@@ -1975,7 +1975,7 @@
 		},
 	"/photos/Lorenzo Wood 6115.jpg": {
 		"ft": 16384,
-		"iS": 60326,
+		"iS": 57695,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 6115.jpg",
@@ -1986,7 +1986,7 @@
 		},
 	"/photos/Lorenzo Wood 6135.jpg": {
 		"ft": 16384,
-		"iS": 76359,
+		"iS": 67618,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 6135.jpg",
@@ -1997,7 +1997,7 @@
 		},
 	"/photos/Lorenzo Wood 6184.jpg": {
 		"ft": 16384,
-		"iS": 8518907,
+		"iS": 106993,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 6184.jpg",
@@ -2008,7 +2008,7 @@
 		},
 	"/photos/Lorenzo Wood 6190.jpg": {
 		"ft": 16384,
-		"iS": 5824262,
+		"iS": 36305,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 6190.jpg",
@@ -2019,7 +2019,7 @@
 		},
 	"/photos/Lorenzo Wood 7646.jpg": {
 		"ft": 16384,
-		"iS": 2069544,
+		"iS": 60131,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 7646.jpg",
@@ -2030,7 +2030,7 @@
 		},
 	"/photos/Lorenzo Wood 8901.jpg": {
 		"ft": 16384,
-		"iS": 77026,
+		"iS": 75038,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 8901.jpg",
@@ -2041,7 +2041,7 @@
 		},
 	"/photos/Lorenzo Wood 8915.jpg": {
 		"ft": 16384,
-		"iS": 34918,
+		"iS": 33522,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 8915.jpg",
@@ -2052,7 +2052,7 @@
 		},
 	"/photos/Lorenzo Wood 8967.jpg": {
 		"ft": 16384,
-		"iS": 56478,
+		"iS": 73816,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 8967.jpg",
@@ -2063,7 +2063,7 @@
 		},
 	"/photos/Lorenzo Wood 8974.jpg": {
 		"ft": 16384,
-		"iS": 70980,
+		"iS": 67646,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 8974.jpg",
@@ -2074,7 +2074,7 @@
 		},
 	"/photos/Lorenzo Wood 9023.jpg": {
 		"ft": 16384,
-		"iS": 64940,
+		"iS": 63112,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 9023.jpg",
@@ -2085,7 +2085,7 @@
 		},
 	"/photos/Lorenzo Wood 9073.jpg": {
 		"ft": 16384,
-		"iS": 40320,
+		"iS": 38259,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 9073.jpg",
@@ -2096,7 +2096,7 @@
 		},
 	"/photos/Lorenzo Wood 9111.jpg": {
 		"ft": 16384,
-		"iS": 372219,
+		"iS": 89751,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 9111.jpg",
@@ -2107,7 +2107,7 @@
 		},
 	"/photos/Lorenzo Wood 9179.jpg": {
 		"ft": 16384,
-		"iS": 447033,
+		"iS": 132567,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 9179.jpg",
@@ -2118,7 +2118,7 @@
 		},
 	"/photos/Lorenzo Wood 9286.jpg": {
 		"ft": 16384,
-		"iS": 502502,
+		"iS": 100069,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 9286.jpg",
@@ -2129,7 +2129,7 @@
 		},
 	"/photos/Lorenzo Wood 9560.jpg": {
 		"ft": 16384,
-		"iS": 278700,
+		"iS": 79683,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 9560.jpg",
@@ -2140,7 +2140,7 @@
 		},
 	"/photos/Lorenzo Wood 9604.jpg": {
 		"ft": 16384,
-		"iS": 420856,
+		"iS": 107908,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 9604.jpg",
@@ -2151,7 +2151,7 @@
 		},
 	"/photos/Lorenzo Wood 9651.jpg": {
 		"ft": 16384,
-		"iS": 382840,
+		"iS": 99407,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 9651.jpg",
@@ -2162,7 +2162,7 @@
 		},
 	"/photos/Lorenzo Wood 9999.jpg": {
 		"ft": 16384,
-		"iS": 2564700,
+		"iS": 38391,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood 9999.jpg",
@@ -2173,7 +2173,7 @@
 		},
 	"/photos/Lorenzo Wood Photo Credit Claire Ashcraft 11.jpg": {
 		"ft": 16384,
-		"iS": 220985,
+		"iS": 73244,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood Photo Credit Claire Ashcraft 11.jpg",
@@ -2184,7 +2184,7 @@
 		},
 	"/photos/Lorenzo Wood Photo Credit Claire Ashcraft 22.jpg": {
 		"ft": 16384,
-		"iS": 283290,
+		"iS": 82957,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood Photo Credit Claire Ashcraft 22.jpg",
@@ -2195,7 +2195,7 @@
 		},
 	"/photos/Lorenzo Wood Photo Credit Claire Ashcraft 33.jpg": {
 		"ft": 16384,
-		"iS": 553538,
+		"iS": 108076,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood Photo Credit Claire Ashcraft 33.jpg",
@@ -2206,7 +2206,7 @@
 		},
 	"/photos/Lorenzo Wood Photo Credit Claire Ashcraft 42.jpg": {
 		"ft": 16384,
-		"iS": 396225,
+		"iS": 129884,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood Photo Credit Claire Ashcraft 42.jpg",
@@ -2217,7 +2217,7 @@
 		},
 	"/photos/Lorenzo Wood Photo Credit Claire Ashcraft 43.jpg": {
 		"ft": 16384,
-		"iS": 539167,
+		"iS": 106776,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood Photo Credit Claire Ashcraft 43.jpg",
@@ -2228,7 +2228,7 @@
 		},
 	"/photos/Lorenzo Wood Photo Credit Claire Ashcraft 44.jpg": {
 		"ft": 16384,
-		"iS": 338662,
+		"iS": 76648,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood Photo Credit Claire Ashcraft 44.jpg",
@@ -2239,7 +2239,7 @@
 		},
 	"/photos/Lorenzo Wood Photo Credit Claire Ashcraft 53.jpg": {
 		"ft": 16384,
-		"iS": 291292,
+		"iS": 115878,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood Photo Credit Claire Ashcraft 53.jpg",
@@ -2250,7 +2250,7 @@
 		},
 	"/photos/Lorenzo Wood Photo Credit Dave Weiland 01.jpg": {
 		"ft": 16384,
-		"iS": 93517,
+		"iS": 83390,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood Photo Credit Dave Weiland 01.jpg",
@@ -2261,7 +2261,7 @@
 		},
 	"/photos/Lorenzo Wood Photo Credit Dave Weiland 02.jpg": {
 		"ft": 16384,
-		"iS": 93020,
+		"iS": 81303,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood Photo Credit Dave Weiland 02.jpg",
@@ -2272,7 +2272,7 @@
 		},
 	"/photos/Lorenzo Wood Photo Credit Nikki Maguire 7176.jpg": {
 		"ft": 16384,
-		"iS": 96314,
+		"iS": 91285,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/Lorenzo Wood Photo Credit Nikki Maguire 7176.jpg",
@@ -2283,7 +2283,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 0140.jpg": {
 		"ft": 16384,
-		"iS": 17332247,
+		"iS": 3589212,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 0140.jpg",
@@ -2294,7 +2294,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 0221.jpg": {
 		"ft": 16384,
-		"iS": 1193582,
+		"iS": 683140,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 0221.jpg",
@@ -2305,7 +2305,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 0478.jpg": {
 		"ft": 16384,
-		"iS": 1819091,
+		"iS": 883491,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 0478.jpg",
@@ -2316,7 +2316,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 0691.jpg": {
 		"ft": 16384,
-		"iS": 1231509,
+		"iS": 575246,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 0691.jpg",
@@ -2327,7 +2327,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 1946.jpg": {
 		"ft": 16384,
-		"iS": 14260724,
+		"iS": 1630025,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 1946.jpg",
@@ -2338,7 +2338,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 2089.jpg": {
 		"ft": 16384,
-		"iS": 14486879,
+		"iS": 1920579,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 2089.jpg",
@@ -2349,7 +2349,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 2156.jpg": {
 		"ft": 16384,
-		"iS": 12480436,
+		"iS": 1685981,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 2156.jpg",
@@ -2360,7 +2360,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 2168.jpg": {
 		"ft": 16384,
-		"iS": 15248456,
+		"iS": 2457390,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 2168.jpg",
@@ -2371,7 +2371,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 2169.jpg": {
 		"ft": 16384,
-		"iS": 8101728,
+		"iS": 1095715,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 2169.jpg",
@@ -2382,7 +2382,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 2453.jpg": {
 		"ft": 16384,
-		"iS": 2847155,
+		"iS": 565396,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 2453.jpg",
@@ -2393,7 +2393,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 2558.jpg": {
 		"ft": 16384,
-		"iS": 17362093,
+		"iS": 3308949,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 2558.jpg",
@@ -2404,7 +2404,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 4546.jpg": {
 		"ft": 16384,
-		"iS": 883608,
+		"iS": 343761,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 4546.jpg",
@@ -2415,7 +2415,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 4965.jpg": {
 		"ft": 16384,
-		"iS": 518195,
+		"iS": 619162,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 4965.jpg",
@@ -2426,7 +2426,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 5687.jpg": {
 		"ft": 16384,
-		"iS": 6478064,
+		"iS": 1233509,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 5687.jpg",
@@ -2437,7 +2437,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 6115.jpg": {
 		"ft": 16384,
-		"iS": 9854162,
+		"iS": 1855327,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 6115.jpg",
@@ -2459,7 +2459,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 6184.jpg": {
 		"ft": 16384,
-		"iS": 8518907,
+		"iS": 1368678,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 6184.jpg",
@@ -2470,7 +2470,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 6190.jpg": {
 		"ft": 16384,
-		"iS": 5824262,
+		"iS": 744228,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 6190.jpg",
@@ -2481,7 +2481,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 7646.jpg": {
 		"ft": 16384,
-		"iS": 2069544,
+		"iS": 861959,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 7646.jpg",
@@ -2492,7 +2492,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 8901.jpg": {
 		"ft": 16384,
-		"iS": 2248239,
+		"iS": 830498,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 8901.jpg",
@@ -2503,7 +2503,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 8915.jpg": {
 		"ft": 16384,
-		"iS": 702275,
+		"iS": 278933,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 8915.jpg",
@@ -2514,7 +2514,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 8967.jpg": {
 		"ft": 16384,
-		"iS": 1782954,
+		"iS": 1891970,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 8967.jpg",
@@ -2525,7 +2525,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 8974.jpg": {
 		"ft": 16384,
-		"iS": 2086606,
+		"iS": 834722,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 8974.jpg",
@@ -2536,7 +2536,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 9023.jpg": {
 		"ft": 16384,
-		"iS": 2057807,
+		"iS": 822733,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 9023.jpg",
@@ -2547,7 +2547,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 9073.jpg": {
 		"ft": 16384,
-		"iS": 1045495,
+		"iS": 330005,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 9073.jpg",
@@ -2558,7 +2558,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 9111.jpg": {
 		"ft": 16384,
-		"iS": 1113180,
+		"iS": 372219,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 9111.jpg",
@@ -2569,7 +2569,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 9179.jpg": {
 		"ft": 16384,
-		"iS": 1190992,
+		"iS": 374261,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 9179.jpg",
@@ -2580,7 +2580,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 9286.jpg": {
 		"ft": 16384,
-		"iS": 1180020,
+		"iS": 459728,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 9286.jpg",
@@ -2591,7 +2591,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 9560.jpg": {
 		"ft": 16384,
-		"iS": 717509,
+		"iS": 278700,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 9560.jpg",
@@ -2602,7 +2602,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 9604.jpg": {
 		"ft": 16384,
-		"iS": 1187097,
+		"iS": 420856,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 9604.jpg",
@@ -2613,7 +2613,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 9651.jpg": {
 		"ft": 16384,
-		"iS": 1035202,
+		"iS": 382840,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 9651.jpg",
@@ -2624,7 +2624,7 @@
 		},
 	"/photos/orig/Lorenzo Wood 9999.jpg": {
 		"ft": 16384,
-		"iS": 2564700,
+		"iS": 909487,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood 9999.jpg",
@@ -2635,7 +2635,7 @@
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 11.jpg": {
 		"ft": 16384,
-		"iS": 661708,
+		"iS": 245074,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 11.jpg",
@@ -2646,7 +2646,7 @@
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 22.jpg": {
 		"ft": 16384,
-		"iS": 796694,
+		"iS": 336441,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 22.jpg",
@@ -2657,7 +2657,7 @@
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 33.jpg": {
 		"ft": 16384,
-		"iS": 1485768,
+		"iS": 553538,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 33.jpg",
@@ -2668,7 +2668,7 @@
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 42.jpg": {
 		"ft": 16384,
-		"iS": 1136828,
+		"iS": 396225,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 42.jpg",
@@ -2679,7 +2679,7 @@
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 43.jpg": {
 		"ft": 16384,
-		"iS": 1412391,
+		"iS": 539167,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 43.jpg",
@@ -2690,7 +2690,7 @@
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 44.jpg": {
 		"ft": 16384,
-		"iS": 1151423,
+		"iS": 338662,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 44.jpg",
@@ -2701,7 +2701,7 @@
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 53.jpg": {
 		"ft": 16384,
-		"iS": 838510,
+		"iS": 291292,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 53.jpg",
@@ -2712,7 +2712,7 @@
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 01.jpg": {
 		"ft": 16384,
-		"iS": 2275808,
+		"iS": 1225805,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 01.jpg",
@@ -2723,7 +2723,7 @@
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 02.jpg": {
 		"ft": 16384,
-		"iS": 1424437,
+		"iS": 679638,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 02.jpg",
