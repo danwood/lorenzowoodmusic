@@ -230,6 +230,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_1200x630/i-dare-you.jpg": {
+		"ft": 16384,
+		"iS": 22233,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_1200x630/i-dare-you.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_1200x630/jacket-ep.jpg": {
 		"ft": 16384,
 		"iS": 39385,
@@ -346,6 +357,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_3000/heartless.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_3000/i-dare-you.jpg": {
+		"ft": 16384,
+		"iS": 304115,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_3000/i-dare-you.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -472,6 +494,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_384/i-dare-you.jpg": {
+		"ft": 16384,
+		"iS": 10242,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_384/i-dare-you.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_384/jacket-ep.jpg": {
 		"ft": 16384,
 		"iS": 10116,
@@ -593,6 +626,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/album_art_64/i-dare-you.jpg": {
+		"ft": 16384,
+		"iS": 1228,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_64/i-dare-you.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/album_art_64/jacket-ep.jpg": {
 		"ft": 16384,
 		"iS": 1335,
@@ -709,6 +753,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/album_art_640/heartless.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/album_art_640/i-dare-you.jpg": {
+		"ft": 16384,
+		"iS": 19840,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/album_art_640/i-dare-you.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
