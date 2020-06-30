@@ -8,6 +8,9 @@ html(class="no-js", lang="en-us")
 	head
 		meta(charset="utf-8")
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
+		//- Prefetch as early as possible (though charset needs to come first)
+		link(rel="prefetch" href="//res.cloudinary.com")
+		link(rel="prefetch" href="//fonts.googleapis.com")
 		block title
 			title #{pageTitle} | Lorenzo Wood Music
 		block description
@@ -16,9 +19,6 @@ html(class="no-js", lang="en-us")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
 		meta(name="supported-color-schemes" content="light dark")
 		block openGraph
-
-		link(rel="prefetch" href="//res.cloudinary.com")
-		link(rel="prefetch" href="//fonts.googleapis.com")
 		block links
 			link(href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap&subset=latin" rel="stylesheet")
 			link(rel="apple-touch-icon" sizes="180x180" href=cloudPrefix + "apple-touch-icon.png")
