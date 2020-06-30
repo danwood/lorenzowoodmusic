@@ -1962,17 +1962,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/photos/Lorenzo Wood 2020.jpg": {
-		"ft": 16384,
-		"iS": 50269,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/photos/Lorenzo Wood 2020.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/photos/Lorenzo Wood 2089.jpg": {
 		"ft": 16384,
 		"iS": 45400,
@@ -2369,6 +2358,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/photos/Lorenzo Wood, Spring 2020.jpg": {
+		"ft": 16384,
+		"iS": 50269,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/Lorenzo Wood, Spring 2020.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/photos/orig/Lorenzo Wood 0140.jpg": {
 		"ft": 16384,
 		"iS": 3589212,
@@ -2422,17 +2422,6 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
-		"q": 100
-		},
-	"/photos/orig/Lorenzo Wood 2020.jpg": {
-		"ft": 16384,
-		"iS": 1078049,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/photos/orig/Lorenzo Wood 2020.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 2089.jpg": {
@@ -2837,6 +2826,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Nikki Maguire 7176.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/photos/orig/Lorenzo Wood, Spring 2020.jpg": {
+		"ft": 16384,
+		"iS": 1078049,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/photos/orig/Lorenzo Wood, Spring 2020.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
