@@ -1388,6 +1388,17 @@
 		"oAP": "/humans.txt",
 		"oF": 0
 		},
+	"/img/2am-in-the-basement-image-card.jpg": {
+		"ft": 16384,
+		"iS": 211995,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/2am-in-the-basement-image-card.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/img/2am.jpg": {
 		"ft": 16384,
 		"iS": 203731,
@@ -1586,6 +1597,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/headshot2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/lorenzo-wood-image-card.jpg": {
+		"ft": 16384,
+		"iS": 91467,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/lorenzo-wood-image-card.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

@@ -32,6 +32,10 @@ block styles
 	style
 		include ../css/2ampage.css
 	
+block openGraph
+	meta(property="og:type" content="website")
+	meta(property="og:image" content='<?php echo baseURL(); ?>/img/2am-in-the-basement-image-card.jpg')
+
 block append links
 	link(rel="prefetch" href="//code.jquery.com")
 		//- This should be done on any page using jquery - ONLY HOME PAGE & 2AM PAGE
