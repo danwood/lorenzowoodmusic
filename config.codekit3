@@ -4,10 +4,10 @@
 	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
-		"uuidString": "24DFFC34-B0CB-40BD-AA10-5ADCA258D482"
+		"uuidString": "73CB941D-686C-415C-87EC-D66268B38C66"
 		}
 	],
-"creatorBuild": "32186",
+"creatorBuild": "32147",
 "files": {
 	"/.generate.php": {
 		"cB": 0,
@@ -45,10 +45,10 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/2am-in-the-basement/index.php",
-		"oF": 2,
+		"oAP": "/2am-in-the-basement/index.php.html",
+		"oF": 0,
 		"oS": 1
 		},
 	"/403.html": {
@@ -79,21 +79,21 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
-		"oA": 0,
+		"hM": 1,
+		"oA": 1,
 		"oAP": "/_contact.html",
-		"oF": 1,
+		"oF": 0,
 		"oS": 1
 		},
 	"/_layout.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 1,
 		"oAP": "/_layout.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"/_sources/BandsInTown.opacity": {
 		"cB": 0,
@@ -216,7 +216,7 @@
 		"oAP": "/album_art_1200x630/falling.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/album_art_1200x630/heartless.jpg": {
@@ -282,7 +282,7 @@
 		"oAP": "/album_art_1200x630/now-in-control.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/album_art_1200x630/old-town-road.jpg": {
@@ -348,7 +348,7 @@
 		"oAP": "/album_art_3000/falling.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/album_art_3000/heartless.jpg": {
@@ -392,7 +392,7 @@
 		"oAP": "/album_art_3000/jacket.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/album_art_3000/more-than-friends.png": {
@@ -414,7 +414,7 @@
 		"oAP": "/album_art_3000/now-in-control.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/album_art_3000/old-town-road.jpg": {
@@ -447,7 +447,7 @@
 		"oAP": "/album_art_3000/you-and-me-now.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/album_art_384/castle-on-the-hill.jpg": {
@@ -480,7 +480,7 @@
 		"oAP": "/album_art_384/falling.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/album_art_384/heartless.jpg": {
@@ -599,8 +599,8 @@
 		"oA": 0,
 		"oAP": "/album_art_64/drown.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -612,7 +612,7 @@
 		"oAP": "/album_art_64/falling.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/album_art_64/heartless.jpg": {
@@ -744,7 +744,7 @@
 		"oAP": "/album_art_640/falling.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/album_art_640/heartless.jpg": {
@@ -910,7 +910,7 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
 		"oAP": "/booking/index.html",
 		"oF": 0,
@@ -929,7 +929,7 @@
 		},
 	"/booking/wedding.jpg": {
 		"ft": 16384,
-		"iS": 130857,
+		"iS": 121770,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/booking/wedding.jpg",
@@ -988,9 +988,9 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/contact/index.php",
+		"oAP": "/contact/index.php.html",
 		"oF": 0,
 		"oS": 1
 		},
@@ -1011,7 +1011,7 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/css/2ampage.css",
 		"oF": 0,
 		"oS": 3,
@@ -1060,7 +1060,7 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/css/contact.css",
 		"oF": 0,
 		"oS": 3,
@@ -1101,7 +1101,7 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/css/hero.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 3,
 		"sct": 0
 		},
@@ -1122,9 +1122,9 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/css/homepage.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 3,
 		"sct": 0
 		},
@@ -1155,7 +1155,7 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/css/linkpage.css",
 		"oF": 0,
 		"oS": 3,
@@ -1166,7 +1166,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/css/main-min.css",
 		"oF": 0,
 		"oS": 3
@@ -1186,7 +1186,7 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/css/main.css",
 		"oF": 0,
 		"oS": 3,
@@ -1245,7 +1245,7 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/css/presspage.css",
 		"oF": 0,
 		"oS": 3,
@@ -1260,7 +1260,7 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/css/shared.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 3,
 		"sct": 0
 		},
@@ -1312,7 +1312,7 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/css/youtube.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 3,
 		"sct": 0
 		},
@@ -1366,11 +1366,11 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
 		"oAP": "/google-verification.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"/googlebc63703f4fb8681a.html": {
 		"cB": 0,
@@ -1390,24 +1390,24 @@
 		},
 	"/img/2am-in-the-basement-image-card.jpg": {
 		"ft": 16384,
-		"iS": 211995,
+		"iS": 92411,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/2am-in-the-basement-image-card.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/2am.jpg": {
 		"ft": 16384,
 		"iS": 203731,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/2am.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/2am.webp": {
@@ -1422,20 +1422,20 @@
 		"ft": 16384,
 		"iS": 34066,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/2am33.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/2am50.jpg": {
 		"ft": 16384,
 		"iS": 66938,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/2am50.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
@@ -1444,42 +1444,42 @@
 		"ft": 16384,
 		"iS": 65101,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/banner1_big.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/banner1_giant.jpg": {
 		"ft": 16384,
 		"iS": 128773,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/banner1_giant.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/banner1_medium.jpg": {
 		"ft": 16384,
 		"iS": 22475,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/banner1_medium.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/banner1_small.jpg": {
 		"ft": 16384,
 		"iS": 12270,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/banner1_small.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
@@ -1492,7 +1492,7 @@
 		"oAP": "/img/banner2_big.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/banner2_giant.jpg": {
@@ -1503,7 +1503,7 @@
 		"oAP": "/img/banner2_giant.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/banner2_medium.jpg": {
@@ -1532,9 +1532,9 @@
 		"ft": 16384,
 		"iS": 179335,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/beach.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
@@ -1551,9 +1551,9 @@
 		"ft": 16384,
 		"iS": 49669,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/beach33.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
@@ -1562,9 +1562,9 @@
 		"ft": 16384,
 		"iS": 107384,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/beach50.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
@@ -1604,22 +1604,22 @@
 		},
 	"/img/lorenzo-wood-image-card.jpg": {
 		"ft": 16384,
-		"iS": 91467,
+		"iS": 24602,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/lorenzo-wood-image-card.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/southshore.jpg": {
 		"ft": 16384,
 		"iS": 85717,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/southshore.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
@@ -1636,9 +1636,9 @@
 		"ft": 16384,
 		"iS": 31769,
 		"jF": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/img/southshore50.jpg",
-		"oF": 1,
+		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
@@ -1647,18 +1647,18 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/index.php",
-		"oF": 1
+		"oF": 0
 		},
 	"/index.php.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/index.php",
-		"oF": 2,
+		"oAP": "/index.php.html",
+		"oF": 0,
 		"oS": 1
 		},
 	"/js/blurhash-decode-min.js": {
@@ -1677,7 +1677,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/blurhash-decode-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1699,7 +1699,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/blurhash-encode-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1721,7 +1721,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/blurhash-shared-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1743,7 +1743,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/hero-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1765,7 +1765,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/index-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1787,7 +1787,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/linkpage-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1809,7 +1809,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/vendor/jquery-3.5.1.min-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1831,7 +1831,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/youtube-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1849,10 +1849,10 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/link/index.php",
-		"oF": 2,
+		"oAP": "/link/index.php.html",
+		"oF": 0,
 		"oS": 1
 		},
 	"/link/list.php": {
@@ -1883,11 +1883,11 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 1,
 		"oAP": "/photos/_photos.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"/photos/index.html": {
 		"cB": 0,
@@ -1901,7 +1901,7 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
 		"oAP": "/photos/index.html",
 		"oF": 0,
@@ -1915,7 +1915,7 @@
 		"oAP": "/photos/Lorenzo Wood 0140.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/Lorenzo Wood 0221.jpg": {
@@ -2080,7 +2080,7 @@
 		"oAP": "/photos/Lorenzo Wood 6184.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/Lorenzo Wood 6190.jpg": {
@@ -2091,7 +2091,7 @@
 		"oAP": "/photos/Lorenzo Wood 6190.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/Lorenzo Wood 7646.jpg": {
@@ -2102,7 +2102,7 @@
 		"oAP": "/photos/Lorenzo Wood 7646.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/Lorenzo Wood 8901.jpg": {
@@ -2179,7 +2179,7 @@
 		"oAP": "/photos/Lorenzo Wood 9111.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/Lorenzo Wood 9179.jpg": {
@@ -2245,7 +2245,7 @@
 		"oAP": "/photos/Lorenzo Wood 9999.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/Lorenzo Wood Photo Credit Claire Ashcraft 11.jpg": {
@@ -2322,7 +2322,7 @@
 		"oAP": "/photos/Lorenzo Wood Photo Credit Claire Ashcraft 53.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/Lorenzo Wood Photo Credit Dave Weiland 01.jpg": {
@@ -2388,7 +2388,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 0221.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 0478.jpg": {
@@ -2399,7 +2399,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 0478.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 0691.jpg": {
@@ -2421,7 +2421,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 1946.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 2089.jpg": {
@@ -2432,7 +2432,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 2089.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 2156.jpg": {
@@ -2443,7 +2443,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 2156.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 2168.jpg": {
@@ -2454,7 +2454,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 2168.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 2169.jpg": {
@@ -2465,7 +2465,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 2169.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 2453.jpg": {
@@ -2476,7 +2476,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 2453.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 2558.jpg": {
@@ -2487,7 +2487,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 2558.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 4546.jpg": {
@@ -2498,7 +2498,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 4546.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 4965.jpg": {
@@ -2509,7 +2509,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 4965.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 5687.jpg": {
@@ -2520,7 +2520,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 5687.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 6115.jpg": {
@@ -2531,7 +2531,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 6115.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 6135.jpg": {
@@ -2553,7 +2553,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 6184.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 6190.jpg": {
@@ -2564,7 +2564,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 6190.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 7646.jpg": {
@@ -2575,7 +2575,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 7646.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 8901.jpg": {
@@ -2597,7 +2597,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 8915.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 8967.jpg": {
@@ -2608,7 +2608,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 8967.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 8974.jpg": {
@@ -2630,7 +2630,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 9023.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 9073.jpg": {
@@ -2663,7 +2663,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 9179.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 9286.jpg": {
@@ -2674,7 +2674,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood 9286.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood 9560.jpg": {
@@ -2729,7 +2729,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 11.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 22.jpg": {
@@ -2740,7 +2740,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 22.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Claire Ashcraft 33.jpg": {
@@ -2806,7 +2806,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 01.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 02.jpg": {
@@ -2817,7 +2817,7 @@
 		"oAP": "/photos/orig/Lorenzo Wood Photo Credit Dave Weiland 02.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/photos/orig/Lorenzo Wood Photo Credit Nikki Maguire 7176.jpg": {
@@ -2881,11 +2881,11 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 1,
 		"oAP": "/press/_song.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"/press/drown.php": {
 		"cB": 0,
@@ -2899,10 +2899,10 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/drown.php",
-		"oF": 2,
+		"oAP": "/press/drown.php.html",
+		"oF": 0,
 		"oS": 1
 		},
 	"/press/falling.php": {
@@ -2917,10 +2917,10 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/falling.php",
-		"oF": 2,
+		"oAP": "/press/falling.php.html",
+		"oF": 0,
 		"oS": 1
 		},
 	"/press/falling_thumb.jpg": {
@@ -2946,10 +2946,10 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/index.php",
-		"oF": 2,
+		"oAP": "/press/index.php.html",
+		"oF": 0,
 		"oS": 1
 		},
 	"/press/jacket.php": {
@@ -2964,10 +2964,10 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/jacket.php",
-		"oF": 2,
+		"oAP": "/press/jacket.php.html",
+		"oF": 0,
 		"oS": 1
 		},
 	"/press/more-than-friends.php": {
@@ -2982,10 +2982,10 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/more-than-friends.php",
-		"oF": 2,
+		"oAP": "/press/more-than-friends.php.html",
+		"oF": 0,
 		"oS": 1
 		},
 	"/press/shared.html": {
@@ -3000,10 +3000,10 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
-		"oA": 0,
+		"hM": 1,
+		"oA": 1,
 		"oAP": "/press/shared.html",
-		"oF": 1,
+		"oF": 0,
 		"oS": 1
 		},
 	"/press/still-need-love.php": {
@@ -3018,10 +3018,10 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/still-need-love.php",
-		"oF": 2,
+		"oAP": "/press/still-need-love.php.html",
+		"oF": 0,
 		"oS": 1
 		},
 	"/press/unfollow.php": {
@@ -3036,10 +3036,10 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/unfollow.php",
-		"oF": 2,
+		"oAP": "/press/unfollow.php.html",
+		"oF": 0,
 		"oS": 1
 		},
 	"/robots.txt": {
@@ -3102,7 +3102,7 @@
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/svg/homepage.svg",
 		"oF": 2
 		},
@@ -3200,7 +3200,7 @@
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/svg/linkpage.svg",
 		"oF": 2
 		},
@@ -3456,7 +3456,7 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
 		"oAP": "/videos/index.html",
 		"oF": 0,
@@ -4020,10 +4020,6 @@
 			"active": 0,
 			"optionString": ""
 			},
-		"default-case-last": {
-			"active": 0,
-			"optionString": ""
-			},
 		"default-param-last": {
 			"active": 0,
 			"optionString": ""
@@ -4436,10 +4432,6 @@
 			"active": 0,
 			"optionString": ""
 			},
-		"no-loss-of-precision": {
-			"active": 0,
-			"optionString": ""
-			},
 		"no-magic-numbers": {
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
@@ -4555,10 +4547,6 @@
 		"no-regex-spaces": {
 			"active": 1,
 			"optionString": ""
-			},
-		"no-restricted-exports": {
-			"active": 0,
-			"optionString": "{'restrictedNamedExports': []}"
 			},
 		"no-restricted-globals": {
 			"active": 0,
@@ -4703,10 +4691,6 @@
 		"no-use-before-define": {
 			"active": 0,
 			"optionString": "{'functions': true, 'classes': true, 'variables': true}"
-			},
-		"no-useless-backreference": {
-			"active": 0,
-			"optionString": ""
 			},
 		"no-useless-call": {
 			"active": 0,

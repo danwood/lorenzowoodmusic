@@ -11,6 +11,7 @@ html(class="no-js", lang="en-us")
 		//- Prefetch as early as possible (though charset needs to come first)
 		link(rel="prefetch" href="//res.cloudinary.com")
 		link(rel="prefetch" href="//fonts.googleapis.com")
+		block meta
 		block title
 			title #{pageTitle} | Lorenzo Wood Music
 		block description
@@ -106,7 +107,7 @@ html(class="no-js", lang="en-us")
 					|
 					|
 					a.press-link(href="/press/" class={active: currentClass === 'press'}) Press & Media
-				p.js-warning.
+				p.js-warning: noscript.
 					JavaScript is disabled in your browser; please enable it to see missing content.
 
 		block additional-html
