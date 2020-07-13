@@ -47,8 +47,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/2am-in-the-basement/index.php.html",
-		"oF": 0,
+		"oAP": "/2am-in-the-basement/index.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/403.html": {
@@ -990,8 +990,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/contact/index.php.html",
-		"oF": 0,
+		"oAP": "/contact/index.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/css/2ampage.css": {
@@ -1657,8 +1657,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/index.php.html",
-		"oF": 0,
+		"oAP": "/index.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/js/blurhash-decode-min.js": {
@@ -1851,8 +1851,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/link/index.php.html",
-		"oF": 0,
+		"oAP": "/link/index.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/link/list.php": {
@@ -2901,8 +2901,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/drown.php.html",
-		"oF": 0,
+		"oAP": "/press/drown.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/press/falling.php": {
@@ -2919,8 +2919,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/falling.php.html",
-		"oF": 0,
+		"oAP": "/press/falling.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/press/falling_thumb.jpg": {
@@ -2948,8 +2948,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/index.php.html",
-		"oF": 0,
+		"oAP": "/press/index.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/press/jacket.php": {
@@ -2966,8 +2966,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/jacket.php.html",
-		"oF": 0,
+		"oAP": "/press/jacket.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/press/more-than-friends.php": {
@@ -2984,8 +2984,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/more-than-friends.php.html",
-		"oF": 0,
+		"oAP": "/press/more-than-friends.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/press/shared.html": {
@@ -3020,8 +3020,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/still-need-love.php.html",
-		"oF": 0,
+		"oAP": "/press/still-need-love.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/press/unfollow.php": {
@@ -3038,8 +3038,8 @@
 		"ft": 512,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/unfollow.php.html",
-		"oF": 0,
+		"oAP": "/press/unfollow.php",
+		"oF": 2,
 		"oS": 1
 		},
 	"/robots.txt": {
