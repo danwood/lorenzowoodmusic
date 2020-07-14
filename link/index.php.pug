@@ -35,6 +35,12 @@ block prelude
 	|
 	|if (!empty($release['featuring'])) { $longTitle .= ' [feat. ' . $release['featuring'] . ']'; }
 	|$longTitle .= ' - by ' . $release['artist_name'];
+	|
+	|$descriptionHTML = $release['description_html'];
+	|$whereEndParagraph = strpos($descriptionHTML, '</p>');
+	|if (FALSE !== $whereEndParagraph) { $descriptionHTML = substr($descriptionHTML, 0, $whereEndParagraph+strlen('</p>')); }
+	|$descriptionText = strip_tags($descriptionHTML);
+	|
 	|$releaseDateString = NULL;
 	|if (!empty($release['release_date'])) {
 	|    $releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
@@ -59,7 +65,7 @@ block title
 	<title><?php echo htmlentities($longTitle); ?></title>
 
 block description
-	<meta name='description' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
+	<?php if (strlen($descriptionText) > 0) { echo "<meta name='description' content='" . htmlentities($descriptionText, ENT_QUOTES) . "'>"; } ?>
 
 block append logo
 	.mini-icons
@@ -324,7 +330,10 @@ block main
 
 			<?php } ?>
 
-			<?php } ?>
+			<?php } // end if now > release date ?>
+
+		<?php if (strlen($descriptionText) > 0) { echo '<div class="blurb">' . $descriptionHTML . '</div>'; } ?>
+
 
 block prepend scripts
 	script
