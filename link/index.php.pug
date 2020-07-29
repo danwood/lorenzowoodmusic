@@ -137,7 +137,7 @@ block main
 			<?php $featuring = $release['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
 
 		.imagecontainer
-			<img src="<?php echo CLOUDPREFIX . 'album_art_640/' . htmlentities($release['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
+			<img width="640" height="640" src="<?php echo CLOUDPREFIX . 'album_art_640/' . htmlentities($release['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
 
 		.title-container
 			h2.

@@ -58,7 +58,7 @@ block append header
 		.action-banner.clearfix.safe-area-only(style="background:rgba(255,255,255,0.6")
 			p
 				<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
-					<img src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
+					<img width="64" height="64" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
 				</a>
 				span <?php echo htmlspecialchars( $now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New') . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
 					| &nbsp;
@@ -69,7 +69,7 @@ block append header
 		picture
 			source(srcset=cloudPrefix + "img/2am.webp 1920w" type="image/webp")
 			source(srcset=cloudPrefix + "img/2am.jpg 1920w, " + cloudPrefix + "img/2am50.jpg 960w, " + cloudPrefix + "img/2am33.jpg 640w")
-			img.hero-image.covering(src=cloudPrefix + "img/2am.jpg" loading="eager" alt="2AM in the Basement")
+			img.hero-image.covering(src=cloudPrefix + "img/2am.jpg" width="1920" height="1348" loading="eager" alt="2AM in the Basement")
 
 block main
 

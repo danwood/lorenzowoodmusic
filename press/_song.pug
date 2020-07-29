@@ -40,7 +40,7 @@ block description
 block styles
 	style
 		|.releaseDate { text-align:right; opacity:0.5; }
-		|.cover { float:left; width:192px; margin:0 1em 1em 0; }
+		|.cover { float:left; width:192px; height:auto; margin:0 1em 1em 0; }
 		|.column { float:left; margin-left:1em; font-size:90% }
 		|.socials svg { width:2em; height: 2em; padding:10px 10px 10px 0; }
 		|.soundCloudLink { text-indent: -3.5em; margin-left: 3.5em; line-height:1; font-size:80%;  }
@@ -73,11 +73,11 @@ block main
 			div.clearfix
 				h2 Album Artwork
 				<a href='<?php echo htmlentities($db->pathCDNForImageSize($release, 3000, false), ENT_QUOTES); ?>'>
-					<img class="cover" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 384), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
+					<img class="cover" width="384" height="384" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 384), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
 				</a>
 				if slugAndCoverFile2 != undefined
 					a(href='../album_art_3000/' + slugAndCoverFile2)
-						img.cover(src=cloudPrefix + 'album_art_384/' + slugAndCoverFile2, alt=pageTitle)
+						img.cover(src=cloudPrefix + 'album_art_384/' + slugAndCoverFile2, height=384, width=384, alt=pageTitle)
 
 				div.column
 					p

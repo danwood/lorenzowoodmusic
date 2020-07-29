@@ -39,3 +39,8 @@ Masonry
 		column-count: 2;
 	}
 }
+
+// Allow us to specify height and width image attributes to help layout, but override here. Already max-width 100%.
+.masonry img {
+	height:auto;
+}

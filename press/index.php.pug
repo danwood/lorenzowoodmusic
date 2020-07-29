@@ -87,7 +87,7 @@ block append main
 				|	?>
 					
 				tr
-					td.thumb <img src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
+					td.thumb <img width="64" height="64" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
 					td <?php echo htmlspecialchars($release['title']); ?>
 					td.info 
 						|<?php

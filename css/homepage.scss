@@ -81,6 +81,8 @@ Latest Releases Section
 	}
 
 	.release-image img {
+		width:100%;		// override img inline dimensions
+		height:auto;	// override img inline dimensions
 		max-height:320px;	// width already capped to 100% so max-height will help make sure square min size for square
 		display:block;
 		transition: transform .5s ease;

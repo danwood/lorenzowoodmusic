@@ -58,7 +58,7 @@ block append header
 		.action-banner.clearfix.safe-area-only
 			p
 				<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
-					<img loading="lazy" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
+					<img loading="lazy" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" width="64" height="64" />
 				</a>
 				span <?php echo htmlspecialchars( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
 					| &nbsp;
@@ -66,7 +66,7 @@ block append header
 					<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
 		<?php } ?>
 
-		img.hero-image.covering.swapping-image(srcset=cloudPrefix + "img/banner1_giant.jpg 2560w, " + cloudPrefix + "img/banner1_big.jpg 1920w, " + cloudPrefix + "img/banner1_medium.jpg 960w, " + cloudPrefix + "img/banner1_small.jpg 640w" sizes="100vw" src=cloudPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
+		img.hero-image.covering.swapping-image(srcset=cloudPrefix + "img/banner1_giant.jpg 2560w, " + cloudPrefix + "img/banner1_big.jpg 1920w, " + cloudPrefix + "img/banner1_medium.jpg 960w, " + cloudPrefix + "img/banner1_small.jpg 640w" sizes="100vw" width="960" height="674" src=cloudPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
 
 	.icons.icons-header.absolute.icons-5.safe-area-only
 		.icon
@@ -157,7 +157,7 @@ block main
 				<div class="release-blurb<?php if (!$release['youtube_video_v']) { echo ' no-video'; } ?>">
 					.release-image.bordered
 						<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php
-						|	echo '<img loading="lazy" src="';
+						|	echo '<img loading="lazy" width="64" height="64" src="';
 						|	echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES);
 						|	echo '" alt= "Cover image of ';
 						|	echo htmlentities($release['title'], ENT_QUOTES);
