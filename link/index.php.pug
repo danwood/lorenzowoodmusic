@@ -253,12 +253,6 @@ block main
 			|<?php } ?>
 			|This step takes you to our DistroKid.com page to continue. You will be asked to log into your Spotify account.</div>
 
-			<?php } if ($release['google_play_album']) { ?>
-			
-			<div class="service"><a href="https://play.google.com/store/music/album/<?php echo htmlentities($release['google_play_album'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#google-play" /></svg><span class="play"><?php echo ($now < $releaseDate) ? 'Pre-order' : 'Download'; ?></span></a></div>
-
-
-
 
 			<?php } if ($now >= $releaseDate) { ?>
 
