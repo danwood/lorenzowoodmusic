@@ -1849,11 +1849,11 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
 		"oAP": "/link/index.php",
 		"oF": 2,
-		"oS": 0
+		"oS": 1
 		},
 	"/link/list.php": {
 		"cB": 0,
