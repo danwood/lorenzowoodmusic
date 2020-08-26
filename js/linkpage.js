@@ -16,9 +16,12 @@ var backgroundBlur = document.getElementById('background-blur');
 var blurImage = new Image();
 // When the real image is loaded, display it and hide the blurhash.
 blurImage.onload = function() {
-    var blurhashImage = document.getElementById('blurhashImage');
-    blurhashImage.style.display = 'none';
-    blurImage.style.display = 'block';
+
+	setTimeout(function(){
+	    var blurhashImage = document.getElementById('blurhashImage');
+	    blurhashImage.style.display = 'none';
+	    blurImage.style.display = 'block';
+	}, 0);
 };
 blurImage.style.display = 'none';
 blurImage.src = "<?php $blur = CLOUDPREFIX . ($release['image_blurred'] ? 'blurred_100/' . $release['image_blurred'] : 'album_art_640/' . htmlentities($release['image'])); echo htmlentities($blur, ENT_QUOTES); ?>";
