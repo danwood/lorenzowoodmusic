@@ -86,7 +86,7 @@ block append links
 	<meta property='og:description' content='Preview, download or stream <?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 	<meta property='og:url' content='<?php echo htmlentities(curPageURL()); ?>'>
 	<meta property='og:type' content='article'>
-	<meta property='og:image' content='<?php echo baseURL() . '/album_art_1200x630/' . htmlentities($release['imageName'], ENT_QUOTES); ?>'> 
+	<meta property='og:image' content='<?php echo baseURL() . '/album_art_1200x630/' . htmlentities($release['image'], ENT_QUOTES); ?>'> 
 	//- 600 x 315 ideally 1200x630
 	//- additional media
 	//- Twitter summary card meta tags
@@ -94,7 +94,7 @@ block append links
 	<meta name='twitter:title' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 	<meta name='twitter:description' content='Preview, download or stream <?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 	<meta name='twitter:card' content='summary_large_image'>
-	<meta name='twitter:image' content='<?php echo baseURL() . '/album_art_1200x630/' . htmlentities($release['imageName'], ENT_QUOTES); ?>'>
+	<meta name='twitter:image' content='<?php echo baseURL() . '/album_art_1200x630/' . htmlentities($release['image'], ENT_QUOTES); ?>'>
 	//- square 144 up to 4000, 5 MB max
 
 block styles
