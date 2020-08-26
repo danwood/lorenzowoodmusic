@@ -55,7 +55,7 @@ block append header
 	.hero
 
 		<?php if ($release) { ?>
-		.action-banner.clearfix.safe-area-only(style="background:rgba(255,255,255,0.6")
+		.action-banner.clearfix.safe-area-only(style="background:rgba(255,255,255,0.6)")
 			p
 				<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
 					<img width="64" height="64" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
@@ -69,7 +69,7 @@ block append header
 		picture
 			source(srcset=cloudPrefix + "img/2am.webp 1920w" type="image/webp")
 			source(srcset=cloudPrefix + "img/2am.jpg 1920w, " + cloudPrefix + "img/2am50.jpg 960w, " + cloudPrefix + "img/2am33.jpg 640w")
-			img.hero-image.covering(src=cloudPrefix + "img/2am.jpg" width="1920" height="1348" loading="eager" alt="2AM in the Basement")
+			img.hero-image.covering(src=cloudPrefix + "img/2am.jpg" sizes="100vw" width="1920" height="1348" loading="eager" alt="2AM in the Basement")
 
 block main
 
@@ -91,6 +91,8 @@ block main
 					a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/2am-in-the-basement/1461919405?at=1000lKSp")
 						include ../svg/homepage/apple-music-icon-color.svg
 						//- Apple music icon doesn't show color when loaded with svg-use !!!
+						//- Annoyingly this gives us a validation warning about duplicate IDs since we are including this SVG resource twice! Oh well.
+
 				.icon.spotify
 					a(data-title="Spotify" href="https://open.spotify.com/artist/4xWrKxTS7gyybHbJ94LZtx")
 						svg: use(xlink:href="/svg/homepage.svg#spotify")
