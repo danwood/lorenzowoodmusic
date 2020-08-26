@@ -5,5 +5,7 @@ User-agent: *
 Disallow: /svg/
 Disallow: /img/*.png
 Disallow: /img/*.webp
-Disallow: /press/
+
+# commented this line out until crawled and properly blocked 
+#Disallow: /press/
 
