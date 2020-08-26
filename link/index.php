@@ -226,8 +226,8 @@ if (!empty($release['release_date'])) {
 <div class="service"><a href="https://lorenzowoodmusic.bandcamp.com/<?php echo htmlentities($release['bandcamp_path'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#bandcamp" /></svg><span class="play">Download</span></a>
 <?php 		if ($release['bandcamp_blurb_url']) { ?>
 <div 		style="padding-left:5em; margin-top:-20px; font-size:80%;"><a style="text-decoration:underline !important" href="<?php echo htmlentities($release['bandcamp_blurb_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($release['bandcamp_blurb']); ?></a></div>
-</div>
 <?php 		} ?>
+</div>
 <?php } if ($release['soundcloud_path']) { ?>
 <div class="service"><a href="https://soundcloud.com/<?php echo htmlentities($release['soundcloud_path'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/linkpage.svg#soundcloud" /></svg><span class="play">Play</span></a></div>
 <?php } if ($release['deezer_track']) { ?>
