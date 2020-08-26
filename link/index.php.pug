@@ -112,9 +112,11 @@ block main
 		<canvas id="outputCanvas" style="display:none" width="32" height="32"></canvas>
 
 
-	.background-blur
-		//- use the exact same image as the displayed one so we don't need another image loaded
-		<img src="<?php $blur = CLOUDPREFIX . ($release['image_blurred'] ? 'blurred_100/' . $release['image_blurred'] : 'album_art_640/' . htmlentities($release['image'])); echo htmlentities($blur, ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
+	.background-blur#background-blur
+		//- Only load the background blur image directly if no scrip. Otherwise we will manage it with Javascript, replicating PHP below.
+		noscript
+			//- use the exact same image as the displayed one so we don't need another image loaded
+			<img src="<?php $blur = CLOUDPREFIX . ($release['image_blurred'] ? 'blurred_100/' . $release['image_blurred'] : 'album_art_640/' . htmlentities($release['image'])); echo htmlentities($blur, ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
 
 	.center-column
 
