@@ -61,7 +61,7 @@ if (!empty($release['release_date'])) {
 <meta property='og:url' content='<?php echo htmlentities(curPageURL()); ?>'>
 <meta property='og:type' content='article'>
 <meta property='og:image' content='<?php echo baseURL() . '/album_art_1200x630/' . htmlentities($release['image'], ENT_QUOTES); ?>'> 
-<meta name='twitter:url' value='<?php echo htmlentities(curPageURL()); ?>'>
+<meta name='twitter:url' content='<?php echo htmlentities(curPageURL()); ?>'>
 <meta name='twitter:title' content='<?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 <meta name='twitter:description' content='Preview, download or stream <?php echo htmlentities($longTitle, ENT_QUOTES); ?>'>
 <meta name='twitter:card' content='summary_large_image'>
