@@ -128,10 +128,34 @@ class DowncodeDB extends SQLite3
 	}
 
 	// All released, or upcoming with the ability to pre-save/pre-order, are listed here.
+	// This ONLY matches Lorenzo Wood artist
+
+	// #######  Keep old name around for a short while since PHP gets cached
 
 	function marketingReleases()
 	{
-		$statement = $this->prepare("SELECT *, T.name as release_type_name, a.name as artist_name FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' ORDER BY R.release_date DESC, E.variation_id DESC");
+		$statement = $this->prepare("SELECT *, T.name as release_type_name, a.name as artist_name FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND A.ID = 1 ORDER BY R.release_date DESC, E.variation_id DESC");
+		$ret = $statement->execute();
+
+		//  AND release_date < date('now', 'start of day','+7 days')
+
+		$result = Array();
+		$lastReleaseID = -1;		// Can't figure out the SQL to only get one row per release so cheat here!
+		while ($release = $ret->fetchArray(SQLITE3_ASSOC) ){
+			if ($release['release_id'] != $lastReleaseID) {
+				$result[] = $release;
+			}
+			$lastReleaseID = $release['release_id'];
+		}
+		return count($result) ? $result : NULL;		// return array of releases, with preferred one first
+	}
+
+	// All released, or upcoming with the ability to pre-save/pre-order, are listed here.
+	// This ONLY matches Lorenzo Wood artist
+
+	function marketingLorenzoWoodReleases()
+	{
+		$statement = $this->prepare("SELECT *, T.name as release_type_name, a.name as artist_name FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND A.ID = 1 ORDER BY R.release_date DESC, E.variation_id DESC");
 		$ret = $statement->execute();
 
 		//  AND release_date < date('now', 'start of day','+7 days')
