@@ -1017,6 +1017,16 @@
 		"oS": 3,
 		"sct": 0
 		},
+	"/css/aos.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/aos-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/css/colors.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1660,6 +1670,17 @@
 		"oAP": "/index.php",
 		"oF": 2,
 		"oS": 1
+		},
+	"/js/aos.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/aos-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"/js/blurhash-decode-min.js": {
 		"bF": 0,
