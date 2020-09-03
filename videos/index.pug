@@ -7,7 +7,7 @@ block vars
 	- var description = 'Videos of songs, music snippets, and Lorenzo Wood at work making music'
 
 block append links
-	link(href=cloudPrefix + "css/aos.css" rel="stylesheet")
+	link(href=cloudRawPrefix + "css/aos.css" rel="stylesheet")
 	include ../_noscript_aos.html
 
 block main
@@ -102,7 +102,7 @@ block main
 				a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
 
 block prepend scripts
-	script(src=cloudPrefix + "js/aos.js")
+	script(src=cloudRawPrefix + "js/aos.js")
 	script
 		include ../js/youtube-min.js
 		//- FOR NOW - REPLACE MISSING VIDEO THUMBNAIL WITH OUR OWN!

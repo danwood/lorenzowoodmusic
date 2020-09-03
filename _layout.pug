@@ -1,6 +1,8 @@
-//- We are also defining the cloudPrefix in shared.pug, downcode.php and in youtube.js !!!!
-//- var cloudPrefix = "/";
-- var cloudPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/';
+//- We are also defining the cloudImgPrefix in shared.pug, downcode.php and in youtube.js !!!!
+//- var cloudImgPrefix = "/";
+//- var cloudRawPrefix = "/";
+- var cloudImgPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/';
+- var cloudRawPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/raw/upload/lwm/';
 block prelude
 doctype html
 block vars
@@ -22,9 +24,9 @@ html(class="no-js", lang="en-us")
 		block openGraph
 		block links
 			link(href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap&subset=latin" rel="stylesheet")
-			link(rel="apple-touch-icon" sizes="180x180" href=cloudPrefix + "apple-touch-icon.png")
-			link(rel="icon" type="image/png" sizes="32x32" href=cloudPrefix + "favicon-32x32.png")
-			link(rel="icon" type="image/png" sizes="16x16" href=cloudPrefix + "favicon-16x16.png")
+			link(rel="apple-touch-icon" sizes="180x180" href=cloudImgPrefix + "apple-touch-icon.png")
+			link(rel="icon" type="image/png" sizes="32x32" href=cloudImgPrefix + "favicon-32x32.png")
+			link(rel="icon" type="image/png" sizes="16x16" href=cloudImgPrefix + "favicon-16x16.png")
 			link(rel="stylesheet" href="/css/main.090120.css")
 		block styles
 

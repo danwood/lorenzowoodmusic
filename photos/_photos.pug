@@ -34,8 +34,8 @@ block main
 
 			//- The smaller size are 960 pixels wide; larger ones can be much bigger (but optimized for size)
 			each imageDuple, i in images
-				a(target='_BLANK', href=cloudPrefix + 'photos/orig/' + encodeURIComponent(imageDuple[0]) ) 
-					img.item(data-aos='fade', data-aos-delay='500', data-aos-duration="1000", alt='Lorenzo Wood Music', title=imageDuple[1], src=cloudPrefix + 'photos/' + encodeURIComponent(imageDuple[0]), width=960, height=imageDuple[2])
+				a(target='_BLANK', href=cloudImgPrefix + 'photos/orig/' + encodeURIComponent(imageDuple[0]) ) 
+					img.item(data-aos='fade', data-aos-delay='500', data-aos-duration="1000", alt='Lorenzo Wood Music', title=imageDuple[1], src=cloudImgPrefix + 'photos/' + encodeURIComponent(imageDuple[0]), width=960, height=imageDuple[2])
 
 
 
