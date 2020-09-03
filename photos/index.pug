@@ -6,7 +6,15 @@ block vars
 	- var currentClass = 'photos'
 	- var description = 'Photos of Lorenzo Wood, musician from the San Francisco Bay Area'
 
+block append links
+	link(href="/css/aos.css" rel="stylesheet")
+
 include _photos.pug
 
 block more-credits
 	span.dimmer Photo credits: Claire Ashcraft, Nikki Maguire, Dave Weiland (See individual file names), Lucy Gigli (if not specified in file name)
+
+block prepend scripts
+	script(src="/js/aos.js")
+	script.
+		AOS.init({disable: 'mobile', once: true});
