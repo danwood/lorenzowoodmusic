@@ -180,22 +180,25 @@ block main
 				h2 Lyrics
 				block lyrics
 
-	div#generic
-	noscript
-		|More information: 
-		a(href="./") General press kit for Lorenzo Wood
+	//- Javascript will load in general press kit info here
+	#generic
 
 	section
 		article.textual
-
 			h2 Additional resources
+
+			#fallback
+			noscript
+				a(href="./") General press kit for Lorenzo Wood
+
 			p <a href="/video/">Videos</a> page and downloadable <a href="/photos/">photos</a>.
 
 block footer-icons
 		
 block append scripts
 	script.
-		var el = document.getElementById('generic');
+		var dest = document.getElementById('generic');
+		var fallback = document.getElementById('fallback');
 		// IE8+
 		var request = new XMLHttpRequest();
 		request.open('GET', 'shared.html', true);
@@ -204,9 +207,9 @@ block append scripts
 		  if (this.readyState === 4) {
 		    if (this.status >= 200 && this.status < 400) {
 		      var resp = this.responseText;
-		      el.innerHTML = resp;
+		      dest.innerHTML = resp;
 		    } else {
-		      el.innerHTML = 'More information: <a href="./">General press kit for Lorenzo Wood</a>';
+		      fallback.innerHTML = '<a href="./">General press kit for Lorenzo Wood</a>';
 		    }
 		  }
 		};
