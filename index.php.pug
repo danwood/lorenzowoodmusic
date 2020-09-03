@@ -37,7 +37,7 @@ block title
 block append links
 	link(rel="prefetch" href="//code.jquery.com")
 		//- This should be done on any page using jquery - ONLY HOME PAGE & 2AM PAGE
-	link(href="css/aos.css" rel="stylesheet")
+	link(href="/css/aos.css" rel="stylesheet")
 
 block openGraph
 	<meta property="og:type" content="website">
@@ -222,7 +222,7 @@ block prepend scripts
 		src="https://code.jquery.com/jquery-3.5.1.min.js"
 		integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
 		crossorigin="anonymous")
-	script(src="js/aos.js")
+	script(src="/js/aos.js")
 	script.
 		window.jQuery || document.write('<script src="js/vendor/jquery-3.5.1.min.js"><\\/script>')
 		AOS.init({disable: 'mobile', once: true});
