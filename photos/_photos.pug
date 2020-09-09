@@ -6,36 +6,39 @@ block main
 		article.masonry
 			- 
 				var images = [
-					['Lorenzo Wood, Spring 2020.jpg', '', 1440],
-					['Lorenzo Wood 0140.jpg', '', 640],
-					['Lorenzo Wood 0221.jpg', 'Lorenzo Wood and band at Alameda Mini Maker Faire, 2018', 774],
-					['Lorenzo Wood 1946.jpg', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
-					['Lorenzo Wood 2089.jpg', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
-					['Lorenzo Wood 2156.jpg', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
-					['Lorenzo Wood 2168.jpg', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
-					['Lorenzo Wood 2169.jpg', '', 640],
-					['Lorenzo Wood 2453.jpg', '', 960],
-					['Lorenzo Wood 2558.jpg', '', 960],
-					['Lorenzo Wood 4965.jpg', 'Lorenzo Wood and band at Alameda Mini Maker Faire, 2018', 644],
-					['Lorenzo Wood 5687.jpg', '', 960],
-					['Lorenzo Wood 6115.jpg', '', 640],
-					['Lorenzo Wood 6184.jpg', '', 1344],
-					['Lorenzo Wood 6190.jpg', '', 640],
-					['Lorenzo Wood 7646.jpg', '', 1200],
-					['Lorenzo Wood 8967.jpg', '', 720],
-					['Lorenzo Wood 9179.jpg', 'Lorenzo Wood and band performing in Oakland', 626],
-					['Lorenzo Wood 9286.jpg', 'Lorenzo Wood and band performing in Alameda', 512],
-					['Lorenzo Wood 9999.jpg', '', 640],
-					['Lorenzo Wood Photo Credit Claire Ashcraft 11.jpg', '', 1044],
-					['Lorenzo Wood Photo Credit Claire Ashcraft 22.jpg', '', 692],
-					['Lorenzo Wood Photo Credit Dave Weiland 01.jpg', '', 1290],
-					['Lorenzo Wood Photo Credit Dave Weiland 02.jpg', '', 1440],
+					['Lorenzo Wood, Spring 2020', '', 1440],
+					['Lorenzo Wood 0140', '', 640],
+					['Lorenzo Wood 0221', 'Lorenzo Wood and band at Alameda Mini Maker Faire, 2018', 774],
+					['Lorenzo Wood 1946', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
+					['Lorenzo Wood 2089', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
+					['Lorenzo Wood 2156', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
+					['Lorenzo Wood 2168', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
+					['Lorenzo Wood 2169', '', 640],
+					['Lorenzo Wood 2453', '', 960],
+					['Lorenzo Wood 2558', '', 960],
+					['Lorenzo Wood 4965', 'Lorenzo Wood and band at Alameda Mini Maker Faire, 2018', 644],
+					['Lorenzo Wood 5687', '', 960],
+					['Lorenzo Wood 6115', '', 640],
+					['Lorenzo Wood 6184', '', 1344],
+					['Lorenzo Wood 6190', '', 640],
+					['Lorenzo Wood 7646', '', 1200],
+					['Lorenzo Wood 8967', '', 720],
+					['Lorenzo Wood 9179', 'Lorenzo Wood and band performing in Oakland', 626],
+					['Lorenzo Wood 9286', 'Lorenzo Wood and band performing in Alameda', 512],
+					['Lorenzo Wood 9999', '', 640],
+					['Lorenzo Wood Photo Credit Claire Ashcraft 11', '', 1044],
+					['Lorenzo Wood Photo Credit Claire Ashcraft 22', '', 692],
+					['Lorenzo Wood Photo Credit Dave Weiland 01', '', 1290],
+					['Lorenzo Wood Photo Credit Dave Weiland 02', '', 1440],
 					];
 
-			//- The smaller size are 960 pixels wide; larger ones can be much bigger (but optimized for size)
+			//- The smaller size are 960 pixels wide in various formats; Original JPEGs can be much bigger and not compressed to get max quality.
 			each imageDuple, i in images
-				a(target='_BLANK', href=cloudImgPrefix + 'photos/orig/' + encodeURIComponent(imageDuple[0]) ) 
-					img.item(data-aos='fade', data-aos-delay='500', data-aos-duration="1000", alt='Lorenzo Wood Music', title=imageDuple[1], src=cloudImgPrefix + 'photos/' + encodeURIComponent(imageDuple[0]), width=960, height=imageDuple[2])
+				a(target='_BLANK', href=cloudImgPrefix + 'photos/orig/' + encodeURIComponent(imageDuple[0]) + '.jpg' )
+					picture
+						source(type='image/avif', srcset=cloudImgPrefix + 'photos/AVIF40/' + encodeURIComponent(imageDuple[0]) + '.avif')
+						source(type='image/webp', srcset=cloudImgPrefix + 'photos/WebP25/' + encodeURIComponent(imageDuple[0]) + '.webp')
+						img.item(data-aos='fade', data-aos-delay='500', data-aos-duration="1000", alt='Lorenzo Wood Music', title=imageDuple[1], src=cloudImgPrefix + 'photos/' + encodeURIComponent(imageDuple[0]) + '.jpg', width=960, height=imageDuple[2])
 
 
 block more-credits
