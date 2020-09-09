@@ -1,7 +1,7 @@
 //- Make the scaled images be 960 pixels wide; put original ones into orig/ folder.
 block main
 	section
-		p: i Photos may be used by the press, blogs, etc.; click to get larger version. Please credit photographers listed in file names.
+		p: i Photos may be used by the press, blogs, etc.; click to get larger version. Please credit photographers if listed in file names.
 
 		article.masonry
 			- 
@@ -38,26 +38,5 @@ block main
 					img.item(data-aos='fade', data-aos-delay='500', data-aos-duration="1000", alt='Lorenzo Wood Music', title=imageDuple[1], src=cloudImgPrefix + 'photos/' + encodeURIComponent(imageDuple[0]), width=960, height=imageDuple[2])
 
 
-
-//-LEGACY - KEEP AROUND FOR NOW BUT DON'T LINK TO IN PAGE, in case of any good hot-linking. MAYBE TAKE DOWN IN 2021 ...
-//-
-//-Lorenzo Wood 0478.jpg
-//-Lorenzo Wood 0691.jpg
-//-Lorenzo Wood 4546.jpg
-//-Lorenzo Wood 6135.jpg
-//-Lorenzo Wood 8901.jpg
-//-Lorenzo Wood 8915.jpg
-//-Lorenzo Wood 8974.jpg
-//-Lorenzo Wood 9023.jpg
-//-Lorenzo Wood 9073.jpg
-//-Lorenzo Wood 9111.jpg
-//-Lorenzo Wood 9560.jpg
-//-Lorenzo Wood 9604.jpg
-//-Lorenzo Wood 9651.jpg
-//-Lorenzo Wood Photo Credit Claire Ashcraft 33.jpg
-//-Lorenzo Wood Photo Credit Claire Ashcraft 42.jpg
-//-Lorenzo Wood Photo Credit Claire Ashcraft 43.jpg
-//-Lorenzo Wood Photo Credit Claire Ashcraft 44.jpg
-//-Lorenzo Wood Photo Credit Claire Ashcraft 53.jpg
-//-Lorenzo Wood Photo Credit Nikki Maguire 7176.jpg
-
+block more-credits
+	span.dimmer Photo credits: Claire Ashcraft, Dave Weiland (See individual file names). No credit requested if photographer not specified in file name.
