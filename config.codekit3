@@ -1447,50 +1447,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/img/banner1_big.jpg": {
-		"ft": 16384,
-		"iS": 65101,
-		"jF": 0,
-		"oA": 1,
-		"oAP": "/img/banner1_big.jpg",
-		"oF": 1,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"/img/banner1_giant.jpg": {
-		"ft": 16384,
-		"iS": 128773,
-		"jF": 0,
-		"oA": 1,
-		"oAP": "/img/banner1_giant.jpg",
-		"oF": 1,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"/img/banner1_medium.jpg": {
-		"ft": 16384,
-		"iS": 22475,
-		"jF": 0,
-		"oA": 1,
-		"oAP": "/img/banner1_medium.jpg",
-		"oF": 1,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"/img/banner1_small.jpg": {
-		"ft": 16384,
-		"iS": 12270,
-		"jF": 0,
-		"oA": 1,
-		"oAP": "/img/banner1_small.jpg",
-		"oF": 1,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/img/banner2_big.jpg": {
 		"ft": 16384,
 		"iS": 35671,
