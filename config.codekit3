@@ -1447,6 +1447,82 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/img/banner1_big.jpg": {
+		"ft": 16384,
+		"iS": 27625,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner1_big.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/banner1_big.webp": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/img/banner1_big.webp",
+		"oF": 0
+		},
+	"/img/banner1_giant.jpg": {
+		"ft": 16384,
+		"iS": 42435,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner1_giant.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/banner1_giant.webp": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/img/banner1_giant.webp",
+		"oF": 0
+		},
+	"/img/banner1_medium.jpg": {
+		"ft": 16384,
+		"iS": 10038,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner1_medium.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/banner1_medium.webp": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/img/banner1_medium.webp",
+		"oF": 0
+		},
+	"/img/banner1_small.jpg": {
+		"ft": 16384,
+		"iS": 5823,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/banner1_small.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/banner1_small.webp": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/img/banner1_small.webp",
+		"oF": 0
+		},
 	"/img/banner2_big.jpg": {
 		"ft": 16384,
 		"iS": 35671,
@@ -1457,6 +1533,14 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
+		},
+	"/img/banner2_big.webp": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/img/banner2_big.webp",
+		"oF": 0
 		},
 	"/img/banner2_giant.jpg": {
 		"ft": 16384,
@@ -1469,6 +1553,14 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/img/banner2_giant.webp": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/img/banner2_giant.webp",
+		"oF": 0
+		},
 	"/img/banner2_medium.jpg": {
 		"ft": 16384,
 		"iS": 19128,
@@ -1480,6 +1572,14 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/img/banner2_medium.webp": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/img/banner2_medium.webp",
+		"oF": 0
+		},
 	"/img/banner2_small.jpg": {
 		"ft": 16384,
 		"iS": 10292,
@@ -1490,6 +1590,14 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"/img/banner2_small.webp": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/img/banner2_small.webp",
+		"oF": 0
 		},
 	"/img/beach.jpg": {
 		"ft": 16384,
