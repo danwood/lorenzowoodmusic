@@ -38,19 +38,19 @@ section.bio {
 }
 
 section.gigs {
- 	background-color:var(--color3);
+	background-color:var(--color3);
 
- 	a {
- 		color: hsl(0, 35%, 43%);
- 	}
+	a {
+		color: hsl(0, 35%, 43%);
+	}
 
- 	a.bit-track {
- 		color:white;
- 	}
+	a.bit-track {
+		color:white;
+	}
 }
 
 section.latest-releases {
- 	background-color:var(--color3);
+	background-color:var(--color3);
 }
 
 
@@ -89,7 +89,7 @@ Latest Releases Section
 		transition: transform .5s ease;
 		&:hover {
 			box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.9);
-  			transform: scale(1.05);
+			transform: scale(1.05);
 		}
 	}
 
@@ -149,7 +149,7 @@ Latest Releases Section
 
 		.release-blurb {
 			width:55.5%;
-	   		padding:15px 15px;
+			padding:15px 15px;
 
 			&.no-video {
 				width:100%;

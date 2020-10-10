@@ -15,9 +15,9 @@ $slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
 if (empty($slug)) {
    $albums = $db->allReleases();
    foreach ($albums as $album) {
-       echo '<a href="' . htmlentities($album['slug'], ENT_QUOTES) . '">';
-       echo htmlspecialchars($album['title']);
-       echo '</a><br />' . PHP_EOL;
+	   echo '<a href="' . htmlentities($album['slug'], ENT_QUOTES) . '">';
+	   echo htmlspecialchars($album['title']);
+	   echo '</a><br />' . PHP_EOL;
    }
 }
 ?>

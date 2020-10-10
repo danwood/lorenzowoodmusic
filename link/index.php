@@ -113,7 +113,7 @@ function render() {
 			ctx.putImageData(imageData, 0, 0);
 
 
-		    dataUrl = outputCanvas.toDataURL();
+			dataUrl = outputCanvas.toDataURL();
 			sourceImageElement.src = dataUrl;
 		}
 	}
@@ -123,12 +123,12 @@ function render() {
 blurhashElement.addEventListener("keyup", render);
 
 function clamp(n) {
-    return Math.min(9, Math.max(1, n));
+	return Math.min(9, Math.max(1, n));
 }
 
 function doEncode() {
-    var componentX = clamp(+componentXElement.value);
-    var componentY = clamp(+componentYElement.value);
+	var componentX = clamp(+componentXElement.value);
+	var componentY = clamp(+componentYElement.value);
 
 	var ctx_1 = originalCanvas.getContext("2d");
 	var imageData = ctx_1.getImageData(0, 0, originalCanvas.width, originalCanvas.height);

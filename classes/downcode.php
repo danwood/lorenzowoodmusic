@@ -3,11 +3,11 @@ error_reporting(E_ALL);
 date_default_timezone_set('America/Los_Angeles');
 
 // Temporarily don't use $_SERVER['DOCUMENT_ROOT'] - based database.
-define('PRIVATE_DIR',      dirname(__FILE__)  . '/../../protected');
+define('PRIVATE_DIR', dirname(__FILE__)  . '/../../protected');
 define('PRIVATE_RESOLVED', is_link(PRIVATE_DIR) ? readlink(PRIVATE_DIR) : PRIVATE_DIR);
-include_once(PRIVATE_RESOLVED . '/downcode_db/secrets.php');    // $password
+include_once(PRIVATE_RESOLVED . '/downcode_db/secrets.php');	// $password
 
-define('DOWNCODE_DBDIR',    PRIVATE_RESOLVED . '/downcode_db');
+define('DOWNCODE_DBDIR',	PRIVATE_RESOLVED . '/downcode_db');
 
 define('CLOUDPREFIX', 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/');
 

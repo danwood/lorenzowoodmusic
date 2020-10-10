@@ -18,9 +18,9 @@ var blurImage = new Image();
 blurImage.onload = function() {
 
 	setTimeout(function(){
-	    var blurhashImage = document.getElementById('blurhashImage');
-	    blurhashImage.style.display = 'none';
-	    blurImage.style.display = 'block';
+		var blurhashImage = document.getElementById('blurhashImage');
+		blurhashImage.style.display = 'none';
+		blurImage.style.display = 'block';
 	}, 0);
 };
 blurImage.style.display = 'none';

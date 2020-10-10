@@ -71,18 +71,18 @@ var $w = $(window).scroll(function(){
 			if ($('body').hasClass('showing-2') ) {
 
 				$('img.swapping-image').attr('src', function() {
-		    		return $(this).attr('src').replace(/2_/g, '1_');
+					return $(this).attr('src').replace(/2_/g, '1_');
 				});
 				$('img.swapping-image').attr('srcset', function() {
-		    		return $(this).attr('srcset').replace(/2_/g, '1_');
+					return $(this).attr('srcset').replace(/2_/g, '1_');
 				});
 				$('body').removeClass('showing-2');
 			} else {
 				$('img.swapping-image').attr('src', function() {
-		    		return $(this).attr('src').replace(/1_/g, '2_');
+					return $(this).attr('src').replace(/1_/g, '2_');
 				});
 				$('img.swapping-image').attr('srcset', function() {
-		    		return $(this).attr('srcset').replace(/1_/g, '2_');
+					return $(this).attr('srcset').replace(/1_/g, '2_');
 				});
 				$('body').addClass('showing-2');
 			}
