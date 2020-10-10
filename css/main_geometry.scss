@@ -16,44 +16,62 @@ article.textual.unpadded {
 	padding:0;
 }
 
+
+
+
 // Always 3 columns
 .columns-3 {
-	display:flex;
-	& > * {
-		width:33%;
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+
+	@supports not (display: grid) {
+
+		display:flex;
+		& > * {
+			width:33%;
+		}
 	}
 }
 
-// 3 columns, or two with multiple rows (with odd one centered at bottom), or 1 on narrow display.
-// Flexbox fallback, alas, leaves 3rd item full size on last line unless we specify a max width, though
-//   be careful - this means on wider screen, all elements have max width.
-.columns-3-2-1 {
+// EXPERIMENTAL.
+// 3 columns at "wide" display (or more), wrapping to multiple rows, or 1 on narrow display.
+// Flexbox fallback, alas, leaves last odd item full size unless we specify a max width
+//   but then be careful - this means on wider screen, all elements have max width.
+.columns-adaptive {
 
-	// fallback
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:center;
+	display:grid;
+	grid-template-columns: repeat(auto-fill, minmax($breakpointToMedium/3 - 1px, 1fr));
 
-	& > * {
-		flex-grow:1;
-		flex-basis:$breakpointToSmall/2 - $typicalPadding*2 - 1px;	// need to compensate for padding myself!
-		max-width:400px;
-	}
+	@supports not (display: grid) {
 
-	@supports (display: grid) {
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:center;
 
-
+		& > * {
+			flex-grow:1;
+			flex-basis:$breakpointToSmall/2 - $typicalPadding*2 - 1px;	// need to compensate for padding myself!
+			max-width:400px;
+		}
 	}
 }
 
 // 3 columns, or 1 on narrow display.
 .columns-3-1 {
 
-	@media only screen and (min-width:$breakpointToSmall) {
-		display:flex;
+	// no styles; default to block for narrower displays
 
-		& > * {
-			width:33%;
+	@media only screen and (min-width:$breakpointToSmall) {
+
+		display:grid;
+		grid-template-columns:repeat(3,1fr);
+
+		@supports not (display: grid) {
+
+			display:flex;
+			& > * {
+				width:33%;
+			}
 		}
 
 	}
@@ -61,22 +79,80 @@ article.textual.unpadded {
 
 
 
-.columns-4 {
-	
-}
 
-.columns-4-2-1 {
-	
-}
-
-.columns 4-1 {
-	
-}
 
 .columns-2 {
-	
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	@supports not (display: grid) {
+		display:flex;
+		& > * {
+			width:50%;
+		}
+	}
 }
 
 .columns-2-1 {
-	
+	@media only screen and (min-width:$breakpointToSmall) {
+		display:grid;
+		grid-template-columns:repeat(2,1fr);
+		@supports not (display: grid) {
+			display:flex;
+			& > * {
+				width:50%;
+			}
+		}
+	}
 }
+
+.columns-4 {
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	@supports not (display: grid) {
+		display:flex;
+		& > * {
+			width:25%;
+		}
+	}
+}
+
+// Four columns for wider screens, 2 for medium, otherwise 1
+
+.columns-4-2-1 {
+
+	@media only screen and (min-width:$breakpointToSmall) {
+		display:grid;
+		grid-template-columns:repeat(2,1fr);
+		@supports not (display: grid) {
+			display:flex;
+			& > * {
+				width:50%;
+			}
+		}
+	}
+	@media only screen and (min-width:$breakpointToMedium) {
+		display:grid;
+		grid-template-columns:repeat(4,1fr);
+		@supports not (display: grid) {
+			display:flex;
+			& > * {
+				width:25%;
+			}
+		}
+	}
+}
+
+
+.columns-4-1 {
+	@media only screen and (min-width:$breakpointToSmall) {
+		display:grid;
+		grid-template-columns:repeat(4,1fr);
+		@supports not (display: grid) {
+			display:flex;
+			& > * {
+				width:25%;
+			}
+		}
+	}
+}
+

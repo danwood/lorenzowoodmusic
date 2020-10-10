@@ -80,34 +80,10 @@ YouTube
 
 @media only screen and (min-width:$mainBreakpoint) {
 
-	/* One half-size youtube video */
-
-	.youtube-column-half {
-		width:50%;
-		float:left;
-		margin-left:25%;
-	}
-
-	/* Two YouTube videos side by side */
-
-	.youtube-column-2 {
-		width:50%;
-		float:left;
-	}
-	.youtube-column-3 {
-		width:33%;
-		float:left;
-	}
-
-	.youtube-column-4 {
-		width:25%;
-		float:left;
-
-		.title {
-			font-size: 80%;
-			line-height:1.1;
-			background-color:rgba(0,0,0,0.3);
-		}
+	.columns-4  .title {
+		font-size: 80%;
+		line-height:1.1;
+		background-color:rgba(0,0,0,0.3);
 	}
 
 }
