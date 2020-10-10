@@ -7,16 +7,6 @@ Classes and sections replicated across multiple pages
 */
 
 
-// PRESS PAGE
-
-img.bio {
-	max-width: 240px;
-
-	@media only screen and (min-width: 768px)  {
-		float: right;
-	}
-}
-
 
 // For linking to other artists to indicate it's a link to their spotify account
 
@@ -53,19 +43,7 @@ img.half {
 }
 
 
-@media only screen and (max-width:($mainBreakpoint - 1px)) {
-
-	// For Video page.
-	// On mobile, avoid left/right margin on some sections (except for their headers/footers which are textual)
-
-	.maximize-mobile {
-		padding-left:0;
-		padding-right:0;
-		footer, header {
-			padding-left:1rem;
-			padding-right:1rem;
-		}
-	}
+@media only screen and (max-width:($breakpointToSmall - 1px)) {
 
 	img.right, img.half {
 		max-width:100%;
