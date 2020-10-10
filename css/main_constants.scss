@@ -1,4 +1,20 @@
-$mainBreakpoint: 768px;
+// Breakpoints
+// Optimal grouped sizes
+// https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+
+
+
+
+$breakpointToSmall:  600px;		// 0-599 Mobile Phone
+$breakpointToMedium: 900px;		// 600-899 Pad Portrait
+$breakpointToLarge: 1200px; 	// 900-1199 Pad Landscape
+// 1200-1799 Desktop
+// 1800-∞ Giant Desktop
+
+$typicalPadding: 16px;
+
+
+$mainBreakpoint: 600px;	// For legacy breakpoints, assume iPad portrait is "large" and below is "small"
 
 // Constants so we know actual height of menu area to place logo below it
 $page-menu-padding-h: 0.6rem;
