@@ -1,24 +1,24 @@
-@import 'constants';
+@import 'main_constants';
 
 @import 'normalize';
 @import 'html5boilerplate';
 
 // Useful classes and layout that could be used on other sites
-@import 'generic.scss';
+@import 'main_generic.scss';
 
 // General look and utility useful across the whole site
-@import 'typography.scss';
-@import 'colors.scss';
-@import 'geometry.scss';
+@import 'main_typography.scss';
+@import 'main_colors.scss';
+@import 'main_geometry.scss';
 
-@import 'navigation.scss';
-@import 'social-icons.scss';
-@import 'tables.scss';
-@import 'masonry.scss';
-@import 'youtube.scss';
+@import 'main_navigation.scss';
+@import 'main_social-icons.scss';
+@import 'main_tables.scss';
+@import 'main_masonry.scss';
+@import 'main_youtube.scss';
 
 // Classes and sections replicated across multiple pages
-@import 'shared.scss';
+@import 'main_shared.scss';
 
 
 /* Debugging
