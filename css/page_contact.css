@@ -1,0 +1,28 @@
+a.contact-link {
+  font-weight: bold;
+  text-decoration: none; }
+
+.next-to-side-photo-padded {
+  padding: 0 0 0 2rem;
+  /* Make sure box is indented to be separated from photo */ }
+
+.side-photo img {
+  width: 100%;
+  height: auto; }
+
+@media only screen and (max-width: 767px) {
+  /* On mobile, center photo rather than side-by-side */
+  .side-photo {
+    margin-left: 25%;
+    width: 50%; }
+  .next-to-side-photo-padded {
+    padding: 0;
+    margin: 0 auto; } }
+
+@media only screen and (min-width: 768px) {
+  .side-photo {
+    float: left;
+    width: 33%; }
+  .next-to-side-photo {
+    float: left;
+    width: 66%; } }

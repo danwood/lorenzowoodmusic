@@ -991,29 +991,6 @@
 		"oF": 0,
 		"oS": 1
 		},
-	"/css/2ampage.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/2ampage-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/2ampage.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/2ampage.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 1
-		},
 	"/css/aos.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1046,29 +1023,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/css/constants.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 1
-		},
-	"/css/contact.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/contact-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/contact.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/contact.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 1
@@ -1112,29 +1066,6 @@
 		"oS": 0,
 		"sct": 1
 		},
-	"/css/homepage.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/homepage-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/homepage.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/homepage.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 1
-		},
 	"/css/html5boilerplate.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1144,29 +1075,6 @@
 		"oAP": "/css/html5boilerplate-min.css",
 		"oF": 1,
 		"oS": 3
-		},
-	"/css/linkpage.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/linkpage-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/linkpage.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/linkpage.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 1
 		},
 	"/css/main.css": {
 		"aP": 1,
@@ -1235,17 +1143,17 @@
 		"oF": 1,
 		"oS": 3
 		},
-	"/css/presspage.css": {
+	"/css/page_2am.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/presspage-min.css",
+		"oAP": "/css/page_2am-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/css/presspage.scss": {
+	"/css/page_2am.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1253,7 +1161,99 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/css/presspage.css",
+		"oAP": "/css/page_2am.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/css/page_contact.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/page_contact-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/page_contact.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/page_contact.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/css/page_home.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/page_home-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/page_home.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/page_home.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/css/page_link.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/page_link-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/page_link.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/page_link.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/css/page_press.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/page_press-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/page_press.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/page_press.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 1
@@ -1853,24 +1853,24 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/js/linkpage-min.js": {
+	"/js/page_link-min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/js/linkpage-min-min.js",
+		"oAP": "/js/page_link-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"/js/linkpage.js": {
+	"/js/page_link.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/linkpage-min.js",
+		"oAP": "/js/page_link-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
