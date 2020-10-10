@@ -120,13 +120,17 @@ article.textual.unpadded {
 
 .columns-4-2-1 {
 
-	@media only screen and (min-width:$breakpointToSmall) {
+	@media only screen and (min-width:$breakpointToSmall) and (max-width:$breakpointToMedium - 1){
 		display:grid;
 		grid-template-columns:repeat(2,1fr);
 		@supports not (display: grid) {
 			display:flex;
+			flex-wrap:wrap;
+			justify-content:center;
 			& > * {
-				width:50%;
+				flex-grow:1;
+				flex-basis:200px;	// EMPIRICAL
+				max-width:400px;
 			}
 		}
 	}
@@ -135,6 +139,7 @@ article.textual.unpadded {
 		grid-template-columns:repeat(4,1fr);
 		@supports not (display: grid) {
 			display:flex;
+			flex-wrap:none;
 			& > * {
 				width:25%;
 			}
