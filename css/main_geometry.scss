@@ -161,3 +161,28 @@ article.textual.unpadded {
 	}
 }
 
+
+
+
+// https://joshwcomeau.com/css/full-bleed/
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr min(65ch, 100%) 1fr;
+
+	& > * {
+		grid-column: 2;
+	}
+}
+
+.full-bleed {
+  grid-column: 1 / -1;
+}
+
+.pseudo-full-bleed {
+	@extend .full-bleed;
+	width: 100%;
+	max-width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+}
