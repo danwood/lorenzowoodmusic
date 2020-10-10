@@ -97,7 +97,7 @@ textarea {
 
 .hidden,
 [hidden] {
-  display: none !important;
+  display: none!important;
 }
 
 /*
@@ -196,11 +196,11 @@ textarea {
   *,
   *::before,
   *::after {
-    background: #fff !important;
-    color: #000 !important;
+    background: #fff!important;
+    color: #000!important;
     /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
+    box-shadow: none!important;
+    text-shadow: none!important;
   }
 
   a,
@@ -226,7 +226,7 @@ textarea {
   }
 
   pre {
-    white-space: pre-wrap !important;
+    white-space: pre-wrap!important;
   }
 
   pre,

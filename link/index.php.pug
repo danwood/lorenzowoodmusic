@@ -252,7 +252,7 @@ block main
 			
 			<div class="service"><a rel="nofollow" href="<?php echo htmlentities($release['spotify_presave_url'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/page_link.svg#spotify-text" /></svg><span class="play">Pre-save</span></a>
 
-			<div	style="padding-left:5em; font-size:80%; color:gray">
+			<div	style="padding-left:5em;font-size:80%;color:gray">
 			|<?php 	if ($now >= $releaseDate) { ?>
 			|<div><b>Direct spotify link coming soon!</b></div>
 			|<?php	} ?>
@@ -285,7 +285,7 @@ block main
 
 			<?php 		if ($release['bandcamp_blurb_url']) { ?>
 
-			<div 		style="padding-left:5em; margin-top:-20px; font-size:80%;"><a style="text-decoration:underline !important" href="<?php echo htmlentities($release['bandcamp_blurb_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($release['bandcamp_blurb']); ?></a></div>
+			<div 		style="padding-left:5em;margin-top:-20px;font-size:80%"><a style="text-decoration:underline!important" href="<?php echo htmlentities($release['bandcamp_blurb_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($release['bandcamp_blurb']); ?></a></div>
 			
 			<?php 		} ?>
 			</div>
