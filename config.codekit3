@@ -1022,7 +1022,7 @@
 		"oAP": "/css/include_constants.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/include_hero.scss": {
 		"aP": 0,
@@ -1035,7 +1035,7 @@
 		"oAP": "/css/include_hero.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main.css": {
 		"aP": 1,
@@ -1066,7 +1066,7 @@
 		"oAP": "/css/main.css",
 		"oF": 0,
 		"oS": 3,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main_colors.scss": {
 		"aP": 0,
@@ -1079,7 +1079,7 @@
 		"oAP": "/css/main_colors.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main_generic.scss": {
 		"aP": 0,
@@ -1092,7 +1092,7 @@
 		"oAP": "/css/main_generic.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main_geometry.scss": {
 		"aP": 0,
@@ -1105,7 +1105,7 @@
 		"oAP": "/css/main_geometry.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main_masonry.scss": {
 		"aP": 0,
@@ -1118,7 +1118,7 @@
 		"oAP": "/css/main_masonry.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main_navigation.scss": {
 		"aP": 0,
@@ -1131,7 +1131,7 @@
 		"oAP": "/css/main_navigation.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main_shared.scss": {
 		"aP": 0,
@@ -1144,7 +1144,7 @@
 		"oAP": "/css/main_shared.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main_social-icons.scss": {
 		"aP": 0,
@@ -1157,7 +1157,7 @@
 		"oAP": "/css/main_social-icons.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main_tables.scss": {
 		"aP": 0,
@@ -1170,7 +1170,7 @@
 		"oAP": "/css/main_tables.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main_typography.scss": {
 		"aP": 0,
@@ -1183,7 +1183,7 @@
 		"oAP": "/css/main_typography.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/main_youtube.scss": {
 		"aP": 0,
@@ -1196,7 +1196,7 @@
 		"oAP": "/css/main_youtube.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/css/normalize.css": {
 		"aP": 1,
@@ -1228,8 +1228,8 @@
 		"oA": 0,
 		"oAP": "/css/page_2am.css",
 		"oF": 0,
-		"oS": 0,
-		"sct": 1
+		"oS": 3,
+		"sct": 0
 		},
 	"/css/page_contact.css": {
 		"aP": 1,
@@ -1251,8 +1251,8 @@
 		"oA": 0,
 		"oAP": "/css/page_contact.css",
 		"oF": 0,
-		"oS": 0,
-		"sct": 1
+		"oS": 3,
+		"sct": 0
 		},
 	"/css/page_home.css": {
 		"aP": 1,
@@ -1274,8 +1274,8 @@
 		"oA": 0,
 		"oAP": "/css/page_home.css",
 		"oF": 0,
-		"oS": 0,
-		"sct": 1
+		"oS": 3,
+		"sct": 0
 		},
 	"/css/page_link.css": {
 		"aP": 1,
@@ -1297,8 +1297,8 @@
 		"oA": 0,
 		"oAP": "/css/page_link.css",
 		"oF": 0,
-		"oS": 0,
-		"sct": 1
+		"oS": 3,
+		"sct": 0
 		},
 	"/css/page_press.css": {
 		"aP": 1,
@@ -1320,8 +1320,8 @@
 		"oA": 0,
 		"oAP": "/css/page_press.css",
 		"oF": 0,
-		"oS": 0,
-		"sct": 1
+		"oS": 3,
+		"sct": 0
 		},
 	"/favicon-16x16.png": {
 		"ft": 32768,
@@ -5383,7 +5383,7 @@
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
-		"compilerType": 1,
+		"compilerType": 0,
 		"createSourceMap": 0,
 		"decimalPrecision": 10,
 		"emitCharset": 1,
