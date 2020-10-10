@@ -7,16 +7,44 @@ section.balance-footer {
 	padding-bottom:0;
 }
 
-article.textual {
-	margin:0 auto;
-	padding:2rem 0;		/* if we use margin above then it messes with background image */
-	max-width:60rem;
-}
-article.textual.unpadded {
-	padding:0;
-}
+article {
+	
+	padding:2rem 0;		// Top/bottom. if we use margin above then it messes with background image
 
+	display: grid;		// https://joshwcomeau.com/css/full-bleed/
 
+	& > * {
+		grid-column: 1 / -1;	// By default, children span the whole grid width
+	}
+
+	&.textual {
+
+		grid-template-columns: 1fr min(65ch, 100%) 1fr;
+		& > * {
+			grid-column: 2;		// Children live in center column
+		}
+
+		@supports not (display: grid) {
+			margin:0 auto;
+			max-width:65ch;
+		}
+
+		&.unpadded {
+			padding:0;
+		}
+
+		.full-bleed {
+			grid-column: 1 / -1;	// Override restricted width within the article
+		}
+		.pseudo-full-bleed {
+			@extend .full-bleed;
+			width: 100%;
+			max-width: $breakpointToLarge;		// arbirary max-width
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
 
 
 // Always 3 columns
@@ -162,27 +190,3 @@ article.textual.unpadded {
 }
 
 
-
-
-// https://joshwcomeau.com/css/full-bleed/
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr min(65ch, 100%) 1fr;
-
-	& > * {
-		grid-column: 2;
-	}
-}
-
-.full-bleed {
-  grid-column: 1 / -1;
-}
-
-.pseudo-full-bleed {
-	@extend .full-bleed;
-	width: 100%;
-	max-width: 1500px;
-	margin-left: auto;
-	margin-right: auto;
-}
