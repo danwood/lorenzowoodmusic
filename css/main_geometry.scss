@@ -15,22 +15,28 @@ article {
 
 		margin:0 auto;
 		max-width:70ch;
+	}
+	&.wider {
 
-		&.unpadded {
-			padding:0;
-		}
+		margin:0 auto;
+		max-width:90ch;
+	}
 
-		.full-bleed {
-			width:100%;
-			margin-left:0;
-			margin-right:0;
-		}
-		.pseudo-full-bleed {
-			width: 100%;
-			max-width: $breakpointToLarge;		// arbirary max-width
-			margin-left: auto;
-			margin-right: auto;
-		}
+
+	&.unpadded {
+		padding:0;
+	}
+
+	.full-bleed {
+		width:100%;
+		margin-left:0;
+		margin-right:0;
+	}
+	.pseudo-full-bleed {
+		width: 100%;
+		max-width: $breakpointToLarge;		// arbirary max-width
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
