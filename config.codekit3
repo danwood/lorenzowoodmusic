@@ -1287,7 +1287,7 @@
 		"oA": 0,
 		"oAP": "/css/page_home.css",
 		"oF": 0,
-		"oS": 3,
+		"oS": 0,
 		"sct": 0
 		},
 	"/css/page_link.css": {
@@ -1739,11 +1739,11 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/index.php",
 		"oF": 2,
-		"oS": 1
+		"oS": 0
 		},
 	"/js/aos.js": {
 		"bF": 0,

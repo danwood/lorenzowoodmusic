@@ -116,7 +116,7 @@ Latest Releases Section
 	}
 
 
-	.release-blurb p, .release-blurb blockquote {
+	.release-text p, .release-text blockquote {
 		max-width:65ch;
 	}
 
@@ -140,12 +140,10 @@ Latest Releases Section
 
 		.release-image {
 			width:41%;
-			float:left;
 			margin:0 1em 0 0;
 		}
 
 		.reversed .release-image {
-			float:right;
 			margin:0 0 0 1em;
 		}
 
@@ -153,7 +151,7 @@ Latest Releases Section
 			width:22.7%;
 		}
 
-		.release-blurb {
+		.release-text {
 			width:55.5%;
 			padding:15px 15px;
 
@@ -171,7 +169,7 @@ Latest Releases Section
 		}
 	}
 
-	.subsection.reversed article {
+	article.reversed {
 		flex-direction: row-reverse;
 	}
 

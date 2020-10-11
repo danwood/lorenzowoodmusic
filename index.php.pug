@@ -153,48 +153,53 @@ block main
 					h2 Latest Releases
 
 		//- note that above definition of $release is not longer valid since we define it here in the loop
-		<?php $reversed = false; foreach ($marketingReleases as $release) { ?>
+		<?php $reversed = true; foreach ($marketingReleases as $release) { ?>
 
-		<div class="subsection <?php echo $release['light_text'] ? 'light-text' : 'dark-text'; if ($reversed) { echo ' reversed'; } $reversed = !$reversed; ?>" style="background-color:<?php echo htmlentities($release['color'], ENT_QUOTES); ?>">
-			article
-				<div class="release-blurb<?php if (!$release['youtube_video_v']) { echo ' no-video'; } ?>">
-					<div class="release-image bordered" data-aos="fade-<?php echo $reversed ? 'right' : 'left'; ?>" , data-aos-delay='200'>
-						<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php
-						|	echo '<img loading="lazy" width="64" height="64" src="';
-						|	echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES);
-						|	echo '" alt= "Cover image of ';
-						|	echo htmlentities($release['title'], ENT_QUOTES);
-						|	echo '" srcset="';
-						|	echo htmlentities(
-						|		$db->pathCDNForImageSize($release, 64) . ' 64w, ' .
-						|		$db->pathCDNForImageSize($release, 384) . ' 384w, ' .
-						|		$db->pathCDNForImageSize($release, 640) . ' 640w', ENT_QUOTES);
-						|	echo '" sizes="(max-width: 768px) 100vw, 25vw"/>';
-						|?>
+		<div class="subsection <?php echo $release['light_text'] ? 'light-text' : 'dark-text'; ?>" style="background-color:<?php echo htmlentities($release['color'], ENT_QUOTES); ?>">
+			<article class="<?php
+				|
+				|$reversed = !$reversed;
+				|if (!$release['youtube_video_v']) { echo 'no-video'; if ($reversed) { echo ' '; } } 
+				|if ($reversed) { echo 'reversed'; }
+				|
+				|?>">
+				
+				<div class="release-image bordered" data-aos="fade-<?php echo $reversed ? 'right' : 'left'; ?>" , data-aos-delay='200'>
+					<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php
+					|	echo '<img loading="lazy" width="64" height="64" src="';
+					|	echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES);
+					|	echo '" alt= "Cover image of ';
+					|	echo htmlentities($release['title'], ENT_QUOTES);
+					|	echo '" srcset="';
+					|	echo htmlentities(
+					|		$db->pathCDNForImageSize($release, 64) . ' 64w, ' .
+					|		$db->pathCDNForImageSize($release, 384) . ' 384w, ' .
+					|		$db->pathCDNForImageSize($release, 640) . ' 640w', ENT_QUOTES);
+					|	echo '" sizes="(max-width: 768px) 100vw, 25vw"/>';
+					|?>
+				</div>
+				div.release-text(data-aos="fade-up", data-aos-duration="1000")
+					h3
+						<a href="<?php echo '/link/' . htmlentities($release['slug'], ENT_QUOTES); ?>">
+							<?php echo htmlspecialchars($release['title']); ?>
 						</a>
-					</div>
-					div(data-aos="fade-up", data-aos-duration="1000")
-						h3
-							<a href="<?php echo '/link/' . htmlentities($release['slug'], ENT_QUOTES); ?>">
-								<?php echo htmlspecialchars($release['title']); ?>
-							</a>
-						<?php if ($release['artist_id'] != 1) { echo '<h4>' . htmlspecialchars($release['artist_name']) . '</h4>'; } ?>
-						<?php echo $release['description_html']; ?>
+					<?php if ($release['artist_id'] != 1) { echo '<h4>' . htmlspecialchars($release['artist_name']) . '</h4>'; } ?>
+					<?php echo $release['description_html']; ?>
 
-						<?php $releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
-						|if ($now < $releaseDate) { ?>
+					<?php $releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
+					|if ($now < $releaseDate) { ?>
 
-						<h4>Releasing <?php echo htmlspecialchars($releaseDate->format('F j, Y')); ?></h4>
-						<p><a class="bold" href="link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">Pre-Save / Pre-Order</a></p>
+					<h4>Releasing <?php echo htmlspecialchars($releaseDate->format('F j, Y')); ?></h4>
+					<p><a class="bold" href="link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">Pre-Save / Pre-Order</a></p>
 
-						<?php } else { ?>
+					<?php } else { ?>
 
-						<h4><?php echo htmlspecialchars($releaseDate->format('F Y')); ?></h4>
-						<p><a class="bold" href="link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">Download/Stream</a></p>
+					<h4><?php echo htmlspecialchars($releaseDate->format('F Y')); ?></h4>
+					<p><a class="bold" href="link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">Download/Stream</a></p>
 
-						<?php } ?>
-				</div> <!-- end release blurb -->
+					<?php } ?>
 				<?php if ($release['youtube_video_v']) { echo '<div class="release-video" data-aos="fade-' . ($reversed ? 'left' : 'right') . '" data-aos-delay="400" data-aos-duration="1000"><div class="youtube-player" data-code="' . $release['youtube_video_v'] . '"></div></div>'; } ?>
+			</article>
 		</div> <!-- end subsection-->
 
 		<?php } ?>
