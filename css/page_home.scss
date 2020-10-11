@@ -139,33 +139,25 @@ Latest Releases Section
 	@media only screen and (min-width:$mainBreakpoint) {
 
 		.release-image {
-			width:41%;
-			margin:0 1em 0 0;
-		}
-
-		.reversed .release-image {
-			margin:0 0 0 1em;
-		}
-
-		.no-video .release-image {
-			width:22.7%;
+			flex-basis:22.22%;
+			z-index:99;			// make sure it goes above neighboring block
 		}
 
 		.release-text {
-			width:55.5%;
-			padding:15px 15px;
-
-			&.no-video {
-				width:100%;
-			}
+			flex-basis:38.28%;
+			padding:0 2em;
 
 			h3, h4 {
 				margin:0;
 			}
 		}
 
+		.no-video .release-text {
+			flex-basis:77.78%;
+		}
+
 		.release-video {
-			width:44.5%;	// width that makes the video be the same height as the artwork
+			flex-basis:39.5%;	// width that makes the video be the same height as the artwork
 		}
 	}
 
@@ -360,7 +352,4 @@ Modal for Contact Form
 	text-shadow:0 0 4px var(--cInkH);
 	cursor:pointer;
 }
-
-
-
 
