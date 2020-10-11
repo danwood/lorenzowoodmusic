@@ -49,7 +49,7 @@
 	a {
 		position:relative;
 	}
-	a:after {
+	a::after {
 		padding:0 5px;
 		font-size:80%;
 		background-color:var(--cPaperH);
@@ -68,10 +68,10 @@
 		opacity:0; /* Invisible until hovered */
 		transition:opacity .3s ease-in-out;
 	}
-	a:hover:after {
+	a:hover::after {
 		opacity:0.75;
 	}
-	a:last-child:after {	/* Also need to do below for 5th icon when we have two rows! SEE BELOW */
+	a:last-child::after {	/* Also need to do below for 5th icon when we have two rows! SEE BELOW */
 		right:15%;			/* plenty of room for shadow effect to not overflow the container on phone */
 		left:auto;
 	}

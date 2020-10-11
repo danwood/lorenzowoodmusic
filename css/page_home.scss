@@ -272,7 +272,7 @@ Bands in Town
 	.bit-track { text-decoration:none; color:var(--cPaperH); background-color:var(--cLink); padding:10px; margin-right:0.5rem; }
 
 	/* Separator for city-state */
-	.bit-citystate:before { content:' — '; }
+	.bit-citystate::before { content:' — '; }
 
 }
 

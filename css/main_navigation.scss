@@ -146,6 +146,11 @@ input#navigation[type="checkbox"], label.hamburger {
 		z-index:11;
 		cursor: pointer;
 	}
+
+	.horizontal, .diagonal.part-2 {
+		margin-top: 5px;			// spacing between layers
+	}
+
 	input#navigation[type="checkbox"] {
 
 		&:checked ~ .page-menu {
@@ -177,9 +182,6 @@ input#navigation[type="checkbox"], label.hamburger {
 		border-radius: 2px;
 		width: 100%;
 		background-color: var(--cAccent);
-	}
-	.horizontal, .diagonal.part-2 {
-		margin-top: 5px;			// spacing between layers
 	}
 }
 
