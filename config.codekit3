@@ -985,11 +985,11 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/contact/index.php.html",
-		"oF": 0,
-		"oS": 0
+		"oAP": "/contact/index.php",
+		"oF": 2,
+		"oS": 1
 		},
 	"/css/component_aos.css": {
 		"aP": 1,
@@ -1056,7 +1056,7 @@
 		"oF": 0
 		},
 	"/css/main.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
@@ -1065,7 +1065,7 @@
 		"oA": 0,
 		"oAP": "/css/main.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 3,
 		"sct": 0
 		},
 	"/css/main_colors.scss": {
@@ -1140,9 +1140,9 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/css/main_parallax.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 0,
 		"sct": 0
 		},
@@ -1232,7 +1232,7 @@
 		"oS": 3
 		},
 	"/css/page_2am.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
@@ -1241,7 +1241,7 @@
 		"oA": 0,
 		"oAP": "/css/page_2am.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 3,
 		"sct": 0
 		},
 	"/css/page_contact.css": {
@@ -1255,7 +1255,7 @@
 		"oS": 3
 		},
 	"/css/page_contact.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
@@ -1264,7 +1264,7 @@
 		"oA": 0,
 		"oAP": "/css/page_contact.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 3,
 		"sct": 0
 		},
 	"/css/page_home.css": {
@@ -1278,7 +1278,7 @@
 		"oS": 3
 		},
 	"/css/page_home.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
@@ -1287,7 +1287,7 @@
 		"oA": 0,
 		"oAP": "/css/page_home.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 3,
 		"sct": 0
 		},
 	"/css/page_link.css": {
@@ -1301,7 +1301,7 @@
 		"oS": 3
 		},
 	"/css/page_link.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
@@ -1310,7 +1310,7 @@
 		"oA": 0,
 		"oAP": "/css/page_link.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 3,
 		"sct": 0
 		},
 	"/css/page_press.css": {
@@ -1324,7 +1324,7 @@
 		"oS": 3
 		},
 	"/css/page_press.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
@@ -2797,11 +2797,11 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
-		"oAP": "/press/falling.php.html",
-		"oF": 0,
-		"oS": 0
+		"oAP": "/press/falling.php",
+		"oF": 2,
+		"oS": 1
 		},
 	"/press/falling_thumb.jpg": {
 		"ft": 16384,
