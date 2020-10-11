@@ -7,37 +7,25 @@ section.balance-footer {
 	padding-bottom:0;
 }
 
-section {
+article {
 	
 	padding:2rem 0;		// Top/bottom. if we use margin above then it messes with background image
 
-	display: grid;		// https://joshwcomeau.com/css/full-bleed/
-
-	& > * {
-		grid-column: 1 / -1;	// By default, children span the whole grid width
-	}
-
 	&.textual {
 
-		grid-template-columns: 1fr min(65ch, 100%) 1fr;
-		& > * {
-			grid-column: 2;		// Children live in center column
-		}
-
-		@supports not (display: grid) {
-			margin:0 auto;
-			max-width:65ch;
-		}
+		margin:0 auto;
+		max-width:70ch;
 
 		&.unpadded {
 			padding:0;
 		}
 
 		.full-bleed {
-			grid-column: 1 / -1;	// Override restricted width within the article
+			width:100%;
+			margin-left:0;
+			margin-right:0;
 		}
 		.pseudo-full-bleed {
-			@extend .full-bleed;
 			width: 100%;
 			max-width: $breakpointToLarge;		// arbirary max-width
 			margin-left: auto;
