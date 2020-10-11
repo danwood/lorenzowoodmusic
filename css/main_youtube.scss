@@ -84,7 +84,7 @@ YouTube
 @media only screen and (min-width:$mainBreakpoint) {
 
 	.columns-4  .title {
-		font-size: 80%;
+		font-size:80%;
 		line-height:1.1;
 		background-color:rgba(0,0,0,0.3);
 	}
@@ -93,9 +93,9 @@ YouTube
 
 
 .no-js .youtube-player::after {
-	position: absolute;
-	top: 1em;
-	left: 1em;
-	color: white;
-	content: "JavaScript Required"
+	position:absolute;
+	top:1em;
+	left:1em;
+	color:white;
+	content:"JavaScript Required"
 }

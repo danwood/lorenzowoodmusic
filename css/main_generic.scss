@@ -94,7 +94,7 @@ section, .safe-area {
 @supports(padding:max(0px)) {
 	section, .safe-area {
 		// use m#{a}x instead of max to allow this to be compiled with Sass
-		padding-left: m#{a}x(1rem, env(safe-area-inset-left));
+		padding-left:m#{a}x(1rem, env(safe-area-inset-left));
 		padding-right:m#{a}x(1rem, env(safe-area-inset-right));
 	}
 	.safe-area-only {
@@ -137,9 +137,9 @@ JS detection
 }
 
 .browserupgrade {		// This used to be in H5BP but now it's here, improved.
-	margin: 0.2em 0;
-	background: #ccc;
-	color: #000;
+	margin:0.2em 0;
+	background:#ccc;
+	color:#000;
 	font-size:150%;
 	padding:1rem;
 }

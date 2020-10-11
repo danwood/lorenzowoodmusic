@@ -7,36 +7,36 @@ Masonry
 
 /* The Masonry Container */
 .masonry {
-	max-width: 1500px;
+	max-width:1500px;
 	margin:0 auto;
-	column-gap: 1.5em;
+	column-gap:1.5em;
 }
 
 /* The Masonry Brick */
 .item {
-	background: #fff;
-	margin: 0 0 1.5em;
+	background:#fff;
+	margin:0 0 1.5em;
 	border:1px solid rgba(0,0,0,0.5);
 }
 
 /* Masonry on large screens */
-@media only screen and (min-width: $breakpointToLarge) {
+@media only screen and (min-width:$breakpointToLarge) {
 	.masonry {
-		column-count: 4;
+		column-count:4;
 	}
 }
 
 /* Masonry on medium-sized screens */
-@media only screen and (max-width: $breakpointToLarge - 1) and (min-width: $breakpointToMedium) {
+@media only screen and (max-width:$breakpointToLarge - 1) and (min-width:$breakpointToMedium) {
 	.masonry {
-		column-count: 3;
+		column-count:3;
 	}
 }
 
 /* Masonry on small screens */
-@media only screen and (max-width: $breakpointToMedium - 1) and (min-width: $breakpointToSmall) {
+@media only screen and (max-width:$breakpointToMedium - 1) and (min-width:$breakpointToSmall) {
 	.masonry {
-		column-count: 2;
+		column-count:2;
 	}
 }
 

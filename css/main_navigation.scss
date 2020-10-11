@@ -6,7 +6,7 @@
 }
 
 .logo a {
-	text-decoration: none;
+	text-decoration:none;
 }
 
 
@@ -88,11 +88,11 @@ input#navigation[type="checkbox"], label.hamburger {
 	// Based on https://codepen.io/marclloyd77/pen/gtypB
 	// and later on https://codepen.io/plavookac/pen/qomrMw
 
-	$menuWidth: 12rem;		//
-	$menuMargin: 0.5rem;	// Use same units so we don't need calc
-	$menuSize: 32px;
-	$speed: 200ms;
-	$nav-background: #445566;
+	$menuWidth:12rem;		//
+	$menuMargin:0.5rem;	// Use same units so we don't need calc
+	$menuSize:32px;
+	$speed:200ms;
+	$nav-background:#445566;
 
 	nav.page-menu {
 		display:block;
@@ -102,8 +102,8 @@ input#navigation[type="checkbox"], label.hamburger {
 		height:100%;
 		width:$menuWidth;
 		z-index:10;
-		transform: translateX(250px);
-		transition: transform 250ms ease-in-out;
+		transform:translateX(250px);
+		transition:transform 250ms ease-in-out;
 
 		ul {
 			width:$menuWidth;
@@ -138,23 +138,23 @@ input#navigation[type="checkbox"], label.hamburger {
 	label.hamburger {
 		display:block;
 		position:absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		top:50%;
+		transform:translateY(-50%);
 		right:$menuMargin;
 		width:$menuSize;
 		height:25px;
 		z-index:11;
-		cursor: pointer;
+		cursor:pointer;
 	}
 
 	.horizontal, .diagonal.part-2 {
-		margin-top: 5px;			// spacing between layers
+		margin-top:5px;			// spacing between layers
 	}
 
 	input#navigation[type="checkbox"] {
 
 		&:checked ~ .page-menu {
-			transform: translateX(0);
+			transform:translateX(0);
 		}
 		&:checked ~ label {
 			position:fixed;	// make sure icon doesn't scroll off of screen since whole menu is fixed
@@ -162,31 +162,31 @@ input#navigation[type="checkbox"], label.hamburger {
 			top:$menuMargin;
 		}
 		&:checked ~ label > .horizontal {
-			opacity: 0;						// fade out middle
+			opacity:0;						// fade out middle
 		}
 		&:checked ~ label > .diagonal.part-1 {
-			transform: rotate(135deg);		// animate to diagonal
-			margin-top: 10px;
+			transform:rotate(135deg);		// animate to diagonal
+			margin-top:10px;
 		}
 		&:checked ~ label > .diagonal.part-2 {
-			transform: rotate(-135deg);		// animate to diagonal
-			margin-top: -15px;
+			transform:rotate(-135deg);		// animate to diagonal
+			margin-top:-15px;
 		}
 	}
 
 	.spinner {
-		transition: all 0.3s;
-		position: relative;
-		float: left;
-		height: 5px;
-		border-radius: 2px;
-		width: 100%;
-		background-color: var(--cAccent);
+		transition:all 0.3s;
+		position:relative;
+		float:left;
+		height:5px;
+		border-radius:2px;
+		width:100%;
+		background-color:var(--cAccent);
 	}
 }
 
 a.active {
-  pointer-events: none;
-  cursor: default;
+  pointer-events:none;
+  cursor:default;
 }
 

@@ -32,10 +32,10 @@ Homepage streaming links above the fold
 	}
 
 	img {
-		display: inline-block;
-		width: 32px;
-		height: 32px;
-		padding: 0;
+		display:inline-block;
+		width:32px;
+		height:32px;
+		padding:0;
 	}
 }
 
@@ -89,7 +89,7 @@ Hero
 
 
 .hero {
-	position: relative;
+	position:relative;
 	width:100%;
 	height:auto;
 }
@@ -113,7 +113,7 @@ img.covering {
 .action-banner {
 
 	a {
-		color: var(--cInkH);
+		color:var(--cInkH);
 	}
 }
 
@@ -121,7 +121,7 @@ img.covering {
 
 	.action-banner {
 
-		position: absolute;
+		position:absolute;
 		top:0;
 		left:0;
 		right:0;
