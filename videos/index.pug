@@ -23,7 +23,7 @@ block main
 				.youtube-player(data-aos='fade-right', data-code='ixUV87pKtBg' data-title='Falling - Harry Styles cover')
 				p A benefit for COVID-19 relief from twelve musicians around the USA. This cover song can be <a href="https://www.lorenzowoodmusic.com/link/falling">streamed or downloaded</a> from Apple Music, Spotify, etc.
 
-		article
+		article.centered
 				.youtube-border
 					.youtube-player(data-aos='fade-up', data-code='TkDhR4FMHVg' data-title='Lorenzo Wood - Still Need Love (Official Lyric Video)')
 					p Written, produced, mixed, mastered, filmed, directed, edited - literally all done by me! <a href="https://www.lorenzowoodmusic.com/link/still-need-love">Stream or download here.</a>
@@ -38,7 +38,7 @@ block main
 			.youtube-border
 				.youtube-player(data-aos='fade-right', data-code='w0F0IGdHtxs' data-title='Lorenzo Wood - Jacket (Feat. Kaia)')
 
-		article
+		article.centered
 				.youtube-border
 					.youtube-player(data-aos='fade-up', data-code='JZaKGj-LSbg' data-title='Lorenzo Wood Live at Lone Tree Cemetery (highlights)')
 					p The band played at nearby cemetery's summer concert series. Here are some snippets from the performance.
@@ -62,7 +62,7 @@ block main
 				.youtube-player(data-aos='fade-right', data-code='ZMnSrxiWkBs' data-title='In The Air Tonight by Phil Collins (cover by Lorenzo Wood)')
 				p A live looping version of the Phil Collins song, recorded in one continuous shot. Programmed using Apple MainStage. It took quite a few takes to get through the whole song!
 
-		article
+		article.centered
 				.youtube-border
 					.youtube-player(data-aos='fade-up', data-code='RynQ3nswXyk' data-title='Shawn Mendes - Ruin (Lorenzo Wood Cover)')
 					p One of my favorite songs from Shawn Mendes' <i>Illuminate</i> album. One of the best videos I've put out.
@@ -78,7 +78,7 @@ block main
 				.youtube-player(data-aos='fade-right', data-code='d87LW4xjATw' data-title='Khalid - Young Dumb & Broke (Lorenzo Wood cover)')
 				p A simple live cover, with guest appearance by my dog Capo.
 
-		article
+		article.centered
 				.youtube-border
 					.youtube-player(data-aos='fade-up', data-code='VHcn_Nr4_u4' data-title='Charlie Puth - Attention (Lorenzo Wood Cover)')
 					p A full arrangement (from 2017, when I was 15 years old) of Charlie Puth's hit song. I put a lot of work into this one.
@@ -94,6 +94,6 @@ block prepend scripts
 		include ../js/youtube-min.js
 		//- FOR NOW - REPLACE MISSING VIDEO THUMBNAIL WITH OUR OWN!
 		//- EVEN NEEDED WITH CLOUDINARY BECAUSE FULL SIZE IS NOT AVAILABLE
-		|document.getElementById('video-A8vcWMXVR7I').src = 'https://img.youtube.com/vi/A8vcWMXVR7I/hqdefault.jpg';
+		//- NEEDED FOR NON-CDN ... |document.getElementById('video-A8vcWMXVR7I').src = 'https://img.youtube.com/vi/A8vcWMXVR7I/hqdefault.jpg';
 		|document.getElementById('video-A8vcWMXVR7I').style = 'top:-16.84%';
 		|AOS.init({disable: 'mobile', once: true});

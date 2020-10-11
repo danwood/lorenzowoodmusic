@@ -77,6 +77,8 @@ YouTube
 }
 .youtube-border {
 	padding:$typicalPadding;
+	max-width:$typicalPadding+720*16/9;
+	//margin:0 auto;		// can't - for some videos it makes it smaller!
 }
 
 @media only screen and (min-width:$mainBreakpoint) {
