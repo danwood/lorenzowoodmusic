@@ -3,7 +3,7 @@
 
 # TEAM
 
-    Dan Wood -- Webmaster -- @danwood
+	Dan Wood -- Webmaster -- @danwood
 
 # THANKS
 
@@ -11,17 +11,22 @@
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    HTML5 Boilerplate 6.0.1
-    Apache Server Configs, jQuery, Normalize.css
-    ImageOptim (with Guetzli)
-    Sketch and Opacity for hand-made SVG creation
-    https://www.vectorizer.io for automated SVG creation
-    https://jakearchibald.github.io/svgomg/ to compress the SVGs
-    https://pugjs.org/
-    Chrome CSS coverage tool https://developers.google.com/web/updates/2017/04/devtools-release-notes
-    CodeKit
-    GitHub deployment technique https://andytaylor.me/2012/11/03/nfs-git/
-    YouTube player https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743
-    Webp preferred solution: https://github.com/vincentorback/WebP-images-with-htaccess
+	CSS3, HTML5
+	HTML5 Boilerplate 6.0.1
+	Apache Server Configs, jQuery, Normalize.css
+	ImageOptim (with mozjpeg)
+	Sketch and Opacity for hand-made SVG creation
+	https://realfavicongenerator.net for favicons
+	https://www.vectorizer.io for automated SVG creation
+	https://jakearchibald.github.io/svgomg/ to compress the SVGs
+	https://pugjs.org/
+	Chrome CSS coverage tool https://developers.google.com/web/updates/2017/04/devtools-release-notes
+	CodeKit
+	GitHub deployment technique https://andytaylor.me/2012/11/03/nfs-git/
+	YouTube player https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743
+	GitHub deployment technique https://andytaylor.me/2012/11/03/nfs-git/
+	"Downcode" for downloading tracks with a promo code https://github.com/danwood/downcode
+	Online Convert to create webp graphics https://www.online-convert.com
+	https://www.zamzar.com/convert/pdf-to-svg/ to turn header text into SVG
+
 

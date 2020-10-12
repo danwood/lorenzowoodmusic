@@ -8,3 +8,5 @@
 
 # Should be put on server manually, not via repository
 /amplitude_tracks
+/CACHE
+.DS_Store

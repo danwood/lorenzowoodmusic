@@ -1,0 +1,90 @@
+/*
+================================================================================
+
+Colors for the whole site
+
+================================================================================
+*/
+
+:root {
+	color-scheme:light dark;
+
+	--cBanner:rgb(86, 139, 172);
+
+	--cLink:rgb(86, 139, 172);	// match the blue banner
+
+	--cLink-hover:hsl(202, 65%, 43%);
+	--cWarn:purple;
+	--cPaperH:white;
+	--cPaperM:hsl(0, 0%, 96%);
+	--cPaperL:hsl(0, 0%, 74%);
+	--cInkL:hsl(0, 0%, 38%);
+	--cInkM:hsl(0, 0%, 26%);
+	--cInkH:hsl(0, 0%, 13%);
+	--cInk:black;
+
+
+	--cDarkH:hsl(0, 0%, 13%);
+
+
+
+	/* Coolors Exported Palette - coolors.co/3a405a-aadb9b-99b2dd-ffbfc6-fff29e */
+
+	--color1:hsl(229, 22%, 29%);		// dark
+	--color2:hsl(150, 25%, 80%);
+	--color3:hsl(218, 50%, 73%);
+	--color4:hsl(353,100%, 87%);
+	--color5:hsl( 52,100%, 81%);
+	--color6:hsl(33, 100%, 91%);
+
+
+	--cAccent:hsl(33, 100%, 80%);
+	--cLogo1:hsl(33, 100%, 91%);
+
+	--cAccent-ink:hsl(33, 100%, 9%);
+}
+
+
+
+@media (prefers-color-scheme:dark) {
+
+	:root {
+		--cLink:hsl(202, 65%, 63%);
+		--cLink-hover:hsl(202, 65%, 43%);
+		--cAccent:hsl(20, 65%, 63%);
+		--cWarn:purple;
+		--cPaperH:hsl(0, 0%, 0%);
+		--cPaperM:hsl(0, 0%, 4%);
+		--cPaperL:hsl(0, 0%, 26%);
+		--cInkL:hsl(0, 0%, 62%);
+		--cInkM:hsl(0, 0%, 74%);
+		--cInkH:hsl(0, 0%, 87%);
+
+		--cDarkH:hsl(0, 0%, 4%);
+
+		--color1:hsl(229, 22%, 9%);		// dark
+		--color2:hsl(150, 25%, 20%);
+		--color3:hsl(218, 50%, 53%);
+		--color4:hsl(353,100%, 67%);
+		--color5:hsl( 52,100%, 61%);
+		--color6:hsl(33, 50%, 8%);
+
+   }
+}
+
+html { color:var(--cInkH); }
+
+a { color:var(--cLink); }
+
+.dimmer {
+	color:var(--cInkL);
+}
+
+body > main {
+	background-color:var(--cPaperH);
+}
+
+body > footer {
+	background-color:var(--cPaperL);
+	color:var(--cPaperH);
+}

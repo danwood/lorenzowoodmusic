@@ -1,5 +1,11 @@
 # www.robotstxt.org/
 
-# Allow crawling of all content
+# Allow crawling of most content
 User-agent: *
-Disallow:
+Disallow: /svg/
+Disallow: /img/*.png
+Disallow: /img/*.webp
+
+# commented this line out until crawled and properly blocked 
+#Disallow: /press/
+

@@ -1,6 +1,6 @@
-#!/usr/local/bin/php
+#!/usr/bin/php
 <?php
-require_once('classes.php');
+require_once('classes/downcode.php');
 
 $db = new DowncodeDB();
 

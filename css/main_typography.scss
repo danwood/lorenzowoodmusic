@@ -1,0 +1,28 @@
+
+// Main font. Defined at the top level; we also can use class .textual on <pre> which is normally monospaced, to override.
+
+body, pre.textual { 
+	font:16px/1.6 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, dt, .bold {
+	font-weight:800;
+}
+
+blockquote {
+	font-style:italic;
+	letter-spacing:2px;
+
+	footer {
+		font-style:normal;
+		letter-spacing:normal;
+		font-size:80%;
+	}
+}
+
+// For items on footer
+
+.widespace {
+	display:inline-block;
+	width:1.5em;
+}

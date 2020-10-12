@@ -1,0 +1,30 @@
+//- Contact page, usually not loaded as a separate page, but in case there wasn't javascript.
+
+extends ../_layout.pug
+
+block vars
+	- var pageTitle = 'Contact Us'
+	- var currentClass = 'contact'
+	- var description = 'Contact Lorenzo Wood Music'
+
+block styles
+	style
+		include ../css/page_contact.css
+
+//- REMINDER: DASH AFTER SLASH-SLASH HIDES COMMENTS FROM PUG COMPILER
+
+//-.info(style="position:absolute;top:0;left:0;width:100%;height:20px;color:red;z-index:9999")
+
+
+block main
+
+	section.contact-section
+		article.textual.clearfix
+			.side-photo
+				picture
+					source(srcset=cloudImgPrefix +"img/southshore.webp 990w" type="image/webp")
+					source(srcset=cloudImgPrefix +"img/southshore.jpg 990w, " + cloudImgPrefix +"img/southshore50.jpg 495w")
+					img(src=cloudImgPrefix + "img/southshore.jpg" loading="lazy" width="495" height="745" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
+			.next-to-side-photo
+				.next-to-side-photo-padded
+					include ../_contact.html
