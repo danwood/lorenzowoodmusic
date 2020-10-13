@@ -2880,11 +2880,11 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 0,
-		"oA": 1,
+		"hM": 1,
+		"oA": 0,
 		"oAP": "/press/shared.html",
-		"oF": 0,
-		"oS": 0
+		"oF": 1,
+		"oS": 1
 		},
 	"/press/still-need-love.php": {
 		"cB": 0,
