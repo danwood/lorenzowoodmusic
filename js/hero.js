@@ -67,7 +67,7 @@ function fullscreen(event){
 	});
 
 	// recalculate topOfMain for use by scroll arrow and hero image easter egg
-	topOfMain = d$('main').getBoundingClientRect().top;
+	topOfMain = d$('main').getBoundingClientRect().top + document.documentElement.scrollTop;
 }
 
 fullscreen(null);
