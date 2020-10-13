@@ -16,12 +16,12 @@ window.addEventListener('scroll', function() {
 });
 
 // Hide the arrow after a bit
-//setTimeout(function(){
-//	var scrollArrow = d$('#scroll-arrow');
-//	if (scrollArrow) {
-//		scrollArrow.parentNode.removeChild(scrollArrow);
-//	}
-//}, 2000);
+setTimeout(function(){
+	var scrollArrow = d$('#scroll-arrow');
+	if (scrollArrow) {
+		scrollArrow.parentNode.removeChild(scrollArrow);
+	}
+}, 4000);
 
 var downArrow = d$('.down-arrow');
 
