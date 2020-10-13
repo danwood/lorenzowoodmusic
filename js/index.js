@@ -43,7 +43,7 @@ contactLink.onclick = function() {
 // and change the image from image1 to image2 if that's specified
 
 // requires topOfMain defined in hero.js
-
+/*
 window.addEventListener('scroll', function() {
 	if (window.scrollY > topOfMain) {
 		if (! document.body.classList.contains('swapped-hero') ) {
@@ -74,7 +74,7 @@ window.addEventListener('scroll', function() {
 		document.body.classList.remove('swapped-hero');
 	}
 });
-
+*/
 
 
 
