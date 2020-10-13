@@ -2968,16 +2968,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/homepage.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/svg/homepage.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"/svg/homepage.svg.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -2985,96 +2975,6 @@
 		"oA": 0,
 		"oAP": "/svg/homepage.svg.html",
 		"oF": 0
-		},
-	"/svg/homepage/apple-music-icon-color.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/homepage/apple-music-icon-color.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/homepage/apple-music-icon-monochrome.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/homepage/apple-music-icon-monochrome.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/homepage/bandsintown-icon.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/homepage/bandsintown-icon.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/homepage/downarrow.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/homepage/downarrow.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/homepage/facebook-icon.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/homepage/facebook-icon.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/homepage/instagram-icon.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/homepage/instagram-icon.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/homepage/spotify-icon.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/homepage/spotify-icon.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/homepage/youtube-icon.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/homepage/youtube-icon.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/linkpage.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/svg/linkpage.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
 		},
 	"/svg/linkpage.svg.kit": {
 		"cB": 0,
@@ -3084,111 +2984,211 @@
 		"oAP": "/svg/linkpage.svg.html",
 		"oF": 0
 		},
-	"/svg/linkpage/amazon-music.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/linkpage/amazon-music.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/linkpage/apple-music.svg": {
+	"/svg/page_home.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/linkpage/apple-music.svg",
+		"oAP": "/svg/page_home.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/linkpage/bandcamp.svg": {
+	"/svg/page_home/apple-music-icon-color.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 1,
-		"oAP": "/svg/linkpage/bandcamp.svg",
+		"oAP": "/svg/page_home/apple-music-icon-color.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/linkpage/deezer.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/linkpage/deezer.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/linkpage/google-play.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/linkpage/google-play.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/linkpage/iheartradio.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/linkpage/iheartradio.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/svg/linkpage/itunes.svg": {
+	"/svg/page_home/apple-music-icon-monochrome.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/svg/linkpage/itunes.svg",
+		"oAP": "/svg/page_home/apple-music-icon-monochrome.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/linkpage/soundcloud.svg": {
+	"/svg/page_home/bandsintown-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/linkpage/soundcloud.svg",
+		"oA": 2,
+		"oAP": "/svg/page_home/bandsintown-icon.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/linkpage/spotify.svg": {
+	"/svg/page_home/downarrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/linkpage/spotify.svg",
+		"oA": 2,
+		"oAP": "/svg/page_home/downarrow.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/linkpage/tidal.svg": {
+	"/svg/page_home/facebook-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/linkpage/tidal.svg",
+		"oA": 2,
+		"oAP": "/svg/page_home/facebook-icon.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/linkpage/youtube-music.svg": {
+	"/svg/page_home/instagram-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
-		"oAP": "/svg/linkpage/youtube-music.svg",
+		"oA": 2,
+		"oAP": "/svg/page_home/instagram-icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_home/spotify-icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_home/spotify-icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_home/youtube-icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_home/youtube-icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/amazon-music.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/amazon-music.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/apple-music.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/apple-music.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/bandcamp.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/bandcamp.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/deezer.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/deezer.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/google-play.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/google-play.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/iheartradio.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/iheartradio.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/itunes.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/itunes.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/soundcloud.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/soundcloud.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/spotify.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/spotify.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/tidal.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/tidal.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/svg/page_link/youtube-music.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/svg/page_link/youtube-music.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
