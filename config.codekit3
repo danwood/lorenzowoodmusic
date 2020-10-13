@@ -2968,22 +2968,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/svg/homepage.svg.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/svg/homepage.svg.html",
-		"oF": 0
-		},
-	"/svg/linkpage.svg.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/svg/linkpage.svg.html",
-		"oF": 0
-		},
 	"/svg/page_home.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -2993,6 +2977,14 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"/svg/page_home.svg.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/svg/page_home.svg",
+		"oF": 2
 		},
 	"/svg/page_home/apple-music-icon-color.svg": {
 		"ft": 2097152,
@@ -3007,7 +2999,7 @@
 	"/svg/page_home/apple-music-icon-monochrome.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_home/apple-music-icon-monochrome.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3017,7 +3009,7 @@
 	"/svg/page_home/bandsintown-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_home/bandsintown-icon.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3027,7 +3019,7 @@
 	"/svg/page_home/downarrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_home/downarrow.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3037,7 +3029,7 @@
 	"/svg/page_home/facebook-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_home/facebook-icon.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3047,7 +3039,7 @@
 	"/svg/page_home/instagram-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_home/instagram-icon.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3057,7 +3049,7 @@
 	"/svg/page_home/spotify-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_home/spotify-icon.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3067,7 +3059,7 @@
 	"/svg/page_home/youtube-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_home/youtube-icon.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3084,10 +3076,18 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/svg/page_link.svg.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/svg/page_link.svg",
+		"oF": 2
+		},
 	"/svg/page_link/amazon-music.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_link/amazon-music.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3107,7 +3107,7 @@
 	"/svg/page_link/bandcamp.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_link/bandcamp.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3117,7 +3117,7 @@
 	"/svg/page_link/deezer.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_link/deezer.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3127,7 +3127,7 @@
 	"/svg/page_link/google-play.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_link/google-play.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3137,7 +3137,7 @@
 	"/svg/page_link/iheartradio.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_link/iheartradio.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3157,7 +3157,7 @@
 	"/svg/page_link/soundcloud.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_link/soundcloud.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3167,7 +3167,7 @@
 	"/svg/page_link/spotify.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_link/spotify.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3177,7 +3177,7 @@
 	"/svg/page_link/tidal.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_link/tidal.svg",
 		"oF": 0,
 		"opt": 0,
@@ -3187,7 +3187,7 @@
 	"/svg/page_link/youtube-music.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/svg/page_link/youtube-music.svg",
 		"oF": 0,
 		"opt": 0,
