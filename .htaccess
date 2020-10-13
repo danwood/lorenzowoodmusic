@@ -492,9 +492,9 @@ AddDefaultCharset utf-8
 # https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
 # https://www.owasp.org/index.php/Clickjacking
 
-# <IfModule mod_headers.c>
-#     Header set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
-# </IfModule>
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Content Security Policy (CSP)                                      |
@@ -691,13 +691,13 @@ Header unset Content-Security-Policy
 # https://www.html5rocks.com/en/tutorials/security/transport-layer-security/
 # https://blogs.msdn.microsoft.com/ieinternals/2014/08/18/strict-transport-security/
 
-# <IfModule mod_headers.c>
-#     Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
-#     # (1) or if HSTS preloading is desired (respect (2) for current requirements):
-#     # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
-#     # (4) respectively… (respect (2) for current requirements):
-#     # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" "expr=%{HTTPS} == 'on'"
-# </IfModule>
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+    # (1) or if HSTS preloading is desired (respect (2) for current requirements):
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+    # (4) respectively… (respect (2) for current requirements):
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" "expr=%{HTTPS} == 'on'"
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Reducing MIME type security risks                                  |
@@ -755,10 +755,10 @@ Header unset Content-Security-Policy
 # https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/
 # https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29
 
-# <IfModule mod_headers.c>
-#     #                           (1)    (2)
-#     Header set X-XSS-Protection "1; mode=block" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
-# </IfModule>
+<IfModule mod_headers.c>
+    #                           (1)    (2)
+    Header set X-XSS-Protection "1; mode=block" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Referrer Policy                                                    |
