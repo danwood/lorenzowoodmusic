@@ -35,8 +35,6 @@ block title
 	//- overrides generated page title used on other pages
 	
 block append links
-	link(rel="prefetch" href="//code.jquery.com")
-		//- This should be done on any page using jquery - ONLY HOME PAGE & 2AM PAGE
 	link(href=cloudRawPrefix + "css/component_aos.css" rel="stylesheet")
 	include _noscript_aos.html
 
@@ -101,31 +99,31 @@ block main
 
 			//- Try to match meta description above with text below
 
-			p(data-aos='fade').
+			p( data-aos='fade').
 				Lorenzo Wood is an award-winning musician, songwriter, producer, and vocalist from the San Francisco area. His heartfelt, honest lyrics present a personal perspective of friendships, relationships, and coming of age in the modern era of social media. His songs, rooted in the pop genre, borrow from a number of different musical styles to create a distinctive mix of real instruments and electronic sounds.
 	
-			p(data-aos='fade-left', data-aos-delay='100').
+			p( data-aos='fade-left' data-aos-delay='100').
 				In addition to recording and producing songs and videos in his home studio, Lorenzo performs solo or with a band live. With a skillset of music performance technology, he puts together unique, intricate live setups that make his performances stand out.
 
-			p(data-aos='fade-right', data-aos-delay='200').
+			p( data-aos='fade-right' data-aos-delay='200').
 				Lorenzo lists Maroon 5, Train, U2, Shawn Mendes, Owl City, and John Mayer as his initial musical influences. But now he feels his style resembles more that of artists like Bazzi, Julia Michaels, Post Malone, and Jonas Brothers.
 
-			p(data-aos='fade-left', data-aos-delay='300').
+			p( data-aos='fade-left' data-aos-delay='300').
 				Lorenzo has been performing and recording his songs since a young age. At age 13, he discovered busking, and has been performing primarily at street festivals in the San Francisco Bay Area every summer/fall since then.
 
-			p(data-aos='fade-right', data-aos-delay='400').
+			p( data-aos='fade-right' data-aos-delay='400').
 				In 2018, while releasing his first EP at the age of 15, he put together and hired a band to play the newly released songs with him on stage. He performed again 2019 with a new lineup.
 
-			p(data-aos='fade-left', data-aos-delay='500').
+			p( data-aos='fade-left' data-aos-delay='500').
 				Lorenzo has also performed as a member of several local bands. Recently he has supported Kat Van Morgan, Saint Benjamin, and others, playing whatever instruments were needed.
 
-			p(data-aos='fade-right', data-aos-delay='600').
+			p( data-aos='fade-right' data-aos-delay='600').
 				For many of his own performances and those of others, Lorenzo coordinates and runs live sound, being knowledgeable and experienced with most audio and musical equipment.
 
 
 
 	section.mailchimp-section
-		div.centered(data-aos='fade-up', data-aos-delay='300')
+		div.centered( data-aos='fade-up' data-aos-delay='300')
 			form.validate.taller(action="https://lorenzowoodmusic.us16.list-manage.com/subscribe/post?u=3fb2f947fceaaa94b99d40919&amp;id=1c68d63e9a"
 				method="post"
 				name="mc-embedded-subscribe-form"
@@ -140,7 +138,7 @@ block main
 
 
 	section.gigs
-		article.wider(data-aos='fade-up', data-aos-delay='600')
+		article.wider( data-aos='fade-up' data-aos-delay='600')
 
 			//- Bands in Town content gets loaded here from cache.
 			|<?php include 'CACHE/bandsintown.html'; ?>
@@ -164,7 +162,7 @@ block main
 				|
 				|?>">
 				
-				<div class="release-image bordered" data-aos="fade-<?php echo $reversed ? 'left' : 'right'; ?>" , data-aos-delay='200'>
+				<div class="release-image bordered" data-aos="fade-<?php echo $reversed ? 'left' : 'right'; ?>" data-aos-delay='200'>
 					<a class="aaa" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php
 					|	echo '<img loading="lazy" width="64" height="64" src="';
 					|	echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES);
@@ -179,7 +177,7 @@ block main
 					|?>
 					|</a>
 				</div>
-				div.release-text(data-aos="fade-up", data-aos-duration="1000")
+				div.release-text( data-aos="fade-up" data-aos-duration="1000")
 					h3
 						<a href="<?php echo '/link/' . htmlentities($release['slug'], ENT_QUOTES); ?>">
 							<?php echo htmlspecialchars($release['title']); ?>
@@ -222,20 +220,14 @@ block additional-html
 			svg: use(xlink:href="/svg/homepage.svg#downarrow")
 
 
-//- NOTE THAT HOME PAGE & 2AM PAGE ARE ONLY PAGES USING JQUERY
-
 block prepend scripts
-	script(
-		src="https://code.jquery.com/jquery-3.5.1.min.js"
-		integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
-		crossorigin="anonymous")
 	script(src=cloudRawPrefix + "js/aos.js")
 	script.
-		window.jQuery || document.write('<script src="js/vendor/jquery-3.5.1.min.js"><\\/script>')
 		AOS.init({disable: 'mobile', once: true});
 	script
-		include js/index-min.js
 		include js/hero-min.js
+		//- NOTE: index depends on javascript in hero to deal with scrolling hero image
+		include js/index-min.js
 		include js/youtube-min.js
 
 

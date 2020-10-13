@@ -1,47 +1,80 @@
-// REQUIREMENT: JQUERY
+// shorthand, so my selectors sort of resemble jquery and are shorter
+var d$ = document.querySelector.bind(document);
+var d$a = document.querySelectorAll.bind(document);
 
-$('.down-arrow').click(function(event) {
-	event.preventDefault();
-	$('html, body').animate({
-		scrollTop: $('.down-arrow').offset().top
-	}, 1000);
-	return false;
+var topOfMain = 0;
+
+// -----
+// ----- HERO IMAGE - SCROLL ARROW
+// -----
+
+window.addEventListener('scroll', function() {
+	var scrollArrow = d$('#scroll-arrow');
+	if (scrollArrow) {
+		scrollArrow.parentNode.removeChild(scrollArrow);
+    }
 });
 
 // Hide the arrow after a bit
-setTimeout(function(){
-	$( "#scroll-arrow" ).fadeOut( "slow", function() {
-		$('#scroll-arrow').remove();
-	});
-}, 2000);
+//setTimeout(function(){
+//	var scrollArrow = d$('#scroll-arrow');
+//	if (scrollArrow) {
+//		scrollArrow.parentNode.removeChild(scrollArrow);
+//	}
+//}, 2000);
+
+var downArrow = d$('.down-arrow');
+
+downArrow.addEventListener('click', function() {
+	setTimeout(function () {
+	window.scrollTo(0, topOfMain);
+        },0.25);	// somehow, a delay is needed
+	return false;
+});
+
+
+// -----
+// ----- HERO IMAGE - RESIZE SMARTLY
+// -----
+
+// Adding event listener so we can have multiple listeners registered
+window.addEventListener("resize",  function() {
+
+});
 
 // Responsively resize the hero image. In sweet spot of screen aspect ratio, hero is full screen.
 function fullscreen(event){
-	var width = $(window).width();
-	var height= $(window).height();
+	var width = window.innerWidth;
+	var height= window.innerHeight;
 	var fullSizeHero = false;
-	if (width/height < 0.575) height = Math.round(width/0.575); // fill iphone x/xr/xs
-	else if (width/height > 1.55) height = Math.round(width/1.55);	// 1 is square, higher is more "landscape" - find a ratio that works
-	else fullSizeHero = true;
+	if (width/height < 0.575) { height = Math.round(width/0.575); } // fill iphone x/xr/xs
+	else if (width/height > 1.55) { height = Math.round(width/1.55); }	// 1 is square, higher is more "landscape" - find a ratio that works
+	else { fullSizeHero = true; }
 
 	// Show scroll arrow if first time here and we are showing full-screen hero
-	if (fullSizeHero && !event) {
-		$('#scroll-arrow').css('display', 'block');
-	} else {
-		$('#scroll-arrow').remove();
+	var scrollArrow = d$('#scroll-arrow');
+	if (scrollArrow) {
+		if (fullSizeHero && !event) {
+			scrollArrow.style.display='block';
+		} else {
+			scrollArrow.parentNode.removeChild(scrollArrow);
+		}
 	}
 
-	jQuery('.covering').css({
-		width: width,
-		height: height
+	var elements = d$a('.covering');
+	Array.prototype.forEach.call(elements, function(el){
+		el.setAttribute("style","width:" + width + "px; height:" + height + "px");
 	});
-	//$( ".info" ).text( width + ' x ' + height + ' … ' + width/height );
+
+	// recalculate topOfMain for use by scroll arrow and hero image easter egg
+	topOfMain = d$('main').getBoundingClientRect().top;
 }
 
 fullscreen(null);
 
-// Run the function in case of window resize
-$(window).resize(function(event) {
+// Run the function in case of window resize.
+// Adding event listener so we can have multiple listeners registered
+window.addEventListener("resize",  function(event) {
 	fullscreen(event);
 });
 

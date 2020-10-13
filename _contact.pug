@@ -20,7 +20,7 @@ header
 			input(type="hidden" name="r" value="/contact/")
 			input(type="hidden" name="h" value="contact-form")
 
-			input.button(type="submit" value="Contact us")
+			input.button#contact_submit(type="submit" value="Contact us")
 			
 		<?php if (isset($_GET['msg'])) { echo '<h2>' . htmlspecialchars($_GET['msg']) . '</h2>'; } ?>
 		<?php if (isset($_GET['e'])) { echo '<h2 style="color:#C00">' . htmlspecialchars($_GET['e']) . '</h2>'; } ?>

@@ -1,6 +1,4 @@
 // From https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743
-// No jquery needed
-
 
 var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
@@ -12,7 +10,7 @@ for (var i = 0; i < youtube.length; i++) {
 	var linking = youtube[i].dataset.linking;
 
 	// experiment - try ALWAYS linking iOS
-	if (iOS) linking = true;
+	if (iOS) { linking = true; }
 
 
 

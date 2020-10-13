@@ -122,8 +122,8 @@ block append scripts
 	script.
 		//
 		document.getElementById('disclosure').addEventListener('click', function(evt) {
-			evt.preventDefault();
 			document.getElementById('disclose').classList.remove('js-hidden');
 			document.getElementById('disclosure').style.display='none';
+			return false;
 		});		
 

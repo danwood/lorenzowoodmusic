@@ -140,7 +140,7 @@ Latest Releases Section
 
 		.release-image {
 			flex-basis:22.22%;
-			z-index:99;			// make sure it goes above neighboring block
+			z-index:10;			// make sure it goes above neighboring block. But not above modals & menus.
 		}
 
 		.release-text {
