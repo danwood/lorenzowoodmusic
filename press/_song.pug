@@ -66,7 +66,7 @@ block main
 			p
 				|Please use this URL to link to "<?php echo htmlspecialchars($release['title']); ?>":
 				|
-				<a href='https://www.lorenzowoodmusic.com/link/<?php echo htmlspecialchars($release['slug']); ?>'> https://www.lorenzowoodmusic.com/link/<?php echo htmlspecialchars($release['slug']); ?></a>
+				<a href='/link/<?php echo htmlspecialchars($release['slug']); ?>'> https://www.lorenzowoodmusic.com/link/<?php echo htmlspecialchars($release['slug']); ?></a>
 			block moreLinks
 
 			div.clearfix
@@ -148,7 +148,7 @@ block main
 						p
 
 							if youtubeThumb != undefined
-								- var youtubeFullThumb = 'https://www.lorenzowoodmusic.com/press/' + youtubeThumb
+								- var youtubeFullThumb = '/press/' + youtubeThumb
 							else
 								- var youtubeFullThumb = 'https://img.youtube.com/vi/' + youtubeSlug + '/maxresdefault.jpg'
 							|Thumbnail image:
