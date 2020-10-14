@@ -324,17 +324,17 @@ Modal for Contact Form
 	z-index:20;
 	width:100%;
 	height:100%;
+
+	// Center contents
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 .modal {
-	position:fixed;
-	top:20%;
-	left:50%;
-	transform:translate(-50%, -20%);
 
-	min-width:$mainBreakpoint;
-	max-width:100%;
+	min-width:240px;
 	min-height:300px;
-	max-height:100%;
 	margin:auto auto;
 	background-color:var(--cPaperH);
 	border:5px solid black;
