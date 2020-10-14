@@ -97,7 +97,6 @@ contactForm.onsubmit = function( event ) {
 	  if (this.status >= 200 && this.status < 400) {
 	    // Success!
 	    var resp = this.response;
-	    window.alert(resp);
 	    if (this.responseText !== '') {
 			d$('#e_fm').value = '';
 			d$('#e_ms').value = '';
