@@ -24,6 +24,33 @@
 // Classes and sections replicated across multiple pages
 @import 'main_shared.scss';
 
+/* DOCUMENTING Z-INDEX SITUATION FOR WHOLE SITE
+
+-1 hero image
+
+0 link-page's background-blur and blurhash - shouldn't they be diferent layers?
+
+1 link-page's center column
+1 link-page's switch-selection ???
+2 link-page's switch label
+
+2 link-page's main-header, body>footer, page-menu
+	(should remove page-menu from this to get proper 10?)
+
+
+10 release-image  - this should go below page menu
+10 page-menu
+11 hamburger label 11
+20 cover for contact form modal
+21 contact form modal
+22 contact form close "X"
+
+
+TBD: parallax layers
+
+
+
+*/
 
 /* Debugging
 section:nth-child(even)	{background:cyan!important;}
