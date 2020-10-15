@@ -1,6 +1,6 @@
 // shorthand, so my selectors sort of resemble jquery and are shorter
 var d$ = document.querySelector.bind(document);
-var d$a = document.querySelectorAll.bind(document);
+//var d$a = document.querySelectorAll.bind(document);
 
 var topOfMain = 0;
 
@@ -57,7 +57,7 @@ function fullscreen(event){
 	var scrollArrow = d$('#scroll-arrow');
 	if (scrollArrow) {
 		if (fullSizeHero && !event) {
-			scrollArrow.style.display='block';
+			scrollArrow.classList.remove('none');
 		} else {
 			scrollArrow.parentNode.removeChild(scrollArrow);
 		}

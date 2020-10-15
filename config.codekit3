@@ -1786,7 +1786,7 @@
 		"oA": 0,
 		"oAP": "/js/blurhash-decode-min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"/js/blurhash-encode-min.js": {
@@ -1808,7 +1808,7 @@
 		"oA": 0,
 		"oAP": "/js/blurhash-encode-min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"/js/blurhash-shared-min.js": {
@@ -1830,7 +1830,7 @@
 		"oA": 0,
 		"oAP": "/js/blurhash-shared-min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"/js/hero-min.js": {
@@ -1882,7 +1882,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/page_booking-min-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1917,6 +1917,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/page_link-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/js/page_press_song-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/page_press_song-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0

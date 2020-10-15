@@ -40,7 +40,7 @@ block openGraph
 
 
 block logo
-	a.filled(href="/", class={active: currentClass === '2am'}, style="color:pink")
+	a.filled(href="/", class={active: currentClass === '2am'})
 		//- include the SVG inline since it's only used here
 		include ../svg/2am.svg
 
@@ -50,7 +50,7 @@ block logo
 
 block append banner
 	<?php if ($release) { ?>
-	.action.clearfix.safe-area-only(style="background:rgba(255,255,255,0.6)")
+	.action.clearfix.safe-area-only
 		p
 			<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
 				<img width="64" height="64" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
@@ -112,7 +112,7 @@ block main
 
 block additional-html
 
-	#scroll-arrow.scrolldown.bounce(style="display:none;stroke:white")
+	#scroll-arrow.scrolldown.bounce
 		a.down-arrow(href="#")
 			svg: use(xlink:href="/svg/page_home.svg#downarrow")
 

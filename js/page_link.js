@@ -19,11 +19,11 @@ blurImage.onload = function() {
 
 	setTimeout(function(){
 		var blurhashImage = document.getElementById('blurhashImage');
-		blurhashImage.style.display = 'none';
-		blurImage.style.display = 'block';
+		blurhashImage.classList.add('none')
+		blurImage.classList.remove('none')
 	}, 0);
 };
-blurImage.style.display = 'none';
+blurImage.classList.add('none');
 blurImage.src = "<?php $blur = CLOUDPREFIX . ($release['image_blurred'] ? 'blurred_100/' . $release['image_blurred'] : 'album_art_640/' . htmlentities($release['image'])); echo htmlentities($blur, ENT_QUOTES); ?>";
 blurImage.alt = "<?php echo htmlentities($release['title'], ENT_QUOTES); ?>";
 backgroundBlur.appendChild(blurImage);

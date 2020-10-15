@@ -213,13 +213,13 @@ block main
 //- 	span.dimmer Photo credits: Lucy Gigli
 
 block additional-html
-	#cover(style="display:none")
-		.modal#contacter(style="display:none")
+	.none#cover
+		.modal.none#contacter
 			include _contact.html
 			//- Contact form popup gets its "guts" from this file, just the HTML innards
-		#close-modal(style="display:none") &#215;
+		.none#close-modal &#215;	//- initally hidden
 
-	#scroll-arrow.scrolldown.bounce(style="display:none;stroke:purple")
+	#scroll-arrow.scrolldown.bounce
 		a.down-arrow(href="#")
 			svg: use(xlink:href="/svg/page_home.svg#downarrow")
 

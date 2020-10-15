@@ -172,3 +172,9 @@ img {
 	margin-left:auto;
 	margin-right:auto;
 }
+
+// Class that a javascript can then remove in order to show something (or install to hide)
+// Technically the same as h5bp's .hidden, but a different class to make it clear that the intent is to show/hide.
+.none {
+	display:none!important;
+}

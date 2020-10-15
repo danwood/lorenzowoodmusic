@@ -52,7 +52,7 @@ block append header
 	<?php if ($genBlurhash) { ?>
 	<input type="number" id="x" value="4" min="1" max="9" /> × <input type="number" id="y" value="4" min="1" max="9" />
 	<input type="text" id="blurhash" style="width:100%" value="Blurhash goes here" />
-	<canvas id="originalCanvas" style="display:none" width="100" height="100"></canvas>
+	<canvas class="none" id="originalCanvas" width="100" height="100"></canvas>
 	<?php } ?>
 
 
@@ -109,7 +109,7 @@ block main
 		//- This gets loaded with Javascript
 		<img id="blurhashImage" />
 		//- Hidden working canvas
-		<canvas id="outputCanvas" style="display:none" width="32" height="32"></canvas>
+		<canvas id="outputCanvas" class="none" width="32" height="32"></canvas>
 
 
 	.background-blur#background-blur

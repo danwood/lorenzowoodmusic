@@ -16,7 +16,7 @@ recentPerformances.innerHTML = '<a id="recent-link" href="#">& Recent</a>';
 var recentLink = d$('#recent-link');
 recentLink.onclick = function() {
 	d$('.bit-header').textContent = 'Recent & Upcoming Performances';
-	d$('.bit-past').style.display = '';
+	d$('.bit-past').classList.remove('none');
 	return false;
 };
 
@@ -28,9 +28,9 @@ recentLink.onclick = function() {
 
 var contactLink = d$('.contact-link');
 contactLink.onclick = function() {
-	d$('#cover').style.display = '';
-	d$('#contacter').style.display = '';
-	d$('#close-modal').style.display = '';
+	d$('#cover').classList.remove('none');
+	d$('#contacter').classList.remove('none');
+	d$('#close-modal').classList.remove('none');
 	return false;
 };
 
@@ -96,7 +96,6 @@ contactForm.onsubmit = function( event ) {
 	request.onload = function() {
 	  if (this.status >= 200 && this.status < 400) {
 	    // Success!
-	    var resp = this.response;
 	    if (this.responseText !== '') {
 			d$('#e_fm').value = '';
 			d$('#e_ms').value = '';
@@ -104,20 +103,20 @@ contactForm.onsubmit = function( event ) {
 			d$('#close-modal').click();	// might not be found if this is not on the homepage modal
 			setTimeout(function(){ window.alert("Your message was sent. You should hear back from us soon!"); },0);
 		} else {
-			d$('#contact_submit').style.display='none';	// hide submit button so message can be copied
+			d$('#contact_submit').classList.add('none');	// hide submit button so message can be copied
 			window.alert('RESPONSE ERROR. Sorry, but the contact form submission did not work as expected.');
 		}
 
 	  } else {
 	    // We reached our target server, but it returned an error
-		d$('#contact_submit').style.display='none';	// hide submit button so message can be copied
+		d$('#contact_submit').classList.add('none');	// hide submit button so message can be copied
 		window.alert('STATUS ERROR. ' + this.response + ' ' + this.status);
 
 	  }
 	};
 
 	request.onerror = function() {
-		d$('#contact_submit').style.display='none';	// hide submit button so message can be copied
+		d$('#contact_submit').classList.add('none');	// hide submit button so message can be copied
 		window.alert('REQUEST ERROR. ' + this.response + ' ' + this.status);
 	};
 
@@ -127,9 +126,9 @@ contactForm.onsubmit = function( event ) {
 var closeModal = d$('#close-modal');
 
 closeModal.onclick = function() {
-	d$('#cover').style.display='none';
-	d$('#close-modal').style.display='none';	// TODO fade out all these
-	d$('#contacter').style.display='none';
+	d$('#cover').classList.remove('none');
+	d$('#close-modal').classList.remove('none');	// TODO fade out all these
+	d$('#contacter').classList.remove('none');
 };
 
 
