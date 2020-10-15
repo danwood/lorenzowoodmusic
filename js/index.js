@@ -126,9 +126,9 @@ contactForm.onsubmit = function( event ) {
 var closeModal = d$('#close-modal');
 
 closeModal.onclick = function() {
-	d$('#cover').classList.remove('none');
-	d$('#close-modal').classList.remove('none');	// TODO fade out all these
-	d$('#contacter').classList.remove('none');
+	d$('#cover').classList.add('none');
+	d$('#close-modal').classList.add('none');	// TODO fade out all these
+	d$('#contacter').classList.add('none');
 };
 
 
