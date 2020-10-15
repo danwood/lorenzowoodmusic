@@ -30,8 +30,8 @@ $artistURL = $artist['url'];
 $artistName = $artist['name'];
 $artistNameWithoutMusic = preg_replace('/ Music$/', '', $artistName);
 
-$oneYearAgo = date('Y-m-d', strtotime('-1 year'));
-$oneYearAhead = date('Y-m-d', strtotime('+1 year'));
+$periodPast = date('Y-m-d', strtotime('-18 months'));			// TODO : Make it be 1 year once there are some recent events again.
+$periodFuture = date('Y-m-d', strtotime('+1 year'));
 $thisYear = date('Y');
 
 if (TRUE || $artist['upcoming_event_count']) {
@@ -44,7 +44,7 @@ if (TRUE || $artist['upcoming_event_count']) {
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('accept: application/json'));
 
 	$url = 'https://rest.bandsintown.com/artists/Lorenzo%20Wood%20Music/events?app_id=' . API_KEY
-		. '&date=' . $oneYearAgo . ',' . $oneYearAhead;
+		. '&date=' . $periodPast . ',' . $periodFuture;
 	curl_setopt($ch, CURLOPT_URL, $url);
 
 	error_log($url);
@@ -66,13 +66,12 @@ if (TRUE || $artist['upcoming_event_count']) {
 		$url = $event['url'];
 		$dateTime = strtotime($event['datetime']);
 		$year = date('Y', $dateTime);
-		$month_day = ($year == $thisYear) ? date('M d', $dateTime) : date('M d, Y', $dateTime);
+		$month_day = ($year == $thisYear) ? date('M j', $dateTime) : date('M j, Y', $dateTime);
 		$venue = trim($event['venue']['name']);
 		$city_state = $event['venue']['city'] . ', ' . $event['venue']['region'];
 		$past = ($dateTime < time())
 ?>
-<div class='bit-row <?php echo ($past ? 'bit-past' : 'bit-upcoming'); ?> clearfix'
-	<?php if ($past) { echo ' style="display:none"'; } ?>>
+<div class='bit-row <?php echo ($past ? 'bit-past' : 'bit-upcoming'); ?> clearfix <?php if ($past) { echo ' none'; } ?>'>
 	<?php if (!$past) { echo '<a href="' . htmlspecialchars($url) . '">'; } ?>
 		<span class='bit-date'><?php echo htmlspecialchars($month_day); ?></span>
 		<span class='bit-venue'><?php echo htmlspecialchars($venue); ?></span>

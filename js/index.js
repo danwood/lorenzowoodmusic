@@ -16,7 +16,10 @@ recentPerformances.innerHTML = '<a id="recent-link" href="#">& Recent</a>';
 var recentLink = d$('#recent-link');
 recentLink.onclick = function() {
 	d$('.bit-header').textContent = 'Recent & Upcoming Performances';
-	d$('.bit-past').classList.remove('none');
+	var pastEvents = d$a('.bit-past');
+	Array.prototype.forEach.call(pastEvents, function(image){
+		image.classList.remove('none');
+	});
 	return false;
 };
 
