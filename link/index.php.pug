@@ -377,67 +377,67 @@ block prepend scripts
 	<?php if ($genBlurhash) { ?>
 	script
 		include ../js/blurhash-encode-min.js
-	script.
-		var sourceImageElement = document.getElementById("blurry");
-		var componentXElement = document.getElementById("x");
-		var componentYElement = document.getElementById("y");
-		var blurhashElement = document.getElementById("blurhash");
-		var originalCanvas = document.getElementById("originalCanvas");
-		var outputCanvas = document.getElementById("outputCanvas");
+		.
+			var sourceImageElement = document.getElementById("blurry");
+			var componentXElement = document.getElementById("x");
+			var componentYElement = document.getElementById("y");
+			var blurhashElement = document.getElementById("blurhash");
+			var originalCanvas = document.getElementById("originalCanvas");
+			var outputCanvas = document.getElementById("outputCanvas");
 
-		function render() {
-			var blurhash = blurhashElement.value;
-			if (blurhash) {
-				var pixels = decode(blurhash, 32, 32);
-				if (pixels) {
-					var ctx = outputCanvas.getContext("2d");
-					var imageData = new ImageData(pixels, 32, 32);
-					ctx.putImageData(imageData, 0, 0);
+			function render() {
+				var blurhash = blurhashElement.value;
+				if (blurhash) {
+					var pixels = decode(blurhash, 32, 32);
+					if (pixels) {
+						var ctx = outputCanvas.getContext("2d");
+						var imageData = new ImageData(pixels, 32, 32);
+						ctx.putImageData(imageData, 0, 0);
 
 
-					dataUrl = outputCanvas.toDataURL();
-					sourceImageElement.src = dataUrl;
+						dataUrl = outputCanvas.toDataURL();
+						sourceImageElement.src = dataUrl;
+					}
 				}
 			}
-		}
 
-		// Re-render if we change the blurhash value
-		blurhashElement.addEventListener("keyup", render);
+			// Re-render if we change the blurhash value
+			blurhashElement.addEventListener("keyup", render);
 
-		function clamp(n) {
-			return Math.min(9, Math.max(1, n));
-		}
-
-		function doEncode() {
-			var componentX = clamp(+componentXElement.value);
-			var componentY = clamp(+componentYElement.value);
-
-			var ctx_1 = originalCanvas.getContext("2d");
-			var imageData = ctx_1.getImageData(0, 0, originalCanvas.width, originalCanvas.height);
-			var blurhash = encode(imageData.data, imageData.width, imageData.height, componentX, componentY);
-			blurhashElement.value = blurhash;
-
-			// Immediately render now that we have a blurhash value
-			render();
-		};
-
-		componentXElement.addEventListener("change", doEncode);
-		componentYElement.addEventListener("change", doEncode);
-
-		var loaded = false;
-
-		// As soon as real background image is loaded, put it into the canvas.
-		sourceImageElement.onload = function () {
-			if (!loaded) {
-				var ctx_1 = originalCanvas.getContext("2d");
-
-				ctx_1.drawImage(sourceImageElement, 0, 0, originalCanvas.width, originalCanvas.height);
-
-				doEncode();
-
-				loaded = true;
+			function clamp(n) {
+				return Math.min(9, Math.max(1, n));
 			}
-		};
+
+			function doEncode() {
+				var componentX = clamp(+componentXElement.value);
+				var componentY = clamp(+componentYElement.value);
+
+				var ctx_1 = originalCanvas.getContext("2d");
+				var imageData = ctx_1.getImageData(0, 0, originalCanvas.width, originalCanvas.height);
+				var blurhash = encode(imageData.data, imageData.width, imageData.height, componentX, componentY);
+				blurhashElement.value = blurhash;
+
+				// Immediately render now that we have a blurhash value
+				render();
+			};
+
+			componentXElement.addEventListener("change", doEncode);
+			componentYElement.addEventListener("change", doEncode);
+
+			var loaded = false;
+
+			// As soon as real background image is loaded, put it into the canvas.
+			sourceImageElement.onload = function () {
+				if (!loaded) {
+					var ctx_1 = originalCanvas.getContext("2d");
+
+					ctx_1.drawImage(sourceImageElement, 0, 0, originalCanvas.width, originalCanvas.height);
+
+					doEncode();
+
+					loaded = true;
+				}
+			};
 
 
 	<?php } ?>
