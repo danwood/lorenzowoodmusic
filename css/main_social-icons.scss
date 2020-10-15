@@ -94,7 +94,7 @@
 	}
 
 	// Make the logo come up next to the hamburger menu
-	.logo svg {
+	.banner svg {
 		max-width:75%;
 	}
 
@@ -117,16 +117,4 @@
 		margin-left:16vw;
 	}
 
-}
-
-
-/*
-----------------------------------------
-Social Icons on home page only
-----------------------------------------
-*/
-
-.icons.absolute {
-	position:absolute;
-	bottom:0; left:0; right:0; /* should match with height of nav */
 }

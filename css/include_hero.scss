@@ -5,26 +5,69 @@
 
 HERO kinds of classes.  For actual Home page, and the 2AM home page.
 
+header (.covering) - relative, to be container for children
+	top
+		.banner (on every page) - static flow
+		.action
+	hero
+		img - absolute OR fixed
+	icons (homepage only, but specify styling here for clarity) - absolute at bottom
+	scrolldown - absolute at bottom
+
 ================================================================================
 */
 
+$switchover-ratio-percent: 140;	// emperical switchover ratio where it's a seamless transition.
 
-.icons-header svg {
-	fill:var(--color6);
+
+/*
+----------------------------------------
+Header
+----------------------------------------
+*/
+
+header.covering {
+	position:relative;	// container for absolute-positioned icons
+
+	@media only screen and (max-aspect-ratio: $switchover-ratio-percent#{/100}) {	// it's special for portrait - square - slightly landscape
+
+		width:100vw;		// default to fill entire display
+		height:100vh;
+	}
 }
 
 /*
 ----------------------------------------
-Homepage streaming links above the fold
+Top
 ----------------------------------------
 */
 
-.action-banner {
+
+.top {
+	position:absolute;	// container for absolute-positioned icons
+	left:0;
+	right:0;
+	top:0;
+
+	@media only screen and (max-aspect-ratio: $switchover-ratio-percent#{/100}) {	// it's special for portrait - square - slightly landscape
+
+		position:static;
+	}
+}
+
+/*
+----------------------------------------
+Action Banner
+----------------------------------------
+*/
+
+.action {
 	text-align:center;
 	a {
 		padding:0 8px;
 		display:inline-block;
 		text-decoration:none;
+		color:var(--cInkH);
 
 		b {
 			text-decoration:underline
@@ -37,21 +80,84 @@ Homepage streaming links above the fold
 		height:32px;
 		padding:0;
 	}
+
+	position:relative;
+	top:0;
+	left:0;
+	right:0;
+
+	@media only screen and (max-aspect-ratio: $switchover-ratio-percent#{/100}) {	// it's special for portrait - square - slightly landscape
+		position:static;	// just go below the banner
+	}
+
+	// Hide action banner entirely on tiny display
+	@media only screen and (max-width:270px) {
+		display:none;
+	}
+
 }
 
-@media only screen and (max-width:270px) {
-	.action-banner {
-		display:none!important;
+
+
+
+/*
+----------------------------------------
+Image
+----------------------------------------
+*/
+
+img.hero-image {		// wide image, but not taking up whole display
+	width:100vw;
+}
+
+
+@media only screen and (max-aspect-ratio: $switchover-ratio-percent#{/100}) {	// it's special for portrait - square - slightly landscape
+
+	img.covering {
+		position:fixed;
+		object-fit:cover;
+		object-position:50% 75%;
+		top:0;
+		z-index:-1;
+
+		width:100vw;		// default to fill entire display
+		height:100vh;
 	}
+}
+
+// HACKS to deal with really complicated logic of making enough room not to get face covered up!
+
+img.covering {
+	@media only screen and (max-width:800px) and (max-height:550px) {
+		border-top:3em solid var(--cBanner);
+	}
+
+		@media only screen and (max-width:600px) and (max-height:700px) {
+		border-top:4em solid var(--cBanner);		// MORE room since it's probably two lines
+	}
+}
+
+/*
+----------------------------------------
+Icons
+----------------------------------------
+*/
+
+.icons-header svg {
+	fill:var(--color6);
+}
+
+.icons.overlapping {
+	position:absolute;
+	bottom:0; left:0; right:0; /* should match with height of nav */
 }
 
 
 /*
 ----------------------------------------
-Down arrow only below full page hero
+Scrolldown
 ----------------------------------------
 */
-
 
 .scrolldown {
 	position:absolute;
@@ -78,53 +184,6 @@ Down arrow only below full page hero
 	}
 	60% {
 		transform:translateY(-15px);
-	}
-}
-
-/*
-----------------------------------------
-Hero
-----------------------------------------
-*/
-
-
-.hero {
-	position:relative;
-	width:100%;
-	height:auto;
-}
-.hero-image {
-	width:100%;
-}
-img.covering {
-	object-fit:cover;
-	object-position:50% 75%;
-	top:0;
-	z-index:-1;
-
-	@media only screen and (max-width:$mainBreakpoint - 1) {
-		border-top:3em solid var(--cBanner);		// make some room for the .action-banner – give it a solid color top border 
-	}
-}
-.js img.covering {
-	position:fixed;
-}
-
-.action-banner {
-
-	a {
-		color:var(--cInkH);
-	}
-}
-
-@media only screen and (min-width:$mainBreakpoint) {
-
-	.action-banner {
-
-		position:absolute;
-		top:0;
-		left:0;
-		right:0;
 	}
 }
 

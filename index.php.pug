@@ -52,23 +52,26 @@ block styles
 
 //-.info(style="position:absolute;top:0;left:0;width:100%;height:20px;color:red;z-index:9999")
 
+block append banner
+	<?php if ($release) { ?>
+	.action.clearfix.safe-area-only
+		p
+			<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
+				<img loading="lazy" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" width="64" height="64" />
+			</a>
+			span <?php echo htmlspecialchars( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
+				| &nbsp;
+			b
+				<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
+	<?php } ?>
+
+//- header: based on herostyle value, may be .covering class
 block append header
 	.hero
-		<?php if ($release) { ?>
-		.action-banner.clearfix.safe-area-only
-			p
-				<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
-					<img loading="lazy" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" width="64" height="64" />
-				</a>
-				span <?php echo htmlspecialchars( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
-					| &nbsp;
-				b
-					<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
-		<?php } ?>
 
 		img.hero-image.covering.swapping-image(srcset=cloudImgPrefix + "img/banner1_giant.jpg 2560w, " + cloudImgPrefix + "img/banner1_big.jpg 1920w, " + cloudImgPrefix + "img/banner1_medium.jpg 960w, " + cloudImgPrefix + "img/banner1_small.jpg 640w" sizes="100vw" width="960" height="674" src=cloudImgPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
 
-	.icons.icons-header.absolute.icons-5.safe-area-only
+	.icons.icons-header.overlapping.icons-5.safe-area-only
 		.icon
 			a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 				svg: use(xlink:href="/svg/page_home.svg#instagram")

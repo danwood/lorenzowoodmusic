@@ -48,20 +48,21 @@ block logo
 
 //-.info(style="position:absolute;top:0;left:0;width:100%;height:20px;color:red;z-index:9999")
 
+block append top
+	<?php if ($release) { ?>
+	.action.clearfix.safe-area-only(style="background:rgba(255,255,255,0.6)")
+		p
+			<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
+				<img width="64" height="64" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
+			</a>
+			span <?php echo htmlspecialchars( $now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New') . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
+				| &nbsp;
+			b
+				<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
+	<?php } ?>
+
 block append header
 	.hero
-
-		<?php if ($release) { ?>
-		.action-banner.clearfix.safe-area-only(style="background:rgba(255,255,255,0.6)")
-			p
-				<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
-					<img width="64" height="64" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
-				</a>
-				span <?php echo htmlspecialchars( $now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New') . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
-					| &nbsp;
-				b
-					<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
-		<?php } ?>
 
 		picture
 			source(srcset=cloudImgPrefix + "img/2am.webp 1920w" type="image/webp" sizes="100vw")

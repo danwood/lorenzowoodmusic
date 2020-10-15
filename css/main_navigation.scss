@@ -1,16 +1,16 @@
+$hamburger-breakpoint:750px;
 
-
-.logo {
+.banner {
 	background:#000;
 	position:relative;
 }
 
-.logo a {
+.banner a {
 	text-decoration:none;
 }
 
 
-.logo h1 {
+.banner h1 {
 	margin:0;
 	padding:0.5rem 0 0 1rem;
 	display:inline-block;
@@ -35,9 +35,9 @@ input#navigation[type="checkbox"], label.hamburger {
 
 // ######## FULL SCREEN NAVIGATION #######
 
-@media only screen and (min-width:$mainBreakpoint) {
+@media only screen and (min-width:$hamburger-breakpoint) {
 
-	// similar to action-banner ?
+	// similar to action banner ?
 
 	nav.page-menu {
 		display:block;
@@ -81,7 +81,7 @@ input#navigation[type="checkbox"], label.hamburger {
 // ######## HAMBURGER MENU NAVIGATION #######
 
 
-@media only screen and (max-width:($mainBreakpoint - 1px)) {
+@media only screen and (max-width:($hamburger-breakpoint - 1px)) {
 
 
 	/* ===== Navigation ===== */

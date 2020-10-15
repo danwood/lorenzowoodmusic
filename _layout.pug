@@ -40,36 +40,39 @@ html(class="no-js", lang="en-us")
 		<![endif]-->
 
 
-		header#main-header(class=herostyle)
+		header(class=herostyle)
 			block header
 
-				.logo
-					block logo
-						a(href="/", class={active: currentClass === 'home'})
-							h1 Lorenzo Wood
+				block top
+					.top
+						block banner
+							.banner
+								block logo
+									a(href="/", class={active: currentClass === 'home'})
+										h1 Lorenzo Wood
 
-					//- Hamburger Menu
-					input#navigation(type="checkbox")
-					label.hamburger(for="navigation")
-						span.spinner.diagonal.part-1
-						span.spinner.horizontal
-						span.spinner.diagonal.part-2
+								//- Hamburger Menu
+								input#navigation(type="checkbox")
+								label.hamburger(for="navigation")
+									span.spinner.diagonal.part-1
+									span.spinner.horizontal
+									span.spinner.diagonal.part-2
 
-					mixin navLink(link, name)
-						li: a(
-							href=link
-							class={active: name === currentClass}
-						) #{name}
+								mixin navLink(link, name)
+									li: a(
+										href=link
+										class={active: name === currentClass}
+									) #{name}
 
-					nav.page-menu
-						ul
-							+navLink('/', 'home')
-							+navLink('/photos/', 'photos')
-							+navLink('/videos/', 'videos')
-							+navLink('/booking/', 'booking')
-							+navLink('/2am-in-the-basement/', '2am')
-							//- +navLink('/studio/', 'studio')
-							//- +navLink('/projects/', 'projects')
+								nav.page-menu
+									ul
+										+navLink('/', 'home')
+										+navLink('/photos/', 'photos')
+										+navLink('/videos/', 'videos')
+										+navLink('/booking/', 'booking')
+										+navLink('/2am-in-the-basement/', '2am')
+										//- +navLink('/studio/', 'studio')
+										//- +navLink('/projects/', 'projects')
 
 
 

@@ -1,7 +1,7 @@
 @import 'include_constants';
 
 // Make sure header, footer are above the blurred background
-header#main-header, body>footer, .page-menu {
+body>header, body>footer, .page-menu {
 	z-index:2;
 }
 body>footer {
