@@ -225,9 +225,7 @@ block additional-html
 
 block prepend scripts
 	script(src=cloudRawPrefix + "js/aos.js")
-	script.
-		AOS.init({disable: 'mobile', once: true});
-	script
+	script AOS.init({disable:'mobile',once:true});
 		include js/hero-min.js
 		//- NOTE: index depends on javascript in hero to deal with scrolling hero image
 		include js/index-min.js

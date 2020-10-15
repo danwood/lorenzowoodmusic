@@ -1899,28 +1899,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/js/page_link-blurhash-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/page_link-blurhash-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/js/page_link-generate-blurhash.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/page_link-generate-blurhash-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"/js/page_link-min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1939,6 +1917,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/page_link-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/js/page_press_song.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/page_press_song-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
