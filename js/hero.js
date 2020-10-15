@@ -7,27 +7,23 @@ var d$ = document.querySelector.bind(document);
 // ----- HERO IMAGE - SCROLL ARROW
 // -----
 
-window.addEventListener('scroll', function() {
-	var scrollArrow = d$('#scroll-arrow');
+function hideScrollArrow() {
+	var scrollArrow = d$('.scrolldown');
 	if (scrollArrow) {
 		scrollArrow.parentNode.removeChild(scrollArrow);
     }
-});
+}
+
+window.addEventListener('scroll', hideScrollArrow);
 
 // Hide the arrow after a bit
-setTimeout(function(){
-	var scrollArrow = d$('#scroll-arrow');
-	if (scrollArrow) {
-		scrollArrow.parentNode.removeChild(scrollArrow);
-	}
-}, 4000);
+setTimeout(hideScrollArrow, 4000);
 
-var downArrow = d$('.down-arrow');
-
-downArrow.addEventListener('click', function() {
+d$('.scrolldown').addEventListener('click', function() {
 	setTimeout(function () {
-	var topOfMain = d$('main').getBoundingClientRect().top + document.documentElement.scrollTop;
-	window.scrollTo(0, topOfMain);
-        },0.25);	// somehow, a delay is needed
+		var topOfMain = d$('main').getBoundingClientRect().top + document.documentElement.scrollTop;
+		window.scrollTo(0, topOfMain);
+		// TODO: detect if smooth option is available
+       },0.25);	// somehow, a delay is needed
 	return false;
 });

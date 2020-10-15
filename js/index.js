@@ -42,9 +42,8 @@ contactLink.onclick = function() {
 // turn off any specified grayscale filter to make it color
 // and change the image from image1 to image2 if that's specified
 
-// requires topOfMain defined in hero.js
-
 window.addEventListener('scroll', function() {
+	var topOfMain = d$('main').getBoundingClientRect().top + document.documentElement.scrollTop;
 	if (window.scrollY > topOfMain) {
 		if (! document.body.classList.contains('swapped-hero') ) {
 

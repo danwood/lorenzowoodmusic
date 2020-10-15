@@ -159,17 +159,31 @@ Scrolldown
 ----------------------------------------
 */
 
+// Default to not showing scrolldown arrow
 .scrolldown {
-	position:absolute;
-	bottom:0;
-	width:100%;
-	text-align:center;
+	display:none;
+}
 
-	svg {
-		width:24px;
-		height:24px;
+// When we have javacript, and on the special aspect ratio, then show it.
+
+@media only screen and (max-aspect-ratio: $switchover-ratio-percent#{/100}) {	// it's special for portrait - square - slightly landscape
+
+	.js .scrolldown {
+
+		display:block;
+		position:absolute;
+		bottom:0;
+		width:100%;
+		text-align:center;
+
+		svg {
+			width:24px;
+			height:24px;
+		}
 	}
 }
+
+
 
 .bounce {
 	animation:bounce 2s infinite;
