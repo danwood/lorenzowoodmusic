@@ -370,10 +370,10 @@ block prepend scripts
 		include ../js/youtube-min.js
 		include ../js/blurhash-shared-min.js
 		include ../js/blurhash-decode-min.js
-		|var blurhashData = '<?php echo htmlspecialchars($release['blurhash']); ?>';
+		|var blurhashData='<?php echo htmlspecialchars($release['blurhash']); ?>';
 		include ../js/page_link-min.js
 
-
+	//- Don't bother do do minimized Javascript - this isn't generally included except for ?blurhash=1 to generate code.
 	<?php if ($genBlurhash) { ?>
 	script
 		include ../js/blurhash-encode-min.js
