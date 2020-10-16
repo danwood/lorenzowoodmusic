@@ -666,7 +666,7 @@ AddDefaultCharset utf-8
 #     project dependencies, build scripts, etc.).
 
 <IfModule mod_authz_core.c>
-    <FilesMatch "(^#.*#|\.(pug|scss|bak|conf|dist|fla|in[ci]|log|orig|psd|sh|sql|sw[op])|~)$">
+    <FilesMatch "(^#.*#|\.(codekit3|kit|map|md|opacity|sublime-project|pug|scss|bak|conf|dist|fla|in[ci]|log|orig|psd|sh|sql|sw[op])|~)$">
         Require all denied
     </FilesMatch>
 </IfModule>
