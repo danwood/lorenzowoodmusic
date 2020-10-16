@@ -1,1 +1,1 @@
-document.getElementById("disclosure").addEventListener("click",(function(){return document.getElementById("disclose").classList.remove("js-hidden"),document.getElementById("disclosure").classList.add("none"),!1}));
+document.getElementById("disclosure").addEventListener("click",(function(e){return document.getElementById("disclose").classList.remove("js-none"),document.getElementById("disclosure").classList.add("none"),e.preventDefault(),!1}));

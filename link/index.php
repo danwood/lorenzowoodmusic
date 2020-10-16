@@ -60,7 +60,7 @@ if ($has_radio_edit && $has_explicit) { ?> <div class="switch"> <input type="rad
 		echo 'onclick="window.location=\'' . baseURL() . '/link/' 
 			. htmlentities($release['slug'] . '-radio-edit', ENT_QUOTES) 
 			. '\'"'; 
-	} ?> >Radio Edit</label> <span class="switch-selection"></span> </div> <?php } ?> </div><div class="js-hidden"><?php
+	} ?> >Radio Edit</label> <span class="switch-selection"></span> </div> <?php } ?> </div><div class="js-none"><?php
 if ($has_radio_edit && $has_explicit) { ?> <?php
 	if (!$is_explicit) {
 		echo "<a href='" . baseURL() . "/link/"

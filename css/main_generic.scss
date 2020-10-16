@@ -116,7 +116,7 @@ section.unpadded {
 
 /*
 ----------------------------------------
-JS detection
+JS detection & management
 ----------------------------------------
 */
 
@@ -126,9 +126,16 @@ JS detection
 .js .js-warning {			// For warning that JS is required, hide if JS is available
 	display:none;
 }
-.js .js-hidden {			// Content that is initially hidden if JS is available. (Remove class to reveal.)
+.js .js-none {			// Content that is initially hidden if JS is available. (Remove class to reveal.)
 	display:none;
 }
+
+// Class that a javascript can then remove in order to show something (or install to hide)
+// Technically the same as h5bp's .hidden, but a different class to make it clear that the intent is to show/hide.
+.none {
+	display:none!important;
+}
+
 .no-js p.js-warning {
 	padding:0.5rem 1rem;
 	margin:0;
@@ -173,8 +180,3 @@ img {
 	margin-right:auto;
 }
 
-// Class that a javascript can then remove in order to show something (or install to hide)
-// Technically the same as h5bp's .hidden, but a different class to make it clear that the intent is to show/hide.
-.none {
-	display:none!important;
-}
