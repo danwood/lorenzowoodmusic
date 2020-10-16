@@ -1336,6 +1336,19 @@
 		"oS": 3,
 		"sct": 0
 		},
+	"/css/page_press_song.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/page_press_song.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 0
+		},
 	"/favicon-16x16.png": {
 		"ft": 32768,
 		"iS": 753,
@@ -1756,13 +1769,13 @@
 		"oF": 2,
 		"oS": 1
 		},
-	"/js/aos.js": {
+	"/js/aos-min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/js/aos-min.js",
+		"oAP": "/js/aos-min-min.js",
 		"oF": 1,
 		"sC": 1,
 		"tS": 0

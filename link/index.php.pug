@@ -1,52 +1,53 @@
 extends ../_layout.pug
 
 block prelude
-	|<?php
-	|
-	|require_once('../classes/downcode.php');
-	|$db = new DowncodeDB();
-	|$slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
-	|$genBlurhash = isset($_GET['blurhash']);
-	|
-	|if (empty($slug)) {
-	|   header('HTTP/1.0 404 Not Found');
-	|   readfile('../404.html');
-	|   exit();
-	|}
-	|
-	|$now = new DateTime(isset($_GET['ymd']) ? $_GET['ymd'] : 'now');
-	|$releaseDate = $now;   // default to now, so it should show up as released
-	|$releases = $db->releasesExtendedForSlug($slug);
-	|if (!$releases) {
-	|   header('HTTP/1.0 404 Not Found');
-	|   readfile('../404.html');
-	|   exit();
-	|}
-	|$release = $releases[0];
-	|
-	|$has_radio_edit = false;
-	|$has_explicit = false;
-	|foreach($releases as $r) {
-	|	if ($r['variation_id'] == 2) { $has_radio_edit = true; }
-	|	if ($r['variation_id'] == 1) { $has_explicit = true; }
-	|}
-	|$is_explicit = $release['variation_id'] == 1;	// is *this* page marked explicit?
-	|$longTitle = $release['title'];
-	|
-	|if (!empty($release['featuring'])) { $longTitle .= ' [feat. ' . $release['featuring'] . ']'; }
-	|$longTitle .= ' - by ' . $release['artist_name'];
-	|
-	|$descriptionHTML = $release['description_html'];
-	|$whereEndParagraph = strpos($descriptionHTML, '</p>');
-	|if (FALSE !== $whereEndParagraph) { $descriptionHTML = substr($descriptionHTML, 0, $whereEndParagraph+strlen('</p>')); }
-	|$descriptionText = strip_tags($descriptionHTML);
-	|
-	|$releaseDateString = NULL;
-	|if (!empty($release['release_date'])) {
-	|	$releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
-	|	if ($now < $releaseDate) $releaseDateString = $releaseDate->format('l, F jS');
-	|}
-	|?>
+	.
+		<?php
+		
+		require_once('../classes/downcode.php');
+		$db = new DowncodeDB();
+		$slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
+		$genBlurhash = isset($_GET['blurhash']);
+		
+		if (empty($slug)) {
+			header('HTTP/1.0 404 Not Found');
+			readfile('../404.html');
+			exit();
+		}
+		
+		$now = new DateTime(isset($_GET['ymd']) ? $_GET['ymd'] : 'now');
+		$releaseDate = $now;   // default to now, so it should show up as released
+		$releases = $db->releasesExtendedForSlug($slug);
+		if (!$releases) {
+		   header('HTTP/1.0 404 Not Found');
+		   readfile('../404.html');
+		   exit();
+		}
+		$release = $releases[0];
+		
+		$has_radio_edit = false;
+		$has_explicit = false;
+		foreach($releases as $r) {
+			if ($r['variation_id'] == 2) { $has_radio_edit = true; }
+			if ($r['variation_id'] == 1) { $has_explicit = true; }
+		}
+		$is_explicit = $release['variation_id'] == 1;	// is *this* page marked explicit?
+		$longTitle = $release['title'];
+		
+		if (!empty($release['featuring'])) { $longTitle .= ' [feat. ' . $release['featuring'] . ']'; }
+		$longTitle .= ' - by ' . $release['artist_name'];
+		
+		$descriptionHTML = $release['description_html'];
+		$whereEndParagraph = strpos($descriptionHTML, '</p>');
+		if (FALSE !== $whereEndParagraph) { $descriptionHTML = substr($descriptionHTML, 0, $whereEndParagraph+strlen('</p>')); }
+		$descriptionText = strip_tags($descriptionHTML);
+		
+		$releaseDateString = NULL;
+		if (!empty($release['release_date'])) {
+			$releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
+			if ($now < $releaseDate) $releaseDateString = $releaseDate->format('l, F jS');
+		}
+		?>
 
 block append header
 	<?php if ($genBlurhash) { ?>
@@ -252,12 +253,13 @@ block main
 			
 			<div class="service"><a rel="nofollow" href="<?php echo htmlentities($release['spotify_presave_url'], ENT_QUOTES); ?>"><svg><use xlink:href="/svg/page_link.svg#spotify-text" /></svg><span class="play">Pre-save</span></a>
 
-			<div	style="padding-left:5em;font-size:80%;color:gray">
-			|<?php 	if ($now >= $releaseDate) { ?>
-			|<div><b>Direct spotify link coming soon!</b></div>
-			|<?php	} ?>
-			|This step takes you to our DistroKid.com page to continue. You will be asked to log into your Spotify account.</div>
-			|</div>
+			.
+				<div	style="padding-left:5em;font-size:80%;color:gray">
+				<?php 	if ($now >= $releaseDate) { ?>
+				<div><b>Direct spotify link coming soon!</b></div>
+				<?php	} ?>
+				This step takes you to our DistroKid.com page to continue. You will be asked to log into your Spotify account.</div>
+				</div>
 
 			<?php } if ($now >= $releaseDate) { ?>
 
