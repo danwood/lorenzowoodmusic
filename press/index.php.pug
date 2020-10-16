@@ -1,13 +1,14 @@
 extends ../_layout.pug
 
 block prelude
-	|<?php
-	|
-	|require_once('../classes/downcode.php');
-	|$db = new DowncodeDB();
-	|$releases = $db->allReleases();
-	|
-	|?>
+	.
+		<?php
+		
+		require_once('../classes/downcode.php');
+		$db = new DowncodeDB();
+		$releases = $db->allReleases();
+		
+		?>
 
 
 block vars
@@ -70,36 +71,37 @@ block append main
 			h2 Music Releases
 
 			table
-				<?php
-				|	$now = new DateTime(isset($_GET['ymd']) ? $_GET['ymd'] : 'now');
-				|	foreach ($releases as $release) {
-				|	$releaseDate = $now;   // default to now, so it should show up as released
-				|	$releaseDateString = NULL;
-				|	if (empty($release['release_date'])) { continue; } // must have a release date
-				|	$releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
-				|	if ($now < $releaseDate) { continue; }		// DO NOT SHOW UNRELEASED
-				|
-				|	$releaseDateString = ($now < $releaseDate) ? $releaseDate->format('l, F jS') : $releaseDate->format('F Y');
-				|	?>
+				.
+					<?php
+						$now = new DateTime(isset($_GET['ymd']) ? $_GET['ymd'] : 'now');
+						foreach ($releases as $release) {
+						$releaseDate = $now;   // default to now, so it should show up as released
+						$releaseDateString = NULL;
+						if (empty($release['release_date'])) { continue; } // must have a release date
+						$releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
+						if ($now < $releaseDate) { continue; }		// DO NOT SHOW UNRELEASED
+					
+						$releaseDateString = ($now < $releaseDate) ? $releaseDate->format('l, F jS') : $releaseDate->format('F Y');
+					?>
 					
 				tr
 					td.thumb <img width="64" height="64" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
 					td <?php echo htmlspecialchars($release['title']); ?>
-					td.info 
-						|<?php
-						|echo htmlspecialchars($release['artist_name']);
-						|if ($release['featuring']) {
-						|	echo '<br> feat. ' . htmlspecialchars($release['featuring']);
-						|} ?>
+					td.info.
+						<?php
+						echo htmlspecialchars($release['artist_name']);
+						if ($release['featuring']) {
+							echo '<br> feat. ' . htmlspecialchars($release['featuring']);
+						} ?>
 					td.info <?php echo (($now<$releaseDate)?'<b>':'') . htmlspecialchars($releaseDateString) . (($now<$releaseDate)?'<b>':''); ?>
-					td
-						|<?php if ($now >= $releaseDate) {
-						|	echo '<a href="/link/' . htmlentities($release['slug'], ENT_QUOTES) . '">Stream/<br/>Download</a>';
-						|} ?>
-					td
-						|<?php if ($now>=$releaseDate && $release['has_press_page']) {
-						|	echo '<a href="' . htmlentities($release['slug'], ENT_QUOTES) . '">Press Page</a>';
-						|} ?>
+					td.
+						<?php if ($now >= $releaseDate) {
+							echo '<a href="/link/' . htmlentities($release['slug'], ENT_QUOTES) . '">Stream/<br/>Download</a>';
+						} ?>
+					td.
+						<?php if ($now>=$releaseDate && $release['has_press_page']) {
+							echo '<a href="' . htmlentities($release['slug'], ENT_QUOTES) . '">Press Page</a>';
+						} ?>
 
 				<?php }  ?>
 
