@@ -1779,13 +1779,13 @@
 		"oF": 2,
 		"oS": 1
 		},
-	"/js/aos-min.js": {
+	"/js/aos3-min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/aos-min-min.js",
+		"oAP": "/js/aos3-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
