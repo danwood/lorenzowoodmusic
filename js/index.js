@@ -17,8 +17,8 @@ var recentLink = d$('#recent-link');
 recentLink.onclick = function() {
 	d$('.bit-header').textContent = 'Recent & Upcoming Performances';
 	var pastEvents = d$a('.bit-past');
-	Array.prototype.forEach.call(pastEvents, function(image){
-		image.classList.remove('none');
+	Array.prototype.forEach.call(pastEvents, function(row){
+		row.classList.remove('none');
 	});
 	return false;
 };
