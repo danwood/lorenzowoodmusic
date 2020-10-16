@@ -671,6 +671,12 @@ AddDefaultCharset utf-8
     </FilesMatch>
 </IfModule>
 
+# ALSO .js that's not -min.js
+<FilesMatch "(?!^.*\-min\.js$)^.+?\.js$">
+        Require all denied
+</FilesMatch>
+
+
 # ----------------------------------------------------------------------
 # | HTTP Strict Transport Security (HSTS)                              |
 # ----------------------------------------------------------------------
