@@ -3005,6 +3005,32 @@
 		"oAP": "/sitemap.txt",
 		"oF": 0
 		},
+	"/splitsheet/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/splitsheet/index.html",
+		"oF": 0
+		},
+	"/splitsheet/index.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 1,
+		"oA": 0,
+		"oAP": "/splitsheet/index.html",
+		"oF": 0,
+		"oS": 1
+		},
+	"/splitsheet/Songwriter-Split-Sheet-6-writers-form.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/splitsheet/Songwriter-Split-Sheet-6-writers-form.pdf",
+		"oF": 1
+		},
 	"/svg/2am.svg": {
 		"ft": 2097152,
 		"miP": 0,

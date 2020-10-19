@@ -1,0 +1,28 @@
+extends ../_layout.pug
+
+
+block vars
+	- var pageTitle = 'Split Sheet'
+	- var currentClass = 'splitsheet'
+	- var description = 'Split Sheet Download'
+
+
+
+block main
+	section
+
+		article.textual
+			header
+				h2 Split Sheet Download
+			p.
+				This is a split sheet that other musicians may find useful. It is good for up to six contributors. It is a PDF that can be filled on your computer and printed, or just printed and filled out by hand.
+
+			p: b.
+				The <a id="download" href="Songwriter-Split-Sheet-6-writers-form.pdf" download >download</a> will begin automatically.
+
+			p.
+				
+
+block append scripts
+	script.
+		function startDownload(){document.getElementById("download").click();}setTimeout(startDownload,1*1000);
