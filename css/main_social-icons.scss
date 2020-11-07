@@ -36,11 +36,11 @@
 
 
 .icons-5 .icon:first-child { /* Left margin for shorter icon list */
-	margin-left:25%;	// room for 5
+	margin-left:21vw;	// room for 5. 10*5+2*5 = 60, so 40 each side. This replaces the 1vw of the left one so 20+1
 }
 
 .icons-2 .icon:first-child { /* Left margin for shorter icon list */
-	margin-left:40%;	// room for 2
+	margin-left:38vw;	// room for 2. 10*2+2*2 = 24; 100-24=76; 38 on each side. Well, pretty close
 }
 
 
