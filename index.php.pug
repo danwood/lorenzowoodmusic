@@ -74,7 +74,8 @@ block append header
 		img.hero-image.covering.swapping-image(srcset=cloudImgPrefix + "img/banner1_giant.jpg 2560w, " + cloudImgPrefix + "img/banner1_big.jpg 1920w, " + cloudImgPrefix + "img/banner1_medium.jpg 960w, " + cloudImgPrefix + "img/banner1_small.jpg 640w" sizes="100vw" width="960" height="674" src=cloudImgPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
 
 	.icons.icons-header.overlapping.icons-5.safe-area-only
-		.icon
+		//- Instagram is special; it gets stroked rather than filled
+		.icon.instagram
 			a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 				svg: use(xlink:href="/svg/page_home.svg#instagram")
 		.icon.smaller
