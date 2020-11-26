@@ -3,10 +3,10 @@
 # Useful .gitignore templates: https://github.com/github/gitignore
 .sass-cache
 
-# Minified on local machine but then included directly, so does not need to be put on server
-/js/index-min.js
-
 # Should be put on server manually, not via repository
 /amplitude_tracks
-/CACHE
+/source/CACHE
 .DS_Store
+/build
+/protected
+

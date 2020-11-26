@@ -1,0 +1,129 @@
+extends ../_layout.pug
+
+block prelude
+	.
+		<?php
+		require_once('../classes/downcode.php');
+		$db = new DowncodeDB();
+		$release = $db->featuredRelease(2);
+		
+		$now = new DateTime(isset($_GET['ymd']) ? $_GET['ymd'] : 'now');
+		$releaseDate = $now;	// default to now, so it should show up as released
+		if ($release) {
+			$releaseDateString = NULL;
+			if (!empty($release['release_date'])) {
+				$releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
+				if ($now < $releaseDate) $releaseDateString = $releaseDate->format('l, F jS');
+			}
+			$oneMonthAgo = new \DateTime('1 month ago');
+		}
+		?>
+
+
+block vars
+	- var herostyle = 'covering'
+	- var pageTitle = '2AM in the Basement'
+	- var currentClass = '2am'
+	- var description = '2AM in the Basement is a side project of musician Lorenzo Wood featuring covers of songs by some of Lorenzo‘s favorite artists.'
+
+block title
+	title 2AM in the Basement — Official Site
+
+block styles
+	style
+		include ../../build/css/page_2am.css
+	
+block openGraph
+	<meta property="og:type" content="website">
+	<meta property="og:image" content='<?php echo baseURL(); ?>/img/2am-in-the-basement-image-card.jpg'>
+	<meta property="og:image:width" content='1200'>
+	<meta property="og:image:height" content='627'>
+
+
+block logo
+	a.filled(href="/", class={active: currentClass === '2am'})
+		//- include the SVG inline since it's only used here
+		include ../svg/2am.svg
+
+//- REMINDER: DASH AFTER SLASH-SLASH HIDES COMMENTS FROM PUG COMPILER
+
+//-.info(style="position:absolute;top:0;left:0;width:100%;height:20px;color:red;z-index:9999")
+
+block append banner
+	<?php if ($release) { ?>
+	.action.clearfix.safe-area-only
+		p
+			<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
+				<img width="64" height="64" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
+			</a>
+			span <?php echo htmlspecialchars( $now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New') . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
+				| &nbsp;
+			b
+				<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
+	<?php } ?>
+
+block append header
+	.hero
+
+		picture
+			source(srcset=cloudImgPrefix + "img/2am.webp 1920w" type="image/webp" sizes="100vw")
+			source(srcset=cloudImgPrefix + "img/2am.jpg 1920w, " + cloudImgPrefix + "img/2am50.jpg 960w, " + cloudImgPrefix + "img/2am33.jpg 640w" sizes="100vw")
+			img.hero-image.covering(src=cloudImgPrefix + "img/2am.jpg" width="1920" height="1348" loading="eager" alt="2AM in the Basement")
+
+block main
+
+
+	section.bio
+
+		header.ir(aria-hidden="true")
+			h2 Bio
+		article.textual
+
+			//- Try to match meta description above with text below
+
+			p.
+				2AM in the Basement is a side project of musician <a href="./">Lorenzo Wood</a> featuring covers of songs by some of Lorenzo's favorite artists.
+
+			p Find 2AM in the Basement songs online:
+		article
+			.icons.icons-2
+				.icon
+					a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/2am-in-the-basement/1461919405?at=1000lKSp")
+						include ../svg/page_home/apple-music-icon-color.svg
+						//- Apple music icon doesn't show color when loaded with svg-use !!!
+						//- Annoyingly this gives us a validation warning about duplicate IDs since we are including this SVG resource twice! Oh well.
+
+				.icon.spotify
+					a(data-title="Spotify" href="https://open.spotify.com/artist/4xWrKxTS7gyybHbJ94LZtx")
+						svg: use(xlink:href="/svg/page_home.110720.svg#spotify")
+
+	section.videos
+
+		header.ir(aria-hidden="true")
+			h2 Releases so far
+
+		article.columns-2-1
+
+				.youtube-border
+					.youtube-player(data-code='ixUV87pKtBg' data-title='Falling (Harry Styles cover)')
+				.youtube-border
+					.youtube-player(data-code='PfjIqix5ZZw' data-title='Heartless (Diplo & Morgan Wallen cover)')
+
+
+
+
+block additional-html
+
+	.scrolldown.bounce
+		svg: use(xlink:href="/svg/page_home.110720.svg#downarrow")
+
+
+block prepend scripts
+	script
+		include ../../build/js/hero.js
+		include ../../build/js/youtube.js
+
+block append scripts
+	<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"2AM in the Basement","url":"https://www.lorenzowoodmusic.com/2am-in-the-basement/","sameAs":["https://www.amazon.com/dp/B07R5Q4NJ3/ref=dm_ws_ps_adp", "https://twitter.com/2am_basement", "https://listen.tidal.com/artist/17766004", "https://music.apple.com/us/artist/2am-in-the-basement/1461919405?at=1000lKSp", "https://open.spotify.com/artist/4xWrKxTS7gyybHbJ94LZtx"]}</script>
+
+

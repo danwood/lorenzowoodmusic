@@ -1,0 +1,117 @@
+extends ../_layout.pug
+
+block prelude
+	.
+		<?php
+		
+		require_once('../classes/downcode.php');
+		$db = new DowncodeDB();
+		$releases = $db->allReleases();
+		
+		?>
+
+
+block vars
+	- var pageTitle = 'Press & Media'
+	- var currentClass = 'press'
+	- var description = 'Press Kit for Lorenzo Wood'
+
+block meta
+	meta(name="robots" content="noindex")
+
+block styles
+	style
+		include ../../build/css/page_press.css
+		
+block footer-icons
+
+	
+include shared.pug
+
+block prepend main
+	section
+		article.textual.unpadded
+			h4 Press Kit - Lorenzo Wood (and 2AM in the Basement)
+
+
+block append main
+	section
+		article.wider
+
+			h1 Additional Resources
+
+			h2 Photos
+
+			include ../photos/_photos.pug
+
+
+			h2 Video
+
+			p Lorenzo Wood's videos appear on primarily on his YouTube channel at <a href="https://youtube.com/lorenzowoodmusic">youtube.com/lorenzowoodmusic</a>.
+			p For example:
+			
+			.columns-4-2-1
+					.youtube-border
+						.youtube-player(data-code='TkDhR4FMHVg' data-title='Lorenzo Wood - Still Need Love (Official Lyric Video)' data-linking='true')
+						p 2020 single - Written, produced, mixed, mastered, filmed, directed, edited by Lorenzo Wood
+
+					.youtube-border
+						.youtube-player(data-code='PfjIqix5ZZw' data-title='Heartless - Cover by 2AM In The Basement' data-linking='true')
+						p A cover of a song by Diplo & Morgan Wallen; Video edited by Lorenzo Wood
+
+					.youtube-border
+						.youtube-player(data-code='iVHF1RM7a9I' data-title='Lorenzo Wood - Jacket (I\'m Sensitive)' data-linking='true')
+						p Official music video of the 2019 single, directed by Jeremy Stuart
+
+					.youtube-border
+						.youtube-player(data-code='JZaKGj-LSbg' data-title='Lorenzo Wood Live at Lone Tree Cemetery (highlights)' data-linking='true')
+						p The band played at nearby cemetery's summer concert series. Here are some snippets from the performance.
+			
+
+			h2 Music Releases
+
+			table
+				.
+					<?php
+						$now = new DateTime(isset($_GET['ymd']) ? $_GET['ymd'] : 'now');
+						foreach ($releases as $release) {
+						$releaseDate = $now;   // default to now, so it should show up as released
+						$releaseDateString = NULL;
+						if (empty($release['release_date'])) { continue; } // must have a release date
+						$releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
+						if ($now < $releaseDate) { continue; }		// DO NOT SHOW UNRELEASED
+					
+						$releaseDateString = ($now < $releaseDate) ? $releaseDate->format('l, F jS') : $releaseDate->format('F Y');
+					?>
+					
+				tr
+					td.thumb <img width="64" height="64" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
+					td <?php echo htmlspecialchars($release['title']); ?>
+					td.info.
+						<?php
+						echo htmlspecialchars($release['artist_name']);
+						if ($release['featuring']) {
+							echo '<br> feat. ' . htmlspecialchars($release['featuring']);
+						} ?>
+					td.info <?php echo (($now<$releaseDate)?'<b>':'') . htmlspecialchars($releaseDateString) . (($now<$releaseDate)?'<b>':''); ?>
+					td.
+						<?php if ($now >= $releaseDate) {
+							echo '<a href="/link/' . htmlentities($release['slug'], ENT_QUOTES) . '">Stream/<br/>Download</a>';
+						} ?>
+					td.
+						<?php if ($now>=$releaseDate && $release['has_press_page']) {
+							echo '<a href="' . htmlentities($release['slug'], ENT_QUOTES) . '">Press Page</a>';
+						} ?>
+
+				<?php }  ?>
+
+			p.
+				2AM in the Basement is the pseudonym for Lorenzo's additional projects, covers of songs by other artists. Starting with a cover of "Old Town Road" by Lil Nas X, Lorenzo started releasing his productions of other people's songs so as not to "muddy the waters." and detract from his own songs.
+
+
+			
+
+block prepend scripts
+	script
+		include ../../build/js/youtube.js
+
