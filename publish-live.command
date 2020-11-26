@@ -80,11 +80,12 @@ rsync   --dry-run \
 
 echo
 echo
-echo 'Getting files from remote server that somebody may have uploaded, e.g. updated CACHE...'
+echo 'DRY-RUN Getting files from remote server that somebody may have uploaded, e.g. updated CACHE...'
 
 #       --checksum \
 
-rsync   --exclude '.*' \
+rsync   --dry-run \
+        --exclude '.*' \
         -vuaze "ssh -p $LWM_PORT" \
         $LWM_USERNAME@$LWM_HOST:$DIRNAME/* .
 
