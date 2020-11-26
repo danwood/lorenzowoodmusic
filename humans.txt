@@ -29,5 +29,6 @@
 	"Downcode" for downloading tracks with a promo code https://github.com/danwood/downcode
 	Online Convert to create webp graphics https://www.online-convert.com
 	https://www.zamzar.com/convert/pdf-to-svg/ to turn header text into SVG
+	Some icons based on https://github.com/edent/SuperTinyIcons
 
 
