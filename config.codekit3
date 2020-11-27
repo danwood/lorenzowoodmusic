@@ -17,12 +17,6 @@
 		"oAP": "/build/.gitignore",
 		"oF": 1
 		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
-		},
 	"/intermediate": {
 		"ft": 65536,
 		"oA": 1,
@@ -3052,9 +3046,9 @@
 	"/source/svg/bit-full.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/build/svg/bit-full.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -3062,9 +3056,9 @@
 	"/source/svg/bit-mobile.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/build/svg/bit-mobile.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -3356,7 +3350,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 628146577.08673
+	"lastBuiltDate": 628147293.14589095
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
