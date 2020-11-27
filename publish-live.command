@@ -14,7 +14,7 @@ fi
 
 
 cd "$( dirname "${BASH_SOURCE[0]}" )"
-cd SOURCE
+cd $SOURCE
 
 echo 'Fixing file ownership...'
 sudo chown -R $USER:staff *
