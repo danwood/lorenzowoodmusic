@@ -1139,16 +1139,6 @@
 		"oS": 3,
 		"sct": 0
 		},
-	"/source/css/main.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/css/main-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/source/css/main.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1315,16 +1305,6 @@
 		"oF": 1,
 		"oS": 3
 		},
-	"/source/css/page_2am.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/css/page_2am-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/source/css/page_2am.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1337,16 +1317,6 @@
 		"oF": 0,
 		"oS": 3,
 		"sct": 0
-		},
-	"/source/css/page_contact.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/css/page_contact-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/source/css/page_contact.scss": {
 		"aP": 1,
@@ -1361,16 +1331,6 @@
 		"oS": 3,
 		"sct": 0
 		},
-	"/source/css/page_home.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/css/page_home-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/source/css/page_home.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1383,16 +1343,6 @@
 		"oF": 0,
 		"oS": 3,
 		"sct": 0
-		},
-	"/source/css/page_link.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/css/page_link-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/source/css/page_link.scss": {
 		"aP": 1,
@@ -1407,16 +1357,6 @@
 		"oS": 3,
 		"sct": 0
 		},
-	"/source/css/page_press.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/css/page_press-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/source/css/page_press.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1429,16 +1369,6 @@
 		"oF": 0,
 		"oS": 3,
 		"sct": 0
-		},
-	"/source/css/page_press_song.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/css/page_press_song-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/source/css/page_press_song.scss": {
 		"aP": 1,
@@ -2067,14 +1997,6 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"/source/link/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/link/index.php",
-		"oF": 0
-		},
 	"/source/link/index.php.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -2118,14 +2040,6 @@
 		"oAP": "/build/photos/_photos.html",
 		"oF": 1,
 		"oS": 1
-		},
-	"/source/photos/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/photos/index.html",
-		"oF": 0
 		},
 	"/source/photos/index.pug": {
 		"cB": 0,
@@ -3070,14 +2984,6 @@
 		"oF": 0,
 		"oS": 1
 		},
-	"/source/press/drown.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/press/drown.php",
-		"oF": 0
-		},
 	"/source/press/drown.php.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -3087,14 +2993,6 @@
 		"oAP": "/build/press/drown.php",
 		"oF": 2,
 		"oS": 1
-		},
-	"/source/press/falling.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/press/falling.php",
-		"oF": 0
 		},
 	"/source/press/falling.php.pug": {
 		"cB": 0,
@@ -3119,14 +3017,6 @@
 		"q": 100,
 		"rq": 75
 		},
-	"/source/press/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/press/index.php",
-		"oF": 0
-		},
 	"/source/press/index.php.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -3136,14 +3026,6 @@
 		"oAP": "/build/press/index.php",
 		"oF": 2,
 		"oS": 1
-		},
-	"/source/press/jacket.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/press/jacket.php",
-		"oF": 0
 		},
 	"/source/press/jacket.php.pug": {
 		"cB": 0,
@@ -3155,14 +3037,6 @@
 		"oF": 2,
 		"oS": 1
 		},
-	"/source/press/more-than-friends.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/press/more-than-friends.php",
-		"oF": 0
-		},
 	"/source/press/more-than-friends.php.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -3172,14 +3046,6 @@
 		"oAP": "/build/press/more-than-friends.php",
 		"oF": 2,
 		"oS": 1
-		},
-	"/source/press/shared.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/press/shared.html",
-		"oF": 0
 		},
 	"/source/press/shared.pug": {
 		"cB": 0,
@@ -3191,14 +3057,6 @@
 		"oF": 1,
 		"oS": 1
 		},
-	"/source/press/still-need-love.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/press/still-need-love.php",
-		"oF": 0
-		},
 	"/source/press/still-need-love.php.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -3208,14 +3066,6 @@
 		"oAP": "/build/press/still-need-love.php",
 		"oF": 2,
 		"oS": 1
-		},
-	"/source/press/unfollow.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/press/unfollow.php",
-		"oF": 0
 		},
 	"/source/press/unfollow.php.pug": {
 		"cB": 0,
@@ -3242,14 +3092,6 @@
 		"oA": 2,
 		"oAP": "/build/sitemap.txt",
 		"oF": 1
-		},
-	"/source/splitsheet/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/splitsheet/index.html",
-		"oF": 0
 		},
 	"/source/splitsheet/index.pug": {
 		"cB": 0,
@@ -3535,14 +3377,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/source/videos/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/videos/index.html",
-		"oF": 0
-		},
 	"/source/videos/index.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -3692,7 +3526,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 628126081.01717997
+	"lastBuiltDate": 628128600.881194
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
