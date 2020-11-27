@@ -64,7 +64,7 @@ rsync   --exclude '.DS*' \
 
 echo
 echo
-echo 'Listing files that maybe should be deleted from remote -- BUT ARENT ...'
+echo 'Listing files that maybe should be deleted from remote -- SHOULD DO THIS MANUALLY ...'
 
 #       --checksum \
 
@@ -76,32 +76,40 @@ rsync   --dry-run \
         * $LWM_USERNAME@$LWM_HOST:$DIRNAME | grep 'deleting '
 
 
-# Now put any new files from the server to the local machine. Just in case, skip files that are new here (-u)
+# The rest of this just doesn't work well. Not sure why, but quite a few files end up seeming to be changed on the server.
+# Not clear. 
 
-echo
-echo
-echo 'DRY-RUN Getting files from remote server that somebody may have uploaded, e.g. updated CACHE...'
+# So instead, just sync back the latest version of the CACHE directory, and assume nothing else is changing on the server.
 
-#       --checksum \
-
-rsync   --dry-run \
-        --exclude '.*' \
-        -vuaze "ssh -p $LWM_PORT" \
-        $LWM_USERNAME@$LWM_HOST:$DIRNAME/* .
+rsync   -vuaze "ssh -p $LWM_PORT" \
+        $LWM_USERNAME@$LWM_HOST:$DIRNAME/CACHE/ CACHE/
 
 
-echo
-echo
-echo 'Listing files that maybe should be deleted from local -- BUT ARENT ...'
-
-#       --checksum \
-
-rsync   --dry-run \
-        --delete \
-        --exclude '.*' \
-        --exclude 'CACHE' \
-        -vuaze "ssh -p $LWM_PORT" \
-        $LWM_USERNAME@$LWM_HOST:$DIRNAME/* .
+### # Now put any new files from the server to the local machine. Just in case, skip files that are new here (-u)
+### 
+### echo
+### echo
+### echo 'DRY-RUN Getting files from remote server that somebody may have uploaded, e.g. updated CACHE...'
+### 
+### #       --checksum \
+### 
+### rsync   --exclude '.*' \
+###         -icvaze "ssh -p $LWM_PORT" \
+###         $LWM_USERNAME@$LWM_HOST:$DIRNAME/* .
+### 
+### 
+### echo
+### echo
+### echo 'Listing files that maybe should be deleted from local -- BUT ARENT ...'
+### 
+### #       --checksum \
+### 
+### rsync   --dry-run \
+###         --delete \
+###         --exclude '.*' \
+###         --exclude 'CACHE' \
+###         -vuaze "ssh -p $LWM_PORT" \
+###         $LWM_USERNAME@$LWM_HOST:$DIRNAME/* .
 
 
 echo 'Restoring file permissions for local system...'

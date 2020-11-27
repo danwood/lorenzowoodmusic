@@ -17,12 +17,6 @@
 		"oAP": "/build/.gitignore",
 		"oF": 1
 		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
-		},
 	"/originals etc/BandsInTown.opacity": {
 		"cB": 0,
 		"ft": 8192,
@@ -974,9 +968,9 @@
 		"ft": 16384,
 		"iS": 2805,
 		"jF": 0,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "/build/blurred_100/heartless.jpg",
-		"oF": 0,
+		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"ou": "lpckwebp-none",
@@ -3526,7 +3520,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 628128600.881194
+	"lastBuiltDate": 628130343.08407605
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
