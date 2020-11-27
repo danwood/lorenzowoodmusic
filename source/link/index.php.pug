@@ -100,7 +100,7 @@ block append links
 
 block styles
 	style
-		include ../../build/css/page_link.css
+		include ../../intermediate/css/page_link.css
 
 
 block main
@@ -369,16 +369,16 @@ block main
 
 block prepend scripts
 	script
-		include ../../build/js/youtube.js
-		include ../../build/js/blurhash-shared.js
-		include ../../build/js/blurhash-decode.js
+		include ../../intermediate/js/youtube.js
+		include ../../intermediate/js/blurhash-shared.js
+		include ../../intermediate/js/blurhash-decode.js
 		|var blurhashData='<?php echo htmlspecialchars($release['blurhash']); ?>';
-		include ../../build/js/page_link.js
+		include ../../intermediate/js/page_link.js
 
 	//- Don't bother do do minimized Javascript - this isn't generally included except for ?blurhash=1 to generate code.
 	<?php if ($genBlurhash) { ?>
 	script
-		include ../../build/js/blurhash-encode.js
+		include ../../intermediate/js/blurhash-encode.js
 		.
 			var sourceImageElement = document.getElementById("blurry");
 			var componentXElement = document.getElementById("x");

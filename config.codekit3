@@ -1307,8 +1307,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/css/page_2am.css",
-		"oF": 0,
+		"oAP": "/intermediate/css/page_2am.css",
+		"oF": 2,
 		"oS": 3,
 		"sct": 0
 		},
@@ -1320,8 +1320,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/css/page_contact.css",
-		"oF": 0,
+		"oAP": "/intermediate/css/page_contact.css",
+		"oF": 2,
 		"oS": 3,
 		"sct": 0
 		},
@@ -1333,8 +1333,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/css/page_home.css",
-		"oF": 0,
+		"oAP": "/intermediate/css/page_home.css",
+		"oF": 2,
 		"oS": 3,
 		"sct": 0
 		},
@@ -1346,8 +1346,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/css/page_link.css",
-		"oF": 0,
+		"oAP": "/intermediate/css/page_link.css",
+		"oF": 2,
 		"oS": 3,
 		"sct": 0
 		},
@@ -1359,8 +1359,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/css/page_press.css",
-		"oF": 0,
+		"oAP": "/intermediate/css/page_press.css",
+		"oF": 2,
 		"oS": 3,
 		"sct": 0
 		},
@@ -1372,8 +1372,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/css/page_press_song.css",
-		"oF": 0,
+		"oAP": "/intermediate/css/page_press_song.css",
+		"oF": 2,
 		"oS": 3,
 		"sct": 0
 		},
@@ -1887,7 +1887,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/js/blurhash-decode.js",
+		"oAP": "/intermediate/js/blurhash-decode.js",
 		"oF": 2,
 		"sC": 0,
 		"tS": 0
@@ -1898,7 +1898,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/js/blurhash-encode.js",
+		"oAP": "/intermediate/js/blurhash-encode.js",
 		"oF": 2,
 		"sC": 0,
 		"tS": 0
@@ -1909,7 +1909,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/js/blurhash-shared.js",
+		"oAP": "/intermediate/js/blurhash-shared.js",
 		"oF": 2,
 		"sC": 0,
 		"tS": 0
@@ -1920,7 +1920,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/js/hero.js",
+		"oAP": "/intermediate/js/hero.js",
 		"oF": 2,
 		"sC": 0,
 		"tS": 0
@@ -1931,7 +1931,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/js/index.js",
+		"oAP": "/intermediate/js/index.js",
 		"oF": 2,
 		"sC": 0,
 		"tS": 0
@@ -1942,7 +1942,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/js/page_booking.js",
+		"oAP": "/intermediate/js/page_booking.js",
 		"oF": 2,
 		"sC": 0,
 		"tS": 0
@@ -1953,7 +1953,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/js/page_link.js",
+		"oAP": "/intermediate/js/page_link.js",
 		"oF": 2,
 		"sC": 0,
 		"tS": 0
@@ -1964,7 +1964,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/js/page_press_song.js",
+		"oAP": "/intermediate/js/page_press_song.js",
 		"oF": 2,
 		"sC": 0,
 		"tS": 0
@@ -1975,7 +1975,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 2,
-		"oAP": "/build/js/svg4everybody.js",
+		"oAP": "/intermediate/js/svg4everybody.js",
 		"oF": 3,
 		"sC": 0,
 		"tS": 0
@@ -1986,7 +1986,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/js/youtube.js",
+		"oAP": "/intermediate/js/youtube.js",
 		"oF": 2,
 		"sC": 0,
 		"tS": 0
@@ -3520,7 +3520,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 628130343.08407605
+	"lastBuiltDate": 628145388.59490895
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

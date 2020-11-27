@@ -8,5 +8,5 @@
 /source/CACHE
 .DS_Store
 /build
+/intermediate
 /protected
-
