@@ -17,6 +17,12 @@
 		"oAP": "/build/.gitignore",
 		"oF": 1
 		},
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
+		"oF": 0
+		},
 	"/intermediate": {
 		"ft": 65536,
 		"oA": 1,
@@ -3046,7 +3052,7 @@
 	"/source/svg/bit-full.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/build/svg/bit-full.svg",
 		"oF": 1,
 		"opt": 0,
@@ -3056,7 +3062,7 @@
 	"/source/svg/bit-mobile.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "/build/svg/bit-mobile.svg",
 		"oF": 1,
 		"opt": 0,
