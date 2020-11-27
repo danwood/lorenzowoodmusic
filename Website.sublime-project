@@ -6,12 +6,12 @@
 			"follow_symlinks": true,
 			"file_exclude_patterns":[
 							".*", "*.jpg", "*.png", "*.opacity", "*.webp", "*.php", "phpliteadmin*",
-							"*.zip", "*.map", "*.gif", "*.jpeg", "*.ico", "*.html", "_Markdown*",
+							"*.zip", "*.map", "*.gif", "*.jpeg", "*.jpg", "*.pdf", "*.ico", "*.html", "_Markdown*",
 							"*.acorn", "*.codekit*", "jquery*", "*.command", "*.sublime*",
  							"*-min.js", "robots.txt", "humans.txt", "browserconfig.xml", "CNAME",
 							"main*.css", "component_*.css", "page_*.css"
 						],
-			"folder_exclude_patterns":["_sources", "album_art*", "CACHE", "vendor", "svg", "img", ".sass-cache"]
+			"folder_exclude_patterns":["protected", "build", "intermediate", "unused", "originals", "album_art*", "CACHE", "vendor", "svg", "img", ".sass-cache"]
 		}
 	]
 }
