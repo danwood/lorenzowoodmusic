@@ -17,89 +17,17 @@
 		"oAP": "/build/.gitignore",
 		"oF": 1
 		},
-	"/originals etc/BandsInTown.opacity": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
+	"/intermediate": {
+		"ft": 65536,
 		"oA": 1,
-		"oAP": "/build/originals etc/BandsInTown.opacity",
-		"oF": 1
+		"oAP": "/build/intermediate",
+		"oF": 0
 		},
-	"/originals etc/cd-handreduced-still-too-big.svg": {
-		"ft": 2097152,
-		"miP": 0,
+	"/originals": {
+		"ft": 65536,
 		"oA": 1,
-		"oAP": "/build/originals etc/cd-handreduced-still-too-big.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/originals etc/CD-redrawn.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/originals etc/CD-redrawn.pdf",
-		"oF": 1
-		},
-	"/originals etc/CD100.png": {
-		"ft": 32768,
-		"iS": 2178,
-		"oA": 1,
-		"oAP": "/build/originals etc/CD100.png",
-		"oF": 1,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"ou": "lpckwebp-none",
-		"q": 100,
-		"rq": 75
-		},
-	"/originals etc/CD50.png": {
-		"ft": 32768,
-		"iS": 1087,
-		"oA": 1,
-		"oAP": "/build/originals etc/CD50.png",
-		"oF": 1,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"ou": "lpckwebp-none",
-		"q": 100,
-		"rq": 75
-		},
-	"/originals etc/downarrow.opacity": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/originals etc/downarrow.opacity",
-		"oF": 1
-		},
-	"/originals etc/list-play.opacity": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/originals etc/list-play.opacity",
-		"oF": 1
-		},
-	"/originals etc/Patreon.opacity": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/originals etc/Patreon.opacity",
-		"oF": 1
-		},
-	"/originals etc/ReverbNation.opacity": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/originals etc/ReverbNation.opacity",
-		"oF": 1
+		"oAP": "/build/originals",
+		"oF": 0
 		},
 	"/publish-live.command": {
 		"cB": 0,
@@ -1300,10 +1228,10 @@
 		"oS": 3
 		},
 	"/source/css/page_2am.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 2,
-		"ec": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
@@ -1313,10 +1241,10 @@
 		"sct": 0
 		},
 	"/source/css/page_contact.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 2,
-		"ec": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
@@ -1326,10 +1254,10 @@
 		"sct": 0
 		},
 	"/source/css/page_home.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 2,
-		"ec": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
@@ -1339,10 +1267,10 @@
 		"sct": 0
 		},
 	"/source/css/page_link.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 2,
-		"ec": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
@@ -1352,10 +1280,10 @@
 		"sct": 0
 		},
 	"/source/css/page_press.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 2,
-		"ec": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
@@ -1365,10 +1293,10 @@
 		"sct": 0
 		},
 	"/source/css/page_press_song.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 2,
-		"ec": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
@@ -3381,125 +3309,11 @@
 		"oF": 0,
 		"oS": 1
 		},
-	"/unused-check-unique-ids-aria/apple-icon.svg": {
-		"ft": 2097152,
-		"miP": 0,
+	"/unused": {
+		"ft": 65536,
 		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/apple-icon.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/Apple_Music_lockup_RGB_wht.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/Apple_Music_lockup_RGB_wht.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/download.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/download.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/holonis-icon-color.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/holonis-icon-color.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/iTunes_Store_Buy_Lockup_RGB_wht.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/iTunes_Store_Buy_Lockup_RGB_wht.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/pandora.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/pandora.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/patreon-icon-color.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/patreon-icon-color.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/reverbnation-icon-color.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/reverbnation-icon-color.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/snapchat-icon.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/snapchat-icon.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/twitter-icon.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/twitter-icon.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/youtube-play.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/youtube-play.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/unused-check-unique-ids-aria/youtube.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/build/unused-check-unique-ids-aria/youtube.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
+		"oAP": "/build/unused",
+		"oF": 0
 		},
 	"/Website.sublime-project": {
 		"cB": 0,
@@ -3520,7 +3334,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 628145388.59490895
+	"lastBuiltDate": 628146044.59621298
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -5528,7 +5342,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
+	"skippedFoldersString": "/unused,/originals,node_modules,_logs,logs,log,/intermediate,_cache,cache",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,
