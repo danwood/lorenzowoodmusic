@@ -81,6 +81,10 @@ rsync   --dry-run \
 
 # So instead, just sync back the latest version of the CACHE directory, and assume nothing else is changing on the server.
 
+echo
+echo
+echo 'Fetching latest CACHE files from server ...'
+
 rsync   -vuaze "ssh -p $LWM_PORT" \
         $LWM_USERNAME@$LWM_HOST:$DIRNAME/CACHE/ CACHE/
 
