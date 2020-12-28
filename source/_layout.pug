@@ -12,7 +12,9 @@ html(class="no-js", lang="en-us")
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
 		//- Prefetch as early as possible (though charset needs to come first)
 		link(rel="prefetch" href="//res.cloudinary.com")
-		link(rel="prefetch" href="//fonts.googleapis.com")
+		link(rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-v15-latin-800.woff2" crossorigin)
+		link(rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-v15-latin-italic.woff2" crossorigin)
+		link(rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-v15-latin-regular.woff2" crossorigin)
 		block meta
 		block title
 			title #{pageTitle} | Lorenzo Wood Music
@@ -23,11 +25,10 @@ html(class="no-js", lang="en-us")
 		meta(name="supported-color-schemes" content="light dark")
 		block openGraph
 		block links
-			link(href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap&subset=latin" rel="stylesheet")
 			link(rel="apple-touch-icon" sizes="180x180" href=cloudImgPrefix + "apple-touch-icon.png")
 			link(rel="icon" type="image/png" sizes="32x32" href=cloudImgPrefix + "favicon-32x32.png")
 			link(rel="icon" type="image/png" sizes="16x16" href=cloudImgPrefix + "favicon-16x16.png")
-			link(rel="stylesheet" href="/css/main.110720.css")
+			link(rel="stylesheet" href="/css/main.122720.css")
 		block styles
 
 	body(class=currentClass)

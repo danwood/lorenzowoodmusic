@@ -17,12 +17,6 @@
 		"oAP": "/build/.gitignore",
 		"oF": 1
 		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
-		},
 	"/intermediate": {
 		"ft": 65536,
 		"oA": 1,
@@ -1042,7 +1036,7 @@
 		"oS": 3
 		},
 	"/source/css/include_constants.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1055,7 +1049,7 @@
 		"sct": 0
 		},
 	"/source/css/include_hero.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1081,7 +1075,7 @@
 		"sct": 0
 		},
 	"/source/css/main_colors.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1093,8 +1087,21 @@
 		"oS": 3,
 		"sct": 0
 		},
+	"/source/css/main_fonts.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 2,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/css/main_fonts.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 0
+		},
 	"/source/css/main_generic.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1107,7 +1114,7 @@
 		"sct": 0
 		},
 	"/source/css/main_geometry.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1120,7 +1127,7 @@
 		"sct": 0
 		},
 	"/source/css/main_masonry.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1133,7 +1140,7 @@
 		"sct": 0
 		},
 	"/source/css/main_navigation.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1146,7 +1153,7 @@
 		"sct": 0
 		},
 	"/source/css/main_parallax.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1159,7 +1166,7 @@
 		"sct": 0
 		},
 	"/source/css/main_shared.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1172,7 +1179,7 @@
 		"sct": 0
 		},
 	"/source/css/main_social-icons.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1185,7 +1192,7 @@
 		"sct": 0
 		},
 	"/source/css/main_tables.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1198,7 +1205,7 @@
 		"sct": 0
 		},
 	"/source/css/main_typography.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1211,7 +1218,7 @@
 		"sct": 0
 		},
 	"/source/css/main_youtube.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1234,7 +1241,7 @@
 		"oS": 3
 		},
 	"/source/css/page_2am.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1247,7 +1254,7 @@
 		"sct": 0
 		},
 	"/source/css/page_contact.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1260,7 +1267,7 @@
 		"sct": 0
 		},
 	"/source/css/page_home.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1273,7 +1280,7 @@
 		"sct": 0
 		},
 	"/source/css/page_link.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1286,7 +1293,7 @@
 		"sct": 0
 		},
 	"/source/css/page_press.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1299,7 +1306,7 @@
 		"sct": 0
 		},
 	"/source/css/page_press_song.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 2,
 		"ec": 1,
@@ -1352,6 +1359,54 @@
 		"oA": 2,
 		"oAP": "/build/fetchCACHE.php",
 		"oF": 1
+		},
+	"/source/fonts/montserrat-v15-latin-800.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/fonts/montserrat-v15-latin-800.woff",
+		"oF": 0
+		},
+	"/source/fonts/montserrat-v15-latin-800.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/fonts/montserrat-v15-latin-800.woff2",
+		"oF": 0
+		},
+	"/source/fonts/montserrat-v15-latin-italic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/fonts/montserrat-v15-latin-italic.woff",
+		"oF": 0
+		},
+	"/source/fonts/montserrat-v15-latin-italic.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/fonts/montserrat-v15-latin-italic.woff2",
+		"oF": 0
+		},
+	"/source/fonts/montserrat-v15-latin-regular.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/fonts/montserrat-v15-latin-regular.woff",
+		"oF": 0
+		},
+	"/source/fonts/montserrat-v15-latin-regular.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/fonts/montserrat-v15-latin-regular.woff2",
+		"oF": 0
 		},
 	"/source/google-verification.pug": {
 		"cB": 0,
@@ -3356,7 +3411,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 628147293.14589095
+	"lastBuiltDate": 630806151.91509902
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -5295,7 +5350,7 @@
 		"decimalPrecision": 2,
 		"emitCharset": 1,
 		"outputStyle": 3,
-		"shouldRunAutoprefixer": 0,
+		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0
 		},
 	"languageDefaultsSLIM": {

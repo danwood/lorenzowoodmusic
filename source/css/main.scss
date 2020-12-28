@@ -9,7 +9,9 @@
 @import 'main_generic.scss';
 
 // General look and utility useful across the whole site
+@import 'main_fonts.scss';
 @import 'main_typography.scss';
+
 @import 'main_colors.scss';
 @import 'main_geometry.scss';
 // Not used yet but I'd like to consider it ..... @import 'main_parallax.scss';
