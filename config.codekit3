@@ -17,6 +17,12 @@
 		"oAP": "/build/.gitignore",
 		"oF": 1
 		},
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
+		"oF": 0
+		},
 	"/intermediate": {
 		"ft": 65536,
 		"oA": 1,
@@ -867,6 +873,71 @@
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/source/album_art_background_1200x630/drown.jpg": {
+		"ft": 16384,
+		"iS": 388738,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/album_art_background_1200x630/drown.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/source/album_art_background_1200x630/jacket-ep.jpg": {
+		"ft": 16384,
+		"iS": 588887,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/album_art_background_1200x630/jacket-ep.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/source/album_art_background_1200x630/more-than-friends.png": {
+		"ft": 32768,
+		"iS": 15455,
+		"oA": 0,
+		"oAP": "/build/album_art_background_1200x630/more-than-friends.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/source/album_art_background_1200x630/now-in-control.jpg": {
+		"ft": 16384,
+		"iS": 142873,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/album_art_background_1200x630/now-in-control.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/source/album_art_background_1200x630/still-need-love.jpg": {
+		"ft": 16384,
+		"iS": 230697,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/album_art_background_1200x630/still-need-love.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"ou": "lpckwebp-none",
 		"q": 100,
 		"rq": 75
@@ -1853,11 +1924,11 @@
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/index.php",
 		"oF": 2,
-		"oS": 1
+		"oS": 0
 		},
 	"/source/js/aos3.js": {
 		"bF": 0,

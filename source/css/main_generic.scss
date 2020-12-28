@@ -110,6 +110,8 @@ section.unpadded {
 }
 .subsection {
 	overflow:hidden;
+	background-size:cover;
+	background-position:50% 10%;	// main area near the top
 	// solve problem of slide-in graphics making page wider until item is scrolled into view
 	@extend .safe-area
 }
