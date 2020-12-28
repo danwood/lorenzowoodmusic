@@ -36,7 +36,9 @@ block title
 	//- overrides generated page title used on other pages
 	
 block append links
-	link(href=cloudRawPrefix + "css/component_aos.css" rel="stylesheet")
+	// special link to load AOS stylesheet asynchronously
+	link(rel="stylesheet" href=cloudRawPrefix + "css/component_aos.css" media="print" onload="this.media='all'")
+	link(href= rel="stylesheet")
 	//- override the AOS styles that are initially hidden and then revealed, when no Javascript
 	include _noscript_aos.html
 

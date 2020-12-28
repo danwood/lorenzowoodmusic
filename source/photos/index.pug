@@ -7,7 +7,8 @@ block vars
 	- var description = 'Photos of Lorenzo Wood, musician from the San Francisco Bay Area'
 
 block append links
-	link(href=cloudRawPrefix + "css/component_aos.css" rel="stylesheet")
+	// special link to load AOS stylesheet asynchronously
+	link(rel="stylesheet" href=cloudRawPrefix + "css/component_aos.css" media="print" onload="this.media='all'")
 	//- override the AOS styles that are initially hidden and then revealed, when no Javascript
 	include ../_noscript_aos.html
 
