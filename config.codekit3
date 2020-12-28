@@ -892,7 +892,7 @@
 		},
 	"/source/album_art_background_1200x630/jacket-ep.jpg": {
 		"ft": 16384,
-		"iS": 588887,
+		"iS": 13250,
 		"jF": 0,
 		"oA": 2,
 		"oAP": "/build/album_art_background_1200x630/jacket-ep.jpg",
@@ -3482,7 +3482,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 630806151.91509902
+	"lastBuiltDate": 630817707.46721196
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
