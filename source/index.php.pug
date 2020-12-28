@@ -161,7 +161,7 @@ block main
 		//- note that above definition of $release is not longer valid since we define it here in the loop
 		<?php $reversed = true; foreach ($marketingReleases as $release) { ?>
 
-		<div class="subsection <?php echo $release['light_text'] ? 'light-text' : 'dark-text'; ?>" style="background-image:linear-gradient(to right, <?php $c = htmlentities(hex2rgba($release['color'], 0.8), ENT_QUOTES); echo $c.','.$c.'),url(' . htmlentities($db->pathCDNForImageSize($release, 'background_1200x630', false), ENT_QUOTES) . ')">'; ?>
+		<div class="subsection <?php echo $release['light_text'] ? 'light-text' : 'dark-text'; ?>" style="background-image:linear-gradient(to right, <?php $c = htmlentities(hex2rgba($release['color'], 0.8), ENT_QUOTES); echo $c.','.$c.'),url(' . htmlentities($db->pathCDNForImageSize($release, 'background_1200x630'), ENT_QUOTES) . ')">'; ?>
 
 			<article class="<?php
 				|

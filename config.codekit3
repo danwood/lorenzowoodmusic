@@ -920,9 +920,9 @@
 		"ft": 16384,
 		"iS": 117577,
 		"jF": 0,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "/build/album_art_background_1200x630/now-in-control.jpg",
-		"oF": 0,
+		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"ou": "lpckwebp-none",
@@ -1928,7 +1928,7 @@
 		"oA": 0,
 		"oAP": "/build/index.php",
 		"oF": 2,
-		"oS": 0
+		"oS": 1
 		},
 	"/source/js/aos3.js": {
 		"bF": 0,
