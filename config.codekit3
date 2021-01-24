@@ -879,7 +879,7 @@
 		},
 	"/source/album_art_background_1200x630/drown.jpg": {
 		"ft": 16384,
-		"iS": 388738,
+		"iS": 12463,
 		"jF": 0,
 		"oA": 2,
 		"oAP": "/build/album_art_background_1200x630/drown.jpg",
@@ -892,7 +892,7 @@
 		},
 	"/source/album_art_background_1200x630/jacket-ep.jpg": {
 		"ft": 16384,
-		"iS": 588887,
+		"iS": 13250,
 		"jF": 0,
 		"oA": 2,
 		"oAP": "/build/album_art_background_1200x630/jacket-ep.jpg",
@@ -1928,7 +1928,7 @@
 		"oA": 0,
 		"oAP": "/build/index.php",
 		"oF": 2,
-		"oS": 1
+		"oS": 0
 		},
 	"/source/js/aos3.js": {
 		"bF": 0,
@@ -3482,7 +3482,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 631322798.14084804
+	"lastBuiltDate": 633211122.36575305
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
