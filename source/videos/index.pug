@@ -7,8 +7,10 @@ block vars
 	- var description = 'Videos of songs, music snippets, and Lorenzo Wood at work making music'
 
 block append links
-	// special link to load AOS stylesheet asynchronously
+	//- special link to load AOS stylesheet asynchronously
 	link(rel="stylesheet" href=cloudRawPrefix + "css/component_aos.css" media="print" onload="this.media='all'")
+	//- Start loading external AOS javascript now, use onload to when loaded
+	script(defer src="/" + "js/aos3.js" onload="AOS.init({disable:'mobile',once:true});")
 	//- override the AOS styles that are initially hidden and then revealed, when no Javascript
 	include ../_noscript_aos.html
 
@@ -94,7 +96,6 @@ block main
 				a(href="https://www.youtube.com/lorenzowoodmusic") More from YouTube
 
 block prepend scripts
-	script(src="/" + "js/aos3.js")
 	script
 		include ../../intermediate/js/youtube.js
 		//- FOR NOW - REPLACE MISSING VIDEO THUMBNAIL WITH OUR OWN!
@@ -102,4 +103,3 @@ block prepend scripts
 		//- NEEDED FOR NON-CDN ... |document.getElementById('video-A8vcWMXVR7I').src = 'https://img.youtube.com/vi/A8vcWMXVR7I/hqdefault.jpg';
 		.
 			document.getElementById('video-A8vcWMXVR7I').style = 'top:-16.84%';
-			AOS.init({disable: 'mobile', once: true});
