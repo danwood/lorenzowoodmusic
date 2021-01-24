@@ -117,22 +117,25 @@ block main
 		//- Only load the background blur image directly if no scrip. Otherwise we will manage it with Javascript, replicating PHP below.
 		noscript
 			//- use the exact same image as the displayed one so we don't need another image loaded
-			<img src="<?php $blur = CLOUDPREFIX . ($release['image_blurred'] ? 'blurred_100/' . $release['image_blurred'] : 'album_art_640/' . htmlentities($release['image'])); echo htmlentities($blur, ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
+			img(src!="<?php $blur = CLOUDPREFIX . ($release['image_blurred'] ? 'blurred_100/' . $release['image_blurred'] : 'album_art_640/' . htmlentities($release['image'])); echo htmlentities($blur, ENT_QUOTES); ?>"
+				alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>")
 
 	.center-column
 
 		<?php if ($release['blurb']) { ?>
 		
-		<div class="centered additional"><a href="<?php echo htmlentities($release['blurb_url'], ENT_QUOTES); ?>"><?php echo htmlspecialchars($release['blurb']); ?></a></div>
+		.centered.additional: a(href!="<?php echo htmlentities($release['blurb_url'], ENT_QUOTES); ?>")
+			<?php echo htmlspecialchars($release['blurb']); ?>
 
 		<?php } ?>
 
 		.title-container
 			
 			<?php if ($release['youtube_video_v']) { ?>
-			<div class="youtube-border"><div class="youtube-player" data-linking="yep" data-code='<?php echo htmlentities($release['youtube_video_v'], ENT_QUOTES); ?>' data-title=''></div></div>
+			.youtube-borde: .youtube-player(data-linking="yep"
+				data-code!="<?php echo htmlentities($release['youtube_video_v'], ENT_QUOTES); ?>"
+				data-title="")
 			<?php } ?>
-
 
 			h1
 				| <?php echo htmlspecialchars($release['artist_name']); ?> 
@@ -141,7 +144,9 @@ block main
 			<?php $featuring = $release['featuring']; if (!empty($featuring)) { echo ' (Featuring ' . htmlspecialchars($featuring) . ')'; } ?>
 
 		.imagecontainer
-			<img width="640" height="640" src="<?php echo CLOUDPREFIX . 'album_art_640/' . htmlentities($release['image'], ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>">
+			img(width="640" height="640"
+				src!="<?php echo CLOUDPREFIX . 'album_art_640/' . htmlentities($release['image'], ENT_QUOTES); ?>"
+				alt!="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>")
 
 		.title-container
 			h2.

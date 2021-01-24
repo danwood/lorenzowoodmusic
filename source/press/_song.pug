@@ -59,14 +59,16 @@ block main
 			p
 				|Please use this URL to link to "<?php echo htmlspecialchars($release['title']); ?>":
 				|
-				<a href='/link/<?php echo htmlspecialchars($release['slug']); ?>'> https://www.lorenzowoodmusic.com/link/<?php echo htmlspecialchars($release['slug']); ?></a>
+				a(href!="/link/<?php echo htmlspecialchars($release['slug']); ?>")
+					|https://www.lorenzowoodmusic.com/link/<?php echo htmlspecialchars($release['slug']); ?>
 			block moreLinks
 
 			div.clearfix
 				h2 Album Artwork
-				<a href='<?php echo htmlentities($db->pathCDNForImageSize($release, 3000, false), ENT_QUOTES); ?>'>
-					<img class="cover" width="384" height="384" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 384), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>" />
-				</a>
+				a(href!='<?php echo htmlentities($db->pathCDNForImageSize($release, 3000, false), ENT_QUOTES); ?>')
+					img.cover(width="384" height="384"
+						src!="<?php echo htmlentities($db->pathCDNForImageSize($release, 384), ENT_QUOTES); ?>"
+						alt!="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>")
 				if slugAndCoverFile2 != undefined
 					a(href='../album_art_3000/' + slugAndCoverFile2)
 						img.cover(src=cloudImgPrefix + 'album_art_384/' + slugAndCoverFile2, height=384, width=384, alt=pageTitle)
@@ -75,8 +77,8 @@ block main
 					p
 						|Link to large image (3000 pixels square):
 						br
-						<a href='<?php echo htmlentities($db->pathCDNForImageSize($release, 3000, false), ENT_QUOTES); ?>'>
-						|https://www.lorenzowoodmusic.com<?php echo htmlspecialchars($db->pathCDNForImageSize($release, 3000, false)); ?></a>
+						a(href!='<?php echo htmlentities($db->pathCDNForImageSize($release, 3000, false), ENT_QUOTES); ?>')
+							|https://www.lorenzowoodmusic.com<?php echo htmlspecialchars($db->pathCDNForImageSize($release, 3000, false)); ?>
 					if slugAndCoverFile2 != undefined
 						p: a(href='../album_art_3000/' + slugAndCoverFile2) Link to second large image (3000 pixels square)
 

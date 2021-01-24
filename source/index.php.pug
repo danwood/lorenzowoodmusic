@@ -62,13 +62,16 @@ block append banner
 	<?php if ($release) { ?>
 	.action.clearfix.safe-area-only
 		p
-			<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
-				<img loading="lazy" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" width="64" height="64" />
-			</a>
+			a(target="_blank" href!="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>")
+				img(loading="lazy"
+					src!="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>"
+					alt!="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" 
+					width="64" height="64")
 			span <?php echo htmlspecialchars( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
 				| &nbsp;
 			b
-				<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
+				a(href!="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>")
+					<?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?>
 	<?php } ?>
 
 //- header: based on herostyle value, may be .covering class
@@ -166,7 +169,8 @@ block main
 
 			article(class!="<?php $reversed = !$reversed; if (!$release['youtube_video_v']) { echo 'no-video'; if ($reversed) { echo ' '; } } if ($reversed) { echo 'reversed'; } ?>")
 				.release-image.bordered(data-aos!="fade-<?php echo $reversed ? 'left' : 'right'; ?>" data-aos-delay='200')
-					<a class="aaa" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php
+					a.aaa href!="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>")
+					<?php
 					|	echo '<img loading="lazy" width="64" height="64" src="';
 					|	echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES);
 					|	echo '" alt= "Cover image of ';
@@ -178,7 +182,6 @@ block main
 					|		$db->pathCDNForImageSize($release, 640) . ' 640w', ENT_QUOTES);
 					|	echo '" sizes="(max-width: 768px) 100vw, 25vw"/>';
 					|?>
-					|</a>
 
 				.release-text(data-aos="fade-up" data-aos-duration="1000")
 					h3

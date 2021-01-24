@@ -53,13 +53,14 @@ block append banner
 	<?php if ($release) { ?>
 	.action.clearfix.safe-area-only
 		p
-			<a target="_blank" href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>">
-				<img width="64" height="64" src="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>" alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" />
-			</a>
+			a(target="_blank" href!="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>")
+				img(width="64" height="64" src!="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>"
+					alt="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image")
 			span <?php echo htmlspecialchars( $now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New') . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
 				| &nbsp;
 			b
-				<a href="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>"><?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?></a>
+				a(href!="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>")
+					|<?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?>
 	<?php } ?>
 
 block append header
