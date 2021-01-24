@@ -6,10 +6,12 @@ block main
 
 			div.clearfix
 
-				- var cloudImgPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/';
+				- var cloudImgAutoPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/f_auto,q_auto/lwm/';
+				- var cloudImgOrigPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/';
 
-				a(href=cloudImgPrefix +"photos/orig/Lorenzo%20Wood%206190.jpg")
-					img.bio.right(src=cloudImgPrefix + "photos/Lorenzo%20Wood%206190.jpg", width=960, height=640)
+				//- link to the original JPEG image but let CDN serve a more optimized format
+				a(href=cloudImgOrigPrefix +"photos/orig/Lorenzo%20Wood%206190.jpg")
+					img.bio.right(src=cloudImgAutoPrefix + "photos/Lorenzo%20Wood%206190.jpg", width=960, height=640)
 
 				p.
 					Lorenzo Wood is an award-winning musician, songwriter, producer, and vocalist from the San Francisco area. His heartfelt, honest lyrics present a personal perspective of friendships, relationships, and coming of age in the modern era of social media. His songs, rooted in the pop genre, borrow from a number of different musical styles to create a distinctive mix of real instruments and electronic sounds.

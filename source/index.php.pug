@@ -78,7 +78,7 @@ block append banner
 block append header
 	.hero
 
-		img.hero-image.covering.swapping-image(srcset=cloudImgPrefix + "img/banner1_giant.jpg 2560w, " + cloudImgPrefix + "img/banner1_big.jpg 1920w, " + cloudImgPrefix + "img/banner1_medium.jpg 960w, " + cloudImgPrefix + "img/banner1_small.jpg 640w" sizes="100vw" width="960" height="674" src=cloudImgPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
+		img.hero-image.covering.swapping-image(srcset=cloudImgAutoPrefix + "img/banner1_giant.jpg 2560w, " + cloudImgAutoPrefix + "img/banner1_big.jpg 1920w, " + cloudImgAutoPrefix + "img/banner1_medium.jpg 960w, " + cloudImgAutoPrefix + "img/banner1_small.jpg 640w" sizes="100vw" width="960" height="674" src=cloudImgAutoPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
 
 	.icons.icons-header.overlapping.icons-5.safe-area-only
 		//- Instagram is special; it gets stroked rather than filled
@@ -169,19 +169,12 @@ block main
 
 			article(class!="<?php $reversed = !$reversed; if (!$release['youtube_video_v']) { echo 'no-video'; if ($reversed) { echo ' '; } } if ($reversed) { echo 'reversed'; } ?>")
 				.release-image.bordered(data-aos!="fade-<?php echo $reversed ? 'left' : 'right'; ?>" data-aos-delay='200')
-					a.aaa href!="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>")
-					<?php
-					|	echo '<img loading="lazy" width="64" height="64" src="';
-					|	echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES);
-					|	echo '" alt= "Cover image of ';
-					|	echo htmlentities($release['title'], ENT_QUOTES);
-					|	echo '" srcset="';
-					|	echo htmlentities(
-					|		$db->pathCDNForImageSize($release, 64) . ' 64w, ' .
-					|		$db->pathCDNForImageSize($release, 384) . ' 384w, ' .
-					|		$db->pathCDNForImageSize($release, 640) . ' 640w', ENT_QUOTES);
-					|	echo '" sizes="(max-width: 768px) 100vw, 25vw"/>';
-					|?>
+					a(href!="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>")
+						img(loading="lazy" width="64" height="64"
+							src!="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>"
+							alt!="Cover image of <?php echo htmlentities($release['title'], ENT_QUOTES); ?>"
+							srcset!="<?php echo htmlentities($db->pathCDNForImageSize($release, 64) . ' 64w, ' . $db->pathCDNForImageSize($release, 384) . ' 384w, ' . $db->pathCDNForImageSize($release, 640) . ' 640w', ENT_QUOTES); ?>"
+							sizes="(max-width: 768px) 100vw, 25vw")
 
 				.release-text(data-aos="fade-up" data-aos-duration="1000")
 					h3

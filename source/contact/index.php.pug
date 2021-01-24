@@ -22,9 +22,8 @@ block main
 		article.textual.clearfix
 			.side-photo
 				picture
-					source(srcset=cloudImgPrefix +"img/southshore.webp 990w" type="image/webp")
-					source(srcset=cloudImgPrefix +"img/southshore.jpg 990w, " + cloudImgPrefix +"img/southshore50.jpg 495w")
-					img(src=cloudImgPrefix + "img/southshore.jpg" loading="lazy" width="495" height="745" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
+					source(srcset=cloudImgAutoPrefix +"img/southshore.jpg 990w, " + cloudImgAutoPrefix +"img/southshore50.jpg 495w")
+					img(src=cloudImgAutoPrefix + "img/southshore.jpg" loading="lazy" width="495" height="745" alt="Lorenzo Wood singing, at South Shore Center, viewed from the side")
 			.next-to-side-photo
 				.next-to-side-photo-padded
 					include ../_contact.pug

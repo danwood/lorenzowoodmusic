@@ -29,7 +29,7 @@ for (var i = 0; i < youtube.length; i++) {
 		// NON-CDN:
 		//var source = "https://img.youtube.com/vi/" + code +"/maxresdefault.jpg"; // 640 x 480, letterboxed
 		// Special Cloudinary URL:
-		var source = "https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/youtube/" + code + ".jpg";
+		var source = "https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/youtube/f_auto,q_auto/" + code + ".jpg";
 		var image = new Image();
 		image.src = source;
 		image.id = "video-" + code;

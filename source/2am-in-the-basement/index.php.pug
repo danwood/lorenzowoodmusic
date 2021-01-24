@@ -67,9 +67,8 @@ block append header
 	.hero
 
 		picture
-			source(srcset=cloudImgPrefix + "img/2am.webp 1920w" type="image/webp" sizes="100vw")
-			source(srcset=cloudImgPrefix + "img/2am.jpg 1920w, " + cloudImgPrefix + "img/2am50.jpg 960w, " + cloudImgPrefix + "img/2am33.jpg 640w" sizes="100vw")
-			img.hero-image.covering(src=cloudImgPrefix + "img/2am.jpg" width="1920" height="1348" loading="eager" alt="2AM in the Basement")
+			source(srcset=cloudImgAutoPrefix + "img/2am.jpg 1920w, " + cloudImgAutoPrefix + "img/2am50.jpg 960w, " + cloudImgAutoPrefix + "img/2am33.jpg 640w" sizes="100vw")
+			img.hero-image.covering(src=cloudImgAutoPrefix + "img/2am.jpg" width="1920" height="1348" loading="eager" alt="2AM in the Basement")
 
 block main
 

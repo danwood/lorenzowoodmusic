@@ -1,7 +1,9 @@
-//- We are also defining the cloudImgPrefix in shared.pug, downcode.php and in youtube.js !!!!
-//- var cloudImgPrefix = "/";
+//- We are also using the res.cloudinary URL in shared.pug, downcode.php and in youtube.js !!!!
+//- var cloudImgAutoPrefix = "/";
+//- var cloudImgOrigPrefix = "/";
 //- var cloudRawPrefix = "/";
-- var cloudImgPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/';
+- var cloudImgAutoPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/f_auto,q_auto/lwm/';
+- var cloudImgOrigPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/';
 - var cloudRawPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/raw/upload/lwm/';
 block prelude
 doctype html
@@ -25,9 +27,10 @@ html(class="no-js", lang="en-us")
 		meta(name="supported-color-schemes" content="light dark")
 		block openGraph
 		block links
-			link(rel="apple-touch-icon" sizes="180x180" href=cloudImgPrefix + "apple-touch-icon.png")
-			link(rel="icon" type="image/png" sizes="32x32" href=cloudImgPrefix + "favicon-32x32.png")
-			link(rel="icon" type="image/png" sizes="16x16" href=cloudImgPrefix + "favicon-16x16.png")
+			//- Use CDN for icons, but make sure it's the original format just for maximum compatibility
+			link(rel="apple-touch-icon" sizes="180x180" href=cloudImgOrigPrefix + "apple-touch-icon.png")
+			link(rel="icon" type="image/png" sizes="32x32" href=cloudImgOrigPrefix + "favicon-32x32.png")
+			link(rel="icon" type="image/png" sizes="16x16" href=cloudImgOrigPrefix + "favicon-16x16.png")
 			link(rel="stylesheet" href="/css/main.012421.css")
 		block styles
 

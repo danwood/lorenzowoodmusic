@@ -34,10 +34,11 @@ block main
 
 			//- The smaller size are 960 pixels wide in various formats; Original JPEGs can be much bigger and not compressed to get max quality.
 			each imageDuple, i in images
-				a(target='_BLANK', href=cloudImgPrefix + 'photos/orig/' + encodeURIComponent(imageDuple[0]) + '.jpg' )
+				a(target='_BLANK', href=cloudImgOrigPrefix + 'photos/orig/' + encodeURIComponent(imageDuple[0]) + '.jpg' )
 					picture
-						source(type='image/webp', srcset=cloudImgPrefix + 'photos/WebP25/' + encodeURIComponent(imageDuple[0]) + '.webp')
-						img.item( data-aos='fade' data-aos-delay='500' data-aos-duration="1000", alt='Lorenzo Wood Music', title=imageDuple[1], src=cloudImgPrefix + 'photos/' + encodeURIComponent(imageDuple[0]) + '.jpg', width=960, height=imageDuple[2])
+						//- Here we manage our own webp versions
+						source(type='image/webp', srcset=cloudImgOrigPrefix + 'photos/WebP25/' + encodeURIComponent(imageDuple[0]) + '.webp')
+						img.item( data-aos='fade' data-aos-delay='500' data-aos-duration="1000", alt='Lorenzo Wood Music', title=imageDuple[1], src=cloudImgOrigPrefix + 'photos/' + encodeURIComponent(imageDuple[0]) + '.jpg', width=960, height=imageDuple[2])
 
 
 block more-credits

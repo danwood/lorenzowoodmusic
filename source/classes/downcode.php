@@ -9,7 +9,7 @@ include_once(PRIVATE_RESOLVED . '/downcode_db/secrets.php');	// $password
 
 define('DOWNCODE_DBDIR',	PRIVATE_RESOLVED . '/downcode_db');
 
-define('CLOUDPREFIX', 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/');
+define('CLOUDPREFIX', 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/f_auto,q_auto/lwm/');
 
 /* Convert hexdec color string to rgb(a) string */
  
