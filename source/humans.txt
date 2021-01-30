@@ -32,5 +32,6 @@
 	Some icons based on https://github.com/edent/SuperTinyIcons
 	Font loading: https://medium.com/clio-calliope/making-google-fonts-faster-aadf3c02a36d
 	Google Webfonts Helper https://google-webfonts-helper.herokuapp.com/fonts
+	SVG cropping https://svgcrop.com
 	
 
