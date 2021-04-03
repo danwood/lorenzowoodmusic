@@ -61,7 +61,7 @@ YouTube
 		position:absolute;
 		top:12px;
 		left:20px;
-		color:white;
+		color:var(--cLightH);
 		text-shadow:0 1px 3px black;
 	}
 }
@@ -96,6 +96,6 @@ YouTube
 	position:absolute;
 	top:1em;
 	left:1em;
-	color:white;
+	color:var(--cLightH);
 	content:"JavaScript Required"
 }

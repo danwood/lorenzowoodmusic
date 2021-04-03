@@ -35,7 +35,7 @@ section.gigs {
 	}
 
 	a.bit-track {
-		color:white;
+		color:var(--cPaperH);
 	}
 }
 
@@ -164,7 +164,7 @@ Latest Releases Section
 		color:rgba(0,0,0,0.6)!important;
 	}
 	.light-text {
-		color:white!important;
+		color:rgba(255,255,255, 0.9)!important;
 	}
 	.light-text a {
 		color:rgba(255,255,255,0.6)!important;

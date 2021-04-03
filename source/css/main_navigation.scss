@@ -1,7 +1,7 @@
 $hamburger-breakpoint:750px;
 
 .banner {
-	background:#000;
+	background:var(--cDarkH);
 	position:relative;
 }
 
@@ -54,16 +54,16 @@ input#navigation[type="checkbox"], label.hamburger {
 		}
 		li {
 			margin:0;
-			color:#fff;
+			color:var(--cPaperH);
 			display:inline-block;
 			line-height:1;
 			font-size:$page-menu-font-size;
-			font-weight:300;
+			font-weight:400;
 			letter-spacing:4px;
 			text-transform:uppercase;
 		}
 		a {
-			color:#fff;
+			color:var(--cPaperH);
 			text-decoration:none;
 			display:block;
 			padding:$page-menu-padding-v $page-menu-padding-h;
@@ -116,15 +116,15 @@ input#navigation[type="checkbox"], label.hamburger {
 		}
 		li {
 			margin:0;
-			color:#fff
+			color:var(--cPaperH)
 		}
 		a {
-			color:#fff;
+			color:var(--cPaperH);
 			font-size:1rem;
 			text-decoration:none;
 			display:block;
 			padding:12px 15px;
-			font-weight:300;
+			font-weight:400;
 			letter-spacing:2px;
 		}
 		a.active {

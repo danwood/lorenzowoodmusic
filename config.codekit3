@@ -17,18 +17,6 @@
 		"oAP": "/build/.gitignore",
 		"oF": 1
 		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
-		},
-	"/intermediate": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/intermediate",
-		"oF": 0
-		},
 	"/originals": {
 		"ft": 65536,
 		"oA": 1,
@@ -892,7 +880,7 @@
 		},
 	"/source/album_art_background_1200x630/jacket-ep.jpg": {
 		"ft": 16384,
-		"iS": 588887,
+		"iS": 13250,
 		"jF": 0,
 		"oA": 2,
 		"oAP": "/build/album_art_background_1200x630/jacket-ep.jpg",
@@ -1037,12 +1025,6 @@
 		"ou": "lpckwebp-none",
 		"q": 100,
 		"rq": 75
-		},
-	"/source/CACHE": {
-		"ft": 65536,
-		"oA": 2,
-		"oAP": "/build/CACHE",
-		"oF": 1
 		},
 	"/source/classes/class.EmailAddressValidator.php": {
 		"cB": 0,
@@ -3482,7 +3464,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 633220637.71898103
+	"lastBuiltDate": 639173988.23290396
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

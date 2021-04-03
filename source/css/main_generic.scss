@@ -141,14 +141,14 @@ JS detection & management
 .no-js p.js-warning {
 	padding:0.5rem 1rem;
 	margin:0;
-	color:purple;
-	background:white;
+	color:var(--cWarn);
+	background:var(--cPaperH);
 }
 
 .browserupgrade {		// This used to be in H5BP but now it's here, improved.
 	margin:0.2em 0;
-	background:#ccc;
-	color:#000;
+	background:var(--cPaperM);
+	color:var(--cInk);
 	font-size:150%;
 	padding:1rem;
 }
