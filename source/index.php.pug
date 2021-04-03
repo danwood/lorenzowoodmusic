@@ -37,7 +37,7 @@ block title
 	
 block append links
 	//- special link to load AOS stylesheet asynchronously
-	link(rel="stylesheet" href=cloudRawPrefix + "css/component_aos.css" media="print" onload="this.media='all'")
+	link(rel="stylesheet" href=cloudRawPrefix + "css/component_aos.css" media="print" onload="this.media='all';this.onload=null")
 
 	//- Start loading external AOS javascript now, use onload to when loaded
 	script(defer src="/" + "js/aos3.js" onload="AOS.init({disable:'mobile',once:true});")
