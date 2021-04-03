@@ -54,7 +54,7 @@ input#navigation[type="checkbox"], label.hamburger {
 		}
 		li {
 			margin:0;
-			color:var(--cPaperH);
+			color:var(--cLightH);
 			display:inline-block;
 			line-height:1;
 			font-size:$page-menu-font-size;
@@ -63,7 +63,7 @@ input#navigation[type="checkbox"], label.hamburger {
 			text-transform:uppercase;
 		}
 		a {
-			color:var(--cPaperH);
+			color:var(--cLightH);
 			text-decoration:none;
 			display:block;
 			padding:$page-menu-padding-v $page-menu-padding-h;
@@ -73,7 +73,7 @@ input#navigation[type="checkbox"], label.hamburger {
 		}
 		a:hover {
 			background-color:var(--cAccent);
-			color:var(--cInkM);
+			color:var(--cLightM);
 		}
 	}
 }

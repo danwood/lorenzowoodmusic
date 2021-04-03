@@ -11,6 +11,10 @@
 
 .action {
 	background:rgba(255,255,255,0.6);
+	color:var(--cDarkH);
+	a {
+		color:var(--cDarkH);
+	}
 }
 
 .scrolldown {
