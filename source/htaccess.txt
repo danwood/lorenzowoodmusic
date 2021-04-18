@@ -1,3 +1,8 @@
+# https://plausible.io/blog/google-floc
+
+<IfModule mod_headers.c>
+  Header always set Permissions-Policy: interest-cohort=()
+</IfModule>
 
 # Apple WWDC suggestions
 # https://developer.apple.com/videos/play/wwdc2018/207/
