@@ -38,6 +38,7 @@ block openGraph
 	meta(property="og:image" content!='<?php echo baseURL(); ?>/img/2am-in-the-basement-image-card.jpg')
 	meta(property="og:image:width" content='1200')
 	meta(property="og:image:height" content='627')
+	/// We could also have og:title for a different title; og:video for silent video
 
 
 block logo
@@ -68,7 +69,7 @@ block append header
 
 		picture
 			source(srcset=cloudImgAutoPrefix + "img/2am.jpg 1920w, " + cloudImgAutoPrefix + "img/2am50.jpg 960w, " + cloudImgAutoPrefix + "img/2am33.jpg 640w" sizes="100vw")
-			img.hero-image.covering(src=cloudImgAutoPrefix + "img/2am.jpg" width="1920" height="1348" loading="eager" alt="2AM in the Basement")
+			img.hero-image.covering(src=cloudImgAutoPrefix + "img/2am.jpg" width="1920" height="1348" loading="eager" alt="2AM in the Basement, main banner image, a collage of musical instruments")
 
 block main
 

@@ -49,6 +49,7 @@ block openGraph
 	meta(property="og:image" content!='<?php echo baseURL(); ?>/img/lorenzo-wood-image-card.jpg')
 	meta(property="og:image:width" content='1200')
 	meta(property="og:image:height" content='627')
+	/// We could also have og:title for a different title; og:video for silent video
 
 block styles
 	style
@@ -78,7 +79,7 @@ block append banner
 block append header
 	.hero
 
-		img.hero-image.covering.swapping-image(srcset=cloudImgAutoPrefix + "img/banner1_giant.jpg 2560w, " + cloudImgAutoPrefix + "img/banner1_big.jpg 1920w, " + cloudImgAutoPrefix + "img/banner1_medium.jpg 960w, " + cloudImgAutoPrefix + "img/banner1_small.jpg 640w" sizes="100vw" width="960" height="674" src=cloudImgAutoPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood")
+		img.hero-image.covering.swapping-image(srcset=cloudImgAutoPrefix + "img/banner1_giant.jpg 2560w, " + cloudImgAutoPrefix + "img/banner1_big.jpg 1920w, " + cloudImgAutoPrefix + "img/banner1_medium.jpg 960w, " + cloudImgAutoPrefix + "img/banner1_small.jpg 640w" sizes="100vw" width="960" height="674" src=cloudImgAutoPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood, main banner image")
 
 	.icons.icons-header.overlapping.icons-5.safe-area-only
 		//- Instagram is special; it gets stroked rather than filled
