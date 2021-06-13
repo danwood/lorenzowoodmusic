@@ -17,12 +17,6 @@
 		"oAP": "/build/.gitignore",
 		"oF": 1
 		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
-		},
 	"/intermediate": {
 		"ft": 65536,
 		"oA": 1,
@@ -892,7 +886,7 @@
 		},
 	"/source/album_art_background_1200x630/jacket-ep.jpg": {
 		"ft": 16384,
-		"iS": 13250,
+		"iS": 588887,
 		"jF": 0,
 		"oA": 2,
 		"oAP": "/build/album_art_background_1200x630/jacket-ep.jpg",
