@@ -1789,56 +1789,6 @@
       "ou" : "lpckwebp-default",
       "rq" : 75
     },
-    "\/source\/img\/beach.jpg" : {
-      "ft" : 16384,
-      "iS" : 179335,
-      "jF" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/img\/beach.jpg",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/source\/img\/beach.webp" : {
-      "ft" : 8388608,
-      "iS" : 150662,
-      "oA" : 2,
-      "oAP" : "\/build\/img\/beach.webp",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-default",
-      "rq" : 75
-    },
-    "\/source\/img\/beach33.jpg" : {
-      "ft" : 16384,
-      "iS" : 49669,
-      "jF" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/img\/beach33.jpg",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/source\/img\/beach50.jpg" : {
-      "ft" : 16384,
-      "iS" : 107384,
-      "jF" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/img\/beach50.jpg",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/source\/img\/cd100.png" : {
       "ft" : 32768,
       "iS" : 2178,
@@ -1848,19 +1798,6 @@
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/source\/img\/headshot2.jpg" : {
-      "ft" : 16384,
-      "iS" : 255099,
-      "jF" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/img\/headshot2.jpg",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -3215,7 +3152,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "\/source\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 645374573.23973894
+    "lastBuiltDate" : 645374702.17577899
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
