@@ -22,7 +22,7 @@ block main
 					['Lorenzo Wood 5687', 'Lorenzo Wood', 960],
 					['Lorenzo Wood 6115', 'Lorenzo Wood', 640],
 					['Lorenzo Wood 6184', 'Lorenzo Wood', 1344],
-					['Lorenzo Wood 6190', 'Lorenzo Wood', 640],
+					['Lorenzo Wood 6190', 'Lorenzo Wood', 640],		//- Note: This is served on press page as well!
 					['Lorenzo Wood 7646', 'Lorenzo Wood', 1200],
 					['Lorenzo Wood 8967', 'Lorenzo Wood', 720],
 					['Lorenzo Wood 9179', 'Lorenzo Wood and band performing in Oakland', 626],
@@ -40,7 +40,7 @@ block main
 					picture
 						//- Here we manage our own webp versions
 						//-source(type='image/webp', srcset=cloudImgOrigPrefix + 'photos/WebP25/' + encodeURIComponent(imageDuple[0]) + '.webp')
-						img.item( data-aos='fade' data-aos-delay='500' data-aos-duration="1000", alt=imageDuple[1], src=cloudImgOrigPrefix + 'photos/' + encodeURIComponent(imageDuple[0]) + '.jpg', width=960, height=imageDuple[2])
+						img.item( data-aos='fade' data-aos-delay='500' data-aos-duration="1000", alt=imageDuple[1], src=cloudImgAutoPrefix + 'photos/' + encodeURIComponent(imageDuple[0]) + '.jpg', width=960, height=imageDuple[2])
 
 
 block more-credits

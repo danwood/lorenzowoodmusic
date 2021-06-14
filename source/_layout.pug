@@ -2,9 +2,16 @@
 //- var cloudImgAutoPrefix = "/";
 //- var cloudImgOrigPrefix = "/";
 //- var cloudRawPrefix = "/";
+
+//- Optimize image.  f_auto = serve optimal image for browser like webp, jpeg-xr [IE]. q_auto = automatic quality.
 - var cloudImgAutoPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/f_auto,q_auto/lwm/';
+
+//- Serve original image. For full size images plus favicons.
 - var cloudImgOrigPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/lwm/';
+
+//- For CSS files. Others too?
 - var cloudRawPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/raw/upload/lwm/';
+
 block prelude
 doctype html
 block vars
