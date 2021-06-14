@@ -4970,7 +4970,7 @@
       "sourceMapStyle" : 0
     },
     "languageDefaultsGIF" : {
-      "autoOutputAction" : 0,
+      "autoOutputAction" : 2,
       "autoOutputPathFilenamePattern" : "*.gif",
       "autoOutputPathRelativePath" : "",
       "autoOutputPathReplace1" : "",
@@ -4996,7 +4996,7 @@
       "useUnixNewlines" : 0
     },
     "languageDefaultsJPG" : {
-      "autoOutputAction" : 0,
+      "autoOutputAction" : 2,
       "autoOutputPathFilenamePattern" : "*.jpg",
       "autoOutputPathRelativePath" : "",
       "autoOutputPathReplace1" : "",
