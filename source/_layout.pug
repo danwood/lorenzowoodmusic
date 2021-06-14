@@ -21,9 +21,9 @@ html(class="no-js", lang="en-us")
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
 		//- Prefetch as early as possible (though charset needs to come first)
 		link(rel="prefetch" href="//res.cloudinary.com")
-		link(rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-v15-latin-800.woff2" crossorigin)
-		link(rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-v15-latin-italic.woff2" crossorigin)
-		link(rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-v15-latin-regular.woff2" crossorigin)
+		link(rel="preload" as="font" type="font/woff2" href=cloudRawPrefix + "fonts/montserrat-v15-latin-800.woff2" crossorigin)
+		link(rel="preload" as="font" type="font/woff2" href=cloudRawPrefix + "fonts/montserrat-v15-latin-italic.woff2" crossorigin)
+		link(rel="preload" as="font" type="font/woff2" href=cloudRawPrefix + "fonts/montserrat-v15-latin-regular.woff2" crossorigin)
 		block meta
 		block title
 			title #{pageTitle} | Lorenzo Wood Music
