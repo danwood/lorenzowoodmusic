@@ -9,29 +9,29 @@ block main
 			- 
 				var images = [
 					['Lorenzo Wood 5006', 'Lorenzo Wood, Summer 2021, in front of a cave in Southern California', 640],
-					['Lorenzo Wood 0140', '', 640],
+					['Lorenzo Wood 0140', 'Lorenzo Wood', 640],
 					['Lorenzo Wood 0221', 'Lorenzo Wood and band at Alameda Mini Maker Faire, 2018', 774],
 					['Lorenzo Wood 1946', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
 					['Lorenzo Wood 2089', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
 					['Lorenzo Wood 2156', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
 					['Lorenzo Wood 2168', 'Lorenzo Wood and band at Lone Tree Cemetery Summer Concert Series, 2019', 640],
-					['Lorenzo Wood 2169', '', 640],
-					['Lorenzo Wood 2453', '', 960],
-					['Lorenzo Wood 2558', '', 960],
+					['Lorenzo Wood 2169', 'Lorenzo Wood', 640],
+					['Lorenzo Wood 2453', 'Lorenzo Wood', 960],
+					['Lorenzo Wood 2558', 'Lorenzo Wood', 960],
 					['Lorenzo Wood 4965', 'Lorenzo Wood and band at Alameda Mini Maker Faire, 2018', 644],
-					['Lorenzo Wood 5687', '', 960],
-					['Lorenzo Wood 6115', '', 640],
-					['Lorenzo Wood 6184', '', 1344],
-					['Lorenzo Wood 6190', '', 640],
-					['Lorenzo Wood 7646', '', 1200],
-					['Lorenzo Wood 8967', '', 720],
+					['Lorenzo Wood 5687', 'Lorenzo Wood', 960],
+					['Lorenzo Wood 6115', 'Lorenzo Wood', 640],
+					['Lorenzo Wood 6184', 'Lorenzo Wood', 1344],
+					['Lorenzo Wood 6190', 'Lorenzo Wood', 640],
+					['Lorenzo Wood 7646', 'Lorenzo Wood', 1200],
+					['Lorenzo Wood 8967', 'Lorenzo Wood', 720],
 					['Lorenzo Wood 9179', 'Lorenzo Wood and band performing in Oakland', 626],
 					['Lorenzo Wood 9286', 'Lorenzo Wood and band performing in Alameda', 512],
-					['Lorenzo Wood 9999', '', 640],
-					['Lorenzo Wood Photo Credit Claire Ashcraft 11', '', 1044],
-					['Lorenzo Wood Photo Credit Claire Ashcraft 22', '', 692],
-					['Lorenzo Wood Photo Credit Dave Weiland 01', '', 1290],
-					['Lorenzo Wood Photo Credit Dave Weiland 02', '', 1440],
+					['Lorenzo Wood 9999', 'Lorenzo Wood', 640],
+					['Lorenzo Wood Photo Credit Claire Ashcraft 11', 'Lorenzo Wood', 1044],
+					['Lorenzo Wood Photo Credit Claire Ashcraft 22', 'Lorenzo Wood', 692],
+					['Lorenzo Wood Photo Credit Dave Weiland 01', 'Lorenzo Wood', 1290],
+					['Lorenzo Wood Photo Credit Dave Weiland 02', 'Lorenzo Wood', 1440],
 					];
 
 			//- The smaller size are 960 pixels wide in various formats; Original JPEGs can be much bigger and not compressed to get max quality.
@@ -40,7 +40,7 @@ block main
 					picture
 						//- Here we manage our own webp versions
 						//-source(type='image/webp', srcset=cloudImgOrigPrefix + 'photos/WebP25/' + encodeURIComponent(imageDuple[0]) + '.webp')
-						img.item( data-aos='fade' data-aos-delay='500' data-aos-duration="1000", alt='Lorenzo Wood Music', title=imageDuple[1], src=cloudImgOrigPrefix + 'photos/' + encodeURIComponent(imageDuple[0]) + '.jpg', width=960, height=imageDuple[2])
+						img.item( data-aos='fade' data-aos-delay='500' data-aos-duration="1000", alt=imageDuple[1], src=cloudImgOrigPrefix + 'photos/' + encodeURIComponent(imageDuple[0]) + '.jpg', width=960, height=imageDuple[2])
 
 
 block more-credits
