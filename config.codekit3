@@ -1452,54 +1452,6 @@
       "oAP" : "\/build\/fetchCACHE.php",
       "oF" : 1
     },
-    "\/source\/fonts\/montserrat-v15-latin-800.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/fonts\/montserrat-v15-latin-800.woff",
-      "oF" : 0
-    },
-    "\/source\/fonts\/montserrat-v15-latin-800.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/fonts\/montserrat-v15-latin-800.woff2",
-      "oF" : 0
-    },
-    "\/source\/fonts\/montserrat-v15-latin-italic.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/fonts\/montserrat-v15-latin-italic.woff",
-      "oF" : 0
-    },
-    "\/source\/fonts\/montserrat-v15-latin-italic.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/fonts\/montserrat-v15-latin-italic.woff2",
-      "oF" : 0
-    },
-    "\/source\/fonts\/montserrat-v15-latin-regular.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/fonts\/montserrat-v15-latin-regular.woff",
-      "oF" : 0
-    },
-    "\/source\/fonts\/montserrat-v15-latin-regular.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/fonts\/montserrat-v15-latin-regular.woff2",
-      "oF" : 0
-    },
     "\/source\/google-verification.pug" : {
       "cB" : 0,
       "cOD" : 1,
@@ -3178,7 +3130,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "\/source\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 645378253.97422397
+    "lastBuiltDate" : 645426714.70508003
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
