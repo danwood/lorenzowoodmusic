@@ -1904,6 +1904,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/source\/img\/u_and_i.png" : {
+      "ft" : 32768,
+      "iS" : 39095,
+      "oA" : 0,
+      "oAP" : "\/build\/img\/u_and_i.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/source\/index.php.pug" : {
       "cB" : 0,
       "cOD" : 1,
