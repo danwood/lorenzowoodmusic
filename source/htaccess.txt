@@ -610,7 +610,7 @@ AddDefaultCharset utf-8
     style-src 'unsafe-inline' res.cloudinary.com 'self'; \
     img-src res.cloudinary.com img.youtube.com 'self' data:; \
     font-src res.cloudinary.com 'self'; \
-    frame-src lightwidget.com w.soundcloud.com www.facebook.com www.youtube.com; \
+    frame-src lightwidget.com open.spotify.com w.soundcloud.com www.facebook.com www.youtube.com; \
     frame-ancestors 'none' upgrade-insecure-requests" \
     "expr=%{CONTENT_TYPE} =~ m#text\/(html|javascript)|application\/pdf|xml#i"
 
