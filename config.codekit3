@@ -1841,19 +1841,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/source\/img\/niko.jpg" : {
-      "ft" : 16384,
-      "iS" : 149375,
-      "jF" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/img\/niko.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/source\/img\/roseave.jpg" : {
       "ft" : 16384,
       "iS" : 139003,

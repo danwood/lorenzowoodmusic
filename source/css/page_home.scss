@@ -347,15 +347,14 @@ Modal for Contact Form
 .gridly {
 
 	// Spotify is W x W+80  so for instance 300 x 380. So that's 4 rows tall with 20 pixel gap: 80+20+80+20+80+20+80
-	display:grid;
 	display: grid;
 	grid-auto-flow: dense;
 	grid-template-columns: repeat(auto-fit, 320px);
 	grid-auto-rows: 95px;
-	align-items:stretch;
-	justify-items:stretch;
-	justify-content: stretch;
-	align-content: stretch;
+
+	align-items:stretch;		// each item should stretch vertically to fill up the grid area
+	justify-items:stretch;		// each item should stretch horizontally to fill up the grid area
+	justify-content: center;	// center the grid of items in the grid container
 
 	/* CSS HSL */
 	--melon: hsla(9, 97%, 86%, 1);
@@ -369,6 +368,10 @@ Modal for Contact Form
 	--peach-puff: hsla(25, 100%, 86%, 1);
 	--peach-crayola: hsla(28, 98%, 80%, 1);
 
+	@media (prefers-color-scheme:dark) {
+
+	}
+
 	.c1 { background-color:var(--peach-crayola)}
 	.c2 { background-color:var(--melon)}
 	.c3 { background-color:var(--pale-pink)}
@@ -381,7 +384,6 @@ Modal for Contact Form
 	.c10 { background-color:var(--peach-puff)}
 
 	& > * {
-		background-color:orange;
 		overflow:hidden;
 
 		// default size	
@@ -389,12 +391,12 @@ Modal for Contact Form
 		grid-row-end: span 2;
 	}
 
-	& > h2, & > h3, & > h4, & > p, & > .padded {
+	h2, h3, h4, p, .padded {
 		// Center everything in grid cell in the center
 		display: inline-grid;
   		place-items: center;
   		text-align: center;
-		padding:10px;
+		padding:10px 10px 0 10px;		// no bottom, to allow for adjacent items
 		margin:0;	// override existing margins
 	}
 
@@ -408,19 +410,26 @@ Modal for Contact Form
 		}
 	}
 
-	& > h2 {				// Year
+	h2 {				// Year.  Special colors inverse of color scheme
 		font-size:6rem;
 		line-height:0.90;
+		background-color:var(--cInkH);		// inverse color
+		color:var(--cPaperH);
 	}
-	& > h3 {				// Client
+	h3 {				// Client
 		font-size:4rem;
 		line-height:1;
 	}
-	& > h4 {				// Project
+	h4 {				// Project
 		font-size:3rem;
 		line-height:1;
 		font-weight:400;
 	}
+
+	& > .reverbnation {
+		padding:20px 0;		// 150 fixed to pad to 190 height
+	}
+
 	& > img {
 		object-fit:cover;
 		width:100%;
@@ -452,7 +461,7 @@ Modal for Contact Form
 		grid-column-end: span 2;
 	}
 
-	& > .spotify, & > .x1y2 {				// 1 x 2. For the main spotify preview. Or just use a 1x1 for small previews.
+	& > .spotify, & > .reverbnation, & > .x1y2 {				// 1 x 2. For the main spotify preview. Or just use a 1x1 for small previews.
 		grid-row-end: span 4;
 	}
 	& > .x1y1 {
