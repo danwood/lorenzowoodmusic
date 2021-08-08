@@ -17,12 +17,6 @@
       "oAP" : "\/build\/.gitignore",
       "oF" : 1
     },
-    "\/build" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/build\/build",
-      "oF" : 0
-    },
     "\/intermediate" : {
       "ft" : 65536,
       "oA" : 1,
@@ -1409,6 +1403,18 @@
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/source\/css\/reset.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/css\/reset-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/source\/favicon-16x16.png" : {
       "ft" : 32768,
@@ -3256,7 +3262,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "\/source\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 645426714.70508003
+    "lastBuiltDate" : 650140736.79558206
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

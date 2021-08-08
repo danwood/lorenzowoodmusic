@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5, h6, dt, .bold {
 	font-weight:800;
 }
 
+p, blockquote {
+	margin: 1em 0
+}
+
 blockquote {
 	font-style:italic;
 	letter-spacing:2px;
