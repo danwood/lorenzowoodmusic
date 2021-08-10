@@ -344,70 +344,55 @@ Modal for Contact Form
 	cursor:pointer;
 }
 
-.gridly {
+.production {
 
 	// Spotify is W x W+80  so for instance 300 x 380. So that's 4 rows tall with 20 pixel gap: 80+20+80+20+80+20+80
 	display: grid;
 	grid-auto-flow: dense;
-	grid-template-columns: repeat(auto-fit, 320px);
-	grid-auto-rows: 95px;
+//	grid-template-columns: repeat(auto-fit, 320px);
+	column-gap: 1rem;
+	row-gap: 1rem;
 
 	align-items:stretch;		// each item should stretch vertically to fill up the grid area
 	justify-items:stretch;		// each item should stretch horizontally to fill up the grid area
 	justify-content: center;	// center the grid of items in the grid container
 
-	/* CSS HSL */
-	--melon: hsla(9, 97%, 86%, 1);
-	--pale-pink: hsla(9, 88%, 90%, 1);
-	--misty-rose: hsla(8, 74%, 92%, 1);
-	--isabelline: hsla(9, 48%, 95%, 1);
-	--platinum: hsla(60, 8%, 90%, 1);
-	--alabaster: hsla(144, 15%, 87%, 1);
-	--linen: hsla(32, 31%, 89%, 1);
-	--champagne-pink: hsla(19, 100%, 93%, 1);
-	--peach-puff: hsla(25, 100%, 86%, 1);
-	--peach-crayola: hsla(28, 98%, 80%, 1);
+	section {
+		grid-column-end: span 1;	// Small article with small preview
+		grid-row-end: span 1;
+		overflow:hidden;
+		background-color:orange;
 
-	@media (prefers-color-scheme:dark) {
-
+		display: grid;					// Section is itself a grid
+		grid-template-columns:  1fr 1fr;
 	}
 
-	.c1 { background-color:var(--peach-crayola)}
-	.c2 { background-color:var(--melon)}
-	.c3 { background-color:var(--pale-pink)}
-	.c4 { background-color:var(--misty-rose)}
-	.c5 { background-color:var(--isabelline)}
-	.c6 { background-color:var(--platinum)}
-	.c7 { background-color:var(--alabaster)}
-	.c8 { background-color:var(--linen)}
-	.c9 { background-color:var(--champagne-pink)}
-	.c10 { background-color:var(--peach-puff)}
+	section.video {					// Wide article with video preview
+		grid-column-end: span 2;
+		grid-row-end: span 2;
+		background-color: pink;
+		grid-template-columns:  1fr 480px;
+	}
 
-	& > * {
-		overflow:hidden;
-
-		// default size	
+	section.cover {					// Narrow article with tall cover-art embed
 		grid-column-end: span 1;
 		grid-row-end: span 2;
+		background-color: yellow;
+
+		grid-template-columns:  1fr 300px;
 	}
 
-	h2, h3, h4, p, .padded {
-		// Center everything in grid cell in the center
-		display: inline-grid;
-  		place-items: center;
-  		text-align: center;
-		padding:10px 10px 0 10px;		// no bottom, to allow for adjacent items
-		margin:0;	// override existing margins
-	}
 
-	& > .spotify {
+	& .spotify {
 		width:300px;
+	}
+	& section.cover .spotify {		// tall spotify preview
 		height:380px;
-		padding:0 10px;
-		&.x1y0, &.x2y0 {
-			height:80px;
-			padding:10px 7.5px;	// to make 95px
-		}
+	}
+
+	h1, h2, h3, h4, article, aside {
+		margin: 0;
+		padding: 0;
 	}
 
 	h2 {				// Year.  Special colors inverse of color scheme
@@ -426,56 +411,19 @@ Modal for Contact Form
 		font-weight:400;
 	}
 
-	& > .reverbnation {
+	.reverbnation {
 		padding:20px 0;		// 150 fixed to pad to 190 height
 	}
 
-	& > img {
-		object-fit:cover;
-		width:100%;
-		height:100%;
+	img {
+		max-width:100%;
+		height:auto;
 	}
-	& > .youtube-grid-container {				// 2 x 2
+	.youtube-grid-container {				// 2 x 2
 		background-color:black!important;
-		grid-column-end: span 2;
-		grid-row-end: span 4;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-
-		&.x3y3 {
-			grid-column-end: span 3;
-			grid-row-end: span 6;
-		}
-
 	}
-	& > .x2y4 {								// 2 x 4
-		grid-column-end: span 2;
-		grid-row-end: span 8;
-	}
-	& > .x2y2 {								// 2 x 2
-		grid-column-end: span 2;
-		grid-row-end: span 4;
-	}
-	& > .x2y1 {								// 2 x 1
-		grid-column-end: span 2;
-	}
-
-	& > .spotify, & > .reverbnation, & > .x1y2 {				// 1 x 2. For the main spotify preview. Or just use a 1x1 for small previews.
-		grid-row-end: span 4;
-	}
-	& > .x1y1 {
-		grid-column-end: span 1;
-		grid-row-end: span 2;
-	}
-	& > .x1y0 {								// 0 means "half row"
-		grid-column-end: span 1;
-		grid-row-end: span 1;
-	}
-	& > .x2y0 {								// 0 means "half row"
-		grid-column-end: span 2;
-		grid-row-end: span 1;
-	}
-
 }
 
