@@ -364,14 +364,26 @@ section.production {
 	}
 }
 
+/*
+----------------------------------------
+Production
+----------------------------------------
+*/
+
+$gutter: 20px;
+$minCardWidth: 526px; // Wide enough to fit "Johnson" without pushing aside artwork
+$minDoubleWideVideoCardWidth: 1024px; // wide enough for text next to video
+$minScreenWidthForOneCard: $minCardWidth + $gutter + $gutter;
+$minScreenWidthForTwoCards: ($minCardWidth * 2) + $gutter + $gutter + $gutter;
+
 .productiongrid {
 
-	@media only screen and (min-width:600px) {		// Big enough for one or more cards with text side-by-side with cover
+	@media only screen and (min-width:$minScreenWidthForOneCard) {		// Big enough for one or more cards with text side-by-side with cover
 		display: grid;
 		grid-auto-flow: dense;
-	  	grid-template-columns: repeat(auto-fit, minmax(526px, 1fr));		// Wide enough to fit "Johnson" without pushing aside artwork
-		column-gap: 20px;
-		row-gap: 20px;
+	  	grid-template-columns: repeat(auto-fit, minmax($minCardWidth, 1fr));		
+		column-gap: $gutter;
+		row-gap: $gutter;
 
 		align-items:stretch;		// each item should stretch vertically to fill up the grid area
 		justify-items:stretch;		// each item should stretch horizontally to fill up the grid area
@@ -379,17 +391,17 @@ section.production {
 	}
 
 	section {
-		padding:20px;	// inner padding in each card
+		padding:$gutter;	// inner padding in each card
 		position: relative;
 		grid-column-end: span 1;	// Small article with small preview
 		overflow:hidden;
 		background-color: var(--cPaperM);
 		box-shadow: 0px 3px 6px 2px rgba(0,0,0,0.3);	// right down blur spread color
 
-		@media only screen and (min-width:600px) {		// Big enough for one or more cards with text side-by-side with cover
+		@media only screen and (min-width:$minScreenWidthForOneCard) {		// Big enough for one or more cards with text side-by-side with cover
 			display: grid;					// Section is itself a grid
 			grid-template-columns:  1fr 1fr;
-	  		column-gap: 20px;
+	  		column-gap: $gutter;
 		}
 
 		&::after {
@@ -397,8 +409,8 @@ section.production {
 			position: absolute;
 			font-size:0.6em;
 			color: --var(cInkL);
-			left: 1rem;
-			bottom: 1rem;
+			left: 4px;
+			bottom: 4px;
 		}
 		&.y2018::after { content: '2018' }
 		&.y2019::after { content: '2019' }
@@ -410,23 +422,19 @@ section.production {
 
 	section.video {					// Wide article with video preview
 
-		@media only screen and (min-width:1112px) {		// 526*2+40+20. Big enough for 2 cover cards side by side, and for video to show fully to match
+		@media only screen and (min-width:$minScreenWidthForTwoCards) {		//  Big enough for 2 cover cards side by side, and for video to show fully to match
 			grid-column-end: span 2;
 		}
-		@media only screen and (min-width:1024px) {		// Big enough for text side-by-side with video 
+		@media only screen and (min-width:$minDoubleWideVideoCardWidth) {		// Big enough for text side-by-side with video 
 			grid-template-columns:  1fr 675px;		// optimum size to match height of spotify embed
 		}
 	}
 
-	//- 300 x 380 is standard; 250 by 330 is the smallest full one; 250 x 80 is the smallest compact one.
-	//- This is assuming standard size. I should let it handle smaller size as much as possible!
-	//- Especially if I can have side-by-side at smaller screen sizes!!! 
-
 	section.cover {					// Narrow article with tall cover-art embed
 		grid-column-end: span 1;
 
-		@media only screen and (min-width:600px) {		// Big enough for one or more cards with text side-by-side with cover
-			grid-template-columns:  1fr minmax(250px, auto);
+		@media only screen and (min-width:$minScreenWidthForOneCard) {		// Big enough for one or more cards with text side-by-side with cover
+			grid-template-columns:  1fr minmax(250px, 350px);				// make sure 2nd column is 250px minimum width for spotify embed
 		}
 
 	}
