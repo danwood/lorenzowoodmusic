@@ -347,12 +347,29 @@ section.production {
 	padding:0 20px;				// left-right padding
 }
 
+.spotify-embed {
+	position:relative;
+	padding-top:100%;
+	height:80px;
+	max-width:100%;
+
+	iframe {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		min-width:250px;
+		min-height:330px;
+	}
+}
+
 .productiongrid {
 
 	@media only screen and (min-width:600px) {		// Big enough for one or more cards with text side-by-side with cover
 		display: grid;
 		grid-auto-flow: dense;
-	  	grid-template-columns: repeat(auto-fit, minmax(564px, 1fr));		// Wide enough to fit "Johnson" without pushing aside artwork
+	  	grid-template-columns: repeat(auto-fit, minmax(526px, 1fr));		// Wide enough to fit "Johnson" without pushing aside artwork
 		column-gap: 20px;
 		row-gap: 20px;
 
@@ -393,7 +410,7 @@ section.production {
 
 	section.video {					// Wide article with video preview
 
-		@media only screen and (min-width:1180px) {		// Big enough for 2 cover cards side by side, and for video to show fully to match
+		@media only screen and (min-width:1112px) {		// 526*2+40+20. Big enough for 2 cover cards side by side, and for video to show fully to match
 			grid-column-end: span 2;
 		}
 		@media only screen and (min-width:1024px) {		// Big enough for text side-by-side with video 
@@ -409,7 +426,7 @@ section.production {
 		grid-column-end: span 1;
 
 		@media only screen and (min-width:600px) {		// Big enough for one or more cards with text side-by-side with cover
-			grid-template-columns:  1fr 300px;
+			grid-template-columns:  1fr minmax(250px, auto);
 		}
 
 	}
