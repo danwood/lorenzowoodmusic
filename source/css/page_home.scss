@@ -12,6 +12,9 @@ Home-Page ONLY classes.
 */
 
 
+h2 {
+	font-size:4em;
+}
 
 /*
 ----------------------------------------
@@ -37,10 +40,6 @@ section.gigs {
 	a.bit-track {
 		color:var(--cPaperH);
 	}
-}
-
-section.latest-releases {
-	background-color:var(--color3);
 }
 
 .scrolldown {
@@ -344,54 +343,75 @@ Modal for Contact Form
 	cursor:pointer;
 }
 
-body { opacity: 0.25 }
-
-@media only screen and (min-width:$breakpointToSmall) {
-	body { opacity: 0.5 }
-}
-@media only screen and (min-width:$breakpointToMedium) {
-	body { opacity: 0.75 }
-}
-@media only screen and (min-width:$breakpointToLarge) {
-	body { opacity: 1.0 }
+section.production {
+	padding:0 20px;				// left-right padding
 }
 
 .productiongrid {
 
-	// Spotify is W x W+80  so for instance 300 x 380. So that's 4 rows tall with 20 pixel gap: 80+20+80+20+80+20+80
-	display: grid;
-	grid-auto-flow: dense;
-  	grid-template-columns: repeat(auto-fit, minmax(564px, 1fr));		// Wide enough to fit "Johnson" without pushing aside artwork
-	column-gap: 1rem;
-	row-gap: 1rem;
+	@media only screen and (min-width:600px) {		// Big enough for one or more cards with text side-by-side with cover
+		display: grid;
+		grid-auto-flow: dense;
+	  	grid-template-columns: repeat(auto-fit, minmax(564px, 1fr));		// Wide enough to fit "Johnson" without pushing aside artwork
+		column-gap: 20px;
+		row-gap: 20px;
 
-	align-items:stretch;		// each item should stretch vertically to fill up the grid area
-	justify-items:stretch;		// each item should stretch horizontally to fill up the grid area
-	justify-content: center;	// center the grid of items in the grid container
+		align-items:stretch;		// each item should stretch vertically to fill up the grid area
+		justify-items:stretch;		// each item should stretch horizontally to fill up the grid area
+		justify-content: center;	// center the grid of items in the grid container
+	}
 
 	section {
+		padding:20px;	// inner padding in each card
+		position: relative;
 		grid-column-end: span 1;	// Small article with small preview
-		grid-row-end: span 1;
 		overflow:hidden;
 		background-color: var(--cPaperM);
 		box-shadow: 0px 3px 6px 2px rgba(0,0,0,0.3);	// right down blur spread color
 
-		display: grid;					// Section is itself a grid
-		grid-template-columns:  1fr 1fr;
-  		column-gap: 1rem;
+		@media only screen and (min-width:600px) {		// Big enough for one or more cards with text side-by-side with cover
+			display: grid;					// Section is itself a grid
+			grid-template-columns:  1fr 1fr;
+	  		column-gap: 20px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			font-size:0.6em;
+			color: --var(cInkL);
+			left: 1rem;
+			bottom: 1rem;
+		}
+		&.y2018::after { content: '2018' }
+		&.y2019::after { content: '2019' }
+		&.y2020::after { content: '2020' }
+		&.y2021::after { content: '2021' }
+		&.y2022::after { content: '2022' }
+		&.y2023::after { content: '2023' }
 	}
 
 	section.video {					// Wide article with video preview
-		grid-column-end: span 2;
-		grid-row-end: span 2;
-		grid-template-columns:  1fr 675px;		// optimum size to match height of spotify embed
+
+		@media only screen and (min-width:1180px) {		// Big enough for 2 cover cards side by side, and for video to show fully to match
+			grid-column-end: span 2;
+		}
+		@media only screen and (min-width:1024px) {		// Big enough for text side-by-side with video 
+			grid-template-columns:  1fr 675px;		// optimum size to match height of spotify embed
+		}
 	}
+
+	//- 300 x 380 is standard; 250 by 330 is the smallest full one; 250 x 80 is the smallest compact one.
+	//- This is assuming standard size. I should let it handle smaller size as much as possible!
+	//- Especially if I can have side-by-side at smaller screen sizes!!! 
 
 	section.cover {					// Narrow article with tall cover-art embed
 		grid-column-end: span 1;
-		grid-row-end: span 2;
 
-		grid-template-columns:  1fr 300px;
+		@media only screen and (min-width:600px) {		// Big enough for one or more cards with text side-by-side with cover
+			grid-template-columns:  1fr 300px;
+		}
+
 	}
 
 
@@ -407,12 +427,6 @@ body { opacity: 0.25 }
 		padding: 0;
 	}
 
-	h2 {				// Year.  Special colors inverse of color scheme
-		font-size:4rem;
-		line-height:0.90;
-		background-color:var(--cInkH);		// inverse color
-		color:var(--cPaperH);
-	}
 	h3 {				// Client
 		font-size:3rem;
 		line-height:1;
@@ -422,6 +436,7 @@ body { opacity: 0.25 }
 		line-height:1;
 		font-weight:400;
 		font-style: italic;
+		margin-top: 1rem;
 	}
 
 	.reverbnation {
