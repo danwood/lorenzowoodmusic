@@ -352,6 +352,7 @@ section.production {
 	padding-top:100%;
 	height:80px;
 	max-width:100%;
+	box-sizing: content-box;
 
 	iframe {
 		position:absolute;
@@ -409,7 +410,7 @@ $minScreenWidthForTwoCards: ($minCardWidth * 2) + $gutter + $gutter + $gutter;
 			position: absolute;
 			font-size:0.6em;
 			color: --var(cInkL);
-			left: 4px;
+			left: 8px;
 			bottom: 4px;
 		}
 		&.y2018::after { content: '2018' }
