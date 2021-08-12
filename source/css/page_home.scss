@@ -442,14 +442,6 @@ $minScreenWidthForTwoCards: ($minCardWidth * 2) + $gutter + $gutter + $gutter;
 
 	}
 
-
-	& .spotify {
-		width:300px;
-	}
-	& section.cover .spotify {		// tall spotify preview
-		height:380px;
-	}
-
 	h1, h2, h3, h4, article, aside {
 		margin: 0;
 		padding: 0;
@@ -467,19 +459,9 @@ $minScreenWidthForTwoCards: ($minCardWidth * 2) + $gutter + $gutter + $gutter;
 		margin-top: 1rem;
 	}
 
-	.reverbnation {
-		padding:20px 0;		// 150 fixed to pad to 190 height
-	}
-
 	img {
 		max-width:100%;
 		height:auto;
-	}
-	.youtube-grid-container {				// 2 x 2
-		background-color:black!important;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 	}
 }
 
