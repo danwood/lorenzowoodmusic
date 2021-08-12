@@ -10,19 +10,20 @@ var d$a = document.querySelectorAll.bind(document);
 // Bands in Town - display past events. Not showing anything if no javascript.
 var recentPerformances = d$('#recent-performances');
 
-recentPerformances.innerHTML = '<a id="recent-link" href="#">& Recent</a>';
+if (recentPerformances) { recentPerformances.innerHTML = '<a id="recent-link" href="#">& Recent</a>'; }
 
 // If we click to show recent performances too, this gets revealed. A one-way street BTW.
 var recentLink = d$('#recent-link');
-recentLink.onclick = function() {
-	d$('.bit-header').textContent = 'Recent & Upcoming Performances';
-	var pastEvents = d$a('.bit-past');
-	Array.prototype.forEach.call(pastEvents, function(row){
-		row.classList.remove('none');
-	});
-	return false;
-};
-
+if (recentLink) {
+	recentLink.onclick = function() {
+		d$('.bit-header').textContent = 'Recent & Upcoming Performances';
+		var pastEvents = d$a('.bit-past');
+		Array.prototype.forEach.call(pastEvents, function(row){
+			row.classList.remove('none');
+		});
+		return false;
+	};
+}
 // -----
 // ----- HOME PAGE - RECENT PERFORMANCES
 // -----
