@@ -2,9 +2,6 @@
 // Optimal grouped sizes
 // https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
 
-
-
-
 $breakpointToSmall:  600px;		// 0-599 Mobile Phone
 $breakpointToMedium: 900px;		// 600-899 Pad Portrait
 $breakpointToLarge: 1200px; 	// 900-1199 Pad Landscape
@@ -20,3 +17,16 @@ $mainBreakpoint: 600px;	// For legacy breakpoints, assume iPad portrait is "larg
 $page-menu-padding-h: 0.6rem;
 $page-menu-padding-v: 1.0rem;
 $page-menu-font-size: 0.9rem;
+
+
+// Mixins here too since they may need to be included from different contexts.
+
+// https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
+// https://chriskirknielsen.com/blog/modern-fluid-typography-with-clamp/
+@mixin fluid-type($min-vw, $max-vw, $min-value, $max-value) {
+  $factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+  $calc-value: unquote("#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }");
+
+  font-size: $min-value; // Fallback for older browsers
+  font-size: clamp(#{ if($min-value > $max-value, $max-value, $min-value) }, #{ $calc-value }, #{ if($min-value > $max-value, $min-value, $max-value) });
+}

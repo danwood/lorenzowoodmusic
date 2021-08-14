@@ -362,8 +362,8 @@ section.production {
 		left:0;
 		width:100%;
 		height:100%;
-		min-width:250px;
-		min-height:330px;
+		min-width:230px;
+		min-height:310px;
 	}
 }
 
@@ -383,6 +383,17 @@ $minScreenWidthForFourCards: ($minCardWidth * 4) + ($gutter * 5);	// gutter left
 
 
 .productiongrid {
+
+	// Default font size based on width of entire screen for one card (or cardless display)
+	// Let's say 1em = 10px on a 320 screen, then scale up linearly so that it's 20px on 640 and 30px on 960. We're switching to 2-up by then.
+    @include fluid-type(20rem, 60rem, 0.625rem, 1.875rem);
+
+
+	@media only screen and (min-width:$minScreenWidthForTwoCards) {	
+		font-size:10px;
+	}
+
+	// GRID when there is enough room for ONE OR MORE CARDS
 
 	@media only screen and (min-width:$minScreenWidthForOneCard) {		// Big enough for one or more cards with text side-by-side with cover
 		display: grid;
@@ -487,15 +498,15 @@ $minScreenWidthForFourCards: ($minCardWidth * 4) + ($gutter * 5);	// gutter left
 	}
 
 	h3 {				// Client
-		font-size:3rem;
+		font-size:3em;
 		line-height:1;
 	}
 	h4 {				// Project
-		font-size:2rem;
+		font-size:2em;
 		line-height:1;
 		font-weight:400;
 		font-style: italic;
-		margin-top: 1rem;
+		margin-top: 1em;
 	}
 
 }
