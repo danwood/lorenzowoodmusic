@@ -413,8 +413,12 @@ section.production {
  	 	// Reset card type now that it's two across. Tweaked to give as close to 1rem but small enough to fit with names we need!
  	 	@include fluid-type(48rem, 96rem, 0.8rem, 1.6rem);
 	}
+	//@media only screen and (min-width:$minDoubleWideVideo) {		// Big enough for text side-by-side with video 
+	//	grid-auto-rows: 1fr;	// TESTING ONLY make sure the rows are the same height when there's a video. Not really useful.
+	//}
 
 	section {
+		// background: yellow;	// TESTING
 		position: relative;
 		overflow:hidden;
 
@@ -456,7 +460,7 @@ section.production {
 		}
 		@media only screen and (min-width:$minDoubleWideVideo) {		// Big enough for text side-by-side with video 
 			display: grid;					// Section is itself a grid
-			grid-template-columns:  1fr minmax(675px, 755px);		// size to match height of spotify embed, as long as nothing else is forcing smaller spotify
+			grid-template-columns:  1fr minmax(661px, 800px); // Range is kind of iffy. Sort of emperical but it doesn't really grow proportionally.
 	  		column-gap: $gutterX;
 		}
 	}
