@@ -15,7 +15,7 @@ Home-Page ONLY classes.
 h2 {
 	font-size:4em;
 	text-align:center;
-	margin: 2rem 0 1rem 0;
+	padding: 2rem 0 1rem 0; // use padding so that our background color is included
 }
 
 /*
@@ -27,6 +27,10 @@ Colors
 section.mailchimp-section {
 	background-color:var(--color3);
 }
+section.production {
+	background-color:var(--color2);
+}
+
 
 section.bio {
 	background-color:var(--color6);
@@ -377,11 +381,12 @@ $minOneColumnWide: 490px; // ONE COLUMN WIDE:    Minimal margins. One column, te
 $minTwoColumn:     768px; // TWO COLUMNS NARROW: Minimal margins. Two columns, text ABOVE preview. (10 + 364 + 10) * 2 
 $minDoubleWideVideo: 975px; // wide enough for text next to video, empirical. Too narrow and stuff gets cropped.
 
-$gutterX: 1.3vw;		// always this gutter between cards
+// https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
+$gutterX: clamp(0.625rem, -7.3750rem + 16.6667vw, 2rem);	// We want 10px at 768px; values: 768px; 900px; 0.625rem, 2rem 
 $gutterY: 5.2vw;		// always this gutter between cards
 
 section.production {
-	padding:0 $gutterX;				// left-right padding
+	padding:0 $gutterX; // left-right padding
 }
 
 .productiongrid {
@@ -389,6 +394,7 @@ section.production {
 	// Default font size based on width of entire screen for one card (or cardless display)
 	// Let's say 1em = 10px on a 320 screen, then scale up linearly so that it's 20px on 640 and 30px on 960. We're switching to 2-up by then.
     @include fluid-type(20rem, 60rem, 0.625rem, 1.875rem);
+	text-align:center;
 
 	// GRID when there is enough room for ONE OR MORE CARDS
 
@@ -417,7 +423,7 @@ section.production {
 			position: absolute;
 			font-size:0.6em;
 			color: --var(cInkL);
-			right: 8px;
+			left: 8px;
 			top: 4px;
 		}
 		&.y2018::after { content: '2018' }
@@ -470,6 +476,7 @@ section.production {
 	}
 
 	h3 {				// Client
+		margin-top:0.5em;
 		font-size:2.2em;
 		line-height:1;
 	}
