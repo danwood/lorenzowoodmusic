@@ -1,13 +1,13 @@
 
-section {
+body > section {
 	padding-top:1rem;			// don't specify sides since those are handled separately
 	padding-bottom:1rem;
 }
-section.balance-footer {
+body > section.balance-footer {
 	padding-bottom:0;
 }
 
-article {
+body > article {
 	
 	padding:2rem 0;		// Top/bottom. if we use margin above then it messes with background image
 
