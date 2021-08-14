@@ -373,8 +373,19 @@ Production
 ----------------------------------------
 */
 
-$gutter: 20px;
-$minCardWidth: 526px; // Wide enough to fit "Johnson" without pushing aside artwork
+// BREAKPOINTS
+
+$minOneColumnNarrow: 0px;   // ONE COLUMN NARROW:  Minimal margins. One column, text ABOVE preview. 10 + 230 + 10 is what we could handle
+$minOneColumnWide:   490px; // ONE COLUMN WIDE:    Minimal margins. One column, text next to preview. 10 + 230 + 10 + 230 + 10 = 490
+$minTwoColumnNarrow: 768px; // TWO COLUMNS NARROW: Minimal margins. Two columns, text ABOVE preview. (10 + 364 + 10) * 2 
+$minTwoColumnMedium: 999px; // TWO COLUMNS MEDIUM: "Card" look. Two columns, text ABOVE preview. 20 + 20 + 230 +  
+$minTwoColumnWide:   999px; // TWO COLUMNS WIDE:   "Card" look. Two columns, text next to preview.
+
+
+
+
+$gutter: 20px;			// always this gutter between cards
+$minCardWidth: 526px; 
 $minDoubleWideVideoCardWidth: 1024px; // wide enough for text next to video
 $minScreenWidthForOneCard: $minCardWidth + $gutter + $gutter;
 $minScreenWidthForTwoCards: ($minCardWidth * 2) + ($gutter * 3);	// gutter on left, between, and right
