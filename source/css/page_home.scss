@@ -375,11 +375,10 @@ Production
 						  // ONE COLUMN NARROW:  Minimal margins. One column, text ABOVE preview. 10 + 230 + 10 is what we could handle
 $minOneColumnWide: 490px; // ONE COLUMN WIDE:    Minimal margins. One column, text next to preview. 10 + 230 + 10 + 230 + 10 = 490
 $minTwoColumn:     768px; // TWO COLUMNS NARROW: Minimal margins. Two columns, text ABOVE preview. (10 + 364 + 10) * 2 
+$minDoubleWideVideo: 975px; // wide enough for text next to video, empirical. Too narrow and stuff gets cropped.
 
-$gutterX: 10px;			// always this gutter between cards
-$gutterY: 40px;			// always this gutter between cards
-$minCardWidth: ($minTwoColumn - ($gutterX * 3)) / 2;
-$minDoubleWideVideo: 1024px; // wide enough for text next to video
+$gutterX: 1.3vw;		// always this gutter between cards
+$gutterY: 5.2vw;		// always this gutter between cards
 
 section.production {
 	padding:0 $gutterX;				// left-right padding
