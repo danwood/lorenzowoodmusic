@@ -372,24 +372,17 @@ Production
 
 // BREAKPOINTS
 
-							// ONE COLUMN NARROW:  Minimal margins. One column, text ABOVE preview. 10 + 230 + 10 is what we could handle
-$minOneColumnWide:   490px; // ONE COLUMN WIDE:    Minimal margins. One column, text next to preview. 10 + 230 + 10 + 230 + 10 = 490
-$minTwoColumnNarrow: 768px; // TWO COLUMNS NARROW: Minimal margins. Two columns, text ABOVE preview. (10 + 364 + 10) * 2 
-$minTwoColumnMedium: 999px; // TWO COLUMNS MEDIUM: "Card" look. Two columns, text ABOVE preview. 20 + 20 + 230 +  
-$minTwoColumnWide:   999px; // TWO COLUMNS WIDE:   "Card" look. Two columns, text next to preview.
-
+						  // ONE COLUMN NARROW:  Minimal margins. One column, text ABOVE preview. 10 + 230 + 10 is what we could handle
+$minOneColumnWide: 490px; // ONE COLUMN WIDE:    Minimal margins. One column, text next to preview. 10 + 230 + 10 + 230 + 10 = 490
+$minTwoColumn:     768px; // TWO COLUMNS NARROW: Minimal margins. Two columns, text ABOVE preview. (10 + 364 + 10) * 2 
 
 $gutterX: 10px;			// always this gutter between cards
 $gutterY: 40px;			// always this gutter between cards
-$minCardWidth: ($minTwoColumnNarrow - ($gutterX * 3)) / 2;
-$minDoubleWideVideoCardWidth: 1024px; // wide enough for text next to video
-
-$minScreenWidthForThreeCards: ($minCardWidth * 3) + ($gutterX * 4);	// gutter left, two between, and right
-$minScreenWidthForFourCards: ($minCardWidth * 4) + ($gutterX * 5);	// gutter left, three between, and right
+$minCardWidth: ($minTwoColumn - ($gutterX * 3)) / 2;
+$minDoubleWideVideo: 1024px; // wide enough for text next to video
 
 section.production {
 	padding:0 $gutterX;				// left-right padding
-	background: yellow;
 }
 
 .productiongrid {
@@ -409,22 +402,16 @@ section.production {
 	justify-items:stretch;		// each item should stretch horizontally to fill up the grid area
 	justify-content: center;	// center the grid of items in the grid container
 
-	@media only screen and (min-width:$minTwoColumnNarrow) {		// Big enough for one or more cards with text side-by-side with cover
-  		grid-template-columns: repeat(auto-fit, minmax($minCardWidth, 1fr));
- //	 	grid-auto-rows: 1fr;	// make sure the rows are the same height	
+	@media only screen and (min-width:$minTwoColumn) {		// Big enough for one or more cards with text side-by-side with cover
+  		grid-template-columns: 1fr 1fr;
 
  	 	// Reset card type now that it's two across. Tweaked to give as close to 1rem but small enough to fit with names we need!
- 	 	@include fluid-type(48rem, 96rem, 0.7rem, 1.4rem);
+ 	 	@include fluid-type(48rem, 96rem, 0.8rem, 1.6rem);
 	}
 
 	section {
 		position: relative;
 		overflow:hidden;
-		background-color: var(--cPaperM);
-
-		& > * {
-			background-color: var(--cPaperL);
-		}
 
 		&::after {
 			content: '';
@@ -450,7 +437,7 @@ section.production {
 		background-position: center center;
 
 		// when single-column mode, show photo centered and a bit smaller.
-		@media only screen and (max-width:$minTwoColumnNarrow - 1) {
+		@media only screen and (max-width:$minTwoColumn - 1) {
 			width:66.67%;
 			padding-top:41%;		// should be approx the width / 1.618
 			margin: 0 auto;
@@ -459,10 +446,10 @@ section.production {
 
 	section.video {					// Wide article with video preview
 
-		@media only screen and (min-width:$minTwoColumnNarrow) {		//  Big enough for 2 cover cards side by side, and for video to show fully to match
+		@media only screen and (min-width:$minTwoColumn) {		//  Big enough for 2 cover cards side by side, and for video to show fully to match
 			grid-column-end: span 2;
 		}
-		@media only screen and (min-width:$minDoubleWideVideoCardWidth) {		// Big enough for text side-by-side with video 
+		@media only screen and (min-width:$minDoubleWideVideo) {		// Big enough for text side-by-side with video 
 			display: grid;					// Section is itself a grid
 			grid-template-columns:  1fr minmax(675px, 755px);		// size to match height of spotify embed, as long as nothing else is forcing smaller spotify
 	  		column-gap: $gutterX;
@@ -473,32 +460,8 @@ section.production {
 
 		@media only screen and (min-width:$minOneColumnWide) {		// Big enough for text side-by-side with cover
 			display: grid;					// Section is itself a grid
-			grid-template-columns:  1fr minmax(250px, 350px);		// make sure 2nd column is 250px (230px?) minimum width for spotify embed
+			grid-template-columns:  1fr minmax(230px, 29.948vw);	// make sure 2nd column is 230px minimum, maximum of 230 when screen in 768.
 	  		column-gap: $gutterX;
-		}
-
-	}
-
-	section {
-		// Hide last card marked as hidden-2 when we are showing 2 (or 4) cards
-		@media only screen and (min-width:$minTwoColumnNarrow) and (max-width: $minScreenWidthForThreeCards - 1) {
-			&.hidden-2 {
-				display:none
-			}
-		}
-
-		// Hide last card marked as hidden-3 when we are showing 3 cards
-		@media only screen and (min-width:$minScreenWidthForThreeCards) and (max-width: $minScreenWidthForFourCards - 1) {
-			&.hidden-3 {
-				display:none
-			}
-		}
-
-		// 4 columns same as 2; avoid orphan
-		@media only screen and (min-width:$minScreenWidthForFourCards) {
-			&.hidden-2 {
-				display:none
-			}
 		}
 	}
 
