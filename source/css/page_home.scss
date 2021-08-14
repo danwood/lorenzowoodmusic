@@ -13,7 +13,8 @@ Home-Page ONLY classes.
 
 
 h2 {
-	font-size:4em;
+    @include fluid-type(20rem, 48rem, 3rem, 3.9rem);	// at 48 rem we should now have a single line
+    line-height:1;
 	text-align:center;
 	padding: 2rem 0 1rem 0; // use padding so that our background color is included
 }
@@ -304,7 +305,10 @@ Mailing
 			margin:0.5rem 0.5rem;
 		}
 	}
-	#mce-FNAME, #mce-LNAME, #mce-EMAIL { width:90%;}
+	#mce-FNAME, #mce-LNAME, #mce-EMAIL {
+	 	box-sizing:content-box;
+		width:90%;
+	}
 }
 
 
@@ -384,10 +388,6 @@ $minDoubleWideVideo: 975px; // wide enough for text next to video, empirical. To
 // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
 $gutterX: clamp(0.625rem, -7.3750rem + 16.6667vw, 2rem);	// We want 10px at 768px; values: 768px; 900px; 0.625rem, 2rem 
 $gutterY: 5.2vw;		// always this gutter between cards
-
-section.production {
-	padding:0 $gutterX; // left-right padding
-}
 
 .productiongrid {
 

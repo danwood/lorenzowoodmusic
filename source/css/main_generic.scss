@@ -83,7 +83,7 @@ Left & Right Margins
 ----------------------------------------
 */
 
-body > section, .safe-area {
+main > section, .safe-area {
 	padding-left:1rem;			/* Fallback if safe area not understood */
 	padding-right:1rem;
 }
@@ -92,7 +92,7 @@ body > section, .safe-area {
 	iPhone X constants are supported only on browsers that support Max, so only use these within.
 */
 @supports(padding:max(0px)) {
-	body > section, .safe-area {
+	main > section, .safe-area {
 		// use m#{a}x instead of max to allow this to be compiled with Sass
 		padding-left:m#{a}x(1rem, env(safe-area-inset-left));
 		padding-right:m#{a}x(1rem, env(safe-area-inset-right));
@@ -105,7 +105,7 @@ body > section, .safe-area {
 
 // If we don't want the section itself to be padded, use this class. Just be sure to use .safe-area within
 
-body > section.unpadded {
+main > section.unpadded {
 	padding:0;
 }
 .subsection {
