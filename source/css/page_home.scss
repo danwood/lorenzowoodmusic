@@ -345,9 +345,6 @@ Modal for Contact Form
 	cursor:pointer;
 }
 
-section.production {
-	padding:0 20px;				// left-right padding
-}
 
 .spotify-embed {
 	position:relative;
@@ -375,23 +372,25 @@ Production
 
 // BREAKPOINTS
 
-$minOneColumnNarrow: 0px;   // ONE COLUMN NARROW:  Minimal margins. One column, text ABOVE preview. 10 + 230 + 10 is what we could handle
+							// ONE COLUMN NARROW:  Minimal margins. One column, text ABOVE preview. 10 + 230 + 10 is what we could handle
 $minOneColumnWide:   490px; // ONE COLUMN WIDE:    Minimal margins. One column, text next to preview. 10 + 230 + 10 + 230 + 10 = 490
 $minTwoColumnNarrow: 768px; // TWO COLUMNS NARROW: Minimal margins. Two columns, text ABOVE preview. (10 + 364 + 10) * 2 
 $minTwoColumnMedium: 999px; // TWO COLUMNS MEDIUM: "Card" look. Two columns, text ABOVE preview. 20 + 20 + 230 +  
 $minTwoColumnWide:   999px; // TWO COLUMNS WIDE:   "Card" look. Two columns, text next to preview.
 
 
-
-
-$gutter: 20px;			// always this gutter between cards
-$minCardWidth: 526px; 
+$gutterX: 10px;			// always this gutter between cards
+$gutterY: 40px;			// always this gutter between cards
+$minCardWidth: ($minTwoColumnNarrow - ($gutterX * 3)) / 2;
 $minDoubleWideVideoCardWidth: 1024px; // wide enough for text next to video
-$minScreenWidthForOneCard: $minCardWidth + $gutter + $gutter;
-$minScreenWidthForTwoCards: ($minCardWidth * 2) + ($gutter * 3);	// gutter on left, between, and right
-$minScreenWidthForThreeCards: ($minCardWidth * 3) + ($gutter * 4);	// gutter left, two between, and right
-$minScreenWidthForFourCards: ($minCardWidth * 4) + ($gutter * 5);	// gutter left, three between, and right
 
+$minScreenWidthForThreeCards: ($minCardWidth * 3) + ($gutterX * 4);	// gutter left, two between, and right
+$minScreenWidthForFourCards: ($minCardWidth * 4) + ($gutterX * 5);	// gutter left, three between, and right
+
+section.production {
+	padding:0 $gutterX;				// left-right padding
+	background: yellow;
+}
 
 .productiongrid {
 
@@ -399,38 +398,32 @@ $minScreenWidthForFourCards: ($minCardWidth * 4) + ($gutter * 5);	// gutter left
 	// Let's say 1em = 10px on a 320 screen, then scale up linearly so that it's 20px on 640 and 30px on 960. We're switching to 2-up by then.
     @include fluid-type(20rem, 60rem, 0.625rem, 1.875rem);
 
-
-	@media only screen and (min-width:$minScreenWidthForTwoCards) {	
-		font-size:10px;
-	}
-
 	// GRID when there is enough room for ONE OR MORE CARDS
 
-	@media only screen and (min-width:$minScreenWidthForOneCard) {		// Big enough for one or more cards with text side-by-side with cover
-		display: grid;
-		grid-auto-flow: dense;
-	  	grid-template-columns: repeat(auto-fit, minmax($minCardWidth, 1fr));
-	  	grid-auto-rows: 1fr;	// make sure the rows are the same height	
-		column-gap: $gutter;
-		row-gap: $gutter;
+	display: grid;
+	grid-auto-flow: dense;
+	column-gap: $gutterX;
+	row-gap: $gutterY;
 
-		align-items:stretch;		// each item should stretch vertically to fill up the grid area
-		justify-items:stretch;		// each item should stretch horizontally to fill up the grid area
-		justify-content: center;	// center the grid of items in the grid container
+	align-items:stretch;		// each item should stretch vertically to fill up the grid area
+	justify-items:stretch;		// each item should stretch horizontally to fill up the grid area
+	justify-content: center;	// center the grid of items in the grid container
+
+	@media only screen and (min-width:$minTwoColumnNarrow) {		// Big enough for one or more cards with text side-by-side with cover
+  		grid-template-columns: repeat(auto-fit, minmax($minCardWidth, 1fr));
+ //	 	grid-auto-rows: 1fr;	// make sure the rows are the same height	
+
+ 	 	// Reset card type now that it's two across. Tweaked to give as close to 1rem but small enough to fit with names we need!
+ 	 	@include fluid-type(48rem, 96rem, 0.7rem, 1.4rem);
 	}
 
 	section {
-		padding:$gutter;	// inner padding in each card
 		position: relative;
-		grid-column-end: span 1;	// Small article with small preview
 		overflow:hidden;
 		background-color: var(--cPaperM);
-		box-shadow: 0px 3px 6px 2px rgba(0,0,0,0.3);	// right down blur spread color
 
-		@media only screen and (min-width:$minScreenWidthForOneCard) {		// Big enough for one or more cards with text side-by-side with cover
-			display: grid;					// Section is itself a grid
-			grid-template-columns:  1fr 1fr;
-	  		column-gap: $gutter;
+		& > * {
+			background-color: var(--cPaperL);
 		}
 
 		&::after {
@@ -438,8 +431,8 @@ $minScreenWidthForFourCards: ($minCardWidth * 4) + ($gutter * 5);	// gutter left
 			position: absolute;
 			font-size:0.6em;
 			color: --var(cInkL);
-			left: 8px;
-			bottom: 4px;
+			right: 8px;
+			top: 4px;
 		}
 		&.y2018::after { content: '2018' }
 		&.y2019::after { content: '2019' }
@@ -449,40 +442,46 @@ $minScreenWidthForFourCards: ($minCardWidth * 4) + ($gutter * 5);	// gutter left
 		&.y2023::after { content: '2023' }
 	}
 
-	section.photo {			// need to specify background-image URL. Roughly 1.4:1 aspect ratio but it can be cropped a bit in either direction.
+	section.photo {			// must specify background-image URL in HTML. Roughly 1.4:1 aspect ratio but it can be cropped a bit in either direction.
 
-		display: none;		// mobile-first, don't show superflous image at all.
+		display: block;
+		background-size:     cover; 
+		background-repeat:   no-repeat;
+		background-position: center center;
 
-		@media only screen and (min-width:$minScreenWidthForOneCard) {		// Big enough for one or more cards with text side-by-side with cover
-			display: block;
-			background-size:     cover; 
-			background-repeat:   no-repeat;
-			background-position: center center;
+		// when single-column mode, show photo centered and a bit smaller.
+		@media only screen and (max-width:$minTwoColumnNarrow - 1) {
+			width:66.67%;
+			padding-top:41%;		// should be approx the width / 1.618
+			margin: 0 auto;
 		}
 	}
 
 	section.video {					// Wide article with video preview
 
-		@media only screen and (min-width:$minScreenWidthForTwoCards) {		//  Big enough for 2 cover cards side by side, and for video to show fully to match
+		@media only screen and (min-width:$minTwoColumnNarrow) {		//  Big enough for 2 cover cards side by side, and for video to show fully to match
 			grid-column-end: span 2;
 		}
 		@media only screen and (min-width:$minDoubleWideVideoCardWidth) {		// Big enough for text side-by-side with video 
+			display: grid;					// Section is itself a grid
 			grid-template-columns:  1fr minmax(675px, 755px);		// size to match height of spotify embed, as long as nothing else is forcing smaller spotify
+	  		column-gap: $gutterX;
 		}
 	}
 
 	section.cover {					// Narrow article with tall cover-art embed
-		grid-column-end: span 1;
 
-		@media only screen and (min-width:$minScreenWidthForOneCard) {		// Big enough for one or more cards with text side-by-side with cover
-			grid-template-columns:  1fr minmax(250px, 350px);				// make sure 2nd column is 250px minimum width for spotify embed
+		@media only screen and (min-width:$minOneColumnWide) {		// Big enough for text side-by-side with cover
+			display: grid;					// Section is itself a grid
+			grid-template-columns:  1fr minmax(250px, 350px);		// make sure 2nd column is 250px (230px?) minimum width for spotify embed
+	  		column-gap: $gutterX;
 		}
 
 	}
 
 	section {
 		// Hide last card marked as hidden-2 when we are showing 2 (or 4) cards
-		@media only screen and (min-width:$minScreenWidthForTwoCards) and (max-width: $minScreenWidthForThreeCards - 1) {
+		@media only screen and (min-width:$minTwoColumnNarrow) and (max-width: $minScreenWidthForThreeCards - 1) {
 			&.hidden-2 {
 				display:none
 			}
@@ -509,15 +508,19 @@ $minScreenWidthForFourCards: ($minCardWidth * 4) + ($gutter * 5);	// gutter left
 	}
 
 	h3 {				// Client
-		font-size:3em;
+		font-size:2.2em;
 		line-height:1;
 	}
 	h4 {				// Project
-		font-size:2em;
+		font-size:1.6em;
 		line-height:1;
 		font-weight:400;
 		font-style: italic;
-		margin-top: 1em;
+		margin-top: 0.6em;
+	}
+
+	p {
+		margin: 0.6em 0;
 	}
 
 }
