@@ -380,8 +380,6 @@ Production
 
 // BREAKPOINTS
 
-						  // ONE COLUMN NARROW:   text ABOVE preview. 10 + 230 + 10 is what we could handle
-$minOneColumnWide: 490px; // ONE COLUMN WIDE:     text next to preview. 10 + 230 + 10 + 230 + 10 = 490
 $minTwoColumn:     768px; // TWO COLUMNS NARROW:  text ABOVE preview. (10 + 364 + 10) * 2 
 $minDoubleWideVideo: 975px; // wide enough for text next to video, empirical. Too narrow and stuff gets cropped.
 
@@ -391,9 +389,6 @@ $gutterY: 5.2vw;		// always this gutter between cards
 
 .productiongrid {
 
-	// Default font size based on width of entire screen for one card (or cardless display)
-	// Let's say 1em = 10px on a 320 screen, then scale up linearly so that it's 20px on 640 and 30px on 960. We're switching to 2-up by then.
-    @include fluid-type(20rem, 60rem, 0.625rem, 1.875rem);
 	text-align:center;
 
 	// GRID when there is enough room for ONE OR MORE CARDS
@@ -407,35 +402,27 @@ $gutterY: 5.2vw;		// always this gutter between cards
 	justify-items:stretch;		// each item should stretch horizontally to fill up the grid area
 	justify-content: center;	// center the grid of items in the grid container
 
-	@media only screen and (min-width:$minTwoColumn) {		// Big enough for one or more cards with text side-by-side with cover
-  		grid-template-columns: 1fr 1fr;
+  	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
- 	 	// Reset card type now that it's two across. Tweaked to give as close to 1rem but small enough to fit with names we need!
- 	 	@include fluid-type(48rem, 96rem, 0.8rem, 1.6rem);
+  	h3, h4 {
+  		margin:0 0 1em 0;
+  	}
+	h4 {
+		font-weight:normal;
+		font-style:italic;
 	}
-	//@media only screen and (min-width:$minDoubleWideVideo) {		// Big enough for text side-by-side with video 
-	//	grid-auto-rows: 1fr;	// TESTING ONLY make sure the rows are the same height when there's a video. Not really useful.
-	//}
 
 	section {
 		// background: yellow;	// TESTING
 		position: relative;
 		overflow:hidden;
 
-		&::after {
-			content: '';
+		aside {
 			position: absolute;
-			font-size:0.6em;
-			color: --var(cInkL);
-			left: 8px;
-			top: 4px;
+			right:0.5em;
+			bottom:0.2em;
+			font-size:0.5em;
 		}
-		&.y2018::after { content: '2018' }
-		&.y2019::after { content: '2019' }
-		&.y2020::after { content: '2020' }
-		&.y2021::after { content: '2021' }
-		&.y2022::after { content: '2022' }
-		&.y2023::after { content: '2023' }
 	}
 
 	section.photo {			// must specify background-image URL in HTML. Roughly 1.4:1 aspect ratio but it can be cropped a bit in either direction.
@@ -444,6 +431,7 @@ $gutterY: 5.2vw;		// always this gutter between cards
 		background-size:     cover; 
 		background-repeat:   no-repeat;
 		background-position: center center;
+		grid-column-end: span 2;
 
 		// when single-column mode, show photo centered and a bit smaller.
 		@media only screen and (max-width:$minTwoColumn - 1) {
@@ -458,42 +446,21 @@ $gutterY: 5.2vw;		// always this gutter between cards
 		@media only screen and (min-width:$minTwoColumn) {		//  Big enough for 2 cover cards side by side, and for video to show fully to match
 			grid-column-end: span 2;
 		}
-		@media only screen and (min-width:$minDoubleWideVideo) {		// Big enough for text side-by-side with video 
-			display: grid;					// Section is itself a grid
-			grid-template-columns:  1fr minmax(661px, 800px); // Range is kind of iffy. Sort of emperical but it doesn't really grow proportionally.
-	  		column-gap: $gutterX;
+		//@media only screen and (min-width:$minDoubleWideVideo) {		// Big enough for text side-by-side with video 
+		//	display: grid;					// Section is itself a grid
+		//	grid-template-columns:  1fr minmax(661px, 800px); // Range is kind of iffy. Sort of emperical but it doesn't really grow proportionally.
+	  	//	column-gap: $gutterX;
+		//}
+
+		.youtubeEmbed-border {
+			background:black;
+			padding:8px;
 		}
-	}
 
-	section.cover {					// Narrow article with tall cover-art embed
-
-		@media only screen and (min-width:$minOneColumnWide) {		// Big enough for text side-by-side with cover
-			display: grid;					// Section is itself a grid
-			grid-template-columns:  1fr minmax(230px, 29.948vw);	// make sure 2nd column is 230px minimum, maximum of 230 when screen in 768.
-	  		column-gap: $gutterX;
+		// Smaller video embed, for videos that aren't as important
+		&.smaller {
+			grid-column-end: span 1;
 		}
-	}
-
-	h1, h2, h3, h4, article, aside {
-		margin: 0;
-		padding: 0;
-	}
-
-	h3 {				// Client
-		margin-top:0.5em;
-		font-size:2.2em;
-		line-height:1;
-	}
-	h4 {				// Project
-		font-size:1.6em;
-		line-height:1;
-		font-weight:400;
-		font-style: italic;
-		margin-top: 0.6em;
-	}
-
-	p {
-		margin: 0.6em 0;
 	}
 
 }

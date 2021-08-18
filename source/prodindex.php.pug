@@ -150,154 +150,135 @@ block main
 				input.button(type="submit" value="Subscribe to Announcement Email List" name="subscribe")
 
 
-	section.gigs
-		article.wider( data-aos='fade-up' data-aos-delay='600')
-
-			//- ------- Bands in Town content gets loaded here from cache.
-			|<?php include 'CACHE/bandsintown.html'; ?>
-			p: i Please check back closer to the scheduled dates to make sure performances are not cancelled due to coronavirus.
+	//-section.gigs
+	//-	article.wider( data-aos='fade-up' data-aos-delay='600')
+	//-		//- ------- Bands in Town content gets loaded here from cache.
+	//-		|<?php include 'CACHE/bandsintown.html'; ?>
+	//-		p: i Please check back closer to the scheduled dates to make sure performances are not cancelled due to coronavirus.
 
 	section.production
 		h2 Production & Projects
+
+		mixin spotifyEmbed(client, title, embedCode, date)
+			section.cover
+				noscript
+					if client
+						h3= client
+					h4= title
+					a(href="https://open.spotify.com/track/" + embedCode)= title
+				.spotify-embed: iframe(src='https://open.spotify.com/embed/track/' + embedCode frameborder="0" allowtransparency="true" allow="encrypted-media")
+					p= work
+				if block
+					block
+				if date
+					aside= date
+
+		mixin youtubeEmbed(client, title, videoEmbedTitle, embedCode, date)
+			section.video(class!=attributes.class)
+				//- Show the client & title on smaller videos to use up some vertical space; otherwise it's only in <noscript>
+				if attributes.class == 'smaller'
+					if client
+						h3= client
+					h4= title
+				else
+					noscript
+						if client
+							h3= client
+						h4= title
+				noscript
+					a(href="https://www.youtube.com/watch?v=" + embedCode)= videoEmbedTitle
+				.youtubeEmbed-border
+					.youtube-player(data-code=embedCode data-title=videoEmbedTitle)
+				if block
+					block
+				if date
+					aside= date
+
+		mixin photoEmbed(path, alt)
+			section.photo(style="background-image:url(" + path + ")")
+				img(style="display:none" src=path alt=alt)
+
+		mixin year(year)
+			section.year
+				p= year
 		
-		article.productiongrid.unpadded
 
-			// 2021 below
+		h3 2021
+		article.productiongrid
 
-			section.cover.y2021
-				article
-					h3 Aden Black
-					h4 For You
-					p Most instruments, production, mixing and mastering
-				aside
-					.spotify-embed: iframe(src="https://open.spotify.com/embed/track/1oIRVLLjoRhmxX0PtfSrXz" frameborder="0" allowtransparency="true" allow="encrypted-media")
+			+spotifyEmbed('Aden Black', 'For You', '1oIRVLLjoRhmxX0PtfSrXz')
+				p Most instruments, production, mixing and mastering
+			+spotifyEmbed('Ethan Danto', 'Pass in Time', '1oIRVLLjoRhmxX0PtfSrXz')
+				p Instruments, production, mixing and mastering
+			+spotifyEmbed('Elly Shane', 'Prototype', '1bEs7xsCUKtvsRjsVq4Ca2')
+				p Mixing and mastering
 
-			section.cover.y2021
-				article
-					h3 Ethan Danto
-					h4 Pass in Time
-					p Instruments, production, mixing and mastering
-				aside
-					.spotify-embed: iframe(src="https://open.spotify.com/embed/track/1oIRVLLjoRhmxX0PtfSrXz" frameborder="0" allowtransparency="true" allow="encrypted-media")
+			+photoEmbed('/img/prod2.jpg', 'Lorenzo Wood with guitar in studio')
+
+			+youtubeEmbed('', 
+			'Coast to Coast: a collaboration between USC and NYU artists', 
+			'Coast to Coast – USC x NYU Live Performances', 
+			 'Y_WryMoZ2C4')(class='smaller')
+				p Recording and mixing for USC artists: Maverick, Ellie Williams, and Sumit
+
+			//- NOT LIVE YET
+			//- +youtubeEmbed(Alex Oliva', 'Live for 840 west livestream', 'COMING_SOON')
+			//- 	p Working with Langdon Dearborn: shot video, edited, and graded video
+			//- +youtubeEmbed('', 'Tiny Dorm', 'COMING_SOON')
+			//- 	p Live sound and mixing for performances by Kid Sistr, Tippy Balady, and Kabwasa
+			//- +youtubeEmbed('', 'Tiny Dorm', 'COMING_SOON')
+			//- 	p sound, mixing: c&nbsp;a&nbsp;n&nbsp;d&nbsp;i&nbsp;d&nbsp;!, kid hastings
+
+			+youtubeEmbed('Musical Theatre Repertory at USC',
+			 'Unprecedented: A Modern Musical',
+			 'USC MTR’s Unprecedented: A Modern Musical', 
+			'Hp1Lzxg93ng')(class='smaller')
+				p Music editing and mixing
 			
-			section.cover.y2021
-				article
-					h3 Elly Shane & Ryan Baer
-					h4 Prototype
-					p Mixing and mastering
-				aside
-					.spotify-embed: iframe(src="https://open.spotify.com/embed/track/1bEs7xsCUKtvsRjsVq4Ca2" frameborder="0" allowtransparency="true" allow="encrypted-media")
+			+spotifyEmbed('Alex Oliva, Jillian Batt', 'U & I', '1k5SALiKnAbkA2zYrMMTgq')
+				p Vocal production, engineering, mixing
 
-			section.photo(style="background-image:url(/img/prod2.jpg")
+			+photoEmbed('/img/alex-oliva.jpg', 'Lorenzo Wood in studio, working with Alex Oliva and Jillian Batt over a Zoom call')
 
-			section.video.y2021
-				article
-					h3(style="font-size:2em") Coast to Coast: a collaboration between USC and NYU artists
-					p Recording and mixing for USC artists: Maverick, Ellie Williams, and Sumit
-				aside
-					.youtube-player(data-code='Y_WryMoZ2C4' data-title='Coast to Coast – USC x NYU Live Performances')
-
-			//- section.y2021
-			//- 	article
-			//- 		h3 Alex Oliva
-			//- 		h4 Live for 840 west livestream
-			//- 		p working with Langdon Dearborn: shot video, edited, and graded video.
-			//- 	aside
-			//- 		p: i Video Coming Soon NOT ON YOUTUBE YET?
-			//- section.y2021
-			//- 	article
-			//- 		h3 Tiny Dorm<br> <span style="font-size:2em">Spring 2021</span>
-			//- 		h4(style="font-size:1.8em") Live sound and mixing for performances by Kid Sistr, Tippy Balady, and Kabwasa 
-			//- 	aside
-			//- 		p: i Video Coming Soon
-			//- section.y2021
-			//- 	article
-			//- 		h3 Tiny Dorm<br> <span style="font-size:2em">Spring 2021</span>
-			//- 		h4(style="font-size:2em") sound, mixing: c&nbsp;a&nbsp;n&nbsp;d&nbsp;i&nbsp;d&nbsp;!, kid hastings
-			//- 	aside
-			//- 		p: i Video Coming Soon
-
-			section.video.y2021
-				article
-					h3(style="font-size:2.5em") Musical Theatre Repertory at USC
-					h4(style="font-size:2em") Unprecedented: A Modern Musical
-					p Music editing and mixing
-				aside
-					.youtube-player(data-code='Hp1Lzxg93ng' data-title='USC MTR’s Unprecedented: A Modern Musical')
+			+spotifyEmbed('Cooper + Millett', 'Perfect', '2pcgn8lLynO2C1T7rPx1gq')
+				p Session vocals
 			
-			section.cover.y2021
-				article
-					h3 Alex Oliva, Jillian Batt
-					h4 U & I
-					p Vocal production, engineering, mixing
-				aside
-					.spotify-embed: iframe(src="https://open.spotify.com/embed/track/1k5SALiKnAbkA2zYrMMTgq" frameborder="0" allowtransparency="true" allow="encrypted-media")
+			+photoEmbed('/img/prod3.jpg', 'Lorenzo Wood recording acoustic guitar in studio')
 
-			section.photo(style="background-image:url(/img/alex-oliva.jpg")
-			
-			section.cover.y2021
-				article
-					h3 Cooper + Millett
-					h4 Perfect
-					p Session vocals
-				aside
-					.spotify-embed: iframe(src="https://open.spotify.com/embed/track/2pcgn8lLynO2C1T7rPx1gq" frameborder="0" allowtransparency="true" allow="encrypted-media")
+			+spotifyEmbed('Sam Johnson', 'Flower Petals', '0coW9BxlUEDD3HrEmrhnZJ')
+				p Co-writer, most instruments, production, mixing and mastering
+		
+		h3 2019/2020
+		article.productiongrid
 
-			section.photo(style="background-image:url(/img/prod3.jpg")
+			+youtubeEmbed('Sam Johnson', 
+			 'Monsters on TV', 
+			 'Sam Johnson - Monsters On TV - (Official Music Video)', 
+			 'L-R8aLbhMkI')
+				p Co-writer, Instruments, production, mixing and mastering, co-director of music video
 
-			section.cover.y2021
-				article
-					h3 Sam Johnson
-					h4 Flower Petals
-					p Co-writer, most instruments, production, mixing and mastering
-				aside
-					.spotify-embed: iframe(src="https://open.spotify.com/embed/track/0coW9BxlUEDD3HrEmrhnZJ" frameborder="0" allowtransparency="true" allow="encrypted-media")
-	
-			// 2020 below
+			+spotifyEmbed('Hannah Faith', 'I Won’t Give In', '0ogFm11JTP2jfXXOTUJTih')
+				p Instruments, production, mixing and mastering
 
-			section.video.y2020
-				article
-					h3 Sam Johnson
-					h4 Monsters on TV
-					p Co-writer, Instruments, production, mixing and mastering, co-director of music video
-				aside
-					.youtube-player(data-code='L-R8aLbhMkI' data-title='Sam Johnson - Monsters On TV - (Official Music Video)')
 
-			section.cover.y2020
-				article
-					h3 Hannah Faith
-					h4(style="font-size:1.7em") I Won't Give In
-					p Instruments, production, mixing and mastering
-				aside
-					.spotify-embed: iframe(src="https://open.spotify.com/embed/track/0ogFm11JTP2jfXXOTUJTih" frameborder="0" allowtransparency="true" allow="encrypted-media")
+			+spotifyEmbed('Aendru', 'You and Me Now', '52ybpfalBibR8F2qIGGggv')
+				p Guest vocals
 
-			// 2019 below
+			+photoEmbed('/img/aendru.jpg', 'Andrew Wilson, A.K.A. Aendru, and Lorenzo Wood in studio')
 
-			section.cover.y2019
-				article
-					h3 Aendru
-					h4 You and Me Now
-					p Guest vocals
-				aside
-					.spotify-embed: iframe(src="https://open.spotify.com/embed/track/52ybpfalBibR8F2qIGGggv" frameborder="0" allowtransparency="true" allow="encrypted-media")
-			
-			section.photo(style="background-image:url(/img/aendru.jpg")
+			+spotifyEmbed('Kat Van Morgan', 'KAT Van Morgan', '2dyFY339oQUVyl1zpvLg55')
+				p(style="line-height:1.0; margin:8px 0") Production, mixing and mastering
+				h4(style="font-size:1em; margin-top:8px; line-height:1.0") Mama Gone Crazy, You're Gonna Regret It
+				div(style="font-size:0.9em; line-height: 1.0") Co-writer, all instruments
+				h4(style="font-size:1em; margin-top:8px") Baby Girl
+				div(style="font-size:0.85em; line-height: 1.0")  Co-writer, some instruments
+				h4(style="font-size:1em; margin-top:8px") Overshare
+				div(style="font-size:0.9em; line-height: 1.0; padding-bottom:0.5em")  Some instruments
 
-			section.cover.y2019
-				article
-					h3 Kat Van Morgan
-					p(style="line-height:1.0; margin:8px 0") Production, mixing and mastering
-					h4(style="font-size:1em; margin-top:8px") Mama Gone Crazy, You're Gonna Regret It
-					div(style="font-size:0.9em; line-height: 1.0") Co-writer, all instruments
-					h4(style="font-size:1em; margin-top:8px") Baby Girl
-					div(style="font-size:0.85em; line-height: 1.0")  Co-writer, some instruments
-					h4(style="font-size:1em; margin-top:8px") Overshare
-					div(style="font-size:0.9em; line-height: 1.0; padding-bottom:0.5em")  Some instruments
-				aside
-					.spotify-embed: iframe(src="https://open.spotify.com/embed/track/2dyFY339oQUVyl1zpvLg55" frameborder="0" allowtransparency="true" allow="encrypted-media")
+			// at the end; these may not display if there aren't columns available
 
-			section.photo(style="background-image:url(/img/prod1.jpg")
-			section.photo(style="background-image:url(/img/prod4.jpg")
+			+photoEmbed('/img/prod1.jpg', 'Sarah Morgan of Kat Van Morgan recording backup vocals at Lorenzo Wood studio')
+			+photoEmbed('/img/prod4.jpg', 'Apple Logic software in use at Lorenzo Wood studio')
 
 	section.latest-releases.unpadded
 		header
