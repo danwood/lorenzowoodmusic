@@ -409,7 +409,7 @@ $gutterY: 5.2vw;		// always this gutter between cards
 	}
 
 	section {
-		background: yellow;	// TESTING
+		// background: yellow;	// TESTING
 		position: relative;
 		overflow:hidden;
 
@@ -433,8 +433,9 @@ $gutterY: 5.2vw;		// always this gutter between cards
 			
 			// give it some size
 			width:100%;
-			padding-top:41%;		// should be approx the width / 1.618
+			padding-top:61.8%;		// should be approx the width / 1.618
 			margin: 0 auto;
+			border-radius: 30px;
 		}
 
 		// when single-column mode, show photo centered and a bit smaller.
@@ -442,6 +443,7 @@ $gutterY: 5.2vw;		// always this gutter between cards
 			width:66.67%;
 			padding-top:41%;		// should be approx the width / 1.618
 			margin: 0 auto;
+			border-radius: 20px;
 		}
 	}
 
