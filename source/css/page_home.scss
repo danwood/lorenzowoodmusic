@@ -26,10 +26,10 @@ Colors
 */
 
 section.mailchimp-section {
-	background-color:var(--color3);
+	background-color:var(--color2);
 }
 section.production {
-	background-color:var(--color2);
+	background-color:var(--color3);
 }
 
 
@@ -38,7 +38,7 @@ section.bio {
 }
 
 section.gigs {
-	background-color:var(--color3);
+	background-color:var(--color2);
 
 	a {
 		color:hsl(0, 35%, 43%);
@@ -378,11 +378,6 @@ Production
 ----------------------------------------
 */
 
-// BREAKPOINTS
-
-$minTwoColumn:     768px; // TWO COLUMNS NARROW:  text ABOVE preview. (10 + 364 + 10) * 2 
-$minDoubleWideVideo: 975px; // wide enough for text next to video, empirical. Too narrow and stuff gets cropped.
-
 // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
 $gutterX: clamp(0.625rem, -7.3750rem + 16.6667vw, 2rem);	// We want 10px at 768px; values: 768px; 900px; 0.625rem, 2rem 
 $gutterY: 5.2vw;		// always this gutter between cards
@@ -390,8 +385,6 @@ $gutterY: 5.2vw;		// always this gutter between cards
 .productiongrid {
 
 	text-align:center;
-
-	// GRID when there is enough room for ONE OR MORE CARDS
 
 	display: grid;
 	grid-auto-flow: dense;
@@ -402,7 +395,10 @@ $gutterY: 5.2vw;		// always this gutter between cards
 	justify-items:stretch;		// each item should stretch horizontally to fill up the grid area
 	justify-content: center;	// center the grid of items in the grid container
 
-  	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	// Automatic column filling above small size
+	@media only screen and (min-width:$breakpointToSmall) {
+  		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  	}
 
   	h3, h4 {
   		margin:0 0 1em 0;
@@ -413,7 +409,7 @@ $gutterY: 5.2vw;		// always this gutter between cards
 	}
 
 	section {
-		// background: yellow;	// TESTING
+		background: yellow;	// TESTING
 		position: relative;
 		overflow:hidden;
 
@@ -431,10 +427,18 @@ $gutterY: 5.2vw;		// always this gutter between cards
 		background-size:     cover; 
 		background-repeat:   no-repeat;
 		background-position: center center;
-		grid-column-end: span 2;
+
+		@media only screen and (min-width:$breakpointToSmall) {
+			grid-column-end: span 2;
+			
+			// give it some size
+			width:100%;
+			padding-top:41%;		// should be approx the width / 1.618
+			margin: 0 auto;
+		}
 
 		// when single-column mode, show photo centered and a bit smaller.
-		@media only screen and (max-width:$minTwoColumn - 1) {
+		@media only screen and (max-width:$breakpointToSmall - 1) {
 			width:66.67%;
 			padding-top:41%;		// should be approx the width / 1.618
 			margin: 0 auto;
@@ -443,14 +447,9 @@ $gutterY: 5.2vw;		// always this gutter between cards
 
 	section.video {					// Wide article with video preview
 
-		@media only screen and (min-width:$minTwoColumn) {		//  Big enough for 2 cover cards side by side, and for video to show fully to match
+		@media only screen and (min-width:$breakpointToSmall) {
 			grid-column-end: span 2;
 		}
-		//@media only screen and (min-width:$minDoubleWideVideo) {		// Big enough for text side-by-side with video 
-		//	display: grid;					// Section is itself a grid
-		//	grid-template-columns:  1fr minmax(661px, 800px); // Range is kind of iffy. Sort of emperical but it doesn't really grow proportionally.
-	  	//	column-gap: $gutterX;
-		//}
 
 		.youtubeEmbed-border {
 			background:black;
