@@ -2051,6 +2051,17 @@
       "sC" : 0,
       "tS" : 0
     },
+    "\/source\/js\/spotify.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/intermediate\/js\/spotify.js",
+      "oF" : 2,
+      "sC" : 0,
+      "tS" : 0
+    },
     "\/source\/js\/svg4everybody.js" : {
       "bF" : 0,
       "ft" : 64,

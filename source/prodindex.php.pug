@@ -166,7 +166,7 @@ block main
 						h3= client
 					h4= title
 					a(href="https://open.spotify.com/track/" + embedCode)= title
-				.spotify-embed: iframe(src='https://open.spotify.com/embed/track/' + embedCode frameborder="0" allowtransparency="true" allow="encrypted-media")
+				.spotify-player(data-code=embedCode)
 					p= work
 				if block
 					block
@@ -345,6 +345,7 @@ block prepend scripts
 		//- NOTE: index depends on javascript in hero to deal with scrolling hero image
 		include ../intermediate/js/index.js
 		include ../intermediate/js/youtube.js
+		include ../intermediate/js/spotify.js
 
 block append scripts
 	<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"Lorenzo Wood","image":"https://www.lorenzowoodmusic.com/img/lorenzo-wood-image-card.jpg","url":"https://www.lorenzowoodmusic.com/","sameAs":["https://www.facebook.com/lorenzowoodmusic/","https://twitter.com/lorenzowmusic","https://www.instagram.com/LorenzoWoodMusic/","https://www.youtube.com/lorenzowoodmusic","https://listen.tidal.com/artist/9832731","https://soundcloud.com/LorenzoWoodMusic","https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp","https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA"]}</script>
