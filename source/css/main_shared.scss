@@ -17,6 +17,15 @@ a.spotify {
 	// original fill color:1ED760
 }
 
+a.youtube {
+	padding-left:1.5em;
+	background-image:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 508 356"><style>.st2{fill:#282828}</style><path d="M497 56.3c-5.8-21.8-23-39-44.8-44.8C412.6.8 254 .8 254 .8S95.5.8 55.9 11.4c-21.8 5.8-39 23-44.8 44.8C.5 95.8.5 178.3.5 178.3s0 82.5 10.6 122.1c5.8 21.8 23 39 44.8 44.8C95.5 355.8 254 355.8 254 355.8s158.6 0 198.1-10.6c21.8-5.8 39-23 44.8-44.8 10.6-39.5 10.6-122.1 10.6-122.1s.1-82.5-10.5-122z" fill="#ff0401"/><path d="M203.3 254.4l131.8-76.1-131.8-76z" fill="#fff"/></svg>');
+	background-repeat:no-repeat;
+	// original fill color:1ED760
+}
+
+
+
 // Press pages::Don't let phone number images be selected.
 
 .ghost {
