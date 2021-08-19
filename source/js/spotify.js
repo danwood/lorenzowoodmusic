@@ -3,7 +3,6 @@
 var spotify = document.querySelectorAll( ".spotify-player" );
 for (var i = 0; i < spotify.length; i++) {
 	var code	= spotify[i].dataset.code;
-
 	var container = document.createElement("div");
 	container.setAttribute("class", "spotify-embed");
 	var iframe = document.createElement( "iframe" );
