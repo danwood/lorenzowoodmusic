@@ -197,7 +197,7 @@ block main
 		//- Largest photo: 852 px wide
 		mixin photoEmbed(path, alt)
 			section.photo(style="background-image:url(" + path + ")")
-				img(style="display:none" src=path alt=alt)
+				img(style="display:none" loading=lazy src=path alt=alt)
 
 		mixin year(year)
 			section.year
