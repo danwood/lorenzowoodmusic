@@ -1572,17 +1572,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/source\/img\/2am.webp" : {
-      "ft" : 8388608,
-      "iS" : 415148,
-      "oA" : 2,
-      "oAP" : "\/build\/img\/2am.webp",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-default",
-      "rq" : 75
-    },
     "\/source\/img\/2am33.jpg" : {
       "ft" : 16384,
       "iS" : 34066,
@@ -1611,7 +1600,7 @@
     },
     "\/source\/img\/aendru.jpg" : {
       "ft" : 16384,
-      "iS" : 1984521,
+      "iS" : 72947,
       "jF" : 0,
       "oA" : 2,
       "oAP" : "\/build\/img\/aendru.jpg",
@@ -1855,7 +1844,7 @@
     },
     "\/source\/img\/prod1.jpg" : {
       "ft" : 16384,
-      "iS" : 2921006,
+      "iS" : 65706,
       "jF" : 0,
       "oA" : 2,
       "oAP" : "\/build\/img\/prod1.jpg",
@@ -1868,7 +1857,7 @@
     },
     "\/source\/img\/prod2.jpg" : {
       "ft" : 16384,
-      "iS" : 3890220,
+      "iS" : 84018,
       "jF" : 0,
       "oA" : 2,
       "oAP" : "\/build\/img\/prod2.jpg",
@@ -1881,7 +1870,7 @@
     },
     "\/source\/img\/prod3.jpg" : {
       "ft" : 16384,
-      "iS" : 3323724,
+      "iS" : 86370,
       "jF" : 0,
       "oA" : 2,
       "oAP" : "\/build\/img\/prod3.jpg",
@@ -1894,7 +1883,7 @@
     },
     "\/source\/img\/prod4.jpg" : {
       "ft" : 16384,
-      "iS" : 4831991,
+      "iS" : 71267,
       "jF" : 0,
       "oA" : 2,
       "oAP" : "\/build\/img\/prod4.jpg",
@@ -3315,7 +3304,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "\/source\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 650670778.81752205
+    "lastBuiltDate" : 651031737.745013
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
