@@ -198,8 +198,8 @@ block main
 
 		//- Largest photo: 852 px wide
 		mixin photoEmbed(path, alt)
-			section.photo(style="background-image:url(" + path + ")")
-				img(style="display:none" loading=lazy src=path alt=alt)
+			section.photo(style="background-image:url(" + cloudImgAutoPrefix + path + ")")
+				img(style="display:none" loading=lazy src=cloudImgAutoPrefix + path alt=alt)
 
 		mixin year(year)
 			section.year
@@ -216,7 +216,7 @@ block main
 			+spotifyEmbed('Elly Shane', 'Prototype', '1bEs7xsCUKtvsRjsVq4Ca2')
 				p Mixing and mastering
 
-			+photoEmbed('/img/prod2.jpg', 'Lorenzo Wood with guitar in studio')
+			+photoEmbed('img/prod2.jpg', 'Lorenzo Wood with guitar in studio')
 
 			+youtubeEmbed('', 
 			'Coast to Coast: a collaboration between USC and NYU artists', 
@@ -241,12 +241,12 @@ block main
 			+spotifyEmbed('Alex Oliva, Jillian Batt', 'U & I', '1k5SALiKnAbkA2zYrMMTgq')
 				p Vocal production, engineering, mixing
 
-			+photoEmbed('/img/alex-oliva.jpg', 'Lorenzo Wood in studio, working with Alex Oliva and Jillian Batt over a Zoom call')
+			+photoEmbed('img/alex-oliva.jpg', 'Lorenzo Wood in studio, working with Alex Oliva and Jillian Batt over a Zoom call')
 
 			+spotifyEmbed('Cooper + Millett', 'Perfect', '2pcgn8lLynO2C1T7rPx1gq')
 				p Session vocals
 			
-			+photoEmbed('/img/prod3.jpg', 'Lorenzo Wood recording acoustic guitar in studio')
+			+photoEmbed('img/prod3.jpg', 'Lorenzo Wood recording acoustic guitar in studio')
 
 			+spotifyEmbed('Sam Johnson', 'Flower Petals', '0coW9BxlUEDD3HrEmrhnZJ')
 				p Co-writer, most instruments, production, mixing and mastering
@@ -267,7 +267,7 @@ block main
 			+spotifyEmbed('Aendru', 'You and Me Now', '52ybpfalBibR8F2qIGGggv')
 				p Guest vocals
 
-			+photoEmbed('/img/aendru.jpg', 'Andrew Wilson, A.K.A. Aendru, and Lorenzo Wood in studio')
+			+photoEmbed('img/aendru.jpg', 'Andrew Wilson, A.K.A. Aendru, and Lorenzo Wood in studio')
 
 			+spotifyEmbed('Kat Van Morgan', 'KAT Van Morgan', '2dyFY339oQUVyl1zpvLg55')
 				p(style="line-height:1.0; margin:8px 0") Production, mixing and mastering
@@ -280,8 +280,8 @@ block main
 
 			// at the end; these may not display if there aren't columns available
 
-			+photoEmbed('/img/prod1.jpg', 'Sarah Morgan of Kat Van Morgan recording backup vocals at Lorenzo Wood studio')
-			// +photoEmbed('/img/prod4.jpg', 'Apple Logic software in use at Lorenzo Wood studio')
+			+photoEmbed('img/prod1.jpg', 'Sarah Morgan of Kat Van Morgan recording backup vocals at Lorenzo Wood studio')
+			// +photoEmbed('img/prod4.jpg', 'Apple Logic software in use at Lorenzo Wood studio')
 
 	section.latest-releases.unpadded
 		header

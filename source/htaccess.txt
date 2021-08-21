@@ -606,12 +606,13 @@ AddDefaultCharset utf-8
 #     Header always set Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" "expr=%{CONTENT_TYPE} =~ m#text\/(html|javascript)|application\/pdf|xml#i"
 
     Header always set Content-Security-Policy "default-src res.cloudinary.com 'self' data:; \
-    script-src 'unsafe-inline' res.cloudinary.com code.jquery.com 'self'; \
+    script-src 'unsafe-inline' res.cloudinary.com 'self'; \
     style-src 'unsafe-inline' res.cloudinary.com 'self'; \
     img-src res.cloudinary.com img.youtube.com 'self' data:; \
     font-src res.cloudinary.com 'self'; \
+    object-src 'none'; \
     frame-src lightwidget.com open.spotify.com www.reverbnation.com w.soundcloud.com www.facebook.com www.youtube.com; \
-    frame-ancestors 'none' upgrade-insecure-requests" \
+    frame-ancestors upgrade-insecure-requests" \
     "expr=%{CONTENT_TYPE} =~ m#text\/(html|javascript)|application\/pdf|xml#i"
 
 </IfModule>
