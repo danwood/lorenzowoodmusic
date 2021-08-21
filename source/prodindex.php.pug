@@ -40,7 +40,8 @@ block append links
 	link(rel="stylesheet" href=cloudRawPrefix + "css/component_aos.css" media="print" onload="this.media='all';this.onload=null")
 
 	//- Start loading external AOS javascript now, use onload to when loaded
-	script(defer src="/" + "js/aos.js" onload="AOS.init({disable:'mobile',once:true});")
+	//- For this page, when AOS is loaded, set up event when we scroll to a spotify embed div to actually load it.
+	script(defer src="/" + "js/aos.js" onload="AOS.init({disable:'mobile',once:true}); document.addEventListener('aos:in:spotify-proxy', ({ detail }) => { loadSpotifyIntoNode(detail) });  ")
 	//- override the AOS styles that are initially hidden and then revealed, when no Javascript
 	include _noscript_aos.html
 
@@ -160,13 +161,14 @@ block main
 		h2 Production & Projects
 
 		mixin spotifyEmbed(client, title, embedCode, date)
-			section.cover
+			section.spotify
 				noscript
 					if client
 						h3= client
 					h4= title
 					a(href="https://open.spotify.com/track/" + embedCode)= title
-				.spotify-player(data-code=embedCode)
+				//- Generate div that gets replace with actual spotify iframe. Doesn't actually fade in but this is needed.
+				.spotify-proxy(data-code=embedCode data-aos="fade-in" data-aos-id="spotify-proxy")
 					p= work
 				if block
 					block
