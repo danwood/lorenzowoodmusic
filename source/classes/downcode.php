@@ -76,12 +76,12 @@ class DowncodeDB extends SQLite3
 	function __construct()
 	{
 		$dbPath = DOWNCODE_DBDIR . '/downcode.sqlite3';
-		if (!is_writable($dbPath)) {
-			error_log("Not writeable database: " . $dbPath);
-			echo '<h1><a href="applescript://com.apple.scripteditor?action=new&script=do%20shell%20script%20%22chmod%20666%20~%2FDropbox%2Florenzowoodmusic_private%2Fdowncode_db%2Fdowncode.sqlite3%22">chmod 666 downcode.sqlite3</a></h1>';
-			throw new \RuntimeException("Database cannot be updated");
-		}
-		$this->open($dbPath, SQLITE3_OPEN_READWRITE);
+		//if (!is_writable($dbPath)) {
+		//	error_log("Not writeable database: " . $dbPath);
+		//	echo '<h1><a href="applescript://com.apple.scripteditor?action=new&script=do%20shell%20script%20%22chmod%20666%20~%2FDropbox%2Florenzowoodmusic_private%2Fdowncode_db%2F//downcode.sqlite3%22">chmod 666 downcode.sqlite3</a></h1>';
+		//	throw new \RuntimeException("Database cannot be updated");
+		//}
+		$this->open($dbPath, SQLITE3_OPEN_READONLY);		// don't need it to be SQLITE3_OPEN_READWRITE unless we start updating from the website
 	}
 
 
