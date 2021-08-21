@@ -10,7 +10,7 @@ block append links
 	//- special link to load AOS stylesheet asynchronously
 	link(rel="stylesheet" href=cloudRawPrefix + "css/component_aos.css" media="print" onload="this.media='all';this.onload=null")
 	//- Start loading external AOS javascript now, use onload to when loaded
-	script(defer src="/" + "js/aos3.js" onload="AOS.init({disable:'mobile',once:true});")
+	script(defer src="/" + "js/aos.js" onload="AOS.init({disable:'mobile',once:true});")
 	//- override the AOS styles that are initially hidden and then revealed, when no Javascript
 	include ../_noscript_aos.html
 

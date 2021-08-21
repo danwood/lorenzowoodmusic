@@ -17,12 +17,6 @@
       "oAP" : "\/build\/.gitignore",
       "oF" : 1
     },
-    "\/build" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/build\/build",
-      "oF" : 0
-    },
     "\/intermediate" : {
       "ft" : 65536,
       "oA" : 1,
@@ -1941,14 +1935,14 @@
       "oF" : 2,
       "oS" : 1
     },
-    "\/source\/js\/aos3.js" : {
+    "\/source\/js\/aos.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 2,
-      "oAP" : "\/build\/js\/aos3.js",
-      "oF" : 3,
+      "oAP" : "\/build\/js\/aos.js",
+      "oF" : 1,
       "sC" : 0,
       "tS" : 0
     },
@@ -3304,7 +3298,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "\/source\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 651117603.16902006
+    "lastBuiltDate" : 651207164.474123
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
