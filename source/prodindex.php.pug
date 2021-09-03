@@ -175,7 +175,7 @@ block main
 				if date
 					aside= date
 
-		mixin youtubeEmbed(client, title, videoEmbedTitle, embedCode, date)
+		mixin youtubeEmbed(client, title, youtubeEmbedTitle, embedCode, date)
 			section.video(class!=attributes.class)
 				//- Show the client & title on smaller videos to use up some vertical space; otherwise it's only in <noscript>
 				if attributes.class == 'smaller'
@@ -188,9 +188,34 @@ block main
 							h3= client
 						h4= title
 				noscript
-					a(href="https://www.youtube.com/watch?v=" + embedCode)= videoEmbedTitle
+					a(href="https://www.youtube.com/watch?v=" + embedCode)= youtubeEmbedTitle
 				.youtubeEmbed-border
-					.youtube-player(data-code=embedCode data-title=videoEmbedTitle)
+					.youtube-player(data-code=embedCode data-title=youtubeEmbedTitle)
+				if block
+					block
+				if date
+					aside= date
+
+		//- For other videos. Need name of image on server/cloudfront. 551px maximum width?
+		mixin videoEmbed(client, title, videoEmbedTitle, url, thumbnailImageName, date)
+			section.video(class!=attributes.class)
+				//- Show the client & title on smaller videos to use up some vertical space; otherwise it's only in <noscript>
+				if attributes.class == 'smaller'
+					if client
+						h3= client
+					h4= title
+				else
+					noscript
+						if client
+							h3= client
+						h4= title
+				noscript
+					a(href=url)= videoEmbedTitle
+				.youtubeEmbed-border
+					.youtube-player
+						img(src='/img/' + thumbnailImageName)
+						a(href=url): .play-button 
+
 				if block
 					block
 				if date
@@ -215,6 +240,10 @@ block main
 			//	p Instruments, production, mixing and mastering
 			+spotifyEmbed('Elly Shane', 'Prototype', '1bEs7xsCUKtvsRjsVq4Ca2')
 				p Mixing and mastering
+
+			+videoEmbed('Alex Oliva', 'Thoughts From the ER', 'Thoughts from the ER (Lawrence) - Cover', 'https://www.instagram.com/tv/CS-mhGNjdEF', 'thoughts-from-the-er.png', 'August 24, 2021')(class='smaller')
+				p Video and sound, working with Langdon&nbsp;Dearborn
+
 
 			+photoEmbed('img/prod2.jpg', 'Lorenzo Wood with guitar in studio')
 

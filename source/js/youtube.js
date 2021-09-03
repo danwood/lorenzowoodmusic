@@ -23,9 +23,7 @@ for (var i = 0; i < youtube.length; i++) {
 		iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ code );
 		youtube[i].appendChild( iframe );
 	}
-	else {
-		// 
-		
+	else if (code) {	// ignore if empty youtube code
 		// NON-CDN:
 		//var source = "https://img.youtube.com/vi/" + code +"/maxresdefault.jpg"; // 640 x 480, letterboxed
 		// Special Cloudinary URL:
