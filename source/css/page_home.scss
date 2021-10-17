@@ -458,6 +458,9 @@ $gutterY: 5.2vw;		// always this gutter between cards
 			background:black;
 			padding:8px;
 		}
+		.nobottom {
+			padding-bottom:0;
+		}
 
 		// Smaller video embed, for videos that aren't as important
 		&.smaller {

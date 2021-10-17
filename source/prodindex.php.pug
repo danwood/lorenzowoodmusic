@@ -196,6 +196,27 @@ block main
 				if date
 					aside= date
 
+		mixin youtube2Embed(client, title, youtubeEmbedTitle, embedCode, youtubeEmbedTitle2, embedCode2,date)
+			section.video(class!=attributes.class)
+				noscript
+					if client
+						h3= client
+					h4= title
+
+				noscript
+					a(href="https://www.youtube.com/watch?v=" + embedCode)= youtubeEmbedTitle
+				.youtubeEmbed-border.nobottom
+					.youtube-player(data-code=embedCode data-title=youtubeEmbedTitle)
+				
+				noscript
+					a(href="https://www.youtube.com/watch?v=" + embedCode2)= youtubeEmbedTitle2
+				.youtubeEmbed-border
+					.youtube-player(data-code=embedCode2 data-title=youtubeEmbedTitle2)
+				if block
+					block
+				if date
+					aside= date
+
 		//- For other videos. Need name of image on server/cloudfront. 551px maximum width?
 		mixin videoEmbed(client, title, videoEmbedTitle, url, thumbnailImageName, date)
 			section.video(class!=attributes.class)
@@ -233,6 +254,9 @@ block main
 
 		h3 2021
 		article.productiongrid
+
+			+youtube2Embed('Sam Johnson', 'Live at Bottlerock 2021', 'Sam Johnson Live at Bottlerock 2021 FULL SET', 'mafRAocAL2U', 'Sam Johnson Acoustic VIP Set at BottleRock 2021', 'jAM7gVB6ak8', 'September 5, 2021')(class='smaller')
+				p Video and sound, working with Langdon&nbsp;Dearborn
 
 			//+spotifyEmbed('Aden Black', 'For You', '1oIRVLLjoRhmxX0PtfSrXz')
 			//	p Most instruments, production, mixing and mastering
