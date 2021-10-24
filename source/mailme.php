@@ -17,6 +17,7 @@ $MISSING_SENDER			= "You did not enter your email address, so your message was n
 $MISSING_MESSAGE		= "You did not enter a reasonably long message, so no message was sent.";
 $MISSING_DESTINATION	= "Can't send message -- the creator of this web page did not specify a valid email address for receiving messages.";
 $MESSAGE_SENT			= "Your message was successfully sent via email.";
+$MESSAGE_SENT_HONEYPOT  = "Your message will be forwarded to the recipient if it has been determined to be human-generated.";
 
 
 function extract_emails_from($string){
@@ -182,14 +183,14 @@ if (		containsNewlines($recipient)
 			||	containsNewlines($fromEmail)
 			||	containsNewlines($name) )
 {
-	error_log( "mailme.php: NEWLINE INJECTION in one of these:\n\nrecipient='$recipient'\nsubject='$subject'\nfromEmail='$fromEmail'\nname='$name'\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipEmails, 1), 1, 'server@karelia.com' );
+	error_log( "mailme.php: NEWLINE INJECTION in one of these:\n\nrecipient='$recipient'\nsubject='$subject'\nfromEmail='$fromEmail'\nname='$name'\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipEmails, 1) );
 
 	$suspectedSpam = true;	// newlines in these values mean likely spam.
 }
 else if (!empty($honeypot1) || !empty($honeypot2) || $honeypot3 != 'lorenzowoodmusic.com' || !empty($honeypot4))
 {
 	// I want to see what got posted and how often....
-	// error_log( "mailme.php: HONEYPOT ACTIVATED!\n\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipient, 1), 1, 'server@karelia.com' );
+	error_log( "mailme.php: HONEYPOT ACTIVATED!\n\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipient, 1) );
 
 	$suspectedSpam = true;
 }
@@ -200,38 +201,38 @@ else if ( empty($fromEmail) || 0 == count($fromEmails) )
 else if ( strlen($originalMessage) < 25 )
 {
 	$errorString = $MISSING_MESSAGE;
+	// don't turn on suspected spam; allow a human with a short message to try again.
 }
-else		// Everything looks OK, proceed
+else if (!$suspectedSpam)		// Make sure we didn't just prevent it, above
 {
-	if (!$suspectedSpam)		// Make sure we didn't just prevent it, above
+	// Fallback subject
+	if (empty($subject))
 	{
-		// Fallback subject
-		if (empty($subject))
-		{
-			$subject = $FALLBACK_SUBJECT;
-		}
-		if (!empty($prefix))
-		{
-			$subject = "$prefix $subject";
-		}
-		if (!empty($suffix))
-		{
-			$subject = "$subject $suffix";
-		}
-
-		if (empty($name))
-		{
-			$emailOrName = $fromEmails[0];
-		}
-		else
-		{
-			$emailOrName = $name;
-		}
+		$subject = $FALLBACK_SUBJECT;
+	}
+	if (!empty($prefix))
+	{
+		$subject = "$prefix $subject";
+	}
+	if (!empty($suffix))
+	{
+		$subject = "$subject $suffix";
 	}
 
-	// No "From" header — this seems to stop the script from working, at least on NearlyFreeSpeech.
+	if (empty($name))
+	{
+		$emailOrName = $fromEmails[0];
+	}
+	else
+	{
+		$emailOrName = $name;
+	}
+
+	// No "From" header — this seems to stop the script from working, at least on NearlyFreeSpeech.
 	$headers = 'Reply-To: ' . $fromEmails[0] . "\r\n";
 
+	error_log("Sending recipient = $recipient; subject = $subject; message = $message; headers = $headers ");
+	
 	$sent = mail($recipient, $subject, $message, $headers);
 
 	if(!$sent)
@@ -253,7 +254,7 @@ if (!empty($errorString))		// was there an error?
 	}
 }
 else {
-	$redirectSite .= "?msg=" . urlencode($MESSAGE_SENT);
+	$redirectSite .= "?msg=" . urlencode($suspectedSpam ? $MESSAGE_SENT_HONEYPOT : $MESSAGE_SENT);
 }
 if (!empty($successReturnHash)) {
 	$redirectSite .= '#' . $successReturnHash;
