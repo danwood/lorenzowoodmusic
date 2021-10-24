@@ -40,7 +40,8 @@ block append links
 	link(rel="stylesheet" href=cloudRawPrefix + "css/component_aos.css" media="print" onload="this.media='all';this.onload=null")
 
 	//- Start loading external AOS javascript now, use onload to when loaded
-	script(defer src="/" + "js/aos.js" onload="AOS.init({disable:'mobile',once:true});")
+	//- For this page, when AOS is loaded, set up event when we scroll to a spotify embed div to actually load it.
+	script(defer src="/" + "js/aos.js" onload="AOS.init({disable:'mobile',once:true}); document.addEventListener('aos:in:spotify-proxy', ({ detail }) => { loadSpotifyIntoNode(detail) });  ")
 	//- override the AOS styles that are initially hidden and then revealed, when no Javascript
 	include _noscript_aos.html
 
@@ -82,14 +83,11 @@ block append header
 
 		img.hero-image.covering.swapping-image(srcset=cloudImgAutoPrefix + "img/banner1_giant.jpg 2560w, " + cloudImgAutoPrefix + "img/banner1_big.jpg 1920w, " + cloudImgAutoPrefix + "img/banner1_medium.jpg 960w, " + cloudImgAutoPrefix + "img/banner1_small.jpg 640w" sizes="100vw" width="960" height="674" src=cloudImgAutoPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood, main banner image")
 
-	.icons.icons-header.overlapping.icons-5.safe-area-only
+	.icons.icons-header.overlapping.icons-4.safe-area-only
 		//- Instagram is special; it gets stroked rather than filled
 		.icon.instagram
 			a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 				svg: use(xlink:href="/svg/page_home.svg#instagram")
-		.icon.smaller
-			a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
-				svg: use(xlink:href="/svg/page_home.svg#facebook")
 		.icon
 			a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
 				svg: use(xlink:href="/svg/page_home.svg#youtube")
@@ -115,13 +113,13 @@ block main
 			//- Try to match meta description above with text below
 
 			p(data-aos='fade').
-				Lorenzo Wood is an award-winning musician, songwriter, producer, and vocalist from the San Francisco area. His heartfelt, honest lyrics present a personal perspective of friendships, relationships, and coming of age in the modern era of social media. His songs, rooted in the pop genre, borrow from a number of different musical styles to create a distinctive mix of real instruments and electronic sounds.
+				Lorenzo Wood is a musician, songwriter, producer, and vocalist from the San Francisco area now based in LA. His heartfelt, honest lyrics present a personal perspective of friendships, relationships, and coming of age in the modern era of social media. His songs, rooted in the pop genre, borrow from a number of different musical styles to create a distinctive mix of real instruments and electronic sounds.
 	
 			p(data-aos='fade-left' data-aos-delay='100').
-				In addition to recording and producing songs and videos in his home studio, Lorenzo performs solo or with a band live. With a skillset of music performance technology, he puts together unique, intricate live setups that make his performances stand out.
+				In addition to recording and producing songs and videos in his home studio, Lorenzo enjoys taking music to the stage. With a skillset in music performance technology, he puts together unique, intricate live setups that make his performances stand out.
 
 			p(data-aos='fade-right' data-aos-delay='200').
-				Lorenzo lists Maroon 5, Train, U2, Shawn Mendes, Owl City, and John Mayer as his initial musical influences. But now he feels his style resembles more that of artists like Bazzi, Julia Michaels, Post Malone, and Jonas Brothers.
+				Lorenzo lists Maroon 5, U2, Shawn Mendes, Owl City, and Charlie Puth as his initial musical influences. But now he feels his style resembles more that of artists like Bazzi, Julia Michaels, Post Malone, Machine Gun Kelly and Jonas Brothers.
 
 			p(data-aos='fade-left' data-aos-delay='300').
 				Lorenzo has been performing and recording his songs since a young age. At age 13, he discovered busking, and has been performing primarily at street festivals in the San Francisco Bay Area every summer/fall until 2020.
@@ -150,18 +148,194 @@ block main
 				input.button(type="submit" value="Subscribe to Announcement Email List" name="subscribe")
 
 
-	section.gigs
-		article.wider( data-aos='fade-up' data-aos-delay='600')
+	//-section.gigs
+	//-	article.wider( data-aos='fade-up' data-aos-delay='600')
+	//-		//- ------- Bands in Town content gets loaded here from cache.
+	//-		|<?php include 'CACHE/bandsintown.html'; ?>
+	//-		p: i Please check back closer to the scheduled dates to make sure performances are not cancelled due to coronavirus.
 
-			//- Bands in Town content gets loaded here from cache.
-			|<?php include 'CACHE/bandsintown.html'; ?>
-			p: i Please check back closer to the scheduled dates to make sure performances are not cancelled due to coronavirus.
+	section.production
+		h2 Production & Projects
+
+		mixin spotifyEmbed(client, title, embedCode, date)
+			section.spotify
+				noscript
+					if client
+						h3= client
+					h4= title
+					a(href="https://open.spotify.com/track/" + embedCode)= title
+				//- Generate div that gets replace with actual spotify iframe. Doesn't actually fade in but this is needed.
+				.spotify-proxy(data-code=embedCode data-aos="fade-in" data-aos-id="spotify-proxy")
+					p= work
+				if block
+					block
+				if date
+					aside= date
+
+		mixin youtubeEmbed(client, title, youtubeEmbedTitle, embedCode, date)
+			section.video(class!=attributes.class)
+				//- Show the client & title on smaller videos to use up some vertical space; otherwise it's only in <noscript>
+				if attributes.class == 'smaller'
+					if client
+						h3= client
+					h4= title
+				else
+					noscript
+						if client
+							h3= client
+						h4= title
+				noscript
+					a(href="https://www.youtube.com/watch?v=" + embedCode)= youtubeEmbedTitle
+				.youtubeEmbed-border
+					.youtube-player(data-code=embedCode data-title=youtubeEmbedTitle)
+				if block
+					block
+				if date
+					aside= date
+
+		mixin youtube2Embed(client, title, youtubeEmbedTitle, embedCode, youtubeEmbedTitle2, embedCode2,date)
+			section.video(class!=attributes.class)
+				noscript
+					if client
+						h3= client
+					h4= title
+
+				noscript
+					a(href="https://www.youtube.com/watch?v=" + embedCode)= youtubeEmbedTitle
+				.youtubeEmbed-border.nobottom
+					.youtube-player(data-code=embedCode data-title=youtubeEmbedTitle)
+				
+				noscript
+					a(href="https://www.youtube.com/watch?v=" + embedCode2)= youtubeEmbedTitle2
+				.youtubeEmbed-border
+					.youtube-player(data-code=embedCode2 data-title=youtubeEmbedTitle2)
+				if block
+					block
+				if date
+					aside= date
+
+		//- For other videos. Need name of image on server/cloudfront. 551px maximum width?
+		mixin videoEmbed(client, title, videoEmbedTitle, url, thumbnailImageName, date)
+			section.video(class!=attributes.class)
+				//- Show the client & title on smaller videos to use up some vertical space; otherwise it's only in <noscript>
+				if attributes.class == 'smaller'
+					if client
+						h3= client
+					h4= title
+				else
+					noscript
+						if client
+							h3= client
+						h4= title
+				noscript
+					a(href=url)= videoEmbedTitle
+				.youtubeEmbed-border
+					.youtube-player
+						img(src='/img/' + thumbnailImageName)
+						a(href=url): .play-button 
+
+				if block
+					block
+				if date
+					aside= date
+
+		//- Largest photo: 852 px wide. Usually in range of 650-800. 
+		//- Let's shoot for 1440x1028, larger if we want slightly wider or taller to reveal more on the edges
+		mixin photoEmbed(path, alt)
+			section.photo(style="background-image:url(" + cloudImgAutoPrefix + path + ")")
+				img(style="display:none" loading=lazy src=cloudImgAutoPrefix + path alt=alt)
+
+		mixin year(year)
+			section.year
+				p= year
+		
+
+		article.productiongrid
+
+			+youtube2Embed('Sam Johnson', 'Live at Bottlerock 2021', 'Sam Johnson Live at Bottlerock 2021 FULL SET', 'mafRAocAL2U', 'Sam Johnson Acoustic VIP Set at BottleRock 2021', 'jAM7gVB6ak8', 'With Langdon Dearborn • September 5, 2021')(class='smaller')
+				p Video
+
+			+videoEmbed('Alex Oliva', "Thoughts From the ER (cover of Lawrence song)", 'Thoughts from the ER (Lawrence) - Cover', 'https://www.instagram.com/tv/CS-mhGNjdEF', 'thoughts-from-the-er.jpg', 'With Langdon Dearborn • August 24, 2021')(class='smaller')
+				p Audio recording, mixing, video
+
+			//+spotifyEmbed('Aden Black', 'For You', '1oIRVLLjoRhmxX0PtfSrXz')
+			//	p Instruments, production, mixing and mastering
+			//+spotifyEmbed('Ethan Danto', 'Pass in Time', '1oIRVLLjoRhmxX0PtfSrXz')
+			//	p Instruments, production, mixing and mastering
+			+spotifyEmbed('Elly Shane', 'Prototype', '1bEs7xsCUKtvsRjsVq4Ca2','August 13, 2021')
+				p Mixing and mastering
+
+
+			+photoEmbed('img/prod5.jpg', 'Lorenzo Wood and Aden Black in studio')
+
+			//- Lorenzo opted not to feature here
+			//- +youtubeEmbed('', 
+			//- 'Coast to Coast: a collaboration between USC and NYU artists', 
+			//- 'Coast to Coast – USC x NYU Live Performances', 
+			//-  'Y_WryMoZ2C4')(class='smaller')
+			//- 	p Recording and mixing for USC artists: Maverick, Ellie Williams, and Sumit
+
+			//- NOT LIVE YET
+			//- +youtubeEmbed(Alex Oliva', 'Live for 840 west livestream', 'COMING_SOON')
+			//- 	p Working with Langdon Dearborn: shot video, edited, and graded video
+			//- +youtubeEmbed('', 'Tiny Dorm', 'COMING_SOON')
+			//- 	p Live sound and mixing for performances by Kid Sistr, Tippy Balady, and Kabwasa
+			//- +youtubeEmbed('', 'Tiny Dorm', 'COMING_SOON')
+			//- 	p sound, mixing: c&nbsp;a&nbsp;n&nbsp;d&nbsp;i&nbsp;d&nbsp;!, kid hastings
+
+			+youtubeEmbed('Musical Theatre Repertory at USC',
+			 'Unprecedented: A Modern Musical',
+			 'USC MTR’s Unprecedented: A Modern Musical', 
+			'Hp1Lzxg93ng', 'May 6, 2021')(class='smaller')
+				p Music editing and mixing
+			
+			+spotifyEmbed('Alex Oliva, Jillian Batt', 'U & I', '1k5SALiKnAbkA2zYrMMTgq', 'March 12, 2021')
+				p Vocal production, engineering, mixing
+
+			+photoEmbed('img/alex-oliva.jpg', 'Lorenzo Wood in studio, working with Alex Oliva and Jillian Batt over a Zoom call')
+
+			
+			//- +photoEmbed('img/prod3.jpg', 'Lorenzo Wood recording acoustic guitar in studio')
+
+			+spotifyEmbed('Sam Johnson', 'Flower Petals', '0coW9BxlUEDD3HrEmrhnZJ', 'Feb 5, 2021')
+				p Writing, instruments, production, mixing and mastering
+		
+
+			+youtubeEmbed('Sam Johnson', 
+			 'Monsters on TV', 
+			 'Sam Johnson - Monsters On TV - (Official Music Video)', 
+			 'L-R8aLbhMkI', 'Oct 30, 2020')
+				p Writing, Instruments, production, mixing and mastering, music video
+
+			+spotifyEmbed('Cooper + Millett', 'Perfect', '2pcgn8lLynO2C1T7rPx1gq', 'October 2020')
+				p Session vocals
+
+			+spotifyEmbed('Hannah Faith', 'I Won’t Give In', '0ogFm11JTP2jfXXOTUJTih', 'October 9, 2020')
+				p Instruments, production, mixing and mastering
+
+
+			+photoEmbed('img/aendru.jpg', 'Andrew Wilson, A.K.A. Aendru, and Lorenzo Wood in studio')
+
+			+spotifyEmbed('Kat Van Morgan', 'KAT Van Morgan', '2dyFY339oQUVyl1zpvLg55', 'July 4, 2019')
+				p(style="line-height:1.0; margin:8px 0") Production, mixing and mastering
+				h4(style="font-size:1em; margin:8px 0 0 0; line-height:1.0") Mama Gone Crazy, You're Gonna Regret It
+				div(style="font-size:0.9em; line-height: 1.0") Co-writer, all instruments
+				h4(style="font-size:1em; margin:8px 0 0 0") Baby Girl
+				div(style="font-size:0.85em; line-height: 1.0")  Co-writer, some instruments
+				h4(style="font-size:1em; margin:8px 0 0 0") Overshare
+				div(style="font-size:0.9em; line-height: 1.0; padding-bottom:0.5em")  Some instruments
+
+			+spotifyEmbed('Aendru', 'You and Me Now', '52ybpfalBibR8F2qIGGggv', 'Feb 22, 2019')
+				p Writing, vocals, vocal production
+
+			// at the end; these may not display if there aren't columns available
+
+			+photoEmbed('img/prod1.jpg', 'Sarah Morgan of Kat Van Morgan recording backup vocals at Lorenzo Wood studio')
+			// +photoEmbed('img/prod4.jpg', 'Apple Logic software in use at Lorenzo Wood studio')
 
 	section.latest-releases.unpadded
-		.subsection.ir(aria-hidden="true")
-			article
-				header
-					h2 Latest Releases
+		header
+			h2 Releases
 
 		//- note that above definition of $release is not longer valid since we define it here in the loop
 		<?php $reversed = true; foreach ($marketingReleases as $release) { ?>
@@ -224,7 +398,8 @@ block prepend scripts
 		//- NOTE: index depends on javascript in hero to deal with scrolling hero image
 		include ../intermediate/js/index.js
 		include ../intermediate/js/youtube.js
+		include ../intermediate/js/spotify.js
 
-
+block append scripts
 	<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"Lorenzo Wood","image":"https://www.lorenzowoodmusic.com/img/lorenzo-wood-image-card.jpg","url":"https://www.lorenzowoodmusic.com/","sameAs":["https://www.facebook.com/lorenzowoodmusic/","https://twitter.com/lorenzowmusic","https://www.instagram.com/LorenzoWoodMusic/","https://www.youtube.com/lorenzowoodmusic","https://listen.tidal.com/artist/9832731","https://soundcloud.com/LorenzoWoodMusic","https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp","https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA"]}</script>
 
