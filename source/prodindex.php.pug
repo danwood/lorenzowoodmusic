@@ -239,7 +239,8 @@ block main
 				if date
 					aside= date
 
-		//- Largest photo: 852 px wide
+		//- Largest photo: 852 px wide. Usually in range of 650-800. 
+		//- Let's shoot for 1440x1028, larger if we want slightly wider or taller to reveal more on the edges
 		mixin photoEmbed(path, alt)
 			section.photo(style="background-image:url(" + cloudImgAutoPrefix + path + ")")
 				img(style="display:none" loading=lazy src=cloudImgAutoPrefix + path alt=alt)
@@ -294,7 +295,7 @@ block main
 			+photoEmbed('img/alex-oliva.jpg', 'Lorenzo Wood in studio, working with Alex Oliva and Jillian Batt over a Zoom call')
 
 			
-			+photoEmbed('img/prod3.jpg', 'Lorenzo Wood recording acoustic guitar in studio')
+			//- +photoEmbed('img/prod3.jpg', 'Lorenzo Wood recording acoustic guitar in studio')
 
 			+spotifyEmbed('Sam Johnson', 'Flower Petals', '0coW9BxlUEDD3HrEmrhnZJ', 'Feb 5, 2021')
 				p Writing, instruments, production, mixing and mastering
