@@ -26,10 +26,14 @@ Colors
 */
 
 section.mailchimp-section {
-	background-color:var(--color2);
+	background-color:var(--color3);
 }
 section.production {
-	background-color:var(--color3);
+	background-color:#112233;
+	color: #FFFFFF;
+	a {
+		color: #8888FF;
+	}
 }
 
 
@@ -284,10 +288,9 @@ Mailing
 	}
 	input:not([type]), input[type=text], input[type=email], input[type=submit] {
 		padding:0.5rem; margin:0.5rem 0.5rem;
-		font:normal 16px HelveticaNeue-CondensedBold, impact, sans-serif;
 	}
 }
-#mce-FNAME { width:6em;}
+#mce-FNAME { width:7em;}
 #mce-LNAME { width:9em;}
 #mce-EMAIL { width:10em;}
 

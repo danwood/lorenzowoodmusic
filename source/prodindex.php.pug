@@ -83,14 +83,11 @@ block append header
 
 		img.hero-image.covering.swapping-image(srcset=cloudImgAutoPrefix + "img/banner1_giant.jpg 2560w, " + cloudImgAutoPrefix + "img/banner1_big.jpg 1920w, " + cloudImgAutoPrefix + "img/banner1_medium.jpg 960w, " + cloudImgAutoPrefix + "img/banner1_small.jpg 640w" sizes="100vw" width="960" height="674" src=cloudImgAutoPrefix + "img/banner1_medium.jpg" loading="eager" alt="Lorenzo Wood, main banner image")
 
-	.icons.icons-header.overlapping.icons-5.safe-area-only
+	.icons.icons-header.overlapping.icons-4.safe-area-only
 		//- Instagram is special; it gets stroked rather than filled
 		.icon.instagram
 			a(data-title="Instagram" href="https://instagram.com/LorenzoWoodMusic")
 				svg: use(xlink:href="/svg/page_home.svg#instagram")
-		.icon.smaller
-			a(data-title="Facebook" href="https://facebook.com/LorenzoWoodMusic")
-				svg: use(xlink:href="/svg/page_home.svg#facebook")
 		.icon
 			a(data-title="YouTube" href="https://www.youtube.com/lorenzowoodmusic")
 				svg: use(xlink:href="/svg/page_home.svg#youtube")
@@ -252,25 +249,25 @@ block main
 				p= year
 		
 
-		h3 2021
 		article.productiongrid
 
 			+youtube2Embed('Sam Johnson', 'Live at Bottlerock 2021', 'Sam Johnson Live at Bottlerock 2021 FULL SET', 'mafRAocAL2U', 'Sam Johnson Acoustic VIP Set at BottleRock 2021', 'jAM7gVB6ak8', 'With Langdon Dearborn • September 5, 2021')(class='smaller')
 				p Video
 
+			+videoEmbed('Alex Oliva', "Thoughts From the ER (cover of Lawrence song)", 'Thoughts from the ER (Lawrence) - Cover', 'https://www.instagram.com/tv/CS-mhGNjdEF', 'thoughts-from-the-er.jpg', 'With Langdon Dearborn • August 24, 2021')(class='smaller')
+				p Audio recording, mixing, video
+
 			//+spotifyEmbed('Aden Black', 'For You', '1oIRVLLjoRhmxX0PtfSrXz')
-			//	p Most instruments, production, mixing and mastering
+			//	p Instruments, production, mixing and mastering
 			//+spotifyEmbed('Ethan Danto', 'Pass in Time', '1oIRVLLjoRhmxX0PtfSrXz')
 			//	p Instruments, production, mixing and mastering
 			+spotifyEmbed('Elly Shane', 'Prototype', '1bEs7xsCUKtvsRjsVq4Ca2','August 13, 2021')
 				p Mixing and mastering
 
-			+videoEmbed('Alex Oliva', "Thoughts From the ER (cover of Lawrence song)", 'Thoughts from the ER (Lawrence) - Cover', 'https://www.instagram.com/tv/CS-mhGNjdEF', 'thoughts-from-the-er.jpg', 'With Langdon Dearborn • August 24, 2021')(class='smaller')
-				p Audio recording, mixing, video
 
+			+photoEmbed('img/prod5.jpg', 'Lorenzo Wood and Aden Black in studio')
 
-			//- +photoEmbed('img/prod2.jpg', 'Lorenzo Wood with guitar in studio')
-
+			//- Lorenzo opted not to feature here
 			//- +youtubeEmbed('', 
 			//- 'Coast to Coast: a collaboration between USC and NYU artists', 
 			//- 'Coast to Coast – USC x NYU Live Performances', 
@@ -288,41 +285,37 @@ block main
 			+youtubeEmbed('Musical Theatre Repertory at USC',
 			 'Unprecedented: A Modern Musical',
 			 'USC MTR’s Unprecedented: A Modern Musical', 
-			'Hp1Lzxg93ng')(class='smaller')
+			'Hp1Lzxg93ng', 'May 6, 2021')(class='smaller')
 				p Music editing and mixing
 			
-			+spotifyEmbed('Alex Oliva, Jillian Batt', 'U & I', '1k5SALiKnAbkA2zYrMMTgq')
+			+spotifyEmbed('Alex Oliva, Jillian Batt', 'U & I', '1k5SALiKnAbkA2zYrMMTgq', 'March 12, 2021')
 				p Vocal production, engineering, mixing
 
 			+photoEmbed('img/alex-oliva.jpg', 'Lorenzo Wood in studio, working with Alex Oliva and Jillian Batt over a Zoom call')
 
-			+spotifyEmbed('Cooper + Millett', 'Perfect', '2pcgn8lLynO2C1T7rPx1gq')
-				p Session vocals
 			
 			+photoEmbed('img/prod3.jpg', 'Lorenzo Wood recording acoustic guitar in studio')
 
-			+spotifyEmbed('Sam Johnson', 'Flower Petals', '0coW9BxlUEDD3HrEmrhnZJ')
+			+spotifyEmbed('Sam Johnson', 'Flower Petals', '0coW9BxlUEDD3HrEmrhnZJ', 'Feb 5, 2021')
 				p Writing, instruments, production, mixing and mastering
 		
-		h3 2019/2020
-		article.productiongrid
 
 			+youtubeEmbed('Sam Johnson', 
 			 'Monsters on TV', 
 			 'Sam Johnson - Monsters On TV - (Official Music Video)', 
-			 'L-R8aLbhMkI')
+			 'L-R8aLbhMkI', 'Oct 30, 2020')
 				p Writing, Instruments, production, mixing and mastering, music video
 
-			+spotifyEmbed('Hannah Faith', 'I Won’t Give In', '0ogFm11JTP2jfXXOTUJTih')
+			+spotifyEmbed('Cooper + Millett', 'Perfect', '2pcgn8lLynO2C1T7rPx1gq', 'October 2020')
+				p Session vocals
+
+			+spotifyEmbed('Hannah Faith', 'I Won’t Give In', '0ogFm11JTP2jfXXOTUJTih', 'October 9, 2020')
 				p Instruments, production, mixing and mastering
 
 
-			+spotifyEmbed('Aendru', 'You and Me Now', '52ybpfalBibR8F2qIGGggv')
-				p Guest vocals
-
 			+photoEmbed('img/aendru.jpg', 'Andrew Wilson, A.K.A. Aendru, and Lorenzo Wood in studio')
 
-			+spotifyEmbed('Kat Van Morgan', 'KAT Van Morgan', '2dyFY339oQUVyl1zpvLg55')
+			+spotifyEmbed('Kat Van Morgan', 'KAT Van Morgan', '2dyFY339oQUVyl1zpvLg55', 'July 4, 2019')
 				p(style="line-height:1.0; margin:8px 0") Production, mixing and mastering
 				h4(style="font-size:1em; margin:8px 0 0 0; line-height:1.0") Mama Gone Crazy, You're Gonna Regret It
 				div(style="font-size:0.9em; line-height: 1.0") Co-writer, all instruments
@@ -330,6 +323,9 @@ block main
 				div(style="font-size:0.85em; line-height: 1.0")  Co-writer, some instruments
 				h4(style="font-size:1em; margin:8px 0 0 0") Overshare
 				div(style="font-size:0.9em; line-height: 1.0; padding-bottom:0.5em")  Some instruments
+
+			+spotifyEmbed('Aendru', 'You and Me Now', '52ybpfalBibR8F2qIGGggv', 'Feb 22, 2019')
+				p Writing, vocals, vocal production
 
 			// at the end; these may not display if there aren't columns available
 

@@ -11,9 +11,11 @@ header
 		div: textarea(id="e_ms" name="m" rows="10" cols="40" required="required" placeholder="Message")
 		div
 			
-			//- honeypot
+			//- honeypots
 			input(type="text" name="subject" value="" class="ir")
 			input(type="text" name="message" value="" class="ir")
+			input(type="text" name="domain" value="lorenzowoodmusic.com" class="ir")
+			input(type="hidden" name="phone" value="")
 
 			input(type="hidden" name="f" value="This message was sent from the LorenzoWoodMusic.com website.")
 			input(type="hidden" name="s" value="Message sent from LorenzoWoodMusic.com")

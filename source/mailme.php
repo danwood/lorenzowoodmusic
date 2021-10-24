@@ -101,6 +101,8 @@ $fromEmails = extract_emails_from($fromEmail);
 																	// Also: 'x' is the name of the 'Send' button
 $honeypot1		= housekeeping::post('subject', '');
 $honeypot2		= housekeeping::post('message', '');
+$honeypot3		= housekeeping::post('domain', '');		// should be lorenzowoodmusic.com
+$honeypot4		= housekeeping::post('phone', '');
 
 // EXTRA GOODIES, NOT IN THE SANDVOX UI:
 
@@ -147,7 +149,7 @@ $fields = '';
 
 foreach($_POST as $postKey => $postValue)
 {
-	if (strlen($postKey) > 1 && $postKey != 'subject' && $postKey != 'message' && $postKey != 'v' && $postKey != 'vv' && $postKey != 'v1' && $postKey != 'iehack')	// ignore 1-char keys and honeypots and hack
+	if (strlen($postKey) > 1 && $postKey != 'subject' && $postKey != 'message' && $postKey != 'phone' && $postKey != 'domain' && $postKey != 'v' && $postKey != 'vv' && $postKey != 'v1' && $postKey != 'iehack')	// ignore 1-char keys and honeypots and hack
 	{
 		$postkeyFriendly = Encoding::toUTF8($postKey);
 		$postkeyFriendly = html_entity_decode($postkeyFriendly, ENT_QUOTES|ENT_HTML5, 'UTF-8');
@@ -184,7 +186,7 @@ if (		containsNewlines($recipient)
 
 	$suspectedSpam = true;	// newlines in these values mean likely spam.
 }
-else if (!empty($honeypot1) || !empty($honeypot2))
+else if (!empty($honeypot1) || !empty($honeypot2) || $honeypot3 != 'lorenzowoodmusic.com' || !empty($honeypot4))
 {
 	// I want to see what got posted and how often....
 	// error_log( "mailme.php: HONEYPOT ACTIVATED!\n\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipient, 1), 1, 'server@karelia.com' );
