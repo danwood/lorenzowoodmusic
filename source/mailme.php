@@ -231,7 +231,8 @@ else if (!$suspectedSpam)		// Make sure we didn't just prevent it, above
 	// No "From" header — this seems to stop the script from working, at least on NearlyFreeSpeech.
 	$headers = 'Reply-To: ' . $fromEmails[0] . "\r\n";
 
-	error_log("Sending recipient = $recipient; subject = $subject; message = $message; headers = $headers ");
+	$messageCompressed = str_replace("\n", '\n', $message);
+	error_log("Sending recipient = $recipient; subject = $subject; message = $messageCompressed; headers = $headers ");
 	
 	$sent = mail($recipient, $subject, $message, $headers);
 
