@@ -41,7 +41,7 @@ block append links
 
 	//- Start loading external AOS javascript now, use onload to when loaded
 	//- For this page, when AOS is loaded, set up event when we scroll to a spotify embed div to actually load it.
-	script(defer src="/" + "js/aos.js" onload="AOS.init({disable:'mobile',once:true}); document.addEventListener('aos:in:spotify-proxy', ({ detail }) => { loadSpotifyIntoNode(detail) });  ")
+	script(defer src="/" + "js/aos.js" onload="AOS.init({disable:window.innerWidth < 600,once:true}); document.addEventListener('aos:in:spotify-proxy', ({ detail }) => { loadSpotifyIntoNode(detail) });  ")
 	//- override the AOS styles that are initially hidden and then revealed, when no Javascript
 	include _noscript_aos.html
 
