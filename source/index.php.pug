@@ -28,7 +28,7 @@ block vars
 	- var herostyle = 'covering'
 	- var currentClass = 'home'
 	//- Not using pageTitle; full title tag is overridden below
-	- var description = 'Lorenzo Wood is an award-winning pop musician, songwriter, producer, and vocalist from the San Francisco area.'
+	- var description = 'Lorenzo Wood is a musician, songwriter, producer, and vocalist from the San Francisco area now based in LA.'
 	//- ................'[________^10_______^20_______^30_______^40_______^50_______^60_______^70_______^80_______^90_______^100______^110______^120______^130______^140______^150_]'
 
 block title
@@ -163,7 +163,9 @@ block main
 					if client
 						h3= client
 					h4= title
-					a(href="https://open.spotify.com/track/" + embedCode)= title
+					a(href="https://open.spotify.com/track/" + embedCode)
+						=title
+						|  on Spotify
 				//- Generate div that gets replace with actual spotify iframe. Doesn't actually fade in but this is needed.
 				.spotify-proxy(data-code=embedCode data-aos="fade-in" data-aos-id="spotify-proxy")
 					p= work
@@ -252,19 +254,30 @@ block main
 
 		article.productiongrid
 
+
+			+spotifyEmbed('Ethan Danto', 'Pass In Time', '2yB3Z6RjI8wtaSJOn6iwGN', 'April 29, 2022')
+				p Production, mixing
+
+			+spotifyEmbed('Aden', 'for you', '3r8EdDkuzv5pEPJ7r3Dmev', 'March 25, 2022')
+				p Instruments, production, mixing and mastering
+
+			+spotifyEmbed('Elly Shane', 'Sense of Gravity', '5ZEq6sF8oMFp7ZWvHmUaIW','March 18, 2022')
+				p Mixing, string engineering
+
+			+spotifyEmbed('Sam Johnson', 'Lullaby for Jenny', '4CVmRnFDaL850OAaMK6qaO','February 25, 2022')
+				p Production
+
 			+youtube2Embed('Sam Johnson', 'Live at Bottlerock 2021', 'Sam Johnson Live at Bottlerock 2021 FULL SET', 'mafRAocAL2U', 'Sam Johnson Acoustic VIP Set at BottleRock 2021', 'jAM7gVB6ak8', 'With Langdon Dearborn • September 5, 2021')(class='smaller')
 				p Video
 
 			+videoEmbed('Alex Oliva', "Thoughts From the ER (cover of Lawrence song)", 'Thoughts from the ER (Lawrence) - Cover', 'https://www.instagram.com/tv/CS-mhGNjdEF', 'thoughts-from-the-er.jpg', 'With Langdon Dearborn • August 24, 2021')(class='smaller')
 				p Audio recording, mixing, video
 
-			//+spotifyEmbed('Aden Black', 'For You', '1oIRVLLjoRhmxX0PtfSrXz')
-			//	p Instruments, production, mixing and mastering
 			//+spotifyEmbed('Ethan Danto', 'Pass in Time', '1oIRVLLjoRhmxX0PtfSrXz')
 			//	p Instruments, production, mixing and mastering
+
 			+spotifyEmbed('Elly Shane', 'Prototype', '1bEs7xsCUKtvsRjsVq4Ca2','August 13, 2021')
 				p Mixing and mastering
-
 
 			+photoEmbed('img/prod5.jpg', 'Lorenzo Wood and Aden Black in studio')
 
@@ -293,7 +306,6 @@ block main
 				p Vocal production, engineering, mixing
 
 			+photoEmbed('img/alex-oliva.jpg', 'Lorenzo Wood in studio, working with Alex Oliva and Jillian Batt over a Zoom call')
-
 			
 			//- +photoEmbed('img/prod3.jpg', 'Lorenzo Wood recording acoustic guitar in studio')
 
@@ -307,7 +319,7 @@ block main
 			 'L-R8aLbhMkI', 'Oct 30, 2020')
 				p Writing, Instruments, production, mixing and mastering, music video
 
-			+spotifyEmbed('Cooper + Millett', 'Perfect', '2pcgn8lLynO2C1T7rPx1gq', 'October 2020')
+			+spotifyEmbed('Cooper + Millett', 'Perfect', '2pcgn8lLynO2C1T7rPx1gq', 'October 20, 2020')
 				p Session vocals
 
 			+spotifyEmbed('Hannah Faith', 'I Won’t Give In', '0ogFm11JTP2jfXXOTUJTih', 'October 9, 2020')
@@ -401,5 +413,5 @@ block prepend scripts
 		include ../intermediate/js/spotify.js
 
 block append scripts
-	<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"Lorenzo Wood","image":"https://www.lorenzowoodmusic.com/img/lorenzo-wood-image-card.jpg","url":"https://www.lorenzowoodmusic.com/","sameAs":["https://www.facebook.com/lorenzowoodmusic/","https://twitter.com/lorenzowmusic","https://www.instagram.com/LorenzoWoodMusic/","https://www.youtube.com/lorenzowoodmusic","https://listen.tidal.com/artist/9832731","https://soundcloud.com/LorenzoWoodMusic","https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp","https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA"]}</script>
+	<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"Lorenzo Wood","image":"https://www.lorenzowoodmusic.com/img/lorenzo-wood-image-card.jpg","url":"https://www.lorenzowoodmusic.com/","sameAs":["https://www.facebook.com/lorenzowoodmusic/","https://www.instagram.com/LorenzoWoodMusic/","https://www.youtube.com/lorenzowoodmusic","https://listen.tidal.com/artist/9832731","https://soundcloud.com/LorenzoWoodMusic","https://geo.itunes.apple.com/us/artist/lorenzo-wood/1262743720?at=1000lKSp","https://open.spotify.com/artist/1rEOrX1GSkT1SJAsG1fBYA"]}</script>
 

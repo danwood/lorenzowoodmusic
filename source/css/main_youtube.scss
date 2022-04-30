@@ -79,7 +79,7 @@ YouTube
 }
 .youtube-border {
 	padding:$typicalPadding;
-	max-width:$typicalPadding+720*16/9;
+	max-width:calc($typicalPadding + 1280px);	// 1280px = 720*16/9
 	//margin:0 auto;		// can't - for some videos it makes it smaller!
 }
 

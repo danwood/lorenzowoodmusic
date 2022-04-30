@@ -29,6 +29,8 @@
     Redirect 301 /drown /link/drown
     Redirect 301 /i-dare-you /link/i-dare-you
     Redirect 301 /dare /link/i-dare-you
+    Redirect 301 /lonely /link/lonely-nights
+    Redirect 301 /lonely-nights /link/lonely-nights
 
 </IfModule>
 

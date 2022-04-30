@@ -24,7 +24,7 @@ $page-menu-font-size: 0.9rem;
 // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
 // https://chriskirknielsen.com/blog/modern-fluid-typography-with-clamp/
 @mixin fluid-type($min-vw, $max-vw, $min-value, $max-value) {
-  $factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+  $factor: calc(1 / ($max-vw - $min-vw) * ($max-value - $min-value));
   $calc-value: unquote("#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }");
 
   font-size: $min-value; // Fallback for older browsers

@@ -62,7 +62,7 @@ article {
 .columns-adaptive {
 
 	display:grid;
-	grid-template-columns:repeat(auto-fill, minmax($breakpointToMedium/3 - 1px, 1fr));
+	grid-template-columns:repeat(auto-fill, minmax(calc($breakpointToMedium / 3 - 1px), 1fr));
 
 	@supports not (display:grid) {
 
@@ -72,7 +72,7 @@ article {
 
 		& > * {
 			flex-grow:1;
-			flex-basis:$breakpointToSmall/2 - $typicalPadding*2 - 1px;	// need to compensate for padding myself!
+			flex-basis:calc($breakpointToSmall/2 - $typicalPadding*2 - 1px);	// need to compensate for padding myself!
 			max-width:400px;
 		}
 	}
