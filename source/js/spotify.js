@@ -13,3 +13,11 @@ function loadSpotifyIntoNode(spotifyProxy) {
 	container.appendChild(iframe);
 	spotifyProxy.replaceWith( container );
 }
+
+// We don't use aos for narrow (mobile) screens, which will load the spotify embeds when we scroll to reveal. So only option is to load them now.
+
+if (window.innerWidth < 600) {
+	document.querySelectorAll('.spotify-proxy').forEach(function(element) {
+		loadSpotifyIntoNode(element);
+	});
+}
