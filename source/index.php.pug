@@ -167,7 +167,7 @@ block main
 						=title
 						|  on Spotify
 				//- Generate div that gets replace with actual spotify iframe. Doesn't actually fade in but this is needed.
-				.spotify-proxy(data-code=embedCode data-aos="fade-in" data-aos-id="spotify-proxy")
+				.spotify-proxy.requires-js(data-code=embedCode data-aos="fade-in" data-aos-id="spotify-proxy")
 					p= work
 				if block
 					block
@@ -258,11 +258,14 @@ block main
 			+spotifyEmbed('Ethan Danto', 'Pass In Time', '2yB3Z6RjI8wtaSJOn6iwGN', 'April 29, 2022')
 				p Production, mixing
 
+			+spotifyEmbed('Elly Shane', 'Tripwire', '4vRUcCdSZHh8rIPzOT5qQo','April 22, 2022')
+				h4(style="font-size:1em; margin:8px 0 0 0; line-height:1.0") Sense of Gravity
+				div(style="font-size:0.9em; line-height: 1.0") Mixing, string engineering
+				h4(style="font-size:1em; margin:8px 0 0 0;line-height:1.0") He's Not You/Safe Word,<br>Mancala, No Signal
+				div(style="font-size:0.85em; line-height: 1.0")  Mixing
+
 			+spotifyEmbed('Aden', 'for you', '3r8EdDkuzv5pEPJ7r3Dmev', 'March 25, 2022')
 				p Instruments, production, mixing and mastering
-
-			+spotifyEmbed('Elly Shane', 'Sense of Gravity', '5ZEq6sF8oMFp7ZWvHmUaIW','March 18, 2022')
-				p Mixing, string engineering
 
 			+spotifyEmbed('Sam Johnson', 'Lullaby for Jenny', '4CVmRnFDaL850OAaMK6qaO','February 25, 2022')
 				p Production
