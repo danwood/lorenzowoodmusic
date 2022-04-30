@@ -16,7 +16,7 @@
 	Apache Server Configs
 	ImageOptim (with mozjpeg)
 	Sketch and Opacity for hand-made SVG creation
-	Animate On Scroll Library https://michalsnik.github.io/aos/ (simplified CSS)
+	Animate On Scroll Library 3.0.0b6 https://michalsnik.github.io/aos/ (simplified CSS)
 	A Modern CSS reset https://piccalil.li/blog/a-modern-css-reset/
 	https://realfavicongenerator.net for favicons
 	https://www.vectorizer.io for automated SVG creation
