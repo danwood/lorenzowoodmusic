@@ -2030,6 +2030,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/source\/img\/springfest.jpg" : {
+      "ft" : 16384,
+      "iS" : 429442,
+      "jF" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/img\/springfest.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/source\/img\/test.gif" : {
       "ft" : 4194304,
       "iS" : 956,
