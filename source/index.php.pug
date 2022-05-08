@@ -154,7 +154,7 @@ block main
 	//-		|<?php include 'CACHE/bandsintown.html'; ?>
 	//-		p: i Please check back closer to the scheduled dates to make sure performances are not cancelled due to coronavirus.
 
-	section.production
+	section.production#production
 		h2 Production & Projects
 
 		mixin spotifyEmbed(client, title, embedCode, date)
@@ -323,8 +323,6 @@ block main
 
 			+photoEmbed('img/alex-oliva.jpg', 'Lorenzo Wood in studio, working with Alex Oliva and Jillian Batt over a Zoom call')
 			
-			//- +photoEmbed('img/prod3.jpg', 'Lorenzo Wood recording acoustic guitar in studio')
-
 			+spotifyEmbed('Sam Johnson', 'Flower Petals', '0coW9BxlUEDD3HrEmrhnZJ', 'Feb 5, 2021')
 				| Writing, instruments, production, mixing and mastering
 		
@@ -342,8 +340,6 @@ block main
 				| Instruments, production, mixing and mastering
 
 
-			+photoEmbed('img/aendru.jpg', 'Andrew Wilson, A.K.A. Aendru, and Lorenzo Wood in studio')
-
 			+spotifyEmbed('Kat Van Morgan', 'KAT Van Morgan', '2dyFY339oQUVyl1zpvLg55', 'July 4, 2019')
 				p(style="line-height:1.0; margin:8px 0") Production, mixing and mastering
 				h4(style="font-size:1em; margin:8px 0 0 0; line-height:1.0") Mama Gone Crazy, You're Gonna Regret It
@@ -358,10 +354,9 @@ block main
 
 			// at the end; these may not display if there aren't columns available
 
-			+photoEmbed('img/prod1.jpg', 'Sarah Morgan of Kat Van Morgan recording backup vocals at Lorenzo Wood studio')
-			// +photoEmbed('img/prod4.jpg', 'Apple Logic software in use at Lorenzo Wood studio')
+			+photoEmbed('img/prod4.jpg', 'Apple Logic software in use at Lorenzo Wood studio')
 
-	section.latest-releases.unpadded
+	section.latest-releases.unpadded#releases
 		header
 			h2 Releases
 
