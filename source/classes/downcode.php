@@ -88,7 +88,7 @@ class DowncodeDB extends SQLite3
 
 	function allReleases()	// reverse order by timestamp, so most recent added at top
 	{
-		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, Artist A WHERE R.artist_id = A.ID ORDER BY release_date DESC');
+		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, Artist A WHERE R.RELEASE_TYPE_ID != 0 AND R.artist_id = A.ID ORDER BY release_date DESC');
 		$ret = $statement->execute();
 		$result = Array();
 		while ($release = $ret->fetchArray(SQLITE3_ASSOC) ){
@@ -114,7 +114,7 @@ class DowncodeDB extends SQLite3
 		}
 
 		$result = NULL;
-		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, External E, Artist A LEFT OUTER JOIN Marketing M ON R.ID = M.release_id WHERE R.ID = E.release_id AND R.artist_id = A.ID AND R.slug = :slug ORDER BY E.variation_id ' . ($radio_edit ? 'desc' : 'asc'));
+		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, External E, Artist A LEFT OUTER JOIN Marketing M ON R.ID = M.release_id WHERE R.RELEASE_TYPE_ID != 0 AND R.ID = E.release_id AND R.artist_id = A.ID AND R.slug = :slug ORDER BY E.variation_id ' . ($radio_edit ? 'desc' : 'asc'));
 		$statement->bindValue(':slug', $slug);
 		$ret = $statement->execute();
 		$result = Array();
@@ -131,7 +131,7 @@ class DowncodeDB extends SQLite3
 		$slug = strtolower(trim($slug));
 
 		$result = NULL;
-		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, Artist A WHERE R.artist_id = A.ID AND R.slug = :slug');
+		$statement = $this->prepare('SELECT *, a.name as artist_name FROM Release R, Artist A WHERE R.RELEASE_TYPE_ID != 0 AND R.artist_id = A.ID AND R.slug = :slug');
 		$statement->bindValue(':slug', $slug);
 		$ret = $statement->execute();
 		while ($release = $ret->fetchArray(SQLITE3_ASSOC) ){
@@ -158,7 +158,7 @@ class DowncodeDB extends SQLite3
 	function featuredRelease($artist_id = 1)
 	{
 		$result = NULL;
-		$statement = $this->prepare("SELECT *, T.name as release_type_name FROM Release R, External E, ReleaseType T WHERE R.ID = E.release_id AND R.release_type_id = T.ID AND R.artist_id = :artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND release_date < date('now', 'start of day','+7 days') ORDER BY R.release_date DESC, E.variation_id DESC LIMIT 1");
+		$statement = $this->prepare("SELECT *, T.name as release_type_name FROM Release R, External E, ReleaseType T WHERE R.RELEASE_TYPE_ID != 0 AND R.ID = E.release_id AND R.release_type_id = T.ID AND R.artist_id = :artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND release_date < date('now', 'start of day','+7 days') ORDER BY R.release_date DESC, E.variation_id DESC LIMIT 1");
 		$statement->bindValue(':artist_id', $artist_id);
 		$ret = $statement->execute();
 		while ($album = $ret->fetchArray(SQLITE3_ASSOC) ){
@@ -174,7 +174,7 @@ class DowncodeDB extends SQLite3
 
 	function marketingReleases()
 	{
-		$statement = $this->prepare("SELECT *, T.name as release_type_name, a.name as artist_name FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND A.ID = 1 ORDER BY R.release_date DESC, E.variation_id DESC");
+		$statement = $this->prepare("SELECT *, T.name as release_type_name, a.name as artist_name FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.RELEASE_TYPE_ID != 0 AND R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND A.ID = 1 ORDER BY R.release_date DESC, E.variation_id DESC");
 		$ret = $statement->execute();
 
 		//  AND release_date < date('now', 'start of day','+7 days')
@@ -195,7 +195,7 @@ class DowncodeDB extends SQLite3
 
 	function marketingLorenzoWoodReleases()
 	{
-		$statement = $this->prepare("SELECT *, T.name as release_type_name, a.name as artist_name FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND A.ID = 1 ORDER BY R.release_date DESC, E.variation_id DESC");
+		$statement = $this->prepare("SELECT *, T.name as release_type_name, a.name as artist_name FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.RELEASE_TYPE_ID != 0 AND R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND A.ID = 1 ORDER BY R.release_date DESC, E.variation_id DESC");
 		$ret = $statement->execute();
 
 		//  AND release_date < date('now', 'start of day','+7 days')
