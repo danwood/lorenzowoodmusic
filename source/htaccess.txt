@@ -21,6 +21,7 @@
 
 <IfModule mod_rewrite.c>
 
+    Redirect 302 /link/now-in-control https://soundcloud.com/lorenzowoodmusic/sets/now-in-control
     Redirect 301 /2am-in-the-basement.html /2am-in-the-basement/
     Redirect 301 /falling /link/falling
     Redirect 301 /friends /link/more-than-friends
@@ -31,6 +32,7 @@
     Redirect 301 /dare /link/i-dare-you
     Redirect 301 /lonely /link/lonely-nights
     Redirect 301 /lonely-nights /link/lonely-nights
+
 
 </IfModule>
 
