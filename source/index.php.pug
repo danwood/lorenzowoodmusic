@@ -272,15 +272,15 @@ block main
 		//- Square image with job info
 		mixin imageEmbed(client, title, path, alt, date)
 			section.image
-					if client
-						h3= client
-					h4= title
-					img(loading=lazy src=cloudImgAutoPrefix + path alt=alt)
-					p= work
-					if block
-						block
-					if date
-						aside= date
+				if client
+					h3= client
+				h4= title
+				img(loading=lazy src=cloudImgAutoPrefix + path alt=alt)
+				p= work
+				if block
+					block
+				if date
+					aside= date
 
 
 		mixin year(year)
