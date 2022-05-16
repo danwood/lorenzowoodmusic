@@ -157,6 +157,28 @@ block main
 	section.production#production
 		h2 Production & Projects
 
+		mixin releaseEmbed(title, embedCode, date, slug)
+			section.release
+				.doubleBox
+					.half
+						//- Generate div that gets replace with actual spotify iframe. Doesn't actually fade in but this is needed.
+						.spotify-proxy.requires-js(data-code=embedCode data-aos="fade-in" data-aos-id="spotify-proxy")
+							p= work
+						if slug
+							a.streamlink(href="link/" + slug)
+								| Stream/Download
+						if date
+							aside= date
+						//- TODO: FIGURE OUT HOW TO PUT DATE AT THE END OF THE MARKUP.
+					.half
+						h4= title
+						noscript
+							a(href="https://open.spotify.com/track/" + embedCode)
+								=title
+								|  on Spotify
+						if block
+							block
+
 		mixin spotifyEmbed(client, title, embedCode, date)
 			section.spotify
 				noscript

@@ -395,6 +395,7 @@ Production
 
 // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
 $gutterX: clamp(0.625rem, -7.3750rem + 16.6667vw, 2rem);	// We want 10px at 768px; values: 768px; 900px; 0.625rem, 2rem 
+$gutterXInset: calc($gutterX - 16px);
 $gutterY: 5.2vw;		// always this gutter between cards
 
 .productiongrid {
@@ -425,8 +426,8 @@ $gutterY: 5.2vw;		// always this gutter between cards
 
 	section {
 		// background: yellow;	// TESTING
-		position: relative;
-		overflow:hidden;
+		// position: relative;
+		// overflow:hidden;
 
 		aside {
 			margin-top:0;
@@ -459,6 +460,31 @@ $gutterY: 5.2vw;		// always this gutter between cards
 			padding-top:41%;		// should be approx the width / 1.618
 			margin: 0 auto;
 			border-radius: 20px;
+		}
+	}
+
+	section.release {					// Wide article, text next to spotify
+
+		text-align: left;
+
+		blockquote {
+				font-style:italic;
+				letter-spacing:normal;
+		}
+		a.streamlink {
+			padding:0 8px;
+		}
+
+		@media only screen and (min-width:$breakpointToSmall) {
+			line-height:1.2;			// Room for more text
+			grid-column-end: span 2;
+			.doubleBox {
+				border: 2px solid rgba(255,255,255,0.5);
+				padding:6px;
+				display:grid;
+				column-gap: $gutterXInset;
+				grid-template-columns: 1fr 1fr;
+			}
 		}
 	}
 
