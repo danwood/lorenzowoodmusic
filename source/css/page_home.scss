@@ -437,7 +437,13 @@ $gutterY: 5.2vw;		// always this gutter between cards
 		}
 	}
 
-	section.photo {			// must specify background-image URL in HTML. Roughly 1.4:1 aspect ratio but it can be cropped a bit in either direction.
+	section.photo {
+		@media only screen and (min-width:$breakpointToSmall) {
+			grid-column-end: span 2;
+		}
+	}
+
+	section.photo > div {			// must specify background-image URL in HTML. Roughly 1.4:1 aspect ratio but it can be cropped a bit in either direction.
 
 		display: block;
 		background-size:     cover; 
@@ -445,7 +451,7 @@ $gutterY: 5.2vw;		// always this gutter between cards
 		background-position: center center;
 
 		@media only screen and (min-width:$breakpointToSmall) {
-			grid-column-end: span 2;
+			// grid-column-end: span 2;
 			
 			// give it some size
 			width:100%;

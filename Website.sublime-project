@@ -5,7 +5,7 @@
 		"path":".",
 			"follow_symlinks": true,
 			"file_exclude_patterns":[
-							".*", "*.jpg", "*.png", "*.opacity", "*.webp", "*.php", "phpliteadmin*",
+							".*", "*.jpg", "*.png", "*.opacity", "*.webp", "phpliteadmin*",
 							"*.zip", "*.map", "*.gif", "*.jpeg", "*.jpg", "*.pdf", "*.ico", "*.html", "_Markdown*",
 							"*.acorn", "*.codekit*", "jquery*", "*.command", "*.sublime*",
  							"*-min.js", "robots.txt", "humans.txt", "browserconfig.xml", "CNAME",

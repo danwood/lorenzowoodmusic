@@ -9,7 +9,7 @@ function loadSpotifyIntoNode(spotifyProxy) {
 	iframe.setAttribute( "loading", "lazy" );	
 	iframe.setAttribute( "allowtransparency", "true" );
 	iframe.setAttribute( "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" );
-	iframe.setAttribute( "src", "https://open.spotify.com/embed/track/"+ code );
+	iframe.setAttribute( "src", "https://open.spotify.com/embed/"+ code );
 	container.appendChild(iframe);
 	spotifyProxy.replaceWith( container );
 }

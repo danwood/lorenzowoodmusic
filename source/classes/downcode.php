@@ -190,6 +190,35 @@ class DowncodeDB extends SQLite3
 		return count($result) ? $result : NULL;		// return array of releases, with preferred one first
 	}
 
+	function projects()
+	{
+		$statement = $this->prepare("SELECT P.*, PT.class, PT.name AS section_type FROM Project P, ProjectType PT WHERE PT.id = P.type ORDER BY date DESC");
+		$ret = $statement->execute();
+		$result = Array();
+		while ($release = $ret->fetchArray(SQLITE3_ASSOC) ){
+			$result[] = $release;
+		}
+		return $result;
+	}
+
+	function projectsAndLorenzoWoodReleases()
+	{
+		$statement = $this->prepare("SELECT PT.class, PT.name AS section_type, NULL as slug, P.* FROM Project P, ProjectType PT WHERE PT.id = P.type
+UNION ALL
+SELECT 'release' as class, 'Release' as section_type, R.slug, R.id as id, '0' as type, NULL as client, R.title, E.spotify_track as embed_code, E.spotify_album as embed_code_2,  NULL as embed_title, NULL as embed_title_2, R.image as image_name, NULL as alt, NULL as url, M.description_html as html, R.release_date as date, '0' as month_only, '0' as is_small
+FROM Release R, External E, ReleaseType T, Marketing M, Artist A WHERE R.RELEASE_TYPE_ID != 0 AND R.ID = E.release_id AND R.ID = M.release_id AND R.release_type_id = T.ID AND A.ID = R.artist_id AND (E.spotify_presave_url != '' OR E.spotify_album != '' OR E.spotify_track != '') AND apple_music_album != '' AND A.ID = 1
+AND E.variation_id < 2
+ORDER BY date DESC");
+		// Kind of a hack - looking for variation_id < 2 means either null or 0 or explicit, NOT radio edit, instrumental etc.
+		$ret = $statement->execute();
+		$result = Array();
+		while ($release = $ret->fetchArray(SQLITE3_ASSOC) ){
+			$result[] = $release;
+		}
+		return $result;
+	}
+
+
 	// All released, or upcoming with the ability to pre-save/pre-order, are listed here.
 	// This ONLY matches Lorenzo Wood artist
 

@@ -21,6 +21,7 @@ block prelude
 		}
 		
 		$marketingReleases = $db->marketingReleases();
+		$projects = $db->projectsAndLorenzoWoodReleases();
 		?>
 
 
@@ -65,15 +66,15 @@ block append banner
 	<?php if ($release) { ?>
 	.action.clearfix.safe-area-only
 		p
-			a(target="_blank" href!="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>")
+			a(target="_blank" href!="<?php echo '/link/' . htmlentities($release['slug'], ENT_QUOTES); ?>")
 				img(loading="lazy"
 					src!="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>"
 					alt!="<?php echo htmlentities($release['title'], ENT_QUOTES); ?>, cover image" 
 					width="64" height="64")
-			span <?php echo htmlspecialchars( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
+			span <?php echo htmlentities( ($now < $releaseDate ? 'Upcoming' : ($releaseDate < $oneMonthAgo ? 'Latest' : 'New')) . ' ' . $release['release_type_name'] . ' “' . $release['title'] . '”'); ?> —
 				| &nbsp;
 			b
-				a(href!="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>")
+				a(href!="<?php echo '/link/' . htmlentities($release['slug'], ENT_QUOTES); ?>")
 					<?php echo ($now < $releaseDate) ? 'Pre-Save or Pre-Order Now!' : 'Download or stream now!'; ?>
 	<?php } ?>
 
@@ -157,273 +158,101 @@ block main
 	section.production#production
 		h2 Production & Projects
 
-		mixin releaseEmbed(title, embedCode, date, slug)
-			section.release
-				.doubleBox
-					.half
-						//- Generate div that gets replace with actual spotify iframe. Doesn't actually fade in but this is needed.
-						.spotify-proxy.requires-js(data-code=embedCode data-aos="fade-in" data-aos-id="spotify-proxy")
-							p= work
-						if slug
-							a.streamlink(href="link/" + slug)
-								| Stream/Download
-						if date
-							aside= date
-						//- TODO: FIGURE OUT HOW TO PUT DATE AT THE END OF THE MARKUP.
-					.half
-						h4= title
-						noscript
-							a(href="https://open.spotify.com/track/" + embedCode)
-								=title
-								|  on Spotify
-						if block
-							block
-
-		mixin spotifyEmbed(client, title, embedCode, date)
-			section.spotify
-				noscript
-					if client
-						h3= client
-					h4= title
-					a(href="https://open.spotify.com/track/" + embedCode)
-						=title
-						|  on Spotify
-				//- Generate div that gets replace with actual spotify iframe. Doesn't actually fade in but this is needed.
-				.spotify-proxy.requires-js(data-code=embedCode data-aos="fade-in" data-aos-id="spotify-proxy")
-					p= work
-				if block
-					block
-				if date
-					aside= date
-
-		mixin youtubeEmbed(client, title, youtubeEmbedTitle, embedCode, date)
-			section.video(class!=attributes.class)
-				//- Show the client & title on smaller videos to use up some vertical space; otherwise it's only in <noscript>
-				if attributes.class == 'smaller'
-					if client
-						h3= client
-					h4= title
-				else
-					noscript
-						if client
-							h3= client
-						h4= title
-				noscript
-					a(href="https://www.youtube.com/watch?v=" + embedCode)= youtubeEmbedTitle
-				.youtubeEmbed-border
-					.youtube-player(data-code=embedCode data-title=youtubeEmbedTitle)
-				if block
-					block
-				if date
-					aside= date
-
-		mixin youtube2Embed(client, title, youtubeEmbedTitle, embedCode, youtubeEmbedTitle2, embedCode2,date)
-			section.video(class!=attributes.class)
-				noscript
-					if client
-						h3= client
-					h4= title
-
-				noscript
-					a(href="https://www.youtube.com/watch?v=" + embedCode)= youtubeEmbedTitle
-				.youtubeEmbed-border.nobottom
-					.youtube-player(data-code=embedCode data-title=youtubeEmbedTitle)
-				
-				noscript
-					a(href="https://www.youtube.com/watch?v=" + embedCode2)= youtubeEmbedTitle2
-				.youtubeEmbed-border
-					.youtube-player(data-code=embedCode2 data-title=youtubeEmbedTitle2)
-				if block
-					block
-				if date
-					aside= date
-
-		//- For other videos. Need name of image on server/cloudfront. 551px maximum width?
-		mixin videoEmbed(client, title, videoEmbedTitle, url, thumbnailImageName, date)
-			section.video(class!=attributes.class)
-				//- Show the client & title on smaller videos to use up some vertical space; otherwise it's only in <noscript>
-				if attributes.class == 'smaller'
-					if client
-						h3= client
-					h4= title
-				else
-					noscript
-						if client
-							h3= client
-						h4= title
-				noscript
-					a(href=url)= videoEmbedTitle
-				.youtubeEmbed-border
-					.youtube-player
-						img(src='/img/' + thumbnailImageName)
-						a(href=url): .play-button 
-
-				if block
-					block
-				if date
-					aside= date
-
-		//- Largest photo: 852 px wide. Usually in range of 650-800. 
-		//- Let's shoot for 1440x1028, larger if we want slightly wider or taller to reveal more on the edges
-		mixin photoEmbed(path, alt)
-			section.photo(style="background-image:url(" + cloudImgAutoPrefix + path + ")")
-				img(style="display:none" loading=lazy src=cloudImgAutoPrefix + path alt=alt)
-
-		//- Square image with job info
-		mixin imageEmbed(client, title, path, alt, date)
-			section.image
-				if client
-					h3= client
-				h4= title
-				img(loading=lazy src=cloudImgAutoPrefix + path alt=alt)
-				p= work
-				if block
-					block
-				if date
-					aside= date
-
-
-		mixin year(year)
-			section.year
-				p= year
-		
-
 		article.productiongrid
+			<?php foreach ($projects as $project) { $time = strtotime($project['date']); $date = date('j M Y', $time); $html = $project['html']; $cloudImgAutoPrefix = 'https://res.cloudinary.com/avfivcfiwkvgmspufqrh/image/upload/f_auto,q_auto/lwm/'; ?>
 
+				//- Spotify: For the embed, prefer the track. For the link, prefer the album.
+				section(class!="<?php echo $project['class'] . ($project['is_small'] ? ' smaller' : ''); ?>")
+					<?php switch($project['section_type']) { case "Spotify": $spotifyTrackEmbed = $project['embed_code'] ? 'track/' . $project['embed_code'] : 'album/' . $project['embed_code_2']; $spotifyAlbumEmbed = $project['embed_code_2'] ? 'album/' . $project['embed_code_2'] : 'track/' . $project['embed_code']; ?>
+						noscript
+							<?php echo "<h3>" . htmlspecialchars($project['client']) . "</h3>"; ?>
+							<?php echo "<h4>" . htmlspecialchars($project['title']) . "</h4>"; ?>
+							div
+								a(href!="<?php echo 'https://open.spotify.com/' . $spotifyAlbumEmbed; ?>")
+									<?php echo htmlspecialchars($project['title']) . " on Spotify"; ?>
+						//- Generate div that gets replaced with actual spotify iframe. Doesn't actually fade in but this is needed.
+						.spotify-proxy.requires-js(data-code!="<?php echo $spotifyTrackEmbed; ?>" data-aos="fade-in" data-aos-id="spotify-proxy")
+						<?php echo $html . "<aside>" . $date . "</aside>"; ?>
+					<?php break; case "SquareImage": ?>
+						<?php if ($project['client']) { echo "<h3>" . htmlspecialchars($project['client']) . "</h3>";  }?>
+						<?php if ($project['title'])  { echo "<h4>" . htmlspecialchars($project['title']) . "</h4>";   }?>
+						img(loading=lazy src!="<?php echo $cloudImgAutoPrefix . 'img/' . $project['image_name']; ?>" alt!="<?php echo $project['alt']; ?>")
+						<?php echo $html . "<aside>" . $date . "</aside>"; ?>
+					<?php break; case "Photo": ?>
+						//- Largest photo: 852 px wide. Usually in range of 650-800. 
+						//- Let's shoot for 1440x1028, larger if we want slightly wider or taller to reveal more on the edges
+						<?php $style = "background-image:url('" . $cloudImgAutoPrefix . 'img/' . $project['image_name'] . "')"; ?>
+						div(style!="<?php echo $style; ?>")
+							img(loading=lazy style="display:none" src!="<?php echo $cloudImgAutoPrefix . 'img/' . $project['image_name']; ?>" alt!="<?php echo $project['alt']; ?>")
+					<?php break; case "YouTube": ?>
 
-			+spotifyEmbed('Ethan Danto', 'Pass In Time', '2yB3Z6RjI8wtaSJOn6iwGN', 'April 29, 2022')
-				| Instruments, production, mixing and mastering
+						<?php if ($project['is_small']) { ?>
+						<?php if ($project['client']) { echo "<h3>" . htmlspecialchars($project['client']) . "</h3>";  }?>
+						<?php if ($project['title'])  { echo "<h4>" . htmlspecialchars($project['title']) . "</h4>";   }?>
+						<?php } else { ?>
+						<?php echo "<noscript>"; ?>
+						<?php if ($project['client']) { echo "<h3>" . htmlspecialchars($project['client']) . "</h3>";  }?>
+						<?php if ($project['title'])  { echo "<h4>" . htmlspecialchars($project['title']) . "</h4>";   }?>
+						<?php echo "</noscript>"; ?>
+						<?php } ?>
+						noscript
+							a(href!="<?php echo 'https://www.youtube.com/watch?v=' . $project['embed_code']; ?>")
+								|<?php echo htmlspecialchars($project['embed_title']); ?>
+						.youtubeEmbed-border
+							.youtube-player.requires-js(data-code!="<?php echo $project['embed_code']; ?>" data-title!="<?php echo htmlspecialchars($project['embed_title']); ?>")
+						<?php if ($project['embed_code_2']) { ?>
+						noscript
+							a(href!="<?php echo 'https://www.youtube.com/watch?v=' . $project['embed_code_2']; ?>")
+								|<?php echo htmlspecialchars($project['embed_title_2']); ?>
+						.youtubeEmbed-border
+							.youtube-player.requires-js(data-code!="<?php echo $project['embed_code_2']; ?>" data-title!="<?php echo htmlspecialchars($project['embed_title_2']); ?>")
+						<?php } ?>
+						<?php echo $html . "<aside>" . $date . "</aside>"; ?>
 
-			+spotifyEmbed('Elly Shane', 'Tripwire', '4vRUcCdSZHh8rIPzOT5qQo','April 22, 2022')
-				div(style="line-height:1.2") Track 1: Mixing, string engineering
-				div(style="line-height:1.2") Tracks 2, 4, 5: Mixing
-				div(style="line-height:1.2") Live music videos: Recording and mixing
+					<?php break; case "Video": ?>
+						//- For other videos. Need name of image on server/cloudfront. 551px maximum width?
 
-			+imageEmbed('', 'USC Springfest', 'img/springfest.jpg', 'USC Springfest Student Stage 2022,  📸  Juan Miche Rosales (@juanprovides)', 'March 26, 2022')
-				| Student Stage - Live sound lead
+						<?php if ($project['is_small']) { ?>
+						<?php if ($project['client']) { echo "<h3>" . htmlspecialchars($project['client']) . "</h3>";  }?>
+						<?php if ($project['title'])  { echo "<h4>" . htmlspecialchars($project['title']) . "</h4>";   }?>
+						<?php } else { ?>
+						<?php echo "<noscript>"; ?>
+						<?php if ($project['client']) { echo "<h3>" . htmlspecialchars($project['client']) . "</h3>";  }?>
+						<?php if ($project['title'])  { echo "<h4>" . htmlspecialchars($project['title']) . "</h4>";   }?>
+						<?php echo "</noscript>"; ?>
+						<?php } ?>
 
-			+spotifyEmbed('Aden', 'for you', '3r8EdDkuzv5pEPJ7r3Dmev', 'March 25, 2022')
-				| Instruments, production, mixing and mastering
+						noscript
+							a(href!="<?php echo $project['url']; ?>")
+								<?php echo htmlspecialchars($project['embed_title']); ?>
+						.youtubeEmbed-border
+							.youtube-player
+								img(src!="<?php echo $cloudImgAutoPrefix . 'img/' . $project['image_name']; ?>")
+								a(href!="<?php echo $project['url']; ?>"): .play-button 
 
-			+spotifyEmbed('Sam Johnson', 'Lullaby for Jenny', '4CVmRnFDaL850OAaMK6qaO','February 25, 2022')
-				| Production
+						<?php echo $html . "<aside>" . $date . "</aside>"; ?>
 
-			+youtube2Embed('Sam Johnson', 'Live at Bottlerock 2021', 'Sam Johnson Live at Bottlerock 2021 FULL SET', 'mafRAocAL2U', 'Sam Johnson Acoustic VIP Set at BottleRock 2021', 'jAM7gVB6ak8', 'With Langdon Dearborn • September 5, 2021')(class='smaller')
-				| Video
-
-			+videoEmbed('Alex Oliva', "Thoughts From the ER (cover of Lawrence song)", 'Thoughts from the ER (Lawrence) - Cover', 'https://www.instagram.com/tv/CS-mhGNjdEF', 'thoughts-from-the-er.jpg', 'With Langdon Dearborn • August 24, 2021')(class='smaller')
-				| Audio recording, mixing, video
-
-			+spotifyEmbed('Elly Shane', 'Prototype', '1bEs7xsCUKtvsRjsVq4Ca2','August 13, 2021')
-				| Mixing and mastering
-
-			+photoEmbed('img/prod5.jpg', 'Lorenzo Wood and Aden Black in studio')
-
-			//- Lorenzo opted not to feature here
-			//- +youtubeEmbed('', 
-			//- 'Coast to Coast: a collaboration between USC and NYU artists', 
-			//- 'Coast to Coast – USC x NYU Live Performances', 
-			//-  'Y_WryMoZ2C4')(class='smaller')
-			//- 	| Recording and mixing for USC artists: Maverick, Ellie Williams, and Sumit
-
-			//- NOT LIVE YET
-			//- +youtubeEmbed('Alex Oliva', 'Live for 840 west livestream', 'COMING_SOON')
-			//- 	| Working with Langdon Dearborn: shot video, edited, and graded video
-			//- +youtubeEmbed('', 'Tiny Dorm', 'COMING_SOON')
-			//- 	| Live sound and mixing for performances by Kid Sistr, Tippy Balady, and Kabwasa
-			//- +youtubeEmbed('', 'Tiny Dorm', 'COMING_SOON')
-			//- 	| sound, mixing: c&nbsp;a&nbsp;n&nbsp;d&nbsp;i&nbsp;d&nbsp;!, kid hastings
-
-			+youtubeEmbed('Musical Theatre Repertory at USC',
-			 'Unprecedented: A Modern Musical',
-			 'USC MTR’s Unprecedented: A Modern Musical', 
-			'Hp1Lzxg93ng', 'May 6, 2021')(class='smaller')
-				| Music editing and mixing
-			
-			+spotifyEmbed('Alex Oliva, Jillian Batt', 'U & I', '1k5SALiKnAbkA2zYrMMTgq', 'March 12, 2021')
-				| Vocal production, engineering, mixing
-
-			+photoEmbed('img/alex-oliva.jpg', 'Lorenzo Wood in studio, working with Alex Oliva and Jillian Batt over a Zoom call')
-			
-			+spotifyEmbed('Sam Johnson', 'Flower Petals', '0coW9BxlUEDD3HrEmrhnZJ', 'Feb 5, 2021')
-				| Writing, instruments, production, mixing and mastering
-		
-
-			+youtubeEmbed('Sam Johnson', 
-			 'Monsters on TV', 
-			 'Sam Johnson - Monsters On TV - (Official Music Video)', 
-			 'L-R8aLbhMkI', 'Oct 30, 2020')
-				| Writing, Instruments, production, mixing and mastering, music video
-
-			+spotifyEmbed('Cooper + Millett', 'Perfect', '2pcgn8lLynO2C1T7rPx1gq', 'October 20, 2020')
-				| Session vocals
-
-			+spotifyEmbed('Hannah Faith', 'I Won’t Give In', '0ogFm11JTP2jfXXOTUJTih', 'October 9, 2020')
-				| Instruments, production, mixing and mastering
-
-
-			+spotifyEmbed('Kat Van Morgan', 'KAT Van Morgan', '2dyFY339oQUVyl1zpvLg55', 'July 4, 2019')
-				p(style="line-height:1.0; margin:8px 0") Production, mixing and mastering
-				h4(style="font-size:1em; margin:8px 0 0 0; line-height:1.0") Mama Gone Crazy, You're Gonna Regret It
-				div(style="font-size:0.9em; line-height: 1.0") Co-writer, all instruments
-				h4(style="font-size:1em; margin:8px 0 0 0") Baby Girl
-				div(style="font-size:0.85em; line-height: 1.0")  Co-writer, some instruments
-				h4(style="font-size:1em; margin:8px 0 0 0") Overshare
-				div(style="font-size:0.9em; line-height: 1.0; padding-bottom:0.5em")  Some instruments
-
-			+spotifyEmbed('Aendru', 'You and Me Now', '52ybpfalBibR8F2qIGGggv', 'Feb 22, 2019')
-				| Writing, vocals, vocal production
-
-			// at the end; these may not display if there aren't columns available
-
-			+photoEmbed('img/prod4.jpg', 'Apple Logic software in use at Lorenzo Wood studio')
-
-	section.latest-releases.unpadded#releases
-		header
-			h2 Releases
-
-		//- note that above definition of $release is not longer valid since we define it here in the loop
-		<?php $reversed = true; foreach ($marketingReleases as $release) { ?>
-
-		div(class!="subsection <?php echo $release['light_text'] ? 'light-text' : 'dark-text'; ?>"
-			style!="background-image:linear-gradient(to right, <?php $c = htmlentities(hex2rgba($release['color'], 0.8), ENT_QUOTES); echo $c.','.$c.'),url(' . htmlentities($db->pathCDNForImageSize($release, 'background_1200x630'), ENT_QUOTES) . ')' ; ?>")
-
-			article(class!="<?php $reversed = !$reversed; if (!$release['youtube_video_v']) { echo 'no-video'; if ($reversed) { echo ' '; } } if ($reversed) { echo 'reversed'; } ?>")
-				.release-image.bordered(data-aos!="fade-<?php echo $reversed ? 'left' : 'right'; ?>" data-aos-delay='200')
-					a(href!="/link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>")
-						img(loading="lazy" width="64" height="64"
-							src!="<?php echo htmlentities($db->pathCDNForImageSize($release, 64), ENT_QUOTES); ?>"
-							alt!="Cover image of <?php echo htmlentities($release['title'], ENT_QUOTES); ?>"
-							srcset!="<?php echo htmlentities($db->pathCDNForImageSize($release, 64) . ' 64w, ' . $db->pathCDNForImageSize($release, 384) . ' 384w, ' . $db->pathCDNForImageSize($release, 640) . ' 640w', ENT_QUOTES); ?>"
-							sizes="(max-width: 768px) 100vw, 25vw")
-
-				.release-text(data-aos="fade-up" data-aos-duration="1000")
-					h3
-						a(href!="<?php echo '/link/' . htmlentities($release['slug'], ENT_QUOTES); ?>")
-							<?php echo htmlspecialchars($release['title']); ?>
-
-					<?php if ($release['artist_id'] != 1) { echo '<h4>' . htmlspecialchars($release['artist_name']) . '</h4>'; } ?>
-					<?php echo preg_replace('/\s+/', ' ', $release['description_html']); ?>
-
-					<?php $releaseDate = new DateTime($release['release_date'], new DateTimeZone('America/New_York'));
-					|if ($now < $releaseDate) { ?>
-
-					h4 Releasing <?php echo htmlspecialchars($releaseDate->format('F j, Y')); ?>
-					p: a.bold(href!="link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>") Pre-Save / Pre-Order
-
-					<?php } else { ?>
-
-					h4 <?php echo htmlspecialchars($releaseDate->format('F Y')); ?>
-					p: a.bold(href!="link/<?php echo htmlentities($release['slug'], ENT_QUOTES); ?>") Download/Stream
-
+					<?php break; case "Release": $spotifyTrackEmbed = $project['embed_code'] ? 'track/' . $project['embed_code'] : 'album/' . $project['embed_code_2']; $spotifyAlbumEmbed = $project['embed_code_2'] ? 'album/' . $project['embed_code_2'] : 'track/' . $project['embed_code']; ?>
+						.doubleBox
+							.half
+								noscript
+									img(src!="<?php echo 'album_art_640/' . $project['image_name']; ?>")
+								//- Generate div that gets replaced with actual spotify iframe. Doesn't actually fade in but this is needed.
+								.spotify-proxy.requires-js(data-code!="<?php echo $spotifyTrackEmbed; ?>" data-aos="fade-in" data-aos-id="spotify-proxy")
+								a.streamlink(href="<?php echo 'link/' + htmlspecialchars($project['slug']); ?>")
+									| Stream/Download
+								<?php echo "<aside>" . $date . "</aside>"; ?>
+								//- TODO: FIGURE OUT HOW TO PUT DATE AT THE END OF THE MARKUP.
+							.half
+								<?php echo "<h4>" . htmlspecialchars($project['title']) . "</h4>"; ?>
+								noscript
+									div
+										a(href!="<?php echo 'https://open.spotify.com/' . $spotifyAlbumEmbed; ?>")
+											<?php echo htmlspecialchars($project['title']) . " on Spotify"; ?>
+								<?php echo $html; ?>
 					<?php } ?>
-				<?php if ($release['youtube_video_v']) { ?>
-				.release-video(data-aos!="fade-'<?php echo $reversed ? 'right' : 'left'; ?>"
-					data-aos-delay="400"
-					data-aos-duration="1000")
-					.youtube-player(data-code!="<?php echo $release['youtube_video_v']; ?>")
-				<?php } ?>
-		<?php } ?>
+
+			<?php } ?>
 
 
 block additional-html

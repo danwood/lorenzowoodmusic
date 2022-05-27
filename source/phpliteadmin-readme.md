@@ -15,6 +15,8 @@ interface, and user experience is comparable to that of phpMyAdmin.
 
 ## News
 
+** DJW note: Up to version 1.982, it still doesn't support php 8 installed on Monterey! Maybe try upgrading to an even newer version when possible.**
+
 **13.12.2016: Just released phpLiteAdmin 1.9.7! [Download now](https://bitbucket.org/phpliteadmin/public/downloads/phpLiteAdmin_v1-9-7.zip)**
 
 **05.07.2015: Just released phpLiteAdmin 1.9.6! [Download now](https://bitbucket.org/phpliteadmin/public/downloads/phpLiteAdmin_v1-9-6.zip)**
