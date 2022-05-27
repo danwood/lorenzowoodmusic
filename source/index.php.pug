@@ -241,8 +241,6 @@ block main
 								.spotify-proxy.requires-js(data-code!="<?php echo $spotifyTrackEmbed; ?>" data-aos="fade-in" data-aos-id="spotify-proxy")
 								a.streamlink(href="<?php echo 'link/' + htmlspecialchars($project['slug']); ?>")
 									| Stream/Download
-								<?php echo "<aside>" . $date . "</aside>"; ?>
-								//- TODO: FIGURE OUT HOW TO PUT DATE AT THE END OF THE MARKUP.
 							.half
 								<?php echo "<h4>" . htmlspecialchars($project['title']) . "</h4>"; ?>
 								noscript
@@ -250,6 +248,7 @@ block main
 										a(href!="<?php echo 'https://open.spotify.com/' . $spotifyAlbumEmbed; ?>")
 											<?php echo htmlspecialchars($project['title']) . " on Spotify"; ?>
 								<?php echo $html; ?>
+								<?php echo "<aside>" . $date . "</aside>"; ?>
 					<?php } ?>
 
 			<?php } ?>
