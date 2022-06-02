@@ -58,135 +58,6 @@ section.gigs {
 }
 
 
-/*
-----------------------------------------
-Latest Releases Section
-----------------------------------------
-*/
-
-.latest-releases {
-
-	h3 {
-		font-size:2rem;
-		a {
-			text-decoration:none;
-
-			&:hover {
-				text-decoration:underline;
-			}
-		}
-	}
-	h4 {
-		font-size:100%;
-		font-weight:normal;
-		font-style:italic;
-	}
-
-	article {
-
-		display:block;
-
-		// Lots of space in between
-		padding-top:4em;
-		padding-bottom:4em;
-
-		@media only screen and (min-width:$mainBreakpoint) {
-
-			// don't need as much space
-			padding-top:2.5em;
-			padding-bottom:2.5em;
-
-			display:flex;
-
-			margin:0 auto;
-			max-width:90rem;
-		}
-	}
-
-
-	.release-image img {
-		width:100%;		// override img inline dimensions
-		height:auto;	// override img inline dimensions
-		max-height:320px;	// help make sure square min size for square
-		max-width:320px;	// if we don't specify max-width too, with square aspect ratio, it will get anamorphic
-		display:block;
-		transition:transform .5s ease;
-		&:hover {
-			box-shadow:0px 0px 5px 0px rgba(255,255,255,0.9);
-  			transform:scale(1.05);
-		}
-	}
-
-
-	.release-text p, .release-text blockquote {
-		max-width:65ch;
-	}
-
-	@media only screen and (max-width:$mainBreakpoint - 1px) {
-
-		// SEE THE coverArtSizes DECLARATION IN index.php.pug TO MAKE SURE THIS BREAKPOINT IS LINED UP WITH THAT WIDTH CALC
-
-		.release-image img {
-			margin:0 auto;
-		}
-
-		h3, h4 {
-			text-align:center;
-			margin-top:0.5rem;
-			margin-bottom:0;
-		}
-	}
-
-
-	@media only screen and (min-width:$mainBreakpoint) {
-
-		.release-image {
-			flex-basis:22.22%;
-			z-index:10;			// make sure it goes above neighboring block. But not above modals & menus.
-		}
-
-		.release-text {
-			flex-basis:38.28%;
-			padding:0 2em;
-
-			h3, h4 {
-				margin:0;
-			}
-		}
-
-		.no-video .release-text {
-			flex-basis:77.78%;
-		}
-
-		.release-video {
-			flex-basis:39.5%;	// width that makes the video be the same height as the artwork
-		}
-	}
-
-	article.reversed {
-		flex-direction:row-reverse;
-	}
-
-	.dark-text {
-		color:rgba(0,0,0,0.9)!important;
-	}
-	.dark-text a {
-		color:rgba(0,0,0,0.6)!important;
-	}
-	.light-text {
-		color:rgba(255,255,255, 0.9)!important;
-	}
-	.light-text a {
-		color:rgba(255,255,255,0.6)!important;
-	}
-
-	.release-image.bordered img {
-		border:1px solid rgba(255,255,255,0.5);
-	}
-}
-
-
-
 
 /*
 ----------------------------------------
@@ -425,9 +296,13 @@ $gutterY: 5.2vw;		// always this gutter between cards
 	}
 
 	section {
-		// background: yellow;	// TESTING
-		// position: relative;
-		// overflow:hidden;
+		@media only screen and (max-width:$breakpointToSmall - 1) {
+			margin-bottom:30px;
+
+			.wide-only {
+				display:none;		// hide on mobile
+			}
+		}
 
 		aside {
 			margin-top:0;
@@ -450,9 +325,7 @@ $gutterY: 5.2vw;		// always this gutter between cards
 		background-repeat:   no-repeat;
 		background-position: center center;
 
-		@media only screen and (min-width:$breakpointToSmall) {
-			// grid-column-end: span 2;
-			
+		@media only screen and (min-width:$breakpointToSmall) {			
 			// give it some size
 			width:100%;
 			padding-top:61.8%;		// should be approx the width / 1.618

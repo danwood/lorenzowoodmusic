@@ -242,7 +242,7 @@ block main
 								a.streamlink(href="<?php echo 'link/' + htmlspecialchars($project['slug']); ?>")
 									| Stream/Download
 							.half
-								<?php echo "<h4>" . htmlspecialchars($project['title']) . "</h4>"; ?>
+								<?php echo "<h4 class='wide-only'>" . htmlspecialchars($project['title']) . "</h4>"; ?>
 								noscript
 									div
 										a(href!="<?php echo 'https://open.spotify.com/' . $spotifyAlbumEmbed; ?>")
