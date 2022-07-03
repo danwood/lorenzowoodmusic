@@ -1,7 +1,5 @@
 .social-icon {
 	
-	background:yellow;
-
 	&.instagram svg { stroke:#e95950 }
 	&.facebook  svg { fill:#3b5998 }
 	&.youtube   svg { fill:#b00 }
@@ -23,8 +21,13 @@
 	justify-content: center;
 	align-items:center;
 	gap: 1vw;
+	padding: 1vw 0;
 
 	.social-icon {
+
+		flex: 0 1 10vw;
+		aspect-ratio: 1/1;
+
 		svg {
 			height:100%;
 			width:100%;
@@ -71,20 +74,13 @@
 	}
 }
 
-@media only screen and (min-width:$mainBreakpoint) {
-
-	.icon-row .social-icon {
-		width:10vw;
-		height:10vw;
-	}
-}
-
 @media only screen and (max-width:($mainBreakpoint - 1px)) {
 
-	/* Bigger social media icons on mobile ... 5-up */
+	// Make sure these are the minimum size; may wrap (strangely) to second line
 	.icon-row .social-icon {
-		width:18vw;
-		height:18vw;
+		flex: 1 0 44px;
+		max-width:60px;		// Matches breakpoint so size doesn't jump. Don't let it get too big in case it's a widow
+
 	}
 
 	// Make the logo come up next to the hamburger menu
