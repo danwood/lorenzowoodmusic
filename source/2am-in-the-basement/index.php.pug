@@ -88,14 +88,14 @@ block main
 
 			p Find 2AM in the Basement songs online:
 		article
-			.icons.icons-2
-				.icon
+			.icon-row
+				.social-icon
 					a.smaller(data-title="Apple Music" href="https://geo.itunes.apple.com/us/artist/2am-in-the-basement/1461919405?at=1000lKSp")
 						include ../svg/page_home/apple-music-icon-color.svg
 						//- Apple music icon doesn't show color when loaded with svg-use !!!
 						//- Annoyingly this gives us a validation warning about duplicate IDs since we are including this SVG resource twice! Oh well.
 
-				.icon.spotify
+				.social-icon.spotify
 					a(data-title="Spotify" href="https://open.spotify.com/artist/4xWrKxTS7gyybHbJ94LZtx")
 						svg: use(xlink:href="/svg/page_home.svg#spotify")
 

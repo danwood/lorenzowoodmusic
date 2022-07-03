@@ -147,11 +147,11 @@ Icons
 	fill:var(--color6);
 }
 
-.icons-header .icon.instagram svg {
+.icons-header .social-icon.instagram svg {		// this uses stroke color
 	stroke:var(--color6);
 }
 
-.icons.overlapping {
+.icon-row.overlapping {
 	position:absolute;
 	bottom:0; left:0; right:0; /* should match with height of nav */
 }

@@ -3274,6 +3274,26 @@
       "plM" : 3758088159,
       "prP" : 0
     },
+    "\/source\/svg\/page_home\/tiktok-bw.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/svg\/page_home\/tiktok-bw.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/source\/svg\/page_home\/tiktok-color.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/svg\/page_home\/tiktok-color.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
     "\/source\/svg\/page_home\/youtube-icon.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -3467,7 +3487,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "\/source\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 673911932.28891897
+    "lastBuiltDate" : 678564934.93657196
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

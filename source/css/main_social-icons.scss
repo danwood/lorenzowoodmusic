@@ -1,5 +1,7 @@
-.icon {
+.social-icon {
 	
+	background:yellow;
+
 	&.instagram svg { stroke:#e95950 }
 	&.facebook  svg { fill:#3b5998 }
 	&.youtube   svg { fill:#b00 }
@@ -10,18 +12,19 @@
 
 
 
-.icons.icons-footer {
+.icon-row.icons-footer {
 	background-color:var(--cDarkH);
 }
 
-.icons {
-	.icon {
-		width:10vw;
-		height:10vw;
-		display:inline-block;
+.icon-row {
 
-		margin:1vw;
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items:center;
+	gap: 1vw;
 
+	.social-icon {
 		svg {
 			height:100%;
 			width:100%;
@@ -35,23 +38,8 @@
 	}
 }
 
-// Keep icons-5 in case we go back to 5 icons
-.icons-5 .icon:first-child { /* Left margin for shorter icon list */
-	margin-left:21vw;	// room for 5. 10*5+2*5 = 60, so 20 each side. This replaces the 1vw of the left one so 20+1
-}
-
-.icons-4 .icon:first-child { /* Left margin for shorter icon list */
-	margin-left:27vw;	// room for 4. 10*4+2*4 = 48, so 26 each side. This replaces the 1vw of the left one so 26+1
-}
-
-
-.icons-2 .icon:first-child { /* Left margin for shorter icon list */
-	margin-left:38vw;	// room for 2. 10*2+2*2 = 24; 100-24=76; 38 on each side. Well, pretty close
-}
-
-
 /* Special hover tooltip-like display over social icons */
-.icons {
+.icon-row {
 	a {
 		position:relative;
 	}
@@ -83,23 +71,20 @@
 	}
 }
 
+@media only screen and (min-width:$mainBreakpoint) {
+
+	.icon-row .social-icon {
+		width:10vw;
+		height:10vw;
+	}
+}
 
 @media only screen and (max-width:($mainBreakpoint - 1px)) {
 
 	/* Bigger social media icons on mobile ... 5-up */
-	.icons .icon {
+	.icon-row .social-icon {
 		width:18vw;
 		height:18vw;
-	}
-
-	.icons-5 .icon:first-child {
-		margin-left:1vw;
-	}
-	.icons-4 .icon:first-child {
-		margin-left:10vw;
-	}
-	.icons-2 .icon:first-child {
-		margin-left:30%;
 	}
 
 	// Make the logo come up next to the hamburger menu
@@ -109,34 +94,3 @@
 
 }
 
-
-@media only screen and (max-width:320px) {
-
-// For a really small screen, make them 3 across when there are 5 icons
-
-	/* Bigger social media icons on mobile ... 3-up */
-	.icons-5 .icon {
-		width:31vw;
-		height:31vw
-	}
-
-	.icons-5 .icon:first-child {
-		margin-left:1vw;
-	}
-	.icons-5 .icon:nth-child(4) {		// second row, indent to center
-		margin-left:16vw;
-	}
-
-// For a really small screen, make them 4 across when there are 4 icons
-
-	.icons-4 .icon {
-		width:22vw;
-		height:22vw;
-		//- Should be 23 but somehow that overflows
-	}
-
-	.icons-4 .icon:first-child {
-		margin-left:1vw;
-	}
-
-}
