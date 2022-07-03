@@ -4,6 +4,7 @@
 	&.facebook  svg { fill:#3b5998 }
 	&.youtube   svg { fill:#b00 }
 	&.spotify   svg { fill:#1ED760 }
+	&.tiktok-color svg { fill:#FFFFFF }
 }
 
 
@@ -129,8 +130,9 @@
 // For a really small screen, make them 4 across when there are 4 icons
 
 	.icons-4 .icon {
-		width:23vw;
-		height:23vw
+		width:22vw;
+		height:22vw;
+		//- Should be 23 but somehow that overflows
 	}
 
 	.icons-4 .icon:first-child {
