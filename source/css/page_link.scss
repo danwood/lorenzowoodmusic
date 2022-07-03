@@ -61,11 +61,6 @@ body>footer {
 	left:-50%;
 	width:200%;
 	height:200%;
-	transform:translate3d(0, 0, 0);
-	-o-transform:translate3d(0, 0, 0);
-	-ms-transform:translate3d(0, 0, 0);
-	-moz-transform:translate3d(0, 0, 0);
-	-webkit-transform:translate3d(0, 0, 0);
 	img {
 		position:absolute;
 		top:0;
@@ -81,10 +76,6 @@ body>footer {
 .background-blur img	// only the real blur image gets the CSS blurring
 {
 	filter:blur(30px);
-	-webkit-filter:blur(30px);
-	-moz-filter:blur(30px);
-	-o-filter:blur(30px);
-	-ms-filter:blur(30px);
 }
 
 .center-column {
