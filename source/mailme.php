@@ -15,6 +15,7 @@ require_once('classes/class.Encoding.php');		// Force into UTF-8
 
 $MISSING_SENDER			= "You did not enter your email address, so your message was not sent.";
 $MISSING_MESSAGE		= "You did not enter a reasonably long message, so no message was sent.";
+$CONTAINS_URLS			= "There was an error with the spam checker. Please submit your email again without 'http' or 'https' URLs and it should be OK.";
 $MISSING_DESTINATION	= "Can't send message -- the creator of this web page did not specify a valid email address for receiving messages.";
 $MESSAGE_SENT			= "Your message was successfully sent via email.";
 $MESSAGE_SENT_HONEYPOT  = "Your message will be forwarded to the recipient if it has been determined to be human-generated.";
@@ -29,6 +30,11 @@ function extract_emails_from($string){
 function containsNewlines($str_to_test) {
 	return (preg_match("/(%0A|%0D|\\n+|\\r+)/i", $str_to_test) != 0);
 }
+
+function containsURLs($str_to_test) {
+	return strpos($str_to_test, 'http:') !== false || strpos($str_to_test, 'https:') !== false;
+}
+
 
 function check_email_address($email)  // convenience to get to email validator
 {
@@ -178,19 +184,21 @@ if (!empty($footer)) {
 	$message .= "\n\n\n\n\n---------------------------------------------------\n$footer";
 }
 
+$needsResend = false; // default.
+
 if (		containsNewlines($recipient)
 			||	containsNewlines($subject)
 			||	containsNewlines($fromEmail)
 			||	containsNewlines($name) )
 {
-	error_log( "mailme.php: NEWLINE INJECTION in one of these:\n\nrecipient='$recipient'\nsubject='$subject'\nfromEmail='$fromEmail'\nname='$name'\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipEmails, 1) );
+	//error_log( "mailme.php: NEWLINE INJECTION in one of these:\n\nrecipient='$recipient'\nsubject='$subject'\nfromEmail='$fromEmail'\nname='$name'\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipEmails, 1) );
 
 	$suspectedSpam = true;	// newlines in these values mean likely spam.
 }
 else if (!empty($honeypot1) || !empty($honeypot2) || $honeypot3 != 'lorenzowoodmusic.com' || !empty($honeypot4))
 {
 	// I want to see what got posted and how often....
-	error_log( "mailme.php: HONEYPOT ACTIVATED!\n\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipient, 1) );
+	//error_log( "mailme.php: HONEYPOT ACTIVATED!\n\n\n" . print_r($_POST, 1) . "\n\n\n" . print_r($_SERVER, 1) . "\n\n\n" . print_r($recipient, 1) );
 
 	$suspectedSpam = true;
 }
@@ -203,8 +211,16 @@ else if ( strlen($originalMessage) < 25 )
 	$errorString = $MISSING_MESSAGE;
 	// don't turn on suspected spam; allow a human with a short message to try again.
 }
+else if ( containsURLs($originalMessage))
+{
+	error_log("contains urls");
+	$errorString = $CONTAINS_URLS;
+	$needsResend = true;
+	// This will cause the message to need to be re-sent
+}
 else if (!$suspectedSpam)		// Make sure we didn't just prevent it, above
 {
+	error_log("seems to be OK");
 	// Fallback subject
 	if (empty($subject))
 	{
@@ -232,7 +248,7 @@ else if (!$suspectedSpam)		// Make sure we didn't just prevent it, above
 	$headers = 'Reply-To: ' . $fromEmails[0] . "\r\n";
 
 	$messageCompressed = str_replace("\n", '\n', $message);
-	error_log("Sending recipient = $recipient; subject = $subject; message = $messageCompressed; headers = $headers ");
+	// error_log("Sending recipient = $recipient; subject = $subject; message = $messageCompressed; headers = $headers ");
 	
 	$sent = mail($recipient, $subject, $message, $headers);
 
@@ -248,6 +264,10 @@ $redirectSite = empty($successReturn) ? "/mailsent.php" : $successReturn;
 if (!empty($errorString))		// was there an error?
 {
 	$redirectSite .= "?e=" . urlencode($errorString);
+
+	if ($needsResend) {
+		$redirectSite .= "&resend=1";
+	}
 
 	if (!empty($errorReturn))		// did we specify an error site?  If so, we'll go there instead.
 	{
